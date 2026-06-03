@@ -1,0 +1,169 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Optimus Prime Mount Rushmore — Cybertron Aurora</title>
+    <!-- Google Fonts for premium sci-fi/robotic look -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel+Decorative:wght@700&family=Cinzel:wght@500;700;900&family=Outfit:wght@300;400;600;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <!-- Atmospheric cosmic beams -->
+    <div class="light-beam beam-one" id="beamOne"></div>
+    <div class="light-beam beam-two" id="beamTwo"></div>
+    <!-- Energon mist overlay -->
+    <div class="fog-overlay" aria-hidden="true"></div>
+
+    <main class="app-shell">
+      <!-- Left sidebar panel: Cyber-console and controls -->
+      <aside class="control-panel" aria-label="Mount Rushmore controls">
+        <header class="brand-plate">
+          <div class="header-main">
+            <span class="serial">OP-CYB</span>
+            <!-- Audio mute button -->
+            <button class="icon-toggle" id="muteToggle" type="button" title="Toggle audio feedback" aria-label="Toggle audio feedback">
+              <svg class="icon" viewBox="0 0 24 24" width="20" height="20">
+                <path fill="currentColor" d="M12 4L6 9H2v6h4l6 5V4zm3.5 8c0-1.8-1-3.3-2.5-4v8c1.5-.7 2.5-2.2 2.5-4z"/>
+              </svg>
+            </button>
+          </div>
+          <h1>Prime Rushmore</h1>
+          <p class="tagline">Forge & Customize Your Top Four Figures</p>
+        </header>
+
+        <!-- Figure upload section -->
+        <section class="upload-bay" id="uploadBay">
+          <input id="figureUpload" type="file" accept="image/*" multiple />
+          <button class="primary-action" id="uploadButton" type="button">Upload Figures</button>
+          <div class="drop-copy">
+            <span>Candidate Pool</span>
+            <strong id="figureCount">0 figures</strong>
+          </div>
+        </section>
+
+        <!-- Search and Sort Panel for candidates -->
+        <section class="pool-filters">
+          <div class="search-wrap">
+            <input type="text" id="poolSearch" placeholder="Filter figures by name..." aria-label="Filter figures" />
+            <button class="clear-search" id="clearSearch" type="button" title="Clear Search">&times;</button>
+          </div>
+          <div class="sort-wrap">
+            <label for="poolSort">Sort:</label>
+            <select id="poolSort" class="custom-select">
+              <option value="newest">Newest Added</option>
+              <option value="oldest">Oldest Added</option>
+              <option value="az">Alphabetical (A-Z)</option>
+              <option value="za">Alphabetical (Z-A)</option>
+            </select>
+          </div>
+        </section>
+
+        <!-- Save, export, clear buttons -->
+        <section class="action-grid" aria-label="Layout actions">
+          <button id="captureButton" type="button" class="btn-export">Capture PNG</button>
+          <button id="saveButton" type="button">Save Monument</button>
+          <button id="clearButton" type="button" class="btn-danger">Clear All</button>
+        </section>
+
+        <p class="status" id="status" aria-live="polite"></p>
+
+        <!-- Unplaced candidates rack -->
+        <section class="staging-rack" aria-label="Uploaded figures">
+          <div class="staging-head">
+            <span>Staging Rack</span>
+            <span class="badge" id="unrankedCount">0</span>
+          </div>
+          <div class="staging-drop drop-zone" id="stagingZone" data-zone="staging" data-empty="Drop figures here to unplace"></div>
+        </section>
+      </aside>
+
+      <!-- Right main stage: Mount Rushmore Cybertron Aurora -->
+      <section class="rushmore-stage" aria-label="Optimus Prime Mount Rushmore ranking board">
+        <div class="sky"></div>
+
+        <section class="monument-wrap" id="captureArea">
+          <div class="monument-title">
+            <span>Cybernetic Alloy Monolith</span>
+            <strong>Cybertron Aurora</strong>
+          </div>
+
+          <div class="monument" id="monument">
+            <div class="rock-shadow"></div>
+            <div class="rock-cap"></div>
+            <div class="face-row" id="faceRow">
+              <!-- Built dynamically in app.js -->
+            </div>
+            <div class="rock-base">
+              <span>ENGAGE OPTIMUS FIGURES DIRECTLY INTO THE ENERGON CHARGING PODS</span>
+            </div>
+          </div>
+        </section>
+      </section>
+    </main>
+
+    <!-- Native HTML5 Dialog for Fine Tuning -->
+    <dialog id="tunerDialog" class="tuner-dialog">
+      <div class="tuner-box">
+        <header class="tuner-header">
+          <h2>Fine-Tune Alloy Carving</h2>
+          <button class="close-dialog" id="closeTuner" type="button" aria-label="Close dialog">&times;</button>
+        </header>
+        <div class="tuner-body">
+          <!-- Tuning sliders -->
+          <div class="tuning-controls">
+            <div class="control-group">
+              <label for="tuneScale">Scale / Zoom (<span id="scaleVal">100</span>%)</label>
+              <input type="range" id="tuneScale" min="50" max="200" value="100" />
+            </div>
+            <div class="control-group">
+              <label for="tuneX">Horizontal Shift (<span id="xVal">0</span>px)</label>
+              <input type="range" id="tuneX" min="-120" max="120" value="0" />
+            </div>
+            <div class="control-group">
+              <label for="tuneY">Vertical Shift (<span id="yVal">0</span>px)</label>
+              <input type="range" id="tuneY" min="-120" max="120" value="0" />
+            </div>
+            <div class="control-group">
+              <label for="tuneBrightness">Brightness / Photon Light (<span id="brightnessVal">100</span>%)</label>
+              <input type="range" id="tuneBrightness" min="30" max="170" value="100" />
+            </div>
+            <div class="control-group">
+              <label for="tuneContrast">Contrast / Shadows (<span id="contrastVal">100</span>%)</label>
+              <input type="range" id="tuneContrast" min="30" max="170" value="100" />
+            </div>
+            <div class="control-group">
+              <label for="tuneSaturation">Alloy Saturation (<span id="saturationVal">100</span>%)</label>
+              <input type="range" id="tuneSaturation" min="0" max="200" value="100" />
+            </div>
+            <div class="control-group-row">
+              <label for="tuneStone">
+                <input type="checkbox" id="tuneStone" />
+                <span class="checkbox-custom"></span>
+                Forge into Bronze Alloy (Metallic Statue)
+              </label>
+            </div>
+          </div>
+          <!-- Fine-tune live preview -->
+          <div class="tuner-preview-pane">
+            <span class="preview-label">Live Pod Preview</span>
+            <div class="preview-pedestal">
+              <div class="preview-img-container" id="previewContainer">
+                <img id="tunerPreviewImg" src="" alt="Fine tune preview" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="tuner-footer">
+          <button id="resetTuner" type="button" class="btn-secondary">Reset Adjustments</button>
+          <button id="applyTuner" type="button" class="btn-primary-action">Apply & Save</button>
+        </footer>
+      </div>
+    </dialog>
+
+    <canvas id="exportCanvas" hidden></canvas>
+    <script src="./app.js"></script>
+  </body>
+</html>
