@@ -1,0 +1,261 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Who Wore It Better? — TF Marauders</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="wwib-styles.css" />
+  </head>
+  <body>
+
+    <!-- ═══════════════════════════════ NAV ═══════════════════════════════ -->
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="#" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="#a855f7" stroke-width="2"/>
+              <polygon points="20,8 32,15 32,25 20,32 8,25 8,15" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1.5"/>
+              <path d="M14,18 L20,10 L26,18 L20,22 Z" fill="#a855f7"/>
+              <path d="M12,20 L20,24 L28,20 L20,28 Z" fill="#7c3aed"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">TF</span>
+            <span class="brand-name accent">MARAUDERS</span>
+            <span class="brand-sub">Discuss. Debate. Destroy.</span>
+          </div>
+        </a>
+
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="#">Home</a>
+          <a href="#">Episodes</a>
+          <a href="#">Characters</a>
+          <a href="#">Companies</a>
+          <a href="#">Leaderboard</a>
+          <a href="#" class="nav-active">Vote</a>
+          <a href="#">Community</a>
+          <a href="#">Shop</a>
+        </nav>
+
+        <div class="header-actions">
+          <button class="icon-btn" aria-label="Search">
+            <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="11" cy="11" r="7" fill="none" stroke="currentColor" stroke-width="2"/><line x1="16.5" y1="16.5" x2="22" y2="22" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+          </button>
+          <button class="icon-btn user-btn" aria-label="Account">
+            <svg viewBox="0 0 24 24" width="20" height="20"><circle cx="12" cy="8" r="4" fill="none" stroke="currentColor" stroke-width="2"/><path d="M4 20c0-4 3.6-7 8-7s8 3 8 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+            <svg viewBox="0 0 10 6" width="10" height="6" style="margin-left:4px"><path d="M1 1l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- ══════════════════════════ HERO BANNER ════════════════════════════ -->
+    <section class="hero-banner">
+      <div class="hero-scan-lines" aria-hidden="true"></div>
+      <div class="hero-glow" aria-hidden="true"></div>
+      <h1 class="hero-title">WHO WORE IT BETTER?</h1>
+      <p class="hero-sub">ONE CARTOON. MULTIPLE FIGURES. YOU DECIDE.</p>
+
+      <div class="countdown-wrap">
+        <span class="countdown-label">VOTING ENDS IN:</span>
+        <div class="countdown-timer">
+          <div class="time-block"><span class="time-digits" id="cdDays">00</span><span class="time-unit">DAYS</span></div>
+          <div class="time-block"><span class="time-digits" id="cdHrs">00</span><span class="time-unit">HRS</span></div>
+          <div class="time-block"><span class="time-digits" id="cdMin">00</span><span class="time-unit">MIN</span></div>
+          <div class="time-block"><span class="time-digits" id="cdSec">00</span><span class="time-unit">SEC</span></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ═══════════════════════════ MAIN ARENA ═══════════════════════════ -->
+    <main class="arena-wrap" id="arena">
+
+      <!-- Back link -->
+      <a href="#" class="back-link">
+        <svg viewBox="0 0 24 24" width="14" height="14"><path d="M15 18l-6-6 6-6" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        BACK TO EPISODES
+      </a>
+
+      <!-- Episode title plate -->
+      <div class="episode-plate">
+        <div class="ep-faction" id="epFactionLeft" aria-hidden="true"></div>
+        <div class="ep-info">
+          <h2 class="ep-character" id="epCharacter">DEMOLITOR</h2>
+          <p class="ep-number" id="epNumber">EPISODE 28</p>
+        </div>
+        <div class="ep-faction" id="epFactionRight" aria-hidden="true"></div>
+      </div>
+
+      <!-- Three-panel comparison -->
+      <div class="comparison-grid">
+
+        <!-- LEFT FIGURE -->
+        <article class="figure-card card-left" id="cardLeft" data-vote="left">
+          <div class="figure-corner corner-tl"></div>
+          <div class="figure-corner corner-tr"></div>
+          <div class="figure-corner corner-bl"></div>
+          <div class="figure-corner corner-br"></div>
+          <div class="figure-glow glow-left" aria-hidden="true"></div>
+
+          <header class="figure-header">
+            <h3 class="figure-name" id="leftName">FANS TOYS FT-32E HADID</h3>
+            <p class="figure-maker" id="leftMaker">MIXMASTER</p>
+          </header>
+
+          <div class="figure-image-wrap">
+            <img class="figure-img" id="leftImg" src="" alt="Left figure" />
+            <div class="figure-overlay" aria-hidden="true"></div>
+          </div>
+
+          <button class="view-details-btn" id="leftDetailsBtn" type="button">
+            <svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+            VIEW DETAILS
+          </button>
+        </article>
+
+        <!-- CENTER: CARTOON REFERENCE -->
+        <article class="cartoon-card">
+          <div class="cartoon-label">G1 CARTOON REFERENCE</div>
+          <div class="cartoon-image-wrap">
+            <img class="cartoon-img" id="cartoonImg" src="" alt="G1 cartoon reference" />
+          </div>
+        </article>
+
+        <!-- RIGHT FIGURE -->
+        <article class="figure-card card-right" id="cardRight" data-vote="right">
+          <div class="figure-corner corner-tl"></div>
+          <div class="figure-corner corner-tr"></div>
+          <div class="figure-corner corner-bl"></div>
+          <div class="figure-corner corner-br"></div>
+          <div class="figure-glow glow-right" aria-hidden="true"></div>
+
+          <header class="figure-header">
+            <h3 class="figure-name" id="rightName">28 DEMOLITOR</h3>
+            <p class="figure-maker" id="rightMaker">MIXMASTER</p>
+          </header>
+
+          <div class="figure-image-wrap">
+            <img class="figure-img" id="rightImg" src="" alt="Right figure" />
+            <div class="figure-overlay" aria-hidden="true"></div>
+          </div>
+
+          <button class="view-details-btn" id="rightDetailsBtn" type="button">
+            <svg viewBox="0 0 24 24" width="14" height="14"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="2"/><line x1="12" y1="8" x2="12" y2="12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><circle cx="12" cy="16" r="1" fill="currentColor"/></svg>
+            VIEW DETAILS
+          </button>
+        </article>
+
+      </div><!-- /comparison-grid -->
+
+      <!-- Voting CTA -->
+      <div class="vote-section">
+        <h2 class="vote-question">WHICH FIGURE IS CLOSEST TO THE CARTOON?</h2>
+        <p class="vote-sub">Select the figure that best matches the G1 cartoon model.</p>
+
+        <div class="vote-buttons" id="voteButtons">
+          <button class="vote-btn vote-left" id="voteLeft" type="button">
+            <span class="vote-label" id="voteLeftLabel">VOTE FT-32E HADID</span>
+            <span class="vote-maker" id="voteLeftMaker">FANS TOYS</span>
+          </button>
+          <button class="vote-btn vote-center" id="voteCenter" type="button">
+            <span class="vote-label">VOTE CARTOON ONLY</span>
+            <span class="vote-maker">NONE OF THE ABOVE</span>
+          </button>
+          <button class="vote-btn vote-right" id="voteRight" type="button">
+            <span class="vote-label" id="voteRightLabel">VOTE 28 DEMOLITOR</span>
+            <span class="vote-maker" id="voteRightMaker">28 DEFORMATION SPACE</span>
+          </button>
+        </div>
+
+        <button class="results-link" id="toggleResults" type="button">
+          <svg viewBox="0 0 24 24" width="16" height="16"><circle cx="12" cy="12" r="10" fill="none" stroke="currentColor" stroke-width="1.5"/><line x1="12" y1="8" x2="12" y2="16" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="12" x2="16" y2="12" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg>
+          VIEW RESULTS SO FAR
+        </button>
+
+        <!-- Results bar (hidden until toggled or voted) -->
+        <div class="results-panel" id="resultsPanel" hidden>
+          <div class="result-row">
+            <span class="result-name" id="resultLeftName">FT-32E HADID</span>
+            <div class="result-bar-wrap">
+              <div class="result-bar result-bar-left" id="resultBarLeft" style="width:0%"></div>
+            </div>
+            <span class="result-pct" id="resultLeftPct">0%</span>
+          </div>
+          <div class="result-row">
+            <span class="result-name">CARTOON ONLY</span>
+            <div class="result-bar-wrap">
+              <div class="result-bar result-bar-center" id="resultBarCenter" style="width:0%"></div>
+            </div>
+            <span class="result-pct" id="resultCenterPct">0%</span>
+          </div>
+          <div class="result-row">
+            <span class="result-name" id="resultRightName">28 DEMOLITOR</span>
+            <div class="result-bar-wrap">
+              <div class="result-bar result-bar-right" id="resultBarRight" style="width:0%"></div>
+            </div>
+            <span class="result-pct" id="resultRightPct">0%</span>
+          </div>
+          <p class="result-total"><span id="totalVotes">0</span> votes cast</p>
+        </div>
+      </div>
+
+    </main><!-- /arena-wrap -->
+
+    <!-- ═══════════════════════════ STATS BAR ════════════════════════════ -->
+    <footer class="stats-bar">
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M12 2l2.4 7.4H22l-6.2 4.5 2.4 7.4L12 17l-6.2 4.3 2.4-7.4L2 9.4h7.6Z" fill="none" stroke="#a855f7" stroke-width="1.5"/></svg>
+        <div>
+          <p class="stat-label" id="statEpLabel">EPISODE 28</p>
+          <p class="stat-value" id="statEpName">Construction Showdown</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" width="28" height="28"><circle cx="9" cy="7" r="4" fill="none" stroke="#a855f7" stroke-width="1.5"/><path d="M3 20c0-3.3 2.7-6 6-6" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" fill="none"/><circle cx="17" cy="11" r="3" fill="none" stroke="#a855f7" stroke-width="1.5"/><path d="M13 20c0-2.8 1.8-5 4-5s4 2.2 4 5" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round" fill="none"/></svg>
+        <div>
+          <p class="stat-label" id="statVotes">3,842</p>
+          <p class="stat-value">Votes Cast</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" width="28" height="28"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" fill="none" stroke="#a855f7" stroke-width="1.5"/></svg>
+        <div>
+          <p class="stat-label" id="statComments">1,276</p>
+          <p class="stat-value">Comments</p>
+        </div>
+      </div>
+      <div class="stat-divider"></div>
+      <div class="stat-item">
+        <svg class="stat-icon" viewBox="0 0 24 24" width="28" height="28"><rect x="3" y="4" width="18" height="18" rx="2" fill="none" stroke="#a855f7" stroke-width="1.5"/><line x1="16" y1="2" x2="16" y2="6" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/><line x1="8" y1="2" x2="8" y2="6" stroke="#a855f7" stroke-width="1.5" stroke-linecap="round"/><line x1="3" y1="10" x2="21" y2="10" stroke="#a855f7" stroke-width="1.5"/></svg>
+        <div>
+          <p class="stat-label" id="statVoteEnd">JUNE 22, 2026</p>
+          <p class="stat-value">Voting Ends</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ══════════════════════════ DETAIL MODAL ═══════════════════════════ -->
+    <div class="modal-overlay" id="modalOverlay" hidden aria-modal="true" role="dialog" aria-label="Figure details">
+      <div class="modal-box">
+        <button class="modal-close" id="modalClose" type="button" aria-label="Close">
+          <svg viewBox="0 0 24 24" width="20" height="20"><line x1="18" y1="6" x2="6" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/><line x1="6" y1="6" x2="18" y2="18" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"/></svg>
+        </button>
+        <img class="modal-img" id="modalImg" src="" alt="" />
+        <h3 class="modal-name" id="modalName"></h3>
+        <p class="modal-maker" id="modalMaker"></p>
+        <div class="modal-specs" id="modalSpecs"></div>
+      </div>
+    </div>
+
+    <!-- ═══════════════════════════ VOTE TOAST ════════════════════════════ -->
+    <div class="toast" id="toast" aria-live="polite"></div>
+
+    <script src="wwib-app.js"></script>
+  </body>
+</html>
