@@ -273,6 +273,65 @@ body {
 
 .back-link:hover { color: var(--purple); }
 
+/* ── EPISODE SELECTOR ── */
+.episode-selector {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  scrollbar-width: thin;
+}
+
+.ep-chip {
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 2px;
+  background: var(--panel);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 8px 16px;
+  cursor: pointer;
+  text-align: left;
+  transition: border-color 0.2s, background 0.2s, transform 0.15s;
+}
+
+.ep-chip:hover {
+  border-color: var(--border-hot);
+  background: rgba(168,85,247,0.08);
+  transform: translateY(-1px);
+}
+
+.ep-chip.active {
+  border-color: var(--purple);
+  background: rgba(168,85,247,0.12);
+  box-shadow: 0 0 20px rgba(168,85,247,0.25);
+}
+
+.ep-chip-num {
+  font-family: var(--font-tech);
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.ep-chip.active .ep-chip-num { color: var(--purple); }
+
+.ep-chip-name {
+  font-family: var(--font-cond);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  white-space: nowrap;
+}
+
+.ep-chip:hover .ep-chip-name,
+.ep-chip.active .ep-chip-name { color: var(--text); }
+
 /* ── EPISODE PLATE ── */
 .episode-plate {
   display: flex;
