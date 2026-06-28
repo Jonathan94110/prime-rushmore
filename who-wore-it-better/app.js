@@ -53,20 +53,261 @@ const EPISODES = [
 
     cartoonOnlyVotes: 425,
   },
+
+  {
+    id: 29,
+    character: "INSECTICONS",
+    epLabel: "EPISODE 29",
+    epName: "Swarm of the Insecticons",
+    voteEnds: new Date("2026-07-15T23:59:59"),
+    statVotes: 2967,
+    statComments: 884,
+    cartoon: { img: "assets/placeholders/insecticons-cartoon.png", alt: "G1 Insecticons cartoon reference" },
+    left: {
+      name: "FANS TOYS FT-12 GRENADIER SET",
+      maker: "INSECTICONS",
+      img: "assets/placeholders/ft12-insecticons.png",
+      voteLabel: "VOTE GRENADIER SET",
+      voteMaker: "FANS TOYS",
+      votes: 1322,
+      specs: [
+        { label: "Scale", value: "1:25 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Stag beetle / locust" },
+        { label: "Year Released", value: "2017" },
+      ],
+    },
+    right: {
+      name: "MAKETOYS DEVIL STINGER",
+      maker: "INSECTICONS",
+      img: "assets/placeholders/maketoys-insecticons.png",
+      voteLabel: "VOTE DEVIL STINGER",
+      voteMaker: "MAKETOYS",
+      votes: 1188,
+      specs: [
+        { label: "Scale", value: "1:24 (MP scale)" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Beetle trio" },
+        { label: "Year Released", value: "2016" },
+      ],
+    },
+    cartoonOnlyVotes: 457,
+  },
+
+  {
+    id: 30,
+    character: "OCTANE",
+    epLabel: "EPISODE 30",
+    epName: "Triple-Threat Tanker",
+    voteEnds: new Date("2026-07-22T23:59:59"),
+    statVotes: 2105,
+    statComments: 612,
+    cartoon: { img: "assets/placeholders/octane-cartoon.png", alt: "G1 Octane cartoon reference" },
+    left: {
+      name: "FANS TOYS FT-44 THOMAS",
+      maker: "OCTANE",
+      img: "assets/placeholders/ft44-octane.png",
+      voteLabel: "VOTE FT-44 THOMAS",
+      voteMaker: "FANS TOYS",
+      votes: 1043,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Jet / fuel tanker" },
+        { label: "Year Released", value: "2021" },
+      ],
+    },
+    right: {
+      name: "X-TRANSBOTS MX-V SOSTER",
+      maker: "OCTANE",
+      img: "assets/placeholders/xtb-octane.png",
+      voteLabel: "VOTE MX-V SOSTER",
+      voteMaker: "X-TRANSBOTS",
+      votes: 802,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Jet / fuel tanker" },
+        { label: "Year Released", value: "2022" },
+      ],
+    },
+    cartoonOnlyVotes: 260,
+  },
+
+  {
+    id: 31,
+    character: "DEVASTATOR",
+    epLabel: "EPISODE 31",
+    epName: "Constructicon Combination",
+    voteEnds: new Date("2026-07-29T23:59:59"),
+    statVotes: 5218,
+    statComments: 1604,
+    cartoon: { img: "assets/placeholders/devastator-cartoon.png", alt: "G1 Devastator cartoon reference" },
+    left: {
+      name: "GENERATION TOY GT-88 GORILLA",
+      maker: "DEVASTATOR",
+      img: "assets/placeholders/gt-devastator.png",
+      voteLabel: "VOTE GT-88 GORILLA",
+      voteMaker: "GENERATION TOY",
+      votes: 2614,
+      specs: [
+        { label: "Scale", value: "1:30 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Combiner", value: "6 Constructicons" },
+        { label: "Year Released", value: "2018" },
+      ],
+    },
+    right: {
+      name: "JINBAO DEVY OVERSIZED",
+      maker: "DEVASTATOR",
+      img: "assets/placeholders/jinbao-devastator.png",
+      voteLabel: "VOTE JINBAO DEVY",
+      voteMaker: "JINBAO",
+      votes: 1987,
+      specs: [
+        { label: "Scale", value: "Oversized" },
+        { label: "Material", value: "ABS" },
+        { label: "Combiner", value: "6 Constructicons" },
+        { label: "Year Released", value: "2016" },
+      ],
+    },
+    cartoonOnlyVotes: 617,
+  },
+
+  {
+    id: 32,
+    character: "CYCLONUS",
+    epLabel: "EPISODE 32",
+    epName: "Galvatron's Right Hand",
+    voteEnds: new Date("2026-08-05T23:59:59"),
+    statVotes: 2740,
+    statComments: 731,
+    cartoon: { img: "assets/placeholders/cyclonus-cartoon.png", alt: "G1 Cyclonus cartoon reference" },
+    left: {
+      name: "FANS TOYS FT-29 QUIETUS",
+      maker: "CYCLONUS",
+      img: "assets/placeholders/ft29-cyclonus.png",
+      voteLabel: "VOTE FT-29 QUIETUS",
+      voteMaker: "FANS TOYS",
+      votes: 1498,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Cybertronic jet" },
+        { label: "Year Released", value: "2019" },
+      ],
+    },
+    right: {
+      name: "DX9 D14 CAPONE",
+      maker: "CYCLONUS",
+      img: "assets/placeholders/dx9-cyclonus.png",
+      voteLabel: "VOTE D14 CAPONE",
+      voteMaker: "DX9 TOYS",
+      votes: 1006,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Cybertronic jet" },
+        { label: "Year Released", value: "2018" },
+      ],
+    },
+    cartoonOnlyVotes: 236,
+  },
+
+  {
+    id: 33,
+    character: "MOTOR MASTER",
+    epLabel: "EPISODE 33",
+    epName: "Lord of the Stunticons",
+    voteEnds: new Date("2026-08-12T23:59:59"),
+    statVotes: 3185,
+    statComments: 905,
+    cartoon: { img: "assets/placeholders/motormaster-cartoon.png", alt: "G1 Motor Master cartoon reference" },
+    left: {
+      name: "FANS TOYS FT-43 MEISTER",
+      maker: "MOTOR MASTER",
+      img: "assets/placeholders/ft-motormaster.png",
+      voteLabel: "VOTE FT MEISTER",
+      voteMaker: "FANS TOYS",
+      votes: 1620,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Semi truck" },
+        { label: "Year Released", value: "2023" },
+      ],
+    },
+    right: {
+      name: "MAKETOYS DOWNBEAT",
+      maker: "MOTOR MASTER",
+      img: "assets/placeholders/maketoys-motormaster.png",
+      voteLabel: "VOTE DOWNBEAT",
+      voteMaker: "MAKETOYS",
+      votes: 1289,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Semi truck" },
+        { label: "Year Released", value: "2022" },
+      ],
+    },
+    cartoonOnlyVotes: 276,
+  },
+
+  {
+    id: 34,
+    character: "ABOMINUS",
+    epLabel: "EPISODE 34",
+    epName: "Terror of the Terrorcons",
+    voteEnds: new Date("2026-08-19T23:59:59"),
+    statVotes: 3902,
+    statComments: 1118,
+    cartoon: { img: "assets/placeholders/abominus-cartoon.png", alt: "G1 Abominus cartoon reference" },
+    left: {
+      name: "TFC TOYS HERCULES HADES",
+      maker: "ABOMINUS",
+      img: "assets/placeholders/tfc-abominus.png",
+      voteLabel: "VOTE TFC HADES",
+      voteMaker: "TFC TOYS",
+      votes: 1742,
+      specs: [
+        { label: "Scale", value: "Oversized" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Combiner", value: "5 Terrorcons" },
+        { label: "Year Released", value: "2015" },
+      ],
+    },
+    right: {
+      name: "UNIQUE TOYS PROVENANCE",
+      maker: "ABOMINUS",
+      img: "assets/placeholders/ut-abominus.png",
+      voteLabel: "VOTE UT PROVENANCE",
+      voteMaker: "UNIQUE TOYS",
+      votes: 1611,
+      specs: [
+        { label: "Scale", value: "Oversized" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Combiner", value: "5 Terrorcons" },
+        { label: "Year Released", value: "2019" },
+      ],
+    },
+    cartoonOnlyVotes: 549,
+  },
 ];
 
 /* ─── CONFIG ─────────────────────────────────────────────── */
-const CURRENT_EPISODE_INDEX = 0;
+let CURRENT_EPISODE_INDEX = 0;
 
 /* ─── STATE ──────────────────────────────────────────────── */
-let voted = null;          // 'left' | 'center' | 'right' | null
 let resultsVisible = false;
 let countdownInterval = null;
+const votedByEp = {};      // { [episodeId]: 'left' | 'center' | 'right' }
 
 /* ─── DOM REFS ───────────────────────────────────────────── */
 const $ = (id) => document.getElementById(id);
 
 const dom = {
+  episodeSelector:  $("episodeSelector"),
   epCharacter:      $("epCharacter"),
   epNumber:         $("epNumber"),
   leftName:         $("leftName"),
@@ -116,8 +357,43 @@ const dom = {
   cdSec:            $("cdSec"),
 };
 
+/* ─── EPISODE SELECTOR ───────────────────────────────────── */
+function renderSelector() {
+  dom.episodeSelector.innerHTML = EPISODES.map((ep, i) =>
+    `<button class="ep-chip${i === CURRENT_EPISODE_INDEX ? " active" : ""}" type="button" data-index="${i}">
+       <span class="ep-chip-num">${ep.epLabel}</span>
+       <span class="ep-chip-name">${ep.character}</span>
+     </button>`
+  ).join("");
+
+  dom.episodeSelector.querySelectorAll(".ep-chip").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const idx = Number(btn.dataset.index);
+      if (idx === CURRENT_EPISODE_INDEX) return;
+      CURRENT_EPISODE_INDEX = idx;
+      renderSelector();
+      loadEpisode(EPISODES[idx]);
+      document.getElementById("arena").scrollIntoView({ behavior: "smooth", block: "start" });
+    });
+  });
+}
+
+/* Reset all per-episode vote UI back to its pre-vote state */
+function resetVoteUI() {
+  dom.cardLeft.classList.remove("selected-left");
+  dom.cardRight.classList.remove("selected-right");
+  dom.voteLeft.classList.remove("voted");
+  dom.voteCenter.classList.remove("voted");
+  dom.voteRight.classList.remove("voted");
+  dom.voteLeft.disabled = dom.voteCenter.disabled = dom.voteRight.disabled = false;
+  dom.resultsPanel.hidden = true;
+  dom.resultBarLeft.style.width = dom.resultBarCenter.style.width = dom.resultBarRight.style.width = "0%";
+  resultsVisible = false;
+}
+
 /* ─── LOAD EPISODE ───────────────────────────────────────── */
 function loadEpisode(ep) {
+  resetVoteUI();
   dom.epCharacter.textContent  = ep.character;
   dom.epNumber.textContent     = ep.epLabel;
   dom.leftName.textContent     = ep.left.name;
@@ -142,6 +418,18 @@ function loadEpisode(ep) {
   dom.statVoteEnd.textContent   = fmtDate(ep.voteEnds);
 
   startCountdown(ep.voteEnds);
+
+  // Restore a vote the user already cast for this episode
+  const prior = votedByEp[ep.id];
+  if (prior) {
+    if (prior === "left")  dom.cardLeft.classList.add("selected-left");
+    if (prior === "right") dom.cardRight.classList.add("selected-right");
+    dom.voteLeft.classList.toggle("voted", prior === "left");
+    dom.voteCenter.classList.toggle("voted", prior === "center");
+    dom.voteRight.classList.toggle("voted", prior === "right");
+    dom.voteLeft.disabled = dom.voteCenter.disabled = dom.voteRight.disabled = true;
+    showResults(ep, false);
+  }
 }
 
 /* Set img src, silently fall back to placeholder SVG if 404 */
@@ -187,10 +475,9 @@ function startCountdown(endDate) {
 
 /* ─── VOTING ─────────────────────────────────────────────── */
 function castVote(side) {
-  if (voted) return;
-  voted = side;
-
   const ep = EPISODES[CURRENT_EPISODE_INDEX];
+  if (votedByEp[ep.id]) return;
+  votedByEp[ep.id] = side;
   // Optimistically add the user's vote to local tallies
   if (side === "left")   ep.left.votes++;
   if (side === "right")  ep.right.votes++;
@@ -294,11 +581,11 @@ dom.voteRight.addEventListener("click",  () => castVote("right"));
 // Clicking a figure card also votes for it
 dom.cardLeft.addEventListener("click",  (e) => {
   if (e.target.closest(".view-details-btn")) return;
-  if (!voted) castVote("left");
+  if (!votedByEp[EPISODES[CURRENT_EPISODE_INDEX].id]) castVote("left");
 });
 dom.cardRight.addEventListener("click", (e) => {
   if (e.target.closest(".view-details-btn")) return;
-  if (!voted) castVote("right");
+  if (!votedByEp[EPISODES[CURRENT_EPISODE_INDEX].id]) castVote("right");
 });
 
 dom.leftDetailsBtn.addEventListener("click",  (e) => { e.stopPropagation(); openModal("left");  });
@@ -322,4 +609,5 @@ document.addEventListener("keydown", (e) => {
 });
 
 /* ─── INIT ───────────────────────────────────────────────── */
+renderSelector();
 loadEpisode(EPISODES[CURRENT_EPISODE_INDEX]);
