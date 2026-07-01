@@ -372,8 +372,15 @@ function renderSelector() {
       if (idx === CURRENT_EPISODE_INDEX) return;
       CURRENT_EPISODE_INDEX = idx;
       renderSelector();
-      loadEpisode(EPISODES[idx]);
-      document.getElementById("arena").scrollIntoView({ behavior: "smooth", block: "start" });
+
+      // Crossfade the arena content during the swap
+      const arena = document.getElementById("arena");
+      arena.classList.add("switching");
+      setTimeout(() => {
+        loadEpisode(EPISODES[idx]);
+        arena.classList.remove("switching");
+      }, 220);
+      arena.scrollIntoView({ behavior: "smooth", block: "start" });
     });
   });
 }
@@ -389,6 +396,18 @@ function resetVoteUI() {
   dom.resultsPanel.hidden = true;
   dom.resultBarLeft.style.width = dom.resultBarCenter.style.width = dom.resultBarRight.style.width = "0%";
   resultsVisible = false;
+}
+
+/* ─── ANIMATED COUNT-UP ──────────────────────────────────── */
+function countUp(el, target, duration = 900) {
+  const start = performance.now();
+  function frame(now) {
+    const t = Math.min((now - start) / duration, 1);
+    const eased = 1 - Math.pow(1 - t, 3); // ease-out cubic
+    el.textContent = fmtNum(Math.round(target * eased));
+    if (t < 1) requestAnimationFrame(frame);
+  }
+  requestAnimationFrame(frame);
 }
 
 /* ─── LOAD EPISODE ───────────────────────────────────────── */
@@ -413,8 +432,8 @@ function loadEpisode(ep) {
 
   dom.statEpLabel.textContent   = ep.epLabel;
   dom.statEpName.textContent    = ep.epName;
-  dom.statVotes.textContent     = fmtNum(ep.statVotes);
-  dom.statComments.textContent  = fmtNum(ep.statComments);
+  countUp(dom.statVotes, ep.statVotes);
+  countUp(dom.statComments, ep.statComments);
   dom.statVoteEnd.textContent   = fmtDate(ep.voteEnds);
 
   startCountdown(ep.voteEnds);
@@ -607,6 +626,24 @@ dom.modalOverlay.addEventListener("click", (e) => { if (e.target === dom.modalOv
 document.addEventListener("keydown", (e) => {
   if (e.key === "Escape" && !dom.modalOverlay.hidden) closeModal();
 });
+
+/* ─── 3D TILT ON FIGURE CARDS ────────────────────────────── */
+function attachTilt(card) {
+  const strength = 7; // max degrees
+  card.addEventListener("mousemove", (e) => {
+    const r = card.getBoundingClientRect();
+    const x = (e.clientX - r.left) / r.width - 0.5;
+    const y = (e.clientY - r.top) / r.height - 0.5;
+    card.style.transform =
+      `perspective(900px) rotateY(${x * strength}deg) rotateX(${-y * strength}deg) translateY(-6px) scale(1.01)`;
+  });
+  card.addEventListener("mouseleave", () => {
+    card.style.transform = "";
+  });
+}
+
+attachTilt(dom.cardLeft);
+attachTilt(dom.cardRight);
 
 /* ─── INIT ───────────────────────────────────────────────── */
 renderSelector();
