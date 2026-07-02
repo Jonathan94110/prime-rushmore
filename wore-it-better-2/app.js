@@ -293,6 +293,224 @@ const EPISODES = [
     },
     cartoonOnlyVotes: 549,
   },
+
+  {
+    id: 35,
+    character: "ULTRA MAGNUS",
+    epLabel: "EPISODE 35",
+    epName: "City Commander Clash",
+    voteEnds: new Date("2026-08-26T23:59:59"),
+    statVotes: 3120, statComments: 940,
+    cartoon: { img: "assets/placeholders/um-cartoon.png", alt: "G1 Ultra Magnus cartoon reference" },
+    left: {
+      name: "X-TRANSBOTS MX-22M STACK", maker: "ULTRA MAGNUS",
+      img: "assets/placeholders/xtb-mx22m-magnus.png",
+      voteLabel: "VOTE MX-22M STACK", voteMaker: "X-TRANSBOTS", votes: 1602,
+      specs: [
+        { label: "Version", value: "Metallic" },
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Car carrier" },
+      ],
+    },
+    right: {
+      name: "FANTASTIC MODEL FM-02 MARGH", maker: "ULTRA MAGNUS",
+      img: "assets/placeholders/fm02-magnus.png",
+      voteLabel: "VOTE FM-02 MARGH", voteMaker: "FANTASTIC MODEL", votes: 1284,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Car carrier" },
+      ],
+    },
+    cartoonOnlyVotes: 234,
+  },
+
+  {
+    id: 36,
+    character: "SUPERION",
+    epLabel: "EPISODE 36",
+    epName: "Aerialbots Assemble",
+    voteEnds: new Date("2026-09-02T23:59:59"),
+    statVotes: 4870, statComments: 1502,
+    cartoon: { img: "assets/placeholders/superion-cartoon.png", alt: "G1 Superion cartoon reference" },
+    left: {
+      name: "ZETA TOYS ZB-06 SUPERITRON", maker: "SUPERION",
+      img: "assets/placeholders/zeta-superitron.png",
+      voteLabel: "VOTE SUPERITRON", voteMaker: "ZETA TOYS", votes: 2210,
+      specs: [
+        { label: "Combiner", value: "Set of 5 Aerialbots" },
+        { label: "Scale", value: "Oversized" },
+        { label: "Material", value: "ABS & die-cast" },
+      ],
+    },
+    right: {
+      name: "FANS TOYS ETHEREAON", maker: "SUPERION",
+      img: "assets/placeholders/ft-ethereaon.png",
+      voteLabel: "VOTE ETHEREAON", voteMaker: "FANS TOYS", votes: 2189,
+      specs: [
+        { label: "Combiner", value: "Set of 5 Aerialbots" },
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+      ],
+    },
+    cartoonOnlyVotes: 471,
+  },
+
+  {
+    id: 37,
+    character: "OCTANE",
+    epLabel: "EPISODE 37",
+    epName: "Triple-Changer Rematch",
+    voteEnds: new Date("2026-09-09T23:59:59"),
+    statVotes: 2540, statComments: 705,
+    cartoon: { img: "assets/placeholders/octane2-cartoon.png", alt: "G1 Octane cartoon reference" },
+    left: {
+      name: "KFC STRATOTANKER", maker: "OCTANE",
+      img: "assets/placeholders/kfc-stratotanker.png",
+      voteLabel: "VOTE STRATOTANKER", voteMaker: "KFC TOYS", votes: 1298,
+      specs: [
+        { label: "Line", value: "Eavi Metal Phase 11A" },
+        { label: "Version", value: "Metallic" },
+        { label: "Transformation", value: "Jet / fuel tanker" },
+      ],
+    },
+    right: {
+      name: "UNIQUE TOYS UT-Y-01", maker: "OCTANE",
+      img: "assets/placeholders/ut-y01-octane.png",
+      voteLabel: "VOTE UT-Y-01", voteMaker: "UNIQUE TOYS", votes: 1015,
+      specs: [
+        { label: "Name", value: "Fuel Supply Provider" },
+        { label: "Material", value: "ABS & POM" },
+        { label: "Transformation", value: "Jet / fuel tanker" },
+      ],
+    },
+    cartoonOnlyVotes: 227,
+  },
+
+  {
+    id: 38,
+    character: "CLIFFJUMPER",
+    epLabel: "EPISODE 38",
+    epName: "Minibot Bravado",
+    voteEnds: new Date("2026-09-16T23:59:59"),
+    statVotes: 2980, statComments: 812,
+    cartoon: { img: "assets/placeholders/cliffjumper-cartoon.png", alt: "G1 Cliffjumper cartoon reference" },
+    left: {
+      name: "MMC PS-09A HELLION", maker: "CLIFFJUMPER",
+      img: "assets/placeholders/mmc-cliffjumper.png",
+      voteLabel: "VOTE PS-09A HELLION", voteMaker: "MASTERMIND CREATIONS", votes: 1544,
+      specs: [
+        { label: "Line", value: "Reformatted" },
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+      ],
+    },
+    right: {
+      name: "X-TRANSBOTS MM-X TORO", maker: "CLIFFJUMPER",
+      img: "assets/placeholders/xtb-cliffjumper.png",
+      voteLabel: "VOTE MM-X TORO", voteMaker: "X-TRANSBOTS", votes: 1210,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Sports car" },
+      ],
+    },
+    cartoonOnlyVotes: 226,
+  },
+
+  {
+    id: 39,
+    character: "REFLECTOR",
+    epLabel: "EPISODE 39",
+    epName: "Three-in-One Focus",
+    voteEnds: new Date("2026-09-23T23:59:59"),
+    statVotes: 2115, statComments: 566,
+    cartoon: { img: "assets/placeholders/reflector-cartoon.png", alt: "G1 Reflector cartoon reference" },
+    left: {
+      name: "KFC OPTICLONES", maker: "REFLECTOR",
+      img: "assets/placeholders/kfc-opticlones.png",
+      voteLabel: "VOTE OPTICLONES", voteMaker: "KFC TOYS", votes: 1102,
+      specs: [
+        { label: "Line", value: "Eavi Metal Phase 5A" },
+        { label: "Set", value: "Set of 3" },
+        { label: "Transformation", value: "Camera" },
+      ],
+    },
+    right: {
+      name: "FANS TOYS FT-11 SPOTTER", maker: "REFLECTOR",
+      img: "assets/placeholders/ft11-spotter.png",
+      voteLabel: "VOTE FT-11 SPOTTER", voteMaker: "FANS TOYS", votes: 842,
+      specs: [
+        { label: "Set", value: "Set of 3" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "Camera" },
+      ],
+    },
+    cartoonOnlyVotes: 171,
+  },
+
+  {
+    id: 40,
+    character: "THUNDERCRACKER",
+    epLabel: "EPISODE 40",
+    epName: "Seeker Sonic Boom",
+    voteEnds: new Date("2026-09-30T23:59:59"),
+    statVotes: 3760, statComments: 1041,
+    cartoon: { img: "assets/placeholders/thundercracker-cartoon.png", alt: "G1 Thundercracker cartoon reference" },
+    left: {
+      name: "DEFORMATION SPACE DS-01R", maker: "THUNDERCRACKER",
+      img: "assets/placeholders/ds01r-thundercracker.png",
+      voteLabel: "VOTE DS-01R", voteMaker: "DEFORMATION SPACE", votes: 1789,
+      specs: [
+        { label: "Scale", value: "1:60 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "F-15 jet" },
+      ],
+    },
+    right: {
+      name: "TAKARA TOMY MP-52", maker: "THUNDERCRACKER",
+      img: "assets/placeholders/mp52-thundercracker.png",
+      voteLabel: "VOTE MP-52", voteMaker: "TAKARA TOMY", votes: 1748,
+      specs: [
+        { label: "Version", value: "2.0" },
+        { label: "Line", value: "Masterpiece" },
+        { label: "Transformation", value: "F-15 jet" },
+      ],
+    },
+    cartoonOnlyVotes: 223,
+  },
+
+  {
+    id: 41,
+    character: "SKYFIRE",
+    epLabel: "EPISODE 41",
+    epName: "Valiant Defector",
+    voteEnds: new Date("2026-10-07T23:59:59"),
+    statVotes: 4405, statComments: 1330,
+    cartoon: { img: "assets/placeholders/skyfire-cartoon.png", alt: "G1 Skyfire (Jetfire) cartoon reference" },
+    left: {
+      name: "TAKARA TOMY MP-57 SKYFIRE", maker: "SKYFIRE",
+      img: "assets/placeholders/mp57-skyfire.png",
+      voteLabel: "VOTE MP-57 SKYFIRE", voteMaker: "TAKARA TOMY", votes: 2380,
+      specs: [
+        { label: "Line", value: "Masterpiece" },
+        { label: "Size", value: "Massive" },
+        { label: "Transformation", value: "VF-1 style jet" },
+      ],
+    },
+    right: {
+      name: "FANS TOYS FT-10 PHOENIX", maker: "SKYFIRE",
+      img: "assets/placeholders/ft10-phoenix.png",
+      voteLabel: "VOTE FT-10 PHOENIX", voteMaker: "FANS TOYS", votes: 1798,
+      specs: [
+        { label: "Scale", value: "1:32 (MP scale)" },
+        { label: "Material", value: "ABS & die-cast" },
+        { label: "Transformation", value: "VF-1 style jet" },
+      ],
+    },
+    cartoonOnlyVotes: 227,
+  },
 ];
 
 /* ─── CONFIG ─────────────────────────────────────────────── */
