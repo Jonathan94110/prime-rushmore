@@ -1,0 +1,402 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vote Exchange — Wore It Better 2</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,400;0,600;0,700;0,800;0,900;1,800&family=Barlow:wght@400;500;600;700&family=Rajdhani:wght@500;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      /* ═══════════ VOTE EXCHANGE (terminal) ═══════════ */
+      :root {
+        --up:   #0891b2;
+        --down: #ef4444;
+        --amber:#a16207;
+        --grid: rgba(148,163,184,0.10);
+      }
+
+      .exchange-wrap {
+        max-width: 1280px;
+        margin: 0 auto;
+        padding: 24px 24px 60px;
+      }
+
+      /* ── ticker tape ── */
+      .tape {
+        overflow: hidden;
+        border-top: 1px solid var(--border);
+        border-bottom: 1px solid var(--border);
+        background: rgba(17,13,36,0.7);
+        white-space: nowrap;
+      }
+      .tape-track {
+        display: inline-block;
+        padding: 8px 0;
+        animation: tapeScroll 40s linear infinite;
+      }
+      .tape:hover .tape-track { animation-play-state: paused; }
+      @keyframes tapeScroll { from { transform: translateX(0); } to { transform: translateX(-50%); } }
+      .tape-item {
+        display: inline-flex;
+        gap: 8px;
+        align-items: baseline;
+        margin: 0 22px;
+        font-family: var(--font-tech);
+        font-size: 13px;
+        font-weight: 600;
+        letter-spacing: 0.06em;
+      }
+      .tape-sym { color: var(--text); }
+      .tape-chg.up   { color: #22d3ee; }
+      .tape-chg.down { color: #f87171; }
+
+      /* ── layout ── */
+      .exchange-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        margin-top: 20px;
+      }
+
+      .panel {
+        background: var(--panel);
+        border: 1px solid var(--border);
+        border-radius: var(--card-radius);
+        padding: 18px 20px;
+      }
+
+      .panel-title {
+        font-family: var(--font-cond);
+        font-size: 15px;
+        font-weight: 800;
+        letter-spacing: 0.12em;
+        color: var(--text-dim);
+        display: flex;
+        align-items: baseline;
+        gap: 12px;
+        flex-wrap: wrap;
+      }
+      .panel-title .sym { color: var(--text); font-size: 20px; }
+      .panel-title .quote { font-family: var(--font-tech); font-size: 14px; }
+      .quote.up { color: #22d3ee; }
+      .quote.down { color: #f87171; }
+      .panel-sub {
+        font-size: 12px;
+        color: var(--text-muted);
+        margin-top: 2px;
+      }
+
+      /* ── chart ── */
+      .chart-box { position: relative; margin-top: 12px; }
+      .chart-box svg { display: block; width: 100%; height: auto; }
+      .crosshair-line { stroke: rgba(226,232,240,0.25); stroke-width: 1; stroke-dasharray: 3 3; }
+      .chart-tip {
+        position: absolute;
+        pointer-events: none;
+        background: var(--bg2);
+        border: 1px solid var(--border-hot);
+        border-radius: 6px;
+        padding: 8px 10px;
+        font-family: var(--font-tech);
+        font-size: 12px;
+        color: var(--text);
+        line-height: 1.5;
+        box-shadow: 0 6px 24px rgba(0,0,0,0.5);
+        opacity: 0;
+        transition: opacity 0.12s;
+        z-index: 5;
+        white-space: nowrap;
+      }
+      .chart-tip .t-dim { color: var(--text-dim); }
+
+      /* ── table ── */
+      .board { width: 100%; border-collapse: collapse; margin-top: 8px; }
+      .board th {
+        font-family: var(--font-tech);
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 0.12em;
+        text-transform: uppercase;
+        color: var(--text-muted);
+        text-align: left;
+        padding: 8px 10px;
+        border-bottom: 1px solid var(--border);
+      }
+      .board td {
+        padding: 10px;
+        border-bottom: 1px solid rgba(42,31,80,0.5);
+        font-size: 13px;
+        color: var(--text);
+        vertical-align: middle;
+      }
+      .board tr.row { cursor: pointer; transition: background 0.15s; }
+      .board tr.row:hover { background: rgba(168,85,247,0.06); }
+      .board tr.row.active { background: rgba(168,85,247,0.12); box-shadow: inset 2px 0 0 var(--purple); }
+      .b-sym { font-family: var(--font-tech); font-weight: 700; letter-spacing: 0.08em; }
+      .b-char { color: var(--text-dim); }
+      .b-leader { display: inline-flex; align-items: center; gap: 6px; }
+      .dot { width: 8px; height: 8px; border-radius: 2px; flex-shrink: 0; }
+      .dot-a { background: var(--purple); }
+      .dot-b { background: var(--down); }
+      .share-wrap {
+        display: flex;
+        width: 150px;
+        height: 10px;
+        border-radius: 4px;
+        overflow: hidden;
+        gap: 2px;             /* 2px surface gap between fills */
+        background: var(--bg);
+      }
+      .share-a { background: var(--purple); border-radius: 4px 0 0 4px; }
+      .share-b { background: var(--down); border-radius: 0 4px 4px 0; }
+      .b-num { font-family: var(--font-tech); font-weight: 600; }
+      .chg.up { color: #22d3ee; }
+      .chg.down { color: #f87171; }
+      .spark { display: block; }
+
+      .legend-row {
+        display: flex;
+        gap: 18px;
+        align-items: center;
+        margin-top: 10px;
+        font-size: 12px;
+        color: var(--text-dim);
+      }
+      .legend-row .b-leader { gap: 5px; }
+
+      .fine-print {
+        margin-top: 14px;
+        font-size: 11px;
+        color: var(--text-muted);
+      }
+
+      @media (max-width: 800px) {
+        .board th:nth-child(2), .board td:nth-child(2),
+        .board th:nth-child(6), .board td:nth-child(6) { display: none; }
+        .share-wrap { width: 90px; }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a href="index.html" class="brand">
+          <div class="brand-icon">
+            <svg viewBox="0 0 40 40" width="40" height="40" aria-hidden="true">
+              <polygon points="20,2 38,12 38,28 20,38 2,28 2,12" fill="none" stroke="#a855f7" stroke-width="2"/>
+              <polygon points="20,8 32,15 32,25 20,32 8,25 8,15" fill="#1a0a2e" stroke="#7c3aed" stroke-width="1.5"/>
+              <path d="M14,18 L20,10 L26,18 L20,22 Z" fill="#a855f7"/>
+              <path d="M12,20 L20,24 L28,20 L20,28 Z" fill="#7c3aed"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-name">TF</span>
+            <span class="brand-name accent">MARAUDERS</span>
+            <span class="brand-sub">Discuss. Debate. Destroy.</span>
+          </div>
+        </a>
+        <nav class="site-nav" aria-label="Main navigation">
+          <a href="index.html">Home</a>
+          <a href="index.html">Episodes</a>
+          <a href="#" class="nav-active">Leaderboard</a>
+          <a href="index.html">Vote</a>
+        </nav>
+        <div class="header-actions"></div>
+      </div>
+    </header>
+
+    <div class="tape" aria-hidden="true"><div class="tape-track" id="tapeTrack"></div></div>
+
+    <main class="exchange-wrap">
+      <!-- main chart -->
+      <section class="panel">
+        <div class="panel-title">
+          <span class="sym" id="chartSym">UMAG</span>
+          <span id="chartName">Ultra Magnus — Vote Momentum</span>
+          <span class="quote" id="chartQuote"></span>
+        </div>
+        <p class="panel-sub">48h vote-momentum index · hourly candles · cyan hollow = up hour, red filled = down hour</p>
+        <div class="chart-box" id="chartBox">
+          <svg id="candleSvg" viewBox="0 0 960 320" role="img" aria-label="Hourly vote momentum candlestick chart"></svg>
+          <div class="chart-tip" id="chartTip"></div>
+        </div>
+      </section>
+
+      <!-- board -->
+      <section class="panel">
+        <div class="panel-title">MATCHUP BOARD</div>
+        <div class="legend-row">
+          <span class="b-leader"><span class="dot dot-a"></span>Figure A share</span>
+          <span class="b-leader"><span class="dot dot-b"></span>Figure B share</span>
+          <span>· click a row to load its chart</span>
+        </div>
+        <div style="overflow-x:auto">
+          <table class="board" id="board">
+            <thead>
+              <tr>
+                <th>Sym</th><th>Character</th><th>Leader</th><th>Share A / B</th>
+                <th>24h</th><th>Votes</th><th>Trend</th>
+              </tr>
+            </thead>
+            <tbody></tbody>
+          </table>
+        </div>
+        <p class="fine-print">Vote-momentum series are simulated for entertainment — this is a toy exchange, not financial anything. Vote counts seed from the arena.</p>
+      </section>
+    </main>
+
+    <script>
+    /* ═══ data ═══ */
+    const MARKET = [
+      ["DMLT","Demolitor","FT-32E Hadid","28 Demolitor",1542,1877],
+      ["INSX","Insecticons","FT-12 Grenadier","Devil Stinger",1322,1188],
+      ["OCTN","Octane","FT-44 Thomas","MX-V Soster",1043,802],
+      ["DVST","Devastator","GT-88 Gorilla","Jinbao Devy",2614,1987],
+      ["CYCL","Cyclonus","FT-29 Quietus","D14 Capone",1498,1006],
+      ["MOTO","Motor Master","FT-43 Meister","Downbeat",1620,1289],
+      ["ABMN","Abominus","Hercules Hades","UT Provenance",1742,1611],
+      ["UMAG","Ultra Magnus","MX-22M Stack","FM-02 Margh",1602,1284],
+      ["SUPR","Superion","ZB-06 Superitron","Ethereaon",2210,2189],
+      ["OCT2","Octane II","Stratotanker","UT-Y-01",1298,1015],
+      ["CLIF","Cliffjumper","PS-09A Hellion","MM-X Toro",1544,1210],
+      ["RFLC","Reflector","Opticlones","FT-11 Spotter",1102,842],
+      ["THCR","Thundercracker","DS-01R","MP-52",1789,1748],
+      ["SKYF","Skyfire","MP-57 Skyfire","FT-10 Phoenix",2380,1798],
+    ];
+
+    /* seeded PRNG so every visit shows the same "history" per symbol */
+    function mulberry32(a){return function(){a|=0;a=a+0x6D2B79F5|0;let t=Math.imul(a^a>>>15,1|a);t=t+Math.imul(t^t>>>7,61|t)^t;return((t^t>>>14)>>>0)/4294967296}}
+    function seedOf(s){let h=0;for(const c of s)h=(h*31+c.charCodeAt(0))|0;return h}
+
+    function makeCandles(sym, base){
+      const rnd = mulberry32(seedOf(sym));
+      const out = []; let px = base;
+      for (let i=0;i<48;i++){
+        const drift = (rnd()-0.48)*base*0.02;
+        const o = px, c = Math.max(base*0.6, o + drift);
+        const hi = Math.max(o,c) + rnd()*base*0.008;
+        const lo = Math.min(o,c) - rnd()*base*0.008;
+        out.push({o,h:hi,l:lo,c,hour:(9+i)%24});
+        px = c;
+      }
+      return out;
+    }
+
+    const state = MARKET.map(([sym,ch,a,b,va,vb])=>{
+      const candles = makeCandles(sym,(va+vb)/20);
+      const first = candles[0].o, last = candles[candles.length-1].c;
+      return {sym,ch,a,b,va,vb,candles,chg:(last-first)/first*100,last};
+    });
+
+    const fmt = n => n.toLocaleString(undefined,{maximumFractionDigits:2});
+    const fmtPct = n => { const v = Math.abs(n) < 0.005 ? 0 : n; return (v>=0?"+":"") + v.toFixed(2) + "%"; };
+
+    /* ═══ ticker tape ═══ */
+    const tape = state.map(s=>`<span class="tape-item"><span class="tape-sym">${s.sym}</span><span>${fmt(s.last)}</span><span class="tape-chg ${s.chg>=0?"up":"down"}">${fmtPct(s.chg)}</span></span>`).join("");
+    document.getElementById("tapeTrack").innerHTML = tape + tape; /* doubled for seamless loop */
+
+    /* ═══ candlestick chart ═══ */
+    const svg = document.getElementById("candleSvg");
+    const tip = document.getElementById("chartTip");
+    const box = document.getElementById("chartBox");
+    const W=960,H=320,PAD_L=10,PAD_R=64,PAD_T=14,PAD_B=26;
+    let current = null, geom = [];
+
+    function drawChart(s){
+      current = s;
+      document.getElementById("chartSym").textContent = s.sym;
+      document.getElementById("chartName").textContent = s.ch + " — Vote Momentum";
+      const q = document.getElementById("chartQuote");
+      q.textContent = `${fmt(s.last)}  ${fmtPct(s.chg)}`;
+      q.className = "quote " + (s.chg>=0?"up":"down");
+
+      const cs = s.candles;
+      const lo = Math.min(...cs.map(c=>c.l)), hi = Math.max(...cs.map(c=>c.h));
+      const y = v => PAD_T + (hi-v)/(hi-lo)*(H-PAD_T-PAD_B);
+      const iw = (W-PAD_L-PAD_R)/cs.length;
+      const bw = Math.max(3, iw-3);
+      geom = [];
+      let el = "";
+
+      /* recessive grid + right axis labels */
+      for (let g=0; g<=4; g++){
+        const v = lo + (hi-lo)*g/4, yy = y(v);
+        el += `<line x1="${PAD_L}" y1="${yy}" x2="${W-PAD_R}" y2="${yy}" stroke="var(--grid)" stroke-width="1"/>`;
+        el += `<text x="${W-PAD_R+8}" y="${yy+4}" font-size="11" fill="#94a3b8" font-family="Rajdhani">${fmt(v)}</text>`;
+      }
+      /* hour labels every 8 candles */
+      cs.forEach((c,i)=>{ if(i%8===0){
+        el += `<text x="${PAD_L+i*iw+iw/2}" y="${H-8}" font-size="11" fill="#475569" font-family="Rajdhani" text-anchor="middle">${String(c.hour).padStart(2,"0")}:00</text>`;
+      }});
+      /* candles: cyan hollow up / red filled down (shape+fill = secondary encoding) */
+      cs.forEach((c,i)=>{
+        const x = PAD_L+i*iw+iw/2;
+        const up = c.c>=c.o, col = up?"#0891b2":"#ef4444";
+        const bt = y(Math.max(c.o,c.c)), bb = y(Math.min(c.o,c.c));
+        el += `<line x1="${x}" y1="${y(c.h)}" x2="${x}" y2="${y(c.l)}" stroke="${col}" stroke-width="1"/>`;
+        el += `<rect x="${x-bw/2}" y="${bt}" width="${bw}" height="${Math.max(2,bb-bt)}" rx="1"
+                fill="${up?"var(--panel)":col}" stroke="${col}" stroke-width="1.5"/>`;
+        geom.push({x, c});
+      });
+      el += `<line id="chX" class="crosshair-line" y1="${PAD_T}" y2="${H-PAD_B}" x1="-10" x2="-10"/>`;
+      svg.innerHTML = el;
+      document.querySelectorAll("#board tr.row").forEach(r=>r.classList.toggle("active", r.dataset.sym===s.sym));
+    }
+
+    /* crosshair + tooltip */
+    box.addEventListener("mousemove", e=>{
+      if(!current) return;
+      const r = svg.getBoundingClientRect();
+      const mx = (e.clientX-r.left)/r.width*W;
+      let best=null,bd=1e9;
+      geom.forEach(g=>{const d=Math.abs(g.x-mx); if(d<bd){bd=d;best=g;}});
+      if(!best) return;
+      document.getElementById("chX").setAttribute("x1",best.x);
+      document.getElementById("chX").setAttribute("x2",best.x);
+      const c=best.c, up=c.c>=c.o;
+      tip.innerHTML = `<span class="t-dim">${String(c.hour).padStart(2,"0")}:00</span><br>
+        O ${fmt(c.o)} · H ${fmt(c.h)}<br>L ${fmt(c.l)} · C <b style="color:${up?"#22d3ee":"#f87171"}">${fmt(c.c)}</b>`;
+      tip.style.opacity = 1;
+      const px = best.x/W*r.width;
+      tip.style.left = Math.min(px+14, r.width-150)+"px";
+      tip.style.top = (e.clientY-r.top-10)+"px";
+    });
+    box.addEventListener("mouseleave", ()=>{ tip.style.opacity=0; const l=document.getElementById("chX"); if(l){l.setAttribute("x1",-10);l.setAttribute("x2",-10);} });
+
+    /* ═══ board ═══ */
+    function sparkline(s){
+      const cs=s.candles, w=110, h=26;
+      const lo=Math.min(...cs.map(c=>c.c)), hi=Math.max(...cs.map(c=>c.c));
+      const pts=cs.map((c,i)=>`${(i/(cs.length-1))*w},${h-2-((c.c-lo)/(hi-lo||1))*(h-4)}`).join(" ");
+      const col = s.chg>=0?"#0891b2":"#ef4444";
+      return `<svg class="spark" width="${w}" height="${h}" aria-hidden="true"><polyline points="${pts}" fill="none" stroke="${col}" stroke-width="2" stroke-linejoin="round"/></svg>`;
+    }
+
+    const tbody = document.querySelector("#board tbody");
+    tbody.innerHTML = state.map(s=>{
+      const total=s.va+s.vb, pa=Math.round(s.va/total*100), pb=100-pa;
+      const leadA = s.va>=s.vb;
+      return `<tr class="row" data-sym="${s.sym}">
+        <td class="b-sym">${s.sym}</td>
+        <td class="b-char">${s.ch}</td>
+        <td><span class="b-leader"><span class="dot ${leadA?"dot-a":"dot-b"}"></span>${leadA?s.a:s.b}</span></td>
+        <td><div class="share-wrap" title="${s.a} ${pa}% vs ${s.b} ${pb}%">
+              <div class="share-a" style="width:${pa}%"></div><div class="share-b" style="width:${pb}%"></div>
+            </div><span class="b-num" style="font-size:11px;color:var(--text-dim)">${pa}% / ${pb}%</span></td>
+        <td class="b-num chg ${s.chg>=0?"up":"down"}">${fmtPct(s.chg)}</td>
+        <td class="b-num">${total.toLocaleString()}</td>
+        <td>${sparkline(s)}</td>
+      </tr>`;
+    }).join("");
+
+    tbody.addEventListener("click", e=>{
+      const row = e.target.closest("tr.row"); if(!row) return;
+      drawChart(state.find(s=>s.sym===row.dataset.sym));
+    });
+
+    drawChart(state.find(s=>s.sym==="UMAG"));
+    </script>
+  </body>
+</html>
