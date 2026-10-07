@@ -1,0 +1,137 @@
+[
+ {
+  "team": "CHI",
+  "season": 1963,
+  "nickname": "Monsters of the Midway",
+  "games": 14,
+  "pts_allowed": 144,
+  "def_int": 33,
+  "sacks": null
+ },
+ {
+  "team": "BAL",
+  "season": 1968,
+  "nickname": null,
+  "games": 14,
+  "pts_allowed": 144,
+  "def_int": 29,
+  "sacks": null
+ },
+ {
+  "team": "MIN",
+  "season": 1969,
+  "nickname": "Purple People Eaters",
+  "games": 14,
+  "pts_allowed": 133,
+  "def_int": 30,
+  "sacks": null
+ },
+ {
+  "team": "MIN",
+  "season": 1971,
+  "nickname": "Purple People Eaters",
+  "games": 14,
+  "pts_allowed": 139,
+  "def_int": 27,
+  "sacks": null
+ },
+ {
+  "team": "DAL",
+  "season": 1971,
+  "nickname": "Doomsday Defense",
+  "games": 14,
+  "pts_allowed": 222,
+  "def_int": 26,
+  "sacks": null
+ },
+ {
+  "team": "MIA",
+  "season": 1972,
+  "nickname": "No-Name Defense",
+  "games": 14,
+  "pts_allowed": 171,
+  "def_int": 26,
+  "sacks": null
+ },
+ {
+  "team": "PIT",
+  "season": 1974,
+  "nickname": "Steel Curtain",
+  "games": 14,
+  "pts_allowed": 189,
+  "def_int": 25,
+  "sacks": null
+ },
+ {
+  "team": "PIT",
+  "season": 1975,
+  "nickname": "Steel Curtain",
+  "games": 14,
+  "pts_allowed": 162,
+  "def_int": 27,
+  "sacks": null
+ },
+ {
+  "team": "PIT",
+  "season": 1976,
+  "nickname": "Steel Curtain",
+  "games": 14,
+  "pts_allowed": 138,
+  "def_int": 22,
+  "sacks": null
+ },
+ {
+  "team": "ATL",
+  "season": 1977,
+  "nickname": "Grits Blitz",
+  "games": 14,
+  "pts_allowed": 129,
+  "def_int": 26,
+  "sacks": null
+ },
+ {
+  "team": "DAL",
+  "season": 1977,
+  "nickname": "Doomsday II",
+  "games": 14,
+  "pts_allowed": 212,
+  "def_int": 21,
+  "sacks": null
+ },
+ {
+  "team": "CHI",
+  "season": 1985,
+  "nickname": "46 Defense",
+  "games": 16,
+  "pts_allowed": 198,
+  "def_int": 34,
+  "sacks": 64.0
+ },
+ {
+  "team": "NYG",
+  "season": 1986,
+  "nickname": "Big Blue Wrecking Crew",
+  "games": 16,
+  "pts_allowed": 236,
+  "def_int": 24,
+  "sacks": 59.0
+ },
+ {
+  "team": "PHI",
+  "season": 1991,
+  "nickname": "Gang Green",
+  "games": 16,
+  "pts_allowed": 244,
+  "def_int": 26,
+  "sacks": 54.0
+ },
+ {
+  "team": "GNB",
+  "season": 1996,
+  "nickname": null,
+  "games": 16,
+  "pts_allowed": 210,
+  "def_int": 26,
+  "sacks": 37.0
+ }
+]
