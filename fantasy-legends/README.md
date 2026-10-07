@@ -55,7 +55,7 @@ Unknown values are left blank, never zero-filled. Every game row has `complete`,
 
 Every correction and its source is listed in `data/sheets/corrections_log.csv`.
 
-Also on every game row: `game_id` (`YYYYMMDD-AWAY-HOME`, shared by both teams' rows and every player in the game), and `scoring_complete` / `scoring_missing`, which only consider fields that score under the deck v4 contract (targets and times sacked don't). Kicker rows add `fpts_k_contract` (XP +1, FG <40 +3, 40–49 +4, 50+ +5, miss −1), blank unless distances are known.
+Also on every game row: `game_id` (`YYYYMMDD-AWAY-HOME`, shared by both teams' rows and every player in the game); `scoring_complete` / `scoring_missing`, which check every field that earns points for the position under the deck v4 contract (targets and times sacked don't score); and two eligibility options kept side by side for the owner's decision: `strict_eligible` (every scoring field known) and `era_scored_eligible` (unknowns limited to fields the source records for no game in that era, listed in `era_excluded_fields`; anything else is in `era_blocking_fields`). QB rows include `rec`, `rec_yds`, `rec_td` and `ret_td`. Kicker rows add `fpts_k_contract` (XP +1, FG <40 +3, 40–49 +4, 50+ +5, miss −1), blank unless distances are known.
 
 See `VALIDATION_REPORT.md` for the source manifest, completeness by era, eligible depth and unresolved fields.
 

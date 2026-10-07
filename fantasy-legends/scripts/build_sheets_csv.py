@@ -15,11 +15,11 @@ import os
 import sys
 from collections import defaultdict
 
-from build_data import AFL_TEAMS
+from build_data import AFL_TEAMS, SACKS_FIRST_SEASON
 
 COLUMNS = {
     "QB": ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "pass_rating", "sacked",
-           "rush_att", "rush_yds", "rush_td", "two_pt", "fum_rec_td"],
+           "rush_att", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td", "ret_td", "two_pt", "fum_rec_td"],
     "RB": ["rush_att", "rush_yds", "rush_td", "targets", "rec", "rec_yds", "rec_td",
            "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
     "WR": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td",
@@ -101,23 +101,49 @@ def game_id(g):
     return f"{day}-{a}-{b}-N"
 
 
-# Fields that carry points under the owner's scoring contract (deck v4). Targets and times sacked
-# don't score, so they don't block scoring completeness; fumbles lost score 0 in v4.
+# Every field that earns points under the owner's scoring contract (deck v4). Targets and times sacked
+# don't score; fumbles lost score 0 in v4. Offense coefficients come from the site's code.
+OFFENSE_SCORING = ("pass_yds", "pass_td", "pass_int", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td",
+                   "ret_td", "two_pt", "fum_rec_td")
 SCORING_FIELDS = {
-    "QB": ("two_pt", "fum_rec_td"), "RB": ("two_pt", "fum_rec_td"),
-    "WR": ("two_pt", "fum_rec_td"), "TE": ("two_pt", "fum_rec_td"),
-    "K": ("fgm", "xpm", "fg_missed", "fgm_0_39"),
-    "DEF": ("sacks", "def_int", "fum_rec", "blk_punt", "def_fum_td"),
+    "QB": OFFENSE_SCORING, "RB": OFFENSE_SCORING, "WR": OFFENSE_SCORING, "TE": OFFENSE_SCORING,
+    "K": ("xpm", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed"),
+    "DEF": ("pts_allowed", "sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
+            "def_int_td", "def_fum_td", "ret_td"),
 }
 
 
+def era_unrecorded(g, pos):
+    """Scoring fields the source records for no game in this era. The era-scored option leaves these out
+    for everyone in the era; anything else that's unknown still blocks the game."""
+    season = g["season"]
+    if pos in ("QB", "RB", "WR", "TE"):
+        fields = {"fum_rec_td"} if season < 1999 else set()
+        afl = season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
+        if afl or 1994 <= season <= 1998:
+            fields.add("two_pt")
+        return fields
+    if pos == "K":
+        # Distance tiers only exist for 1999. Before 1960 all kicking is unknown, which isn't excludable.
+        return {"fgm_0_39", "fgm_40_49", "fgm_50p"} if KICK_FIRST_SEASON <= season < 1999 else set()
+    fields = {"sacks"} if season < SACKS_FIRST_SEASON else set()
+    if season < 1999:
+        fields |= {"fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td"}
+    return fields
+
+
 def scoring_status(g, pos):
+    """strict: every scoring field known. era-scored: unknowns limited to fields the era never records."""
     missing = [c for c in SCORING_FIELDS[pos] if g.get(c) is None]
     if pos == "DEF" and g["int_check"] != "match":
         missing.append("def_int")  # max(defenders, opposing passers) is a heuristic, not verified
-    names = {"fgm_0_39": "fg_distance", "blk_punt": "blocked_kicks"}
-    g["scoring_missing"] = ";".join(dict.fromkeys(names.get(c, c) for c in missing))
-    g["scoring_complete"] = not missing
+    excluded = era_unrecorded(g, pos)
+    blocking = [c for c in missing if c not in excluded]
+    g["scoring_missing"] = ";".join(dict.fromkeys(missing))
+    g["scoring_complete"] = g["strict_eligible"] = not missing
+    g["era_excluded_fields"] = ";".join(c for c in missing if c in excluded)
+    g["era_blocking_fields"] = ";".join(dict.fromkeys(blocking))
+    g["era_scored_eligible"] = not blocking
     g["game_id"] = game_id(g)
     return g
 
@@ -230,7 +256,8 @@ def write_defenses(data_dir, out_dir, enrich):
     cols = (["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
              "team_score", "pts_allowed"] + stats +
             ["fpts", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source",
-             "game_id", "scoring_complete", "scoring_missing"])
+             "game_id", "scoring_complete", "scoring_missing", "strict_eligible", "era_scored_eligible",
+                     "era_excluded_fields", "era_blocking_fields"])
     for decade in range(1950, 2000, 10):
         with open(os.path.join(out_dir, f"def_gamelogs_{decade}s.csv"), "w", newline="") as f:
             w = csv.writer(f)
@@ -330,13 +357,14 @@ def main(data_dir, out_dir):
         cols = INFO + stats + POINTS + ["player_id"]
         if pos in REPAIRED:
             rows = [scoring_status(repair_scoring(dict(g), enrich), pos) for g in rows]
-            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing"]
+            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing", "strict_eligible", "era_scored_eligible",
+                     "era_excluded_fields", "era_blocking_fields"]
         elif pos == "K":
             rows = [scoring_status(repair_kicking(dict(g), enrich), pos) for g in rows]
             for g in rows:
                 g["fpts_k_contract"] = kicker_contract_points(g)
-            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing",
-                     "fpts_k_contract"]
+            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing", "strict_eligible", "era_scored_eligible",
+                     "era_excluded_fields", "era_blocking_fields", "fpts_k_contract"]
         def write_games(path, games_subset):
             with open(path, "w", newline="") as f:
                 w = csv.writer(f)

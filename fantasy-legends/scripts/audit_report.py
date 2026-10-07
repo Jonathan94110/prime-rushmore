@@ -65,31 +65,65 @@ def main(sheets, out_path):
       f"({sum(v == 2 for v in games.values())} of {len(games)}). Player rows whose `game_id` matches a team game: "
       + ", ".join(f"{p.upper()} {n}/{len(data[p])}" for p, n in linked.items()) + ".\n")
 
-    w("## Scoring completeness (regular season)\n")
-    w("`scoring_complete` = every field that carries points under the deck v4 contract is known. "
-      "Targets and times sacked don't score, so they don't count against it.\n")
+    w("## Scoring fields checked\n")
+    w("A game counts as known only when every field that earns points for that position is known "
+      "(deck v4; fumbles lost score 0, targets and times sacked don't score):\n")
+    w("- **QB, RB, WR, TE:** pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td\n"
+      "- **K:** xpm, fgm_0_39, fgm_40_49, fgm_50p, fg_missed (blocked attempts count as misses)\n"
+      "- **DEF:** pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td; "
+      "a disputed interception count also counts as unknown\n")
+    w("`scoring_missing` lists every unknown scoring field on the row. The source has no blank stat values, so "
+      "everything not listed is a recorded number.\n")
+
+    w("## Two eligibility options (owner's decision)\n")
+    w("- **Strict** (`strict_eligible`, same as `scoring_complete`): every scoring field is known.\n"
+      "- **Era-scored** (`era_scored_eligible`): unknown fields are allowed only when the source records that field "
+      "for no game in that era; those fields are listed in `era_excluded_fields` and left out of scoring for everyone in "
+      "the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`).\n")
+    w("Era-wide unrecorded fields: fum_rec_td before 1999; two_pt in AFL games (1960–69) and 1994–98; FG distance "
+      "1960–98; DEF sacks before 1982; DEF fumble recoveries, blocks and fumble-return TDs before 1999. Not excludable: "
+      "all 1950s kicking (nothing to score), disputed interceptions, and the 1999 game missing from nflverse.\n")
     rows = []
     for p in POSITIONS:
-        c = Counter((int(x["season"]) // 10 * 10, x["scoring_complete"] == "True") for x in reg[p])
-        rows.append([p.upper()] + [f"{c[(d, True)]} / {c[(d, True)] + c[(d, False)]}" for d in DECADES])
+        strict = Counter(int(x["season"]) // 10 * 10 for x in reg[p] if x["strict_eligible"] == "True")
+        era = Counter(int(x["season"]) // 10 * 10 for x in reg[p] if x["era_scored_eligible"] == "True")
+        total = Counter(int(x["season"]) // 10 * 10 for x in reg[p])
+        rows.append([p.upper()] + [f"{strict[d]} / {era[d]} / {total[d]}" for d in DECADES])
+    w("Regular-season games, strict / era-scored / total:\n")
     w(table(["Position"] + [f"{d}s" for d in DECADES], rows))
-    w("\nWhat blocks it:\n")
+    w("\nWhat blocks each option (regular-season games):\n")
     rows = []
     for p in POSITIONS:
-        c = Counter(f for x in reg[p] if x["scoring_complete"] == "False" for f in x["scoring_missing"].split(";") if f)
-        rows.append([p.upper(), ", ".join(f"{f} ({n})" for f, n in c.most_common())])
-    w(table(["Position", "Missing scoring field (regular-season games)"], rows))
+        c = Counter(f for x in reg[p] for f in x["scoring_missing"].split(";") if f)
+        b = Counter(f for x in reg[p] for f in x["era_blocking_fields"].split(";") if f)
+        rows.append([p.upper(), ", ".join(f"{f} ({n})" for f, n in c.most_common()) or "none",
+                     ", ".join(f"{f} ({n})" for f, n in b.most_common()) or "none"])
+    w(table(["Position", "Strict: unknown scoring fields", "Era-scored: blocking fields"], rows))
 
     w("\n## Eligible depth for a 17-week season\n")
     rows = []
     for p in POSITIONS:
-        strict = Counter(x[key(p)] for x in reg[p] if x["scoring_complete"] == "True")
-        any_games = Counter(x[key(p)] for x in reg[p])
-        rows.append([p.upper(), sum(v >= 17 for v in strict.values()), sum(v >= 17 for v in any_games.values()), len(any_games)])
-    w(table(["Position", "≥17 scoring-complete games", "≥17 games if era-scored", "Players/teams"], rows))
-    w("\nNo player or team reaches 17 scoring-complete games: the extra fields exist only for 1999, a 16-game season. "
-      "\"Era-scored\" means fields the source doesn't record for that era are left out of scoring for everyone "
-      "in that era (no values are filled in).\n")
+        strict = Counter(x[key(p)] for x in reg[p] if x["strict_eligible"] == "True")
+        era = Counter(x[key(p)] for x in reg[p] if x["era_scored_eligible"] == "True")
+        n = len({x[key(p)] for x in reg[p]})
+        rows.append([p.upper(), sum(v >= 17 for v in strict.values()), sum(v >= 17 for v in era.values()), n])
+    w(table(["Position", "≥17 games, strict", "≥17 games, era-scored", "Players / team codes"], rows))
+    w("\nUnder strict rules no one reaches 17: the extra fields exist only for 1999, a 16-game season. Era-scored "
+      "kickers still need a rule for field goals of unknown distance (`fgm` is known, the tier isn't); "
+      "`fpts_k_contract` stays blank for them.\n")
+
+    w("## Worked example: Montana, 1989-09-10, SFO at IND (`19890910-SFO-IND`)\n")
+    m = next(x for x in data["qb"] if x["game_id"] == "19890910-SFO-IND" and x["name"] == "Joe Montana")
+    w(f"Stat line: {m['pass_cmp']}/{m['pass_att']}, {m['pass_yds']} pass yds, {m['pass_td']} TD, {m['pass_int']} INT; "
+      f"{m['rush_att']} rushes for {m['rush_yds']} yds, {m['rush_td']} TD; {m['rec']} rec; {m['ret_td']} return TD; "
+      f"two_pt {m['two_pt']} (source {m['source']}); fum_rec_td {m['fum_rec_td'] or 'unknown'}. Final {m['team_score']}-{m['opp_score']}.\n")
+    w(table(["Option", "Eligible", "Why", "Fields scored"], [
+        ["Strict", m["strict_eligible"], f"scoring_missing = {m['scoring_missing']}", "not drawn"],
+        ["Era-scored", m["era_scored_eligible"], f"era_excluded_fields = {m['era_excluded_fields']} (unrecorded for all 1950–98 games)",
+         "all offense fields except fum_rec_td"],
+    ]))
+    w(f"\nUnder this dataset's standard formula (0.04/pass yd, 4/pass TD, −2/INT, 0.1/rush yd) the line is "
+      f"{m['fpts_std']} points; the site's v4 offense coefficients come from its own code.\n")
 
     w("## What the unfillable fields are worth\n")
     w("Measured on 1999 regular-season games, where they're known:\n")
@@ -135,8 +169,9 @@ def main(sheets, out_path):
       "its terms allow reuse, are unverified.\n")
 
     w("## Decisions for the owner\n")
-    w("1. **Strict vs era-scored.** Strict completeness leaves no season playable before 1999. Era-scoring "
-      "changes skill-position scores by under 0.1 pt/game, kickers by about 0.6, defenses by about 1.9.\n"
+    w("1. **Strict vs era-scored.** Strict leaves no season playable before 1999. Era-scoring leaves out fields "
+      "worth under 0.1 pt/game for skill players, about 0.6 for kickers and about 1.8 for defenses (measured on 1999). "
+      "Era-scored kickers also need a rule for field goals of unknown distance.\n"
       "2. **Defense interceptions.** Accept max(defenders, passers) for the disputed games, or quarantine those games.\n"
       "3. **Reuse rights.** The base data is scraped from Sports Reference and has no stated license, and this "
       "repository is public. Decide whether that's acceptable before publishing.\n")

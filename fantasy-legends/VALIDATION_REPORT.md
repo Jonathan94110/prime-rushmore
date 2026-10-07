@@ -26,42 +26,68 @@ Every value derived from these sources is traceable through the `source` column 
 
 `game_id` (YYYYMMDD-AWAY-HOME): 9055 games, each listed by both teams (9055 of 9055). Player rows whose `game_id` matches a team game: QB 20986/20986, RB 34183/34183, WR 40199/40199, TE 15710/15710, K 14848/14848.
 
-## Scoring completeness (regular season)
+## Scoring fields checked
 
-`scoring_complete` = every field that carries points under the deck v4 contract is known. Targets and times sacked don't score, so they don't count against it.
+A game counts as known only when every field that earns points for that position is known (deck v4; fumbles lost score 0, targets and times sacked don't score):
+
+- **QB, RB, WR, TE:** pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td
+- **K:** xpm, fgm_0_39, fgm_40_49, fgm_50p, fg_missed (blocked attempts count as misses)
+- **DEF:** pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td; a disputed interception count also counts as unknown
+
+`scoring_missing` lists every unknown scoring field on the row. The source has no blank stat values, so everything not listed is a recorded number.
+
+## Two eligibility options (owner's decision)
+
+- **Strict** (`strict_eligible`, same as `scoring_complete`): every scoring field is known.
+- **Era-scored** (`era_scored_eligible`): unknown fields are allowed only when the source records that field for no game in that era; those fields are listed in `era_excluded_fields` and left out of scoring for everyone in the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`).
+
+Era-wide unrecorded fields: fum_rec_td before 1999; two_pt in AFL games (1960–69) and 1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, blocks and fumble-return TDs before 1999. Not excludable: all 1950s kicking (nothing to score), disputed interceptions, and the 1999 game missing from nflverse.
+
+Regular-season games, strict / era-scored / total:
 
 | Position | 1950s | 1960s | 1970s | 1980s | 1990s |
 |---|---|---|---|---|---|
-| QB | 0 / 1544 | 0 / 3557 | 0 / 4536 | 0 / 5260 | 440 / 5231 |
-| RB | 0 / 1709 | 0 / 6242 | 0 / 8881 | 0 / 8110 | 534 / 7794 |
-| WR | 0 / 2404 | 0 / 5971 | 0 / 7498 | 0 / 10608 | 866 / 11954 |
-| TE | 0 / 0 | 0 / 1824 | 0 / 4164 | 0 / 4869 | 286 / 4079 |
-| K | 0 / 86 | 0 / 2314 | 0 / 3593 | 0 / 3834 | 404 / 4413 |
-| DEF | 0 / 1452 | 0 / 3222 | 0 / 3864 | 0 / 4256 | 491 / 4656 |
+| QB | 0 / 1544 / 1544 | 0 / 3557 / 3557 | 0 / 4536 / 4536 | 0 / 5260 / 5260 | 440 / 5229 / 5231 |
+| RB | 0 / 1709 / 1709 | 0 / 6242 / 6242 | 0 / 8881 / 8881 | 0 / 8110 / 8110 | 534 / 7792 / 7794 |
+| WR | 0 / 2404 / 2404 | 0 / 5971 / 5971 | 0 / 7498 / 7498 | 0 / 10608 / 10608 | 866 / 11951 / 11954 |
+| TE | 0 / 0 / 0 | 0 / 1824 / 1824 | 0 / 4164 / 4164 | 0 / 4869 / 4869 | 286 / 4079 / 4079 |
+| K | 0 / 0 / 86 | 0 / 2314 / 2314 | 0 / 3593 / 3593 | 0 / 3834 / 3834 | 404 / 4409 / 4413 |
+| DEF | 0 / 255 / 1452 | 0 / 3088 / 3222 | 0 / 3846 / 3864 | 0 / 4239 / 4256 | 491 / 4636 / 4656 |
 
-What blocks it:
+What blocks each option (regular-season games):
 
-| Position | Missing scoring field (regular-season games) |
-|---|---|
-| QB | fum_rec_td (19688), two_pt (3764) |
-| RB | fum_rec_td (32202), two_pt (5527) |
-| WR | fum_rec_td (37569), two_pt (7880) |
-| TE | fum_rec_td (14650), two_pt (2682) |
-| K | fg_distance (13836), fgm (86), xpm (86), fg_missed (86) |
-| DEF | fum_rec (16956), blocked_kicks (16956), def_fum_td (16956), sacks (9434), def_int (1384) |
+| Position | Strict: unknown scoring fields | Era-scored: blocking fields |
+|---|---|---|
+| QB | fum_rec_td (19688), two_pt (3764) | two_pt (2), fum_rec_td (2) |
+| RB | fum_rec_td (32202), two_pt (5527) | two_pt (2), fum_rec_td (2) |
+| WR | fum_rec_td (37569), two_pt (7880) | two_pt (3), fum_rec_td (3) |
+| TE | fum_rec_td (14650), two_pt (2682) | none |
+| K | fgm_0_39 (13836), fgm_40_49 (13836), fgm_50p (13836), xpm (86), fg_missed (86) | fgm_0_39 (90), fgm_40_49 (90), fgm_50p (90), xpm (86), fg_missed (86) |
+| DEF | fum_rec (16956), blk_punt (16956), blk_fg (16956), blk_xp (16956), def_fum_td (16956), sacks (9434), def_int (1384) | def_int (1384), fum_rec (2), blk_punt (2), blk_fg (2), blk_xp (2), def_fum_td (2) |
 
 ## Eligible depth for a 17-week season
 
-| Position | ≥17 scoring-complete games | ≥17 games if era-scored | Players/teams |
+| Position | ≥17 games, strict | ≥17 games, era-scored | Players / team codes |
 |---|---|---|---|
-| QB | 0 | 178 | 178 |
+| QB | 0 | 177 | 178 |
 | RB | 0 | 319 | 319 |
 | WR | 0 | 350 | 350 |
 | TE | 0 | 123 | 123 |
 | K | 0 | 112 | 112 |
-| DEF | 0 | 40 | 41 |
+| DEF | 0 | 39 | 41 |
 
-No player or team reaches 17 scoring-complete games: the extra fields exist only for 1999, a 16-game season. "Era-scored" means fields the source doesn't record for that era are left out of scoring for everyone in that era (no values are filled in).
+Under strict rules no one reaches 17: the extra fields exist only for 1999, a 16-game season. Era-scored kickers still need a rule for field goals of unknown distance (`fgm` is known, the tier isn't); `fpts_k_contract` stays blank for them.
+
+## Worked example: Montana, 1989-09-10, SFO at IND (`19890910-SFO-IND`)
+
+Stat line: 15/26, 233 pass yds, 1 TD, 0 INT; 4 rushes for 21 yds, 0 TD; 0 rec; 0 return TD; two_pt 0 (source PFR+RULE2PT); fum_rec_td unknown. Final 30-24.
+
+| Option | Eligible | Why | Fields scored |
+|---|---|---|---|
+| Strict | False | scoring_missing = fum_rec_td | not drawn |
+| Era-scored | True | era_excluded_fields = fum_rec_td (unrecorded for all 1950–98 games) | all offense fields except fum_rec_td |
+
+Under this dataset's standard formula (0.04/pass yd, 4/pass TD, −2/INT, 0.1/rush yd) the line is 15.42 points; the site's v4 offense coefficients come from its own code.
 
 ## What the unfillable fields are worth
 
@@ -99,6 +125,6 @@ Filling these would need box-score or play-by-play data for 1950–1998. Pro-Foo
 
 ## Decisions for the owner
 
-1. **Strict vs era-scored.** Strict completeness leaves no season playable before 1999. Era-scoring changes skill-position scores by under 0.1 pt/game, kickers by about 0.6, defenses by about 1.9.
+1. **Strict vs era-scored.** Strict leaves no season playable before 1999. Era-scoring leaves out fields worth under 0.1 pt/game for skill players, about 0.6 for kickers and about 1.8 for defenses (measured on 1999). Era-scored kickers also need a rule for field goals of unknown distance.
 2. **Defense interceptions.** Accept max(defenders, passers) for the disputed games, or quarantine those games.
 3. **Reuse rights.** The base data is scraped from Sports Reference and has no stated license, and this repository is public. Decide whether that's acceptable before publishing.
