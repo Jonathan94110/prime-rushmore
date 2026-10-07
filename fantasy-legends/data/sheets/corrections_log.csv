@@ -1,0 +1,18 @@
+scope,player,date_or_seasons,field,value,source,note
+all positions,,,pass_cmp/pass_att,swapped back,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Source has completions and attempts swapped on every row (cmp > att in all 36k passing games)
+all positions,,,xpm/xpa,swapped back,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Source has extra points made and attempted swapped on every row
+all positions,,,targets,blank before 1992,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Not recorded before 1992 (source shows 0)
+all positions,,,sacked / DST sacks,blank before 1982,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Not an official stat before 1982
+"WR, TE",,1950-1993 NFL games,two_pt,0,NFL rulebook: two-point conversion adopted 1994,AFL games (1960-69) left blank: the AFL allowed it
+"WR, TE",,1994-1998,two_pt,blank,,No accessible source; Pro-Football-Reference blocks automated access
+"WR, TE",,before 1999,fum_rec_td,blank,,No accessible source before 1999
+"WR, TE",,1999,"two_pt, fum_rec_td",filled (0 unless listed below),nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Eddie Kennison,1999-12-12,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Isaac Bruce,1999-11-07,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,J.J. Stokes,2000-01-03,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Jackie Harris,1999-12-05,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,James Jett,1999-11-22,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Jimmy Smith,1999-11-28,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Keenan McCardell,1999-11-28,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Marvin Harrison,1999-10-31,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Michael Westbrook,1999-12-19,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),

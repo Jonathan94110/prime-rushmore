@@ -15,12 +15,16 @@ import os
 import sys
 from collections import defaultdict
 
+from build_data import AFL_TEAMS
+
 COLUMNS = {
     "QB": ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "pass_rating", "sacked",
            "rush_att", "rush_yds", "rush_td"],
     "RB": ["rush_att", "rush_yds", "rush_td", "targets", "rec", "rec_yds", "rec_td", "ret_td"],
-    "WR": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td", "ret_td"],
-    "TE": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td", "ret_td"],
+    "WR": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td",
+           "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
+    "TE": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td",
+           "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
     "K": ["fgm", "fga", "xpm", "xpa"],
 }
 
@@ -49,6 +53,38 @@ TEAM_NAMES = [
     ("TAM", 1976, 1999, "Tampa Bay Buccaneers"), ("TEN", 1997, 1998, "Tennessee Oilers"),
     ("TEN", 1999, 1999, "Tennessee Titans"), ("WAS", 1950, 1999, "Washington Redskins"),
 ]
+
+
+# Positions whose game logs carry the repaired scoring fields (two_pt, fum_rec_td, missing_fields, source).
+REPAIRED = {"WR", "TE"}
+
+# Source codes used in the `source` column.
+#   PFR       Pro-Football-Reference, via the Kaggle scrape (zynicide/nfl-football-player-stats, Dec 2017)
+#   NFLV1999  nflverse-data player_stats_1999 / play_by_play_1999 (two_pt, fum_rec_td)
+#   RULE2PT   two_pt = 0 because the NFL had no two-point conversion before 1994
+def repair_scoring(g, enrich):
+    """Fill two_pt and fum_rec_td only where they're known, and recompute fantasy points."""
+    season, team, opp, date = g["season"], g["team"], g["opp"], g["date"]
+    source = ["PFR"]
+    g["two_pt"] = g["fum_rec_td"] = None
+    afl_game = season <= 1969 and (team in AFL_TEAMS or opp in AFL_TEAMS)
+    if season == 1999 and f"{date}|{team}" in enrich["team_games"]:
+        found = enrich["players"].get(f"{g['name']}|{date}", {})
+        g["two_pt"] = found.get("two_pt", 0)
+        g["fum_rec_td"] = found.get("fum_rec_td", 0)
+        source.append("NFLV1999")
+    elif season < 1994 and not afl_game:
+        g["two_pt"] = 0
+        source.append("RULE2PT")
+    for c in ("two_pt", "fum_rec_td"):
+        if g[c]:
+            g["fpts_std"] = round(g["fpts_std"] + g[c] * (2 if c == "two_pt" else 6), 2)
+            g["fpts_ppr"] = round(g["fpts_ppr"] + g[c] * (2 if c == "two_pt" else 6), 2)
+    missing = [c for c in ("targets", "two_pt", "fum_rec_td") if g[c] is None or blank(c, season)]
+    g["missing_fields"] = ";".join(missing)
+    g["complete"] = not missing
+    g["source"] = "+".join(source)
+    return g
 
 
 def blank(column, season):
@@ -112,6 +148,38 @@ def write_defenses(data_dir, out_dir):
                        fpts_per_game=round(t["fpts"] / t["games"], 2),
                        featured=nick.get((team, season), ""))
             w.writerow([row[c] for c in tcols])
+KAGGLE = "Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)"
+NFLVERSE = "nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data)"
+
+
+def write_corrections_log(games, enrich, out_dir):
+    """Every change made to the source data, with where the corrected value came from."""
+    log = [
+        ("all positions", "", "", "pass_cmp/pass_att", "swapped back",
+         KAGGLE, "Source has completions and attempts swapped on every row (cmp > att in all 36k passing games)"),
+        ("all positions", "", "", "xpm/xpa", "swapped back",
+         KAGGLE, "Source has extra points made and attempted swapped on every row"),
+        ("all positions", "", "", "targets", "blank before 1992", KAGGLE, "Not recorded before 1992 (source shows 0)"),
+        ("all positions", "", "", "sacked / DST sacks", "blank before 1982", KAGGLE, "Not an official stat before 1982"),
+        ("WR, TE", "", "1950-1993 NFL games", "two_pt", "0",
+         "NFL rulebook: two-point conversion adopted 1994", "AFL games (1960-69) left blank: the AFL allowed it"),
+        ("WR, TE", "", "1994-1998", "two_pt", "blank", "", "No accessible source; Pro-Football-Reference blocks automated access"),
+        ("WR, TE", "", "before 1999", "fum_rec_td", "blank", "", "No accessible source before 1999"),
+        ("WR, TE", "", "1999", "two_pt, fum_rec_td", "filled (0 unless listed below)", NFLVERSE, ""),
+    ]
+    names = {g["name"] for g in games if g["pos"] in REPAIRED and g["season"] == 1999}
+    for key, v in sorted(enrich["players"].items()):
+        name, date = key.split("|")
+        if name in names:
+            for c in ("two_pt", "fum_rec_td"):
+                if v[c]:
+                    log.append(("player game", name, date, c, v[c], NFLVERSE, ""))
+    with open(os.path.join(out_dir, "corrections_log.csv"), "w", newline="") as f:
+        w = csv.writer(f)
+        w.writerow(["scope", "player", "date_or_seasons", "field", "value", "source", "note"])
+        w.writerows(log)
+
+
 INFO = ["name", "season", "week", "date", "playoff", "team", "opp", "home_away", "result", "team_score", "opp_score"]
 POINTS = ["fpts_std", "fpts_ppr"]
 
@@ -121,10 +189,14 @@ def main(data_dir, out_dir):
     players = {p["player_id"]: p for p in json.load(open(os.path.join(data_dir, "players.json")))}
     d = json.load(open(os.path.join(data_dir, "player_gamelogs.json")))
     games = [dict(zip(d["columns"], r)) for r in d["rows"]]
+    enrich = json.load(open(os.path.join(data_dir, "enrich", "nflverse_1999.json")))
 
     for pos, stats in COLUMNS.items():
         rows = [g for g in games if g["pos"] == pos]
         cols = INFO + stats + POINTS + ["player_id"]
+        if pos in REPAIRED:
+            rows = [repair_scoring(dict(g), enrich) for g in rows]
+            cols += ["complete", "missing_fields", "source"]
         def write_games(path, games_subset):
             with open(path, "w", newline="") as f:
                 w = csv.writer(f)
@@ -148,6 +220,8 @@ def main(data_dir, out_dir):
             for c in stats + POINTS:
                 if g[c] is not None:
                     t[c] += g[c]
+                else:
+                    t["unknown_" + c] = 1
             if g["team"] not in teams[key]:
                 teams[key].append(g["team"])
         tcols = ["name", "season", "team", "games"] + stats + POINTS + ["ppr_per_game", "hof", "legend", "player_id"]
@@ -161,12 +235,14 @@ def main(data_dir, out_dir):
                        "ppr_per_game": round(t["fpts_ppr"] / t["games"], 2)}
                 for c in ["games"] + stats + POINTS:
                     v = t.get(c, 0)
-                    row[c] = "" if blank(c, season) else round(v, 2) if c in POINTS else int(v)
+                    row[c] = ("" if blank(c, season) or t.get("unknown_" + c)
+                              else round(v, 2) if c in POINTS else int(v))
                 if "pass_rating" in stats:
                     row["pass_rating"] = passer_rating(t["pass_cmp"], t["pass_att"], t["pass_yds"],
                                                       t["pass_td"], t["pass_int"])
                 w.writerow([row[c] for c in tcols])
     write_defenses(data_dir, out_dir)
+    write_corrections_log(games, enrich, out_dir)
     for name in sorted(os.listdir(out_dir)):
         print(name, os.path.getsize(os.path.join(out_dir, name)))
 
