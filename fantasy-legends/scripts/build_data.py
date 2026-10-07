@@ -113,17 +113,13 @@ def main(games_path, profiles_path, out_dir):
 
     team_games = {}
     player_rows = defaultdict(list)
-    candidate_ids = {p["player_id"] for n, *_ in LEGENDS for p in by_name.get(n, [])}
-    pool_of = {}  # player_id -> pool position
+    pool_of = {}  # player_id -> pool position, from the first listed position that has a pool
     for p in profiles:
-        tokens = (p["position"] or "").split("-")
-        for tok in tokens:
-            pos = next((k for k, pool in POOLS.items() if tok in pool["source_positions"]), None)
+        for tok in (p["position"] or "").split("-"):
+            pos = next((k for k, pool in POOLS.items() if tok in pool.get("source_positions", ())), None)
             if pos:
-                if POOLS[pos]["min_career"] is not None:
-                    pool_of[p["player_id"]] = pos
+                pool_of[p["player_id"]] = pos
                 break
-    candidate_ids |= set(pool_of)
 
     with open(games_path, "rb") as f:
         for row in ijson.items(f, "item", use_float=True):
@@ -149,8 +145,7 @@ def main(games_path, profiles_path, out_dir):
             t["safeties"] += num(row["defense_safeties"])
             t["ret_td"] += num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
 
-            if row["player_id"] in candidate_ids:
-                player_rows[row["player_id"]].append((season, week, row, playoff))
+            player_rows[row["player_id"]].append((season, week, row, playoff))
 
     os.makedirs(out_dir, exist_ok=True)
 
@@ -165,15 +160,20 @@ def main(games_path, profiles_path, out_dir):
         p = max(candidates, key=lambda c: len(player_rows[c["player_id"]]))
         selected.append((p, name, pos, hof, True))
     taken = {p["player_id"] for p, *_ in selected}
-    pool_players = []
-    for pid, pos in pool_of.items():
-        pool = POOLS[pos]
-        career = sum(num(r[2][pool["stat"]]) for r in player_rows.get(pid, []))
-        if pid not in taken and career >= pool["min_career"]:
-            p = profile_by_id[pid]
-            name = p["name"].strip()
-            pool_players.append((-career, (p, name, pos, name in POOL_HALL_OF_FAMERS, False)))
-    selected += [entry for _, entry in sorted(pool_players, key=lambda x: x[0])]
+    for pos, pool in POOLS.items():
+        if pool.get("any_position"):
+            pids = [pid for pid in player_rows if pid in profile_by_id]
+        else:
+            pids = [pid for pid, p in pool_of.items() if p == pos]
+        pool_players = []
+        for pid in pids:
+            career = sum(num(r[2][pool["stat"]]) for r in player_rows.get(pid, []))
+            if pid not in taken and career >= pool["min_career"]:
+                p = profile_by_id[pid]
+                name = p["name"].strip()
+                pool_players.append((-career, (p, name, pos, name in POOL_HALL_OF_FAMERS, False)))
+                taken.add(pid)
+        selected += [entry for _, entry in sorted(pool_players, key=lambda x: x[0])]
 
     players, logs = [], []
     for p, name, pos, hof, legend in selected:
@@ -207,7 +207,8 @@ def main(games_path, profiles_path, out_dir):
                 "rec": num(row["receiving_receptions"]), "rec_yds": num(row["receiving_yards"]),
                 "rec_td": num(row["receiving_touchdowns"]),
                 "ret_td": num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"]),
-                "xpm": num(row["point_after_makes"]), "xpa": num(row["point_after_attemps"]),
+                # Also swapped in the source.
+                "xpm": num(row["point_after_attemps"]), "xpa": num(row["point_after_makes"]),
                 "fgm": num(row["field_goal_makes"]), "fga": num(row["field_goal_attempts"]),
             }
             g["fpts_std"] = player_fantasy_points(g, 0)

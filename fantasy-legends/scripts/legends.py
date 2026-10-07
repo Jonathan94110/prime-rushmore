@@ -58,11 +58,13 @@ FEATURED_DEFENSES = [
 # Position pools: every player at the position who clears a career (1950-1999) yardage bar,
 # on top of the hand-picked LEGENDS above. Source positions are hyphenated lists like "HB-FB";
 # a player listed at several positions goes to the first one listed ("RB-WR" -> RB, "WR-TE" -> WR,
-# "TE-WR" -> TE, which has no pool yet).
+# "TE-WR" -> TE). Kickers are picked by field goals made whatever their listed position, since
+# early kickers were often linemen or receivers (Lou Groza, Gino Cappelletti); they're picked first.
 POOLS = {
+    "K": {"any_position": True, "stat": "field_goal_makes", "min_career": 50},
     "RB": {"source_positions": {"RB", "HB", "FB", "TB"}, "stat": "rushing_yards", "min_career": 2000},
     "WR": {"source_positions": {"WR", "FL", "SE", "E"}, "stat": "receiving_yards", "min_career": 2000},
-    "TE": {"source_positions": {"TE"}, "stat": "receiving_yards", "min_career": None},  # no pool yet
+    "TE": {"source_positions": {"TE"}, "stat": "receiving_yards", "min_career": 1500},
 }
 
 # Hall of Famers who come in through a pool rather than LEGENDS.

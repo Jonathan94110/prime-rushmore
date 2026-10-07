@@ -5,13 +5,14 @@ Game-by-game stats for NFL stars from 1950 to 1999 (QB, RB, WR, TE and K), plus 
 - **Legends:** 92 hand-picked stars, mostly Hall of Famers (`legend: true`).
 - **Running backs:** every RB with 2,000+ career rushing yards from 1950 to 1999, 319 in all, including the 27 legends.
 - **Wide receivers:** every WR with 2,000+ career receiving yards from 1950 to 1999, 351 in all, including the 22 legends. Ends (E) and flankers (FL) from the 1950s–60s count as receivers.
+- **Tight ends:** every TE with 1,500+ career receiving yards. **Kickers:** everyone with 50+ career field goals, whatever their listed position (early kickers were often linemen or receivers).
 - A player listed at more than one position goes to the first one listed in the source ("RB-WR" → RB, "WR-TE" → WR).
 
 ## Files (`data/`)
 
 | File | What's in it |
 | --- | --- |
-| `players.json` | All 713 players: id, name, fantasy position, Hall of Fame and legend flags, seasons, teams, college, draft info |
+| `players.json` | All 930 players: id, name, fantasy position, Hall of Fame and legend flags, seasons, teams, college, draft info |
 | `player_gamelogs.json` / `.csv` | One row per game played (regular season + playoffs) for those players |
 | `dst_gamelogs.json` / `.csv` | One row per team per game, 1950–1999 (18k games) |
 | `fantasy_legends.xlsx` | Everything above in one workbook, with a Notes sheet explaining the columns |
@@ -45,6 +46,8 @@ DST `fpts`: 1 per sack, 2 per INT, 2 per safety, 6 per INT-return or kick/punt-r
 - **Missing everywhere:** fumbles, two-point conversions, and FG distances. So there's no fumble-lost deduction and no distance bonus for kickers.
 - **Sacks** weren't an official stat before 1982, so they're `null` for those seasons. This applies to both a QB's `sacked` count (often 0) and DST `sacks`.
 - **Targets** are `null` before 1992.
+- **Kicking stats** are almost entirely missing before 1960, so early kickers like Lou Groza have no 1950s kicking numbers.
+- The source swaps pass completions/attempts and extra points made/attempted on every row; the build fixes both.
 - **DST:** no fumble recoveries or fumble-return TDs, and no tackles before 2000.
 - **Season lengths** vary: 12 games through 1960 (14 for the 1960 AFL), 14 from 1961 to 1977, 16 from 1978 on, with 9 games in 1982 and 15 in 1987 (strike seasons). Compare players on per-game numbers.
 - Players whose careers ran past 1999 (Rice, Favre, Faulk, etc.) only have their games through 1999.

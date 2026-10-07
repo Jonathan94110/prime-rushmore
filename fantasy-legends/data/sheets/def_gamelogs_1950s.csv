@@ -1,0 +1,1483 @@
+team_name,team,season,week,date,playoff,opp,home_away,result,team_score,pts_allowed,sacks,def_int,def_int_td,safeties,ret_td,fpts
+Baltimore Colts,BAL,1950,1,1950-09-17,False,WAS,H,L,14,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,2,1950-09-24,False,CLE,H,L,0,31,,0,0,0,0,-1
+Baltimore Colts,BAL,1950,3,1950-10-02,False,CRD,A,L,13,55,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,4,1950-10-15,False,PHI,H,L,14,24,,0,0,0,0,0
+Baltimore Colts,BAL,1950,5,1950-10-22,False,RAM,A,L,27,70,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,6,1950-10-29,False,SFO,A,L,14,17,,0,0,0,0,1
+Baltimore Colts,BAL,1950,7,1950-11-05,False,GNB,H,W,41,21,,0,0,0,0,0
+Baltimore Colts,BAL,1950,8,1950-11-12,False,PIT,A,L,7,17,,0,0,0,0,1
+Baltimore Colts,BAL,1950,9,1950-11-19,False,NYG,H,L,20,55,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,10,1950-11-26,False,WAS,A,L,28,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,11,1950-12-03,False,DET,H,L,21,45,,0,0,0,0,-4
+Baltimore Colts,BAL,1950,12,1950-12-10,False,NYY,A,L,14,51,,0,0,0,0,-4
+Chicago Bears,CHI,1950,1,1950-09-17,False,RAM,A,W,24,20,,0,0,0,0,1
+Chicago Bears,CHI,1950,2,1950-09-24,False,SFO,A,W,32,20,,0,0,0,0,1
+Chicago Bears,CHI,1950,3,1950-10-01,False,GNB,A,L,21,31,,0,0,0,0,-1
+Chicago Bears,CHI,1950,4,1950-10-08,False,CRD,H,W,27,6,,0,0,0,0,7
+Chicago Bears,CHI,1950,5,1950-10-15,False,GNB,H,W,28,14,,0,0,0,0,1
+Chicago Bears,CHI,1950,6,1950-10-29,False,NYY,A,L,27,38,,0,0,0,0,-4
+Chicago Bears,CHI,1950,7,1950-11-05,False,DET,A,W,35,21,,0,0,0,0,0
+Chicago Bears,CHI,1950,8,1950-11-12,False,NYY,H,W,28,20,,0,0,0,0,1
+Chicago Bears,CHI,1950,9,1950-11-19,False,SFO,H,W,17,0,,0,0,0,0,10
+Chicago Bears,CHI,1950,10,1950-11-26,False,RAM,H,W,24,14,,0,0,0,0,1
+Chicago Bears,CHI,1950,11,1950-12-03,False,CRD,A,L,10,20,,0,0,0,0,1
+Chicago Bears,CHI,1950,12,1950-12-10,False,DET,H,W,6,3,,0,0,0,0,7
+Chicago Bears,CHI,1950,13,1950-12-17,True,RAM,A,L,14,24,,1,0,0,0,2
+Cleveland Browns,CLE,1950,1,1950-09-16,False,PHI,A,W,35,10,,0,0,0,0,4
+Cleveland Browns,CLE,1950,2,1950-09-24,False,BAL,A,W,31,0,,0,0,0,0,10
+Cleveland Browns,CLE,1950,3,1950-10-01,False,NYG,H,L,0,6,,0,0,0,0,7
+Cleveland Browns,CLE,1950,4,1950-10-07,False,PIT,A,W,30,17,,0,0,0,0,1
+Cleveland Browns,CLE,1950,5,1950-10-15,False,CRD,H,W,34,24,,0,0,0,0,0
+Cleveland Browns,CLE,1950,6,1950-10-22,False,NYG,A,L,13,17,,0,0,0,0,1
+Cleveland Browns,CLE,1950,7,1950-10-29,False,PIT,H,W,45,7,,0,0,0,0,4
+Cleveland Browns,CLE,1950,8,1950-11-05,False,CRD,A,W,10,7,,0,0,0,0,4
+Cleveland Browns,CLE,1950,9,1950-11-12,False,SFO,H,W,34,14,,0,0,0,0,1
+Cleveland Browns,CLE,1950,10,1950-11-19,False,WAS,H,W,20,14,,0,0,0,0,1
+Cleveland Browns,CLE,1950,11,1950-12-03,False,PHI,H,W,13,7,,0,0,0,0,4
+Cleveland Browns,CLE,1950,12,1950-12-10,False,WAS,A,W,45,21,,0,0,0,0,0
+Cleveland Browns,CLE,1950,13,1950-12-17,True,NYG,H,W,8,3,,0,0,0,0,7
+Cleveland Browns,CLE,1950,14,1950-12-24,True,RAM,H,W,30,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1950,1,1950-09-24,False,PHI,H,L,7,45,,0,0,0,0,-4
+Chicago Cardinals,CRD,1950,2,1950-10-02,False,BAL,H,W,55,13,,0,0,0,0,4
+Chicago Cardinals,CRD,1950,3,1950-10-08,False,CHI,A,L,6,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1950,4,1950-10-15,False,CLE,A,L,24,34,,0,0,0,0,-1
+Chicago Cardinals,CRD,1950,5,1950-10-22,False,WAS,A,W,38,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1950,6,1950-10-29,False,NYG,H,W,17,3,,0,0,0,0,7
+Chicago Cardinals,CRD,1950,7,1950-11-05,False,CLE,H,L,7,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1950,8,1950-11-12,False,NYG,A,L,21,51,,0,0,0,0,-4
+Chicago Cardinals,CRD,1950,9,1950-11-19,False,PHI,A,W,14,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1950,10,1950-11-23,False,PIT,H,L,17,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1950,11,1950-12-03,False,CHI,H,W,20,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1950,12,1950-12-10,False,PIT,A,L,7,28,,0,0,0,0,-1
+Detroit Lions,DET,1950,1,1950-09-17,False,GNB,A,W,45,7,,0,0,0,0,4
+Detroit Lions,DET,1950,2,1950-09-24,False,PIT,H,W,10,7,,0,0,0,0,4
+Detroit Lions,DET,1950,3,1950-09-29,False,NYY,A,L,21,44,,0,0,0,0,-4
+Detroit Lions,DET,1950,4,1950-10-08,False,SFO,H,W,24,7,,0,0,0,0,4
+Detroit Lions,DET,1950,5,1950-10-15,False,RAM,H,L,28,30,,0,0,0,0,-1
+Detroit Lions,DET,1950,6,1950-10-22,False,SFO,A,L,27,28,,0,0,0,0,-1
+Detroit Lions,DET,1950,7,1950-10-29,False,RAM,A,L,24,65,,0,0,0,0,-4
+Detroit Lions,DET,1950,8,1950-11-05,False,CHI,H,L,21,35,,0,0,0,0,-4
+Detroit Lions,DET,1950,9,1950-11-19,False,GNB,H,W,24,21,,0,0,0,0,0
+Detroit Lions,DET,1950,10,1950-11-23,False,NYY,H,W,49,14,,0,0,0,0,1
+Detroit Lions,DET,1950,11,1950-12-03,False,BAL,A,W,45,21,,0,0,0,0,0
+Detroit Lions,DET,1950,12,1950-12-10,False,CHI,A,L,3,6,,0,0,0,0,7
+Green Bay Packers,GNB,1950,1,1950-09-17,False,DET,H,L,7,45,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,2,1950-09-24,False,WAS,H,W,35,21,,0,0,0,0,0
+Green Bay Packers,GNB,1950,3,1950-10-01,False,CHI,H,W,31,21,,0,0,0,0,0
+Green Bay Packers,GNB,1950,4,1950-10-08,False,NYY,H,L,31,44,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,5,1950-10-15,False,CHI,A,L,14,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1950,6,1950-10-19,False,NYY,A,L,17,35,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,7,1950-11-05,False,BAL,A,L,21,41,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,8,1950-11-12,False,RAM,H,L,14,45,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,9,1950-11-19,False,DET,A,L,21,24,,0,0,0,0,0
+Green Bay Packers,GNB,1950,10,1950-11-26,False,SFO,H,W,25,21,,0,0,0,0,0
+Green Bay Packers,GNB,1950,11,1950-12-03,False,RAM,A,L,14,51,,0,0,0,0,-4
+Green Bay Packers,GNB,1950,12,1950-12-10,False,SFO,A,L,14,30,,0,0,0,0,-1
+New York Giants,NYG,1950,1,1950-09-17,False,PIT,A,W,18,7,,0,0,0,0,4
+New York Giants,NYG,1950,2,1950-10-01,False,CLE,A,W,6,0,,0,0,0,0,10
+New York Giants,NYG,1950,3,1950-10-08,False,WAS,A,W,21,17,,0,0,0,0,1
+New York Giants,NYG,1950,4,1950-10-15,False,PIT,H,L,6,17,,0,0,0,0,1
+New York Giants,NYG,1950,5,1950-10-22,False,CLE,H,W,17,13,,0,0,0,0,4
+New York Giants,NYG,1950,6,1950-10-29,False,CRD,A,L,3,17,,0,0,0,0,1
+New York Giants,NYG,1950,7,1950-11-05,False,WAS,H,W,24,21,,0,0,0,0,0
+New York Giants,NYG,1950,8,1950-11-12,False,CRD,H,W,51,21,,0,0,0,0,0
+New York Giants,NYG,1950,9,1950-11-19,False,BAL,A,W,55,20,,0,0,0,0,1
+New York Giants,NYG,1950,10,1950-11-26,False,PHI,H,W,7,3,,0,0,0,0,7
+New York Giants,NYG,1950,11,1950-12-03,False,NYY,H,W,51,7,,0,0,0,0,4
+New York Giants,NYG,1950,12,1950-12-10,False,PHI,A,W,9,7,,0,0,0,0,4
+New York Giants,NYG,1950,13,1950-12-17,True,CLE,A,L,3,8,,0,0,0,0,4
+New York Yanks,NYY,1950,1,1950-09-17,False,SFO,A,W,21,17,,0,0,0,0,1
+New York Yanks,NYY,1950,2,1950-09-22,False,RAM,A,L,28,45,,0,0,0,0,-4
+New York Yanks,NYY,1950,3,1950-09-29,False,DET,H,W,44,21,,0,0,0,0,0
+New York Yanks,NYY,1950,4,1950-10-08,False,GNB,A,W,44,31,,0,0,0,0,-1
+New York Yanks,NYY,1950,5,1950-10-12,False,SFO,H,W,29,24,,0,0,0,0,0
+New York Yanks,NYY,1950,6,1950-10-19,False,GNB,H,W,35,17,,0,0,0,0,1
+New York Yanks,NYY,1950,7,1950-10-29,False,CHI,H,W,38,27,,0,0,0,0,0
+New York Yanks,NYY,1950,8,1950-11-12,False,CHI,A,L,20,28,,0,0,0,0,-1
+New York Yanks,NYY,1950,9,1950-11-19,False,RAM,H,L,35,43,,0,0,0,0,-4
+New York Yanks,NYY,1950,10,1950-11-23,False,DET,A,L,14,49,,0,0,0,0,-4
+New York Yanks,NYY,1950,11,1950-12-03,False,NYG,A,L,7,51,,0,0,0,0,-4
+New York Yanks,NYY,1950,12,1950-12-10,False,BAL,H,W,51,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1950,1,1950-09-16,False,CLE,H,L,10,35,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1950,2,1950-09-24,False,CRD,A,W,45,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1950,3,1950-10-07,False,RAM,H,W,56,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1950,4,1950-10-15,False,BAL,A,W,24,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1950,5,1950-10-22,False,PIT,A,W,17,10,,0,0,0,0,4
+Philadelphia Eagles,PHI,1950,6,1950-10-29,False,WAS,H,W,35,3,,0,0,0,0,7
+Philadelphia Eagles,PHI,1950,7,1950-11-05,False,PIT,H,L,7,9,,0,0,0,0,4
+Philadelphia Eagles,PHI,1950,8,1950-11-12,False,WAS,A,W,33,0,,0,0,0,0,10
+Philadelphia Eagles,PHI,1950,9,1950-11-19,False,CRD,H,L,10,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1950,10,1950-11-26,False,NYG,A,L,3,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1950,11,1950-12-03,False,CLE,A,L,7,13,,0,0,0,0,4
+Philadelphia Eagles,PHI,1950,12,1950-12-10,False,NYG,H,L,7,9,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1950,1,1950-09-17,False,NYG,H,L,7,18,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1950,2,1950-09-24,False,DET,A,L,7,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1950,3,1950-10-01,False,WAS,A,W,26,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1950,4,1950-10-07,False,CLE,H,L,17,30,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1950,5,1950-10-15,False,NYG,A,W,17,6,,0,0,0,0,7
+Pittsburgh Steelers,PIT,1950,6,1950-10-22,False,PHI,H,L,10,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1950,7,1950-10-29,False,CLE,A,L,7,45,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1950,8,1950-11-05,False,PHI,A,W,9,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1950,9,1950-11-12,False,BAL,H,W,17,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1950,10,1950-11-23,False,CRD,A,W,28,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1950,11,1950-12-03,False,WAS,H,L,7,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1950,12,1950-12-10,False,CRD,H,W,28,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1950,1,1950-09-17,False,CHI,H,L,20,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1950,2,1950-09-22,False,NYY,H,W,45,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1950,3,1950-10-01,False,SFO,A,W,35,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1950,4,1950-10-07,False,PHI,A,L,20,56,,0,0,0,0,-4
+Los Angeles Rams,RAM,1950,5,1950-10-15,False,DET,A,W,30,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1950,6,1950-10-22,False,BAL,H,W,70,27,,0,0,0,0,0
+Los Angeles Rams,RAM,1950,7,1950-10-29,False,DET,H,W,65,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1950,8,1950-11-05,False,SFO,H,W,28,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1950,9,1950-11-12,False,GNB,A,W,45,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1950,10,1950-11-19,False,NYY,A,W,43,35,,0,0,0,0,-4
+Los Angeles Rams,RAM,1950,11,1950-11-26,False,CHI,A,L,14,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1950,12,1950-12-03,False,GNB,H,W,51,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1950,13,1950-12-17,True,CHI,H,W,24,14,,2,0,0,0,5
+Los Angeles Rams,RAM,1950,14,1950-12-24,True,CLE,A,L,28,30,,0,0,0,0,-1
+San Francisco 49ers,SFO,1950,1,1950-09-17,False,NYY,H,L,17,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1950,2,1950-09-24,False,CHI,H,L,20,32,,0,0,0,0,-1
+San Francisco 49ers,SFO,1950,3,1950-10-01,False,RAM,H,L,14,35,,0,0,0,0,-4
+San Francisco 49ers,SFO,1950,4,1950-10-08,False,DET,A,L,7,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1950,5,1950-10-12,False,NYY,A,L,24,29,,0,0,0,0,-1
+San Francisco 49ers,SFO,1950,6,1950-10-22,False,DET,H,W,28,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1950,7,1950-10-29,False,BAL,H,W,17,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1950,8,1950-11-05,False,RAM,A,L,21,28,,0,0,0,0,-1
+San Francisco 49ers,SFO,1950,9,1950-11-12,False,CLE,A,L,14,34,,0,0,0,0,-1
+San Francisco 49ers,SFO,1950,10,1950-11-19,False,CHI,A,L,0,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1950,11,1950-11-26,False,GNB,A,L,21,25,,0,0,0,0,0
+San Francisco 49ers,SFO,1950,12,1950-12-10,False,GNB,H,W,30,14,,0,0,0,0,1
+Washington Redskins,WAS,1950,1,1950-09-17,False,BAL,A,W,38,14,,0,0,0,0,1
+Washington Redskins,WAS,1950,2,1950-09-24,False,GNB,A,L,21,35,,0,0,0,0,-4
+Washington Redskins,WAS,1950,3,1950-10-01,False,PIT,H,L,7,26,,0,0,0,0,0
+Washington Redskins,WAS,1950,4,1950-10-08,False,NYG,H,L,17,21,,0,0,0,0,0
+Washington Redskins,WAS,1950,5,1950-10-22,False,CRD,H,L,28,38,,0,0,0,0,-4
+Washington Redskins,WAS,1950,6,1950-10-29,False,PHI,A,L,3,35,,0,0,0,0,-4
+Washington Redskins,WAS,1950,7,1950-11-05,False,NYG,A,L,21,24,,0,0,0,0,0
+Washington Redskins,WAS,1950,8,1950-11-12,False,PHI,H,L,0,33,,0,0,0,0,-1
+Washington Redskins,WAS,1950,9,1950-11-19,False,CLE,A,L,14,20,,0,0,0,0,1
+Washington Redskins,WAS,1950,10,1950-11-26,False,BAL,H,W,38,28,,0,0,0,0,-1
+Washington Redskins,WAS,1950,11,1950-12-03,False,PIT,A,W,24,7,,0,0,0,0,4
+Washington Redskins,WAS,1950,12,1950-12-10,False,CLE,H,L,21,45,,0,0,0,0,-4
+Chicago Bears,CHI,1951,1,1951-09-30,False,GNB,A,W,31,20,,0,0,0,0,1
+Chicago Bears,CHI,1951,2,1951-10-07,False,CRD,A,L,14,28,,0,0,0,0,-1
+Chicago Bears,CHI,1951,3,1951-10-14,False,NYY,H,W,24,21,,0,0,0,0,0
+Chicago Bears,CHI,1951,4,1951-10-21,False,SFO,H,W,13,7,,0,0,0,0,4
+Chicago Bears,CHI,1951,5,1951-10-28,False,DET,A,W,28,23,,0,0,0,0,0
+Chicago Bears,CHI,1951,6,1951-11-04,False,WAS,A,W,27,0,,0,0,0,0,10
+Chicago Bears,CHI,1951,7,1951-11-11,False,DET,H,L,28,41,,0,0,0,0,-4
+Chicago Bears,CHI,1951,8,1951-11-18,False,GNB,H,W,24,13,,0,0,0,0,4
+Chicago Bears,CHI,1951,9,1951-11-25,False,CLE,A,L,21,42,,0,0,0,0,-4
+Chicago Bears,CHI,1951,10,1951-12-02,False,RAM,H,L,17,42,,0,0,0,0,-4
+Chicago Bears,CHI,1951,11,1951-12-09,False,NYY,A,W,45,21,,0,0,0,0,0
+Chicago Bears,CHI,1951,12,1951-12-16,False,CRD,H,L,14,24,,0,0,0,0,0
+Cleveland Browns,CLE,1951,1,1951-09-30,False,SFO,A,L,10,24,,0,0,0,0,0
+Cleveland Browns,CLE,1951,2,1951-10-07,False,RAM,A,W,38,23,,0,0,0,0,0
+Cleveland Browns,CLE,1951,3,1951-10-14,False,WAS,H,W,45,0,,0,0,0,0,10
+Cleveland Browns,CLE,1951,4,1951-10-21,False,PIT,H,W,17,0,,0,0,0,0,10
+Cleveland Browns,CLE,1951,5,1951-10-28,False,NYG,H,W,14,13,,0,0,0,0,4
+Cleveland Browns,CLE,1951,6,1951-11-04,False,CRD,A,W,34,17,,0,0,0,0,1
+Cleveland Browns,CLE,1951,7,1951-11-11,False,PHI,H,W,20,17,,0,0,0,0,1
+Cleveland Browns,CLE,1951,8,1951-11-18,False,NYG,A,W,10,0,,0,0,0,0,10
+Cleveland Browns,CLE,1951,9,1951-11-25,False,CHI,H,W,42,21,,0,0,0,0,0
+Cleveland Browns,CLE,1951,10,1951-12-02,False,CRD,H,W,49,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1951,11,1951-12-09,False,PIT,A,W,28,0,,0,0,0,0,10
+Cleveland Browns,CLE,1951,12,1951-12-16,False,PHI,A,W,24,9,,0,0,0,0,4
+Cleveland Browns,CLE,1951,13,1951-12-23,True,RAM,A,L,17,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1951,1,1951-09-30,False,PHI,H,L,14,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1951,2,1951-10-07,False,CHI,H,W,28,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1951,3,1951-10-14,False,NYG,A,L,17,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1951,4,1951-10-21,False,WAS,A,L,3,7,,0,0,0,0,4
+Chicago Cardinals,CRD,1951,5,1951-10-28,False,PIT,H,L,14,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1951,6,1951-11-04,False,CLE,H,L,17,34,,0,0,0,0,-1
+Chicago Cardinals,CRD,1951,7,1951-11-11,False,RAM,A,L,21,45,,0,0,0,0,-4
+Chicago Cardinals,CRD,1951,8,1951-11-18,False,SFO,A,W,27,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1951,9,1951-11-25,False,NYG,H,L,0,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1951,10,1951-12-02,False,CLE,A,L,28,49,,0,0,0,0,-4
+Chicago Cardinals,CRD,1951,11,1951-12-09,False,WAS,H,L,17,20,,0,0,0,0,1
+Chicago Cardinals,CRD,1951,12,1951-12-16,False,CHI,A,W,24,14,,0,0,0,0,1
+Detroit Lions,DET,1951,1,1951-09-30,False,WAS,H,W,35,17,,0,0,0,0,1
+Detroit Lions,DET,1951,2,1951-10-08,False,NYY,H,W,37,10,,0,0,0,0,4
+Detroit Lions,DET,1951,3,1951-10-14,False,RAM,H,L,21,27,,0,0,0,0,0
+Detroit Lions,DET,1951,4,1951-10-21,False,NYY,H,T,24,24,,0,0,0,0,0
+Detroit Lions,DET,1951,5,1951-10-28,False,CHI,H,L,23,28,,0,0,0,0,-1
+Detroit Lions,DET,1951,6,1951-11-04,False,GNB,A,W,24,17,,0,0,0,0,1
+Detroit Lions,DET,1951,7,1951-11-11,False,CHI,A,W,41,28,,0,0,0,0,-1
+Detroit Lions,DET,1951,8,1951-11-18,False,PHI,A,W,28,10,,0,0,0,0,4
+Detroit Lions,DET,1951,9,1951-11-22,False,GNB,H,W,52,35,,0,0,0,0,-4
+Detroit Lions,DET,1951,10,1951-12-02,False,SFO,H,L,10,20,,0,0,0,0,1
+Detroit Lions,DET,1951,11,1951-12-09,False,RAM,A,W,24,22,,0,0,0,0,0
+Detroit Lions,DET,1951,12,1951-12-16,False,SFO,A,L,17,21,,0,0,0,0,0
+Green Bay Packers,GNB,1951,1,1951-09-30,False,CHI,H,L,20,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,2,1951-10-07,False,PIT,H,W,35,33,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,3,1951-10-14,False,PHI,H,W,37,24,,0,0,0,0,0
+Green Bay Packers,GNB,1951,4,1951-10-21,False,RAM,H,L,0,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,5,1951-10-28,False,NYY,A,W,29,27,,0,0,0,0,0
+Green Bay Packers,GNB,1951,6,1951-11-04,False,DET,H,L,17,24,,0,0,0,0,0
+Green Bay Packers,GNB,1951,7,1951-11-11,False,PIT,A,L,7,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,8,1951-11-18,False,CHI,A,L,13,24,,0,0,0,0,0
+Green Bay Packers,GNB,1951,9,1951-11-22,False,DET,A,L,35,52,,0,0,0,0,-4
+Green Bay Packers,GNB,1951,10,1951-12-02,False,NYY,H,L,28,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,11,1951-12-09,False,SFO,A,L,19,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1951,12,1951-12-16,False,RAM,A,L,14,42,,0,0,0,0,-4
+New York Giants,NYG,1951,1,1951-10-01,False,PIT,A,T,13,13,,0,0,0,0,4
+New York Giants,NYG,1951,2,1951-10-07,False,WAS,A,W,35,14,,0,0,0,0,1
+New York Giants,NYG,1951,3,1951-10-14,False,CRD,H,W,28,17,,0,0,0,0,1
+New York Giants,NYG,1951,4,1951-10-21,False,PHI,H,W,26,24,,0,0,0,0,0
+New York Giants,NYG,1951,5,1951-10-28,False,CLE,A,L,13,14,,0,0,0,0,1
+New York Giants,NYG,1951,6,1951-11-04,False,NYY,H,W,37,31,,0,0,0,0,-1
+New York Giants,NYG,1951,7,1951-11-11,False,WAS,H,W,28,14,,0,0,0,0,1
+New York Giants,NYG,1951,8,1951-11-18,False,CLE,H,L,0,10,,0,0,0,0,4
+New York Giants,NYG,1951,9,1951-11-25,False,CRD,A,W,10,0,,0,0,0,0,10
+New York Giants,NYG,1951,10,1951-12-02,False,PIT,H,W,14,0,,0,0,0,0,10
+New York Giants,NYG,1951,11,1951-12-09,False,PHI,A,W,23,7,,0,0,0,0,4
+New York Giants,NYG,1951,12,1951-12-16,False,NYY,A,W,27,17,,0,0,0,0,1
+New York Yanks,NYY,1951,1,1951-09-28,False,RAM,A,L,14,54,,0,0,0,0,-4
+New York Yanks,NYY,1951,2,1951-10-08,False,DET,A,L,10,37,,0,0,0,0,-4
+New York Yanks,NYY,1951,3,1951-10-14,False,CHI,A,L,21,24,,0,0,0,0,0
+New York Yanks,NYY,1951,4,1951-10-21,False,DET,A,T,24,24,,0,0,0,0,0
+New York Yanks,NYY,1951,5,1951-10-28,False,GNB,H,L,27,29,,0,0,0,0,-1
+New York Yanks,NYY,1951,6,1951-11-04,False,NYG,A,L,31,37,,0,0,0,0,-4
+New York Yanks,NYY,1951,7,1951-11-11,False,SFO,A,L,14,19,,0,0,0,0,1
+New York Yanks,NYY,1951,8,1951-11-18,False,RAM,A,L,21,48,,0,0,0,0,-4
+New York Yanks,NYY,1951,9,1951-11-25,False,SFO,H,T,10,10,,0,0,0,0,4
+New York Yanks,NYY,1951,10,1951-12-02,False,GNB,A,W,31,28,,0,0,0,0,-1
+New York Yanks,NYY,1951,11,1951-12-09,False,CHI,H,L,21,45,,0,0,0,0,-4
+New York Yanks,NYY,1951,12,1951-12-16,False,NYG,H,L,17,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1951,1,1951-09-30,False,CRD,A,W,17,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1951,2,1951-10-06,False,SFO,H,W,21,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1951,3,1951-10-14,False,GNB,A,L,24,37,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1951,4,1951-10-21,False,NYG,A,L,24,26,,0,0,0,0,0
+Philadelphia Eagles,PHI,1951,5,1951-10-28,False,WAS,H,L,23,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1951,6,1951-11-04,False,PIT,A,W,34,13,,0,0,0,0,4
+Philadelphia Eagles,PHI,1951,7,1951-11-11,False,CLE,A,L,17,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1951,8,1951-11-18,False,DET,H,L,10,28,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1951,9,1951-11-25,False,PIT,H,L,13,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1951,10,1951-12-02,False,WAS,A,W,35,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1951,11,1951-12-09,False,NYG,H,L,7,23,,0,0,0,0,0
+Philadelphia Eagles,PHI,1951,12,1951-12-16,False,CLE,H,L,9,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1951,1,1951-10-01,False,NYG,H,T,13,13,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1951,2,1951-10-07,False,GNB,A,L,33,35,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1951,3,1951-10-14,False,SFO,H,L,24,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1951,4,1951-10-21,False,CLE,A,L,0,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1951,5,1951-10-28,False,CRD,A,W,28,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1951,6,1951-11-04,False,PHI,H,L,13,34,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1951,7,1951-11-11,False,GNB,H,W,28,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1951,8,1951-11-18,False,WAS,H,L,7,22,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1951,9,1951-11-25,False,PHI,A,W,17,13,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1951,10,1951-12-02,False,NYG,A,L,0,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1951,11,1951-12-09,False,CLE,H,L,0,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1951,12,1951-12-16,False,WAS,A,W,20,10,,0,0,0,0,4
+Los Angeles Rams,RAM,1951,1,1951-09-28,False,NYY,H,W,54,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1951,2,1951-10-07,False,CLE,H,L,23,38,,0,0,0,0,-4
+Los Angeles Rams,RAM,1951,3,1951-10-14,False,DET,A,W,27,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1951,4,1951-10-21,False,GNB,A,W,28,0,,0,0,0,0,10
+Los Angeles Rams,RAM,1951,5,1951-10-28,False,SFO,A,L,17,44,,0,0,0,0,-4
+Los Angeles Rams,RAM,1951,6,1951-11-04,False,SFO,H,W,23,16,,0,0,0,0,1
+Los Angeles Rams,RAM,1951,7,1951-11-11,False,CRD,H,W,45,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1951,8,1951-11-18,False,NYY,H,W,48,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1951,9,1951-11-25,False,WAS,A,L,21,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1951,10,1951-12-02,False,CHI,A,W,42,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1951,11,1951-12-09,False,DET,H,L,22,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1951,12,1951-12-16,False,GNB,H,W,42,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1951,13,1951-12-23,True,CLE,H,W,24,17,,2,0,0,0,5
+San Francisco 49ers,SFO,1951,1,1951-09-30,False,CLE,H,W,24,10,,0,0,0,0,4
+San Francisco 49ers,SFO,1951,2,1951-10-06,False,PHI,A,L,14,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1951,3,1951-10-14,False,PIT,A,W,28,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1951,4,1951-10-21,False,CHI,A,L,7,13,,0,0,0,0,4
+San Francisco 49ers,SFO,1951,5,1951-10-28,False,RAM,H,W,44,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1951,6,1951-11-04,False,RAM,A,L,16,23,,0,0,0,0,0
+San Francisco 49ers,SFO,1951,7,1951-11-11,False,NYY,H,W,19,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1951,8,1951-11-18,False,CRD,H,L,21,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1951,9,1951-11-25,False,NYY,A,T,10,10,,0,0,0,0,4
+San Francisco 49ers,SFO,1951,10,1951-12-02,False,DET,A,W,20,10,,0,0,0,0,4
+San Francisco 49ers,SFO,1951,11,1951-12-09,False,GNB,H,W,31,19,,0,0,0,0,1
+San Francisco 49ers,SFO,1951,12,1951-12-16,False,DET,H,W,21,17,,0,0,0,0,1
+Washington Redskins,WAS,1951,1,1951-09-30,False,DET,A,L,17,35,,0,0,0,0,-4
+Washington Redskins,WAS,1951,2,1951-10-07,False,NYG,H,L,14,35,,0,0,0,0,-4
+Washington Redskins,WAS,1951,3,1951-10-14,False,CLE,A,L,0,45,,0,0,0,0,-4
+Washington Redskins,WAS,1951,4,1951-10-21,False,CRD,H,W,7,3,,0,0,0,0,7
+Washington Redskins,WAS,1951,5,1951-10-28,False,PHI,A,W,27,23,,0,0,0,0,0
+Washington Redskins,WAS,1951,6,1951-11-04,False,CHI,H,L,0,27,,0,0,0,0,0
+Washington Redskins,WAS,1951,7,1951-11-11,False,NYG,A,L,14,28,,0,0,0,0,-1
+Washington Redskins,WAS,1951,8,1951-11-18,False,PIT,A,W,22,7,,0,0,0,0,4
+Washington Redskins,WAS,1951,9,1951-11-25,False,RAM,H,W,31,21,,0,0,0,0,0
+Washington Redskins,WAS,1951,10,1951-12-02,False,PHI,H,L,21,35,,0,0,0,0,-4
+Washington Redskins,WAS,1951,11,1951-12-09,False,CRD,A,W,20,17,,0,0,0,0,1
+Washington Redskins,WAS,1951,12,1951-12-16,False,PIT,H,L,10,20,,0,0,0,0,1
+Chicago Bears,CHI,1952,1,1952-09-28,False,GNB,A,W,24,14,,0,0,0,0,1
+Chicago Bears,CHI,1952,2,1952-10-05,False,CRD,A,L,10,21,,0,0,0,0,0
+Chicago Bears,CHI,1952,3,1952-10-12,False,DTX,H,W,38,20,,0,0,0,0,1
+Chicago Bears,CHI,1952,4,1952-10-19,False,SFO,H,L,16,40,,0,0,0,0,-4
+Chicago Bears,CHI,1952,5,1952-10-26,False,RAM,A,L,7,31,,0,0,0,0,-1
+Chicago Bears,CHI,1952,6,1952-11-02,False,SFO,A,W,20,17,,0,0,0,0,1
+Chicago Bears,CHI,1952,7,1952-11-09,False,GNB,H,L,28,41,,0,0,0,0,-4
+Chicago Bears,CHI,1952,8,1952-11-16,False,RAM,H,L,24,40,,0,0,0,0,-4
+Chicago Bears,CHI,1952,9,1952-11-23,False,DET,H,W,24,23,,0,0,0,0,0
+Chicago Bears,CHI,1952,10,1952-11-27,False,DTX,A,L,23,27,,0,0,0,0,0
+Chicago Bears,CHI,1952,11,1952-12-07,False,DET,A,L,21,45,,0,0,0,0,-4
+Chicago Bears,CHI,1952,12,1952-12-14,False,CRD,H,W,10,7,,0,0,0,0,4
+Cleveland Browns,CLE,1952,1,1952-09-28,False,RAM,H,W,37,7,,0,0,0,0,4
+Cleveland Browns,CLE,1952,2,1952-10-04,False,PIT,A,W,21,20,,0,0,0,0,1
+Cleveland Browns,CLE,1952,3,1952-10-12,False,NYG,H,L,9,17,,0,0,0,0,1
+Cleveland Browns,CLE,1952,4,1952-10-19,False,PHI,A,W,49,7,,0,0,0,0,4
+Cleveland Browns,CLE,1952,5,1952-10-26,False,WAS,H,W,19,15,,0,0,0,0,1
+Cleveland Browns,CLE,1952,6,1952-11-02,False,DET,A,L,6,17,,0,0,0,0,1
+Cleveland Browns,CLE,1952,7,1952-11-09,False,CRD,H,W,28,13,,0,0,0,0,4
+Cleveland Browns,CLE,1952,8,1952-11-16,False,PIT,H,W,29,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1952,9,1952-11-23,False,PHI,H,L,20,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1952,10,1952-11-30,False,WAS,A,W,48,24,,0,0,0,0,0
+Cleveland Browns,CLE,1952,11,1952-12-07,False,CRD,A,W,10,0,,0,0,0,0,10
+Cleveland Browns,CLE,1952,12,1952-12-14,False,NYG,A,L,34,37,,0,0,0,0,-4
+Cleveland Browns,CLE,1952,13,1952-12-28,True,DET,H,L,7,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1952,1,1952-09-29,False,WAS,H,L,7,23,,0,0,0,0,0
+Chicago Cardinals,CRD,1952,2,1952-10-05,False,CHI,H,W,21,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1952,3,1952-10-12,False,WAS,A,W,17,6,,0,0,0,0,7
+Chicago Cardinals,CRD,1952,4,1952-10-19,False,NYG,A,W,24,23,,0,0,0,0,0
+Chicago Cardinals,CRD,1952,5,1952-10-26,False,PIT,H,L,28,34,,0,0,0,0,-1
+Chicago Cardinals,CRD,1952,6,1952-11-02,False,NYG,H,L,6,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1952,7,1952-11-09,False,CLE,A,L,13,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1952,8,1952-11-16,False,PHI,A,L,7,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1952,9,1952-11-23,False,PIT,A,L,14,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1952,10,1952-11-30,False,PHI,H,W,28,22,,0,0,0,0,0
+Chicago Cardinals,CRD,1952,11,1952-12-07,False,CLE,H,L,0,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1952,12,1952-12-14,False,CHI,A,L,7,10,,0,0,0,0,4
+Detroit Lions,DET,1952,1,1952-09-28,False,SFO,A,L,3,17,,0,0,0,0,1
+Detroit Lions,DET,1952,2,1952-10-03,False,RAM,A,W,17,14,,0,0,0,0,1
+Detroit Lions,DET,1952,3,1952-10-12,False,SFO,H,L,0,28,,0,0,0,0,-1
+Detroit Lions,DET,1952,4,1952-10-19,False,RAM,H,W,24,16,,0,0,0,0,1
+Detroit Lions,DET,1952,5,1952-10-26,False,GNB,A,W,52,17,,0,0,0,0,1
+Detroit Lions,DET,1952,6,1952-11-02,False,CLE,H,W,17,6,,0,0,0,0,7
+Detroit Lions,DET,1952,7,1952-11-09,False,PIT,A,W,31,6,,0,0,0,0,7
+Detroit Lions,DET,1952,8,1952-11-16,False,DTX,H,W,43,13,,0,0,0,0,4
+Detroit Lions,DET,1952,9,1952-11-23,False,CHI,A,L,23,24,,0,0,0,0,0
+Detroit Lions,DET,1952,10,1952-11-27,False,GNB,H,W,48,24,,0,0,0,0,0
+Detroit Lions,DET,1952,11,1952-12-07,False,CHI,H,W,45,21,,0,0,0,0,0
+Detroit Lions,DET,1952,12,1952-12-13,False,DTX,H,W,41,6,,0,0,0,0,7
+Detroit Lions,DET,1952,13,1952-12-21,True,RAM,H,W,31,21,,0,0,0,0,0
+Detroit Lions,DET,1952,14,1952-12-28,True,CLE,A,W,17,7,,0,0,0,0,4
+Dallas Texans,DTX,1952,1,1952-09-28,False,NYG,H,L,6,24,,0,0,0,0,0
+Dallas Texans,DTX,1952,2,1952-10-05,False,SFO,H,L,14,37,,0,0,0,0,-4
+Dallas Texans,DTX,1952,3,1952-10-12,False,CHI,A,L,20,38,,0,0,0,0,-4
+Dallas Texans,DTX,1952,4,1952-10-18,False,GNB,H,L,14,24,,0,0,0,0,0
+Dallas Texans,DTX,1952,5,1952-10-26,False,SFO,A,L,21,48,,0,0,0,0,-4
+Dallas Texans,DTX,1952,6,1952-11-02,False,RAM,A,L,20,42,,0,0,0,0,-4
+Dallas Texans,DTX,1952,7,1952-11-09,False,RAM,H,L,6,27,,0,0,0,0,0
+Dallas Texans,DTX,1952,8,1952-11-16,False,DET,A,L,13,43,,0,0,0,0,-4
+Dallas Texans,DTX,1952,9,1952-11-23,False,GNB,A,L,14,42,,0,0,0,0,-4
+Dallas Texans,DTX,1952,10,1952-11-27,False,CHI,H,W,27,23,,0,0,0,0,0
+Dallas Texans,DTX,1952,11,1952-12-07,False,PHI,A,L,21,38,,0,0,0,0,-4
+Dallas Texans,DTX,1952,12,1952-12-13,False,DET,A,L,6,41,,0,0,0,0,-4
+Green Bay Packers,GNB,1952,1,1952-09-28,False,CHI,H,L,14,24,,0,0,0,0,0
+Green Bay Packers,GNB,1952,2,1952-10-05,False,WAS,H,W,35,20,,0,0,0,0,1
+Green Bay Packers,GNB,1952,3,1952-10-12,False,RAM,H,L,28,30,,0,0,0,0,-1
+Green Bay Packers,GNB,1952,4,1952-10-18,False,DTX,A,W,24,14,,0,0,0,0,1
+Green Bay Packers,GNB,1952,5,1952-10-26,False,DET,H,L,17,52,,0,0,0,0,-4
+Green Bay Packers,GNB,1952,6,1952-11-02,False,PHI,H,W,12,10,,0,0,0,0,4
+Green Bay Packers,GNB,1952,7,1952-11-09,False,CHI,A,W,41,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1952,8,1952-11-16,False,NYG,A,W,17,3,,0,0,0,0,7
+Green Bay Packers,GNB,1952,9,1952-11-23,False,DTX,H,W,42,14,,0,0,0,0,1
+Green Bay Packers,GNB,1952,10,1952-11-27,False,DET,A,L,24,48,,0,0,0,0,-4
+Green Bay Packers,GNB,1952,11,1952-12-07,False,RAM,A,L,27,45,,0,0,0,0,-4
+Green Bay Packers,GNB,1952,12,1952-12-14,False,SFO,A,L,14,24,,0,0,0,0,0
+New York Giants,NYG,1952,1,1952-09-28,False,DTX,A,W,24,6,,0,0,0,0,7
+New York Giants,NYG,1952,2,1952-10-04,False,PHI,A,W,31,7,,0,0,0,0,4
+New York Giants,NYG,1952,3,1952-10-12,False,CLE,A,W,17,9,,0,0,0,0,4
+New York Giants,NYG,1952,4,1952-10-19,False,CRD,H,L,23,24,,0,0,0,0,0
+New York Giants,NYG,1952,5,1952-10-26,False,PHI,H,L,10,14,,0,0,0,0,1
+New York Giants,NYG,1952,6,1952-11-02,False,CRD,A,W,28,6,,0,0,0,0,7
+New York Giants,NYG,1952,7,1952-11-09,False,SFO,H,W,23,14,,0,0,0,0,1
+New York Giants,NYG,1952,8,1952-11-16,False,GNB,H,L,3,17,,0,0,0,0,1
+New York Giants,NYG,1952,9,1952-11-23,False,WAS,A,W,14,10,,0,0,0,0,4
+New York Giants,NYG,1952,10,1952-11-30,False,PIT,A,L,7,63,,0,0,0,0,-4
+New York Giants,NYG,1952,11,1952-12-07,False,WAS,H,L,17,27,,0,0,0,0,0
+New York Giants,NYG,1952,12,1952-12-14,False,CLE,H,W,37,34,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1952,1,1952-09-28,False,PIT,A,W,31,25,,0,0,0,0,0
+Philadelphia Eagles,PHI,1952,2,1952-10-04,False,NYG,H,L,7,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1952,3,1952-10-12,False,PIT,H,W,26,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1952,4,1952-10-19,False,CLE,H,L,7,49,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1952,5,1952-10-26,False,NYG,A,W,14,10,,0,0,0,0,4
+Philadelphia Eagles,PHI,1952,6,1952-11-02,False,GNB,A,L,10,12,,0,0,0,0,4
+Philadelphia Eagles,PHI,1952,7,1952-11-09,False,WAS,H,W,38,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1952,8,1952-11-16,False,CRD,H,W,10,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1952,9,1952-11-23,False,CLE,A,W,28,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1952,10,1952-11-30,False,CRD,A,L,22,28,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1952,11,1952-12-07,False,DTX,H,W,38,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1952,12,1952-12-14,False,WAS,A,L,21,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1952,1,1952-09-28,False,PHI,H,L,25,31,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1952,2,1952-10-04,False,CLE,H,L,20,21,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1952,3,1952-10-12,False,PHI,A,L,21,26,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1952,4,1952-10-19,False,WAS,H,L,24,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1952,5,1952-10-26,False,CRD,A,W,34,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1952,6,1952-11-02,False,WAS,A,W,24,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1952,7,1952-11-09,False,DET,H,L,6,31,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1952,8,1952-11-16,False,CLE,A,L,28,29,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1952,9,1952-11-23,False,CRD,H,W,17,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1952,10,1952-11-30,False,NYG,H,W,63,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1952,11,1952-12-07,False,SFO,A,W,24,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1952,12,1952-12-14,False,RAM,A,L,14,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1952,1,1952-09-28,False,CLE,A,L,7,37,,0,0,0,0,-4
+Los Angeles Rams,RAM,1952,2,1952-10-03,False,DET,H,L,14,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1952,3,1952-10-12,False,GNB,A,W,30,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1952,4,1952-10-19,False,DET,A,L,16,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1952,5,1952-10-26,False,CHI,H,W,31,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1952,6,1952-11-02,False,DTX,H,W,42,20,,0,0,0,0,1
+Los Angeles Rams,RAM,1952,7,1952-11-09,False,DTX,A,W,27,6,,0,0,0,0,7
+Los Angeles Rams,RAM,1952,8,1952-11-16,False,CHI,A,W,40,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1952,9,1952-11-23,False,SFO,H,W,35,9,,0,0,0,0,4
+Los Angeles Rams,RAM,1952,10,1952-11-30,False,SFO,A,W,34,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1952,11,1952-12-07,False,GNB,H,W,45,27,,0,0,0,0,0
+Los Angeles Rams,RAM,1952,12,1952-12-14,False,PIT,H,W,28,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1952,13,1952-12-21,True,DET,A,L,21,31,,1,0,0,1,7
+San Francisco 49ers,SFO,1952,1,1952-09-28,False,DET,H,W,17,3,,0,0,0,0,7
+San Francisco 49ers,SFO,1952,2,1952-10-05,False,DTX,A,W,37,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1952,3,1952-10-12,False,DET,A,W,28,0,,0,0,0,0,10
+San Francisco 49ers,SFO,1952,4,1952-10-19,False,CHI,A,W,40,16,,0,0,0,0,1
+San Francisco 49ers,SFO,1952,5,1952-10-26,False,DTX,H,W,48,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1952,6,1952-11-02,False,CHI,H,L,17,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1952,7,1952-11-09,False,NYG,A,L,14,23,,0,0,0,0,0
+San Francisco 49ers,SFO,1952,8,1952-11-16,False,WAS,A,W,23,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1952,9,1952-11-23,False,RAM,A,L,9,35,,0,0,0,0,-4
+San Francisco 49ers,SFO,1952,10,1952-11-30,False,RAM,H,L,21,34,,0,0,0,0,-1
+San Francisco 49ers,SFO,1952,11,1952-12-07,False,PIT,H,L,7,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1952,12,1952-12-14,False,GNB,H,W,24,14,,0,0,0,0,1
+Washington Redskins,WAS,1952,1,1952-09-29,False,CRD,A,W,23,7,,0,0,0,0,4
+Washington Redskins,WAS,1952,2,1952-10-05,False,GNB,A,L,20,35,,0,0,0,0,-4
+Washington Redskins,WAS,1952,3,1952-10-12,False,CRD,H,L,6,17,,0,0,0,0,1
+Washington Redskins,WAS,1952,4,1952-10-19,False,PIT,A,W,28,24,,0,0,0,0,0
+Washington Redskins,WAS,1952,5,1952-10-26,False,CLE,A,L,15,19,,0,0,0,0,1
+Washington Redskins,WAS,1952,6,1952-11-02,False,PIT,H,L,23,24,,0,0,0,0,0
+Washington Redskins,WAS,1952,7,1952-11-09,False,PHI,A,L,20,38,,0,0,0,0,-4
+Washington Redskins,WAS,1952,8,1952-11-16,False,SFO,H,L,17,23,,0,0,0,0,0
+Washington Redskins,WAS,1952,9,1952-11-23,False,NYG,H,L,10,14,,0,0,0,0,1
+Washington Redskins,WAS,1952,10,1952-11-30,False,CLE,H,L,24,48,,0,0,0,0,-4
+Washington Redskins,WAS,1952,11,1952-12-07,False,NYG,A,W,27,17,,0,0,0,0,1
+Washington Redskins,WAS,1952,12,1952-12-14,False,PHI,H,W,27,21,,0,0,0,0,0
+Baltimore Colts,BAL,1953,1,1953-09-27,False,CHI,H,W,13,9,,0,0,0,0,4
+Baltimore Colts,BAL,1953,2,1953-10-03,False,DET,H,L,17,27,,0,0,0,0,0
+Baltimore Colts,BAL,1953,3,1953-10-11,False,CHI,A,W,16,14,,0,0,0,0,1
+Baltimore Colts,BAL,1953,4,1953-10-18,False,GNB,A,L,14,37,,0,0,0,0,-4
+Baltimore Colts,BAL,1953,5,1953-10-25,False,WAS,H,W,27,17,,0,0,0,0,1
+Baltimore Colts,BAL,1953,6,1953-10-31,False,GNB,H,L,24,35,,0,0,0,0,-4
+Baltimore Colts,BAL,1953,7,1953-11-07,False,DET,A,L,7,17,,0,0,0,0,1
+Baltimore Colts,BAL,1953,8,1953-11-15,False,PHI,A,L,14,45,,0,0,0,0,-4
+Baltimore Colts,BAL,1953,9,1953-11-22,False,RAM,H,L,13,21,,0,0,0,0,0
+Baltimore Colts,BAL,1953,10,1953-11-29,False,SFO,H,L,21,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1953,11,1953-12-05,False,RAM,A,L,2,45,,0,0,0,0,-4
+Baltimore Colts,BAL,1953,12,1953-12-13,False,SFO,A,L,14,45,,0,0,0,0,-4
+Chicago Bears,CHI,1953,1,1953-09-27,False,BAL,A,L,9,13,,0,0,0,0,4
+Chicago Bears,CHI,1953,2,1953-10-04,False,GNB,A,W,17,13,,0,0,0,0,4
+Chicago Bears,CHI,1953,3,1953-10-11,False,BAL,H,L,14,16,,0,0,0,0,1
+Chicago Bears,CHI,1953,4,1953-10-18,False,SFO,H,L,28,35,,0,0,0,0,-4
+Chicago Bears,CHI,1953,5,1953-10-25,False,RAM,A,L,24,38,,0,0,0,0,-4
+Chicago Bears,CHI,1953,6,1953-11-01,False,SFO,A,L,14,24,,0,0,0,0,0
+Chicago Bears,CHI,1953,7,1953-11-08,False,GNB,H,T,21,21,,0,0,0,0,0
+Chicago Bears,CHI,1953,8,1953-11-15,False,WAS,A,W,27,24,,0,0,0,0,0
+Chicago Bears,CHI,1953,9,1953-11-22,False,DET,H,L,16,20,,0,0,0,0,1
+Chicago Bears,CHI,1953,10,1953-11-29,False,RAM,H,W,24,21,,0,0,0,0,0
+Chicago Bears,CHI,1953,11,1953-12-06,False,DET,A,L,7,13,,0,0,0,0,4
+Chicago Bears,CHI,1953,12,1953-12-13,False,CRD,H,L,17,24,,0,0,0,0,0
+Cleveland Browns,CLE,1953,1,1953-09-27,False,GNB,A,W,27,0,,0,0,0,0,10
+Cleveland Browns,CLE,1953,2,1953-10-04,False,CRD,A,W,27,7,,0,0,0,0,4
+Cleveland Browns,CLE,1953,3,1953-10-10,False,PHI,H,W,37,13,,0,0,0,0,4
+Cleveland Browns,CLE,1953,4,1953-10-18,False,WAS,A,W,30,14,,0,0,0,0,1
+Cleveland Browns,CLE,1953,5,1953-10-25,False,NYG,A,W,7,0,,0,0,0,0,10
+Cleveland Browns,CLE,1953,6,1953-11-01,False,WAS,H,W,27,3,,0,0,0,0,7
+Cleveland Browns,CLE,1953,7,1953-11-08,False,PIT,H,W,34,16,,0,0,0,0,1
+Cleveland Browns,CLE,1953,8,1953-11-15,False,SFO,H,W,23,21,,0,0,0,0,0
+Cleveland Browns,CLE,1953,9,1953-11-22,False,PIT,A,W,20,16,,0,0,0,0,1
+Cleveland Browns,CLE,1953,10,1953-11-29,False,CRD,H,W,27,16,,0,0,0,0,1
+Cleveland Browns,CLE,1953,11,1953-12-06,False,NYG,H,W,62,14,,0,0,0,0,1
+Cleveland Browns,CLE,1953,12,1953-12-13,False,PHI,A,L,27,42,,0,0,0,0,-4
+Cleveland Browns,CLE,1953,13,1953-12-27,True,DET,A,L,16,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1953,1,1953-09-27,False,WAS,H,L,13,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,2,1953-10-04,False,CLE,H,L,7,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,3,1953-10-11,False,PIT,A,L,28,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1953,4,1953-10-18,False,NYG,A,L,7,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,5,1953-10-25,False,PHI,H,L,17,56,,0,0,0,0,-4
+Chicago Cardinals,CRD,1953,6,1953-11-01,False,NYG,H,L,20,23,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,7,1953-11-08,False,WAS,A,L,17,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1953,8,1953-11-15,False,RAM,H,T,24,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,9,1953-11-21,False,PHI,A,L,0,38,,0,0,0,0,-4
+Chicago Cardinals,CRD,1953,10,1953-11-29,False,CLE,A,L,16,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,11,1953-12-06,False,PIT,H,L,17,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1953,12,1953-12-13,False,CHI,A,W,24,17,,0,0,0,0,1
+Detroit Lions,DET,1953,1,1953-09-27,False,PIT,H,W,38,21,,0,0,0,0,0
+Detroit Lions,DET,1953,2,1953-10-03,False,BAL,A,W,27,17,,0,0,0,0,1
+Detroit Lions,DET,1953,3,1953-10-11,False,SFO,H,W,24,21,,0,0,0,0,0
+Detroit Lions,DET,1953,4,1953-10-18,False,RAM,H,L,19,31,,0,0,0,0,-1
+Detroit Lions,DET,1953,5,1953-10-25,False,SFO,A,W,14,10,,0,0,0,0,4
+Detroit Lions,DET,1953,6,1953-11-01,False,RAM,A,L,24,37,,0,0,0,0,-4
+Detroit Lions,DET,1953,7,1953-11-07,False,BAL,H,W,17,7,,0,0,0,0,4
+Detroit Lions,DET,1953,8,1953-11-15,False,GNB,A,W,14,7,,0,0,0,0,4
+Detroit Lions,DET,1953,9,1953-11-22,False,CHI,A,W,20,16,,0,0,0,0,1
+Detroit Lions,DET,1953,10,1953-11-26,False,GNB,H,W,34,15,,0,0,0,0,1
+Detroit Lions,DET,1953,11,1953-12-06,False,CHI,H,W,13,7,,0,0,0,0,4
+Detroit Lions,DET,1953,12,1953-12-13,False,NYG,A,W,27,16,,0,0,0,0,1
+Detroit Lions,DET,1953,13,1953-12-27,True,CLE,H,W,17,16,,0,0,0,0,1
+Green Bay Packers,GNB,1953,1,1953-09-27,False,CLE,H,L,0,27,,0,0,0,0,0
+Green Bay Packers,GNB,1953,2,1953-10-04,False,CHI,H,L,13,17,,0,0,0,0,1
+Green Bay Packers,GNB,1953,3,1953-10-11,False,RAM,H,L,20,38,,0,0,0,0,-4
+Green Bay Packers,GNB,1953,4,1953-10-18,False,BAL,H,W,37,14,,0,0,0,0,1
+Green Bay Packers,GNB,1953,5,1953-10-24,False,PIT,A,L,14,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1953,6,1953-10-31,False,BAL,A,W,35,24,,0,0,0,0,0
+Green Bay Packers,GNB,1953,7,1953-11-08,False,CHI,A,T,21,21,,0,0,0,0,0
+Green Bay Packers,GNB,1953,8,1953-11-15,False,DET,H,L,7,14,,0,0,0,0,1
+Green Bay Packers,GNB,1953,9,1953-11-22,False,SFO,H,L,7,37,,0,0,0,0,-4
+Green Bay Packers,GNB,1953,10,1953-11-26,False,DET,A,L,15,34,,0,0,0,0,-1
+Green Bay Packers,GNB,1953,11,1953-12-06,False,SFO,A,L,14,48,,0,0,0,0,-4
+Green Bay Packers,GNB,1953,12,1953-12-12,False,RAM,A,L,17,33,,0,0,0,0,-1
+New York Giants,NYG,1953,1,1953-09-27,False,RAM,A,L,7,21,,0,0,0,0,0
+New York Giants,NYG,1953,2,1953-10-03,False,PIT,A,L,14,24,,0,0,0,0,0
+New York Giants,NYG,1953,3,1953-10-11,False,WAS,A,L,9,13,,0,0,0,0,4
+New York Giants,NYG,1953,4,1953-10-18,False,CRD,H,W,21,7,,0,0,0,0,4
+New York Giants,NYG,1953,5,1953-10-25,False,CLE,H,L,0,7,,0,0,0,0,4
+New York Giants,NYG,1953,6,1953-11-01,False,CRD,A,W,23,20,,0,0,0,0,1
+New York Giants,NYG,1953,7,1953-11-08,False,PHI,A,L,7,30,,0,0,0,0,-1
+New York Giants,NYG,1953,8,1953-11-15,False,PIT,H,L,10,14,,0,0,0,0,1
+New York Giants,NYG,1953,9,1953-11-22,False,WAS,H,L,21,24,,0,0,0,0,0
+New York Giants,NYG,1953,10,1953-11-29,False,PHI,H,W,37,28,,0,0,0,0,-1
+New York Giants,NYG,1953,11,1953-12-06,False,CLE,A,L,14,62,,0,0,0,0,-4
+New York Giants,NYG,1953,12,1953-12-13,False,DET,H,L,16,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1953,1,1953-09-27,False,SFO,A,L,21,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1953,2,1953-10-02,False,WAS,H,T,21,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1953,3,1953-10-10,False,CLE,A,L,13,37,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1953,4,1953-10-17,False,PIT,H,W,23,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1953,5,1953-10-25,False,CRD,A,W,56,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1953,6,1953-11-01,False,PIT,A,W,35,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1953,7,1953-11-08,False,NYG,H,W,30,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1953,8,1953-11-15,False,BAL,H,W,45,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1953,9,1953-11-21,False,CRD,H,W,38,0,,0,0,0,0,10
+Philadelphia Eagles,PHI,1953,10,1953-11-29,False,NYG,A,L,28,37,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1953,11,1953-12-06,False,WAS,A,L,0,10,,0,0,0,0,4
+Philadelphia Eagles,PHI,1953,12,1953-12-13,False,CLE,H,W,42,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1953,1,1953-09-27,False,DET,A,L,21,38,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1953,2,1953-10-03,False,NYG,H,W,24,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1953,3,1953-10-11,False,CRD,H,W,31,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1953,4,1953-10-17,False,PHI,A,L,7,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1953,5,1953-10-24,False,GNB,H,W,31,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1953,6,1953-11-01,False,PHI,H,L,7,35,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1953,7,1953-11-08,False,CLE,A,L,16,34,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1953,8,1953-11-15,False,NYG,A,W,14,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1953,9,1953-11-22,False,CLE,H,L,16,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1953,10,1953-11-29,False,WAS,H,L,9,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1953,11,1953-12-06,False,CRD,A,W,21,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1953,12,1953-12-13,False,WAS,A,W,14,13,,0,0,0,0,4
+Los Angeles Rams,RAM,1953,1,1953-09-27,False,NYG,H,W,21,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1953,2,1953-10-04,False,SFO,A,L,30,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1953,3,1953-10-11,False,GNB,A,W,38,20,,0,0,0,0,1
+Los Angeles Rams,RAM,1953,4,1953-10-18,False,DET,A,W,31,19,,0,0,0,0,1
+Los Angeles Rams,RAM,1953,5,1953-10-25,False,CHI,H,W,38,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1953,6,1953-11-01,False,DET,H,W,37,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1953,7,1953-11-08,False,SFO,H,L,27,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1953,8,1953-11-15,False,CRD,A,T,24,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1953,9,1953-11-22,False,BAL,A,W,21,13,,0,0,0,0,4
+Los Angeles Rams,RAM,1953,10,1953-11-29,False,CHI,A,L,21,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1953,11,1953-12-05,False,BAL,H,W,45,2,,0,0,0,0,7
+Los Angeles Rams,RAM,1953,12,1953-12-12,False,GNB,H,W,33,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1953,1,1953-09-27,False,PHI,H,W,31,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1953,2,1953-10-04,False,RAM,H,W,31,30,,0,0,0,0,-1
+San Francisco 49ers,SFO,1953,3,1953-10-11,False,DET,A,L,21,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1953,4,1953-10-18,False,CHI,A,W,35,28,,0,0,0,0,-1
+San Francisco 49ers,SFO,1953,5,1953-10-25,False,DET,H,L,10,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1953,6,1953-11-01,False,CHI,H,W,24,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1953,7,1953-11-08,False,RAM,A,W,31,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1953,8,1953-11-15,False,CLE,A,L,21,23,,0,0,0,0,0
+San Francisco 49ers,SFO,1953,9,1953-11-22,False,GNB,A,W,37,7,,0,0,0,0,4
+San Francisco 49ers,SFO,1953,10,1953-11-29,False,BAL,A,W,38,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1953,11,1953-12-06,False,GNB,H,W,48,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1953,12,1953-12-13,False,BAL,H,W,45,14,,0,0,0,0,1
+Washington Redskins,WAS,1953,1,1953-09-27,False,CRD,A,W,24,13,,0,0,0,0,4
+Washington Redskins,WAS,1953,2,1953-10-02,False,PHI,A,T,21,21,,0,0,0,0,0
+Washington Redskins,WAS,1953,3,1953-10-11,False,NYG,H,W,13,9,,0,0,0,0,4
+Washington Redskins,WAS,1953,4,1953-10-18,False,CLE,H,L,14,30,,0,0,0,0,-1
+Washington Redskins,WAS,1953,5,1953-10-25,False,BAL,A,L,17,27,,0,0,0,0,0
+Washington Redskins,WAS,1953,6,1953-11-01,False,CLE,A,L,3,27,,0,0,0,0,0
+Washington Redskins,WAS,1953,7,1953-11-08,False,CRD,H,W,28,17,,0,0,0,0,1
+Washington Redskins,WAS,1953,8,1953-11-15,False,CHI,H,L,24,27,,0,0,0,0,0
+Washington Redskins,WAS,1953,9,1953-11-22,False,NYG,A,W,24,21,,0,0,0,0,0
+Washington Redskins,WAS,1953,10,1953-11-29,False,PIT,A,W,17,9,,0,0,0,0,4
+Washington Redskins,WAS,1953,11,1953-12-06,False,PHI,H,W,10,0,,0,0,0,0,10
+Washington Redskins,WAS,1953,12,1953-12-13,False,PIT,H,L,13,14,,0,0,0,0,1
+Baltimore Colts,BAL,1954,1,1954-09-26,False,RAM,H,L,0,48,,0,0,0,0,-4
+Baltimore Colts,BAL,1954,2,1954-10-02,False,NYG,H,W,20,14,,0,0,0,0,1
+Baltimore Colts,BAL,1954,3,1954-10-10,False,CHI,A,L,9,28,,0,0,0,0,-1
+Baltimore Colts,BAL,1954,4,1954-10-16,False,DET,A,L,0,35,,0,0,0,0,-4
+Baltimore Colts,BAL,1954,5,1954-10-24,False,GNB,H,L,6,7,,0,0,0,0,4
+Baltimore Colts,BAL,1954,6,1954-10-31,False,WAS,A,L,21,24,,0,0,0,0,0
+Baltimore Colts,BAL,1954,7,1954-11-06,False,DET,H,L,3,27,,0,0,0,0,0
+Baltimore Colts,BAL,1954,8,1954-11-13,False,GNB,A,L,13,24,,0,0,0,0,0
+Baltimore Colts,BAL,1954,9,1954-11-21,False,CHI,H,L,13,28,,0,0,0,0,-1
+Baltimore Colts,BAL,1954,10,1954-11-28,False,SFO,H,W,17,13,,0,0,0,0,4
+Baltimore Colts,BAL,1954,11,1954-12-04,False,RAM,A,W,22,21,,0,0,0,0,0
+Baltimore Colts,BAL,1954,12,1954-12-11,False,SFO,A,L,7,10,,0,0,0,0,4
+Chicago Bears,CHI,1954,1,1954-09-26,False,DET,A,L,23,48,,0,0,0,0,-4
+Chicago Bears,CHI,1954,2,1954-10-03,False,GNB,A,W,10,3,,0,0,0,0,7
+Chicago Bears,CHI,1954,3,1954-10-10,False,BAL,H,W,28,9,,0,0,0,0,4
+Chicago Bears,CHI,1954,4,1954-10-17,False,SFO,H,L,24,31,,0,0,0,0,-1
+Chicago Bears,CHI,1954,5,1954-10-24,False,RAM,A,L,38,42,,0,0,0,0,-4
+Chicago Bears,CHI,1954,6,1954-10-31,False,SFO,A,W,31,27,,0,0,0,0,0
+Chicago Bears,CHI,1954,7,1954-11-07,False,GNB,H,W,28,23,,0,0,0,0,0
+Chicago Bears,CHI,1954,8,1954-11-14,False,CLE,H,L,10,39,,0,0,0,0,-4
+Chicago Bears,CHI,1954,9,1954-11-21,False,BAL,A,W,28,13,,0,0,0,0,4
+Chicago Bears,CHI,1954,10,1954-11-28,False,RAM,H,W,24,13,,0,0,0,0,4
+Chicago Bears,CHI,1954,11,1954-12-05,False,CRD,A,W,29,7,,0,0,0,0,4
+Chicago Bears,CHI,1954,12,1954-12-12,False,DET,H,W,28,24,,0,0,0,0,0
+Cleveland Browns,CLE,1954,1,1954-09-26,False,PHI,A,L,10,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1954,2,1954-10-10,False,CRD,H,W,31,7,,0,0,0,0,4
+Cleveland Browns,CLE,1954,3,1954-10-17,False,PIT,A,L,27,55,,0,0,0,0,-4
+Cleveland Browns,CLE,1954,4,1954-10-24,False,CRD,A,W,35,3,,0,0,0,0,7
+Cleveland Browns,CLE,1954,5,1954-10-31,False,NYG,H,W,24,14,,0,0,0,0,1
+Cleveland Browns,CLE,1954,6,1954-11-07,False,WAS,H,W,62,3,,0,0,0,0,7
+Cleveland Browns,CLE,1954,7,1954-11-14,False,CHI,A,W,39,10,,0,0,0,0,4
+Cleveland Browns,CLE,1954,8,1954-11-21,False,PHI,H,W,6,0,,0,0,0,0,10
+Cleveland Browns,CLE,1954,9,1954-11-28,False,NYG,A,W,16,7,,0,0,0,0,4
+Cleveland Browns,CLE,1954,10,1954-12-05,False,WAS,A,W,34,14,,0,0,0,0,1
+Cleveland Browns,CLE,1954,11,1954-12-12,False,PIT,H,W,42,7,,0,0,0,0,4
+Cleveland Browns,CLE,1954,12,1954-12-19,False,DET,H,L,10,14,,0,0,0,0,1
+Cleveland Browns,CLE,1954,13,1954-12-26,True,DET,H,W,56,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1954,1,1954-09-26,False,NYG,H,L,10,41,,0,0,0,0,-4
+Chicago Cardinals,CRD,1954,2,1954-10-03,False,PHI,H,L,16,35,,0,0,0,0,-4
+Chicago Cardinals,CRD,1954,3,1954-10-10,False,CLE,A,L,7,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1954,4,1954-10-17,False,NYG,A,L,17,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1954,5,1954-10-24,False,CLE,H,L,3,35,,0,0,0,0,-4
+Chicago Cardinals,CRD,1954,6,1954-10-31,False,PIT,H,W,17,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1954,7,1954-11-07,False,PHI,A,L,14,30,,0,0,0,0,-1
+Chicago Cardinals,CRD,1954,8,1954-11-14,False,RAM,A,L,17,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1954,9,1954-11-21,False,WAS,H,W,38,16,,0,0,0,0,1
+Chicago Cardinals,CRD,1954,10,1954-11-28,False,PIT,A,L,17,20,,0,0,0,0,1
+Chicago Cardinals,CRD,1954,11,1954-12-05,False,CHI,H,L,7,29,,0,0,0,0,-1
+Chicago Cardinals,CRD,1954,12,1954-12-12,False,WAS,A,L,20,37,,0,0,0,0,-4
+Detroit Lions,DET,1954,1,1954-09-26,False,CHI,H,W,48,23,,0,0,0,0,0
+Detroit Lions,DET,1954,2,1954-10-10,False,RAM,H,W,21,3,,0,0,0,0,7
+Detroit Lions,DET,1954,3,1954-10-16,False,BAL,H,W,35,0,,0,0,0,0,10
+Detroit Lions,DET,1954,4,1954-10-24,False,SFO,A,L,31,37,,0,0,0,0,-4
+Detroit Lions,DET,1954,5,1954-10-31,False,RAM,A,W,27,24,,0,0,0,0,0
+Detroit Lions,DET,1954,6,1954-11-06,False,BAL,A,W,27,3,,0,0,0,0,7
+Detroit Lions,DET,1954,7,1954-11-14,False,SFO,H,W,48,7,,0,0,0,0,4
+Detroit Lions,DET,1954,8,1954-11-21,False,GNB,A,W,21,17,,0,0,0,0,1
+Detroit Lions,DET,1954,9,1954-11-25,False,GNB,H,W,28,24,,0,0,0,0,0
+Detroit Lions,DET,1954,10,1954-12-05,False,PHI,H,T,13,13,,0,0,0,0,4
+Detroit Lions,DET,1954,11,1954-12-12,False,CHI,A,L,24,28,,0,0,0,0,-1
+Detroit Lions,DET,1954,12,1954-12-19,False,CLE,A,W,14,10,,0,0,0,0,4
+Detroit Lions,DET,1954,13,1954-12-26,True,CLE,A,L,10,56,,0,0,0,0,-4
+Green Bay Packers,GNB,1954,1,1954-09-26,False,PIT,H,L,20,21,,0,0,0,0,0
+Green Bay Packers,GNB,1954,2,1954-10-03,False,CHI,H,L,3,10,,0,0,0,0,4
+Green Bay Packers,GNB,1954,3,1954-10-10,False,SFO,H,L,17,23,,0,0,0,0,0
+Green Bay Packers,GNB,1954,4,1954-10-17,False,RAM,H,W,35,17,,0,0,0,0,1
+Green Bay Packers,GNB,1954,5,1954-10-24,False,BAL,A,W,7,6,,0,0,0,0,7
+Green Bay Packers,GNB,1954,6,1954-10-30,False,PHI,A,W,37,14,,0,0,0,0,1
+Green Bay Packers,GNB,1954,7,1954-11-07,False,CHI,A,L,23,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1954,8,1954-11-13,False,BAL,H,W,24,13,,0,0,0,0,4
+Green Bay Packers,GNB,1954,9,1954-11-21,False,DET,H,L,17,21,,0,0,0,0,0
+Green Bay Packers,GNB,1954,10,1954-11-25,False,DET,A,L,24,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1954,11,1954-12-05,False,SFO,A,L,0,35,,0,0,0,0,-4
+Green Bay Packers,GNB,1954,12,1954-12-12,False,RAM,A,L,27,35,,0,0,0,0,-4
+New York Giants,NYG,1954,1,1954-09-26,False,CRD,A,W,41,10,,0,0,0,0,4
+New York Giants,NYG,1954,2,1954-10-02,False,BAL,A,L,14,20,,0,0,0,0,1
+New York Giants,NYG,1954,3,1954-10-10,False,WAS,A,W,51,21,,0,0,0,0,0
+New York Giants,NYG,1954,4,1954-10-17,False,CRD,H,W,31,17,,0,0,0,0,1
+New York Giants,NYG,1954,5,1954-10-24,False,WAS,H,W,24,7,,0,0,0,0,4
+New York Giants,NYG,1954,6,1954-10-31,False,CLE,A,L,14,24,,0,0,0,0,0
+New York Giants,NYG,1954,7,1954-11-07,False,PIT,A,W,30,6,,0,0,0,0,7
+New York Giants,NYG,1954,8,1954-11-14,False,PHI,H,W,27,14,,0,0,0,0,1
+New York Giants,NYG,1954,9,1954-11-21,False,RAM,H,L,16,17,,0,0,0,0,1
+New York Giants,NYG,1954,10,1954-11-28,False,CLE,H,L,7,16,,0,0,0,0,1
+New York Giants,NYG,1954,11,1954-12-05,False,PIT,H,W,24,3,,0,0,0,0,7
+New York Giants,NYG,1954,12,1954-12-12,False,PHI,A,L,14,29,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1954,1,1954-09-26,False,CLE,H,W,28,10,,0,0,0,0,4
+Philadelphia Eagles,PHI,1954,2,1954-10-03,False,CRD,A,W,35,16,,0,0,0,0,1
+Philadelphia Eagles,PHI,1954,3,1954-10-09,False,PIT,H,W,24,22,,0,0,0,0,0
+Philadelphia Eagles,PHI,1954,4,1954-10-17,False,WAS,A,W,49,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1954,5,1954-10-23,False,PIT,A,L,7,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1954,6,1954-10-30,False,GNB,H,L,14,37,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1954,7,1954-11-07,False,CRD,H,W,30,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1954,8,1954-11-14,False,NYG,A,L,14,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1954,9,1954-11-21,False,CLE,A,L,0,6,,0,0,0,0,7
+Philadelphia Eagles,PHI,1954,10,1954-11-28,False,WAS,H,W,41,33,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1954,11,1954-12-05,False,DET,A,T,13,13,,0,0,0,0,4
+Philadelphia Eagles,PHI,1954,12,1954-12-12,False,NYG,H,W,29,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1954,1,1954-09-26,False,GNB,A,W,21,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1954,2,1954-10-02,False,WAS,H,W,37,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1954,3,1954-10-09,False,PHI,A,L,22,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1954,4,1954-10-17,False,CLE,H,W,55,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1954,5,1954-10-23,False,PHI,H,W,17,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1954,6,1954-10-31,False,CRD,A,L,14,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1954,7,1954-11-07,False,NYG,H,L,6,30,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1954,8,1954-11-14,False,WAS,A,L,14,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1954,9,1954-11-20,False,SFO,H,L,3,31,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1954,10,1954-11-28,False,CRD,H,W,20,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1954,11,1954-12-05,False,NYG,A,L,3,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1954,12,1954-12-12,False,CLE,A,L,7,42,,0,0,0,0,-4
+Los Angeles Rams,RAM,1954,1,1954-09-26,False,BAL,A,W,48,0,,0,0,0,0,10
+Los Angeles Rams,RAM,1954,2,1954-10-03,False,SFO,H,T,24,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1954,3,1954-10-10,False,DET,A,L,3,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1954,4,1954-10-17,False,GNB,A,L,17,35,,0,0,0,0,-4
+Los Angeles Rams,RAM,1954,5,1954-10-24,False,CHI,H,W,42,38,,0,0,0,0,-4
+Los Angeles Rams,RAM,1954,6,1954-10-31,False,DET,H,L,24,27,,0,0,0,0,0
+Los Angeles Rams,RAM,1954,7,1954-11-07,False,SFO,A,W,42,34,,0,0,0,0,-1
+Los Angeles Rams,RAM,1954,8,1954-11-14,False,CRD,H,W,28,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1954,9,1954-11-21,False,NYG,A,W,17,16,,0,0,0,0,1
+Los Angeles Rams,RAM,1954,10,1954-11-28,False,CHI,A,L,13,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1954,11,1954-12-04,False,BAL,H,L,21,22,,0,0,0,0,0
+Los Angeles Rams,RAM,1954,12,1954-12-12,False,GNB,H,W,35,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1954,1,1954-09-26,False,WAS,H,W,41,7,,0,0,0,0,4
+San Francisco 49ers,SFO,1954,2,1954-10-03,False,RAM,A,T,24,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1954,3,1954-10-10,False,GNB,A,W,23,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1954,4,1954-10-17,False,CHI,A,W,31,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1954,5,1954-10-24,False,DET,H,W,37,31,,0,0,0,0,-1
+San Francisco 49ers,SFO,1954,6,1954-10-31,False,CHI,H,L,27,31,,0,0,0,0,-1
+San Francisco 49ers,SFO,1954,7,1954-11-07,False,RAM,H,L,34,42,,0,0,0,0,-4
+San Francisco 49ers,SFO,1954,8,1954-11-14,False,DET,A,L,7,48,,0,0,0,0,-4
+San Francisco 49ers,SFO,1954,9,1954-11-20,False,PIT,A,W,31,3,,0,0,0,0,7
+San Francisco 49ers,SFO,1954,10,1954-11-28,False,BAL,A,L,13,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1954,11,1954-12-05,False,GNB,H,W,35,0,,0,0,0,0,10
+San Francisco 49ers,SFO,1954,12,1954-12-11,False,BAL,H,W,10,7,,0,0,0,0,4
+Washington Redskins,WAS,1954,1,1954-09-26,False,SFO,A,L,7,41,,0,0,0,0,-4
+Washington Redskins,WAS,1954,2,1954-10-02,False,PIT,A,L,7,37,,0,0,0,0,-4
+Washington Redskins,WAS,1954,3,1954-10-10,False,NYG,H,L,21,51,,0,0,0,0,-4
+Washington Redskins,WAS,1954,4,1954-10-17,False,PHI,H,L,21,49,,0,0,0,0,-4
+Washington Redskins,WAS,1954,5,1954-10-24,False,NYG,A,L,7,24,,0,0,0,0,0
+Washington Redskins,WAS,1954,6,1954-10-31,False,BAL,H,W,24,21,,0,0,0,0,0
+Washington Redskins,WAS,1954,7,1954-11-07,False,CLE,A,L,3,62,,0,0,0,0,-4
+Washington Redskins,WAS,1954,8,1954-11-14,False,PIT,H,W,17,14,,0,0,0,0,1
+Washington Redskins,WAS,1954,9,1954-11-21,False,CRD,A,L,16,38,,0,0,0,0,-4
+Washington Redskins,WAS,1954,10,1954-11-28,False,PHI,A,L,33,41,,0,0,0,0,-4
+Washington Redskins,WAS,1954,11,1954-12-05,False,CLE,H,L,14,34,,0,0,0,0,-1
+Washington Redskins,WAS,1954,12,1954-12-12,False,CRD,H,W,37,20,,0,0,0,0,1
+Baltimore Colts,BAL,1955,1,1955-09-25,False,CHI,H,W,23,17,,0,0,0,0,1
+Baltimore Colts,BAL,1955,2,1955-10-01,False,DET,H,W,28,13,,0,0,0,0,4
+Baltimore Colts,BAL,1955,3,1955-10-08,False,GNB,A,W,24,20,,0,0,0,0,1
+Baltimore Colts,BAL,1955,4,1955-10-16,False,CHI,A,L,10,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1955,5,1955-10-23,False,WAS,H,L,13,14,,0,0,0,0,1
+Baltimore Colts,BAL,1955,6,1955-10-29,False,GNB,H,W,14,10,,0,0,0,0,4
+Baltimore Colts,BAL,1955,7,1955-11-05,False,DET,A,L,14,24,,0,0,0,0,0
+Baltimore Colts,BAL,1955,8,1955-11-13,False,NYG,A,L,7,17,,0,0,0,0,1
+Baltimore Colts,BAL,1955,9,1955-11-20,False,RAM,H,T,17,17,,0,0,0,0,1
+Baltimore Colts,BAL,1955,10,1955-11-27,False,SFO,H,W,26,14,,0,0,0,0,1
+Baltimore Colts,BAL,1955,11,1955-12-04,False,RAM,A,L,14,20,,0,0,0,0,1
+Baltimore Colts,BAL,1955,12,1955-12-11,False,SFO,A,L,24,35,,0,0,0,0,-4
+Chicago Bears,CHI,1955,1,1955-09-25,False,BAL,A,L,17,23,,0,0,0,0,0
+Chicago Bears,CHI,1955,2,1955-10-02,False,GNB,A,L,3,24,,0,0,0,0,0
+Chicago Bears,CHI,1955,3,1955-10-09,False,SFO,H,L,19,20,,0,0,0,0,1
+Chicago Bears,CHI,1955,4,1955-10-16,False,BAL,H,W,38,10,,0,0,0,0,4
+Chicago Bears,CHI,1955,5,1955-10-23,False,SFO,A,W,34,23,,0,0,0,0,0
+Chicago Bears,CHI,1955,6,1955-10-30,False,RAM,A,W,31,20,,0,0,0,0,1
+Chicago Bears,CHI,1955,7,1955-11-06,False,GNB,H,W,52,31,,0,0,0,0,-1
+Chicago Bears,CHI,1955,8,1955-11-13,False,RAM,H,W,24,3,,0,0,0,0,7
+Chicago Bears,CHI,1955,9,1955-11-20,False,DET,A,W,24,14,,0,0,0,0,1
+Chicago Bears,CHI,1955,10,1955-11-27,False,CRD,A,L,14,53,,0,0,0,0,-4
+Chicago Bears,CHI,1955,11,1955-12-04,False,DET,H,W,21,20,,0,0,0,0,1
+Chicago Bears,CHI,1955,12,1955-12-11,False,PHI,H,W,17,10,,0,0,0,0,4
+Cleveland Browns,CLE,1955,1,1955-09-25,False,WAS,H,L,17,27,,0,0,0,0,0
+Cleveland Browns,CLE,1955,2,1955-10-02,False,SFO,A,W,38,3,,0,0,0,0,7
+Cleveland Browns,CLE,1955,3,1955-10-09,False,PHI,H,W,21,17,,0,0,0,0,1
+Cleveland Browns,CLE,1955,4,1955-10-16,False,WAS,A,W,24,14,,0,0,0,0,1
+Cleveland Browns,CLE,1955,5,1955-10-23,False,GNB,H,W,41,10,,0,0,0,0,4
+Cleveland Browns,CLE,1955,6,1955-10-30,False,CRD,A,W,26,20,,0,0,0,0,1
+Cleveland Browns,CLE,1955,7,1955-11-06,False,NYG,H,W,24,14,,0,0,0,0,1
+Cleveland Browns,CLE,1955,8,1955-11-13,False,PHI,A,L,17,33,,0,0,0,0,-1
+Cleveland Browns,CLE,1955,9,1955-11-20,False,PIT,H,W,41,14,,0,0,0,0,1
+Cleveland Browns,CLE,1955,10,1955-11-27,False,NYG,A,T,35,35,,0,0,0,0,-4
+Cleveland Browns,CLE,1955,11,1955-12-04,False,PIT,A,W,30,7,,0,0,0,0,4
+Cleveland Browns,CLE,1955,12,1955-12-11,False,CRD,H,W,35,24,,0,0,0,0,0
+Cleveland Browns,CLE,1955,13,1955-12-26,True,RAM,A,W,38,14,,1,0,0,0,3
+Chicago Cardinals,CRD,1955,1,1955-09-26,False,PIT,A,L,7,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1955,2,1955-10-02,False,NYG,H,W,28,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1955,3,1955-10-09,False,WAS,A,W,24,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1955,4,1955-10-16,False,NYG,A,L,0,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1955,5,1955-10-23,False,PHI,H,T,24,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1955,6,1955-10-30,False,CLE,H,L,20,26,,0,0,0,0,0
+Chicago Cardinals,CRD,1955,7,1955-11-05,False,PIT,H,W,27,13,,0,0,0,0,4
+Chicago Cardinals,CRD,1955,8,1955-11-13,False,GNB,A,L,14,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1955,9,1955-11-20,False,WAS,H,L,0,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1955,10,1955-11-27,False,CHI,H,W,53,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1955,11,1955-12-04,False,PHI,A,L,3,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1955,12,1955-12-11,False,CLE,A,L,24,35,,0,0,0,0,-4
+Detroit Lions,DET,1955,1,1955-09-25,False,GNB,A,L,17,20,,0,0,0,0,1
+Detroit Lions,DET,1955,2,1955-10-01,False,BAL,A,L,13,28,,0,0,0,0,-1
+Detroit Lions,DET,1955,3,1955-10-09,False,RAM,H,L,10,17,,0,0,0,0,1
+Detroit Lions,DET,1955,4,1955-10-16,False,SFO,H,L,24,27,,0,0,0,0,0
+Detroit Lions,DET,1955,5,1955-10-23,False,RAM,A,L,13,24,,0,0,0,0,0
+Detroit Lions,DET,1955,6,1955-10-30,False,SFO,A,L,21,38,,0,0,0,0,-4
+Detroit Lions,DET,1955,7,1955-11-05,False,BAL,H,W,24,14,,0,0,0,0,1
+Detroit Lions,DET,1955,8,1955-11-13,False,PIT,A,W,31,28,,0,0,0,0,-1
+Detroit Lions,DET,1955,9,1955-11-20,False,CHI,H,L,14,24,,0,0,0,0,0
+Detroit Lions,DET,1955,10,1955-11-24,False,GNB,H,W,24,10,,0,0,0,0,4
+Detroit Lions,DET,1955,11,1955-12-04,False,CHI,A,L,20,21,,0,0,0,0,0
+Detroit Lions,DET,1955,12,1955-12-11,False,NYG,H,L,19,24,,0,0,0,0,0
+Green Bay Packers,GNB,1955,1,1955-09-25,False,DET,H,W,20,17,,0,0,0,0,1
+Green Bay Packers,GNB,1955,2,1955-10-02,False,CHI,H,W,24,3,,0,0,0,0,7
+Green Bay Packers,GNB,1955,3,1955-10-08,False,BAL,H,L,20,24,,0,0,0,0,0
+Green Bay Packers,GNB,1955,4,1955-10-16,False,RAM,H,W,30,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1955,5,1955-10-23,False,CLE,A,L,10,41,,0,0,0,0,-4
+Green Bay Packers,GNB,1955,6,1955-10-29,False,BAL,A,L,10,14,,0,0,0,0,1
+Green Bay Packers,GNB,1955,7,1955-11-06,False,CHI,A,L,31,52,,0,0,0,0,-4
+Green Bay Packers,GNB,1955,8,1955-11-13,False,CRD,H,W,31,14,,0,0,0,0,1
+Green Bay Packers,GNB,1955,9,1955-11-20,False,SFO,H,W,27,21,,0,0,0,0,0
+Green Bay Packers,GNB,1955,10,1955-11-24,False,DET,A,L,10,24,,0,0,0,0,0
+Green Bay Packers,GNB,1955,11,1955-12-04,False,SFO,A,W,28,7,,0,0,0,0,4
+Green Bay Packers,GNB,1955,12,1955-12-11,False,RAM,A,L,17,31,,0,0,0,0,-1
+New York Giants,NYG,1955,1,1955-09-24,False,PHI,A,L,17,27,,0,0,0,0,0
+New York Giants,NYG,1955,2,1955-10-02,False,CRD,A,L,17,28,,0,0,0,0,-1
+New York Giants,NYG,1955,3,1955-10-09,False,PIT,A,L,23,30,,0,0,0,0,-1
+New York Giants,NYG,1955,4,1955-10-16,False,CRD,H,W,10,0,,0,0,0,0,10
+New York Giants,NYG,1955,5,1955-10-23,False,PIT,H,L,17,19,,0,0,0,0,1
+New York Giants,NYG,1955,6,1955-10-30,False,WAS,H,W,35,7,,0,0,0,0,4
+New York Giants,NYG,1955,7,1955-11-06,False,CLE,A,L,14,24,,0,0,0,0,0
+New York Giants,NYG,1955,8,1955-11-13,False,BAL,H,W,17,7,,0,0,0,0,4
+New York Giants,NYG,1955,9,1955-11-20,False,PHI,H,W,31,7,,0,0,0,0,4
+New York Giants,NYG,1955,10,1955-11-27,False,CLE,H,T,35,35,,0,0,0,0,-4
+New York Giants,NYG,1955,11,1955-12-04,False,WAS,A,W,27,20,,0,0,0,0,1
+New York Giants,NYG,1955,12,1955-12-11,False,DET,A,W,24,19,,0,0,0,0,1
+Philadelphia Eagles,PHI,1955,1,1955-09-24,False,NYG,H,W,27,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1955,2,1955-10-01,False,WAS,H,L,30,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1955,3,1955-10-09,False,CLE,A,L,17,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1955,4,1955-10-15,False,PIT,A,L,7,13,,0,0,0,0,4
+Philadelphia Eagles,PHI,1955,5,1955-10-23,False,CRD,A,T,24,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1955,6,1955-10-30,False,PIT,H,W,24,0,,0,0,0,0,10
+Philadelphia Eagles,PHI,1955,7,1955-11-06,False,WAS,A,L,21,34,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1955,8,1955-11-13,False,CLE,H,W,33,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1955,9,1955-11-20,False,NYG,A,L,7,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1955,10,1955-11-27,False,RAM,H,L,21,23,,0,0,0,0,0
+Philadelphia Eagles,PHI,1955,11,1955-12-04,False,CRD,H,W,27,3,,0,0,0,0,7
+Philadelphia Eagles,PHI,1955,12,1955-12-11,False,CHI,A,L,10,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1955,1,1955-09-26,False,CRD,H,W,14,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1955,2,1955-10-02,False,RAM,A,L,26,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1955,3,1955-10-09,False,NYG,H,W,30,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1955,4,1955-10-15,False,PHI,H,W,13,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1955,5,1955-10-23,False,NYG,A,W,19,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1955,6,1955-10-30,False,PHI,A,L,0,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1955,7,1955-11-05,False,CRD,A,L,13,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1955,8,1955-11-13,False,DET,H,L,28,31,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1955,9,1955-11-20,False,CLE,A,L,14,41,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1955,10,1955-11-27,False,WAS,H,L,14,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1955,11,1955-12-04,False,CLE,H,L,7,30,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1955,12,1955-12-11,False,WAS,A,L,17,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1955,1,1955-09-25,False,SFO,A,W,23,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1955,2,1955-10-02,False,PIT,H,W,27,26,,0,0,0,0,0
+Los Angeles Rams,RAM,1955,3,1955-10-09,False,DET,A,W,17,10,,0,0,0,0,4
+Los Angeles Rams,RAM,1955,4,1955-10-16,False,GNB,A,L,28,30,,0,0,0,0,-1
+Los Angeles Rams,RAM,1955,5,1955-10-23,False,DET,H,W,24,13,,0,0,0,0,4
+Los Angeles Rams,RAM,1955,6,1955-10-30,False,CHI,H,L,20,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1955,7,1955-11-06,False,SFO,H,W,27,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1955,8,1955-11-13,False,CHI,A,L,3,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1955,9,1955-11-20,False,BAL,A,T,17,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1955,10,1955-11-27,False,PHI,A,W,23,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1955,11,1955-12-04,False,BAL,H,W,20,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1955,12,1955-12-11,False,GNB,H,W,31,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1955,13,1955-12-26,True,CLE,H,L,14,38,,1,0,0,0,-2
+San Francisco 49ers,SFO,1955,1,1955-09-25,False,RAM,H,L,14,23,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,2,1955-10-02,False,CLE,H,L,3,38,,0,0,0,0,-4
+San Francisco 49ers,SFO,1955,3,1955-10-09,False,CHI,A,W,20,19,,0,0,0,0,1
+San Francisco 49ers,SFO,1955,4,1955-10-16,False,DET,A,W,27,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,5,1955-10-23,False,CHI,H,L,23,34,,0,0,0,0,-1
+San Francisco 49ers,SFO,1955,6,1955-10-30,False,DET,H,W,38,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,7,1955-11-06,False,RAM,A,L,14,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,8,1955-11-13,False,WAS,A,L,0,7,,0,0,0,0,4
+San Francisco 49ers,SFO,1955,9,1955-11-20,False,GNB,A,L,21,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,10,1955-11-27,False,BAL,A,L,14,26,,0,0,0,0,0
+San Francisco 49ers,SFO,1955,11,1955-12-04,False,GNB,H,L,7,28,,0,0,0,0,-1
+San Francisco 49ers,SFO,1955,12,1955-12-11,False,BAL,H,W,35,24,,0,0,0,0,0
+Washington Redskins,WAS,1955,1,1955-09-25,False,CLE,A,W,27,17,,0,0,0,0,1
+Washington Redskins,WAS,1955,2,1955-10-01,False,PHI,A,W,31,30,,0,0,0,0,-1
+Washington Redskins,WAS,1955,3,1955-10-09,False,CRD,H,L,10,24,,0,0,0,0,0
+Washington Redskins,WAS,1955,4,1955-10-16,False,CLE,H,L,14,24,,0,0,0,0,0
+Washington Redskins,WAS,1955,5,1955-10-23,False,BAL,A,W,14,13,,0,0,0,0,4
+Washington Redskins,WAS,1955,6,1955-10-30,False,NYG,A,L,7,35,,0,0,0,0,-4
+Washington Redskins,WAS,1955,7,1955-11-06,False,PHI,H,W,34,21,,0,0,0,0,0
+Washington Redskins,WAS,1955,8,1955-11-13,False,SFO,H,W,7,0,,0,0,0,0,10
+Washington Redskins,WAS,1955,9,1955-11-20,False,CRD,A,W,31,0,,0,0,0,0,10
+Washington Redskins,WAS,1955,10,1955-11-27,False,PIT,A,W,23,14,,0,0,0,0,1
+Washington Redskins,WAS,1955,11,1955-12-04,False,NYG,H,L,20,27,,0,0,0,0,0
+Washington Redskins,WAS,1955,12,1955-12-11,False,PIT,H,W,28,17,,0,0,0,0,1
+Baltimore Colts,BAL,1956,1,1956-09-30,False,CHI,H,W,28,21,,0,0,0,0,0
+Baltimore Colts,BAL,1956,2,1956-10-06,False,DET,H,L,14,31,,0,0,0,0,-1
+Baltimore Colts,BAL,1956,3,1956-10-14,False,GNB,A,L,33,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1956,4,1956-10-21,False,CHI,A,L,27,58,,0,0,0,0,-4
+Baltimore Colts,BAL,1956,5,1956-10-28,False,GNB,H,W,28,21,,0,0,0,0,0
+Baltimore Colts,BAL,1956,6,1956-11-11,False,CLE,A,W,21,7,,0,0,0,0,4
+Baltimore Colts,BAL,1956,7,1956-11-18,False,DET,A,L,3,27,,0,0,0,0,0
+Baltimore Colts,BAL,1956,8,1956-11-25,False,RAM,H,W,56,21,,0,0,0,0,0
+Baltimore Colts,BAL,1956,9,1956-12-02,False,SFO,H,L,17,20,,0,0,0,0,1
+Baltimore Colts,BAL,1956,10,1956-12-09,False,RAM,A,L,7,31,,0,0,0,0,-1
+Baltimore Colts,BAL,1956,11,1956-12-16,False,SFO,A,L,17,30,,0,0,0,0,-1
+Baltimore Colts,BAL,1956,12,1956-12-23,False,WAS,H,W,19,17,,0,0,0,0,1
+Chicago Bears,CHI,1956,1,1956-09-30,False,BAL,A,L,21,28,,0,0,0,0,-1
+Chicago Bears,CHI,1956,2,1956-10-07,False,GNB,A,W,37,21,,0,0,0,0,0
+Chicago Bears,CHI,1956,3,1956-10-14,False,SFO,H,W,31,7,,0,0,0,0,4
+Chicago Bears,CHI,1956,4,1956-10-21,False,BAL,H,W,58,27,,0,0,0,0,0
+Chicago Bears,CHI,1956,5,1956-10-28,False,SFO,A,W,38,21,,0,0,0,0,0
+Chicago Bears,CHI,1956,6,1956-11-04,False,RAM,A,W,35,24,,0,0,0,0,0
+Chicago Bears,CHI,1956,7,1956-11-11,False,GNB,H,W,38,14,,0,0,0,0,1
+Chicago Bears,CHI,1956,8,1956-11-18,False,RAM,H,W,30,21,,0,0,0,0,0
+Chicago Bears,CHI,1956,9,1956-11-25,False,NYG,A,T,17,17,,0,0,0,0,1
+Chicago Bears,CHI,1956,10,1956-12-02,False,DET,A,L,10,42,,0,0,0,0,-4
+Chicago Bears,CHI,1956,11,1956-12-09,False,CRD,H,W,10,3,,0,0,0,0,7
+Chicago Bears,CHI,1956,12,1956-12-16,False,DET,H,W,38,21,,0,0,0,0,0
+Chicago Bears,CHI,1956,13,1956-12-30,True,NYG,A,L,7,47,,0,0,0,0,-4
+Cleveland Browns,CLE,1956,1,1956-09-30,False,CRD,A,L,7,9,,0,0,0,0,4
+Cleveland Browns,CLE,1956,2,1956-10-06,False,PIT,A,W,14,10,,0,0,0,0,4
+Cleveland Browns,CLE,1956,3,1956-10-14,False,NYG,H,L,9,21,,0,0,0,0,0
+Cleveland Browns,CLE,1956,4,1956-10-21,False,WAS,A,L,9,20,,0,0,0,0,1
+Cleveland Browns,CLE,1956,5,1956-10-28,False,PIT,H,L,16,24,,0,0,0,0,0
+Cleveland Browns,CLE,1956,6,1956-11-04,False,GNB,A,W,24,7,,0,0,0,0,4
+Cleveland Browns,CLE,1956,7,1956-11-11,False,BAL,H,L,7,21,,0,0,0,0,0
+Cleveland Browns,CLE,1956,8,1956-11-18,False,PHI,A,W,16,0,,0,0,0,0,10
+Cleveland Browns,CLE,1956,9,1956-11-25,False,WAS,H,L,17,20,,0,0,0,0,1
+Cleveland Browns,CLE,1956,10,1956-12-02,False,PHI,H,W,17,14,,0,0,0,0,1
+Cleveland Browns,CLE,1956,11,1956-12-09,False,NYG,A,W,24,7,,0,0,0,0,4
+Cleveland Browns,CLE,1956,12,1956-12-16,False,CRD,H,L,7,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1956,1,1956-09-30,False,CLE,H,W,9,7,,0,0,0,0,4
+Chicago Cardinals,CRD,1956,2,1956-10-07,False,NYG,H,W,35,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1956,3,1956-10-14,False,WAS,A,W,31,3,,0,0,0,0,7
+Chicago Cardinals,CRD,1956,4,1956-10-21,False,PHI,A,W,20,6,,0,0,0,0,7
+Chicago Cardinals,CRD,1956,5,1956-10-28,False,WAS,H,L,14,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1956,6,1956-11-04,False,PHI,H,W,28,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1956,7,1956-11-11,False,NYG,A,L,10,23,,0,0,0,0,0
+Chicago Cardinals,CRD,1956,8,1956-11-18,False,PIT,A,L,7,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1956,9,1956-11-25,False,PIT,H,W,38,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1956,10,1956-12-02,False,GNB,H,L,21,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1956,11,1956-12-09,False,CHI,A,L,3,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1956,12,1956-12-16,False,CLE,A,W,24,7,,0,0,0,0,4
+Detroit Lions,DET,1956,1,1956-09-30,False,GNB,A,W,20,16,,0,0,0,0,1
+Detroit Lions,DET,1956,2,1956-10-06,False,BAL,A,W,31,14,,0,0,0,0,1
+Detroit Lions,DET,1956,3,1956-10-14,False,RAM,H,W,24,21,,0,0,0,0,0
+Detroit Lions,DET,1956,4,1956-10-21,False,SFO,H,W,20,17,,0,0,0,0,1
+Detroit Lions,DET,1956,5,1956-10-28,False,RAM,A,W,16,7,,0,0,0,0,4
+Detroit Lions,DET,1956,6,1956-11-04,False,SFO,A,W,17,13,,0,0,0,0,4
+Detroit Lions,DET,1956,7,1956-11-11,False,WAS,A,L,17,18,,0,0,0,0,1
+Detroit Lions,DET,1956,8,1956-11-18,False,BAL,H,W,27,3,,0,0,0,0,7
+Detroit Lions,DET,1956,9,1956-11-22,False,GNB,H,L,20,24,,0,0,0,0,0
+Detroit Lions,DET,1956,10,1956-12-02,False,CHI,H,W,42,10,,0,0,0,0,4
+Detroit Lions,DET,1956,11,1956-12-09,False,PIT,H,W,45,7,,0,0,0,0,4
+Detroit Lions,DET,1956,12,1956-12-16,False,CHI,A,L,21,38,,0,0,0,0,-4
+Green Bay Packers,GNB,1956,1,1956-09-30,False,DET,H,L,16,20,,0,0,0,0,1
+Green Bay Packers,GNB,1956,2,1956-10-07,False,CHI,H,L,21,37,,0,0,0,0,-4
+Green Bay Packers,GNB,1956,3,1956-10-14,False,BAL,H,W,38,33,,0,0,0,0,-1
+Green Bay Packers,GNB,1956,4,1956-10-21,False,RAM,H,W,42,17,,0,0,0,0,1
+Green Bay Packers,GNB,1956,5,1956-10-28,False,BAL,A,L,21,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1956,6,1956-11-04,False,CLE,H,L,7,24,,0,0,0,0,0
+Green Bay Packers,GNB,1956,7,1956-11-11,False,CHI,A,L,14,38,,0,0,0,0,-4
+Green Bay Packers,GNB,1956,8,1956-11-18,False,SFO,H,L,16,17,,0,0,0,0,1
+Green Bay Packers,GNB,1956,9,1956-11-22,False,DET,A,W,24,20,,0,0,0,0,1
+Green Bay Packers,GNB,1956,10,1956-12-02,False,CRD,A,W,24,21,,0,0,0,0,0
+Green Bay Packers,GNB,1956,11,1956-12-08,False,SFO,A,L,20,38,,0,0,0,0,-4
+Green Bay Packers,GNB,1956,12,1956-12-16,False,RAM,A,L,21,49,,0,0,0,0,-4
+New York Giants,NYG,1956,1,1956-09-30,False,SFO,A,W,38,21,,0,0,0,0,0
+New York Giants,NYG,1956,2,1956-10-07,False,CRD,A,L,27,35,,0,0,0,0,-4
+New York Giants,NYG,1956,3,1956-10-14,False,CLE,A,W,21,9,,0,0,0,0,4
+New York Giants,NYG,1956,4,1956-10-21,False,PIT,H,W,38,10,,0,0,0,0,4
+New York Giants,NYG,1956,5,1956-10-28,False,PHI,H,W,20,3,,0,0,0,0,7
+New York Giants,NYG,1956,6,1956-11-04,False,PIT,A,W,17,14,,0,0,0,0,1
+New York Giants,NYG,1956,7,1956-11-11,False,CRD,H,W,23,10,,0,0,0,0,4
+New York Giants,NYG,1956,8,1956-11-18,False,WAS,A,L,7,33,,0,0,0,0,-1
+New York Giants,NYG,1956,9,1956-11-25,False,CHI,H,T,17,17,,0,0,0,0,1
+New York Giants,NYG,1956,10,1956-12-02,False,WAS,H,W,28,14,,0,0,0,0,1
+New York Giants,NYG,1956,11,1956-12-09,False,CLE,H,L,7,24,,0,0,0,0,0
+New York Giants,NYG,1956,12,1956-12-15,False,PHI,A,W,21,7,,0,0,0,0,4
+New York Giants,NYG,1956,13,1956-12-30,True,CHI,H,W,47,7,,1,0,0,0,6
+Philadelphia Eagles,PHI,1956,1,1956-09-30,False,RAM,A,L,7,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1956,2,1956-10-06,False,WAS,H,W,13,9,,0,0,0,0,4
+Philadelphia Eagles,PHI,1956,3,1956-10-14,False,PIT,A,W,35,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1956,4,1956-10-21,False,CRD,H,L,6,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1956,5,1956-10-28,False,NYG,A,L,3,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1956,6,1956-11-04,False,CRD,A,L,17,28,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1956,7,1956-11-11,False,PIT,H,W,14,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1956,8,1956-11-18,False,CLE,H,L,0,16,,0,0,0,0,1
+Philadelphia Eagles,PHI,1956,9,1956-11-25,False,SFO,H,T,10,10,,0,0,0,0,4
+Philadelphia Eagles,PHI,1956,10,1956-12-02,False,CLE,A,L,14,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1956,11,1956-12-09,False,WAS,A,L,17,19,,0,0,0,0,1
+Philadelphia Eagles,PHI,1956,12,1956-12-15,False,NYG,H,L,7,21,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1956,1,1956-09-30,False,WAS,H,W,30,13,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1956,2,1956-10-06,False,CLE,H,L,10,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1956,3,1956-10-14,False,PHI,H,L,21,35,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1956,4,1956-10-21,False,NYG,A,L,10,38,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1956,5,1956-10-28,False,CLE,A,W,24,16,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1956,6,1956-11-04,False,NYG,H,L,14,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1956,7,1956-11-11,False,PHI,A,L,7,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1956,8,1956-11-18,False,CRD,H,W,14,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1956,9,1956-11-25,False,CRD,A,L,27,38,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1956,10,1956-12-02,False,RAM,H,W,30,13,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1956,11,1956-12-09,False,DET,A,L,7,45,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1956,12,1956-12-16,False,WAS,A,W,23,0,,0,0,0,0,10
+Los Angeles Rams,RAM,1956,1,1956-09-30,False,PHI,H,W,27,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1956,2,1956-10-07,False,SFO,A,L,30,33,,0,0,0,0,-1
+Los Angeles Rams,RAM,1956,3,1956-10-14,False,DET,A,L,21,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1956,4,1956-10-21,False,GNB,A,L,17,42,,0,0,0,0,-4
+Los Angeles Rams,RAM,1956,5,1956-10-28,False,DET,H,L,7,16,,0,0,0,0,1
+Los Angeles Rams,RAM,1956,6,1956-11-04,False,CHI,H,L,24,35,,0,0,0,0,-4
+Los Angeles Rams,RAM,1956,7,1956-11-11,False,SFO,H,W,30,6,,0,0,0,0,7
+Los Angeles Rams,RAM,1956,8,1956-11-18,False,CHI,A,L,21,30,,0,0,0,0,-1
+Los Angeles Rams,RAM,1956,9,1956-11-25,False,BAL,A,L,21,56,,0,0,0,0,-4
+Los Angeles Rams,RAM,1956,10,1956-12-02,False,PIT,A,L,13,30,,0,0,0,0,-1
+Los Angeles Rams,RAM,1956,11,1956-12-09,False,BAL,H,W,31,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1956,12,1956-12-16,False,GNB,H,W,49,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1956,1,1956-09-30,False,NYG,H,L,21,38,,0,0,0,0,-4
+San Francisco 49ers,SFO,1956,2,1956-10-07,False,RAM,H,W,33,30,,0,0,0,0,-1
+San Francisco 49ers,SFO,1956,3,1956-10-14,False,CHI,A,L,7,31,,0,0,0,0,-1
+San Francisco 49ers,SFO,1956,4,1956-10-21,False,DET,A,L,17,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1956,5,1956-10-28,False,CHI,H,L,21,38,,0,0,0,0,-4
+San Francisco 49ers,SFO,1956,6,1956-11-04,False,DET,H,L,13,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1956,7,1956-11-11,False,RAM,A,L,6,30,,0,0,0,0,-1
+San Francisco 49ers,SFO,1956,8,1956-11-18,False,GNB,A,W,17,16,,0,0,0,0,1
+San Francisco 49ers,SFO,1956,9,1956-11-25,False,PHI,A,T,10,10,,0,0,0,0,4
+San Francisco 49ers,SFO,1956,10,1956-12-02,False,BAL,A,W,20,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1956,11,1956-12-08,False,GNB,H,W,38,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1956,12,1956-12-16,False,BAL,H,W,30,17,,0,0,0,0,1
+Washington Redskins,WAS,1956,1,1956-09-30,False,PIT,A,L,13,30,,0,0,0,0,-1
+Washington Redskins,WAS,1956,2,1956-10-06,False,PHI,A,L,9,13,,0,0,0,0,4
+Washington Redskins,WAS,1956,3,1956-10-14,False,CRD,H,L,3,31,,0,0,0,0,-1
+Washington Redskins,WAS,1956,4,1956-10-21,False,CLE,H,W,20,9,,0,0,0,0,4
+Washington Redskins,WAS,1956,5,1956-10-28,False,CRD,A,W,17,14,,0,0,0,0,1
+Washington Redskins,WAS,1956,6,1956-11-11,False,DET,H,W,18,17,,0,0,0,0,1
+Washington Redskins,WAS,1956,7,1956-11-18,False,NYG,H,W,33,7,,0,0,0,0,4
+Washington Redskins,WAS,1956,8,1956-11-25,False,CLE,A,W,20,17,,0,0,0,0,1
+Washington Redskins,WAS,1956,9,1956-12-02,False,NYG,A,L,14,28,,0,0,0,0,-1
+Washington Redskins,WAS,1956,10,1956-12-09,False,PHI,H,W,19,17,,0,0,0,0,1
+Washington Redskins,WAS,1956,11,1956-12-16,False,PIT,H,L,0,23,,0,0,0,0,0
+Washington Redskins,WAS,1956,12,1956-12-23,False,BAL,A,L,17,19,,0,0,0,0,1
+Baltimore Colts,BAL,1957,1,1957-09-29,False,DET,H,W,34,14,,0,0,0,0,1
+Baltimore Colts,BAL,1957,2,1957-10-05,False,CHI,H,W,21,10,,0,0,0,0,4
+Baltimore Colts,BAL,1957,3,1957-10-13,False,GNB,A,W,45,17,,0,0,0,0,1
+Baltimore Colts,BAL,1957,4,1957-10-20,False,DET,A,L,27,31,,0,0,0,0,-1
+Baltimore Colts,BAL,1957,5,1957-10-27,False,GNB,H,L,21,24,,0,0,0,0,0
+Baltimore Colts,BAL,1957,6,1957-11-03,False,PIT,H,L,13,19,,0,0,0,0,1
+Baltimore Colts,BAL,1957,7,1957-11-10,False,WAS,A,W,21,17,,0,0,0,0,1
+Baltimore Colts,BAL,1957,8,1957-11-17,False,CHI,A,W,29,14,,0,0,0,0,1
+Baltimore Colts,BAL,1957,9,1957-11-24,False,SFO,H,W,27,21,,0,0,0,0,0
+Baltimore Colts,BAL,1957,10,1957-12-01,False,RAM,H,W,31,14,,0,0,0,0,1
+Baltimore Colts,BAL,1957,11,1957-12-08,False,SFO,A,L,13,17,,0,0,0,0,1
+Baltimore Colts,BAL,1957,12,1957-12-15,False,RAM,A,L,21,37,,0,0,0,0,-4
+Chicago Bears,CHI,1957,1,1957-09-29,False,GNB,A,L,17,21,,0,0,0,0,0
+Chicago Bears,CHI,1957,2,1957-10-05,False,BAL,A,L,10,21,,0,0,0,0,0
+Chicago Bears,CHI,1957,3,1957-10-13,False,SFO,H,L,17,21,,0,0,0,0,0
+Chicago Bears,CHI,1957,4,1957-10-20,False,RAM,H,W,34,26,,0,0,0,0,0
+Chicago Bears,CHI,1957,5,1957-10-27,False,SFO,A,L,17,21,,0,0,0,0,0
+Chicago Bears,CHI,1957,6,1957-11-03,False,RAM,A,W,16,10,,0,0,0,0,4
+Chicago Bears,CHI,1957,7,1957-11-10,False,GNB,H,W,21,14,,0,0,0,0,1
+Chicago Bears,CHI,1957,8,1957-11-17,False,BAL,H,L,14,29,,0,0,0,0,-1
+Chicago Bears,CHI,1957,9,1957-11-24,False,DET,A,W,27,7,,0,0,0,0,4
+Chicago Bears,CHI,1957,10,1957-12-01,False,WAS,H,L,3,14,,0,0,0,0,1
+Chicago Bears,CHI,1957,11,1957-12-08,False,CRD,A,W,14,6,,0,0,0,0,7
+Chicago Bears,CHI,1957,12,1957-12-15,False,DET,H,L,13,21,,0,0,0,0,0
+Cleveland Browns,CLE,1957,1,1957-09-29,False,NYG,H,W,6,3,,0,0,0,0,7
+Cleveland Browns,CLE,1957,2,1957-10-05,False,PIT,A,W,23,12,,0,0,0,0,4
+Cleveland Browns,CLE,1957,3,1957-10-13,False,PHI,H,W,24,7,,0,0,0,0,4
+Cleveland Browns,CLE,1957,4,1957-10-20,False,PHI,A,L,7,17,,0,0,0,0,1
+Cleveland Browns,CLE,1957,5,1957-10-27,False,CRD,A,W,17,7,,0,0,0,0,4
+Cleveland Browns,CLE,1957,6,1957-11-03,False,WAS,H,W,21,17,,0,0,0,0,1
+Cleveland Browns,CLE,1957,7,1957-11-10,False,PIT,H,W,24,0,,0,0,0,0,10
+Cleveland Browns,CLE,1957,8,1957-11-17,False,WAS,A,T,30,30,,0,0,0,0,-1
+Cleveland Browns,CLE,1957,9,1957-11-24,False,RAM,H,W,45,31,,0,0,0,0,-1
+Cleveland Browns,CLE,1957,10,1957-12-01,False,CRD,H,W,31,0,,0,0,0,0,10
+Cleveland Browns,CLE,1957,11,1957-12-08,False,DET,A,L,7,20,,0,0,0,0,1
+Cleveland Browns,CLE,1957,12,1957-12-15,False,NYG,A,W,34,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1957,13,1957-12-29,True,DET,A,L,14,59,,0,0,0,0,-4
+Chicago Cardinals,CRD,1957,1,1957-09-29,False,SFO,A,W,20,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1957,2,1957-10-06,False,WAS,H,L,14,37,,0,0,0,0,-4
+Chicago Cardinals,CRD,1957,3,1957-10-13,False,PIT,A,L,20,29,,0,0,0,0,-1
+Chicago Cardinals,CRD,1957,4,1957-10-20,False,WAS,A,W,44,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1957,5,1957-10-27,False,CLE,H,L,7,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1957,6,1957-11-03,False,PHI,H,L,21,38,,0,0,0,0,-4
+Chicago Cardinals,CRD,1957,7,1957-11-10,False,NYG,A,L,14,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1957,8,1957-11-24,False,NYG,H,L,21,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1957,9,1957-12-01,False,CLE,A,L,0,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1957,10,1957-12-08,False,CHI,H,L,6,14,,0,0,0,0,1
+Chicago Cardinals,CRD,1957,11,1957-12-14,False,PHI,A,W,31,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1957,12,1957-12-22,False,PIT,H,L,2,27,,0,0,0,0,0
+Detroit Lions,DET,1957,1,1957-09-29,False,BAL,A,L,14,34,,0,0,0,0,-1
+Detroit Lions,DET,1957,2,1957-10-06,False,GNB,A,W,24,14,,0,0,0,0,1
+Detroit Lions,DET,1957,3,1957-10-13,False,RAM,H,W,10,7,,0,0,0,0,4
+Detroit Lions,DET,1957,4,1957-10-20,False,BAL,H,W,31,27,,0,0,0,0,0
+Detroit Lions,DET,1957,5,1957-10-27,False,RAM,A,L,17,35,,0,0,0,0,-4
+Detroit Lions,DET,1957,6,1957-11-03,False,SFO,A,L,31,35,,0,0,0,0,-4
+Detroit Lions,DET,1957,7,1957-11-10,False,PHI,A,W,27,16,,0,0,0,0,1
+Detroit Lions,DET,1957,8,1957-11-17,False,SFO,H,W,31,10,,0,0,0,0,4
+Detroit Lions,DET,1957,9,1957-11-24,False,CHI,H,L,7,27,,0,0,0,0,0
+Detroit Lions,DET,1957,10,1957-11-28,False,GNB,H,W,18,6,,0,0,0,0,7
+Detroit Lions,DET,1957,11,1957-12-08,False,CLE,H,W,20,7,,0,0,0,0,4
+Detroit Lions,DET,1957,12,1957-12-15,False,CHI,A,W,21,13,,0,0,0,0,4
+Detroit Lions,DET,1957,13,1957-12-22,True,SFO,A,W,31,27,,0,0,0,0,0
+Detroit Lions,DET,1957,14,1957-12-29,True,CLE,H,W,59,14,,0,0,0,0,1
+Green Bay Packers,GNB,1957,1,1957-09-29,False,CHI,H,W,21,17,,0,0,0,0,1
+Green Bay Packers,GNB,1957,2,1957-10-06,False,DET,H,L,14,24,,0,0,0,0,0
+Green Bay Packers,GNB,1957,3,1957-10-13,False,BAL,H,L,17,45,,0,0,0,0,-4
+Green Bay Packers,GNB,1957,4,1957-10-20,False,SFO,H,L,14,24,,0,0,0,0,0
+Green Bay Packers,GNB,1957,5,1957-10-27,False,BAL,A,W,24,21,,0,0,0,0,0
+Green Bay Packers,GNB,1957,6,1957-11-03,False,NYG,H,L,17,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1957,7,1957-11-10,False,CHI,A,L,14,21,,0,0,0,0,0
+Green Bay Packers,GNB,1957,8,1957-11-17,False,RAM,H,L,27,31,,0,0,0,0,-1
+Green Bay Packers,GNB,1957,9,1957-11-24,False,PIT,A,W,27,10,,0,0,0,0,4
+Green Bay Packers,GNB,1957,10,1957-11-28,False,DET,A,L,6,18,,0,0,0,0,1
+Green Bay Packers,GNB,1957,11,1957-12-08,False,RAM,A,L,17,42,,0,0,0,0,-4
+Green Bay Packers,GNB,1957,12,1957-12-15,False,SFO,A,L,20,27,,0,0,0,0,0
+New York Giants,NYG,1957,1,1957-09-29,False,CLE,A,L,3,6,,0,0,0,0,7
+New York Giants,NYG,1957,2,1957-10-05,False,PHI,A,W,24,20,,0,0,0,0,1
+New York Giants,NYG,1957,3,1957-10-13,False,WAS,A,W,24,20,,0,0,0,0,1
+New York Giants,NYG,1957,4,1957-10-20,False,PIT,H,W,35,0,,0,0,0,0,10
+New York Giants,NYG,1957,5,1957-10-27,False,WAS,H,L,14,31,,0,0,0,0,-1
+New York Giants,NYG,1957,6,1957-11-03,False,GNB,A,W,31,17,,0,0,0,0,1
+New York Giants,NYG,1957,7,1957-11-10,False,CRD,H,W,27,14,,0,0,0,0,1
+New York Giants,NYG,1957,8,1957-11-17,False,PHI,H,W,13,0,,0,0,0,0,10
+New York Giants,NYG,1957,9,1957-11-24,False,CRD,A,W,28,21,,0,0,0,0,0
+New York Giants,NYG,1957,10,1957-12-01,False,SFO,H,L,17,27,,0,0,0,0,0
+New York Giants,NYG,1957,11,1957-12-07,False,PIT,A,L,10,21,,0,0,0,0,0
+New York Giants,NYG,1957,12,1957-12-15,False,CLE,H,L,28,34,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1957,1,1957-09-29,False,RAM,A,L,13,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1957,2,1957-10-05,False,NYG,H,L,20,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1957,3,1957-10-13,False,CLE,A,L,7,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1957,4,1957-10-20,False,CLE,H,W,17,7,,0,0,0,0,4
+Philadelphia Eagles,PHI,1957,5,1957-10-27,False,PIT,A,L,0,6,,0,0,0,0,7
+Philadelphia Eagles,PHI,1957,6,1957-11-03,False,CRD,A,W,38,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1957,7,1957-11-10,False,DET,H,L,16,27,,0,0,0,0,0
+Philadelphia Eagles,PHI,1957,8,1957-11-17,False,NYG,A,L,0,13,,0,0,0,0,4
+Philadelphia Eagles,PHI,1957,9,1957-11-24,False,WAS,H,W,21,12,,0,0,0,0,4
+Philadelphia Eagles,PHI,1957,10,1957-12-01,False,PIT,H,W,7,6,,0,0,0,0,7
+Philadelphia Eagles,PHI,1957,11,1957-12-08,False,WAS,A,L,7,42,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1957,12,1957-12-14,False,CRD,H,L,27,31,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1957,1,1957-09-29,False,WAS,H,W,28,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1957,2,1957-10-05,False,CLE,H,L,12,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1957,3,1957-10-13,False,CRD,H,W,29,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1957,4,1957-10-20,False,NYG,A,L,0,35,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1957,5,1957-10-27,False,PHI,H,W,6,0,,0,0,0,0,10
+Pittsburgh Steelers,PIT,1957,6,1957-11-03,False,BAL,A,W,19,13,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1957,7,1957-11-10,False,CLE,A,L,0,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1957,8,1957-11-24,False,GNB,H,L,10,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1957,9,1957-12-01,False,PHI,A,L,6,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1957,10,1957-12-07,False,NYG,H,W,21,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1957,11,1957-12-15,False,WAS,A,L,3,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1957,12,1957-12-22,False,CRD,A,W,27,2,,0,0,0,0,7
+Los Angeles Rams,RAM,1957,1,1957-09-29,False,PHI,H,W,17,13,,0,0,0,0,4
+Los Angeles Rams,RAM,1957,2,1957-10-06,False,SFO,A,L,20,23,,0,0,0,0,0
+Los Angeles Rams,RAM,1957,3,1957-10-13,False,DET,A,L,7,10,,0,0,0,0,4
+Los Angeles Rams,RAM,1957,4,1957-10-20,False,CHI,A,L,26,34,,0,0,0,0,-1
+Los Angeles Rams,RAM,1957,5,1957-10-27,False,DET,H,W,35,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1957,6,1957-11-03,False,CHI,H,L,10,16,,0,0,0,0,1
+Los Angeles Rams,RAM,1957,7,1957-11-10,False,SFO,H,W,37,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1957,8,1957-11-17,False,GNB,A,W,31,27,,0,0,0,0,0
+Los Angeles Rams,RAM,1957,9,1957-11-24,False,CLE,A,L,31,45,,0,0,0,0,-4
+Los Angeles Rams,RAM,1957,10,1957-12-01,False,BAL,A,L,14,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1957,11,1957-12-08,False,GNB,H,W,42,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1957,12,1957-12-15,False,BAL,H,W,37,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1957,1,1957-09-29,False,CRD,H,L,10,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,2,1957-10-06,False,RAM,H,W,23,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,3,1957-10-13,False,CHI,A,W,21,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,4,1957-10-20,False,GNB,A,W,24,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,5,1957-10-27,False,CHI,H,W,21,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,6,1957-11-03,False,DET,H,W,35,31,,0,0,0,0,-1
+San Francisco 49ers,SFO,1957,7,1957-11-10,False,RAM,A,L,24,37,,0,0,0,0,-4
+San Francisco 49ers,SFO,1957,8,1957-11-17,False,DET,A,L,10,31,,0,0,0,0,-1
+San Francisco 49ers,SFO,1957,9,1957-11-24,False,BAL,A,L,21,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1957,10,1957-12-01,False,NYG,A,W,27,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,11,1957-12-08,False,BAL,H,W,17,13,,0,0,0,0,4
+San Francisco 49ers,SFO,1957,12,1957-12-15,False,GNB,H,W,27,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1957,13,1957-12-22,True,DET,H,L,27,31,,1,0,0,0,1
+Washington Redskins,WAS,1957,1,1957-09-29,False,PIT,A,L,7,28,,0,0,0,0,-1
+Washington Redskins,WAS,1957,2,1957-10-06,False,CRD,A,W,37,14,,0,0,0,0,1
+Washington Redskins,WAS,1957,3,1957-10-13,False,NYG,H,L,20,24,,0,0,0,0,0
+Washington Redskins,WAS,1957,4,1957-10-20,False,CRD,H,L,14,44,,0,0,0,0,-4
+Washington Redskins,WAS,1957,5,1957-10-27,False,NYG,A,W,31,14,,0,0,0,0,1
+Washington Redskins,WAS,1957,6,1957-11-03,False,CLE,A,L,17,21,,0,0,0,0,0
+Washington Redskins,WAS,1957,7,1957-11-10,False,BAL,H,L,17,21,,0,0,0,0,0
+Washington Redskins,WAS,1957,8,1957-11-17,False,CLE,H,T,30,30,,0,0,0,0,-1
+Washington Redskins,WAS,1957,9,1957-11-24,False,PHI,A,L,12,21,,0,0,0,0,0
+Washington Redskins,WAS,1957,10,1957-12-01,False,CHI,A,W,14,3,,0,0,0,0,7
+Washington Redskins,WAS,1957,11,1957-12-08,False,PHI,H,W,42,7,,0,0,0,0,4
+Washington Redskins,WAS,1957,12,1957-12-15,False,PIT,H,W,10,3,,0,0,0,0,7
+Baltimore Colts,BAL,1958,1,1958-09-28,False,DET,H,W,28,15,,0,0,0,0,1
+Baltimore Colts,BAL,1958,2,1958-10-04,False,CHI,H,W,51,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1958,3,1958-10-12,False,GNB,A,W,24,17,,0,0,0,0,1
+Baltimore Colts,BAL,1958,4,1958-10-19,False,DET,A,W,40,14,,0,0,0,0,1
+Baltimore Colts,BAL,1958,5,1958-10-26,False,WAS,H,W,35,10,,0,0,0,0,4
+Baltimore Colts,BAL,1958,6,1958-11-02,False,GNB,H,W,56,0,,0,0,0,0,10
+Baltimore Colts,BAL,1958,7,1958-11-09,False,NYG,A,L,21,24,,0,0,0,0,0
+Baltimore Colts,BAL,1958,8,1958-11-16,False,CHI,A,W,17,0,,0,0,0,0,10
+Baltimore Colts,BAL,1958,9,1958-11-23,False,RAM,H,W,34,7,,0,0,0,0,4
+Baltimore Colts,BAL,1958,10,1958-11-30,False,SFO,H,W,35,27,,0,0,0,0,0
+Baltimore Colts,BAL,1958,11,1958-12-06,False,RAM,A,L,28,30,,0,0,0,0,-1
+Baltimore Colts,BAL,1958,12,1958-12-14,False,SFO,A,L,12,21,,0,0,0,0,0
+Baltimore Colts,BAL,1958,13,1958-12-28,True,NYG,A,W,23,17,,0,0,0,0,1
+Chicago Bears,CHI,1958,1,1958-09-28,False,GNB,A,W,34,20,,0,0,0,0,1
+Chicago Bears,CHI,1958,2,1958-10-04,False,BAL,A,L,38,51,,0,0,0,0,-4
+Chicago Bears,CHI,1958,3,1958-10-12,False,SFO,H,W,28,6,,0,0,0,0,7
+Chicago Bears,CHI,1958,4,1958-10-19,False,RAM,H,W,31,10,,0,0,0,0,4
+Chicago Bears,CHI,1958,5,1958-10-26,False,SFO,A,W,27,14,,0,0,0,0,1
+Chicago Bears,CHI,1958,6,1958-11-02,False,RAM,A,L,35,41,,0,0,0,0,-4
+Chicago Bears,CHI,1958,7,1958-11-09,False,GNB,H,W,24,10,,0,0,0,0,4
+Chicago Bears,CHI,1958,8,1958-11-16,False,BAL,H,L,0,17,,0,0,0,0,1
+Chicago Bears,CHI,1958,9,1958-11-23,False,DET,A,W,20,7,,0,0,0,0,4
+Chicago Bears,CHI,1958,10,1958-11-30,False,PIT,A,L,10,24,,0,0,0,0,0
+Chicago Bears,CHI,1958,11,1958-12-07,False,CRD,H,W,30,14,,0,0,0,0,1
+Chicago Bears,CHI,1958,12,1958-12-14,False,DET,H,W,21,16,,0,0,0,0,1
+Cleveland Browns,CLE,1958,1,1958-09-28,False,RAM,A,W,30,27,,0,0,0,0,0
+Cleveland Browns,CLE,1958,2,1958-10-05,False,PIT,A,W,45,12,,0,0,0,0,4
+Cleveland Browns,CLE,1958,3,1958-10-12,False,CRD,H,W,35,28,,0,0,0,0,-1
+Cleveland Browns,CLE,1958,4,1958-10-19,False,PIT,H,W,27,10,,0,0,0,0,4
+Cleveland Browns,CLE,1958,5,1958-10-26,False,CRD,A,W,38,24,,0,0,0,0,0
+Cleveland Browns,CLE,1958,6,1958-11-02,False,NYG,H,L,17,21,,0,0,0,0,0
+Cleveland Browns,CLE,1958,7,1958-11-09,False,DET,H,L,10,30,,0,0,0,0,-1
+Cleveland Browns,CLE,1958,8,1958-11-16,False,WAS,A,W,20,10,,0,0,0,0,4
+Cleveland Browns,CLE,1958,9,1958-11-23,False,PHI,H,W,28,14,,0,0,0,0,1
+Cleveland Browns,CLE,1958,10,1958-11-30,False,WAS,H,W,21,14,,0,0,0,0,1
+Cleveland Browns,CLE,1958,11,1958-12-07,False,PHI,A,W,21,14,,0,0,0,0,1
+Cleveland Browns,CLE,1958,12,1958-12-14,False,NYG,A,L,10,13,,0,0,0,0,4
+Cleveland Browns,CLE,1958,13,1958-12-21,True,NYG,A,L,0,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1958,1,1958-09-28,False,NYG,H,L,7,37,,0,0,0,0,-4
+Chicago Cardinals,CRD,1958,2,1958-10-04,False,WAS,H,W,37,10,,0,0,0,0,4
+Chicago Cardinals,CRD,1958,3,1958-10-12,False,CLE,A,L,28,35,,0,0,0,0,-4
+Chicago Cardinals,CRD,1958,4,1958-10-19,False,NYG,A,W,23,6,,0,0,0,0,7
+Chicago Cardinals,CRD,1958,5,1958-10-26,False,CLE,H,L,24,38,,0,0,0,0,-4
+Chicago Cardinals,CRD,1958,6,1958-11-02,False,PHI,H,T,21,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1958,7,1958-11-09,False,WAS,A,L,31,45,,0,0,0,0,-4
+Chicago Cardinals,CRD,1958,8,1958-11-16,False,PHI,A,L,21,49,,0,0,0,0,-4
+Chicago Cardinals,CRD,1958,9,1958-11-23,False,PIT,H,L,20,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1958,10,1958-11-30,False,RAM,H,L,14,20,,0,0,0,0,1
+Chicago Cardinals,CRD,1958,11,1958-12-07,False,CHI,A,L,14,30,,0,0,0,0,-1
+Chicago Cardinals,CRD,1958,12,1958-12-13,False,PIT,A,L,21,38,,0,0,0,0,-4
+Detroit Lions,DET,1958,1,1958-09-28,False,BAL,A,L,15,28,,0,0,0,0,-1
+Detroit Lions,DET,1958,2,1958-10-05,False,GNB,A,T,13,13,,0,0,0,0,4
+Detroit Lions,DET,1958,3,1958-10-12,False,RAM,H,L,28,42,,0,0,0,0,-4
+Detroit Lions,DET,1958,4,1958-10-19,False,BAL,H,L,14,40,,0,0,0,0,-4
+Detroit Lions,DET,1958,5,1958-10-26,False,RAM,A,W,41,24,,0,0,0,0,0
+Detroit Lions,DET,1958,6,1958-11-02,False,SFO,A,L,21,24,,0,0,0,0,0
+Detroit Lions,DET,1958,7,1958-11-09,False,CLE,A,W,30,10,,0,0,0,0,4
+Detroit Lions,DET,1958,8,1958-11-16,False,SFO,H,W,35,21,,0,0,0,0,0
+Detroit Lions,DET,1958,9,1958-11-23,False,CHI,H,L,7,20,,0,0,0,0,1
+Detroit Lions,DET,1958,10,1958-11-27,False,GNB,H,W,24,14,,0,0,0,0,1
+Detroit Lions,DET,1958,11,1958-12-07,False,NYG,H,L,17,19,,0,0,0,0,1
+Detroit Lions,DET,1958,12,1958-12-14,False,CHI,A,L,16,21,,0,0,0,0,0
+Green Bay Packers,GNB,1958,1,1958-09-28,False,CHI,H,L,20,34,,0,0,0,0,-1
+Green Bay Packers,GNB,1958,2,1958-10-05,False,DET,H,T,13,13,,0,0,0,0,4
+Green Bay Packers,GNB,1958,3,1958-10-12,False,BAL,H,L,17,24,,0,0,0,0,0
+Green Bay Packers,GNB,1958,4,1958-10-19,False,WAS,A,L,21,37,,0,0,0,0,-4
+Green Bay Packers,GNB,1958,5,1958-10-26,False,PHI,H,W,38,35,,0,0,0,0,-4
+Green Bay Packers,GNB,1958,6,1958-11-02,False,BAL,A,L,0,56,,0,0,0,0,-4
+Green Bay Packers,GNB,1958,7,1958-11-09,False,CHI,A,L,10,24,,0,0,0,0,0
+Green Bay Packers,GNB,1958,8,1958-11-16,False,RAM,H,L,7,20,,0,0,0,0,1
+Green Bay Packers,GNB,1958,9,1958-11-23,False,SFO,H,L,12,33,,0,0,0,0,-1
+Green Bay Packers,GNB,1958,10,1958-11-27,False,DET,A,L,14,24,,0,0,0,0,0
+Green Bay Packers,GNB,1958,11,1958-12-07,False,SFO,A,L,21,48,,0,0,0,0,-4
+Green Bay Packers,GNB,1958,12,1958-12-14,False,RAM,A,L,20,34,,0,0,0,0,-1
+New York Giants,NYG,1958,1,1958-09-28,False,CRD,A,W,37,7,,0,0,0,0,4
+New York Giants,NYG,1958,2,1958-10-05,False,PHI,A,L,24,27,,0,0,0,0,0
+New York Giants,NYG,1958,3,1958-10-12,False,WAS,A,W,21,14,,0,0,0,0,1
+New York Giants,NYG,1958,4,1958-10-19,False,CRD,H,L,6,23,,0,0,0,0,0
+New York Giants,NYG,1958,5,1958-10-26,False,PIT,H,W,17,6,,0,0,0,0,7
+New York Giants,NYG,1958,6,1958-11-02,False,CLE,A,W,21,17,,0,0,0,0,1
+New York Giants,NYG,1958,7,1958-11-09,False,BAL,H,W,24,21,,0,0,0,0,0
+New York Giants,NYG,1958,8,1958-11-16,False,PIT,A,L,10,31,,0,0,0,0,-1
+New York Giants,NYG,1958,9,1958-11-23,False,WAS,H,W,30,0,,0,0,0,0,10
+New York Giants,NYG,1958,10,1958-11-30,False,PHI,H,W,24,10,,0,0,0,0,4
+New York Giants,NYG,1958,11,1958-12-07,False,DET,A,W,19,17,,0,0,0,0,1
+New York Giants,NYG,1958,12,1958-12-14,False,CLE,H,W,13,10,,0,0,0,0,4
+New York Giants,NYG,1958,13,1958-12-21,True,CLE,H,W,10,0,,0,0,0,0,10
+New York Giants,NYG,1958,14,1958-12-28,True,BAL,H,L,17,23,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,1,1958-09-28,False,WAS,H,L,14,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,2,1958-10-05,False,NYG,H,W,27,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,3,1958-10-12,False,PIT,A,L,3,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,4,1958-10-19,False,SFO,H,L,24,30,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1958,5,1958-10-26,False,GNB,A,L,35,38,,0,0,0,0,-4
+Philadelphia Eagles,PHI,1958,6,1958-11-02,False,CRD,A,T,21,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,7,1958-11-09,False,PIT,H,L,24,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1958,8,1958-11-16,False,CRD,H,W,49,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,9,1958-11-23,False,CLE,A,L,14,28,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1958,10,1958-11-30,False,NYG,A,L,10,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,11,1958-12-07,False,CLE,H,L,14,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1958,12,1958-12-14,False,WAS,A,L,0,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1958,1,1958-09-28,False,SFO,A,L,20,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1958,2,1958-10-05,False,CLE,H,L,12,45,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1958,3,1958-10-12,False,PHI,H,W,24,3,,0,0,0,0,7
+Pittsburgh Steelers,PIT,1958,4,1958-10-19,False,CLE,A,L,10,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1958,5,1958-10-26,False,NYG,A,L,6,17,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1958,6,1958-11-02,False,WAS,H,W,24,16,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1958,7,1958-11-09,False,PHI,A,W,31,24,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1958,8,1958-11-16,False,NYG,H,W,31,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1958,9,1958-11-23,False,CRD,A,W,27,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1958,10,1958-11-30,False,CHI,H,W,24,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1958,11,1958-12-07,False,WAS,A,T,14,14,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1958,12,1958-12-13,False,CRD,H,W,38,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1958,1,1958-09-28,False,CLE,H,L,27,30,,0,0,0,0,-1
+Los Angeles Rams,RAM,1958,2,1958-10-05,False,SFO,A,W,33,3,,0,0,0,0,7
+Los Angeles Rams,RAM,1958,3,1958-10-12,False,DET,A,W,42,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1958,4,1958-10-19,False,CHI,A,L,10,31,,0,0,0,0,-1
+Los Angeles Rams,RAM,1958,5,1958-10-26,False,DET,H,L,24,41,,0,0,0,0,-4
+Los Angeles Rams,RAM,1958,6,1958-11-02,False,CHI,H,W,41,35,,0,0,0,0,-4
+Los Angeles Rams,RAM,1958,7,1958-11-09,False,SFO,H,W,56,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1958,8,1958-11-16,False,GNB,A,W,20,7,,0,0,0,0,4
+Los Angeles Rams,RAM,1958,9,1958-11-23,False,BAL,A,L,7,34,,0,0,0,0,-1
+Los Angeles Rams,RAM,1958,10,1958-11-30,False,CRD,A,W,20,14,,0,0,0,0,1
+Los Angeles Rams,RAM,1958,11,1958-12-06,False,BAL,H,W,30,28,,0,0,0,0,-1
+Los Angeles Rams,RAM,1958,12,1958-12-14,False,GNB,H,W,34,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1958,1,1958-09-28,False,PIT,H,W,23,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1958,2,1958-10-05,False,RAM,H,L,3,33,,0,0,0,0,-1
+San Francisco 49ers,SFO,1958,3,1958-10-12,False,CHI,A,L,6,28,,0,0,0,0,-1
+San Francisco 49ers,SFO,1958,4,1958-10-19,False,PHI,A,W,30,24,,0,0,0,0,0
+San Francisco 49ers,SFO,1958,5,1958-10-26,False,CHI,H,L,14,27,,0,0,0,0,0
+San Francisco 49ers,SFO,1958,6,1958-11-02,False,DET,H,W,24,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1958,7,1958-11-09,False,RAM,A,L,7,56,,0,0,0,0,-4
+San Francisco 49ers,SFO,1958,8,1958-11-16,False,DET,A,L,21,35,,0,0,0,0,-4
+San Francisco 49ers,SFO,1958,9,1958-11-23,False,GNB,A,W,33,12,,0,0,0,0,4
+San Francisco 49ers,SFO,1958,10,1958-11-30,False,BAL,A,L,27,35,,0,0,0,0,-4
+San Francisco 49ers,SFO,1958,11,1958-12-07,False,GNB,H,W,48,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1958,12,1958-12-14,False,BAL,H,W,21,12,,0,0,0,0,4
+Washington Redskins,WAS,1958,1,1958-09-28,False,PHI,A,W,24,14,,0,0,0,0,1
+Washington Redskins,WAS,1958,2,1958-10-04,False,CRD,A,L,10,37,,0,0,0,0,-4
+Washington Redskins,WAS,1958,3,1958-10-12,False,NYG,H,L,14,21,,0,0,0,0,0
+Washington Redskins,WAS,1958,4,1958-10-19,False,GNB,H,W,37,21,,0,0,0,0,0
+Washington Redskins,WAS,1958,5,1958-10-26,False,BAL,A,L,10,35,,0,0,0,0,-4
+Washington Redskins,WAS,1958,6,1958-11-02,False,PIT,A,L,16,24,,0,0,0,0,0
+Washington Redskins,WAS,1958,7,1958-11-09,False,CRD,H,W,45,31,,0,0,0,0,-1
+Washington Redskins,WAS,1958,8,1958-11-16,False,CLE,H,L,10,20,,0,0,0,0,1
+Washington Redskins,WAS,1958,9,1958-11-23,False,NYG,A,L,0,30,,0,0,0,0,-1
+Washington Redskins,WAS,1958,10,1958-11-30,False,CLE,A,L,14,21,,0,0,0,0,0
+Washington Redskins,WAS,1958,11,1958-12-07,False,PIT,H,T,14,14,,0,0,0,0,1
+Washington Redskins,WAS,1958,12,1958-12-14,False,PHI,H,W,20,0,,0,0,0,0,10
+Baltimore Colts,BAL,1959,1,1959-09-27,False,DET,H,W,21,9,,0,0,0,0,4
+Baltimore Colts,BAL,1959,2,1959-10-03,False,CHI,H,L,21,26,,0,0,0,0,0
+Baltimore Colts,BAL,1959,3,1959-10-11,False,DET,A,W,31,24,,0,0,0,0,0
+Baltimore Colts,BAL,1959,4,1959-10-18,False,CHI,A,W,21,7,,0,0,0,0,4
+Baltimore Colts,BAL,1959,5,1959-10-25,False,GNB,H,W,38,21,,0,0,0,0,0
+Baltimore Colts,BAL,1959,6,1959-11-01,False,CLE,H,L,31,38,,0,0,0,0,-4
+Baltimore Colts,BAL,1959,7,1959-11-08,False,WAS,A,L,24,27,,0,0,0,0,0
+Baltimore Colts,BAL,1959,8,1959-11-15,False,GNB,A,W,28,24,,0,0,0,0,0
+Baltimore Colts,BAL,1959,9,1959-11-22,False,SFO,H,W,45,14,,0,0,0,0,1
+Baltimore Colts,BAL,1959,10,1959-11-29,False,RAM,H,W,35,21,,0,0,0,0,0
+Baltimore Colts,BAL,1959,11,1959-12-05,False,SFO,A,W,34,14,,0,0,0,0,1
+Baltimore Colts,BAL,1959,12,1959-12-12,False,RAM,A,W,45,26,,0,0,0,0,0
+Baltimore Colts,BAL,1959,13,1959-12-27,True,NYG,H,W,31,16,,0,0,0,0,1
+Chicago Bears,CHI,1959,1,1959-09-27,False,GNB,A,L,6,9,,0,0,0,0,4
+Chicago Bears,CHI,1959,2,1959-10-03,False,BAL,A,W,26,21,,0,0,0,0,0
+Chicago Bears,CHI,1959,3,1959-10-11,False,RAM,H,L,21,28,,0,0,0,0,-1
+Chicago Bears,CHI,1959,4,1959-10-18,False,BAL,H,L,7,21,,0,0,0,0,0
+Chicago Bears,CHI,1959,5,1959-10-25,False,SFO,A,L,17,20,,0,0,0,0,1
+Chicago Bears,CHI,1959,6,1959-11-01,False,RAM,A,W,26,21,,0,0,0,0,0
+Chicago Bears,CHI,1959,7,1959-11-08,False,GNB,H,W,28,17,,0,0,0,0,1
+Chicago Bears,CHI,1959,8,1959-11-15,False,SFO,H,W,14,3,,0,0,0,0,7
+Chicago Bears,CHI,1959,9,1959-11-22,False,DET,A,W,24,14,,0,0,0,0,1
+Chicago Bears,CHI,1959,10,1959-11-29,False,CRD,A,W,31,7,,0,0,0,0,4
+Chicago Bears,CHI,1959,11,1959-12-06,False,PIT,H,W,27,21,,0,0,0,0,0
+Chicago Bears,CHI,1959,12,1959-12-13,False,DET,H,W,25,14,,0,0,0,0,1
+Cleveland Browns,CLE,1959,1,1959-09-26,False,PIT,A,L,7,17,,0,0,0,0,1
+Cleveland Browns,CLE,1959,2,1959-10-04,False,CRD,A,W,34,7,,0,0,0,0,4
+Cleveland Browns,CLE,1959,3,1959-10-11,False,NYG,H,L,6,10,,0,0,0,0,4
+Cleveland Browns,CLE,1959,4,1959-10-18,False,CRD,H,W,17,7,,0,0,0,0,4
+Cleveland Browns,CLE,1959,5,1959-10-25,False,WAS,H,W,34,7,,0,0,0,0,4
+Cleveland Browns,CLE,1959,6,1959-11-01,False,BAL,A,W,38,31,,0,0,0,0,-1
+Cleveland Browns,CLE,1959,7,1959-11-08,False,PHI,H,W,28,7,,0,0,0,0,4
+Cleveland Browns,CLE,1959,8,1959-11-15,False,WAS,A,W,31,17,,0,0,0,0,1
+Cleveland Browns,CLE,1959,9,1959-11-22,False,PIT,H,L,20,21,,0,0,0,0,0
+Cleveland Browns,CLE,1959,10,1959-11-29,False,SFO,H,L,20,21,,0,0,0,0,0
+Cleveland Browns,CLE,1959,11,1959-12-06,False,NYG,A,L,7,48,,0,0,0,0,-4
+Cleveland Browns,CLE,1959,12,1959-12-13,False,PHI,A,W,28,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1959,1,1959-09-27,False,WAS,H,W,49,21,,0,0,0,0,0
+Chicago Cardinals,CRD,1959,2,1959-10-04,False,CLE,H,L,7,34,,0,0,0,0,-1
+Chicago Cardinals,CRD,1959,3,1959-10-11,False,WAS,A,L,14,23,,0,0,0,0,0
+Chicago Cardinals,CRD,1959,4,1959-10-18,False,CLE,A,L,7,17,,0,0,0,0,1
+Chicago Cardinals,CRD,1959,5,1959-10-25,False,PHI,H,L,24,28,,0,0,0,0,-1
+Chicago Cardinals,CRD,1959,6,1959-11-01,False,PIT,H,W,45,24,,0,0,0,0,0
+Chicago Cardinals,CRD,1959,7,1959-11-08,False,NYG,A,L,3,9,,0,0,0,0,4
+Chicago Cardinals,CRD,1959,8,1959-11-15,False,PHI,A,L,17,27,,0,0,0,0,0
+Chicago Cardinals,CRD,1959,9,1959-11-22,False,NYG,H,L,20,30,,0,0,0,0,-1
+Chicago Cardinals,CRD,1959,10,1959-11-29,False,CHI,H,L,7,31,,0,0,0,0,-1
+Chicago Cardinals,CRD,1959,11,1959-12-06,False,DET,A,L,21,45,,0,0,0,0,-4
+Chicago Cardinals,CRD,1959,12,1959-12-13,False,PIT,A,L,20,35,,0,0,0,0,-4
+Detroit Lions,DET,1959,1,1959-09-27,False,BAL,A,L,9,21,,0,0,0,0,0
+Detroit Lions,DET,1959,2,1959-10-04,False,GNB,A,L,10,28,,0,0,0,0,-1
+Detroit Lions,DET,1959,3,1959-10-11,False,BAL,H,L,24,31,,0,0,0,0,-1
+Detroit Lions,DET,1959,4,1959-10-18,False,SFO,H,L,13,34,,0,0,0,0,-1
+Detroit Lions,DET,1959,5,1959-10-25,False,RAM,A,W,17,7,,0,0,0,0,4
+Detroit Lions,DET,1959,6,1959-11-01,False,SFO,A,L,7,33,,0,0,0,0,-1
+Detroit Lions,DET,1959,7,1959-11-08,False,PIT,A,T,10,10,,0,0,0,0,4
+Detroit Lions,DET,1959,8,1959-11-15,False,RAM,H,W,23,17,,0,0,0,0,1
+Detroit Lions,DET,1959,9,1959-11-22,False,CHI,H,L,14,24,,0,0,0,0,0
+Detroit Lions,DET,1959,10,1959-11-26,False,GNB,H,L,17,24,,0,0,0,0,0
+Detroit Lions,DET,1959,11,1959-12-06,False,CRD,H,W,45,21,,0,0,0,0,0
+Detroit Lions,DET,1959,12,1959-12-13,False,CHI,A,L,14,25,,0,0,0,0,0
+Green Bay Packers,GNB,1959,1,1959-09-27,False,CHI,H,W,9,6,,0,0,0,0,7
+Green Bay Packers,GNB,1959,2,1959-10-04,False,DET,H,W,28,10,,0,0,0,0,4
+Green Bay Packers,GNB,1959,3,1959-10-11,False,SFO,H,W,21,20,,0,0,0,0,1
+Green Bay Packers,GNB,1959,4,1959-10-18,False,RAM,H,L,6,45,,0,0,0,0,-4
+Green Bay Packers,GNB,1959,5,1959-10-25,False,BAL,A,L,21,38,,0,0,0,0,-4
+Green Bay Packers,GNB,1959,6,1959-11-01,False,NYG,A,L,3,20,,0,0,0,0,1
+Green Bay Packers,GNB,1959,7,1959-11-08,False,CHI,A,L,17,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1959,8,1959-11-15,False,BAL,H,L,24,28,,0,0,0,0,-1
+Green Bay Packers,GNB,1959,9,1959-11-22,False,WAS,H,W,21,0,,0,0,0,0,10
+Green Bay Packers,GNB,1959,10,1959-11-26,False,DET,A,W,24,17,,0,0,0,0,1
+Green Bay Packers,GNB,1959,11,1959-12-06,False,RAM,A,W,38,20,,0,0,0,0,1
+Green Bay Packers,GNB,1959,12,1959-12-13,False,SFO,A,W,36,14,,0,0,0,0,1
+New York Giants,NYG,1959,1,1959-09-26,False,RAM,A,W,23,21,,0,0,0,0,0
+New York Giants,NYG,1959,2,1959-10-04,False,PHI,A,L,21,49,,0,0,0,0,-4
+New York Giants,NYG,1959,3,1959-10-11,False,CLE,A,W,10,6,,0,0,0,0,7
+New York Giants,NYG,1959,4,1959-10-18,False,PHI,H,W,24,7,,0,0,0,0,4
+New York Giants,NYG,1959,5,1959-10-25,False,PIT,A,W,21,16,,0,0,0,0,1
+New York Giants,NYG,1959,6,1959-11-01,False,GNB,H,W,20,3,,0,0,0,0,7
+New York Giants,NYG,1959,7,1959-11-08,False,CRD,H,W,9,3,,0,0,0,0,7
+New York Giants,NYG,1959,8,1959-11-15,False,PIT,H,L,9,14,,0,0,0,0,1
+New York Giants,NYG,1959,9,1959-11-22,False,CRD,A,W,30,20,,0,0,0,0,1
+New York Giants,NYG,1959,10,1959-11-29,False,WAS,H,W,45,14,,0,0,0,0,1
+New York Giants,NYG,1959,11,1959-12-06,False,CLE,H,W,48,7,,0,0,0,0,4
+New York Giants,NYG,1959,12,1959-12-13,False,WAS,A,W,24,10,,0,0,0,0,4
+New York Giants,NYG,1959,13,1959-12-27,True,BAL,A,L,16,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1959,1,1959-09-27,False,SFO,A,L,14,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,2,1959-10-04,False,NYG,H,W,49,21,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,3,1959-10-11,False,PIT,H,W,28,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,4,1959-10-18,False,NYG,A,L,7,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,5,1959-10-25,False,CRD,A,W,28,24,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,6,1959-11-01,False,WAS,H,W,30,23,,0,0,0,0,0
+Philadelphia Eagles,PHI,1959,7,1959-11-08,False,CLE,A,L,7,28,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1959,8,1959-11-15,False,CRD,H,W,27,17,,0,0,0,0,1
+Philadelphia Eagles,PHI,1959,9,1959-11-22,False,RAM,H,W,23,20,,0,0,0,0,1
+Philadelphia Eagles,PHI,1959,10,1959-11-29,False,PIT,A,L,0,31,,0,0,0,0,-1
+Philadelphia Eagles,PHI,1959,11,1959-12-06,False,WAS,A,W,34,14,,0,0,0,0,1
+Philadelphia Eagles,PHI,1959,12,1959-12-13,False,CLE,H,L,21,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1959,1,1959-09-26,False,CLE,H,W,17,7,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1959,2,1959-10-04,False,WAS,H,L,17,23,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1959,3,1959-10-11,False,PHI,A,L,24,28,,0,0,0,0,-1
+Pittsburgh Steelers,PIT,1959,4,1959-10-18,False,WAS,A,W,27,6,,0,0,0,0,7
+Pittsburgh Steelers,PIT,1959,5,1959-10-25,False,NYG,H,L,16,21,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1959,6,1959-11-01,False,CRD,A,L,24,45,,0,0,0,0,-4
+Pittsburgh Steelers,PIT,1959,7,1959-11-08,False,DET,H,T,10,10,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1959,8,1959-11-15,False,NYG,A,W,14,9,,0,0,0,0,4
+Pittsburgh Steelers,PIT,1959,9,1959-11-22,False,CLE,A,W,21,20,,0,0,0,0,1
+Pittsburgh Steelers,PIT,1959,10,1959-11-29,False,PHI,H,W,31,0,,0,0,0,0,10
+Pittsburgh Steelers,PIT,1959,11,1959-12-06,False,CHI,A,L,21,27,,0,0,0,0,0
+Pittsburgh Steelers,PIT,1959,12,1959-12-13,False,CRD,H,W,35,20,,0,0,0,0,1
+Los Angeles Rams,RAM,1959,1,1959-09-26,False,NYG,H,L,21,23,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,2,1959-10-04,False,SFO,A,L,0,34,,0,0,0,0,-1
+Los Angeles Rams,RAM,1959,3,1959-10-11,False,CHI,A,W,28,21,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,4,1959-10-18,False,GNB,A,W,45,6,,0,0,0,0,7
+Los Angeles Rams,RAM,1959,5,1959-10-25,False,DET,H,L,7,17,,0,0,0,0,1
+Los Angeles Rams,RAM,1959,6,1959-11-01,False,CHI,H,L,21,26,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,7,1959-11-08,False,SFO,H,L,16,24,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,8,1959-11-15,False,DET,A,L,17,23,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,9,1959-11-22,False,PHI,A,L,20,23,,0,0,0,0,0
+Los Angeles Rams,RAM,1959,10,1959-11-29,False,BAL,A,L,21,35,,0,0,0,0,-4
+Los Angeles Rams,RAM,1959,11,1959-12-06,False,GNB,H,L,20,38,,0,0,0,0,-4
+Los Angeles Rams,RAM,1959,12,1959-12-12,False,BAL,H,L,26,45,,0,0,0,0,-4
+San Francisco 49ers,SFO,1959,1,1959-09-27,False,PHI,H,W,24,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1959,2,1959-10-04,False,RAM,H,W,34,0,,0,0,0,0,10
+San Francisco 49ers,SFO,1959,3,1959-10-11,False,GNB,A,L,20,21,,0,0,0,0,0
+San Francisco 49ers,SFO,1959,4,1959-10-18,False,DET,A,W,34,13,,0,0,0,0,4
+San Francisco 49ers,SFO,1959,5,1959-10-25,False,CHI,H,W,20,17,,0,0,0,0,1
+San Francisco 49ers,SFO,1959,6,1959-11-01,False,DET,H,W,33,7,,0,0,0,0,4
+San Francisco 49ers,SFO,1959,7,1959-11-08,False,RAM,A,W,24,16,,0,0,0,0,1
+San Francisco 49ers,SFO,1959,8,1959-11-15,False,CHI,A,L,3,14,,0,0,0,0,1
+San Francisco 49ers,SFO,1959,9,1959-11-22,False,BAL,A,L,14,45,,0,0,0,0,-4
+San Francisco 49ers,SFO,1959,10,1959-11-29,False,CLE,A,W,21,20,,0,0,0,0,1
+San Francisco 49ers,SFO,1959,11,1959-12-05,False,BAL,H,L,14,34,,0,0,0,0,-1
+San Francisco 49ers,SFO,1959,12,1959-12-13,False,GNB,H,L,14,36,,0,0,0,0,-4
+Washington Redskins,WAS,1959,1,1959-09-27,False,CRD,A,L,21,49,,0,0,0,0,-4
+Washington Redskins,WAS,1959,2,1959-10-04,False,PIT,A,W,23,17,,0,0,0,0,1
+Washington Redskins,WAS,1959,3,1959-10-11,False,CRD,H,W,23,14,,0,0,0,0,1
+Washington Redskins,WAS,1959,4,1959-10-18,False,PIT,H,L,6,27,,0,0,0,0,0
+Washington Redskins,WAS,1959,5,1959-10-25,False,CLE,A,L,7,34,,0,0,0,0,-1
+Washington Redskins,WAS,1959,6,1959-11-01,False,PHI,A,L,23,30,,0,0,0,0,-1
+Washington Redskins,WAS,1959,7,1959-11-08,False,BAL,H,W,27,24,,0,0,0,0,0
+Washington Redskins,WAS,1959,8,1959-11-15,False,CLE,H,L,17,31,,0,0,0,0,-1
+Washington Redskins,WAS,1959,9,1959-11-22,False,GNB,A,L,0,21,,0,0,0,0,0
+Washington Redskins,WAS,1959,10,1959-11-29,False,NYG,A,L,14,45,,0,0,0,0,-4
+Washington Redskins,WAS,1959,11,1959-12-06,False,PHI,H,L,14,34,,0,0,0,0,-1
+Washington Redskins,WAS,1959,12,1959-12-13,False,NYG,H,L,10,24,,0,0,0,0,0
