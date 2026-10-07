@@ -3,54 +3,170 @@
   "player": "Chip Lohmiller",
   "date": "1996-10-27",
   "kept_team": "STL",
-  "dropped_teams": [
-   "WAS"
+  "player_id": 13509,
+  "dropped": [
+   {
+    "team": "WAS",
+    "opp": "IND",
+    "home_away": "H",
+    "date": "1996-10-27",
+    "season": 1996,
+    "game_number": 8
+   }
   ],
-  "reason": "only row with stats"
+  "reason": "listed for two teams in game 8 of 1996; kept the only row with stats"
  },
  {
   "player": "Bob Thomas",
   "date": "1982-09-19",
   "kept_team": "DET",
-  "dropped_teams": [
-   "CHI"
+  "player_id": 22006,
+  "dropped": [
+   {
+    "team": "CHI",
+    "opp": "NOR",
+    "home_away": "H",
+    "date": "1982-09-19",
+    "season": 1982,
+    "game_number": 2
+   }
   ],
-  "reason": "only row with stats"
+  "reason": "listed for two teams in game 2 of 1982; kept the only row with stats"
  },
  {
   "player": "Bob Thomas",
   "date": "1982-12-12",
   "kept_team": "CHI",
-  "dropped_teams": [
-   "DET"
+  "player_id": 22006,
+  "dropped": [
+   {
+    "team": "DET",
+    "opp": "GNB",
+    "home_away": "A",
+    "date": "1982-12-12",
+    "season": 1982,
+    "game_number": 6
+   }
   ],
-  "reason": "team he played for most that season"
+  "reason": "listed for two teams in game 6 of 1982; kept the team he played for most that season"
  },
  {
   "player": "Bob Thomas",
   "date": "1982-12-19",
   "kept_team": "CHI",
-  "dropped_teams": [
-   "DET"
+  "player_id": 22006,
+  "dropped": [
+   {
+    "team": "DET",
+    "opp": "MIN",
+    "home_away": "H",
+    "date": "1982-12-19",
+    "season": 1982,
+    "game_number": 7
+   }
   ],
-  "reason": "team he played for most that season"
+  "reason": "listed for two teams in game 7 of 1982; kept the team he played for most that season"
  },
  {
   "player": "Bob Thomas",
   "date": "1982-12-26",
   "kept_team": "CHI",
-  "dropped_teams": [
-   "DET"
+  "player_id": 22006,
+  "dropped": [
+   {
+    "team": "DET",
+    "opp": "TAM",
+    "home_away": "A",
+    "date": "1982-12-26",
+    "season": 1982,
+    "game_number": 8
+   }
   ],
-  "reason": "only row with stats"
+  "reason": "listed for two teams in game 8 of 1982; kept the only row with stats"
  },
  {
   "player": "Bob Thomas",
   "date": "1983-01-02",
   "kept_team": "CHI",
-  "dropped_teams": [
-   "DET"
+  "player_id": 22006,
+  "dropped": [
+   {
+    "team": "DET",
+    "opp": "GNB",
+    "home_away": "H",
+    "date": "1983-01-02",
+    "season": 1982,
+    "game_number": 9
+   }
   ],
-  "reason": "only row with stats"
+  "reason": "listed for two teams in game 9 of 1982; kept the only row with stats"
+ },
+ {
+  "player": "Roger Ruzek",
+  "date": "1989-10-01",
+  "kept_team": "DAL",
+  "player_id": 19305,
+  "dropped": [
+   {
+    "team": "PHI",
+    "opp": "CHI",
+    "home_away": "A",
+    "date": "1989-10-02",
+    "season": 1989,
+    "game_number": 4
+   }
+  ],
+  "reason": "listed for two teams in game 4 of 1989; kept the only row with stats"
+ },
+ {
+  "player": "Roger Ruzek",
+  "date": "1989-12-18",
+  "kept_team": "PHI",
+  "player_id": 19305,
+  "dropped": [
+   {
+    "team": "DAL",
+    "opp": "NYG",
+    "home_away": "A",
+    "date": "1989-12-16",
+    "season": 1989,
+    "game_number": 15
+   }
+  ],
+  "reason": "listed for two teams in game 15 of 1989; kept the only row with stats"
+ },
+ {
+  "player": "Ronald Moore",
+  "date": "1997-11-23",
+  "kept_team": null,
+  "player_id": 15733,
+  "dropped": [
+   {
+    "team": "DET",
+    "opp": "IND",
+    "home_away": "H",
+    "date": "1997-11-23",
+    "season": 1997,
+    "game_number": 12
+   }
+  ],
+  "reason": "row with no stats for DET, his only DET game in 1997, between games for ARI (1997-11-16, 1997-12-07)"
+ },
+ {
+  "player": "Cotton Davidson",
+  "date": "1962-09-09",
+  "kept_team": "OAK",
+  "player_id": 5141,
+  "dropped": [
+   {
+    "team": "DTX",
+    "opp": "BOS",
+    "home_away": "H",
+    "date": "1962-09-08",
+    "season": 1962,
+    "game_number": 1
+   }
+  ],
+  "reason": "listed for two teams in game 1 of 1962; kept the team he played for in the games either side"
  }
 ]

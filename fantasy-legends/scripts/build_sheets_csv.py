@@ -12,6 +12,7 @@ and for team defenses: def_season_totals.csv and def_gamelogs_<decade>s.csv.
 import csv
 import json
 import os
+import re
 import sys
 from collections import defaultdict
 
@@ -61,10 +62,18 @@ TEAM_NAMES = [
 # Positions whose game logs carry the repaired scoring fields (two_pt, fum_rec_td, missing_fields, source).
 REPAIRED = {"QB", "RB", "WR", "TE"}
 
-# Source codes used in the `source` column.
-#   PFR       Pro-Football-Reference, via the Kaggle scrape (zynicide/nfl-football-player-stats, Dec 2017)
-#   NFLV1999  nflverse-data player_stats_1999 / play_by_play_1999 (two_pt, fum_rec_td)
-#   RULE2PT   two_pt = 0 because the NFL had no two-point conversion before 1994
+# Source codes used in the `source` column and the corrections logs.
+#   PFR         Pro-Football-Reference, via the Kaggle scrape (zynicide/nfl-football-player-stats, Dec 2017)
+#   NFLV1999    nflverse-data player_stats_1999 / play_by_play_1999, checked against the final score
+#   RULE2PT     two_pt = 0 because the NFL had no two-point conversion before 1994
+#   SCORE0      the team's recorded scoring plays add up to its final score, so no unrecorded play happened
+#   SCORE2      they add up to 2 less in an NFL game before 1994, so the 2 is a safety
+#   NOFGM       no field goal made, so 0 in every distance tier
+#   UNRECORDED  the source shows 0 for a field it doesn't record in this era; blanked
+#   INCOMPLETE  the source's own totals show the field is incomplete for this game; blanked
+#   QUARANTINE  sources disagree, or the value can't be checked; blanked, originals kept in the log
+#   SWAP        the source swaps two fields on every row; swapped back
+#   DEDUPE      a duplicate or wrong-roster row dropped
 BRANCH_RAW = ("https://raw.githubusercontent.com/Jonathan94110/prime-rushmore/claude/inspiring-archimedes-aum2zs/"
               "fantasy-legends/data/sheets/")
 KAGGLE_URL = "https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats"
@@ -74,8 +83,10 @@ RULE2PT_URL = "https://en.wikipedia.org/wiki/Two-point_conversion"
 RECON_URL = KAGGLE_URL  # the recorded plays come from the source game logs; arithmetic in score_reconciliation.csv
 UNRECORDED = "Source shows 0 but doesn't record this field for this era, so the 0 isn't a real value"
 
+
 RECON = {}       # (team, date) -> team-game row with team_score, recorded_td/xpm/fgm, score_residual
 CONFLICTS = []   # evidence that disagrees between sources
+GSIS = {}        # player_id -> nflverse id, for 1999 players
 
 
 def track(g, fields, absent=()):
@@ -90,9 +101,10 @@ def setv(g, field, value, src, url, evidence):
 
 
 def recon_kind(g):
-    """SCORE0: the team's recorded TDs, XPs and FGs add up to its whole final score, so no other scoring
-    play happened. SCORE2: they add up to 2 less, before 1994 in an NFL game, so the 2 is a safety and no
-    other unrecorded scoring play happened."""
+    """SCORE0: the team's recorded TDs, XPs, FGs and safeties add up to its whole final score, so no other
+    scoring play happened. SCORE2: they add up to 2 less, before 1994 in an NFL game, with a recorded PAT
+    attempt for every recorded TD (so the 2 can't be extra points the source missed): the 2 is a safety and
+    no other unrecorded scoring play happened."""
     r = RECON.get((g["team"], g["date"]))
     if not r:
         return None, None
@@ -100,16 +112,58 @@ def recon_kind(g):
     afl = 1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
     if r["score_residual"] == 0:
         return "SCORE0", r
-    if r["score_residual"] == 2 and 1960 <= season < 1994 and not afl:
+    if (r["score_residual"] == 2 and 1960 <= season < 1994 and not afl
+            and r["recorded_xpa"] >= r["recorded_td"]):
         return "SCORE2", r
     return None, r
 
 
 def recon_evidence(kind, r):
-    td, xp, fg = r["recorded_td"], r["recorded_xpm"], r["recorded_fgm"]
-    pts = 6 * td + xp + 3 * fg
-    tail = "whole score" if kind == "SCORE0" else "score minus a 2-pt safety"
-    return f"{r['team']} scored {r['team_score']}; recorded {td} TD + {xp} XP + {fg} FG = {pts} = {tail} (score_reconciliation.csv)"
+    td, xp, fg, sf = r["recorded_td"], r["recorded_xpm"], r["recorded_fgm"], r["safeties"]
+    pts = 6 * td + xp + 3 * fg + 2 * sf
+    plays = f"{td} TD + {xp} XP + {fg} FG" + (f" + {sf} safety" if sf else "")
+    tail = "whole score" if kind == "SCORE0" else f"score minus a 2-pt safety ({r['recorded_xpa']} PAT attempts for {td} TD)"
+    return f"{r['team']} scored {r['team_score']}; recorded {plays} = {pts} = {tail} (score_reconciliation.csv)"
+
+
+def closure_1999(team, date, enrich):
+    """1999 games in nflverse: do the play-by-play's scoring plays account for every point the main source's
+    recorded plays leave unexplained? Returns ("closes" | "fails" | None, explanation)."""
+    x = enrich["defense"].get(f"{date}|{team}")
+    r = RECON.get((team, date))
+    if x is None or r is None:
+        return None, "game not in nflverse play-by-play"
+    recorded = 6 * r["recorded_td"] + r["recorded_xpm"] + 3 * r["recorded_fgm"]
+    tds = x["def_int_td"] + x["def_fum_td"] + x["st_other_td"] + x["off_fum_rec_td"]
+    found = 6 * tds + 2 * (x["safeties"] + x["two_pt"])
+    ok = r["team_score"] - recorded == found and x["ret_td"] == r["ret_td"]
+    detail = (f"{team} scored {r['team_score']}; main source records {r['recorded_td']} TD + {r['recorded_xpm']} XP + "
+              f"{r['recorded_fgm']} FG = {recorded}; play-by-play adds {tds} defensive/special-teams/fumble-recovery TD, "
+              f"{x['safeties']} safety and {x['two_pt']} two-point conversion = {found}"
+              + ("" if x["ret_td"] == r["ret_td"] else f"; return TDs differ (main source {r['ret_td']}, play-by-play {x['ret_td']})")
+              + (" (every point accounted for)" if ok else " (doesn't add up)"))
+    return ("closes" if ok else "fails"), detail
+
+
+def match_gsis(players, ids, enrich):
+    """Link each 1999 player to his nflverse id by birth date and name (names alone differ: nflverse has
+    "Raghib Ismail" for Rocket Ismail). Falls back to exact name plus a shared 1999 team."""
+    words = lambda n: set(re.split(r"[\s\-.']+", n.lower())) - {""}
+    by_birth, by_name = defaultdict(list), defaultdict(list)
+    for gsis, p in enrich["people"].items():
+        by_birth[p["birth_date"]].append((gsis, p))
+        by_name[p["name"]].append((gsis, p))
+    for pid, teams in ids.items():
+        name, birth = players[pid]["name"], players[pid]["birth_date"]
+        same_day = by_birth.get(birth, []) if birth else []
+        last = name.split()[-1].lower()
+        for cands in ([c for c in same_day if c[1]["name"] == name],
+                      [c for c in same_day if last in words(c[1]["name"])],
+                      [c for c in same_day if len(words(c[1]["name"]) & words(name)) >= 2],
+                      [c for c in by_name.get(name, []) if set(c[1]["teams"]) & teams]):
+            if len(cands) == 1:
+                GSIS[pid] = cands[0][0]
+                break
 
 
 RECON_MEANING = {
@@ -127,21 +181,35 @@ def repair_scoring(g, enrich):
     g["two_pt"] = g["fum_rec_td"] = None
     afl_game = 1960 <= season <= 1969 and (team in AFL_TEAMS or opp in AFL_TEAMS)
     kind, r = recon_kind(g)
-    if season < RETURNS_FIRST_SEASON:
+    status = None
+    if season < RETURNS_FIRST_SEASON and not g["ret_td"]:
         setv(g, "ret_td", None, "UNRECORDED", KAGGLE_URL, UNRECORDED + " (almost no return data before 1960)")
     if season == 1999 and f"{date}|{team}" in enrich["team_games"]:
-        found = enrich["players"].get(f"{g['name']}|{date}", {})
-        plays = enrich["evidence"]["players"].get(f"{g['name']}|{date}", [])
+        status, detail = closure_1999(team, date, enrich)
+        x = enrich["defense"][f"{date}|{team}"]
         gid = enrich["nflverse_game_ids"].get(f"{date}|{team}")
-        for c in ("two_pt", "fum_rec_td"):
-            value = found.get(c, 0)
-            ev = "; ".join(p for p in plays if p.startswith(c + ":")) or f"No qualifying play by this player in nflverse play-by-play for {gid}"
-            setv(g, c, value, "NFLV1999", NFLV_PBP_URL, ev)
-            if value and kind == "SCORE0":
-                CONFLICTS.append((g["pos"], g["player_id"], g["name"], game_id(g), c, f"nflverse {value} but score reconciles"))
+        gsis = GSIS.get(g["player_id"])
+        found = enrich["players"].get(f"{gsis}|{date}", {})
+        plays = enrich["evidence"]["players"].get(f"{gsis}|{date}", [])
+        for c, team_total, label in (("two_pt", x["two_pt"], "two-point conversion"),
+                                     ("fum_rec_td", x["off_fum_rec_td"], "offensive fumble-recovery TD")):
+            if gsis:
+                value = found.get(c, 0)
+                ev = ("; ".join(p for p in plays if p.startswith(c + ":"))
+                      or f"No {label} credited to this player (nflverse id {gsis}) in {gid}; {team} total {team_total}")
+            elif team_total == 0:
+                value, ev = 0, f"{team} had no {label} in {gid} (player not linked to an nflverse id)"
+            else:
+                CONFLICTS.append((g["pos"], g["player_id"], g["name"], game_id(g), c,
+                                  f"player not linked to an nflverse id; {team} had {team_total} {label}(s) in {gid}"))
+                continue
+            if value == 0 and status != "closes":
+                CONFLICTS.append((g["pos"], g["player_id"], g["name"], game_id(g), c, f"0 not confirmed: {detail}"))
+                continue
+            setv(g, c, value, "NFLV1999", NFLV_PBP_URL, f"{ev}. Score check: {detail}")
     elif season < 1994 and not afl_game:
         setv(g, "two_pt", 0, "RULE2PT", RULE2PT_URL, "The NFL had no two-point conversion before 1994")
-    if kind:
+    if kind and status != "fails":
         for c in ("two_pt", "fum_rec_td", "ret_td"):
             if g[c] is None:
                 setv(g, c, 0, kind, RECON_URL, recon_evidence(kind, r))
@@ -150,7 +218,7 @@ def repair_scoring(g, enrich):
             g["fpts_std"] = round(g["fpts_std"] + g[c] * (2 if c == "two_pt" else 6), 2)
             g["fpts_ppr"] = round(g["fpts_ppr"] + g[c] * (2 if c == "two_pt" else 6), 2)
     check = ("targets", "two_pt", "fum_rec_td", "ret_td") if g["pos"] != "QB" else ("sacked", "two_pt", "fum_rec_td", "ret_td")
-    missing = [c for c in check if g[c] is None or blank(c, season)]
+    missing = [c for c in check if g[c] is None or blank(c, season, g[c])]
     g["missing_fields"] = ";".join(missing)
     g["complete"] = not missing
     g["source"] = "+".join(dict.fromkeys(["PFR"] + [v[0] for v in g["_prov"].values() if v[0] != "UNRECORDED"]))
@@ -178,7 +246,7 @@ SCORING_FIELDS = {
     "QB": OFFENSE_SCORING, "RB": OFFENSE_SCORING, "WR": OFFENSE_SCORING, "TE": OFFENSE_SCORING,
     "K": ("xpm", "xp_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed") + OFFENSE_SCORING,
     "DEF": ("pts_allowed", "sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
-            "def_int_td", "def_fum_td", "ret_td"),
+            "def_int_td", "def_fum_td", "ret_td", "st_other_td"),
 }
 
 
@@ -201,7 +269,7 @@ def era_unrecorded(g, pos):
     if season < RETURNS_FIRST_SEASON:
         fields.add("ret_td")
     if season < 1999:
-        fields |= {"fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td"}
+        fields |= {"fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "st_other_td"}
     return fields
 
 
@@ -240,41 +308,74 @@ RETURNS_FIRST_SEASON = 1960  # nor kick/punt return stats (45 kick-return rows i
 
 def repair_kicking(g, enrich):
     """Kicking inputs, after repair_scoring has handled the kicker's offense fields.
-    - Before 1960 the source rarely records kicking; values count only where the team's score reconciles.
     - xpm/xpa are swapped back in build_data; logged here per row.
-    - xp_missed = xpa - xpm and fg_missed = fga - fgm (blocked attempts count as misses).
+    - Before 1960 the source rarely records kicking. A recorded make stands; a 0 make counts only where the
+      team's score reconciles (every make is then recorded). Attempts and misses can't be confirmed (a miss
+      doesn't score), so they stay blank unless recorded.
+    - fg_missed = fga - fgm (blocked attempts count as misses). xp_missed = xpa - xpm, blank where the team
+      scored more TDs than the source records PAT attempts (a missed PAT may be unrecorded).
+    - 1999: makes and attempts are compared with nflverse; where they disagree both are quarantined.
     - FG distance tiers: 0 when no field goal was made; 1999 from nflverse when its counts agree."""
-    season = g["season"]
-    kicking = ("fgm", "fga", "xpm", "xpa", "fgm_0_39", "fgm_40_49", "fgm_50p")
-    g["_orig"].update({"xpm": g["xpa"], "xpa": g["xpm"], "fgm": g["fgm"], "fga": g["fga"],
-                       "fgm_0_39": "absent", "fgm_40_49": "absent", "fgm_50p": "absent"})
+    season, date = g["season"], g["date"]
+    g["_orig"].update({"xpm": g["xpa"], "xpa": g["xpm"], "fgm": g["fgm"], "fga": g["fga"], "fg_missed": "absent",
+                       "xp_missed": "absent", "fgm_0_39": "absent", "fgm_40_49": "absent", "fgm_50p": "absent"})
     if g["xpm"] != g["xpa"]:
         swap = "Source has extra points made and attempted swapped on every row (made > attempted in all 1,673 rows that differ)"
         g["_prov"]["xpm"] = g["_prov"]["xpa"] = ("SWAP", KAGGLE_URL, swap)
-    for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+    for c in ("fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed", "xp_missed"):
         g[c] = None
     kind, r = recon_kind(g)
-    if season < KICK_FIRST_SEASON and kind != "SCORE0":
-        for c in ("fgm", "fga", "xpm", "xpa"):
-            setv(g, c, None, "UNRECORDED", KAGGLE_URL, UNRECORDED + " (almost no kicking data before 1960)")
+    k = None
+    if season < KICK_FIRST_SEASON:
+        for c in ("fgm", "xpm"):
+            if g[c]:
+                continue
+            if kind == "SCORE0":
+                setv(g, c, 0, "SCORE0", RECON_URL, recon_evidence(kind, r))
+            else:
+                setv(g, c, None, "UNRECORDED", KAGGLE_URL, UNRECORDED + " (almost no kicking data before 1960)")
+        for c in ("fga", "xpa"):
+            if not g[c]:
+                setv(g, c, None, "UNRECORDED", KAGGLE_URL, UNRECORDED + " (almost no kicking data before 1960; "
+                     "a miss doesn't score, so the final score can't show attempts)")
+        for c in ("fg_missed", "xp_missed"):
+            setv(g, c, None, "UNRECORDED", KAGGLE_URL,
+                 "Kicking attempts aren't reliably recorded before 1960, so misses can't be confirmed")
+    else:
+        if season == 1999 and f"{date}|{g['team']}" in enrich["team_games"] and GSIS.get(g["player_id"]):
+            gid = enrich["nflverse_game_ids"].get(f"{date}|{g['team']}")
+            k = enrich["kickers"].get(f"{GSIS[g['player_id']]}|{date}", {})
+            for made, att, label in (("xpm", "xpa", "XP"), ("fgm", "fga", "FG")):
+                theirs = (k.get(made, 0), k.get(att, 0))
+                if (g[made], g[att]) != theirs:
+                    detail = (f"main source credits {g['name']} with {g[made]}/{g[att]} {label} made/attempted; nflverse "
+                              f"play-by-play ({gid}) credits him with {theirs[0]}/{theirs[1]} (another kicker took some kicks)")
+                    for c in (made, att):
+                        setv(g, c, None, "QUARANTINE", NFLV_PBP_URL, "Sources disagree: " + detail)
+                    CONFLICTS.append(("K", g["player_id"], g["name"], game_id(g), f"{made}/{att}", detail))
+        if g["fgm"] is not None:
+            g["fg_missed"] = g["fga"] - g["fgm"]
+        else:
+            setv(g, "fg_missed", None, "QUARANTINE", NFLV_PBP_URL, "FG made/attempted disputed (see conflicts.csv)")
+        if g["xpm"] is None:
+            setv(g, "xp_missed", None, "QUARANTINE", NFLV_PBP_URL, "XP made/attempted disputed (see conflicts.csv)")
+        elif k is None and r and r["recorded_xpa"] < r["recorded_td"]:
+            two_pt_era = season >= 1994 or (1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS))
+            setv(g, "xp_missed", None, "INCOMPLETE", KAGGLE_URL,
+                 f"{g['team']} scored {r['recorded_td']} recorded TDs but the source records only {r['recorded_xpa']} "
+                 "PAT attempts, so a missed PAT may be unrecorded" + (" (or the team went for two)" if two_pt_era else ""))
+        else:
+            g["xp_missed"] = g["xpa"] - g["xpm"]
+    if g["fgm"] == 0:
+        how = "Source records" if g["_prov"].get("fgm", ("",))[0] != "SCORE0" else "Score reconciliation shows"
+        for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+            setv(g, c, 0, "NOFGM", KAGGLE_URL, f"{how} 0 FG made")
+    elif g["fgm"] and k is not None:
+        plays = [p for p in enrich["evidence"]["kickers"].get(f"{GSIS[g['player_id']]}|{date}", []) if "field goal" in p.lower()]
+        for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+            setv(g, c, k.get(c, 0), "NFLV1999", NFLV_PBP_URL, "; ".join(plays))
+    if g["fgm"] is None or g["xpm"] is None:
         g["fpts_std"] = g["fpts_ppr"] = None
-    elif season < KICK_FIRST_SEASON:
-        g["_prov"].setdefault("fgm", ("SCORE0", RECON_URL, recon_evidence(kind, r)))
-    known = g["fgm"] is not None
-    g["fg_missed"] = g["fga"] - g["fgm"] if known else None
-    g["xp_missed"] = g["xpa"] - g["xpm"] if known else None
-    if known:
-        k = enrich["kickers"].get(f"{g['name']}|{g['date']}") if season == 1999 else None
-        if g["fgm"] == 0:
-            for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
-                setv(g, c, 0, "NOFGM", KAGGLE_URL, f"Source records 0 FG made ({g['fga']} attempted)")
-        elif k and (k.get("fgm", 0), k.get("fga", 0)) == (g["fgm"], g["fga"]):
-            plays = [p for p in enrich["evidence"]["kickers"].get(f"{g['name']}|{g['date']}", []) if "field goal" in p.lower()]
-            for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
-                setv(g, c, k.get(c, 0), "NFLV1999", NFLV_PBP_URL, "; ".join(plays))
-        elif season == 1999 and k:
-            CONFLICTS.append(("K", g["player_id"], g["name"], game_id(g), "fgm/fga",
-                              f"source {g['fgm']}/{g['fga']}, nflverse {k.get('fgm', 0)}/{k.get('fga', 0)}"))
     missing = [c for c in ("fgm", "xpm", "fgm_0_39", "two_pt", "fum_rec_td", "ret_td") if g[c] is None]
     g["missing_fields"] = ";".join("fg_distance" if c == "fgm_0_39" else c for c in missing)
     g["complete"] = not missing
@@ -282,9 +383,11 @@ def repair_kicking(g, enrich):
     return g
 
 
-def blank(column, season):
-    """Stats the source doesn't record for early seasons (they'd show as 0)."""
-    return (column == "targets" and season < 1992) or (column == "sacked" and season < 1982)
+def blank(column, season, value=None):
+    """Stats the source doesn't record for early seasons, where it shows 0. A nonzero value (targets from a
+    Super Bowl box score, say) is real and kept; season totals for those seasons stay blank."""
+    era = (column == "targets" and season < 1992) or (column == "sacked" and season < 1982)
+    return era and not value
 
 
 def passer_rating(cmp, att, yds, td, ints):
@@ -310,51 +413,78 @@ def dst_points(g):
     pts = 10 if pa == 0 else 7 if pa <= 6 else 4 if pa <= 13 else 1 if pa <= 20 else 0 if pa <= 27 else -1 if pa <= 34 else -4
     v = lambda c: g[c] or 0
     return (pts + v("sacks") + 2 * (v("def_int") + v("fum_rec") + v("safeties") + v("blk_punt") + v("blk_fg") + v("blk_xp"))
-            + 6 * (v("def_int_td") + v("def_fum_td") + v("ret_td")))
+            + 6 * (v("def_int_td") + v("def_fum_td") + v("ret_td") + v("st_other_td")))
 
 
 def repair_defense(g, enrich):
-    """Interceptions: kept only where defenders' and opposing passers' counts agree; disputed games are
-    quarantined (blank) with both originals kept. Unrecorded zeros become blank. 1999 extras from nflverse.
-    Score reconciliation supplies evidence-based defensive TD and safety values."""
-    g = dict(g, team_name=team_name(g["team"], g["season"]), def_int_defenders=g["def_int"])
+    """Interceptions: kept only where defenders' and opposing passers' counts agree; disputed or uncheckable
+    games are quarantined (blank) with both originals kept. Unrecorded zeros become blank; recorded nonzero
+    values stay. 1999 extras from nflverse, checked against the final score. Score reconciliation supplies
+    evidence-based defensive TD and safety values for other seasons."""
+    g = dict(g, team_name=team_name(g["team"], g["season"]), def_int_defenders=g["def_int"],
+             recorded_safeties=g["safeties"], sacks=g["sacks_recorded"])
     season = g["season"]
-    track(g, ("def_int", "safeties", "def_int_td", "def_fum_td", "fum_rec", "blk_punt", "blk_fg", "blk_xp", "ret_td"),
-          absent=("def_fum_td", "fum_rec", "blk_punt", "blk_fg", "blk_xp"))
-    opp = g["opp_pass_int"]
-    if opp is not None and opp == g["def_int"]:
-        g["int_check"] = "match"
-    else:
-        g["int_check"] = "disputed" if opp is not None else "unverified"
+    track(g, ("sacks", "def_int", "safeties", "def_int_td", "def_fum_td", "st_other_td", "fum_rec", "blk_punt", "blk_fg",
+              "blk_xp", "ret_td"), absent=("def_fum_td", "st_other_td", "fum_rec", "blk_punt", "blk_fg", "blk_xp"))
+    if season < SACKS_FIRST_SEASON:
+        setv(g, "sacks", None, "UNRECORDED", KAGGLE_URL, "Sacks weren't an official stat before 1982" + (
+            f"; the source has sacks for only some players, so its team total ({g['sacks']}) is a partial count"
+            if g["sacks"] else ", so the source's 0 isn't a real value"))
+    opp, att = g["opp_pass_int"], g["opp_pass_att"]
+    if opp is None or not att:
+        g["int_check"] = "unverified"
         setv(g, "def_int", None, "QUARANTINE", KAGGLE_URL,
-             f"Defenders' logs record {g['def_int_defenders']} interceptions; the opposing passers' logs record {opp} thrown")
+             f"Defenders' logs record {g['def_int_defenders']} interceptions; the source has no passing for {g['opp']} "
+             "in this game, so the count can't be checked")
+    elif opp == g["def_int"]:
+        g["int_check"] = "match"
+        setv(g, "def_int", g["def_int"], "PFR", KAGGLE_URL,
+             f"Defenders' logs and {g['opp']}'s passers' logs both record {opp} interceptions")
+    else:
+        g["int_check"] = "disputed"
+        setv(g, "def_int", None, "QUARANTINE", KAGGLE_URL,
+             f"Defenders' logs record {g['def_int_defenders']} interceptions; {g['opp']}'s passers' logs record {opp} thrown")
     for c in ("safeties", "def_int_td"):
-        setv(g, c, None, "UNRECORDED", KAGGLE_URL, UNRECORDED)
-    for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td"):
+        if not g[c]:
+            setv(g, c, None, "UNRECORDED", KAGGLE_URL, UNRECORDED)
+    for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td", "st_other_td"):
         g[c] = None
-    if season < RETURNS_FIRST_SEASON:
+    if season < RETURNS_FIRST_SEASON and not g["ret_td"]:
         setv(g, "ret_td", None, "UNRECORDED", KAGGLE_URL, UNRECORDED + " (almost no return data before 1960)")
     kind, r = recon_kind(g)
-    extra = enrich["defense"].get(f"{g['date']}|{g['team']}") if season == 1999 else None
+    key = f"{g['date']}|{g['team']}"
+    extra = enrich["defense"].get(key) if season == 1999 else None
     if extra is not None:
-        plays = enrich["evidence"]["defense"].get(f"{g['date']}|{g['team']}", [])
-        gid = enrich["nflverse_game_ids"].get(f"{g['date']}|{g['team']}")
-        for c in ("fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td"):
+        status, detail = closure_1999(g["team"], g["date"], enrich)
+        plays = enrich["evidence"]["defense"].get(key, [])
+        gid = enrich["nflverse_game_ids"].get(key)
+        if status != "closes":
+            CONFLICTS.append(("DEF", g["team"], g["team_name"], game_id(g), "final score", detail))
+        for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "safeties", "def_int_td", "def_fum_td", "st_other_td"):
+            value = extra[c]
             ev = "; ".join(p for p in plays if p.startswith(c + ":")) or f"No qualifying play in nflverse play-by-play for {gid}"
-            setv(g, c, extra.get(c, 0), "NFLV1999", NFLV_PBP_URL, ev)
-        if kind == "SCORE0" and any(extra.get(c, 0) for c in ("safeties", "def_int_td", "def_fum_td")):
-            CONFLICTS.append(("DEF", g["team"], g["team_name"], game_id(g), "def TDs/safeties", "nflverse nonzero but score reconciles"))
-    if kind:
+            if c in ("safeties", "def_int_td", "def_fum_td", "st_other_td"):
+                if value == 0 and status != "closes":
+                    setv(g, c, None, "QUARANTINE", NFLV_PBP_URL, f"0 not confirmed: {detail}")
+                    continue
+                ev += f". Score check: {detail}"
+            setv(g, c, value, "NFLV1999", NFLV_PBP_URL, ev)
+        if extra["ret_td"] != g["ret_td"]:
+            setv(g, "ret_td", None, "QUARANTINE", NFLV_PBP_URL,
+                 f"Main source records {g['ret_td']} kick/punt return TDs, nflverse play-by-play {extra['ret_td']}")
+            CONFLICTS.append(("DEF", g["team"], g["team_name"], game_id(g), "ret_td", f"main source {g['_orig']['ret_td']}, nflverse {extra['ret_td']}"))
+    elif kind:
         ev = recon_evidence(kind, r)
-        for c in ("def_int_td", "def_fum_td", "ret_td"):
+        for c in ("def_int_td", "def_fum_td", "st_other_td", "ret_td"):
             if g[c] is None:
                 setv(g, c, 0, kind, RECON_URL, ev)
-        if g["safeties"] is None:
-            setv(g, "safeties", 0 if kind == "SCORE0" else 1, kind, RECON_URL, ev)
+        if g["safeties"] is None or kind == "SCORE2":
+            setv(g, "safeties", (g["safeties"] or 0) + (kind == "SCORE2"), kind, RECON_URL, ev)
     g["def_td"] = g["def_int_td"] + g["def_fum_td"] if None not in (g["def_int_td"], g["def_fum_td"]) else None
     g["fpts_known"] = dst_points(g)
     g["fpts"] = g["fpts_known"] if all(g[c] is not None for c in SCORING_FIELDS["DEF"]) else None
-    missing = [c for c in ("sacks", "def_int", "fum_rec", "safeties", "blk_punt", "def_int_td", "def_fum_td", "ret_td") if g[c] is None]
+    missing = [c for c in ("sacks", "def_int", "fum_rec", "safeties", "blk_punt", "def_int_td", "def_fum_td", "ret_td",
+                           "st_other_td") if g[c] is None]
     g["missing_fields"] = ";".join("blocked_kicks" if c == "blk_punt" else c for c in missing)
     g["complete"] = not missing
     g["source"] = "+".join(dict.fromkeys(["PFR"] + [v[0] for v in g["_prov"].values() if v[0] != "UNRECORDED"]))
@@ -375,13 +505,13 @@ def write_defenses(data_dir, out_dir, enrich):
     nick = {(f["team"], f["season"]): f["nickname"] or "Featured"
             for f in json.load(open(os.path.join(data_dir, "featured_defenses.json")))}
     stats = ["sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
-             "def_int_td", "def_fum_td", "def_td", "ret_td"]
+             "def_int_td", "def_fum_td", "def_td", "ret_td", "st_other_td"]
     cols = (["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
              "team_score", "pts_allowed"] + stats +
-            ["fpts", "fpts_known", "int_check", "def_int_defenders", "opp_pass_int", "recorded_td", "recorded_xpm",
-             "recorded_fgm", "team_score_residual", "complete", "missing_fields", "source",
-             "game_id", "scoring_complete", "scoring_missing", "strict_eligible", "era_scored_eligible",
-                     "era_excluded_fields", "era_blocking_fields"])
+            ["fpts", "fpts_known", "int_check", "def_int_defenders", "opp_pass_int", "opp_pass_att", "recorded_td",
+             "recorded_xpm", "recorded_xpa", "recorded_fgm", "recorded_safeties", "team_score_residual", "complete",
+             "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing", "strict_eligible",
+             "era_scored_eligible", "era_excluded_fields", "era_blocking_fields"])
     for decade in range(1950, 2000, 10):
         with open(os.path.join(out_dir, f"def_gamelogs_{decade}s.csv"), "w", newline="") as f:
             w = csv.writer(f)
@@ -401,15 +531,15 @@ def write_defenses(data_dir, out_dir, enrich):
                 t["unknown_" + c] = 1
             else:
                 t[c] += g[c]
-        t["ints_corrected"] += g["int_check"] == "raised_to_opp_qb_count"
+        t["ints_quarantined"] += g["int_check"] != "match"
     tcols = (["team_name", "team", "season", "games", "wins", "losses", "ties", "pts_allowed",
-              "pts_allowed_per_game"] + stats + ["fpts", "fpts_per_game", "fpts_known", "ints_corrected", "featured"])
+              "pts_allowed_per_game"] + stats + ["fpts", "fpts_per_game", "fpts_known", "ints_quarantined", "featured"])
     with open(os.path.join(out_dir, "def_season_totals.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(tcols)
         for (team, season), t in sorted(totals.items(), key=lambda kv: (kv[0][1], team_name(*kv[0]))):
             row = {c: "" if t.get("unknown_" + c) else int(t.get(c, 0))
-                   for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "fpts_known", "ints_corrected"] + stats}
+                   for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "fpts_known", "ints_quarantined"] + stats}
             row.update(team_name=team_name(team, season), team=team, season=season,
                        pts_allowed_per_game=round(t["pts_allowed"] / t["games"], 1),
                        fpts_per_game="" if t.get("unknown_fpts") else round(t["fpts"] / t["games"], 2),
@@ -423,13 +553,15 @@ LOG_COLUMNS = ["game_id", "pos", "player_id", "name", "season", "field", "old_va
 
 
 def change_rows(g, pos, ident):
-    """One log row per field whose final value differs from the source value."""
+    """One log row per field that was changed or checked against evidence: every value that differs from the
+    source, and every value an evidence rule confirmed, including a 0 the source already showed."""
     out = []
     for field, old in g.get("_orig", {}).items():
         new = g.get(field)
-        if old == new or (old == "absent" and new is None):
+        prov = g["_prov"].get(field)
+        if prov is None and (old == new or old == "absent"):
             continue
-        src, url, ev = g["_prov"].get(field, ("", "", ""))
+        src, url, ev = prov or ("", "", "")
         out.append({"game_id": game_id(g), "pos": pos, "player_id": ident,
                     "name": g.get("name") or g.get("team_name"), "season": g["season"], "field": field,
                     "old_value": "not in source" if old == "absent" else ("" if old is None else old),
@@ -437,25 +569,40 @@ def change_rows(g, pos, ident):
     return out
 
 
-def write_logs(out_dir, player_rows, def_rows):
-    """corrections_log.csv (every changed field, with evidence), score_reconciliation.csv (the arithmetic
-    behind SCORE0/SCORE2), conflicts.csv, unresolved_{players,defense}.csv (regular season, still missing a
-    scoring field) and verified_replacements.csv (Darius's merge format)."""
+def write_logs(out_dir, player_rows, def_rows, dedup_log):
+    """corrections_log.csv (rules, dropped duplicate rows and pointers to the per-position logs, which have
+    one row per changed or evidence-checked field), score_reconciliation.csv (the arithmetic behind
+    SCORE0/SCORE2), conflicts.csv, unresolved_{players,defense}.csv (regular season, still missing a scoring
+    field) and verified_replacements_<pos>.csv (Darius's merge format)."""
     groups = list(player_rows.items()) + [("DEF", def_rows)]
+    pos_of = {g["player_id"]: pos for pos, rows in player_rows.items() for g in rows}
     with open(os.path.join(out_dir, "corrections_log.csv"), "w", newline="") as f:
-        # Rule-level entries, plus a pointer to the per-position files with one row per changed field.
         w = csv.DictWriter(f, fieldnames=LOG_COLUMNS)
         w.writeheader()
-        w.writerow({"game_id": "all", "pos": "QB/RB/WR/TE/K", "field": "pass_cmp/pass_att", "old_value": "swapped",
-                    "new_value": "swapped back", "source": "SWAP", "source_url": KAGGLE_URL,
-                    "evidence": "Source has completions and attempts swapped on every row (cmp > att in all 36k passing games); not a scoring field"})
-        w.writerow({"game_id": "all", "pos": "DEF", "field": "sacks", "old_value": "0", "new_value": "",
-                    "source": "UNRECORDED", "source_url": KAGGLE_URL,
-                    "evidence": "Sacks were not an official stat before 1982; blank for 1950-1981"})
+        rules = [
+            ("QB", "pass_cmp/pass_att", "swapped", "swapped back", "SWAP",
+             "Source has completions and attempts swapped on every row (cmp > att in all 36k passing games); not a scoring field"),
+            ("RB/WR/TE", "targets", "0", "", "UNRECORDED",
+             "Targets aren't recorded before 1992; a 0 is blanked, nonzero values (Super Bowl box scores) are kept; not a scoring field"),
+            ("QB", "sacked", "0", "", "UNRECORDED",
+             "Times sacked isn't recorded before 1982; a 0 is blanked, nonzero values are kept; not a scoring field"),
+            ("K", "fg_missed/xp_missed", "not in source", "fga - fgm / xpa - xpm", "PFR",
+             "Derived from the source's attempts and makes (blocked kicks count as misses); exceptions are logged per row"),
+        ]
+        for pos, field, old, new, src, ev in rules:
+            w.writerow({"game_id": "all", "pos": pos, "field": field, "old_value": old, "new_value": new,
+                        "source": src, "source_url": KAGGLE_URL, "evidence": ev})
+        for d in dedup_log:
+            for r in d["dropped"]:
+                w.writerow({"game_id": game_id({"date": r["date"], "home_away": r["home_away"], "team": r["team"], "opp": r["opp"]}),
+                            "pos": pos_of.get(d["player_id"], ""), "player_id": d["player_id"], "name": d["player"],
+                            "season": r["season"], "field": "row",
+                            "old_value": f"listed for {r['team']} vs {r['opp']} on {r['date']} (game {r['game_number']})",
+                            "new_value": "dropped", "source": "DEDUPE", "source_url": KAGGLE_URL, "evidence": d["reason"]})
         for pos, _ in groups:
-            w.writerow({"game_id": "all", "pos": pos, "field": "every changed field",
+            w.writerow({"game_id": "all", "pos": pos, "field": "every changed or checked field",
                         "source": "see file", "source_url": BRANCH_RAW + f"corrections_log_{pos.lower()}.csv",
-                        "evidence": f"One row per changed field for {pos}: corrections_log_{pos.lower()}.csv"})
+                        "evidence": f"One row per changed or evidence-checked field for {pos}: corrections_log_{pos.lower()}.csv"})
     for pos, rows in groups:
         with open(os.path.join(out_dir, f"corrections_log_{pos.lower()}.csv"), "w", newline="") as f:
             w = csv.DictWriter(f, fieldnames=LOG_COLUMNS)
@@ -466,14 +613,21 @@ def write_logs(out_dir, player_rows, def_rows):
     with open(os.path.join(out_dir, "score_reconciliation.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["game_id", "team", "season", "date", "playoff", "team_score", "recorded_td", "recorded_xpm",
-                    "recorded_fgm", "recorded_points", "score_residual", "result"])
+                    "recorded_xpa", "recorded_fgm", "recorded_safeties", "recorded_points", "score_residual", "result"])
         for g in def_rows:
             r = RECON[(g["team"], g["date"])]
             kind, _ = recon_kind(g)
-            pts = 6 * r["recorded_td"] + r["recorded_xpm"] + 3 * r["recorded_fgm"]
+            pts = 6 * r["recorded_td"] + r["recorded_xpm"] + 3 * r["recorded_fgm"] + 2 * r["safeties"]
+            if kind:
+                result = kind
+            elif r["score_residual"] < 0:
+                result = "recorded plays exceed the score"
+            elif r["score_residual"] == 2 and 1960 <= g["season"] < 1994:
+                result = "2 unexplained points, but fewer PAT attempts than TDs recorded (or an AFL game)"
+            else:
+                result = "unexplained points"
             w.writerow([game_id(g), g["team"], g["season"], g["date"], g["playoff"], r["team_score"], r["recorded_td"],
-                        r["recorded_xpm"], r["recorded_fgm"], pts, r["score_residual"],
-                        kind or ("recorded plays exceed the score" if r["score_residual"] < 0 else "unexplained points")])
+                        r["recorded_xpm"], r["recorded_xpa"], r["recorded_fgm"], r["safeties"], pts, r["score_residual"], result])
     with open(os.path.join(out_dir, "conflicts.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(["pos", "player_id_or_team", "name", "game_id", "field", "detail"])
@@ -523,7 +677,15 @@ def main(data_dir, out_dir):
     d = json.load(open(os.path.join(data_dir, "player_gamelogs.json")))
     games = [dict(zip(d["columns"], r)) for r in d["rows"]]
     enrich = json.load(open(os.path.join(data_dir, "enrich", "nflverse_1999.json")))
+    dedup_log = json.load(open(os.path.join(data_dir, "enrich", "dedup_log.json")))
     load_reconciliation(data_dir)
+    teams_1999 = defaultdict(set)
+    for g in games:
+        if g["season"] == 1999:
+            teams_1999[g["player_id"]].add(g["team"])
+    match_gsis(players, teams_1999, enrich)
+    print(f"1999 players linked to nflverse ids: {len(GSIS)} of {len(teams_1999)}; not linked: "
+          + ", ".join(sorted(players[p]["name"] for p in teams_1999 if p not in GSIS)))
     player_rows = {}
 
     for pos, stats in COLUMNS.items():
@@ -546,7 +708,7 @@ def main(data_dir, out_dir):
                 w = csv.writer(f)
                 w.writerow(cols)
                 for g in games_subset:
-                    w.writerow(["" if blank(c, g["season"]) or g[c] is None else g[c] for c in cols])
+                    w.writerow(["" if g[c] is None or blank(c, g["season"], g[c]) else g[c] for c in cols])
 
         write_games(os.path.join(out_dir, f"{pos.lower()}_gamelogs.csv"), rows)
         for decade in range(1950, 2000, 10):
@@ -586,7 +748,7 @@ def main(data_dir, out_dir):
                                                       t["pass_td"], t["pass_int"])
                 w.writerow([row[c] for c in tcols])
     def_rows = write_defenses(data_dir, out_dir, enrich)
-    write_logs(out_dir, player_rows, def_rows)
+    write_logs(out_dir, player_rows, def_rows, dedup_log)
     for name in sorted(os.listdir(out_dir)):
         print(name, os.path.getsize(os.path.join(out_dir, name)))
 

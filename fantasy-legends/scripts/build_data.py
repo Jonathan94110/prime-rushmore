@@ -15,6 +15,7 @@ import json
 import os
 import sys
 from collections import Counter, defaultdict
+from datetime import date
 
 import ijson
 
@@ -102,7 +103,7 @@ PLAYER_COLUMNS = [
 DST_COLUMNS = [
     "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
     "team_score", "pts_allowed", "sacks", "def_int", "opp_pass_int", "def_int_td", "safeties", "ret_td", "fpts",
-    "recorded_td", "recorded_xpm", "recorded_fgm", "score_residual",
+    "recorded_td", "recorded_xpm", "recorded_xpa", "recorded_fgm", "score_residual", "opp_pass_att", "sacks_recorded",
 ]
 
 
@@ -110,28 +111,68 @@ STAT_FIELDS = ("passing_yards", "rushing_attempts", "receiving_receptions", "fie
                "point_after_makes", "kick_return_attempts", "punt_return_attempts", "defense_tackles")
 
 
+def has_stats(r):
+    return any(num(r[2][f]) for f in STAT_FIELDS)
+
+
+def days_apart(a, b):
+    return abs((date.fromisoformat(a) - date.fromisoformat(b)).days)
+
+
 def dedupe(rows, name, log):
-    """Keep one row per player per date. The source sometimes lists a player for two teams on the same
-    day; keep the row with stats, or else the team he played for most that season, and log it."""
-    by_date = defaultdict(list)
+    """Keep one row per player per game. The source sometimes lists a player for two teams in the same week:
+    on the same date, or under the same game number a day or two apart (a mid-season move). Keep the row with
+    stats, else the row whose team matches his games either side, else the team he played for most that
+    season. Then drop a row with no stats for a team he played no other game for that season, sitting between
+    two games for another team (the source lists him on the wrong roster). Every drop is logged."""
+    rows = sorted(rows, key=lambda r: (r[2]["date"], r[1]))
+    groups = []
     for r in rows:
-        by_date[r[2]["date"]].append(r)
+        prev = groups[-1][-1] if groups else None
+        if prev and (prev[2]["date"] == r[2]["date"]
+                     or (prev[0] == r[0] and prev[1] == r[1] and days_apart(prev[2]["date"], r[2]["date"]) <= 3)):
+            groups[-1].append(r)
+        else:
+            groups.append([r])
     out = []
-    for date, same in by_date.items():
+    for i, same in enumerate(groups):
         if len(same) == 1:
             out.append(same[0])
             continue
-        with_stats = [r for r in same if any(num(r[2][f]) for f in STAT_FIELDS)]
+        neighbours = set()
+        for j in (i - 1, i + 1):
+            if 0 <= j < len(groups) and groups[j][0][0] == same[0][0]:
+                neighbours.update(r[2]["team"] for r in groups[j])
+        with_stats = [r for r in same if has_stats(r)]
+        matching = [r for r in same if r[2]["team"] in neighbours]
         if len(with_stats) == 1:
             keep, why = with_stats[0], "only row with stats"
+        elif len(matching) == 1:
+            keep, why = matching[0], "team he played for in the games either side"
         else:
             season_teams = Counter(r[2]["team"] for r in rows if r[0] == same[0][0])
             keep = max(same, key=lambda r: season_teams[r[2]["team"]])
             why = "team he played for most that season"
         out.append(keep)
-        log.append({"player": name, "date": date, "kept_team": keep[2]["team"],
-                    "dropped_teams": [r[2]["team"] for r in same if r is not keep], "reason": why})
-    return sorted(out, key=lambda r: (r[0], r[1]))
+        log.append({"player": name, "date": keep[2]["date"], "kept_team": keep[2]["team"],
+                    "player_id": keep[2]["player_id"],
+                    "dropped": [{"team": r[2]["team"], "opp": r[2]["opponent"], "home_away": r[2]["game_location"],
+                                 "date": r[2]["date"], "season": r[0], "game_number": r[1]} for r in same if r is not keep],
+                    "reason": f"listed for two teams in game {keep[1]} of {keep[0]}; kept the {why}"})
+    kept = []
+    for i, r in enumerate(out):
+        before, after = out[i - 1] if i else None, out[i + 1] if i + 1 < len(out) else None
+        season_teams = Counter(x[2]["team"] for x in out if x[0] == r[0])
+        if (before and after and before[0] == r[0] == after[0] and before[2]["team"] == after[2]["team"] != r[2]["team"]
+                and season_teams[r[2]["team"]] == 1 and not has_stats(r)):
+            log.append({"player": name, "date": r[2]["date"], "kept_team": None, "player_id": r[2]["player_id"],
+                        "dropped": [{"team": r[2]["team"], "opp": r[2]["opponent"], "home_away": r[2]["game_location"],
+                                     "date": r[2]["date"], "season": r[0], "game_number": r[1]}],
+                        "reason": f"row with no stats for {r[2]['team']}, his only {r[2]['team']} game in {r[0]}, "
+                                  f"between games for {before[2]['team']} ({before[2]['date']}, {after[2]['date']})"})
+            continue
+        kept.append(r)
+    return sorted(kept, key=lambda r: (r[0], r[1]))
 
 
 def main(games_path, profiles_path, out_dir):
@@ -167,7 +208,7 @@ def main(games_path, profiles_path, out_dir):
                     "result": result(row), "team_score": num(row["player_team_score"]),
                     "pts_allowed": num(row["opponent_score"]),
                     "sacks": 0, "def_int": 0, "def_int_td": 0, "safeties": 0, "ret_td": 0, "int_thrown": 0,
-                    "recorded_td": 0, "recorded_xpm": 0, "recorded_fgm": 0,
+                    "pass_att": 0, "recorded_td": 0, "recorded_xpm": 0, "recorded_xpa": 0, "recorded_fgm": 0,
                 }
             t["sacks"] += num(row["defense_sacks"])
             t["def_int"] += num(row["defense_interceptions"])
@@ -175,12 +216,15 @@ def main(games_path, profiles_path, out_dir):
             t["safeties"] += num(row["defense_safeties"])
             t["ret_td"] += num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
             t["int_thrown"] += num(row["passing_interceptions"])
+            t["pass_att"] += num(row["passing_completions"])  # attempts (swapped in the source)
             # Every scoring play the source records for this team, summed over all its players, for
-            # reconciling against the final score. XP made sits in point_after_attemps (swapped in the source).
+            # reconciling against the final score. XP made sits in point_after_attemps and XP attempted in
+            # point_after_makes (swapped in the source). Safeties are in `safeties`.
             t["recorded_td"] += (num(row["rushing_touchdowns"]) + num(row["receiving_touchdowns"])
                                  + num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
                                  + num(row["defense_interception_touchdowns"]))
             t["recorded_xpm"] += num(row["point_after_attemps"])
+            t["recorded_xpa"] += num(row["point_after_makes"])
             t["recorded_fgm"] += num(row["field_goal_makes"])
 
             player_rows[row["player_id"]].append((season, week, row, playoff))
@@ -241,7 +285,9 @@ def main(games_path, profiles_path, out_dir):
                 "sacked": num(row["passing_sacks"]),
                 "rush_att": num(row["rushing_attempts"]), "rush_yds": num(row["rushing_yards"]),
                 "rush_td": num(row["rushing_touchdowns"]),
-                "targets": num(row["receiving_targets"]) if season >= TARGETS_FIRST_SEASON else None,
+                # Targets aren't recorded before 1992 (the source shows 0); nonzero values there come from
+                # Super Bowl box scores and are kept.
+                "targets": num(row["receiving_targets"]) if season >= TARGETS_FIRST_SEASON or num(row["receiving_targets"]) else None,
                 "rec": num(row["receiving_receptions"]), "rec_yds": num(row["receiving_yards"]),
                 "rec_td": num(row["receiving_touchdowns"]),
                 "ret_td": num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"]),
@@ -259,11 +305,15 @@ def main(games_path, profiles_path, out_dir):
     by_team_date = {(t["team"], t["date"]): t for t in team_games.values()}
     for key in sorted(team_games, key=lambda k: (k[1], k[0], k[2])):
         d = team_games[key]
-        # Interceptions thrown by the opponent's passers in this game, to cross-check def_int.
+        # Interceptions thrown and passes attempted by the opponent's passers in this game, to cross-check def_int.
         opp_game = by_team_date.get((d["opp"], d["date"]))
         d["opp_pass_int"] = opp_game["int_thrown"] if opp_game else None
+        d["opp_pass_att"] = opp_game["pass_att"] if opp_game else None
         # Final score minus every recorded scoring play. 0 means the recorded plays explain the whole score.
-        d["score_residual"] = d["team_score"] - (6 * d["recorded_td"] + d["recorded_xpm"] + 3 * d["recorded_fgm"])
+        d["score_residual"] = d["team_score"] - (6 * d["recorded_td"] + d["recorded_xpm"] + 3 * d["recorded_fgm"]
+                                                 + 2 * d["safeties"])
+        # Before 1982 the source has sacks for only a few players, so a team total would be a partial count.
+        d["sacks_recorded"] = d["sacks"]
         if d["season"] < SACKS_FIRST_SEASON:
             d["sacks"] = None
         d["fpts"] = dst_fantasy_points(d)

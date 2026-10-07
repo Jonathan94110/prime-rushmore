@@ -445,7 +445,7 @@ Franco Harris,1974,13,1974-12-08,False,PIT,NWE,A,W,21,17,29,136,1,,1,4,0,0,0,0,0
 Franco Harris,1974,14,1974-12-14,False,PIT,CIN,H,W,27,3,17,79,0,,0,0,0,0,0,0,0,0,0,7.9,7.9,9167,False,targets,PFR+RULE2PT+SCORE0,19741214-CIN-PIT,True,,True,True,,,0
 Franco Harris,1974,15,1974-12-22,True,PIT,BUF,H,W,32,14,24,74,3,,1,5,0,0,0,0,0,0,0,25.9,26.9,9167,False,targets,PFR+RULE2PT+SCORE0,19741222-BUF-PIT,True,,True,True,,,0
 Franco Harris,1974,16,1974-12-29,True,PIT,OAK,A,W,24,13,29,111,2,,0,0,0,0,0,0,0,0,0,23.1,23.1,9167,False,targets,PFR+RULE2PT+SCORE0,19741229-PIT-OAK,True,,True,True,,,0
-Franco Harris,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,34,158,1,,0,0,0,0,0,0,0,0,0,21.8,21.8,9167,False,targets,PFR+RULE2PT+SCORE2,19750112-MIN-PIT-N,True,,True,True,,,2
+Franco Harris,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,34,158,1,,0,0,0,0,0,0,0,0,0,21.8,21.8,9167,False,targets,PFR+RULE2PT+SCORE0,19750112-MIN-PIT-N,True,,True,True,,,0
 Franco Harris,1975,1,1975-09-21,False,PIT,SDG,A,W,37,0,17,78,0,,2,24,0,0,0,0,0,,0,10.2,12.2,9167,False,targets;fum_rec_td,PFR+RULE2PT,19750921-PIT-SDG,False,fum_rec_td,False,True,fum_rec_td,,6
 Franco Harris,1975,2,1975-09-28,False,PIT,BUF,H,L,21,30,18,84,2,,3,10,0,0,0,0,0,0,0,21.4,24.4,9167,False,targets,PFR+RULE2PT+SCORE0,19750928-BUF-PIT,True,,True,True,,,0
 Franco Harris,1975,3,1975-10-05,False,PIT,CLE,A,W,42,6,17,57,1,,1,9,0,0,0,0,0,0,0,12.6,13.6,9167,False,targets,PFR+RULE2PT+SCORE0,19751005-PIT-CLE,True,,True,True,,,0
@@ -462,7 +462,7 @@ Franco Harris,1975,13,1975-12-13,False,PIT,CIN,H,W,35,14,20,118,2,,0,0,0,0,0,0,0
 Franco Harris,1975,14,1975-12-20,False,PIT,RAM,A,L,3,10,21,126,0,,1,4,0,0,0,0,0,0,0,13.0,14.0,9167,False,targets,PFR+RULE2PT+SCORE0,19751220-PIT-RAM,True,,True,True,,,0
 Franco Harris,1975,15,1975-12-27,True,PIT,BAL,H,W,28,10,27,153,1,,0,0,0,0,0,0,0,,0,21.3,21.3,9167,False,targets;fum_rec_td,PFR+RULE2PT,19751227-BAL-PIT,False,fum_rec_td,False,True,fum_rec_td,,6
 Franco Harris,1975,16,1976-01-04,True,PIT,OAK,H,W,16,10,27,79,1,,5,58,0,0,0,0,0,0,0,19.7,24.7,9167,False,targets,PFR+RULE2PT+SCORE0,19760104-OAK-PIT,True,,True,True,,,0
-Franco Harris,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,27,82,0,,1,26,0,0,0,0,0,0,0,10.8,11.8,9167,False,targets,PFR+RULE2PT+SCORE2,19760118-DAL-PIT-N,True,,True,True,,,2
+Franco Harris,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,27,82,0,,1,26,0,0,0,0,0,0,0,10.8,11.8,9167,False,targets,PFR+RULE2PT+SCORE0,19760118-DAL-PIT-N,True,,True,True,,,0
 Franco Harris,1976,1,1976-09-12,False,PIT,OAK,A,L,28,31,18,68,1,,1,39,0,0,0,0,0,0,0,16.7,17.7,9167,False,targets,PFR+RULE2PT+SCORE0,19760912-PIT-OAK,True,,True,True,,,0
 Franco Harris,1976,2,1976-09-19,False,PIT,CLE,H,W,31,14,25,118,1,,2,10,0,0,0,0,0,0,0,18.8,20.8,9167,False,targets,PFR+RULE2PT+SCORE0,19760919-CLE-PIT,True,,True,True,,,0
 Franco Harris,1976,3,1976-09-26,False,PIT,NWE,H,L,27,30,19,78,2,,0,0,0,0,0,0,0,0,0,19.8,19.8,9167,False,targets,PFR+RULE2PT+SCORE0,19760926-NWE-PIT,True,,True,True,,,0
@@ -761,7 +761,7 @@ Tony Dorsett,1979,12,1979-11-18,False,DAL,WAS,A,L,20,34,14,43,0,,8,61,0,0,0,0,0,
 Tony Dorsett,1979,13,1979-11-22,False,DAL,HOU,H,L,24,30,12,54,1,,5,36,0,0,0,0,0,0,0,15.0,20.0,5830,False,targets,PFR+RULE2PT+SCORE0,19791122-HOU-DAL,True,,True,True,,,0
 Tony Dorsett,1979,14,1979-12-02,False,DAL,NYG,H,W,28,7,29,108,1,,1,17,0,0,0,0,0,0,0,18.5,19.5,5830,False,targets,PFR+RULE2PT+SCORE0,19791202-NYG-DAL,True,,True,True,,,0
 Tony Dorsett,1979,15,1979-12-08,False,DAL,PHI,A,W,24,17,9,36,0,,1,11,0,0,0,0,0,0,0,4.7,5.7,5830,False,targets,PFR+RULE2PT+SCORE0,19791208-DAL-PHI,True,,True,True,,,0
-Tony Dorsett,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,19,87,0,,0,0,0,0,0,0,0,0,0,8.7,8.7,5830,False,targets,PFR+RULE2PT+SCORE2,19791230-RAM-DAL,True,,True,True,,,2
+Tony Dorsett,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,19,87,0,,0,0,0,0,0,0,0,0,0,8.7,8.7,5830,False,targets,PFR+RULE2PT+SCORE0,19791230-RAM-DAL,True,,True,True,,,0
 Earl Campbell,1978,1,1978-09-03,False,HOU,ATL,A,L,14,20,15,137,1,,2,-8,0,0,0,0,0,0,0,18.9,20.9,3324,False,targets,PFR+RULE2PT+SCORE0,19780903-HOU-ATL,True,,True,True,,,0
 Earl Campbell,1978,2,1978-09-10,False,HOU,KAN,A,W,20,17,22,107,2,,2,15,0,0,0,0,0,0,0,24.2,26.2,3324,False,targets,PFR+RULE2PT+SCORE0,19780910-HOU-KAN,True,,True,True,,,0
 Earl Campbell,1978,3,1978-09-17,False,HOU,SFO,H,W,20,19,25,78,1,,0,0,0,0,0,0,0,0,0,13.8,13.8,3324,False,targets,PFR+RULE2PT+SCORE0,19780917-SFO-HOU,True,,True,True,,,0
@@ -779,7 +779,7 @@ Earl Campbell,1978,15,1978-12-10,False,HOU,NOR,A,W,17,12,25,67,1,,0,0,0,0,0,0,0,
 Earl Campbell,1978,16,1978-12-17,False,HOU,SDG,H,L,24,45,14,77,0,,1,5,0,0,0,0,0,0,0,8.2,9.2,3324,False,targets,PFR+RULE2PT+SCORE0,19781217-SDG-HOU,True,,True,True,,,0
 Earl Campbell,1978,17,1978-12-24,True,HOU,MIA,A,W,17,9,26,84,1,,1,13,0,0,0,0,0,0,0,15.7,16.7,3324,False,targets,PFR+RULE2PT+SCORE0,19781224-HOU-MIA,True,,True,True,,,0
 Earl Campbell,1978,18,1978-12-31,True,HOU,NWE,A,W,31,14,27,118,1,,1,10,0,0,0,0,0,0,0,18.8,19.8,3324,False,targets,PFR+RULE2PT+SCORE0,19781231-HOU-NWE,True,,True,True,,,0
-Earl Campbell,1978,19,1979-01-07,True,HOU,PIT,A,L,5,34,22,62,0,,1,4,0,0,0,0,0,0,0,6.6,7.6,3324,False,targets,PFR+RULE2PT+SCORE2,19790107-HOU-PIT,True,,True,True,,,2
+Earl Campbell,1978,19,1979-01-07,True,HOU,PIT,A,L,5,34,22,62,0,,1,4,0,0,0,0,0,0,0,6.6,7.6,3324,False,targets,PFR+RULE2PT+SCORE0,19790107-HOU-PIT,True,,True,True,,,0
 Earl Campbell,1979,1,1979-09-02,False,HOU,WAS,A,W,29,27,32,166,2,,2,2,0,0,0,0,0,0,0,28.8,30.8,3324,False,targets,PFR+RULE2PT+SCORE0,19790902-HOU-WAS,True,,True,True,,,0
 Earl Campbell,1979,2,1979-09-09,False,HOU,PIT,A,L,7,38,16,38,0,,1,4,0,0,0,0,0,0,0,4.2,5.2,3324,False,targets,PFR+RULE2PT+SCORE0,19790909-HOU-PIT,True,,True,True,,,0
 Earl Campbell,1979,3,1979-09-16,False,HOU,KAN,H,W,20,6,32,131,1,,0,0,0,0,0,0,0,0,0,19.1,19.1,3324,False,targets,PFR+RULE2PT+SCORE0,19790916-KAN-HOU,True,,True,True,,,0
@@ -1376,7 +1376,7 @@ Lydell Mitchell,1975,15,1975-12-27,True,BAL,PIT,A,L,10,28,26,63,0,,4,20,0,0,0,0,
 Lydell Mitchell,1976,1,1976-09-12,False,BAL,NWE,A,W,27,13,18,73,1,,6,72,0,0,0,0,0,0,0,20.5,26.5,15495,False,targets,PFR+RULE2PT+SCORE0,19760912-BAL-NWE,True,,True,True,,,0
 Lydell Mitchell,1976,2,1976-09-19,False,BAL,CIN,H,W,28,27,27,106,0,,5,42,0,0,0,0,0,0,0,14.8,19.8,15495,False,targets,PFR+RULE2PT+SCORE0,19760919-CIN-BAL,True,,True,True,,,0
 Lydell Mitchell,1976,3,1976-09-26,False,BAL,DAL,A,L,27,30,27,115,0,,0,0,0,0,0,0,0,0,0,11.5,11.5,15495,False,targets,PFR+RULE2PT+SCORE0,19760926-BAL-DAL,True,,True,True,,,0
-Lydell Mitchell,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,14,98,0,,5,41,1,0,0,0,0,0,0,19.9,24.9,15495,False,targets,PFR+RULE2PT+SCORE2,19761003-TAM-BAL,True,,True,True,,,2
+Lydell Mitchell,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,14,98,0,,5,41,1,0,0,0,0,,0,19.9,24.9,15495,False,targets;fum_rec_td,PFR+RULE2PT,19761003-TAM-BAL,False,fum_rec_td,False,True,fum_rec_td,,2
 Lydell Mitchell,1976,5,1976-10-10,False,BAL,MIA,H,W,28,14,33,95,0,,2,27,0,0,0,0,0,0,0,12.2,14.2,15495,False,targets,PFR+RULE2PT+SCORE0,19761010-MIA-BAL,True,,True,True,,,0
 Lydell Mitchell,1976,6,1976-10-17,False,BAL,BUF,A,W,31,13,22,91,1,,2,13,0,0,0,0,0,0,0,16.4,18.4,15495,False,targets,PFR+RULE2PT+SCORE0,19761017-BAL-BUF,True,,True,True,,,0
 Lydell Mitchell,1976,7,1976-10-24,False,BAL,NYJ,A,W,20,0,22,82,0,,4,28,0,0,0,0,0,0,0,11.0,15.0,15495,False,targets,PFR+RULE2PT+SCORE0,19761024-BAL-NYJ,True,,True,True,,,0
@@ -1761,7 +1761,7 @@ Bill Brown,1971,11,1971-11-28,False,MIN,ATL,H,W,24,7,18,85,2,,2,7,0,0,0,0,0,0,0,
 Bill Brown,1971,12,1971-12-05,False,MIN,SDG,A,L,14,30,4,13,0,,3,61,0,0,0,0,0,0,0,7.4,10.4,2550,False,targets,PFR+RULE2PT+SCORE0,19711205-MIN-SDG,True,,True,True,,,0
 Bill Brown,1971,13,1971-12-11,False,MIN,DET,H,W,29,10,2,0,0,,1,2,0,0,0,0,0,,0,0.2,1.2,2550,False,targets;fum_rec_td,PFR+RULE2PT,19711211-DET-MIN,False,fum_rec_td,False,True,fum_rec_td,,14
 Bill Brown,1971,14,1971-12-19,False,MIN,CHI,A,W,27,10,3,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2550,False,targets,PFR+RULE2PT+SCORE0,19711219-MIN-CHI,True,,True,True,,,0
-Bill Brown,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2550,False,targets,PFR+RULE2PT+SCORE2,19711225-DAL-MIN,True,,True,True,,,2
+Bill Brown,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2550,False,targets,PFR+RULE2PT+SCORE0,19711225-DAL-MIN,True,,True,True,,,0
 Bill Brown,1972,1,1972-09-18,False,MIN,WAS,H,L,21,24,5,22,0,,5,47,1,0,0,0,0,0,0,12.9,17.9,2550,False,targets,PFR+RULE2PT+SCORE0,19720918-WAS-MIN,True,,True,True,,,0
 Bill Brown,1972,2,1972-09-24,False,MIN,DET,A,W,34,10,4,19,0,,2,26,0,0,0,0,0,0,0,4.5,6.5,2550,False,targets,PFR+RULE2PT+SCORE0,19720924-MIN-DET,True,,True,True,,,0
 Bill Brown,1972,3,1972-10-01,False,MIN,MIA,H,L,14,16,6,16,1,,1,5,0,0,0,0,0,0,0,8.1,9.1,2550,False,targets,PFR+RULE2PT+SCORE0,19721001-MIA-MIN,True,,True,True,,,0
@@ -2247,7 +2247,7 @@ Robert Newhouse,1976,11,1976-11-21,False,DAL,ATL,A,L,10,17,2,6,0,,0,0,0,0,0,0,0,
 Robert Newhouse,1976,12,1976-11-25,False,DAL,STL,H,W,19,14,5,18,0,,1,5,0,0,0,0,0,0,0,2.3,3.3,16335,False,targets,PFR+RULE2PT+SCORE2,19761125-STL-DAL,True,,True,True,,,2
 Robert Newhouse,1976,13,1976-12-05,False,DAL,PHI,A,W,26,7,12,48,1,,3,20,0,0,0,0,0,0,0,12.8,15.8,16335,False,targets,PFR+RULE2PT+SCORE2,19761205-DAL-PHI,True,,True,True,,,2
 Robert Newhouse,1976,14,1976-12-12,False,DAL,WAS,H,L,14,27,10,23,0,,1,12,0,0,0,0,0,0,0,3.5,4.5,16335,False,targets,PFR+RULE2PT+SCORE0,19761212-WAS-DAL,True,,True,True,,,0
-Robert Newhouse,1976,15,1976-12-19,True,DAL,RAM,H,L,12,14,9,25,0,,2,19,0,0,0,0,0,0,0,4.4,6.4,16335,False,targets,PFR+RULE2PT+SCORE2,19761219-RAM-DAL,True,,True,True,,,2
+Robert Newhouse,1976,15,1976-12-19,True,DAL,RAM,H,L,12,14,9,25,0,,2,19,0,0,0,0,0,0,0,4.4,6.4,16335,False,targets,PFR+RULE2PT+SCORE0,19761219-RAM-DAL,True,,True,True,,,0
 Robert Newhouse,1977,1,1977-09-18,False,DAL,MIN,A,W,16,10,10,24,0,,2,18,0,0,0,0,0,0,0,4.2,6.2,16335,False,targets,PFR+RULE2PT+SCORE0,19770918-DAL-MIN,True,,True,True,,,0
 Robert Newhouse,1977,2,1977-09-25,False,DAL,NYG,H,W,41,21,12,37,0,,0,0,0,0,0,0,0,0,0,3.7,3.7,16335,False,targets,PFR+RULE2PT+SCORE0,19770925-NYG-DAL,True,,True,True,,,0
 Robert Newhouse,1977,3,1977-10-02,False,DAL,TAM,H,W,23,7,16,73,1,,0,0,0,0,0,0,0,,0,13.3,13.3,16335,False,targets;fum_rec_td,PFR+RULE2PT,19771002-TAM-DAL,False,fum_rec_td,False,True,fum_rec_td,,6
@@ -2294,7 +2294,7 @@ Robert Newhouse,1979,13,1979-11-22,False,DAL,HOU,H,L,24,30,12,30,0,,2,36,1,0,0,0
 Robert Newhouse,1979,14,1979-12-02,False,DAL,NYG,H,W,28,7,10,48,0,,0,0,0,0,0,0,0,0,0,4.8,4.8,16335,False,targets,PFR+RULE2PT+SCORE0,19791202-NYG-DAL,True,,True,True,,,0
 Robert Newhouse,1979,15,1979-12-08,False,DAL,PHI,A,W,24,17,12,68,1,,2,1,0,0,0,0,0,0,0,12.9,14.9,16335,False,targets,PFR+RULE2PT+SCORE0,19791208-DAL-PHI,True,,True,True,,,0
 Robert Newhouse,1979,16,1979-12-16,False,DAL,WAS,H,W,35,34,9,22,1,,0,0,0,0,0,0,0,0,0,8.2,8.2,16335,False,targets,PFR+RULE2PT+SCORE0,19791216-WAS-DAL,True,,True,True,,,0
-Robert Newhouse,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,7,21,0,,0,0,0,0,0,0,0,0,0,2.1,2.1,16335,False,targets,PFR+RULE2PT+SCORE2,19791230-RAM-DAL,True,,True,True,,,2
+Robert Newhouse,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,7,21,0,,0,0,0,0,0,0,0,0,0,2.1,2.1,16335,False,targets,PFR+RULE2PT+SCORE0,19791230-RAM-DAL,True,,True,True,,,0
 Jim Nance,1970,1,1970-09-20,False,BOS,MIA,H,W,27,14,20,89,1,,3,28,0,0,0,0,0,0,0,17.7,20.7,16176,False,targets,PFR+RULE2PT+SCORE0,19700920-MIA-BOS,True,,True,True,,,0
 Jim Nance,1970,2,1970-09-27,False,BOS,NYJ,H,L,21,31,11,47,1,,3,8,0,0,0,0,0,0,0,11.5,14.5,16176,False,targets,PFR+RULE2PT+SCORE0,19700927-NYJ-BOS,True,,True,True,,,0
 Jim Nance,1970,3,1970-10-04,False,BOS,BAL,H,L,6,14,3,5,0,,0,0,0,0,0,0,0,0,0,0.5,0.5,16176,False,targets,PFR+RULE2PT+SCORE0,19701004-BAL-BOS,True,,True,True,,,0
@@ -2876,7 +2876,7 @@ Dave Osborn,1971,9,1971-11-14,False,MIN,GNB,H,W,3,0,15,45,0,,1,12,0,0,0,0,0,0,0,
 Dave Osborn,1971,10,1971-11-21,False,MIN,NOR,A,W,23,10,9,15,0,,0,0,0,0,0,0,0,0,0,1.5,1.5,16880,False,targets,PFR+RULE2PT+SCORE0,19711121-MIN-NOR,True,,True,True,,,0
 Dave Osborn,1971,13,1971-12-11,False,MIN,DET,H,W,29,10,7,20,0,,0,0,0,0,0,0,0,,0,2.0,2.0,16880,False,targets;fum_rec_td,PFR+RULE2PT,19711211-DET-MIN,False,fum_rec_td,False,True,fum_rec_td,,14
 Dave Osborn,1971,14,1971-12-19,False,MIN,CHI,A,W,27,10,6,-2,1,,2,15,0,0,0,0,0,0,0,7.3,9.3,16880,False,targets,PFR+RULE2PT+SCORE0,19711219-MIN-CHI,True,,True,True,,,0
-Dave Osborn,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,6,13,0,,0,0,0,0,0,0,0,0,0,1.3,1.3,16880,False,targets,PFR+RULE2PT+SCORE2,19711225-DAL-MIN,True,,True,True,,,2
+Dave Osborn,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,6,13,0,,0,0,0,0,0,0,0,0,0,1.3,1.3,16880,False,targets,PFR+RULE2PT+SCORE0,19711225-DAL-MIN,True,,True,True,,,0
 Dave Osborn,1972,1,1972-09-18,False,MIN,WAS,H,L,21,24,1,4,0,,0,0,0,0,0,0,0,0,0,0.4,0.4,16880,False,targets,PFR+RULE2PT+SCORE0,19720918-WAS-MIN,True,,True,True,,,0
 Dave Osborn,1972,2,1972-09-24,False,MIN,DET,A,W,34,10,10,48,2,,2,23,1,0,0,0,0,0,0,25.1,27.1,16880,False,targets,PFR+RULE2PT+SCORE0,19720924-MIN-DET,True,,True,True,,,0
 Dave Osborn,1972,3,1972-10-01,False,MIN,MIA,H,L,14,16,14,47,0,,1,4,0,0,0,0,0,0,0,5.1,6.1,16880,False,targets,PFR+RULE2PT+SCORE0,19721001-MIA-MIN,True,,True,True,,,0
@@ -3576,7 +3576,7 @@ Walt Garrison,1970,11,1970-11-26,False,DAL,GNB,H,W,16,3,14,57,0,,3,17,0,0,0,0,0,
 Walt Garrison,1970,12,1970-12-06,False,DAL,WAS,H,W,34,0,12,74,1,,1,6,1,0,0,0,0,0,0,20.0,21.0,7657,False,targets,PFR+RULE2PT+SCORE0,19701206-WAS-DAL,True,,True,True,,,0
 Walt Garrison,1970,13,1970-12-12,False,DAL,CLE,A,W,6,2,19,55,0,,2,11,0,0,0,0,0,0,0,6.6,8.6,7657,False,targets,PFR+RULE2PT+SCORE0,19701212-DAL-CLE,True,,True,True,,,0
 Walt Garrison,1970,14,1970-12-20,False,DAL,HOU,H,W,52,10,5,8,0,,3,69,0,0,0,0,0,0,0,7.7,10.7,7657,False,targets,PFR+RULE2PT+SCORE0,19701220-HOU-DAL,True,,True,True,,,0
-Walt Garrison,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,17,72,0,,2,8,0,0,0,0,0,0,0,8.0,10.0,7657,False,targets,PFR+RULE2PT+SCORE2,19701226-DET-DAL,True,,True,True,,,2
+Walt Garrison,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,17,72,0,,2,8,0,0,0,0,0,0,0,8.0,10.0,7657,False,targets,PFR+RULE2PT+SCORE0,19701226-DET-DAL,True,,True,True,,,0
 Walt Garrison,1970,16,1971-01-03,True,DAL,SFO,A,W,17,10,17,71,0,,3,51,1,0,0,0,0,0,0,18.2,21.2,7657,False,targets,PFR+RULE2PT+SCORE0,19710103-DAL-SFO,True,,True,True,,,0
 Walt Garrison,1970,17,1971-01-17,True,DAL,BAL,N,L,13,16,12,65,0,,2,19,0,0,0,0,0,0,0,8.4,10.4,7657,False,targets,PFR+RULE2PT+SCORE0,19710117-BAL-DAL-N,True,,True,True,,,0
 Walt Garrison,1971,1,1971-09-19,False,DAL,BUF,A,W,49,37,16,78,1,,1,33,0,0,0,0,0,0,0,17.1,18.1,7657,False,targets,PFR+RULE2PT+SCORE0,19710919-DAL-BUF,True,,True,True,,,0
@@ -3689,7 +3689,7 @@ Rocky Bleier,1974,13,1974-12-08,False,PIT,NWE,A,W,21,17,12,42,0,,1,8,0,0,0,0,0,0
 Rocky Bleier,1974,14,1974-12-14,False,PIT,CIN,H,W,27,3,8,38,0,,0,0,0,0,0,0,0,0,0,3.8,3.8,1873,False,targets,PFR+RULE2PT+SCORE0,19741214-CIN-PIT,True,,True,True,,,0
 Rocky Bleier,1974,15,1974-12-22,True,PIT,BUF,H,W,32,14,14,45,0,,3,54,1,0,0,0,0,0,0,15.9,18.9,1873,False,targets,PFR+RULE2PT+SCORE0,19741222-BUF-PIT,True,,True,True,,,0
 Rocky Bleier,1974,16,1974-12-29,True,PIT,OAK,A,W,24,13,18,98,0,,2,25,0,0,0,0,0,0,0,12.3,14.3,1873,False,targets,PFR+RULE2PT+SCORE0,19741229-PIT-OAK,True,,True,True,,,0
-Rocky Bleier,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,17,65,0,,2,11,0,0,0,0,0,0,0,7.6,9.6,1873,False,targets,PFR+RULE2PT+SCORE2,19750112-MIN-PIT-N,True,,True,True,,,2
+Rocky Bleier,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,17,65,0,,2,11,0,0,0,0,0,0,0,7.6,9.6,1873,False,targets,PFR+RULE2PT+SCORE0,19750112-MIN-PIT-N,True,,True,True,,,0
 Rocky Bleier,1975,1,1975-09-21,False,PIT,SDG,A,W,37,0,14,43,0,,1,8,0,0,0,0,0,,0,5.1,6.1,1873,False,targets;fum_rec_td,PFR+RULE2PT,19750921-PIT-SDG,False,fum_rec_td,False,True,fum_rec_td,,6
 Rocky Bleier,1975,2,1975-09-28,False,PIT,BUF,H,L,21,30,7,18,0,,1,9,0,0,0,0,0,0,0,2.7,3.7,1873,False,targets,PFR+RULE2PT+SCORE0,19750928-BUF-PIT,True,,True,True,,,0
 Rocky Bleier,1975,3,1975-10-05,False,PIT,CLE,A,W,42,6,10,37,0,,1,-6,0,0,0,0,0,0,0,3.1,4.1,1873,False,targets,PFR+RULE2PT+SCORE0,19751005-PIT-CLE,True,,True,True,,,0
@@ -3703,7 +3703,7 @@ Rocky Bleier,1975,13,1975-12-13,False,PIT,CIN,H,W,35,14,9,25,0,,2,-6,0,0,0,0,0,,
 Rocky Bleier,1975,14,1975-12-20,False,PIT,RAM,A,L,3,10,7,31,0,,0,0,0,0,0,0,0,0,0,3.1,3.1,1873,False,targets,PFR+RULE2PT+SCORE0,19751220-PIT-RAM,True,,True,True,,,0
 Rocky Bleier,1975,15,1975-12-27,True,PIT,BAL,H,W,28,10,12,28,1,,2,14,0,0,0,0,0,,0,10.2,12.2,1873,False,targets;fum_rec_td,PFR+RULE2PT,19751227-BAL-PIT,False,fum_rec_td,False,True,fum_rec_td,,6
 Rocky Bleier,1975,16,1976-01-04,True,PIT,OAK,H,W,16,10,10,16,0,,0,0,0,0,0,0,0,0,0,1.6,1.6,1873,False,targets,PFR+RULE2PT+SCORE0,19760104-OAK-PIT,True,,True,True,,,0
-Rocky Bleier,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,15,51,0,,0,0,0,0,0,0,0,0,0,5.1,5.1,1873,False,targets,PFR+RULE2PT+SCORE2,19760118-DAL-PIT-N,True,,True,True,,,2
+Rocky Bleier,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,15,51,0,,0,0,0,0,0,0,0,0,0,5.1,5.1,1873,False,targets,PFR+RULE2PT+SCORE0,19760118-DAL-PIT-N,True,,True,True,,,0
 Rocky Bleier,1976,1,1976-09-12,False,PIT,OAK,A,L,28,31,20,73,1,,2,45,0,0,0,0,0,0,0,17.8,19.8,1873,False,targets,PFR+RULE2PT+SCORE0,19760912-PIT-OAK,True,,True,True,,,0
 Rocky Bleier,1976,2,1976-09-19,False,PIT,CLE,H,W,31,14,12,62,0,,1,10,0,0,0,0,0,0,0,7.2,8.2,1873,False,targets,PFR+RULE2PT+SCORE0,19760919-CLE-PIT,True,,True,True,,,0
 Rocky Bleier,1976,3,1976-09-26,False,PIT,NWE,H,L,27,30,11,49,0,,4,32,0,0,0,0,0,0,0,8.1,12.1,1873,False,targets,PFR+RULE2PT+SCORE0,19760926-NWE-PIT,True,,True,True,,,0
@@ -4753,7 +4753,7 @@ Preston Pearson,1974,8,1974-11-03,False,PIT,PHI,H,W,27,0,7,47,0,,0,0,0,0,0,0,0,,
 Preston Pearson,1974,9,1974-11-10,False,PIT,CIN,A,L,10,17,7,18,1,,1,3,0,0,0,0,0,0,0,8.1,9.1,17297,False,targets,PFR+RULE2PT+SCORE0,19741110-PIT-CIN,True,,True,True,,,0
 Preston Pearson,1974,15,1974-12-22,True,PIT,BUF,H,W,32,14,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE0,19741222-BUF-PIT,True,,True,True,,,0
 Preston Pearson,1974,16,1974-12-29,True,PIT,OAK,A,W,24,13,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE0,19741229-PIT-OAK,True,,True,True,,,0
-Preston Pearson,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE2,19750112-MIN-PIT-N,True,,True,True,,,2
+Preston Pearson,1974,17,1975-01-12,True,PIT,MIN,N,W,16,6,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE0,19750112-MIN-PIT-N,True,,True,True,,,0
 Preston Pearson,1975,1,1975-09-21,False,DAL,RAM,H,W,18,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE0,19750921-RAM-DAL,True,,True,True,,,0
 Preston Pearson,1975,2,1975-09-28,False,DAL,STL,H,W,37,31,1,3,0,,0,0,0,0,0,0,0,0,0,0.3,0.3,17297,False,targets,PFR+RULE2PT+SCORE0,19750928-STL-DAL,True,,True,True,,,0
 Preston Pearson,1975,3,1975-10-06,False,DAL,DET,A,W,36,10,7,29,0,,0,0,0,0,0,0,0,0,0,2.9,2.9,17297,False,targets,PFR+RULE2PT+SCORE0,19751006-DAL-DET,True,,True,True,,,0
@@ -4781,7 +4781,7 @@ Preston Pearson,1976,9,1976-11-07,False,DAL,NYG,H,W,9,3,4,19,0,,1,6,0,0,0,0,0,0,
 Preston Pearson,1976,10,1976-11-15,False,DAL,BUF,H,W,17,10,7,29,1,,1,25,0,0,0,0,0,0,0,11.4,12.4,17297,False,targets,PFR+RULE2PT+SCORE0,19761115-BUF-DAL,True,,True,True,,,0
 Preston Pearson,1976,11,1976-11-21,False,DAL,ATL,A,L,10,17,16,61,0,,4,47,0,0,0,0,0,0,0,10.8,14.8,17297,False,targets,PFR+RULE2PT+SCORE0,19761121-DAL-ATL,True,,True,True,,,0
 Preston Pearson,1976,12,1976-11-25,False,DAL,STL,H,W,19,14,15,48,0,,0,0,0,0,0,0,0,0,0,4.8,4.8,17297,False,targets,PFR+RULE2PT+SCORE2,19761125-STL-DAL,True,,True,True,,,2
-Preston Pearson,1976,15,1976-12-19,True,DAL,RAM,H,L,12,14,13,43,0,,6,41,0,0,0,0,0,0,0,8.4,14.4,17297,False,targets,PFR+RULE2PT+SCORE2,19761219-RAM-DAL,True,,True,True,,,2
+Preston Pearson,1976,15,1976-12-19,True,DAL,RAM,H,L,12,14,13,43,0,,6,41,0,0,0,0,0,0,0,8.4,14.4,17297,False,targets,PFR+RULE2PT+SCORE0,19761219-RAM-DAL,True,,True,True,,,0
 Preston Pearson,1977,1,1977-09-18,False,DAL,MIN,A,W,16,10,15,63,0,,5,53,1,0,0,0,0,0,0,17.6,22.6,17297,False,targets,PFR+RULE2PT+SCORE0,19770918-DAL-MIN,True,,True,True,,,0
 Preston Pearson,1977,2,1977-09-25,False,DAL,NYG,H,W,41,21,8,42,0,,2,14,1,0,0,0,0,0,0,11.6,13.6,17297,False,targets,PFR+RULE2PT+SCORE0,19770925-NYG-DAL,True,,True,True,,,0
 Preston Pearson,1977,3,1977-10-02,False,DAL,TAM,H,W,23,7,12,56,0,,5,65,0,0,0,0,0,,0,12.1,17.1,17297,False,targets;fum_rec_td,PFR+RULE2PT,19771002-TAM-DAL,False,fum_rec_td,False,True,fum_rec_td,,6
@@ -4831,7 +4831,7 @@ Preston Pearson,1979,13,1979-11-22,False,DAL,HOU,H,L,24,30,0,0,0,,3,16,0,0,0,0,0
 Preston Pearson,1979,14,1979-12-02,False,DAL,NYG,H,W,28,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,17297,False,targets,PFR+RULE2PT+SCORE0,19791202-NYG-DAL,True,,True,True,,,0
 Preston Pearson,1979,15,1979-12-08,False,DAL,PHI,A,W,24,17,2,-2,0,,3,27,0,0,0,0,0,0,0,2.5,5.5,17297,False,targets,PFR+RULE2PT+SCORE0,19791208-DAL-PHI,True,,True,True,,,0
 Preston Pearson,1979,16,1979-12-16,False,DAL,WAS,H,W,35,34,0,0,0,,5,108,1,0,0,0,0,0,0,16.8,21.8,17297,False,targets,PFR+RULE2PT+SCORE0,19791216-WAS-DAL,True,,True,True,,,0
-Preston Pearson,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,1,-2,0,,2,15,0,0,0,0,0,0,0,1.3,3.3,17297,False,targets,PFR+RULE2PT+SCORE2,19791230-RAM-DAL,True,,True,True,,,2
+Preston Pearson,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,1,-2,0,,2,15,0,0,0,0,0,0,0,1.3,3.3,17297,False,targets,PFR+RULE2PT+SCORE0,19791230-RAM-DAL,True,,True,True,,,0
 Johnny Roland,1970,1,1970-09-18,False,STL,RAM,A,L,13,34,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,19029,False,targets,PFR+RULE2PT+SCORE0,19700918-STL-RAM,True,,True,True,,,0
 Johnny Roland,1970,2,1970-09-27,False,STL,WAS,H,W,27,17,2,1,0,,1,6,1,0,0,0,0,,0,6.7,7.7,19029,False,targets;fum_rec_td,PFR+RULE2PT,19700927-WAS-STL,False,fum_rec_td,False,True,fum_rec_td,,6
 Johnny Roland,1970,3,1970-10-04,False,STL,DAL,H,W,20,7,5,21,0,,0,0,0,0,0,0,0,0,0,2.1,2.1,19029,False,targets,PFR+RULE2PT+SCORE0,19701004-DAL-STL,True,,True,True,,,0
@@ -4885,7 +4885,7 @@ Cullen Bryant,1973,2,1973-09-23,False,RAM,ATL,H,W,31,0,0,0,0,,0,0,0,0,0,0,0,0,0,
 Cullen Bryant,1973,3,1973-09-30,False,RAM,SFO,A,W,40,20,0,0,0,,0,0,0,0,0,0,0,0,1,6.0,6.0,2845,False,targets,PFR+RULE2PT+SCORE0,19730930-RAM-SFO,True,,True,True,,,0
 Cullen Bryant,1973,4,1973-10-07,False,RAM,HOU,A,W,31,26,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731007-RAM-HOU,True,,True,True,,,0
 Cullen Bryant,1973,5,1973-10-14,False,RAM,DAL,H,W,37,31,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731014-DAL-RAM,True,,True,True,,,0
-Cullen Bryant,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,2845,False,targets;fum_rec_td,PFR+RULE2PT,19731021-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,4
+Cullen Bryant,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731021-GNB-RAM,True,,True,True,,,0
 Cullen Bryant,1973,7,1973-10-28,False,RAM,MIN,A,L,9,10,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731028-RAM-MIN,True,,True,True,,,0
 Cullen Bryant,1973,8,1973-11-04,False,RAM,ATL,A,L,13,15,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731104-RAM-ATL,True,,True,True,,,0
 Cullen Bryant,1973,9,1973-11-11,False,RAM,NOR,H,W,29,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2845,False,targets,PFR+RULE2PT+SCORE0,19731111-NOR-RAM,True,,True,True,,,0
@@ -5751,7 +5751,7 @@ Les Josephson,1973,2,1973-09-23,False,RAM,ATL,H,W,31,0,3,7,0,,0,0,0,0,0,0,0,0,0,
 Les Josephson,1973,3,1973-09-30,False,RAM,SFO,A,W,40,20,5,16,0,,0,0,0,0,0,0,0,0,0,1.6,1.6,11787,False,targets,PFR+RULE2PT+SCORE0,19730930-RAM-SFO,True,,True,True,,,0
 Les Josephson,1973,4,1973-10-07,False,RAM,HOU,A,W,31,26,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,11787,False,targets,PFR+RULE2PT+SCORE0,19731007-RAM-HOU,True,,True,True,,,0
 Les Josephson,1973,5,1973-10-14,False,RAM,DAL,H,W,37,31,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,11787,False,targets,PFR+RULE2PT+SCORE0,19731014-DAL-RAM,True,,True,True,,,0
-Les Josephson,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,5,15,0,,0,0,0,0,0,0,0,,0,1.5,1.5,11787,False,targets;fum_rec_td,PFR+RULE2PT,19731021-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,4
+Les Josephson,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,5,15,0,,0,0,0,0,0,0,0,0,0,1.5,1.5,11787,False,targets,PFR+RULE2PT+SCORE0,19731021-GNB-RAM,True,,True,True,,,0
 Les Josephson,1973,7,1973-10-28,False,RAM,MIN,A,L,9,10,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,11787,False,targets,PFR+RULE2PT+SCORE0,19731028-RAM-MIN,True,,True,True,,,0
 Les Josephson,1973,8,1973-11-04,False,RAM,ATL,A,L,13,15,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,11787,False,targets,PFR+RULE2PT+SCORE0,19731104-RAM-ATL,True,,True,True,,,0
 Les Josephson,1973,9,1973-11-11,False,RAM,NOR,H,W,29,7,5,26,0,,0,0,0,0,0,0,0,0,0,2.6,2.6,11787,False,targets,PFR+RULE2PT+SCORE0,19731111-NOR-RAM,True,,True,True,,,0
@@ -5902,7 +5902,7 @@ Doug Kotar,1979,3,1979-09-17,False,NYG,WAS,A,L,0,27,12,54,0,,1,16,0,0,0,0,0,0,0,
 Doug Kotar,1979,4,1979-09-23,False,NYG,PHI,H,L,13,17,17,63,0,,5,40,0,0,0,0,0,0,0,10.3,15.3,12543,False,targets,PFR+RULE2PT+SCORE0,19790923-PHI-NYG,True,,True,True,,,0
 Doug Kotar,1979,5,1979-09-30,False,NYG,NOR,A,L,14,24,12,62,0,,2,4,0,0,0,0,0,0,0,6.6,8.6,12543,False,targets,PFR+RULE2PT+SCORE0,19790930-NYG-NOR,True,,True,True,,,0
 Doug Kotar,1979,6,1979-10-07,False,NYG,TAM,H,W,17,14,4,10,0,,0,0,0,0,0,0,0,0,0,1.0,1.0,12543,False,targets,PFR+RULE2PT+SCORE0,19791007-TAM-NYG,True,,True,True,,,0
-Doug Kotar,1979,7,1979-10-14,False,NYG,SFO,H,W,32,16,8,48,1,,4,48,0,0,0,0,0,0,0,15.6,19.6,12543,False,targets,PFR+RULE2PT+SCORE2,19791014-SFO-NYG,True,,True,True,,,2
+Doug Kotar,1979,7,1979-10-14,False,NYG,SFO,H,W,32,16,8,48,1,,4,48,0,0,0,0,0,,0,15.6,19.6,12543,False,targets;fum_rec_td,PFR+RULE2PT,19791014-SFO-NYG,False,fum_rec_td,False,True,fum_rec_td,,2
 Doug Kotar,1979,8,1979-10-21,False,NYG,KAN,A,W,21,17,11,58,0,,0,0,0,0,0,0,0,,0,5.8,5.8,12543,False,targets;fum_rec_td,PFR+RULE2PT,19791021-NYG-KAN,False,fum_rec_td,False,True,fum_rec_td,,6
 Doug Kotar,1979,9,1979-10-28,False,NYG,RAM,A,W,20,14,13,30,0,,4,57,0,0,0,0,0,0,0,8.7,12.7,12543,False,targets,PFR+RULE2PT+SCORE0,19791028-NYG-RAM,True,,True,True,,,0
 Doug Kotar,1979,10,1979-11-04,False,NYG,DAL,H,L,14,16,9,19,0,,0,0,0,0,0,0,0,0,0,1.9,1.9,12543,False,targets,PFR+RULE2PT+SCORE0,19791104-DAL-NYG,True,,True,True,,,0
@@ -6205,7 +6205,7 @@ John Fuqua,1975,13,1975-12-13,False,PIT,CIN,H,W,35,14,3,5,0,,1,2,0,0,0,0,0,,0,0.
 John Fuqua,1975,14,1975-12-20,False,PIT,RAM,A,L,3,10,1,2,0,,0,0,0,0,0,0,0,0,0,0.2,0.2,7463,False,targets,PFR+RULE2PT+SCORE0,19751220-PIT-RAM,True,,True,True,,,0
 John Fuqua,1975,15,1975-12-27,True,PIT,BAL,H,W,28,10,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,7463,False,targets;fum_rec_td,PFR+RULE2PT,19751227-BAL-PIT,False,fum_rec_td,False,True,fum_rec_td,,6
 John Fuqua,1975,16,1976-01-04,True,PIT,OAK,H,W,16,10,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE0,19760104-OAK-PIT,True,,True,True,,,0
-John Fuqua,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE2,19760118-DAL-PIT-N,True,,True,True,,,2
+John Fuqua,1975,17,1976-01-18,True,PIT,DAL,N,W,21,17,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE0,19760118-DAL-PIT-N,True,,True,True,,,0
 John Fuqua,1976,1,1976-09-12,False,PIT,OAK,A,L,28,31,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE0,19760912-PIT-OAK,True,,True,True,,,0
 John Fuqua,1976,2,1976-09-19,False,PIT,CLE,H,W,31,14,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE0,19760919-CLE-PIT,True,,True,True,,,0
 John Fuqua,1976,3,1976-09-26,False,PIT,NWE,H,L,27,30,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7463,False,targets,PFR+RULE2PT+SCORE0,19760926-NWE-PIT,True,,True,True,,,0
@@ -7127,7 +7127,7 @@ Ronnie Coleman,1978,15,1978-12-10,False,HOU,NOR,A,W,17,12,1,-9,0,,1,15,0,0,0,0,0
 Ronnie Coleman,1978,16,1978-12-17,False,HOU,SDG,H,L,24,45,2,-1,0,,1,7,1,0,0,0,0,0,0,6.6,7.6,4259,False,targets,PFR+RULE2PT+SCORE0,19781217-SDG-HOU,True,,True,True,,,0
 Ronnie Coleman,1978,17,1978-12-24,True,HOU,MIA,A,W,17,9,1,2,0,,1,5,0,0,0,0,0,0,0,0.7,1.7,4259,False,targets,PFR+RULE2PT+SCORE0,19781224-HOU-MIA,True,,True,True,,,0
 Ronnie Coleman,1978,18,1978-12-31,True,HOU,NWE,A,W,31,14,7,19,0,,0,0,0,0,0,0,0,0,0,1.9,1.9,4259,False,targets,PFR+RULE2PT+SCORE0,19781231-HOU-NWE,True,,True,True,,,0
-Ronnie Coleman,1978,19,1979-01-07,True,HOU,PIT,A,L,5,34,1,-5,0,,1,15,0,0,0,0,0,0,0,1.0,2.0,4259,False,targets,PFR+RULE2PT+SCORE2,19790107-HOU-PIT,True,,True,True,,,2
+Ronnie Coleman,1978,19,1979-01-07,True,HOU,PIT,A,L,5,34,1,-5,0,,1,15,0,0,0,0,0,0,0,1.0,2.0,4259,False,targets,PFR+RULE2PT+SCORE0,19790107-HOU-PIT,True,,True,True,,,0
 Ronnie Coleman,1979,2,1979-09-09,False,HOU,PIT,A,L,7,38,7,22,0,,0,0,0,0,0,0,0,0,0,2.2,2.2,4259,False,targets,PFR+RULE2PT+SCORE0,19790909-HOU-PIT,True,,True,True,,,0
 Ronnie Coleman,1979,3,1979-09-16,False,HOU,KAN,H,W,20,6,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,4259,False,targets,PFR+RULE2PT+SCORE0,19790916-KAN-HOU,True,,True,True,,,0
 Ronnie Coleman,1979,5,1979-09-30,False,HOU,CLE,H,W,31,10,0,0,0,,2,21,0,0,0,0,0,,0,2.1,4.1,4259,False,targets;fum_rec_td,PFR+RULE2PT,19790930-CLE-HOU,False,fum_rec_td,False,True,fum_rec_td,,6
@@ -7352,7 +7352,7 @@ Cannonball Butler,1971,6,1971-10-24,False,ATL,NOR,H,W,28,6,20,114,0,,0,0,0,0,0,0
 Cannonball Butler,1971,7,1971-10-31,False,ATL,CLE,A,W,31,14,21,63,1,,0,0,0,0,0,0,0,,0,12.3,12.3,3143,False,targets;fum_rec_td,PFR+RULE2PT,19711031-ATL-CLE,False,fum_rec_td,False,True,fum_rec_td,,6
 Cannonball Butler,1971,8,1971-11-07,False,ATL,CIN,A,W,9,6,17,68,0,,3,49,0,0,0,0,0,0,0,11.7,14.7,3143,False,targets,PFR+RULE2PT+SCORE0,19711107-ATL-CIN,True,,True,True,,,0
 Cannonball Butler,1971,9,1971-11-14,False,ATL,NYG,H,L,17,21,9,20,0,,3,38,0,0,0,0,0,0,0,5.8,8.8,3143,False,targets,PFR+RULE2PT+SCORE0,19711114-NYG-ATL,True,,True,True,,,0
-Cannonball Butler,1971,10,1971-11-22,False,ATL,GNB,H,W,28,21,16,64,1,,1,5,0,0,0,0,0,0,0,12.9,13.9,3143,False,targets,PFR+RULE2PT+SCORE2,19711122-GNB-ATL,True,,True,True,,,2
+Cannonball Butler,1971,10,1971-11-22,False,ATL,GNB,H,W,28,21,16,64,1,,1,5,0,0,0,0,0,,0,12.9,13.9,3143,False,targets;fum_rec_td,PFR+RULE2PT,19711122-GNB-ATL,False,fum_rec_td,False,True,fum_rec_td,,2
 Cannonball Butler,1971,12,1971-12-05,False,ATL,OAK,H,W,24,13,14,27,0,,0,0,0,0,0,0,0,,0,2.7,2.7,3143,False,targets;fum_rec_td,PFR+RULE2PT,19711205-OAK-ATL,False,fum_rec_td,False,True,fum_rec_td,,6
 Cannonball Butler,1971,13,1971-12-12,False,ATL,SFO,A,L,3,24,12,14,0,,2,6,0,0,0,0,0,0,0,2.0,4.0,3143,False,targets,PFR+RULE2PT+SCORE0,19711212-ATL-SFO,True,,True,True,,,0
 Cannonball Butler,1971,14,1971-12-19,False,ATL,NOR,A,W,24,20,8,22,0,,1,-1,0,0,0,0,0,0,0,2.1,3.1,3143,False,targets,PFR+RULE2PT+SCORE0,19711219-ATL-NOR,True,,True,True,,,0
@@ -7376,7 +7376,7 @@ Ron Springs,1979,13,1979-11-22,False,DAL,HOU,H,L,24,30,0,0,0,,0,0,0,0,0,0,0,0,0,
 Ron Springs,1979,14,1979-12-02,False,DAL,NYG,H,W,28,7,2,6,0,,1,27,0,0,0,0,0,0,0,3.3,4.3,21028,False,targets,PFR+RULE2PT+SCORE0,19791202-NYG-DAL,True,,True,True,,,0
 Ron Springs,1979,15,1979-12-08,False,DAL,PHI,A,W,24,17,12,62,0,,1,16,0,0,0,0,0,0,0,7.8,8.8,21028,False,targets,PFR+RULE2PT+SCORE0,19791208-DAL-PHI,True,,True,True,,,0
 Ron Springs,1979,16,1979-12-16,False,DAL,WAS,H,W,35,34,20,79,1,,6,58,1,0,0,0,0,0,0,25.7,31.7,21028,False,targets,PFR+RULE2PT+SCORE0,19791216-WAS-DAL,True,,True,True,,,0
-Ron Springs,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,5,20,1,,1,2,0,0,0,0,0,0,0,8.2,9.2,21028,False,targets,PFR+RULE2PT+SCORE2,19791230-RAM-DAL,True,,True,True,,,2
+Ron Springs,1979,17,1979-12-30,True,DAL,RAM,H,L,19,21,5,20,1,,1,2,0,0,0,0,0,0,0,8.2,9.2,21028,False,targets,PFR+RULE2PT+SCORE0,19791230-RAM-DAL,True,,True,True,,,0
 Jon Keyworth,1974,1,1974-09-15,False,DEN,RAM,H,L,10,17,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,12186,False,targets,PFR+RULE2PT+SCORE0,19740915-RAM-DEN,True,,True,True,,,0
 Jon Keyworth,1974,2,1974-09-22,False,DEN,PIT,H,T,35,35,4,4,1,,0,0,0,0,0,0,0,0,0,6.4,6.4,12186,False,targets,PFR+RULE2PT+SCORE0,19740922-PIT-DEN,True,,True,True,,,0
 Jon Keyworth,1974,3,1974-09-30,False,DEN,WAS,A,L,3,30,1,5,0,,0,0,0,0,0,0,0,0,0,0.5,0.5,12186,False,targets,PFR+RULE2PT+SCORE0,19740930-DEN-WAS,True,,True,True,,,0
@@ -7540,7 +7540,7 @@ Don McCauley,1975,15,1975-12-27,True,BAL,PIT,A,L,10,28,3,3,0,,1,9,0,0,0,0,0,0,0,
 Don McCauley,1976,1,1976-09-12,False,BAL,NWE,A,W,27,13,7,19,0,,4,30,0,0,0,0,0,0,0,4.9,8.9,14504,False,targets,PFR+RULE2PT+SCORE0,19760912-BAL-NWE,True,,True,True,,,0
 Don McCauley,1976,2,1976-09-19,False,BAL,CIN,H,W,28,27,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,14504,False,targets,PFR+RULE2PT+SCORE0,19760919-CIN-BAL,True,,True,True,,,0
 Don McCauley,1976,3,1976-09-26,False,BAL,DAL,A,L,27,30,3,14,1,,5,86,0,0,0,0,0,0,0,16.0,21.0,14504,False,targets,PFR+RULE2PT+SCORE0,19760926-BAL-DAL,True,,True,True,,,0
-Don McCauley,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,14,51,1,,5,52,0,0,0,0,0,0,0,16.3,21.3,14504,False,targets,PFR+RULE2PT+SCORE2,19761003-TAM-BAL,True,,True,True,,,2
+Don McCauley,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,14,51,1,,5,52,0,0,0,0,0,,0,16.3,21.3,14504,False,targets;fum_rec_td,PFR+RULE2PT,19761003-TAM-BAL,False,fum_rec_td,False,True,fum_rec_td,,2
 Don McCauley,1976,5,1976-10-10,False,BAL,MIA,H,W,28,14,7,17,2,,1,6,0,0,0,0,0,0,0,14.3,15.3,14504,False,targets,PFR+RULE2PT+SCORE0,19761010-MIA-BAL,True,,True,True,,,0
 Don McCauley,1976,6,1976-10-17,False,BAL,BUF,A,W,31,13,3,6,1,,1,3,1,0,0,0,0,0,0,12.9,13.9,14504,False,targets,PFR+RULE2PT+SCORE0,19761017-BAL-BUF,True,,True,True,,,0
 Don McCauley,1976,7,1976-10-24,False,BAL,NYJ,A,W,20,0,6,15,0,,1,9,0,0,0,0,0,0,0,2.4,3.4,14504,False,targets,PFR+RULE2PT+SCORE0,19761024-BAL-NYJ,True,,True,True,,,0
@@ -7851,7 +7851,7 @@ Jim Bertelsen,1973,2,1973-09-23,False,RAM,ATL,H,W,31,0,16,52,1,,0,0,0,0,0,0,0,0,
 Jim Bertelsen,1973,3,1973-09-30,False,RAM,SFO,A,W,40,20,18,61,0,,0,0,0,0,0,0,0,0,0,6.1,6.1,1650,False,targets,PFR+RULE2PT+SCORE0,19730930-RAM-SFO,True,,True,True,,,0
 Jim Bertelsen,1973,4,1973-10-07,False,RAM,HOU,A,W,31,26,12,59,0,,4,43,0,0,0,0,0,0,0,10.2,14.2,1650,False,targets,PFR+RULE2PT+SCORE0,19731007-RAM-HOU,True,,True,True,,,0
 Jim Bertelsen,1973,5,1973-10-14,False,RAM,DAL,H,W,37,31,17,52,0,,2,21,0,0,0,0,0,0,0,7.3,9.3,1650,False,targets,PFR+RULE2PT+SCORE0,19731014-DAL-RAM,True,,True,True,,,0
-Jim Bertelsen,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,19,99,0,,0,0,0,0,0,0,0,,0,9.9,9.9,1650,False,targets;fum_rec_td,PFR+RULE2PT,19731021-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,4
+Jim Bertelsen,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,19,99,0,,0,0,0,0,0,0,0,0,0,9.9,9.9,1650,False,targets,PFR+RULE2PT+SCORE0,19731021-GNB-RAM,True,,True,True,,,0
 Jim Bertelsen,1973,7,1973-10-28,False,RAM,MIN,A,L,9,10,12,29,0,,4,41,0,0,0,0,0,0,0,7.0,11.0,1650,False,targets,PFR+RULE2PT+SCORE0,19731028-RAM-MIN,True,,True,True,,,0
 Jim Bertelsen,1973,8,1973-11-04,False,RAM,ATL,A,L,13,15,14,36,0,,0,0,0,0,0,0,0,0,0,3.6,3.6,1650,False,targets,PFR+RULE2PT+SCORE0,19731104-RAM-ATL,True,,True,True,,,0
 Jim Bertelsen,1973,9,1973-11-11,False,RAM,NOR,H,W,29,7,8,10,1,,2,38,0,0,0,0,0,0,0,10.8,12.8,1650,False,targets,PFR+RULE2PT+SCORE0,19731111-NOR-RAM,True,,True,True,,,0
@@ -7980,7 +7980,7 @@ Duane Thomas,1970,11,1970-11-26,False,DAL,GNB,H,W,16,3,16,63,0,,1,-1,0,0,0,0,0,0
 Duane Thomas,1970,12,1970-12-06,False,DAL,WAS,H,W,34,0,19,123,0,,0,0,0,0,0,0,0,0,0,12.3,12.3,22037,False,targets,PFR+RULE2PT+SCORE0,19701206-WAS-DAL,True,,True,True,,,0
 Duane Thomas,1970,13,1970-12-12,False,DAL,CLE,A,W,6,2,19,70,0,,1,6,0,0,0,0,0,0,0,7.6,8.6,22037,False,targets,PFR+RULE2PT+SCORE0,19701212-DAL-CLE,True,,True,True,,,0
 Duane Thomas,1970,14,1970-12-20,False,DAL,HOU,H,W,52,10,17,115,0,,0,0,0,0,0,0,0,0,0,11.5,11.5,22037,False,targets,PFR+RULE2PT+SCORE0,19701220-HOU-DAL,True,,True,True,,,0
-Duane Thomas,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,30,135,0,,0,0,0,0,0,0,0,0,0,13.5,13.5,22037,False,targets,PFR+RULE2PT+SCORE2,19701226-DET-DAL,True,,True,True,,,2
+Duane Thomas,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,30,135,0,,0,0,0,0,0,0,0,0,0,13.5,13.5,22037,False,targets,PFR+RULE2PT+SCORE0,19701226-DET-DAL,True,,True,True,,,0
 Duane Thomas,1970,16,1971-01-03,True,DAL,SFO,A,W,17,10,27,143,1,,2,24,0,0,0,0,0,0,0,22.7,24.7,22037,False,targets,PFR+RULE2PT+SCORE0,19710103-DAL-SFO,True,,True,True,,,0
 Duane Thomas,1970,17,1971-01-17,True,DAL,BAL,N,L,13,16,18,35,0,,4,21,1,0,0,0,0,0,0,11.6,15.6,22037,False,targets,PFR+RULE2PT+SCORE0,19710117-BAL-DAL-N,True,,True,True,,,0
 Duane Thomas,1971,4,1971-10-11,False,DAL,NYG,H,W,20,13,9,60,0,,1,11,0,0,0,0,0,0,0,7.1,8.1,22037,False,targets,PFR+RULE2PT+SCORE0,19711011-NYG-DAL,True,,True,True,,,0
@@ -8228,7 +8228,7 @@ Roosevelt Leaks,1975,11,1975-11-30,False,BAL,KAN,H,W,28,14,1,7,0,,0,0,0,0,0,0,0,
 Roosevelt Leaks,1976,1,1976-09-12,False,BAL,NWE,A,W,27,13,11,39,0,,1,10,0,0,0,0,0,0,0,4.9,5.9,13037,False,targets,PFR+RULE2PT+SCORE0,19760912-BAL-NWE,True,,True,True,,,0
 Roosevelt Leaks,1976,2,1976-09-19,False,BAL,CIN,H,W,28,27,9,9,1,,0,0,0,0,0,0,0,0,0,6.9,6.9,13037,False,targets,PFR+RULE2PT+SCORE0,19760919-CIN-BAL,True,,True,True,,,0
 Roosevelt Leaks,1976,3,1976-09-26,False,BAL,DAL,A,L,27,30,4,14,1,,1,5,0,0,0,0,0,0,0,7.9,8.9,13037,False,targets,PFR+RULE2PT+SCORE0,19760926-BAL-DAL,True,,True,True,,,0
-Roosevelt Leaks,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,13,72,2,,0,0,0,0,0,0,0,0,0,19.2,19.2,13037,False,targets,PFR+RULE2PT+SCORE2,19761003-TAM-BAL,True,,True,True,,,2
+Roosevelt Leaks,1976,4,1976-10-03,False,BAL,TAM,H,W,42,17,13,72,2,,0,0,0,0,0,0,0,,0,19.2,19.2,13037,False,targets;fum_rec_td,PFR+RULE2PT,19761003-TAM-BAL,False,fum_rec_td,False,True,fum_rec_td,,2
 Roosevelt Leaks,1976,5,1976-10-10,False,BAL,MIA,H,W,28,14,5,26,0,,0,0,0,0,0,0,0,0,0,2.6,2.6,13037,False,targets,PFR+RULE2PT+SCORE0,19761010-MIA-BAL,True,,True,True,,,0
 Roosevelt Leaks,1976,6,1976-10-17,False,BAL,BUF,A,W,31,13,10,78,0,,0,0,0,0,0,0,0,0,0,7.8,7.8,13037,False,targets,PFR+RULE2PT+SCORE0,19761017-BAL-BUF,True,,True,True,,,0
 Roosevelt Leaks,1976,7,1976-10-24,False,BAL,NYJ,A,W,20,0,12,28,0,,1,7,0,0,0,0,0,0,0,3.5,4.5,13037,False,targets,PFR+RULE2PT+SCORE0,19761024-BAL-NYJ,True,,True,True,,,0
@@ -8346,7 +8346,7 @@ Art Malone,1971,6,1971-10-24,False,ATL,NOR,H,W,28,6,6,24,0,,1,14,0,0,0,0,0,0,0,3
 Art Malone,1971,7,1971-10-31,False,ATL,CLE,A,W,31,14,13,56,0,,0,0,0,0,0,0,0,,0,5.6,5.6,13925,False,targets;fum_rec_td,PFR+RULE2PT,19711031-ATL-CLE,False,fum_rec_td,False,True,fum_rec_td,,6
 Art Malone,1971,8,1971-11-07,False,ATL,CIN,A,W,9,6,10,46,0,,2,51,1,0,0,0,0,0,0,15.7,17.7,13925,False,targets,PFR+RULE2PT+SCORE0,19711107-ATL-CIN,True,,True,True,,,0
 Art Malone,1971,9,1971-11-14,False,ATL,NYG,H,L,17,21,7,33,0,,1,9,0,0,0,0,0,0,0,4.2,5.2,13925,False,targets,PFR+RULE2PT+SCORE0,19711114-NYG-ATL,True,,True,True,,,0
-Art Malone,1971,10,1971-11-22,False,ATL,GNB,H,W,28,21,12,36,2,,5,51,0,0,0,0,0,0,0,20.7,25.7,13925,False,targets,PFR+RULE2PT+SCORE2,19711122-GNB-ATL,True,,True,True,,,2
+Art Malone,1971,10,1971-11-22,False,ATL,GNB,H,W,28,21,12,36,2,,5,51,0,0,0,0,0,,0,20.7,25.7,13925,False,targets;fum_rec_td,PFR+RULE2PT,19711122-GNB-ATL,False,fum_rec_td,False,True,fum_rec_td,,2
 Art Malone,1971,11,1971-11-28,False,ATL,MIN,A,L,7,24,5,14,0,,4,12,0,0,0,0,0,,0,2.6,6.6,13925,False,targets;fum_rec_td,PFR+RULE2PT,19711128-ATL-MIN,False,fum_rec_td,False,True,fum_rec_td,,6
 Art Malone,1971,12,1971-12-05,False,ATL,OAK,H,W,24,13,12,52,1,,2,40,1,0,0,0,0,,0,21.2,23.2,13925,False,targets;fum_rec_td,PFR+RULE2PT,19711205-OAK-ATL,False,fum_rec_td,False,True,fum_rec_td,,6
 Art Malone,1971,13,1971-12-12,False,ATL,SFO,A,L,3,24,4,13,0,,1,9,0,0,0,0,0,0,0,2.2,3.2,13925,False,targets,PFR+RULE2PT+SCORE0,19711212-ATL-SFO,True,,True,True,,,0
@@ -8686,7 +8686,7 @@ Clint Jones,1971,11,1971-11-28,False,MIN,ATL,H,W,24,7,22,155,1,,0,0,0,0,0,0,0,0,
 Clint Jones,1971,12,1971-12-05,False,MIN,SDG,A,L,14,30,26,96,1,,0,0,0,0,0,0,0,0,0,15.6,15.6,11537,False,targets,PFR+RULE2PT+SCORE0,19711205-MIN-SDG,True,,True,True,,,0
 Clint Jones,1971,13,1971-12-11,False,MIN,DET,H,W,29,10,16,53,1,,0,0,0,0,0,0,0,,0,11.3,11.3,11537,False,targets;fum_rec_td,PFR+RULE2PT,19711211-DET-MIN,False,fum_rec_td,False,True,fum_rec_td,,14
 Clint Jones,1971,14,1971-12-19,False,MIN,CHI,A,W,27,10,14,90,0,,1,16,0,0,0,0,0,0,0,10.6,11.6,11537,False,targets,PFR+RULE2PT+SCORE0,19711219-MIN-CHI,True,,True,True,,,0
-Clint Jones,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,15,52,0,,0,0,0,0,0,0,0,0,0,5.2,5.2,11537,False,targets,PFR+RULE2PT+SCORE2,19711225-DAL-MIN,True,,True,True,,,2
+Clint Jones,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,15,52,0,,0,0,0,0,0,0,0,0,0,5.2,5.2,11537,False,targets,PFR+RULE2PT+SCORE0,19711225-DAL-MIN,True,,True,True,,,0
 Clint Jones,1972,1,1972-09-18,False,MIN,WAS,H,L,21,24,21,66,1,,2,14,0,0,0,0,0,0,0,14.0,16.0,11537,False,targets,PFR+RULE2PT+SCORE0,19720918-WAS-MIN,True,,True,True,,,0
 Clint Jones,1972,2,1972-09-24,False,MIN,DET,A,W,34,10,10,21,0,,0,0,0,0,0,0,0,0,0,2.1,2.1,11537,False,targets,PFR+RULE2PT+SCORE0,19720924-MIN-DET,True,,True,True,,,0
 Clint Jones,1972,3,1972-10-01,False,MIN,MIA,H,L,14,16,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,11537,False,targets,PFR+RULE2PT+SCORE0,19721001-MIA-MIN,True,,True,True,,,0
@@ -8732,7 +8732,7 @@ Oscar Reed,1971,10,1971-11-21,False,MIN,NOR,A,W,23,10,6,43,0,,6,41,0,0,0,0,0,0,0
 Oscar Reed,1971,12,1971-12-05,False,MIN,SDG,A,L,14,30,4,33,1,,1,12,0,0,0,0,0,0,0,10.5,11.5,18360,False,targets,PFR+RULE2PT+SCORE0,19711205-MIN-SDG,True,,True,True,,,0
 Oscar Reed,1971,13,1971-12-11,False,MIN,DET,H,W,29,10,6,28,0,,2,10,0,0,0,0,0,,0,3.8,5.8,18360,False,targets;fum_rec_td,PFR+RULE2PT,19711211-DET-MIN,False,fum_rec_td,False,True,fum_rec_td,,14
 Oscar Reed,1971,14,1971-12-19,False,MIN,CHI,A,W,27,10,5,16,0,,0,0,0,0,0,0,0,0,0,1.6,1.6,18360,False,targets,PFR+RULE2PT+SCORE0,19711219-MIN-CHI,True,,True,True,,,0
-Oscar Reed,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,0,0,0,,4,-3,0,0,0,0,0,0,0,-0.3,3.7,18360,False,targets,PFR+RULE2PT+SCORE2,19711225-DAL-MIN,True,,True,True,,,2
+Oscar Reed,1971,15,1971-12-25,True,MIN,DAL,H,L,12,20,0,0,0,,4,-3,0,0,0,0,0,0,0,-0.3,3.7,18360,False,targets,PFR+RULE2PT+SCORE0,19711225-DAL-MIN,True,,True,True,,,0
 Oscar Reed,1972,1,1972-09-18,False,MIN,WAS,H,L,21,24,12,68,0,,1,21,0,0,0,0,0,0,0,8.9,9.9,18360,False,targets,PFR+RULE2PT+SCORE0,19720918-WAS-MIN,True,,True,True,,,0
 Oscar Reed,1972,2,1972-09-24,False,MIN,DET,A,W,34,10,10,23,0,,0,0,0,0,0,0,0,0,0,2.3,2.3,18360,False,targets,PFR+RULE2PT+SCORE0,19720924-MIN-DET,True,,True,True,,,0
 Oscar Reed,1972,3,1972-10-01,False,MIN,MIA,H,L,14,16,9,52,0,,1,7,0,0,0,0,0,0,0,5.9,6.9,18360,False,targets,PFR+RULE2PT+SCORE0,19721001-MIA-MIN,True,,True,True,,,0
@@ -8922,7 +8922,7 @@ Larry Smith,1973,2,1973-09-23,False,RAM,ATL,H,W,31,0,8,43,1,,1,9,0,0,0,0,0,0,0,1
 Larry Smith,1973,3,1973-09-30,False,RAM,SFO,A,W,40,20,7,17,0,,0,0,0,10,0,0,0,0,0,2.1,2.1,20692,False,targets,PFR+RULE2PT+SCORE0,19730930-RAM-SFO,True,,True,True,,,0
 Larry Smith,1973,4,1973-10-07,False,RAM,HOU,A,W,31,26,2,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,20692,False,targets,PFR+RULE2PT+SCORE0,19731007-RAM-HOU,True,,True,True,,,0
 Larry Smith,1973,5,1973-10-14,False,RAM,DAL,H,W,37,31,8,13,0,,1,9,0,0,0,0,0,0,0,2.2,3.2,20692,False,targets,PFR+RULE2PT+SCORE0,19731014-DAL-RAM,True,,True,True,,,0
-Larry Smith,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,13,65,1,,3,18,0,0,0,0,0,,0,14.3,17.3,20692,False,targets;fum_rec_td,PFR+RULE2PT,19731021-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,4
+Larry Smith,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,13,65,1,,3,18,0,0,0,0,0,0,0,14.3,17.3,20692,False,targets,PFR+RULE2PT+SCORE0,19731021-GNB-RAM,True,,True,True,,,0
 Larry Smith,1973,7,1973-10-28,False,RAM,MIN,A,L,9,10,16,63,0,,3,10,0,0,0,0,0,0,0,7.3,10.3,20692,False,targets,PFR+RULE2PT+SCORE0,19731028-RAM-MIN,True,,True,True,,,0
 Larry Smith,1973,8,1973-11-04,False,RAM,ATL,A,L,13,15,1,5,0,,0,0,0,0,0,0,0,0,0,0.5,0.5,20692,False,targets,PFR+RULE2PT+SCORE0,19731104-RAM-ATL,True,,True,True,,,0
 Larry Smith,1973,9,1973-11-11,False,RAM,NOR,H,W,29,7,5,21,0,,0,0,0,0,0,0,0,0,0,2.1,2.1,20692,False,targets,PFR+RULE2PT+SCORE0,19731111-NOR-RAM,True,,True,True,,,0
@@ -8974,7 +8974,7 @@ Tony Baker,1973,2,1973-09-23,False,RAM,ATL,H,W,31,0,6,25,0,,0,0,0,0,0,0,0,0,0,2.
 Tony Baker,1973,3,1973-09-30,False,RAM,SFO,A,W,40,20,8,51,1,,0,0,0,0,0,0,0,0,0,11.1,11.1,920,False,targets,PFR+RULE2PT+SCORE0,19730930-RAM-SFO,True,,True,True,,,0
 Tony Baker,1973,4,1973-10-07,False,RAM,HOU,A,W,31,26,10,28,1,,0,0,0,0,0,0,0,0,0,8.8,8.8,920,False,targets,PFR+RULE2PT+SCORE0,19731007-RAM-HOU,True,,True,True,,,0
 Tony Baker,1973,5,1973-10-14,False,RAM,DAL,H,W,37,31,12,24,0,,0,0,0,0,0,0,0,0,0,2.4,2.4,920,False,targets,PFR+RULE2PT+SCORE0,19731014-DAL-RAM,True,,True,True,,,0
-Tony Baker,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,920,False,targets;fum_rec_td,PFR+RULE2PT,19731021-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,4
+Tony Baker,1973,6,1973-10-21,False,RAM,GNB,H,W,24,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,920,False,targets,PFR+RULE2PT+SCORE0,19731021-GNB-RAM,True,,True,True,,,0
 Tony Baker,1973,7,1973-10-28,False,RAM,MIN,A,L,9,10,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,920,False,targets,PFR+RULE2PT+SCORE0,19731028-RAM-MIN,True,,True,True,,,0
 Tony Baker,1973,8,1973-11-04,False,RAM,ATL,A,L,13,15,4,9,1,,0,0,0,0,0,0,0,0,0,6.9,6.9,920,False,targets,PFR+RULE2PT+SCORE0,19731104-RAM-ATL,True,,True,True,,,0
 Tony Baker,1973,9,1973-11-11,False,RAM,NOR,H,W,29,7,12,29,1,,0,0,0,0,0,0,0,0,0,8.9,8.9,920,False,targets,PFR+RULE2PT+SCORE0,19731111-NOR-RAM,True,,True,True,,,0
@@ -9093,7 +9093,7 @@ Dan Reeves,1970,11,1970-11-26,False,DAL,GNB,H,W,16,3,5,4,0,,3,56,0,0,0,0,0,0,0,6
 Dan Reeves,1970,12,1970-12-06,False,DAL,WAS,H,W,34,0,4,11,2,,2,9,0,0,0,0,0,0,0,14.0,16.0,18391,False,targets,PFR+RULE2PT+SCORE0,19701206-WAS-DAL,True,,True,True,,,0
 Dan Reeves,1970,13,1970-12-12,False,DAL,CLE,A,W,6,2,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18391,False,targets,PFR+RULE2PT+SCORE0,19701212-DAL-CLE,True,,True,True,,,0
 Dan Reeves,1970,14,1970-12-20,False,DAL,HOU,H,W,52,10,0,0,0,,1,16,0,0,0,0,0,0,0,1.6,2.6,18391,False,targets,PFR+RULE2PT+SCORE0,19701220-HOU-DAL,True,,True,True,,,0
-Dan Reeves,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18391,False,targets,PFR+RULE2PT+SCORE2,19701226-DET-DAL,True,,True,True,,,2
+Dan Reeves,1970,15,1970-12-26,True,DAL,DET,H,W,5,0,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18391,False,targets,PFR+RULE2PT+SCORE0,19701226-DET-DAL,True,,True,True,,,0
 Dan Reeves,1970,16,1971-01-03,True,DAL,SFO,A,W,17,10,2,-12,0,,0,0,0,0,0,0,0,0,0,-1.2,-1.2,18391,False,targets,PFR+RULE2PT+SCORE0,19710103-DAL-SFO,True,,True,True,,,0
 Dan Reeves,1970,17,1971-01-17,True,DAL,BAL,N,L,13,16,0,0,0,,5,46,0,0,0,0,0,0,0,4.6,9.6,18391,False,targets,PFR+RULE2PT+SCORE0,19710117-BAL-DAL-N,True,,True,True,,,0
 Dan Reeves,1971,1,1971-09-19,False,DAL,BUF,A,W,49,37,1,7,0,,0,0,0,0,0,0,0,0,0,0.7,0.7,18391,False,targets,PFR+RULE2PT+SCORE0,19710919-DAL-BUF,True,,True,True,,,0

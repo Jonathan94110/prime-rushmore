@@ -156,7 +156,7 @@ Walter Payton,1985,15,1985-12-14,False,CHI,NYJ,A,W,19,6,28,53,0,,1,65,0,0,0,0,0,
 Walter Payton,1985,16,1985-12-22,False,CHI,DET,A,W,37,17,17,81,0,,4,55,0,50,0,0,0,,0,15.6,19.6,17270,False,targets;fum_rec_td,PFR+RULE2PT,19851222-CHI-DET,False,fum_rec_td,False,True,fum_rec_td,,6
 Walter Payton,1985,17,1986-01-05,True,CHI,NYG,H,W,21,0,27,93,0,,1,4,0,0,0,0,0,0,0,9.7,10.7,17270,False,targets,PFR+RULE2PT+SCORE0,19860105-NYG-CHI,True,,True,True,,,0
 Walter Payton,1985,18,1986-01-12,True,CHI,RAM,H,W,24,0,18,32,0,,7,48,0,0,0,0,0,,0,8.0,15.0,17270,False,targets;fum_rec_td,PFR+RULE2PT,19860112-RAM-CHI,False,fum_rec_td,False,True,fum_rec_td,,6
-Walter Payton,1985,19,1986-01-26,True,CHI,NWE,N,W,46,10,22,61,0,,0,0,0,0,0,0,0,,0,6.1,6.1,17270,False,targets;fum_rec_td,PFR+RULE2PT,19860126-CHI-NWE-N,False,fum_rec_td,False,True,fum_rec_td,,8
+Walter Payton,1985,19,1986-01-26,True,CHI,NWE,N,W,46,10,22,61,0,,0,0,0,0,0,0,0,,0,6.1,6.1,17270,False,targets;fum_rec_td,PFR+RULE2PT,19860126-CHI-NWE-N,False,fum_rec_td,False,True,fum_rec_td,,6
 Walter Payton,1986,1,1986-09-07,False,CHI,CLE,H,W,41,31,22,113,1,,2,20,1,0,0,0,0,,0,25.3,27.3,17270,False,targets;fum_rec_td,PFR+RULE2PT,19860907-CLE-CHI,False,fum_rec_td,False,True,fum_rec_td,,6
 Walter Payton,1986,2,1986-09-14,False,CHI,PHI,H,W,13,10,34,177,1,,1,-2,0,0,0,1,0,0,0,21.5,22.5,17270,False,targets,PFR+RULE2PT+SCORE0,19860914-PHI-CHI,True,,True,True,,,0
 Walter Payton,1986,3,1986-09-22,False,CHI,GNB,A,W,25,12,18,57,1,,2,25,0,0,0,0,0,0,0,14.2,16.2,17270,False,targets,PFR+RULE2PT+SCORE2,19860922-CHI-GNB,True,,True,True,,,2
@@ -593,7 +593,7 @@ Ottis Anderson,1986,15,1986-12-14,False,NYG,STL,H,W,27,7,3,9,0,,0,0,0,0,0,0,0,0,
 Ottis Anderson,1986,16,1986-12-20,False,NYG,GNB,H,W,55,24,6,21,0,,0,0,0,0,0,0,0,,0,2.1,2.1,476,False,targets;fum_rec_td,PFR+RULE2PT,19861220-GNB-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Ottis Anderson,1986,17,1987-01-04,True,NYG,SFO,H,W,49,3,4,2,0,,0,0,0,0,0,0,0,,0,0.2,0.2,476,False,targets;fum_rec_td,PFR+RULE2PT,19870104-SFO-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Ottis Anderson,1986,18,1987-01-11,True,NYG,WAS,H,W,17,0,1,3,0,,0,0,0,0,0,0,0,0,0,0.3,0.3,476,False,targets,PFR+RULE2PT+SCORE0,19870111-WAS-NYG,True,,True,True,,,0
-Ottis Anderson,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,2,1,1,,0,0,0,0,0,0,0,0,0,6.1,6.1,476,False,targets,PFR+RULE2PT+SCORE2,19870125-DEN-NYG-N,True,,True,True,,,2
+Ottis Anderson,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,2,1,1,,0,0,0,0,0,0,0,0,0,6.1,6.1,476,False,targets,PFR+RULE2PT+SCORE0,19870125-DEN-NYG-N,True,,True,True,,,0
 Ottis Anderson,1987,1,1987-09-14,False,NYG,CHI,A,L,19,34,0,0,0,,1,9,0,0,0,0,0,,0,0.9,1.9,476,False,targets;fum_rec_td,PFR+RULE2PT,19870914-NYG-CHI,False,fum_rec_td,False,True,fum_rec_td,,12
 Ottis Anderson,1987,2,1987-09-20,False,NYG,DAL,H,L,14,16,2,6,0,,1,7,0,0,0,0,0,0,0,1.3,2.3,476,False,targets,PFR+RULE2PT+SCORE0,19870920-DAL-NYG,True,,True,True,,,0
 Ottis Anderson,1987,8,1987-11-08,False,NYG,NWE,H,W,17,10,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,476,False,targets,PFR+RULE2PT+SCORE0,19871108-NWE-NYG,True,,True,True,,,0
@@ -772,8 +772,8 @@ Marcus Allen,1983,15,1983-12-11,False,RAI,STL,H,L,24,34,18,86,0,,3,35,1,0,0,0,0,
 Marcus Allen,1983,16,1983-12-18,False,RAI,SDG,H,W,30,14,16,72,2,,5,49,0,0,0,0,0,0,0,24.1,29.1,323,False,targets,PFR+RULE2PT+SCORE0,19831218-SDG-RAI,True,,True,True,,,0
 Marcus Allen,1983,17,1984-01-01,True,RAI,PIT,H,W,38,10,13,121,2,,5,38,0,0,0,0,0,,0,27.9,32.9,323,False,targets;fum_rec_td,PFR+RULE2PT,19840101-PIT-RAI,False,fum_rec_td,False,True,fum_rec_td,,6
 Marcus Allen,1983,18,1984-01-08,True,RAI,SEA,H,W,30,14,25,154,0,,7,62,1,0,0,0,0,0,0,27.6,34.6,323,False,targets,PFR+RULE2PT+SCORE0,19840108-SEA-RAI,True,,True,True,,,0
-Marcus Allen,1983,19,1984-01-22,True,RAI,WAS,N,W,38,9,20,191,2,,2,18,0,0,0,0,0,,0,32.9,34.9,323,False,targets;fum_rec_td,PFR+RULE2PT,19840122-RAI-WAS-N,False,fum_rec_td,False,True,fum_rec_td,,12
-Marcus Allen,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,21,81,1,,5,38,0,0,0,0,0,0,0,17.9,22.9,323,False,targets,PFR+RULE2PT+SCORE2,19840902-RAI-HOU,True,,True,True,,,2
+Marcus Allen,1983,19,1984-01-22,True,RAI,WAS,N,W,38,9,20,191,2,2,2,18,0,0,0,0,0,,0,32.9,34.9,323,False,fum_rec_td,PFR+RULE2PT,19840122-RAI-WAS-N,False,fum_rec_td,False,True,fum_rec_td,,12
+Marcus Allen,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,21,81,1,,5,38,0,0,0,0,0,,0,17.9,22.9,323,False,targets;fum_rec_td,PFR+RULE2PT,19840902-RAI-HOU,False,fum_rec_td,False,True,fum_rec_td,,2
 Marcus Allen,1984,2,1984-09-09,False,RAI,GNB,H,W,28,7,20,81,1,,3,13,0,0,0,0,0,0,0,15.4,18.4,323,False,targets,PFR+RULE2PT+SCORE0,19840909-GNB-RAI,True,,True,True,,,0
 Marcus Allen,1984,3,1984-09-16,False,RAI,KAN,A,W,22,20,22,69,0,,6,46,0,0,0,0,0,0,0,11.5,17.5,323,False,targets,PFR+RULE2PT+SCORE0,19840916-RAI-KAN,True,,True,True,,,0
 Marcus Allen,1984,4,1984-09-24,False,RAI,SDG,H,W,33,30,18,47,3,,6,62,1,0,0,0,0,0,0,34.9,40.9,323,False,targets,PFR+RULE2PT+SCORE0,19840924-SDG-RAI,True,,True,True,,,0
@@ -891,7 +891,7 @@ Roger Craig,1984,15,1984-12-08,False,SFO,MIN,H,W,51,7,7,45,0,,4,31,0,0,0,0,0,0,0
 Roger Craig,1984,16,1984-12-14,False,SFO,RAM,H,W,19,16,8,59,0,,5,26,0,0,0,0,0,0,0,8.5,13.5,4714,False,targets,PFR+RULE2PT+SCORE2,19841214-RAM-SFO,True,,True,True,,,2
 Roger Craig,1984,17,1984-12-29,True,SFO,NYG,H,W,21,10,10,34,0,,4,31,0,0,0,0,0,0,0,6.5,10.5,4714,False,targets,PFR+RULE2PT+SCORE0,19841229-NYG-SFO,True,,True,True,,,0
 Roger Craig,1984,18,1985-01-06,True,SFO,CHI,H,W,23,0,8,44,0,,0,0,0,0,0,0,0,0,0,4.4,4.4,4714,False,targets,PFR+RULE2PT+SCORE0,19850106-CHI-SFO,True,,True,True,,,0
-Roger Craig,1984,19,1985-01-20,True,SFO,MIA,N,W,38,16,15,58,1,,7,77,2,0,0,0,0,0,0,31.5,38.5,4714,False,targets,PFR+RULE2PT+SCORE0,19850120-MIA-SFO-N,True,,True,True,,,0
+Roger Craig,1984,19,1985-01-20,True,SFO,MIA,N,W,38,16,15,58,1,8,7,77,2,0,0,0,0,0,0,31.5,38.5,4714,True,,PFR+RULE2PT+SCORE0,19850120-MIA-SFO-N,True,,True,True,,,0
 Roger Craig,1985,1,1985-09-08,False,SFO,MIN,A,L,21,28,13,78,1,,7,72,2,0,0,0,0,0,0,33.0,40.0,4714,False,targets,PFR+RULE2PT+SCORE0,19850908-SFO-MIN,True,,True,True,,,0
 Roger Craig,1985,2,1985-09-15,False,SFO,ATL,H,W,35,16,11,107,2,,6,77,0,0,0,0,0,0,0,30.4,36.4,4714,False,targets,PFR+RULE2PT+SCORE0,19850915-ATL-SFO,True,,True,True,,,0
 Roger Craig,1985,3,1985-09-22,False,SFO,RAI,A,W,34,10,10,34,0,,5,61,1,0,0,0,0,,0,15.5,20.5,4714,False,targets;fum_rec_td,PFR+RULE2PT,19850922-SFO-RAI,False,fum_rec_td,False,True,fum_rec_td,,6
@@ -959,7 +959,7 @@ Roger Craig,1988,15,1988-12-11,False,SFO,NOR,H,W,30,17,22,115,1,,2,7,0,0,0,0,0,0
 Roger Craig,1988,16,1988-12-18,False,SFO,RAM,H,L,16,38,16,51,0,,3,32,0,0,0,0,0,0,0,8.3,11.3,4714,False,targets,PFR+RULE2PT+SCORE0,19881218-RAM-SFO,True,,True,True,,,0
 Roger Craig,1988,17,1989-01-01,True,SFO,MIN,H,W,34,9,21,135,2,,3,26,0,0,0,0,0,0,0,28.1,31.1,4714,False,targets,PFR+RULE2PT+SCORE0,19890101-MIN-SFO,True,,True,True,,,0
 Roger Craig,1988,18,1989-01-08,True,SFO,CHI,A,W,28,3,18,68,0,,2,33,0,0,0,0,0,0,0,10.1,12.1,4714,False,targets,PFR+RULE2PT+SCORE0,19890108-SFO-CHI,True,,True,True,,,0
-Roger Craig,1988,19,1989-01-22,True,SFO,CIN,N,W,20,16,17,71,0,,8,101,0,0,0,0,0,0,0,17.2,25.2,4714,False,targets,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
+Roger Craig,1988,19,1989-01-22,True,SFO,CIN,N,W,20,16,17,71,0,12,8,101,0,0,0,0,0,0,0,17.2,25.2,4714,True,,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
 Roger Craig,1989,1,1989-09-10,False,SFO,IND,A,W,30,24,24,131,2,,1,0,0,0,0,0,0,0,0,25.1,26.1,4714,False,targets,PFR+RULE2PT+SCORE0,19890910-SFO-IND,True,,True,True,,,0
 Roger Craig,1989,2,1989-09-17,False,SFO,TAM,A,W,20,16,16,36,0,,3,30,0,0,0,0,0,0,0,6.6,9.6,4714,False,targets,PFR+RULE2PT+SCORE0,19890917-SFO-TAM,True,,True,True,,,0
 Roger Craig,1989,3,1989-09-24,False,SFO,PHI,A,W,38,28,8,14,0,,4,20,0,0,0,0,0,0,0,3.4,7.4,4714,False,targets,PFR+RULE2PT+SCORE0,19890924-SFO-PHI,True,,True,True,,,0
@@ -978,7 +978,7 @@ Roger Craig,1989,15,1989-12-17,False,SFO,BUF,H,W,21,10,25,105,1,,1,12,0,0,0,0,0,
 Roger Craig,1989,16,1989-12-24,False,SFO,CHI,H,W,26,0,10,31,0,,1,10,0,0,0,0,0,0,0,4.1,5.1,4714,False,targets,PFR+RULE2PT+SCORE0,19891224-CHI-SFO,True,,True,True,,,0
 Roger Craig,1989,17,1990-01-06,True,SFO,MIN,H,W,41,13,18,125,1,,0,0,0,0,0,0,0,,0,18.5,18.5,4714,False,targets;fum_rec_td,PFR+RULE2PT,19900106-MIN-SFO,False,fum_rec_td,False,True,fum_rec_td,,6
 Roger Craig,1989,18,1990-01-14,True,SFO,RAM,H,W,30,3,24,94,1,,3,40,0,0,0,0,0,0,0,19.4,22.4,4714,False,targets,PFR+RULE2PT+SCORE0,19900114-RAM-SFO,True,,True,True,,,0
-Roger Craig,1989,19,1990-01-28,True,SFO,DEN,N,W,55,10,20,69,1,,5,34,0,0,0,0,0,0,0,16.3,21.3,4714,False,targets,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
+Roger Craig,1989,19,1990-01-28,True,SFO,DEN,N,W,55,10,20,69,1,6,5,34,0,0,0,0,0,0,0,16.3,21.3,4714,True,,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
 Bo Jackson,1987,7,1987-11-01,False,RAI,NWE,A,L,23,26,8,37,0,,1,6,0,0,0,0,0,0,0,4.3,5.3,10731,False,targets,PFR+RULE2PT+SCORE0,19871101-RAI-NWE,True,,True,True,,,0
 Bo Jackson,1987,8,1987-11-08,False,RAI,MIN,A,L,20,31,12,74,0,,1,7,0,0,0,0,0,0,0,8.1,9.1,10731,False,targets,PFR+RULE2PT+SCORE0,19871108-RAI-MIN,True,,True,True,,,0
 Bo Jackson,1987,9,1987-11-15,False,RAI,SDG,A,L,14,16,8,45,0,,3,26,0,0,0,0,0,0,0,7.1,10.1,10731,False,targets,PFR+RULE2PT+SCORE0,19871115-RAI-SDG,True,,True,True,,,0
@@ -1110,7 +1110,7 @@ Earnest Byner,1987,13,1987-12-13,False,CLE,CIN,H,W,38,24,2,20,0,,2,28,0,0,0,0,0,
 Earnest Byner,1987,14,1987-12-20,False,CLE,RAI,A,W,24,17,12,74,1,,2,21,1,0,0,0,0,0,0,21.5,23.5,3197,False,targets,PFR+RULE2PT+SCORE0,19871220-CLE-RAI,True,,True,True,,,0
 Earnest Byner,1987,15,1987-12-26,False,CLE,PIT,A,W,19,13,12,48,1,,3,19,0,0,0,0,0,0,0,12.7,15.7,3197,False,targets,PFR+RULE2PT+SCORE0,19871226-CLE-PIT,True,,True,True,,,0
 Earnest Byner,1987,16,1988-01-09,True,CLE,IND,H,W,38,21,23,122,1,,4,36,1,0,0,0,0,,0,27.8,31.8,3197,False,targets;fum_rec_td,PFR+RULE2PT,19880109-IND-CLE,False,fum_rec_td,False,True,fum_rec_td,,6
-Earnest Byner,1987,17,1988-01-17,True,CLE,DEN,A,L,33,38,15,67,1,,7,120,1,0,0,0,0,0,0,30.7,37.7,3197,False,targets,PFR+RULE2PT+SCORE2,19880117-CLE-DEN,True,,True,True,,,2
+Earnest Byner,1987,17,1988-01-17,True,CLE,DEN,A,L,33,38,15,67,1,,7,120,1,0,0,0,0,0,0,30.7,37.7,3197,False,targets,PFR+RULE2PT+SCORE0,19880117-CLE-DEN,True,,True,True,,,0
 Earnest Byner,1988,1,1988-09-04,False,CLE,KAN,A,W,6,3,12,33,0,,3,44,0,0,0,0,0,0,0,7.7,10.7,3197,False,targets,PFR+RULE2PT+SCORE0,19880904-CLE-KAN,True,,True,True,,,0
 Earnest Byner,1988,2,1988-09-11,False,CLE,NYJ,H,L,3,23,5,5,0,,4,46,0,0,0,0,0,0,0,5.1,9.1,3197,False,targets,PFR+RULE2PT+SCORE0,19880911-NYJ-CLE,True,,True,True,,,0
 Earnest Byner,1988,3,1988-09-19,False,CLE,IND,H,W,23,17,10,22,0,,2,27,0,0,0,0,0,0,0,4.9,6.9,3197,False,targets,PFR+RULE2PT+SCORE0,19880919-IND-CLE,True,,True,True,,,0
@@ -1534,7 +1534,7 @@ James Brooks,1988,15,1988-12-11,False,CIN,HOU,A,L,6,41,14,44,0,,2,24,0,0,0,0,0,0
 James Brooks,1988,16,1988-12-17,False,CIN,WAS,H,W,20,17,7,12,0,,2,1,0,0,0,0,0,0,0,1.3,3.3,2497,False,targets,PFR+RULE2PT+SCORE0,19881217-WAS-CIN,True,,True,True,,,0
 James Brooks,1988,17,1988-12-31,True,CIN,SEA,H,W,21,13,13,72,0,,1,9,0,0,0,0,0,0,0,8.1,9.1,2497,False,targets,PFR+RULE2PT+SCORE0,19881231-SEA-CIN,True,,True,True,,,0
 James Brooks,1988,18,1989-01-08,True,CIN,BUF,H,W,21,10,7,6,0,,2,21,1,0,0,0,0,0,0,8.7,10.7,2497,False,targets,PFR+RULE2PT+SCORE0,19890108-BUF-CIN,True,,True,True,,,0
-James Brooks,1988,19,1989-01-22,True,CIN,SFO,N,L,16,20,6,24,0,,2,32,0,0,0,0,0,0,0,5.6,7.6,2497,False,targets,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
+James Brooks,1988,19,1989-01-22,True,CIN,SFO,N,L,16,20,6,24,0,2,2,32,0,0,0,0,0,0,0,5.6,7.6,2497,True,,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
 James Brooks,1989,1,1989-09-10,False,CIN,CHI,A,L,14,17,13,88,0,,5,46,1,0,0,0,0,0,0,19.4,24.4,2497,False,targets,PFR+RULE2PT+SCORE0,19890910-CIN-CHI,True,,True,True,,,0
 James Brooks,1989,2,1989-09-17,False,CIN,PIT,H,W,41,10,20,113,1,,1,17,0,0,0,0,0,0,0,19.0,20.0,2497,False,targets,PFR+RULE2PT+SCORE0,19890917-PIT-CIN,True,,True,True,,,0
 James Brooks,1989,3,1989-09-25,False,CIN,CLE,H,W,21,14,13,67,0,,2,44,1,0,0,0,0,0,0,17.1,19.1,2497,False,targets,PFR+RULE2PT+SCORE0,19890925-CLE-CIN,True,,True,True,,,0
@@ -2290,7 +2290,7 @@ Joe Morris,1986,15,1986-12-14,False,NYG,STL,H,W,27,7,28,179,3,,0,0,0,0,0,0,0,0,0
 Joe Morris,1986,16,1986-12-20,False,NYG,GNB,H,W,55,24,22,115,1,,0,0,0,0,0,0,0,,0,17.5,17.5,15836,False,targets;fum_rec_td,PFR+RULE2PT,19861220-GNB-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Joe Morris,1986,17,1987-01-04,True,NYG,SFO,H,W,49,3,24,159,2,,1,2,0,0,0,0,0,,0,28.1,29.1,15836,False,targets;fum_rec_td,PFR+RULE2PT,19870104-SFO-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Joe Morris,1986,18,1987-01-11,True,NYG,WAS,H,W,17,0,29,87,1,,0,0,0,0,0,0,0,0,0,14.7,14.7,15836,False,targets,PFR+RULE2PT+SCORE0,19870111-WAS-NYG,True,,True,True,,,0
-Joe Morris,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,20,67,1,,4,20,0,0,0,0,0,0,0,14.7,18.7,15836,False,targets,PFR+RULE2PT+SCORE2,19870125-DEN-NYG-N,True,,True,True,,,2
+Joe Morris,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,20,67,1,,4,20,0,0,0,0,0,0,0,14.7,18.7,15836,False,targets,PFR+RULE2PT+SCORE0,19870125-DEN-NYG-N,True,,True,True,,,0
 Joe Morris,1987,1,1987-09-14,False,NYG,CHI,A,L,19,34,14,54,0,,1,4,0,0,0,0,0,,0,5.8,6.8,15836,False,targets;fum_rec_td,PFR+RULE2PT,19870914-NYG-CHI,False,fum_rec_td,False,True,fum_rec_td,,12
 Joe Morris,1987,2,1987-09-20,False,NYG,DAL,H,L,14,16,8,26,0,,0,0,0,0,0,0,0,0,0,2.6,2.6,15836,False,targets,PFR+RULE2PT+SCORE0,19870920-DAL-NYG,True,,True,True,,,0
 Joe Morris,1987,6,1987-10-25,False,NYG,STL,H,W,30,7,22,88,0,,1,9,0,0,0,0,0,0,0,9.7,10.7,15836,False,targets,PFR+RULE2PT+SCORE0,19871025-STL-NYG,True,,True,True,,,0
@@ -2577,7 +2577,7 @@ Sammy Winder,1986,13,1986-11-30,False,DEN,CIN,H,W,34,28,20,46,1,,3,23,1,0,0,0,0,
 Sammy Winder,1986,14,1986-12-07,False,DEN,KAN,A,L,10,37,13,28,0,,2,4,1,0,0,0,0,0,0,9.2,11.2,24456,False,targets,PFR+RULE2PT+SCORE0,19861207-DEN-KAN,True,,True,True,,,0
 Sammy Winder,1986,15,1986-12-13,False,DEN,WAS,H,W,31,30,17,39,2,,1,3,0,0,0,0,0,0,0,16.2,17.2,24456,False,targets,PFR+RULE2PT+SCORE0,19861213-WAS-DEN,True,,True,True,,,0
 Sammy Winder,1986,16,1986-12-20,False,DEN,SEA,A,L,16,41,5,12,0,,0,0,0,0,0,0,0,0,0,1.2,1.2,24456,False,targets,PFR+RULE2PT+SCORE0,19861220-DEN-SEA,True,,True,True,,,0
-Sammy Winder,1986,17,1987-01-04,True,DEN,NWE,H,W,22,17,19,102,0,,1,16,0,0,0,0,0,0,0,11.8,12.8,24456,False,targets,PFR+RULE2PT+SCORE2,19870104-NWE-DEN,True,,True,True,,,2
+Sammy Winder,1986,17,1987-01-04,True,DEN,NWE,H,W,22,17,19,102,0,,1,16,0,0,0,0,0,0,0,11.8,12.8,24456,False,targets,PFR+RULE2PT+SCORE0,19870104-NWE-DEN,True,,True,True,,,0
 Sammy Winder,1986,18,1987-01-11,True,DEN,CLE,A,W,23,20,26,83,0,,2,2,0,0,0,0,0,0,0,8.5,10.5,24456,False,targets,PFR+RULE2PT+SCORE0,19870111-DEN-CLE,True,,True,True,,,0
 Sammy Winder,1986,19,1987-01-25,True,DEN,NYG,N,L,20,39,4,0,0,,4,34,0,0,0,0,0,0,0,3.4,7.4,24456,False,targets,PFR+RULE2PT+SCORE0,19870125-DEN-NYG-N,True,,True,True,,,0
 Sammy Winder,1987,1,1987-09-13,False,DEN,SEA,H,W,40,17,17,79,0,,0,0,0,0,0,0,0,0,0,7.9,7.9,24456,False,targets,PFR+RULE2PT+SCORE0,19870913-SEA-DEN,True,,True,True,,,0
@@ -2762,7 +2762,7 @@ Greg Pruitt,1983,16,1983-12-18,False,RAI,SDG,H,W,30,14,1,2,0,,0,0,0,0,0,0,0,0,0,
 Greg Pruitt,1983,17,1984-01-01,True,RAI,PIT,H,W,38,10,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,18006,False,targets;fum_rec_td,PFR+RULE2PT,19840101-PIT-RAI,False,fum_rec_td,False,True,fum_rec_td,,6
 Greg Pruitt,1983,18,1984-01-08,True,RAI,SEA,H,W,30,14,1,4,0,,0,0,0,0,0,0,0,0,0,0.4,0.4,18006,False,targets,PFR+RULE2PT+SCORE0,19840108-SEA-RAI,True,,True,True,,,0
 Greg Pruitt,1983,19,1984-01-22,True,RAI,WAS,N,W,38,9,5,17,0,,0,0,0,0,0,0,0,,0,1.7,1.7,18006,False,targets;fum_rec_td,PFR+RULE2PT,19840122-RAI-WAS-N,False,fum_rec_td,False,True,fum_rec_td,,12
-Greg Pruitt,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18006,False,targets,PFR+RULE2PT+SCORE2,19840902-RAI-HOU,True,,True,True,,,2
+Greg Pruitt,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,18006,False,targets;fum_rec_td,PFR+RULE2PT,19840902-RAI-HOU,False,fum_rec_td,False,True,fum_rec_td,,2
 Greg Pruitt,1984,2,1984-09-09,False,RAI,GNB,H,W,28,7,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18006,False,targets,PFR+RULE2PT+SCORE0,19840909-GNB-RAI,True,,True,True,,,0
 Greg Pruitt,1984,3,1984-09-16,False,RAI,KAN,A,W,22,20,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,18006,False,targets,PFR+RULE2PT+SCORE0,19840916-RAI-KAN,True,,True,True,,,0
 Greg Pruitt,1984,4,1984-09-24,False,RAI,SDG,H,W,33,30,2,0,0,,1,8,0,0,0,0,0,0,0,0.8,1.8,18006,False,targets,PFR+RULE2PT+SCORE0,19840924-SDG-RAI,True,,True,True,,,0
@@ -2819,7 +2819,7 @@ Joe Cribbs,1981,5,1981-10-04,False,BUF,BAL,H,W,23,17,17,159,0,,3,20,0,0,0,0,0,0,
 Joe Cribbs,1981,6,1981-10-12,False,BUF,MIA,H,W,31,21,16,60,0,,3,66,1,0,0,0,0,0,0,18.6,21.6,4768,False,targets,PFR+RULE2PT+SCORE0,19811012-MIA-BUF,True,,True,True,,,0
 Joe Cribbs,1981,7,1981-10-18,False,BUF,NYJ,A,L,14,33,9,44,0,,1,7,0,0,0,0,0,0,0,5.1,6.1,4768,False,targets,PFR+RULE2PT+SCORE0,19811018-BUF-NYJ,True,,True,True,,,0
 Joe Cribbs,1981,8,1981-10-25,False,BUF,DEN,H,W,9,7,24,123,0,,2,15,0,0,0,0,0,0,0,13.8,15.8,4768,False,targets,PFR+RULE2PT+SCORE0,19811025-DEN-BUF,True,,True,True,,,0
-Joe Cribbs,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,23,85,0,,5,163,3,0,0,0,0,0,0,42.8,47.8,4768,False,targets,PFR+RULE2PT+SCORE2,19811101-CLE-BUF,True,,True,True,,,2
+Joe Cribbs,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,23,85,0,,5,163,3,0,0,0,0,,0,42.8,47.8,4768,False,targets;fum_rec_td,PFR+RULE2PT,19811101-CLE-BUF,False,fum_rec_td,False,True,fum_rec_td,,2
 Joe Cribbs,1981,10,1981-11-09,False,BUF,DAL,A,L,14,27,8,19,0,,3,29,0,9,1,0,0,0,0,9.16,12.16,4768,False,targets,PFR+RULE2PT+SCORE0,19811109-BUF-DAL,True,,True,True,,,0
 Joe Cribbs,1981,11,1981-11-15,False,BUF,STL,A,L,0,24,14,55,0,,2,8,0,0,0,0,0,0,0,6.3,8.3,4768,False,targets,PFR+RULE2PT+SCORE0,19811115-BUF-STL,True,,True,True,,,0
 Joe Cribbs,1981,12,1981-11-22,False,BUF,NWE,H,W,20,17,10,32,0,,0,0,0,0,0,0,0,0,0,3.2,3.2,4768,False,targets,PFR+RULE2PT+SCORE0,19811122-NWE-BUF,True,,True,True,,,0
@@ -2962,7 +2962,7 @@ Kevin Mack,1987,13,1987-12-13,False,CLE,CIN,H,W,38,24,27,133,1,,3,19,1,0,0,0,0,0
 Kevin Mack,1987,14,1987-12-20,False,CLE,RAI,A,W,24,17,17,55,0,,0,0,0,0,0,0,0,0,0,5.5,5.5,13796,False,targets,PFR+RULE2PT+SCORE0,19871220-CLE-RAI,True,,True,True,,,0
 Kevin Mack,1987,15,1987-12-26,False,CLE,PIT,A,W,19,13,18,37,0,,2,17,0,0,0,0,0,0,0,5.4,7.4,13796,False,targets,PFR+RULE2PT+SCORE0,19871226-CLE-PIT,True,,True,True,,,0
 Kevin Mack,1987,16,1988-01-09,True,CLE,IND,H,W,38,21,6,38,0,,3,17,0,0,0,0,0,,0,5.5,8.5,13796,False,targets;fum_rec_td,PFR+RULE2PT,19880109-IND-CLE,False,fum_rec_td,False,True,fum_rec_td,,6
-Kevin Mack,1987,17,1988-01-17,True,CLE,DEN,A,L,33,38,12,61,0,,4,28,0,0,0,0,0,0,0,8.9,12.9,13796,False,targets,PFR+RULE2PT+SCORE2,19880117-CLE-DEN,True,,True,True,,,2
+Kevin Mack,1987,17,1988-01-17,True,CLE,DEN,A,L,33,38,12,61,0,,4,28,0,0,0,0,0,0,0,8.9,12.9,13796,False,targets,PFR+RULE2PT+SCORE0,19880117-CLE-DEN,True,,True,True,,,0
 Kevin Mack,1988,1,1988-09-04,False,CLE,KAN,A,W,6,3,9,41,0,,2,20,0,0,0,0,0,0,0,6.1,8.1,13796,False,targets,PFR+RULE2PT+SCORE0,19880904-CLE-KAN,True,,True,True,,,0
 Kevin Mack,1988,2,1988-09-11,False,CLE,NYJ,H,L,3,23,8,26,0,,2,2,0,0,0,0,0,0,0,2.8,4.8,13796,False,targets,PFR+RULE2PT+SCORE0,19880911-NYJ-CLE,True,,True,True,,,0
 Kevin Mack,1988,3,1988-09-19,False,CLE,IND,H,W,23,17,23,76,0,,3,49,0,0,0,0,0,0,0,12.5,15.5,13796,False,targets,PFR+RULE2PT+SCORE0,19880919-IND-CLE,True,,True,True,,,0
@@ -3906,7 +3906,7 @@ Mike Rozier,1988,3,1988-09-18,False,HOU,NYJ,A,L,3,45,12,65,0,,1,8,0,0,0,0,0,0,0,
 Mike Rozier,1988,4,1988-09-25,False,HOU,NWE,H,W,31,6,18,42,1,,2,5,0,0,0,0,0,0,0,10.7,12.7,19191,False,targets,PFR+RULE2PT+SCORE0,19880925-NWE-HOU,True,,True,True,,,0
 Mike Rozier,1988,5,1988-10-02,False,HOU,PHI,A,L,23,32,8,20,1,,1,18,0,0,0,0,0,,0,9.8,10.8,19191,False,targets;fum_rec_td,PFR+RULE2PT,19881002-HOU-PHI,False,fum_rec_td,False,True,fum_rec_td,,8
 Mike Rozier,1988,6,1988-10-09,False,HOU,KAN,H,W,7,6,27,141,0,,1,8,0,0,0,0,0,0,0,14.9,15.9,19191,False,targets,PFR+RULE2PT+SCORE0,19881009-KAN-HOU,True,,True,True,,,0
-Mike Rozier,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,20,72,1,,0,0,0,0,0,0,0,0,0,13.2,13.2,19191,False,targets,PFR+RULE2PT+SCORE2,19881016-HOU-PIT,True,,True,True,,,2
+Mike Rozier,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,20,72,1,,0,0,0,0,0,0,0,,0,13.2,13.2,19191,False,targets;fum_rec_td,PFR+RULE2PT,19881016-HOU-PIT,False,fum_rec_td,False,True,fum_rec_td,,2
 Mike Rozier,1988,8,1988-10-23,False,HOU,CIN,A,L,21,44,18,73,1,,0,0,0,0,0,0,0,0,0,13.3,13.3,19191,False,targets,PFR+RULE2PT+SCORE0,19881023-HOU-CIN,True,,True,True,,,0
 Mike Rozier,1988,9,1988-10-30,False,HOU,WAS,H,W,41,17,14,39,0,,0,0,0,0,0,0,0,0,0,3.9,3.9,19191,False,targets,PFR+RULE2PT+SCORE0,19881030-WAS-HOU,True,,True,True,,,0
 Mike Rozier,1988,10,1988-11-07,False,HOU,CLE,H,W,24,17,23,76,1,,0,0,0,0,0,0,0,0,0,13.6,13.6,19191,False,targets,PFR+RULE2PT+SCORE0,19881107-CLE-HOU,True,,True,True,,,0
@@ -4056,7 +4056,7 @@ Otis Armstrong,1980,9,1980-11-02,False,DEN,HOU,H,L,16,20,5,17,0,,1,2,0,0,0,0,0,0
 Lorenzo White,1988,2,1988-09-11,False,HOU,RAI,H,W,38,35,4,28,0,,0,0,0,0,0,0,0,0,0,2.8,2.8,23789,False,targets,PFR+RULE2PT+SCORE0,19880911-RAI-HOU,True,,True,True,,,0
 Lorenzo White,1988,3,1988-09-18,False,HOU,NYJ,A,L,3,45,3,10,0,,0,0,0,0,0,0,0,0,0,1.0,1.0,23789,False,targets,PFR+RULE2PT+SCORE0,19880918-HOU-NYJ,True,,True,True,,,0
 Lorenzo White,1988,4,1988-09-25,False,HOU,NWE,H,W,31,6,4,23,0,,0,0,0,0,0,0,0,0,0,2.3,2.3,23789,False,targets,PFR+RULE2PT+SCORE0,19880925-NWE-HOU,True,,True,True,,,0
-Lorenzo White,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,9,27,0,,0,0,0,0,0,0,0,0,0,2.7,2.7,23789,False,targets,PFR+RULE2PT+SCORE2,19881016-HOU-PIT,True,,True,True,,,2
+Lorenzo White,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,9,27,0,,0,0,0,0,0,0,0,,0,2.7,2.7,23789,False,targets;fum_rec_td,PFR+RULE2PT,19881016-HOU-PIT,False,fum_rec_td,False,True,fum_rec_td,,2
 Lorenzo White,1988,9,1988-10-30,False,HOU,WAS,H,W,41,17,2,3,0,,0,0,0,0,0,0,0,0,0,0.3,0.3,23789,False,targets,PFR+RULE2PT+SCORE0,19881030-WAS-HOU,True,,True,True,,,0
 Lorenzo White,1988,11,1988-11-13,False,HOU,SEA,A,L,24,27,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,23789,False,targets,PFR+RULE2PT+SCORE0,19881113-HOU-SEA,True,,True,True,,,0
 Lorenzo White,1988,12,1988-11-20,False,HOU,PHO,H,W,38,20,8,24,0,,0,0,0,0,0,0,0,0,0,2.4,2.4,23789,False,targets,PFR+RULE2PT+SCORE0,19881120-PHO-HOU,True,,True,True,,,0
@@ -4595,7 +4595,7 @@ Tony Galbreath,1986,15,1986-12-14,False,NYG,STL,H,W,27,7,1,7,0,,0,0,0,0,0,0,0,0,
 Tony Galbreath,1986,16,1986-12-20,False,NYG,GNB,H,W,55,24,0,0,0,,3,15,0,0,0,0,0,,0,1.5,4.5,7526,False,targets;fum_rec_td,PFR+RULE2PT,19861220-GNB-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Tony Galbreath,1986,17,1987-01-04,True,NYG,SFO,H,W,49,3,0,0,0,,1,9,0,0,0,0,0,,0,0.9,1.9,7526,False,targets;fum_rec_td,PFR+RULE2PT,19870104-SFO-NYG,False,fum_rec_td,False,True,fum_rec_td,,6
 Tony Galbreath,1986,18,1987-01-11,True,NYG,WAS,H,W,17,0,1,-1,0,,0,0,0,0,0,0,0,0,0,-0.1,-0.1,7526,False,targets,PFR+RULE2PT+SCORE0,19870111-WAS-NYG,True,,True,True,,,0
-Tony Galbreath,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,4,17,0,,0,0,0,0,0,0,0,0,0,1.7,1.7,7526,False,targets,PFR+RULE2PT+SCORE2,19870125-DEN-NYG-N,True,,True,True,,,2
+Tony Galbreath,1986,19,1987-01-25,True,NYG,DEN,N,W,39,20,4,17,0,,0,0,0,0,0,0,0,0,0,1.7,1.7,7526,False,targets,PFR+RULE2PT+SCORE0,19870125-DEN-NYG-N,True,,True,True,,,0
 Tony Galbreath,1987,1,1987-09-14,False,NYG,CHI,A,L,19,34,1,11,0,,1,7,0,0,0,0,0,,0,1.8,2.8,7526,False,targets;fum_rec_td,PFR+RULE2PT,19870914-NYG-CHI,False,fum_rec_td,False,True,fum_rec_td,,12
 Tony Galbreath,1987,2,1987-09-20,False,NYG,DAL,H,L,14,16,0,0,0,,5,59,0,0,0,0,0,0,0,5.9,10.9,7526,False,targets,PFR+RULE2PT+SCORE0,19870920-DAL-NYG,True,,True,True,,,0
 Tony Galbreath,1987,6,1987-10-25,False,NYG,STL,H,W,30,7,1,0,0,,1,-4,0,0,0,0,0,0,0,-0.4,0.6,7526,False,targets,PFR+RULE2PT+SCORE0,19871025-STL-NYG,True,,True,True,,,0
@@ -5970,7 +5970,7 @@ Bobby Humphrey,1989,15,1989-12-16,False,DEN,PHO,A,W,37,0,23,128,0,,1,6,0,17,1,0,
 Bobby Humphrey,1989,16,1989-12-24,False,DEN,SDG,A,L,16,19,15,51,0,,2,15,1,0,0,0,0,0,0,12.6,14.6,10455,False,targets,PFR+RULE2PT+SCORE0,19891224-DEN-SDG,True,,True,True,,,0
 Bobby Humphrey,1989,17,1990-01-07,True,DEN,PIT,H,W,24,23,18,85,0,,1,6,0,0,0,0,0,0,0,9.1,10.1,10455,False,targets,PFR+RULE2PT+SCORE0,19900107-PIT-DEN,True,,True,True,,,0
 Bobby Humphrey,1989,18,1990-01-14,True,DEN,CLE,H,W,37,21,8,23,0,,1,23,0,0,0,0,0,0,0,4.6,5.6,10455,False,targets,PFR+RULE2PT+SCORE0,19900114-CLE-DEN,True,,True,True,,,0
-Bobby Humphrey,1989,19,1990-01-28,True,DEN,SFO,N,L,10,55,12,61,0,,3,38,0,0,0,0,0,0,0,9.9,12.9,10455,False,targets,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
+Bobby Humphrey,1989,19,1990-01-28,True,DEN,SFO,N,L,10,55,12,61,0,4,3,38,0,0,0,0,0,0,0,9.9,12.9,10455,True,,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
 Charles White,1980,1,1980-09-07,False,CLE,NWE,A,L,17,34,4,2,0,,3,0,0,0,0,0,0,0,0,0.2,3.2,23745,False,targets,PFR+RULE2PT+SCORE0,19800907-CLE-NWE,True,,True,True,,,0
 Charles White,1980,2,1980-09-15,False,CLE,HOU,H,L,7,16,4,16,0,,0,0,0,0,0,0,0,0,0,1.6,1.6,23745,False,targets,PFR+RULE2PT+SCORE0,19800915-HOU-CLE,True,,True,True,,,0
 Charles White,1980,3,1980-09-21,False,CLE,KAN,H,W,20,13,15,59,1,,7,100,1,0,0,0,0,0,0,27.9,34.9,23745,False,targets,PFR+RULE2PT+SCORE0,19800921-KAN-CLE,True,,True,True,,,0
@@ -6177,7 +6177,7 @@ Matt Suhey,1985,15,1985-12-14,False,CHI,NYJ,A,W,19,6,7,23,0,,1,16,0,0,0,0,0,0,0,
 Matt Suhey,1985,16,1985-12-22,False,CHI,DET,A,W,37,17,8,46,0,,3,21,0,0,0,0,0,,0,6.7,9.7,21535,False,targets;fum_rec_td,PFR+RULE2PT,19851222-CHI-DET,False,fum_rec_td,False,True,fum_rec_td,,6
 Matt Suhey,1985,17,1986-01-05,True,CHI,NYG,H,W,21,0,6,33,0,,2,5,0,0,0,0,0,0,0,3.8,5.8,21535,False,targets,PFR+RULE2PT+SCORE0,19860105-NYG-CHI,True,,True,True,,,0
 Matt Suhey,1985,18,1986-01-12,True,CHI,RAM,H,W,24,0,6,23,0,,1,7,0,0,0,0,0,,0,3.0,4.0,21535,False,targets;fum_rec_td,PFR+RULE2PT,19860112-RAM-CHI,False,fum_rec_td,False,True,fum_rec_td,,6
-Matt Suhey,1985,19,1986-01-26,True,CHI,NWE,N,W,46,10,11,52,1,,1,24,0,0,0,0,0,,0,13.6,14.6,21535,False,targets;fum_rec_td,PFR+RULE2PT,19860126-CHI-NWE-N,False,fum_rec_td,False,True,fum_rec_td,,8
+Matt Suhey,1985,19,1986-01-26,True,CHI,NWE,N,W,46,10,11,52,1,,1,24,0,0,0,0,0,,0,13.6,14.6,21535,False,targets;fum_rec_td,PFR+RULE2PT,19860126-CHI-NWE-N,False,fum_rec_td,False,True,fum_rec_td,,6
 Matt Suhey,1986,1,1986-09-07,False,CHI,CLE,H,W,41,31,7,22,1,,6,85,0,0,0,0,0,,0,16.7,22.7,21535,False,targets;fum_rec_td,PFR+RULE2PT,19860907-CLE-CHI,False,fum_rec_td,False,True,fum_rec_td,,6
 Matt Suhey,1986,2,1986-09-14,False,CHI,PHI,H,W,13,10,5,2,0,,1,13,0,0,0,0,0,0,0,1.5,2.5,21535,False,targets,PFR+RULE2PT+SCORE0,19860914-PHI-CHI,True,,True,True,,,0
 Matt Suhey,1986,3,1986-09-22,False,CHI,GNB,A,W,25,12,4,15,0,,3,18,0,0,0,0,0,0,0,3.3,6.3,21535,False,targets,PFR+RULE2PT+SCORE2,19860922-CHI-GNB,True,,True,True,,,2
@@ -6548,7 +6548,7 @@ Scott Dierking,1980,1,1980-09-07,False,NYJ,BAL,H,L,14,17,5,12,0,,0,0,0,0,0,0,0,,
 Scott Dierking,1980,2,1980-09-14,False,NYJ,BUF,A,L,10,20,8,32,0,,0,0,0,0,0,0,0,0,0,3.2,3.2,5633,False,targets,PFR+RULE2PT+SCORE0,19800914-NYJ-BUF,True,,True,True,,,0
 Scott Dierking,1980,3,1980-09-21,False,NYJ,SFO,H,L,27,37,3,8,0,,0,0,0,0,0,0,0,0,0,0.8,0.8,5633,False,targets,PFR+RULE2PT+SCORE0,19800921-SFO-NYJ,True,,True,True,,,0
 Scott Dierking,1980,4,1980-09-28,False,NYJ,BAL,A,L,21,35,9,30,0,,2,15,0,0,0,0,0,0,0,4.5,6.5,5633,False,targets,PFR+RULE2PT+SCORE0,19800928-NYJ-BAL,True,,True,True,,,0
-Scott Dierking,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,7,52,0,,2,9,0,0,0,0,0,0,0,6.1,8.1,5633,False,targets,PFR+RULE2PT+SCORE2,19801005-NWE-NYJ,True,,True,True,,,2
+Scott Dierking,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,7,52,0,,2,9,0,0,0,0,0,,0,6.1,8.1,5633,False,targets;fum_rec_td,PFR+RULE2PT,19801005-NWE-NYJ,False,fum_rec_td,False,True,fum_rec_td,,2
 Scott Dierking,1980,6,1980-10-12,False,NYJ,ATL,A,W,14,7,12,38,1,,0,0,0,0,0,0,0,0,0,9.8,9.8,5633,False,targets,PFR+RULE2PT+SCORE0,19801012-NYJ-ATL,True,,True,True,,,0
 Scott Dierking,1980,7,1980-10-19,False,NYJ,SEA,H,L,17,27,18,65,0,,6,60,1,0,0,0,0,0,0,18.5,24.5,5633,False,targets,PFR+RULE2PT+SCORE0,19801019-SEA-NYJ,True,,True,True,,,0
 Scott Dierking,1980,8,1980-10-27,False,NYJ,MIA,H,W,17,14,10,53,1,,1,22,0,0,0,0,0,0,0,13.5,14.5,5633,False,targets,PFR+RULE2PT+SCORE0,19801027-MIA-NYJ,True,,True,True,,,0
@@ -7191,7 +7191,7 @@ Kenny King,1983,16,1983-12-18,False,RAI,SDG,H,W,30,14,11,36,0,,0,0,0,0,0,0,0,0,0
 Kenny King,1983,17,1984-01-01,True,RAI,PIT,H,W,38,10,6,20,1,,0,0,0,0,0,0,0,,0,8.0,8.0,12296,False,targets;fum_rec_td,PFR+RULE2PT,19840101-PIT-RAI,False,fum_rec_td,False,True,fum_rec_td,,6
 Kenny King,1983,18,1984-01-08,True,RAI,SEA,H,W,30,14,2,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,12296,False,targets,PFR+RULE2PT+SCORE0,19840108-SEA-RAI,True,,True,True,,,0
 Kenny King,1983,19,1984-01-22,True,RAI,WAS,N,W,38,9,3,12,0,,2,8,0,0,0,0,0,,0,2.0,4.0,12296,False,targets;fum_rec_td,PFR+RULE2PT,19840122-RAI-WAS-N,False,fum_rec_td,False,True,fum_rec_td,,12
-Kenny King,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,3,25,0,,1,-3,0,0,0,0,0,0,0,2.2,3.2,12296,False,targets,PFR+RULE2PT+SCORE2,19840902-RAI-HOU,True,,True,True,,,2
+Kenny King,1984,1,1984-09-02,False,RAI,HOU,A,W,24,14,3,25,0,,1,-3,0,0,0,0,0,,0,2.2,3.2,12296,False,targets;fum_rec_td,PFR+RULE2PT,19840902-RAI-HOU,False,fum_rec_td,False,True,fum_rec_td,,2
 Kenny King,1984,2,1984-09-09,False,RAI,GNB,H,W,28,7,3,22,0,,0,0,0,0,0,0,0,0,0,2.2,2.2,12296,False,targets,PFR+RULE2PT+SCORE0,19840909-GNB-RAI,True,,True,True,,,0
 Kenny King,1984,3,1984-09-16,False,RAI,KAN,A,W,22,20,4,6,0,,3,22,0,0,0,0,0,0,0,2.8,5.8,12296,False,targets,PFR+RULE2PT+SCORE0,19840916-RAI-KAN,True,,True,True,,,0
 Kenny King,1984,4,1984-09-24,False,RAI,SDG,H,W,33,30,2,1,0,,0,0,0,0,0,0,0,0,0,0.1,0.1,12296,False,targets,PFR+RULE2PT+SCORE0,19840924-SDG-RAI,True,,True,True,,,0
@@ -7288,7 +7288,7 @@ Clark Gaines,1980,1,1980-09-07,False,NYJ,BAL,H,L,14,17,4,6,0,,2,11,0,0,0,0,0,,0,
 Clark Gaines,1980,2,1980-09-14,False,NYJ,BUF,A,L,10,20,14,94,0,,12,91,1,0,0,0,0,0,0,24.5,36.5,7505,False,targets,PFR+RULE2PT+SCORE0,19800914-NYJ-BUF,True,,True,True,,,0
 Clark Gaines,1980,3,1980-09-21,False,NYJ,SFO,H,L,27,37,5,20,0,,17,160,0,0,0,0,0,0,0,18.0,35.0,7505,False,targets,PFR+RULE2PT+SCORE0,19800921-SFO-NYJ,True,,True,True,,,0
 Clark Gaines,1980,4,1980-09-28,False,NYJ,BAL,A,L,21,35,8,34,0,,2,22,1,0,0,0,0,0,0,11.6,13.6,7505,False,targets,PFR+RULE2PT+SCORE0,19800928-NYJ-BAL,True,,True,True,,,0
-Clark Gaines,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,5,20,0,,3,26,1,0,0,0,0,0,0,10.6,13.6,7505,False,targets,PFR+RULE2PT+SCORE2,19801005-NWE-NYJ,True,,True,True,,,2
+Clark Gaines,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,5,20,0,,3,26,1,0,0,0,0,,0,10.6,13.6,7505,False,targets;fum_rec_td,PFR+RULE2PT,19801005-NWE-NYJ,False,fum_rec_td,False,True,fum_rec_td,,2
 Clark Gaines,1981,16,1981-12-20,False,KAN,MIN,A,W,10,6,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7505,False,targets,PFR+RULE2PT+SCORE0,19811220-KAN-MIN,True,,True,True,,,0
 Clark Gaines,1982,1,1982-09-12,False,KAN,BUF,A,L,9,14,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,7505,False,targets,PFR+RULE2PT+SCORE0,19820912-KAN-BUF,True,,True,True,,,0
 Clark Gaines,1982,2,1982-09-19,False,KAN,SDG,H,W,19,12,0,0,0,,0,0,0,0,0,0,0,,0,0.0,0.0,7505,False,targets;fum_rec_td,PFR+RULE2PT,19820919-SDG-KAN,False,fum_rec_td,False,True,fum_rec_td,,6
@@ -7331,7 +7331,7 @@ Allen Pinkett,1988,3,1988-09-18,False,HOU,NYJ,A,L,3,45,6,41,0,,1,2,0,0,0,0,0,0,0
 Allen Pinkett,1988,4,1988-09-25,False,HOU,NWE,H,W,31,6,14,70,1,,2,73,2,0,0,0,0,0,0,32.3,34.3,17630,False,targets,PFR+RULE2PT+SCORE0,19880925-NWE-HOU,True,,True,True,,,0
 Allen Pinkett,1988,5,1988-10-02,False,HOU,PHI,A,L,23,32,3,7,0,,1,2,0,0,0,0,0,,0,0.9,1.9,17630,False,targets;fum_rec_td,PFR+RULE2PT,19881002-HOU-PHI,False,fum_rec_td,False,True,fum_rec_td,,8
 Allen Pinkett,1988,6,1988-10-09,False,HOU,KAN,H,W,7,6,9,23,0,,0,0,0,0,0,0,0,0,0,2.3,2.3,17630,False,targets,PFR+RULE2PT+SCORE0,19881009-KAN-HOU,True,,True,True,,,0
-Allen Pinkett,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,6,20,1,,1,-2,0,0,0,0,0,0,0,7.8,8.8,17630,False,targets,PFR+RULE2PT+SCORE2,19881016-HOU-PIT,True,,True,True,,,2
+Allen Pinkett,1988,7,1988-10-16,False,HOU,PIT,A,W,34,14,6,20,1,,1,-2,0,0,0,0,0,,0,7.8,8.8,17630,False,targets;fum_rec_td,PFR+RULE2PT,19881016-HOU-PIT,False,fum_rec_td,False,True,fum_rec_td,,2
 Allen Pinkett,1988,8,1988-10-23,False,HOU,CIN,A,L,21,44,1,2,0,,0,0,0,0,0,0,0,0,0,0.2,0.2,17630,False,targets,PFR+RULE2PT+SCORE0,19881023-HOU-CIN,True,,True,True,,,0
 Allen Pinkett,1988,9,1988-10-30,False,HOU,WAS,H,W,41,17,6,22,1,,1,1,0,0,0,0,0,0,0,8.3,9.3,17630,False,targets,PFR+RULE2PT+SCORE0,19881030-WAS-HOU,True,,True,True,,,0
 Allen Pinkett,1988,10,1988-11-07,False,HOU,CLE,H,W,24,17,8,31,0,,0,0,0,0,0,0,0,0,0,3.1,3.1,17630,False,targets,PFR+RULE2PT+SCORE0,19881107-CLE-HOU,True,,True,True,,,0
@@ -7517,7 +7517,7 @@ Roosevelt Leaks,1981,5,1981-10-04,False,BUF,BAL,H,W,23,17,3,7,1,,0,0,0,0,0,0,0,0
 Roosevelt Leaks,1981,6,1981-10-12,False,BUF,MIA,H,W,31,21,9,37,1,,0,0,0,0,0,0,0,0,0,9.7,9.7,13037,False,targets,PFR+RULE2PT+SCORE0,19811012-MIA-BUF,True,,True,True,,,0
 Roosevelt Leaks,1981,7,1981-10-18,False,BUF,NYJ,A,L,14,33,1,-1,0,,0,0,0,0,0,0,0,0,0,-0.1,-0.1,13037,False,targets,PFR+RULE2PT+SCORE0,19811018-BUF-NYJ,True,,True,True,,,0
 Roosevelt Leaks,1981,8,1981-10-25,False,BUF,DEN,H,W,9,7,1,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,13037,False,targets,PFR+RULE2PT+SCORE0,19811025-DEN-BUF,True,,True,True,,,0
-Roosevelt Leaks,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,3,15,0,,0,0,0,0,0,0,0,0,0,1.5,1.5,13037,False,targets,PFR+RULE2PT+SCORE2,19811101-CLE-BUF,True,,True,True,,,2
+Roosevelt Leaks,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,3,15,0,,0,0,0,0,0,0,0,,0,1.5,1.5,13037,False,targets;fum_rec_td,PFR+RULE2PT,19811101-CLE-BUF,False,fum_rec_td,False,True,fum_rec_td,,2
 Roosevelt Leaks,1981,10,1981-11-09,False,BUF,DAL,A,L,14,27,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,13037,False,targets,PFR+RULE2PT+SCORE0,19811109-BUF-DAL,True,,True,True,,,0
 Roosevelt Leaks,1981,11,1981-11-15,False,BUF,STL,A,L,0,24,0,0,0,,1,0,0,0,0,0,0,0,0,0.0,1.0,13037,False,targets,PFR+RULE2PT+SCORE0,19811115-BUF-STL,True,,True,True,,,0
 Roosevelt Leaks,1981,12,1981-11-22,False,BUF,NWE,H,W,20,17,19,92,0,,1,5,0,0,0,0,0,0,0,9.7,10.7,13037,False,targets,PFR+RULE2PT+SCORE0,19811122-NWE-BUF,True,,True,True,,,0
@@ -8182,7 +8182,7 @@ Tom Rathman,1988,15,1988-12-11,False,SFO,NOR,H,W,30,17,7,19,0,,2,20,0,0,0,0,0,0,
 Tom Rathman,1988,16,1988-12-18,False,SFO,RAM,H,L,16,38,2,11,1,,3,29,0,0,0,0,0,0,0,10.0,13.0,18232,False,targets,PFR+RULE2PT+SCORE0,19881218-RAM-SFO,True,,True,True,,,0
 Tom Rathman,1988,17,1989-01-01,True,SFO,MIN,H,W,34,9,3,29,0,,2,20,0,0,0,0,0,0,0,4.9,6.9,18232,False,targets,PFR+RULE2PT+SCORE0,19890101-MIN-SFO,True,,True,True,,,0
 Tom Rathman,1988,18,1989-01-08,True,SFO,CHI,A,W,28,3,10,36,1,,5,51,0,0,0,0,0,0,0,14.7,19.7,18232,False,targets,PFR+RULE2PT+SCORE0,19890108-SFO-CHI,True,,True,True,,,0
-Tom Rathman,1988,19,1989-01-22,True,SFO,CIN,N,W,20,16,5,23,0,,1,16,0,0,0,0,0,0,0,3.9,4.9,18232,False,targets,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
+Tom Rathman,1988,19,1989-01-22,True,SFO,CIN,N,W,20,16,5,23,0,1,1,16,0,0,0,0,0,0,0,3.9,4.9,18232,True,,PFR+RULE2PT+SCORE0,19890122-CIN-SFO-N,True,,True,True,,,0
 Tom Rathman,1989,1,1989-09-10,False,SFO,IND,A,W,30,24,4,10,0,,2,6,0,0,0,0,0,0,0,1.6,3.6,18232,False,targets,PFR+RULE2PT+SCORE0,19890910-SFO-IND,True,,True,True,,,0
 Tom Rathman,1989,2,1989-09-17,False,SFO,TAM,A,W,20,16,2,1,0,,7,43,0,0,0,0,0,0,0,4.4,11.4,18232,False,targets,PFR+RULE2PT+SCORE0,19890917-SFO-TAM,True,,True,True,,,0
 Tom Rathman,1989,3,1989-09-24,False,SFO,PHI,A,W,38,28,1,-2,0,,3,19,1,0,0,0,0,0,0,7.7,10.7,18232,False,targets,PFR+RULE2PT+SCORE0,19890924-SFO-PHI,True,,True,True,,,0
@@ -8201,7 +8201,7 @@ Tom Rathman,1989,15,1989-12-17,False,SFO,BUF,H,W,21,10,2,13,0,,2,38,0,0,0,0,0,0,
 Tom Rathman,1989,16,1989-12-24,False,SFO,CHI,H,W,26,0,4,22,0,,3,19,0,0,0,0,0,0,0,4.1,7.1,18232,False,targets,PFR+RULE2PT+SCORE0,19891224-CHI-SFO,True,,True,True,,,0
 Tom Rathman,1989,17,1990-01-06,True,SFO,MIN,H,W,41,13,7,24,0,,3,29,0,0,0,0,0,,0,5.3,8.3,18232,False,targets;fum_rec_td,PFR+RULE2PT,19900106-MIN-SFO,False,fum_rec_td,False,True,fum_rec_td,,6
 Tom Rathman,1989,18,1990-01-14,True,SFO,RAM,H,W,30,3,10,63,0,,6,48,0,0,0,0,0,0,0,11.1,17.1,18232,False,targets,PFR+RULE2PT+SCORE0,19900114-RAM-SFO,True,,True,True,,,0
-Tom Rathman,1989,19,1990-01-28,True,SFO,DEN,N,W,55,10,11,38,2,,4,43,0,0,0,0,0,0,0,20.1,24.1,18232,False,targets,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
+Tom Rathman,1989,19,1990-01-28,True,SFO,DEN,N,W,55,10,11,38,2,4,4,43,0,0,0,0,0,0,0,20.1,24.1,18232,True,,PFR+RULE2PT+SCORE0,19900128-DEN-SFO-N,True,,True,True,,,0
 Gaston Green,1988,1,1988-09-04,False,RAM,GNB,A,W,34,7,5,14,0,,1,14,0,0,0,0,0,,0,2.8,3.8,8367,False,targets;fum_rec_td,PFR+RULE2PT,19880904-RAM-GNB,False,fum_rec_td,False,True,fum_rec_td,,6
 Gaston Green,1988,2,1988-09-11,False,RAM,DET,H,W,17,10,1,3,0,,0,0,0,0,0,0,0,0,0,0.3,0.3,8367,False,targets,PFR+RULE2PT+SCORE0,19880911-DET-RAM,True,,True,True,,,0
 Gaston Green,1988,3,1988-09-18,False,RAM,RAI,A,W,22,17,4,10,0,,0,0,0,0,0,0,0,0,0,1.0,1.0,8367,False,targets,PFR+RULE2PT+SCORE2,19880918-RAM-RAI,True,,True,True,,,2
@@ -8222,7 +8222,7 @@ Kevin Long,1980,1,1980-09-07,False,NYJ,BAL,H,L,14,17,2,6,0,,1,8,0,0,0,0,0,,0,1.4
 Kevin Long,1980,2,1980-09-14,False,NYJ,BUF,A,L,10,20,1,-3,0,,0,0,0,0,0,0,0,0,0,-0.3,-0.3,13546,False,targets,PFR+RULE2PT+SCORE0,19800914-NYJ-BUF,True,,True,True,,,0
 Kevin Long,1980,3,1980-09-21,False,NYJ,SFO,H,L,27,37,1,1,0,,1,16,0,0,0,0,0,0,0,1.7,2.7,13546,False,targets,PFR+RULE2PT+SCORE0,19800921-SFO-NYJ,True,,True,True,,,0
 Kevin Long,1980,4,1980-09-28,False,NYJ,BAL,A,L,21,35,5,25,2,,0,0,0,0,0,0,0,0,0,14.5,14.5,13546,False,targets,PFR+RULE2PT+SCORE0,19800928-NYJ-BAL,True,,True,True,,,0
-Kevin Long,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,3,7,0,,4,27,0,0,0,0,0,0,0,3.4,7.4,13546,False,targets,PFR+RULE2PT+SCORE2,19801005-NWE-NYJ,True,,True,True,,,2
+Kevin Long,1980,5,1980-10-05,False,NYJ,NWE,H,L,11,21,3,7,0,,4,27,0,0,0,0,0,,0,3.4,7.4,13546,False,targets;fum_rec_td,PFR+RULE2PT,19801005-NWE-NYJ,False,fum_rec_td,False,True,fum_rec_td,,2
 Kevin Long,1980,6,1980-10-12,False,NYJ,ATL,A,W,14,7,25,100,1,,1,4,0,0,0,0,0,0,0,16.4,17.4,13546,False,targets,PFR+RULE2PT+SCORE0,19801012-NYJ-ATL,True,,True,True,,,0
 Kevin Long,1980,7,1980-10-19,False,NYJ,SEA,H,L,17,27,20,54,0,,2,6,0,0,0,0,0,0,0,6.0,8.0,13546,False,targets,PFR+RULE2PT+SCORE0,19801019-SEA-NYJ,True,,True,True,,,0
 Kevin Long,1980,8,1980-10-27,False,NYJ,MIA,H,W,17,14,16,48,0,,2,19,0,0,0,0,0,0,0,6.7,8.7,13546,False,targets,PFR+RULE2PT+SCORE0,19801027-MIA-NYJ,True,,True,True,,,0
@@ -8273,7 +8273,7 @@ Curtis Brown,1981,3,1981-09-17,False,BUF,PHI,H,L,14,20,2,6,0,,1,7,0,0,0,0,0,0,0,
 Curtis Brown,1981,6,1981-10-12,False,BUF,MIA,H,W,31,21,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2585,False,targets,PFR+RULE2PT+SCORE0,19811012-MIA-BUF,True,,True,True,,,0
 Curtis Brown,1981,7,1981-10-18,False,BUF,NYJ,A,L,14,33,5,5,0,,0,0,0,0,0,0,0,0,0,0.5,0.5,2585,False,targets,PFR+RULE2PT+SCORE0,19811018-BUF-NYJ,True,,True,True,,,0
 Curtis Brown,1981,8,1981-10-25,False,BUF,DEN,H,W,9,7,2,1,0,,4,24,0,0,0,0,0,0,0,2.5,6.5,2585,False,targets,PFR+RULE2PT+SCORE0,19811025-DEN-BUF,True,,True,True,,,0
-Curtis Brown,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,14,58,0,,0,0,0,0,0,0,0,0,0,5.8,5.8,2585,False,targets,PFR+RULE2PT+SCORE2,19811101-CLE-BUF,True,,True,True,,,2
+Curtis Brown,1981,9,1981-11-01,False,BUF,CLE,H,W,22,13,14,58,0,,0,0,0,0,0,0,0,,0,5.8,5.8,2585,False,targets;fum_rec_td,PFR+RULE2PT,19811101-CLE-BUF,False,fum_rec_td,False,True,fum_rec_td,,2
 Curtis Brown,1981,10,1981-11-09,False,BUF,DAL,A,L,14,27,8,39,0,,1,9,1,0,0,0,0,0,0,10.8,11.8,2585,False,targets,PFR+RULE2PT+SCORE0,19811109-BUF-DAL,True,,True,True,,,0
 Curtis Brown,1981,11,1981-11-15,False,BUF,STL,A,L,0,24,3,13,0,,0,0,0,0,0,0,0,0,0,1.3,1.3,2585,False,targets,PFR+RULE2PT+SCORE0,19811115-BUF-STL,True,,True,True,,,0
 Curtis Brown,1981,12,1981-11-22,False,BUF,NWE,H,W,20,17,0,0,0,,0,0,0,0,0,0,0,0,0,0.0,0.0,2585,False,targets,PFR+RULE2PT+SCORE0,19811122-NWE-BUF,True,,True,True,,,0

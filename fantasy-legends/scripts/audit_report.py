@@ -86,9 +86,9 @@ def main(sheets, out_path):
       + ", ".join(f"{p.upper()} {n}/{len(data[p])}" for p, n in linked.items()) + ".\n")
 
     w("## Coverage by decade (regular season)\n")
-    w("For each scoring field: **all** = known for every game in the decade, **none** = known for no game, "
-      "otherwise the share of games where it's known (usually 1999 only). A field the source shows as 0 but never "
-      "actually records is treated as unknown.\n")
+    w("For each scoring field: **all** = known for every game in the decade, **all but N** = unknown for only N games "
+      "(quarantined source conflicts), **none** = known for no game, otherwise the share of games where it's known "
+      "(usually 1999 only). A field the source shows as 0 but never actually records is treated as unknown.\n")
     FIELDS = {
         "QB / RB / WR / TE": ("qb", "rb", "wr", "te"), "K": ("k",), "DEF": ("def",)}
     SCORE = {
@@ -96,7 +96,7 @@ def main(sheets, out_path):
                               "ret_td", "two_pt", "fum_rec_td"],
         "K": ["fgm", "xpm", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p"],
         "DEF": ["pts_allowed", "sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
-                "def_int_td", "def_fum_td", "ret_td"]}
+                "def_int_td", "def_fum_td", "ret_td", "st_other_td"]}
     common = {}
     for group, poss in FIELDS.items():
         rows_g = [x for p in poss for x in reg[p]]
@@ -111,7 +111,8 @@ def main(sheets, out_path):
                 known = sum(x[c] != "" for x in r)
                 if c == "def_int":
                     known = sum(x["int_check"] == "match" for x in r)
-                cells.append("all" if known == len(r) else "none" if known == 0 else f"{100 * known / len(r):.0f}%")
+                cells.append("all" if known == len(r) else "none" if known == 0 else
+                             f"all but {len(r) - known}" if len(r) - known <= 10 else f"{100 * known / len(r):.0f}%")
             out.append([c] + cells)
             common[(group, c)] = cells
         w(f"\n**{group}**\n")
@@ -119,9 +120,11 @@ def main(sheets, out_path):
     w("\nFor DEF, `def_int` counts as known only where defenders' and passers' counts agree.\n")
     w("\n**Fields available for every game, 1960–1999** (a consistent Historical-mode rule set):\n")
     for group in FIELDS:
-        ok = [c for c in SCORE[group] if all(v == "all" for v in common[(group, c)][1:])]
+        ok = [c for c in SCORE[group] if all(v.startswith("all") for v in common[(group, c)][1:])]
         no = [c for c in SCORE[group] if c not in ok]
-        w(f"- **{group}:** {', '.join(ok)}. Not consistently available: {', '.join(no)}.")
+        but = [c for c in ok if any(v != "all" for v in common[(group, c)][1:])]
+        w(f"- **{group}:** {', '.join(ok) or 'none'}" + (f" ({', '.join(but)}: except a few quarantined games)" if but else "")
+          + f". Not consistently available: {', '.join(no) or 'none'}.")
     w("\nThe 1950s also lack return TDs (all positions) and all kicking stats; the AFL (1960–69) and 1994–98 lack "
       "two-point conversions; DEF sacks start in 1982. For DEF interceptions, see the reconciliation section.\n")
 
@@ -130,8 +133,9 @@ def main(sheets, out_path):
       "(deck v4; fumbles lost score 0, targets and times sacked don't score):\n")
     w("- **QB, RB, WR, TE:** pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td\n"
       "- **K:** xpm, xp_missed, fgm_0_39, fgm_40_49, fgm_50p, fg_missed (blocked attempts count as misses), plus the kicker's own offense fields\n"
-      "- **DEF:** pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td; "
-      "a disputed interception count also counts as unknown\n")
+      "- **DEF:** pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td, "
+      "st_other_td (special-teams TDs that aren't kick or punt returns: blocked punt/FG returns and the kicking team "
+      "scoring on the returner's fumble); a disputed or uncheckable interception count also counts as unknown\n")
     w("`scoring_missing` lists every unknown scoring field on the row. The source has no blank stat values, so "
       "everything not listed is a recorded number.\n")
 
@@ -141,8 +145,8 @@ def main(sheets, out_path):
       "for no game in that era; those fields are listed in `era_excluded_fields` and left out of scoring for everyone in "
       "the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`).\n")
     w("Era-wide unrecorded fields: fum_rec_td before 1999; ret_td before 1960; two_pt in AFL games (1960–69) and "
-      "1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return and "
-      "fumble-return TDs before 1999. Not excludable: "
+      "1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return, "
+      "fumble-return and other special-teams TDs before 1999. Not excludable: "
       "all 1950s kicking (nothing to score), disputed interceptions, and the 1999 game missing from nflverse.\n")
     rows = []
     for p in POSITIONS:
@@ -206,28 +210,45 @@ def main(sheets, out_path):
                  f"{statistics.mean(float(x['fpts_k_contract']) for x in r):.1f}"])
     r = y99("def")
     extra = [2 * (int(x["fum_rec"]) + int(x["safeties"]) + int(x["blk_punt"]) + int(x["blk_fg"]) + int(x["blk_xp"]))
-             + 6 * (int(x["def_fum_td"]) + int(x["def_int_td"])) for x in r]
-    rows.append(["DEF", "fum_rec, safeties, blocks, def_int_td, def_fum_td", f"{statistics.mean(extra):.2f}",
+             + 6 * (int(x["def_fum_td"]) + int(x["def_int_td"]) + int(x["st_other_td"])) for x in r]
+    rows.append(["DEF", "fum_rec, safeties, blocks, def_int_td, def_fum_td, st_other_td", f"{statistics.mean(extra):.2f}",
                  f"{sum(e > 0 for e in extra)} of {len(r)}", f"{statistics.mean(float(x['fpts']) for x in r):.1f}"])
     w(table(["Position", "Fields", "Avg pts/game", "Games where nonzero", "Avg game total"], rows))
 
     w("\n## Final-score reconciliation (evidence for zeros)\n")
     w("For each team-game, the final score is compared with every scoring play the source records for that team "
-      "(all its players' TDs, XPs and FGs): residual = score − (6·TD + XP + 3·FG). **SCORE0** (residual 0): the "
-      "recorded plays explain the whole score, so no other scoring play happened for that team — no safety, "
-      "two-point conversion, defensive TD, fumble-recovery TD or (1950s) return TD. **SCORE2** (residual 2 in an NFL "
-      "game, 1960–1993, when no two-point conversion existed): the 2 points are one safety and no unrecorded TD "
-      "happened. Other residuals leave the fields unknown. The arithmetic for every team-game is in "
+      "(all its players' TDs, XPs, FGs and safeties): residual = score − (6·TD + XP + 3·FG + 2·safety). **SCORE0** "
+      "(residual 0): the recorded plays explain the whole score, so no other scoring play happened for that team — no "
+      "safety, two-point conversion, defensive or special-teams TD, fumble-recovery TD or (1950s) return TD. SCORE0 "
+      "confirms makes only: a missed kick doesn't score, so attempts and misses aren't proven by it. **SCORE2** "
+      "(residual 2 in an NFL game, 1960–1993, when no two-point conversion existed, and only when the source records a "
+      "PAT attempt for every recorded TD, so the 2 can't be unrecorded extra points): the 2 points are one safety and "
+      "no unrecorded TD happened. Other residuals leave the fields unknown. The arithmetic for every team-game is in "
       "`data/sheets/score_reconciliation.csv`.\n")
     recon = list(csv.DictReader(open(os.path.join(sheets, "score_reconciliation.csv"))))
     rc = Counter((int(x["season"]) // 10 * 10, x["result"]) for x in recon if x["playoff"] == "False")
-    w(table(["Decade", "SCORE0", "SCORE2", "Unexplained points", "Team-games"],
-            [[f"{d}s", rc[(d, "SCORE0")], rc[(d, "SCORE2")], rc[(d, "unexplained points")],
+    w(table(["Decade", "SCORE0", "SCORE2", "Not reconciled", "Team-games"],
+            [[f"{d}s", rc[(d, "SCORE0")], rc[(d, "SCORE2")],
+              sum(v for (dd, k), v in rc.items() if dd == d and k not in ("SCORE0", "SCORE2")),
               sum(v for (dd, _), v in rc.items() if dd == d)] for d in DECADES]))
-    w("\nTested against 1999, where nflverse play-by-play gives the true answer: in every 1999 SCORE0 team-game, "
-      "nflverse shows no safety, two-point conversion, interception/fumble-return TD or offensive fumble-recovery TD "
-      "for that team (kick and punt return TDs, which the source does record, are the only scores it lists). The 1950s "
-      "reconcile rarely because the source has almost no kicking or return data then, so mostly shutouts qualify.\n")
+    conflicts = list(csv.DictReader(open(os.path.join(sheets, "conflicts.csv"))))
+    failed = {x["game_id"] + x["player_id_or_team"] for x in conflicts if x["field"] == "final score"}
+    d99 = [x for x in data["def"] if x["season"] == "1999"]
+    in_pbp = [x for x in d99 if "NFLV1999" in x["source"]]
+    closes = sum(x["game_id"] + x["team"] not in failed for x in in_pbp)
+    score0 = {x["game_id"] + x["team"] for x in recon if x["season"] == "1999" and x["result"] == "SCORE0"}
+    hidden = sum(1 for x in in_pbp if x["game_id"] + x["team"] in score0
+                 and (int(x["safeties"]) > int(x["recorded_safeties"])
+                      or any(x[f] != "0" for f in ("def_int_td", "def_fum_td", "st_other_td"))))
+    w(f"\n**1999 check.** nflverse play-by-play lists every play, so it can account for the whole score. In "
+      f"{closes} of {len(in_pbp)} 1999 team-games it does exactly: the source's recorded TDs, XPs and FGs plus the "
+      "play-by-play's safeties, two-point conversions and defensive, special-teams and offensive fumble-recovery TDs equal "
+      f"the final score, and both sources agree on kick and punt return TDs ({len(d99) - len(in_pbp)} more team-games, "
+      "1999-09-12 BAL at STL, aren't in nflverse). Zeros from the play-by-play are used only where this check passes. "
+      f"SCORE0 team-games in 1999 where the play-by-play shows a safety or defensive/special-teams TD the source "
+      f"doesn't record: {hidden}. "
+      "The 1950s reconcile rarely because the source has almost no kicking or return data then, so mostly shutouts "
+      "qualify.\n")
     w("**Bias check** (1960–98 regular season, average points in strict-eligible games vs all games):\n")
     rows = []
     for p, col in [("qb", "fpts_ppr"), ("rb", "fpts_ppr"), ("wr", "fpts_ppr"), ("te", "fpts_ppr"), ("k", "fpts_std")]:
@@ -245,9 +266,11 @@ def main(sheets, out_path):
     c = Counter(x["int_check"] for x in data["def"])
     by_decade = Counter(int(x["season"]) // 10 * 10 for x in data["def"] if x["int_check"] != "match")
     w(f"- Defenders' INTs equal the opposing passers' INTs thrown: {c['match']} games.\n"
-      f"- Disputed: {c['disputed'] + c['unverified']} games ({', '.join(f'{d}s {by_decade[d]}' for d in DECADES)}). "
-      "These are **quarantined**: `def_int` is blank, and both original counts are kept in `def_int_defenders` and "
-      "`opp_pass_int`.\n"
+      f"- Disputed (`int_check` = disputed): {c['disputed']} games. Unverified (`int_check` = unverified, the source has "
+      f"no passing for the opponent in that game, so even a 0 = 0 match proves nothing): {c['unverified']} games. "
+      f"Together {c['disputed'] + c['unverified']} ({', '.join(f'{d}s {by_decade[d]}' for d in DECADES)}). "
+      "These are **quarantined**: `def_int` is blank, and the original counts are kept in `def_int_defenders`, "
+      "`opp_pass_int` and `opp_pass_att`. The larger count is never chosen.\n"
       "- Season checks against published totals: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30 (all match).\n")
 
     w("## Unresolved fields\n")
@@ -255,12 +278,16 @@ def main(sheets, out_path):
         ["fum_rec_td (offensive fumble-recovery TD)", "QB RB WR TE K", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
         ["two_pt", "QB RB WR TE K", "NFL 1950–1993 (rule: 0), 1999, SCORE0 games", "other AFL and 1994–98 games", "Not in the scraped source"],
         ["FG made by distance", "K", "1999; games with no FG made", "other 1960–1998 games", "Not in the scraped source"],
-        ["All kicking stats", "K", "1960–1999; 1950s SCORE0 games", "other 1950s games", "Source has almost none before 1960"],
+        ["FG/XP made", "K", "1960–1999; 1950s where recorded or SCORE0", "other 1950s games; 5 disputed 1999 kicker-games",
+         "Source has almost none before 1960; in 1999 two sources credit some kicks to a different kicker"],
+        ["fg_missed, xp_missed", "K", "1960–1999", "1950s; xp_missed where the team has more TDs than recorded PAT tries",
+         "A miss doesn't score, so the final score can't prove it"],
         ["fum_rec, blocked punts/FGs/PATs", "DEF", "1999", "1950–1998", "Not in the scraped source; not provable from the score"],
-        ["def_int_td, def_fum_td, safeties", "DEF", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
+        ["def_int_td, def_fum_td, st_other_td, safeties", "DEF", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
         ["sacks", "DEF", "1982–1999", "1950–1981", "Not an official stat before 1982"],
         ["return TDs", "all", "1960–1999; 1950s SCORE0 games", "other 1950s games", "Source has almost no return data before 1960"],
-        ["def_int", "DEF", "games where both logs agree", f"{c['disputed'] + c['unverified']} games", "Defender and passer logs disagree"],
+        ["def_int", "DEF", "games where both logs agree", f"{c['disputed'] + c['unverified']} games",
+         "Defender and passer logs disagree, or the opponent's passing isn't recorded"],
         ["1999-09-12 BAL at STL extras", "all", "via score reconciliation where it applies", "the rest", "Missing from nflverse play-by-play"],
     ]))
     w("\nEvery remaining gap is listed per game in `data/sheets/unresolved_players.csv` and "
@@ -275,7 +302,12 @@ def main(sheets, out_path):
       "2. **Strict defenses** remain 1999-only: fumble recoveries and blocked kicks can't be proven from the score.\n"
       "3. **Historical rules** are unchanged and still pending.\n"
       "4. **Reuse rights.** The base data is scraped from Sports Reference and has no stated license, and this "
-      "repository is public.\n")
+      "repository is public.\n"
+      "5. **`st_other_td`** (blocked-kick return TDs, the kicking team scoring on a returner's fumble) is now its own DEF "
+      "column. It's treated like the other defensive/special-teams TDs (6 points) and is part of Strict completeness; "
+      "the importer should map it accordingly.\n"
+      "6. **More box-score data.** Pro Football Archives (profootballarchives.com) has per-game box scores for older "
+      "seasons that could settle disputed games. Its terms and whether it allows reuse haven't been checked.\n")
 
     with open(out_path, "w") as f:
         f.write("\n".join(md))

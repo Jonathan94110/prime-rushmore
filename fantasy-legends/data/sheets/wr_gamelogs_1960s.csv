@@ -769,7 +769,7 @@ Carroll Dale,1960,7,1960-11-06,False,RAM,DAL,A,W,38,13,,1,40,1,0,0,0,0,0,0,0,0,0
 Carroll Dale,1960,8,1960-11-13,False,RAM,DET,A,L,10,12,,5,52,0,0,0,0,0,0,0,0,0,0,5.2,10.2,5027,False,targets,PFR+RULE2PT+SCORE0,19601113-RAM-DET,True,,True,True,,,0
 Carroll Dale,1960,9,1960-11-20,False,RAM,GNB,A,W,33,31,,1,15,0,0,0,0,0,0,0,0,0,0,1.5,2.5,5027,False,targets,PFR+RULE2PT+SCORE0,19601120-RAM-GNB,True,,True,True,,,0
 Carroll Dale,1960,11,1960-12-11,False,RAM,BAL,H,W,10,3,,2,73,0,0,0,0,0,0,0,0,0,0,7.3,9.3,5027,False,targets,PFR+RULE2PT+SCORE0,19601211-BAL-RAM,True,,True,True,,,0
-Carroll Dale,1960,12,1960-12-17,False,RAM,GNB,H,L,21,35,,3,28,1,0,0,0,0,0,0,0,0,0,8.8,11.8,5027,False,targets,PFR+RULE2PT+SCORE2,19601217-GNB-RAM,True,,True,True,,,2
+Carroll Dale,1960,12,1960-12-17,False,RAM,GNB,H,L,21,35,,3,28,1,0,0,0,0,0,0,0,,0,8.8,11.8,5027,False,targets;fum_rec_td,PFR+RULE2PT,19601217-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,2
 Carroll Dale,1961,1,1961-09-17,False,RAM,BAL,A,L,24,27,,1,52,1,0,0,0,0,0,0,0,0,0,11.2,12.2,5027,False,targets,PFR+RULE2PT+SCORE0,19610917-RAM-BAL,True,,True,True,,,0
 Carroll Dale,1961,2,1961-09-23,False,RAM,CHI,H,L,17,21,,3,43,0,0,0,0,0,0,0,0,0,0,4.3,7.3,5027,False,targets,PFR+RULE2PT+SCORE0,19610923-CHI-RAM,True,,True,True,,,0
 Carroll Dale,1961,3,1961-10-01,False,RAM,PIT,H,W,24,14,,7,79,0,0,0,0,0,0,0,0,0,0,7.9,14.9,5027,False,targets,PFR+RULE2PT+SCORE0,19611001-PIT-RAM,True,,True,True,,,0
@@ -2223,7 +2223,7 @@ Red Phillips,1960,8,1960-11-13,False,RAM,DET,A,L,10,12,,2,55,1,0,0,0,0,0,0,0,0,0
 Red Phillips,1960,9,1960-11-20,False,RAM,GNB,A,W,33,31,,5,88,2,0,0,0,0,0,0,0,0,0,20.8,25.8,17554,False,targets,PFR+RULE2PT+SCORE0,19601120-RAM-GNB,True,,True,True,,,0
 Red Phillips,1960,10,1960-12-04,False,RAM,SFO,H,L,7,23,,8,114,0,0,0,0,0,0,0,0,0,0,11.4,19.4,17554,False,targets,PFR+RULE2PT+SCORE0,19601204-SFO-RAM,True,,True,True,,,0
 Red Phillips,1960,11,1960-12-11,False,RAM,BAL,H,W,10,3,,2,30,0,0,0,0,0,0,0,0,0,0,3.0,5.0,17554,False,targets,PFR+RULE2PT+SCORE0,19601211-BAL-RAM,True,,True,True,,,0
-Red Phillips,1960,12,1960-12-17,False,RAM,GNB,H,L,21,35,,7,80,0,0,0,0,0,0,0,0,0,0,8.0,15.0,17554,False,targets,PFR+RULE2PT+SCORE2,19601217-GNB-RAM,True,,True,True,,,2
+Red Phillips,1960,12,1960-12-17,False,RAM,GNB,H,L,21,35,,7,80,0,0,0,0,0,0,0,0,,0,8.0,15.0,17554,False,targets;fum_rec_td,PFR+RULE2PT,19601217-GNB-RAM,False,fum_rec_td,False,True,fum_rec_td,,2
 Red Phillips,1961,1,1961-09-17,False,RAM,BAL,A,L,24,27,,2,22,0,0,0,0,0,0,0,0,0,0,2.2,4.2,17554,False,targets,PFR+RULE2PT+SCORE0,19610917-RAM-BAL,True,,True,True,,,0
 Red Phillips,1961,2,1961-09-23,False,RAM,CHI,H,L,17,21,,9,163,0,0,0,0,0,0,0,0,0,0,16.3,25.3,17554,False,targets,PFR+RULE2PT+SCORE0,19610923-CHI-RAM,True,,True,True,,,0
 Red Phillips,1961,3,1961-10-01,False,RAM,PIT,H,W,24,14,,5,60,1,0,0,0,0,0,0,0,0,0,12.0,17.0,17554,False,targets,PFR+RULE2PT+SCORE0,19611001-PIT-RAM,True,,True,True,,,0

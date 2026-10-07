@@ -1,2 +1,7 @@
 pos,player_id_or_team,name,game_id,field,detail
-K,11378,Norm Johnson,19991128-PHI-WAS,fgm/fga,"source 1/1, nflverse 1/2"
+K,11378,Norm Johnson,19991128-PHI-WAS,fgm/fga,main source credits Norm Johnson with 1/1 FG made/attempted; nflverse play-by-play (1999_12_PHI_WAS) credits him with 1/2 (another kicker took some kicks)
+K,11378,Norm Johnson,19991219-NWE-PHI,xpm/xpa,main source credits Norm Johnson with 3/3 XP made/attempted; nflverse play-by-play (1999_15_NE_PHI) credits him with 1/1 (another kicker took some kicks)
+K,11378,Norm Johnson,20000102-STL-PHI,xpm/xpa,main source credits Norm Johnson with 5/5 XP made/attempted; nflverse play-by-play (1999_17_STL_PHI) credits him with 3/3 (another kicker took some kicks)
+K,4934,Richie Cunningham,19990920-ATL-DAL,xpm/xpa,main source credits Richie Cunningham with 3/3 XP made/attempted; nflverse play-by-play (1999_02_ATL_DAL) credits him with 0/0 (another kicker took some kicks)
+K,4934,Richie Cunningham,19991003-ARI-DAL,xpm/xpa,main source credits Richie Cunningham with 5/5 XP made/attempted; nflverse play-by-play (1999_04_ARI_DAL) credits him with 0/0 (another kicker took some kicks)
+K,4934,Richie Cunningham,19991003-ARI-DAL,fgm/fga,main source credits Richie Cunningham with 0/1 FG made/attempted; nflverse play-by-play (1999_04_ARI_DAL) credits him with 0/0 (another kicker took some kicks)
