@@ -12,7 +12,7 @@ Output:
   team_games: {"<date>|<team>": successful two-point conversions by that team in that game}
   players:    {"<full name>|<date>": {"two_pt": n, "fum_rec_td": n}} (only players with a nonzero value)
   kickers:    {"<full name>|<date>": field goals made by distance, misses, extra points}
-  defense:    {"<date>|<team>": fumble recoveries, blocked punts/FGs/PATs, defensive TDs by type}
+  defense:    {"<date>|<team>": fumble recoveries, safeties, blocked punts/FGs/PATs, defensive TDs by type}
 Team codes are converted to Pro-Football-Reference codes.
 """
 
@@ -74,6 +74,8 @@ def main(ps_path, pbp_path, players_path, out_path):
                 defense[d]["blk_fg"] += 1
             if row["extra_point_result"] == "blocked":
                 defense[d]["blk_xp"] += 1
+            if row["safety"] == "1":
+                defense[d]["safeties"] += 1
             if row["play_type"] in ("pass", "run") and row["fumble_lost"] == "1":
                 defense[d]["fum_rec"] += 1
             if row["touchdown"] == "1" and row["td_team"] == row["defteam"] and row["play_type"] in ("pass", "run"):

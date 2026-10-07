@@ -68,7 +68,7 @@ def repair_scoring(g, enrich):
     season, team, opp, date = g["season"], g["team"], g["opp"], g["date"]
     source = ["PFR"]
     g["two_pt"] = g["fum_rec_td"] = None
-    afl_game = season <= 1969 and (team in AFL_TEAMS or opp in AFL_TEAMS)
+    afl_game = 1960 <= season <= 1969 and (team in AFL_TEAMS or opp in AFL_TEAMS)
     if season == 1999 and f"{date}|{team}" in enrich["team_games"]:
         found = enrich["players"].get(f"{g['name']}|{date}", {})
         g["two_pt"] = found.get("two_pt", 0)
@@ -77,11 +77,13 @@ def repair_scoring(g, enrich):
     elif season < 1994 and not afl_game:
         g["two_pt"] = 0
         source.append("RULE2PT")
+    if season < RETURNS_FIRST_SEASON:
+        g["ret_td"] = None  # the source has almost no return data before 1960
     for c in ("two_pt", "fum_rec_td"):
         if g[c]:
             g["fpts_std"] = round(g["fpts_std"] + g[c] * (2 if c == "two_pt" else 6), 2)
             g["fpts_ppr"] = round(g["fpts_ppr"] + g[c] * (2 if c == "two_pt" else 6), 2)
-    check = ("targets", "two_pt", "fum_rec_td") if g["pos"] != "QB" else ("sacked", "two_pt", "fum_rec_td")
+    check = ("targets", "two_pt", "fum_rec_td", "ret_td") if g["pos"] != "QB" else ("sacked", "two_pt", "fum_rec_td", "ret_td")
     missing = [c for c in check if g[c] is None or blank(c, season)]
     g["missing_fields"] = ";".join(missing)
     g["complete"] = not missing
@@ -119,7 +121,9 @@ def era_unrecorded(g, pos):
     season = g["season"]
     if pos in ("QB", "RB", "WR", "TE"):
         fields = {"fum_rec_td"} if season < 1999 else set()
-        afl = season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
+        if season < RETURNS_FIRST_SEASON:
+            fields.add("ret_td")
+        afl = 1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
         if afl or 1994 <= season <= 1998:
             fields.add("two_pt")
         return fields
@@ -127,8 +131,10 @@ def era_unrecorded(g, pos):
         # Distance tiers only exist for 1999. Before 1960 all kicking is unknown, which isn't excludable.
         return {"fgm_0_39", "fgm_40_49", "fgm_50p"} if KICK_FIRST_SEASON <= season < 1999 else set()
     fields = {"sacks"} if season < SACKS_FIRST_SEASON else set()
+    if season < RETURNS_FIRST_SEASON:
+        fields.add("ret_td")
     if season < 1999:
-        fields |= {"fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td"}
+        fields |= {"fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td"}
     return fields
 
 
@@ -157,6 +163,7 @@ def kicker_contract_points(g):
 
 
 KICK_FIRST_SEASON = 1960  # the source has almost no kicking stats before 1960
+RETURNS_FIRST_SEASON = 1960  # nor kick/punt return stats (45 kick-return rows in the whole decade)
 
 
 def repair_kicking(g, enrich):
@@ -211,13 +218,13 @@ def team_name(code, season):
 
 
 def dst_points(g):
-    """Standard DST scoring, using only the components known for this game."""
+    """Deck v4 DEF scoring from the components known for this game (unknown components count as nothing).
+    `fpts` is only filled when every component is known; `fpts_known` is this partial sum."""
     pa = g["pts_allowed"]
     pts = 10 if pa == 0 else 7 if pa <= 6 else 4 if pa <= 13 else 1 if pa <= 20 else 0 if pa <= 27 else -1 if pa <= 34 else -4
-    pts += (g["sacks"] or 0) + 2 * g["def_int"] + 2 * g["safeties"] + 6 * (g["def_int_td"] + g["ret_td"])
-    if g["fum_rec"] is not None:
-        pts += 2 * g["fum_rec"] + 2 * (g["blk_punt"] + g["blk_fg"] + g["blk_xp"]) + 6 * g["def_fum_td"]
-    return pts
+    v = lambda c: g[c] or 0
+    return (pts + v("sacks") + 2 * (v("def_int") + v("fum_rec") + v("safeties") + v("blk_punt") + v("blk_fg") + v("blk_xp"))
+            + 6 * (v("def_int_td") + v("def_fum_td") + v("ret_td")))
 
 
 def repair_defense(g, enrich):
@@ -233,13 +240,18 @@ def repair_defense(g, enrich):
     else:
         g["int_check"] = "kept_defender_count"
     extra = enrich["defense"].get(f"{g['date']}|{g['team']}") if g["season"] == 1999 else None
-    for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td"):
+    # The source never records defensive INT-return TDs and almost never safeties (both read 0), so they're
+    # unknown except where nflverse has them (1999).
+    for c in ("fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td"):
         g[c] = extra.get(c, 0) if extra is not None else None
+    if g["season"] < RETURNS_FIRST_SEASON:
+        g["ret_td"] = None
     if extra is not None:
         source.append("NFLV1999")
     g["def_td"] = g["def_int_td"] + g["def_fum_td"] if g["def_fum_td"] is not None else None
-    g["fpts"] = dst_points(g)
-    missing = [c for c in ("sacks", "fum_rec", "blk_punt", "def_fum_td") if g[c] is None]
+    g["fpts_known"] = dst_points(g)
+    g["fpts"] = g["fpts_known"] if all(g[c] is not None for c in SCORING_FIELDS["DEF"]) else None
+    missing = [c for c in ("sacks", "fum_rec", "safeties", "blk_punt", "def_int_td", "def_fum_td", "ret_td") if g[c] is None]
     g["missing_fields"] = ";".join("blocked_kicks" if c == "blk_punt" else c for c in missing)
     g["complete"] = not missing
     g["source"] = "+".join(source)
@@ -255,7 +267,7 @@ def write_defenses(data_dir, out_dir, enrich):
              "def_int_td", "def_fum_td", "def_td", "ret_td"]
     cols = (["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
              "team_score", "pts_allowed"] + stats +
-            ["fpts", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source",
+            ["fpts", "fpts_known", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source",
              "game_id", "scoring_complete", "scoring_missing", "strict_eligible", "era_scored_eligible",
                      "era_excluded_fields", "era_blocking_fields"])
     for decade in range(1950, 2000, 10):
@@ -272,23 +284,23 @@ def write_defenses(data_dir, out_dir, enrich):
         t = totals.setdefault((g["team"], g["season"]), defaultdict(float))
         t["games"] += 1
         t[{"W": "wins", "L": "losses", "T": "ties"}[g["result"]]] += 1
-        for c in stats + ["pts_allowed", "fpts"]:
+        for c in stats + ["pts_allowed", "fpts", "fpts_known"]:
             if g[c] is None:
                 t["unknown_" + c] = 1
             else:
                 t[c] += g[c]
         t["ints_corrected"] += g["int_check"] == "raised_to_opp_qb_count"
     tcols = (["team_name", "team", "season", "games", "wins", "losses", "ties", "pts_allowed",
-              "pts_allowed_per_game"] + stats + ["fpts", "fpts_per_game", "ints_corrected", "featured"])
+              "pts_allowed_per_game"] + stats + ["fpts", "fpts_per_game", "fpts_known", "ints_corrected", "featured"])
     with open(os.path.join(out_dir, "def_season_totals.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(tcols)
         for (team, season), t in sorted(totals.items(), key=lambda kv: (kv[0][1], team_name(*kv[0]))):
             row = {c: "" if t.get("unknown_" + c) else int(t.get(c, 0))
-                   for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "ints_corrected"] + stats}
+                   for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "fpts_known", "ints_corrected"] + stats}
             row.update(team_name=team_name(team, season), team=team, season=season,
                        pts_allowed_per_game=round(t["pts_allowed"] / t["games"], 1),
-                       fpts_per_game=round(t["fpts"] / t["games"], 2),
+                       fpts_per_game="" if t.get("unknown_fpts") else round(t["fpts"] / t["games"], 2),
                        featured=nick.get((team, season), ""))
             w.writerow([row[c] for c in tcols])
 
@@ -321,6 +333,13 @@ def write_corrections_log(games, enrich, out_dir):
          "1969 MIN 30, 1961 SDG 49"),
         ("DEF", "", "1999", "fum_rec, blk_punt/blk_fg/blk_xp, def_fum_td", "filled", NFLVERSE,
          "Other seasons blank. 1999-09-12 BAL at STL is missing from nflverse, so those two rows stay blank"),
+        ("DEF", "", "1950-1998", "safeties, def_int_td", "blank", KAGGLE,
+         "Source never records defensive INT-return TDs and records safeties in 18 of 1M rows, so its zeros aren't real; "
+         "1999 filled from nflverse"),
+        ("all positions", "", "1950-1959", "ret_td", "blank", KAGGLE,
+         "Source has almost no return data before 1960 (45 kick-return rows in the decade)"),
+        ("QB, RB, WR, TE", "", "1952", "two_pt", "0", "NFL rulebook",
+         "Dallas Texans 1952 were an NFL team; earlier build treated them as AFL"),
         ("DEF", "", "all seasons", "def_int_td vs def_fum_td vs ret_td", "separate columns", "",
          "Defensive TDs (def_td = def_int_td + def_fum_td) and special-teams return TDs (ret_td) never overlap"),
     ]

@@ -66,7 +66,8 @@ See `VALIDATION_REPORT.md` for the source manifest, completeness by era, eligibl
 - **Targets** are `null` before 1992.
 - **Kicking stats** are almost entirely missing before 1960, so early kickers like Lou Groza have no 1950s kicking numbers.
 - The source swaps pass completions/attempts and extra points made/attempted on every row; the build fixes both.
-- **DST:** no fumble recoveries or fumble-return TDs, and no tackles before 2000.
+- **DST:** no fumble recoveries, safeties, blocked kicks, or interception/fumble-return TDs before 1999 (the source shows 0 for safeties and INT-return TDs but doesn't record them; they're blank in `data/sheets/`), and no tackles before 2000.
+- **Return TDs** aren't recorded before 1960; they're blank for the 1950s in `data/sheets/`.
 - **Season lengths** vary: 12 games through 1960 (14 for the 1960 AFL), 14 from 1961 to 1977, 16 from 1978 on, with 9 games in 1982 and 15 in 1987 (strike seasons). Compare players on per-game numbers.
 - Players whose careers ran past 1999 (Rice, Favre, Faulk, etc.) only have their games through 1999.
 
