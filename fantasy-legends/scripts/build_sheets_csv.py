@@ -4,6 +4,7 @@ Usage: python build_sheets_csv.py ../data ../data/sheets
 
 For each position with a pool (RB, WR), writes:
   <pos>_gamelogs.csv       one row per game, only the columns that position uses
+  <pos>_gamelogs_<decade>s.csv  the same, split by decade (small enough for IMPORTDATA)
   <pos>_season_totals.csv  one row per player per season (regular season only)
 """
 
@@ -30,11 +31,17 @@ def main(data_dir, out_dir):
     for pos, stats in COLUMNS.items():
         rows = [g for g in games if g["pos"] == pos]
         cols = INFO + stats + POINTS + ["player_id"]
-        with open(os.path.join(out_dir, f"{pos.lower()}_gamelogs.csv"), "w", newline="") as f:
-            w = csv.writer(f)
-            w.writerow(cols)
-            for g in rows:
-                w.writerow(["" if g[c] is None else g[c] for c in cols])
+        def write_games(path, games_subset):
+            with open(path, "w", newline="") as f:
+                w = csv.writer(f)
+                w.writerow(cols)
+                for g in games_subset:
+                    w.writerow(["" if g[c] is None else g[c] for c in cols])
+
+        write_games(os.path.join(out_dir, f"{pos.lower()}_gamelogs.csv"), rows)
+        for decade in range(1950, 2000, 10):
+            write_games(os.path.join(out_dir, f"{pos.lower()}_gamelogs_{decade}s.csv"),
+                        [g for g in rows if decade <= g["season"] < decade + 10])
 
         totals = defaultdict(lambda: defaultdict(float))
         teams = defaultdict(list)
