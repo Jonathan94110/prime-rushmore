@@ -5,6 +5,7 @@ Game-by-game stats for NFL stars from 1950 to 1999 (QB, RB, WR, TE and K), plus 
 - **Legends:** 92 hand-picked stars, mostly Hall of Famers (`legend: true`).
 - **Running backs:** every RB with 2,000+ career rushing yards from 1950 to 1999, 319 in all, including the 27 legends.
 - **Wide receivers:** every WR with 2,000+ career receiving yards from 1950 to 1999, 351 in all, including the 22 legends. Ends (E) and flankers (FL) from the 1950s–60s count as receivers.
+- **Quarterbacks:** every QB with 5,000+ career passing yards, 178 in all.
 - **Tight ends:** every TE with 1,500+ career receiving yards. **Kickers:** everyone with 50+ career field goals, whatever their listed position (early kickers were often linemen or receivers).
 - A player listed at more than one position goes to the first one listed in the source ("RB-WR" → RB, "WR-TE" → WR).
 
@@ -12,7 +13,7 @@ Game-by-game stats for NFL stars from 1950 to 1999 (QB, RB, WR, TE and K), plus 
 
 | File | What's in it |
 | --- | --- |
-| `players.json` | All 930 players: id, name, fantasy position, Hall of Fame and legend flags, seasons, teams, college, draft info |
+| `players.json` | All 1,082 players: id, name, fantasy position, Hall of Fame and legend flags, seasons, teams, college, draft info |
 | `player_gamelogs.json` / `.csv` | One row per game played (regular season + playoffs) for those players |
 | `dst_gamelogs.json` / `.csv` | One row per team per game, 1950–1999 (18k games) |
 | `fantasy_legends.xlsx` | Everything above in one workbook, with a Notes sheet explaining the columns |

@@ -65,6 +65,7 @@ POOLS = {
     "RB": {"source_positions": {"RB", "HB", "FB", "TB"}, "stat": "rushing_yards", "min_career": 2000},
     "WR": {"source_positions": {"WR", "FL", "SE", "E"}, "stat": "receiving_yards", "min_career": 2000},
     "TE": {"source_positions": {"TE"}, "stat": "receiving_yards", "min_career": 1500},
+    "QB": {"source_positions": {"QB"}, "stat": "passing_yards", "min_career": 5000},
 }
 
 # Hall of Famers who come in through a pool rather than LEGENDS.

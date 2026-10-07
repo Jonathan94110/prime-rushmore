@@ -2,7 +2,7 @@
 
 Usage: python build_sheets_csv.py ../data ../data/sheets
 
-For each position (RB, WR, TE, K), writes:
+For each position (QB, RB, WR, TE, K), writes:
   <pos>_gamelogs.csv       one row per game, only the columns that position uses
   <pos>_gamelogs_<decade>s.csv  the same, split by decade (small enough for IMPORTDATA)
   <pos>_season_totals.csv  one row per player per season (regular season only)
@@ -16,6 +16,8 @@ import sys
 from collections import defaultdict
 
 COLUMNS = {
+    "QB": ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "pass_rating", "sacked",
+           "rush_att", "rush_yds", "rush_td"],
     "RB": ["rush_att", "rush_yds", "rush_td", "targets", "rec", "rec_yds", "rec_td", "ret_td"],
     "WR": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td", "ret_td"],
     "TE": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td", "ret_td"],
@@ -47,6 +49,23 @@ TEAM_NAMES = [
     ("TAM", 1976, 1999, "Tampa Bay Buccaneers"), ("TEN", 1997, 1998, "Tennessee Oilers"),
     ("TEN", 1999, 1999, "Tennessee Titans"), ("WAS", 1950, 1999, "Washington Redskins"),
 ]
+
+
+def blank(column, season):
+    """Stats the source doesn't record for early seasons (they'd show as 0)."""
+    return (column == "targets" and season < 1992) or (column == "sacked" and season < 1982)
+
+
+def passer_rating(cmp, att, yds, td, ints):
+    """NFL passer rating for a season's totals."""
+    if not att:
+        return ""
+    clamp = lambda x: max(0.0, min(x, 2.375))
+    a = clamp((cmp / att - 0.3) * 5)
+    b = clamp((yds / att - 3) * 0.25)
+    c = clamp(td / att * 20)
+    d = clamp(2.375 - ints / att * 25)
+    return round((a + b + c + d) / 6 * 100, 1)
 
 
 def team_name(code, season):
@@ -111,7 +130,7 @@ def main(data_dir, out_dir):
                 w = csv.writer(f)
                 w.writerow(cols)
                 for g in games_subset:
-                    w.writerow(["" if g[c] is None else g[c] for c in cols])
+                    w.writerow(["" if blank(c, g["season"]) or g[c] is None else g[c] for c in cols])
 
         write_games(os.path.join(out_dir, f"{pos.lower()}_gamelogs.csv"), rows)
         for decade in range(1950, 2000, 10):
@@ -142,7 +161,10 @@ def main(data_dir, out_dir):
                        "ppr_per_game": round(t["fpts_ppr"] / t["games"], 2)}
                 for c in ["games"] + stats + POINTS:
                     v = t.get(c, 0)
-                    row[c] = "" if c == "targets" and season < 1992 else round(v, 2) if c in POINTS else int(v)
+                    row[c] = "" if blank(c, season) else round(v, 2) if c in POINTS else int(v)
+                if "pass_rating" in stats:
+                    row["pass_rating"] = passer_rating(t["pass_cmp"], t["pass_att"], t["pass_yds"],
+                                                      t["pass_td"], t["pass_int"])
                 w.writerow([row[c] for c in tcols])
     write_defenses(data_dir, out_dir)
     for name in sorted(os.listdir(out_dir)):
