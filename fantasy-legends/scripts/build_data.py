@@ -171,7 +171,8 @@ def main(games_path, profiles_path, out_dir):
                 "home_away": row["game_location"], "result": result(row),
                 "team_score": num(row["player_team_score"]), "opp_score": num(row["opponent_score"]),
                 "age": row["age"],
-                "pass_cmp": num(row["passing_completions"]), "pass_att": num(row["passing_attempts"]),
+                # The source scrape swaps these two fields on every row.
+                "pass_cmp": num(row["passing_attempts"]), "pass_att": num(row["passing_completions"]),
                 "pass_yds": num(row["passing_yards"]), "pass_td": num(row["passing_touchdowns"]),
                 "pass_int": num(row["passing_interceptions"]), "pass_rating": num(row["passing_rating"]),
                 "sacked": num(row["passing_sacks"]),
