@@ -102,6 +102,7 @@ PLAYER_COLUMNS = [
 DST_COLUMNS = [
     "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
     "team_score", "pts_allowed", "sacks", "def_int", "opp_pass_int", "def_int_td", "safeties", "ret_td", "fpts",
+    "recorded_td", "recorded_xpm", "recorded_fgm", "score_residual",
 ]
 
 
@@ -166,6 +167,7 @@ def main(games_path, profiles_path, out_dir):
                     "result": result(row), "team_score": num(row["player_team_score"]),
                     "pts_allowed": num(row["opponent_score"]),
                     "sacks": 0, "def_int": 0, "def_int_td": 0, "safeties": 0, "ret_td": 0, "int_thrown": 0,
+                    "recorded_td": 0, "recorded_xpm": 0, "recorded_fgm": 0,
                 }
             t["sacks"] += num(row["defense_sacks"])
             t["def_int"] += num(row["defense_interceptions"])
@@ -173,6 +175,13 @@ def main(games_path, profiles_path, out_dir):
             t["safeties"] += num(row["defense_safeties"])
             t["ret_td"] += num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
             t["int_thrown"] += num(row["passing_interceptions"])
+            # Every scoring play the source records for this team, summed over all its players, for
+            # reconciling against the final score. XP made sits in point_after_attemps (swapped in the source).
+            t["recorded_td"] += (num(row["rushing_touchdowns"]) + num(row["receiving_touchdowns"])
+                                 + num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
+                                 + num(row["defense_interception_touchdowns"]))
+            t["recorded_xpm"] += num(row["point_after_attemps"])
+            t["recorded_fgm"] += num(row["field_goal_makes"])
 
             player_rows[row["player_id"]].append((season, week, row, playoff))
 
@@ -253,6 +262,8 @@ def main(games_path, profiles_path, out_dir):
         # Interceptions thrown by the opponent's passers in this game, to cross-check def_int.
         opp_game = by_team_date.get((d["opp"], d["date"]))
         d["opp_pass_int"] = opp_game["int_thrown"] if opp_game else None
+        # Final score minus every recorded scoring play. 0 means the recorded plays explain the whole score.
+        d["score_residual"] = d["team_score"] - (6 * d["recorded_td"] + d["recorded_xpm"] + 3 * d["recorded_fgm"])
         if d["season"] < SACKS_FIRST_SEASON:
             d["sacks"] = None
         d["fpts"] = dst_fantasy_points(d)

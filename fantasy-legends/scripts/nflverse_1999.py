@@ -13,6 +13,7 @@ Output:
   players:    {"<full name>|<date>": {"two_pt": n, "fum_rec_td": n}} (only players with a nonzero value)
   kickers:    {"<full name>|<date>": field goals made by distance, misses, extra points}
   defense:    {"<date>|<team>": fumble recoveries, safeties, blocked punts/FGs/PATs, defensive TDs by type}
+  evidence:   play-by-play descriptions behind every counted event; nflverse_game_ids: "<date>|<team>" -> game id
 Team codes are converted to Pro-Football-Reference codes.
 """
 
@@ -35,6 +36,9 @@ def main(ps_path, pbp_path, players_path, out_path):
     ids_to_name = {p["gsis_id"]: p["display_name"] for p in csv.DictReader(open(players_path)) if p["gsis_id"]}
     kickers = defaultdict(lambda: defaultdict(int))
     defense = defaultdict(lambda: defaultdict(int))
+    # Supporting evidence: the play-by-play description of every event counted, plus nflverse game ids.
+    evidence = {"players": defaultdict(list), "kickers": defaultdict(list), "defense": defaultdict(list)}
+    nflv_game = {}
     week_date = {}  # (season_type, week, team) -> date
     team_two_pt = defaultdict(int)
     fum_rec_td = defaultdict(int)  # (gsis id, date)
@@ -46,16 +50,19 @@ def main(ps_path, pbp_path, players_path, out_path):
         if not row["game_date"] or not row["home_team"]:
             continue
         date = row["game_date"]
+        play = f"{row['game_id']} play {row['play_id']}: {row['desc']}"
         for side in ("home_team", "away_team"):
             week_date[(row["season_type"], row["week"], pfr(row[side]))] = date
             team_two_pt.setdefault(f"{date}|{pfr(row[side])}", 0)
+            nflv_game[f"{date}|{pfr(row[side])}"] = row["game_id"]
         if row["two_point_conv_result"] == "success" and row["posteam"]:
             team_two_pt[f"{date}|{pfr(row['posteam'])}"] += 1
         d = row["defteam"] and f"{date}|{pfr(row['defteam'])}"
         if d:
             defense[d]  # every team-game appears, even with all zeros
         if row["field_goal_attempt"] == "1" and row["kicker_player_id"]:
-            k = kickers[f"{ids_to_name.get(row['kicker_player_id'], row['kicker_player_name'])}|{date}"]
+            kkey = f"{ids_to_name.get(row['kicker_player_id'], row['kicker_player_name'])}|{date}"
+            k = kickers[kkey]
             k["fga"] += 1
             if row["field_goal_result"] == "made":
                 dist = int(float(row["kick_distance"]))
@@ -63,28 +70,46 @@ def main(ps_path, pbp_path, players_path, out_path):
                 k["fgm_0_39" if dist < 40 else "fgm_40_49" if dist < 50 else "fgm_50p"] += 1
             else:
                 k["fg_missed"] += 1
+            evidence["kickers"][kkey].append(play)
         if row["extra_point_attempt"] == "1" and row["kicker_player_id"]:
-            k = kickers[f"{ids_to_name.get(row['kicker_player_id'], row['kicker_player_name'])}|{date}"]
+            kkey = f"{ids_to_name.get(row['kicker_player_id'], row['kicker_player_name'])}|{date}"
+            k = kickers[kkey]
             k["xpa"] += 1
             k["xpm"] += row["extra_point_result"] == "good"
+            if row["extra_point_result"] != "good":
+                evidence["kickers"][kkey].append(play)
         if d:
-            if row["punt_blocked"] == "1":
-                defense[d]["blk_punt"] += 1
-            if row["field_goal_result"] == "blocked":
-                defense[d]["blk_fg"] += 1
-            if row["extra_point_result"] == "blocked":
-                defense[d]["blk_xp"] += 1
-            if row["safety"] == "1":
-                defense[d]["safeties"] += 1
-            if row["play_type"] in ("pass", "run") and row["fumble_lost"] == "1":
-                defense[d]["fum_rec"] += 1
+            for field, hit in (("blk_punt", row["punt_blocked"] == "1"),
+                               ("blk_fg", row["field_goal_result"] == "blocked"),
+                               ("blk_xp", row["extra_point_result"] == "blocked"),
+                               ("fum_rec", row["play_type"] in ("pass", "run") and row["fumble_lost"] == "1")):
+                if hit:
+                    defense[d][field] += 1
+                    evidence["defense"][d].append(f"{field}: {play}")
             if row["touchdown"] == "1" and row["td_team"] == row["defteam"] and row["play_type"] in ("pass", "run"):
-                defense[d]["def_int_td" if row["interception"] == "1" else "def_fum_td"] += 1
-        # Offense recovers its own fumble and that player scores.
-        if (row["touchdown"] == "1" and row["posteam"] and row["fumble_recovery_1_team"] == row["posteam"]
+                field = "def_int_td" if row["interception"] == "1" else "def_fum_td"
+                defense[d][field] += 1
+                evidence["defense"][d].append(f"{field}: {play}")
+        if row["safety"] == "1" and row["posteam"]:
+            # Two points go to the team without the ball at the end of the play: the defense, unless
+            # possession changed on the play (an interception or lost fumble), when the original offense scores.
+            turnover = row["interception"] == "1" or row["fumble_lost"] == "1"
+            scorer = row["posteam"] if turnover else row["defteam"]
+            sd = f"{date}|{pfr(scorer)}"
+            defense[sd]["safeties"] += 1
+            evidence["defense"][sd].append(f"safeties: {play}")
+        # Offense recovers its own fumble on a scrimmage play and that player scores. Kick and punt returns
+        # are excluded: the main source already counts those as return TDs.
+        if (row["touchdown"] == "1" and row["posteam"] and row["play_type"] in ("pass", "run")
+                and row["fumble_recovery_1_team"] == row["posteam"]
                 and row["td_team"] == row["posteam"]
                 and row["td_player_id"] == row["fumble_recovery_1_player_id"]):
             fum_rec_td[(row["td_player_id"], date)] += 1
+            evidence["players"][f"{ids_to_name.get(row['td_player_id'], row['td_player_id'])}|{date}"].append(f"fum_rec_td: {play}")
+        if row["two_point_conv_result"] == "success":
+            for pid_col in ("passer_player_id", "rusher_player_id", "receiver_player_id"):
+                if row.get(pid_col):
+                    evidence["players"][f"{ids_to_name.get(row[pid_col], row[pid_col])}|{date}"].append(f"two_pt: {play}")
 
     players = defaultdict(lambda: {"two_pt": 0, "fum_rec_td": 0})
     for p in csv.DictReader(open(ps_path)):
@@ -99,7 +124,8 @@ def main(ps_path, pbp_path, players_path, out_path):
     os.makedirs(os.path.dirname(out_path), exist_ok=True)
     with open(out_path, "w") as f:
         json.dump({"source": "nflverse-data player_stats_1999 and play_by_play_1999",
-                   "team_games": team_two_pt, "players": players, "kickers": kickers, "defense": defense},
+                   "team_games": team_two_pt, "players": players, "kickers": kickers, "defense": defense,
+                   "nflverse_game_ids": nflv_game, "evidence": evidence},
                   f, indent=1, sort_keys=True)
     print(f"{len(team_two_pt)} team-games, {len(players)} player-games with 2-pt or fumble-recovery TDs")
 

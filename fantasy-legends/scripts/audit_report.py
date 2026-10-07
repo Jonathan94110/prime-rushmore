@@ -129,7 +129,7 @@ def main(sheets, out_path):
     w("A game counts as known only when every field that earns points for that position is known "
       "(deck v4; fumbles lost score 0, targets and times sacked don't score):\n")
     w("- **QB, RB, WR, TE:** pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td\n"
-      "- **K:** xpm, fgm_0_39, fgm_40_49, fgm_50p, fg_missed (blocked attempts count as misses)\n"
+      "- **K:** xpm, xp_missed, fgm_0_39, fgm_40_49, fgm_50p, fg_missed (blocked attempts count as misses), plus the kicker's own offense fields\n"
       "- **DEF:** pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td; "
       "a disputed interception count also counts as unknown\n")
     w("`scoring_missing` lists every unknown scoring field on the row. The source has no blank stat values, so "
@@ -169,9 +169,14 @@ def main(sheets, out_path):
         n = len({x[key(p)] for x in reg[p]})
         rows.append([p.upper(), sum(v >= 17 for v in strict.values()), sum(v >= 17 for v in era.values()), n])
     w(table(["Position", "≥17 games, strict", "≥17 games, era-scored", "Players / team codes"], rows))
-    w("\nUnder strict rules no one reaches 17: the extra fields exist only for 1999, a 16-game season. Era-scored "
-      "kickers still need a rule for field goals of unknown distance (`fgm` is known, the tier isn't); "
-      "`fpts_k_contract` stays blank for them.\n")
+    rows16 = []
+    for p in POSITIONS:
+        strict = Counter(x[key(p)] for x in reg[p] if x["strict_eligible"] == "True")
+        rows16.append([p.upper(), sum(v >= 16 for v in strict.values())])
+    w("\nWith one bye per player, 16 games are enough. Players with ≥16 strict-eligible games: "
+      + ", ".join(f"{p} {n}" for p, n in rows16) + ".\n")
+    w("\nEach player has one bye, so 16 eligible games cover a 17-week season. Era-scored kickers still need a rule "
+      "for field goals of unknown distance (`fgm` is known, the tier isn't); `fpts_k_contract` stays blank for them.\n")
 
     w("## Worked example: Montana, 1989-09-10, SFO at IND (`19890910-SFO-IND`)\n")
     m = next(x for x in data["qb"] if x["game_id"] == "19890910-SFO-IND" and x["name"] == "Joe Montana")
@@ -206,39 +211,71 @@ def main(sheets, out_path):
                  f"{sum(e > 0 for e in extra)} of {len(r)}", f"{statistics.mean(float(x['fpts']) for x in r):.1f}"])
     w(table(["Position", "Fields", "Avg pts/game", "Games where nonzero", "Avg game total"], rows))
 
-    w("\n## Defense interception reconciliation\n")
+    w("\n## Final-score reconciliation (evidence for zeros)\n")
+    w("For each team-game, the final score is compared with every scoring play the source records for that team "
+      "(all its players' TDs, XPs and FGs): residual = score − (6·TD + XP + 3·FG). **SCORE0** (residual 0): the "
+      "recorded plays explain the whole score, so no other scoring play happened for that team — no safety, "
+      "two-point conversion, defensive TD, fumble-recovery TD or (1950s) return TD. **SCORE2** (residual 2 in an NFL "
+      "game, 1960–1993, when no two-point conversion existed): the 2 points are one safety and no unrecorded TD "
+      "happened. Other residuals leave the fields unknown. The arithmetic for every team-game is in "
+      "`data/sheets/score_reconciliation.csv`.\n")
+    recon = list(csv.DictReader(open(os.path.join(sheets, "score_reconciliation.csv"))))
+    rc = Counter((int(x["season"]) // 10 * 10, x["result"]) for x in recon if x["playoff"] == "False")
+    w(table(["Decade", "SCORE0", "SCORE2", "Unexplained points", "Team-games"],
+            [[f"{d}s", rc[(d, "SCORE0")], rc[(d, "SCORE2")], rc[(d, "unexplained points")],
+              sum(v for (dd, _), v in rc.items() if dd == d)] for d in DECADES]))
+    w("\nTested against 1999, where nflverse play-by-play gives the true answer: in every 1999 SCORE0 team-game, "
+      "nflverse shows no safety, two-point conversion, interception/fumble-return TD or offensive fumble-recovery TD "
+      "for that team (kick and punt return TDs, which the source does record, are the only scores it lists). The 1950s "
+      "reconcile rarely because the source has almost no kicking or return data then, so mostly shutouts qualify.\n")
+    w("**Bias check** (1960–98 regular season, average points in strict-eligible games vs all games):\n")
+    rows = []
+    for p, col in [("qb", "fpts_ppr"), ("rb", "fpts_ppr"), ("wr", "fpts_ppr"), ("te", "fpts_ppr"), ("k", "fpts_std")]:
+        r = [x for x in reg[p] if 1960 <= int(x["season"]) <= 1998 and x[col] != ""]
+        allv = [float(x[col]) for x in r]
+        sv = [float(x[col]) for x in r if x["strict_eligible"] == "True"]
+        rows.append([p.upper(), f"{statistics.mean(allv):.2f}", f"{statistics.mean(sv):.2f}" if sv else "–",
+                     f"{100 * (statistics.mean(sv) / statistics.mean(allv) - 1):+.1f}%" if sv else "–", len(sv)])
+    w(table(["Position", "All games", "Strict-eligible games", "Difference", "Strict games"], rows))
+    w("\nOffense is unbiased. **Kickers are not:** before 1999, distance tiers are known only for games with no field "
+      "goal made (all tiers 0), so a Strict kicker pool before 1999 would draw only those low-scoring games. Strict "
+      "kickers need an owner decision (for example, Strict kickers from 1999 only).\n")
+
+    w("\n## Defense interceptions\n")
     c = Counter(x["int_check"] for x in data["def"])
     by_decade = Counter(int(x["season"]) // 10 * 10 for x in data["def"] if x["int_check"] != "match")
     w(f"- Defenders' INTs equal the opposing passers' INTs thrown: {c['match']} games.\n"
-      f"- Disagree: {c['raised_to_opp_qb_count'] + c['kept_defender_count']} games "
-      f"({', '.join(f'{d}s {by_decade[d]}' for d in DECADES)}). `def_int` holds the larger count, which is a heuristic; "
-      "these games are marked `def_int` in `scoring_missing` until verified.\n"
-      "- Season checks against published totals: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30, 1961 SDG 49 (all match).\n")
+      f"- Disputed: {c['disputed'] + c['unverified']} games ({', '.join(f'{d}s {by_decade[d]}' for d in DECADES)}). "
+      "These are **quarantined**: `def_int` is blank, and both original counts are kept in `def_int_defenders` and "
+      "`opp_pass_int`.\n"
+      "- Season checks against published totals: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30 (all match).\n")
 
     w("## Unresolved fields\n")
     w(table(["Field", "Positions", "Known for", "Unknown for", "Why"], [
-        ["fum_rec_td (offensive fumble-recovery TD)", "QB RB WR TE", "1999", "1950–1998", "Not in the scraped source"],
-        ["two_pt", "QB RB WR TE", "NFL 1950–1993 (rule: 0), 1999", "AFL 1960–69, 1994–1998", "Not in the scraped source"],
-        ["FG made by distance", "K", "1999", "1960–1998", "Not in the scraped source"],
-        ["All kicking stats", "K", "1960–1999", "1950–1959", "Source has almost none before 1960"],
-        ["fum_rec, blocked punts/FGs/PATs, def_fum_td", "DEF", "1999", "1950–1998", "Not in the scraped source"],
+        ["fum_rec_td (offensive fumble-recovery TD)", "QB RB WR TE K", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
+        ["two_pt", "QB RB WR TE K", "NFL 1950–1993 (rule: 0), 1999, SCORE0 games", "other AFL and 1994–98 games", "Not in the scraped source"],
+        ["FG made by distance", "K", "1999; games with no FG made", "other 1960–1998 games", "Not in the scraped source"],
+        ["All kicking stats", "K", "1960–1999; 1950s SCORE0 games", "other 1950s games", "Source has almost none before 1960"],
+        ["fum_rec, blocked punts/FGs/PATs", "DEF", "1999", "1950–1998", "Not in the scraped source; not provable from the score"],
+        ["def_int_td, def_fum_td, safeties", "DEF", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
         ["sacks", "DEF", "1982–1999", "1950–1981", "Not an official stat before 1982"],
-        ["safeties, INT-return TDs", "DEF", "1999", "1950–1998", "Source shows 0 but never records them"],
-        ["return TDs", "all", "1960–1999", "1950–1959", "Source has almost no return data before 1960"],
-        ["def_int", "DEF", "games where both logs agree", f"{c['raised_to_opp_qb_count'] + c['kept_defender_count']} games", "Defender and passer logs disagree"],
-        ["1999-09-12 BAL at STL extras", "all", "", "that game", "Missing from nflverse play-by-play"],
+        ["return TDs", "all", "1960–1999; 1950s SCORE0 games", "other 1950s games", "Source has almost no return data before 1960"],
+        ["def_int", "DEF", "games where both logs agree", f"{c['disputed'] + c['unverified']} games", "Defender and passer logs disagree"],
+        ["1999-09-12 BAL at STL extras", "all", "via score reconciliation where it applies", "the rest", "Missing from nflverse play-by-play"],
     ]))
-    w("\nFilling these would need box-score or play-by-play data for 1950–1998. Pro-Football-Reference blocks "
-      "automated access from this environment, and how far back its box scores carry each field, and whether "
-      "its terms allow reuse, are unverified.\n")
+    w("\nEvery remaining gap is listed per game in `data/sheets/unresolved_players.csv` and "
+      "`data/sheets/unresolved_defense.csv` (regular season). Every change, with its old value, new value, source URL "
+      "and evidence, is in `data/sheets/corrections_log_{qb,rb,wr,te,k,def}.csv`; the same fills in the research "
+      "workbook's merge format are in `data/sheets/verified_replacements_{...}.csv`. Filling the rest needs box-score "
+      "or play-by-play data for 1950–1998; Pro-Football-Reference blocks automated access from this environment, "
+      "and its terms restrict reuse.\n")
 
     w("## Decisions for the owner\n")
-    w("1. **Strict vs era-scored.** Strict leaves no season playable before 1999. Era-scoring leaves out fields "
-      "worth under 0.1 pt/game for skill players, about 0.6 for kickers and more for defenses (see above; measured on 1999). "
-      "Era-scored kickers also need a rule for field goals of unknown distance.\n"
-      "2. **Defense interceptions.** Accept max(defenders, passers) for the disputed games, or quarantine those games.\n"
-      "3. **Reuse rights.** The base data is scraped from Sports Reference and has no stated license, and this "
-      "repository is public. Decide whether that's acceptable before publishing.\n")
+    w("1. **Strict kickers.** Before 1999 only no-field-goal games have distance tiers, a biased pool (see the bias check).\n"
+      "2. **Strict defenses** remain 1999-only: fumble recoveries and blocked kicks can't be proven from the score.\n"
+      "3. **Historical rules** are unchanged and still pending.\n"
+      "4. **Reuse rights.** The base data is scraped from Sports Reference and has no stated license, and this "
+      "repository is public.\n")
 
     with open(out_path, "w") as f:
         f.write("\n".join(md))
