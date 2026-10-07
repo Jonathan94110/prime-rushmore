@@ -3,16 +3,47 @@ all positions,,,pass_cmp/pass_att,swapped back,"Kaggle zynicide/nfl-football-pla
 all positions,,,xpm/xpa,swapped back,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Source has extra points made and attempted swapped on every row
 all positions,,,targets,blank before 1992,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Not recorded before 1992 (source shows 0)
 all positions,,,sacked / DST sacks,blank before 1982,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Not an official stat before 1982
-"WR, TE",,1950-1993 NFL games,two_pt,0,NFL rulebook: two-point conversion adopted 1994,AFL games (1960-69) left blank: the AFL allowed it
-"WR, TE",,1994-1998,two_pt,blank,,No accessible source; Pro-Football-Reference blocks automated access
-"WR, TE",,before 1999,fum_rec_td,blank,,No accessible source before 1999
-"WR, TE",,1999,"two_pt, fum_rec_td",filled (0 unless listed below),nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+"QB, RB, WR, TE",,1950-1993 NFL games,two_pt,0,NFL rulebook: two-point conversion adopted 1994,AFL games (1960-69) left blank: the AFL allowed it
+"QB, RB, WR, TE",,1994-1998,two_pt,blank,,No accessible source; Pro-Football-Reference blocks automated access
+"QB, RB, WR, TE",,before 1999,fum_rec_td,blank,,No accessible source before 1999
+"QB, RB, WR, TE",,1999,"two_pt, fum_rec_td",filled (0 unless listed below),nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+K,,before 1960,"fgm/fga/xpm/xpa, fpts",blank,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Source has almost no kicking stats before 1960
+K,,all seasons,fg_missed,fga - fgm,"Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",
+K,,1999,fgm_0_39/fgm_40_49/fgm_50p,filled,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),Only where nflverse FG made/attempted equal the main source; other years blank (no FG distances)
+DEF,,all seasons,def_int,"max(defenders' INTs, opposing passers' INTs thrown)","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)","Both logs can only miss interceptions, so the larger count is more complete. int_check and def_int_defenders/opp_pass_int show the original numbers. Verified: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30, 1961 SDG 49"
+DEF,,1999,"fum_rec, blk_punt/blk_fg/blk_xp, def_fum_td",filled,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),"Other seasons blank. 1999-09-12 BAL at STL is missing from nflverse, so those two rows stay blank"
+DEF,,all seasons,def_int_td vs def_fum_td vs ret_td,separate columns,,Defensive TDs (def_td = def_int_td + def_fum_td) and special-teams return TDs (ret_td) never overlap
+duplicate removed,Chip Lohmiller,1996-10-27,whole row,"kept STL, dropped WAS","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept only row with stats
+duplicate removed,Bob Thomas,1982-09-19,whole row,"kept DET, dropped CHI","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept only row with stats
+duplicate removed,Bob Thomas,1982-12-12,whole row,"kept CHI, dropped DET","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept team he played for most that season
+duplicate removed,Bob Thomas,1982-12-19,whole row,"kept CHI, dropped DET","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept team he played for most that season
+duplicate removed,Bob Thomas,1982-12-26,whole row,"kept CHI, dropped DET","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept only row with stats
+duplicate removed,Bob Thomas,1983-01-02,whole row,"kept CHI, dropped DET","Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)",Same player listed for two teams on one date; kept only row with stats
+player game,Billy Joe Tolliver,1999-10-17,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Billy Joe Tolliver,1999-12-12,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Billy Joe Tolliver,1999-12-19,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Brad Johnson,1999-12-19,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Brett Favre,1999-11-21,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Eddie Kennison,1999-12-12,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Gus Frerotte,1999-11-07,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Isaac Bruce,1999-11-07,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,J.J. Stokes,2000-01-03,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Jackie Harris,1999-12-05,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,James Jett,1999-11-22,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Jeff Blake,1999-09-12,two_pt,2,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Jim Harbaugh,1999-09-19,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Jimmy Smith,1999-11-28,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Keenan McCardell,1999-11-28,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Kerry Collins,1999-12-26,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Kurt Warner,1999-11-07,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Leroy Hoard,2000-01-16,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Mark Brunell,1999-09-12,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Mark Brunell,1999-11-28,two_pt,2,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Marshall Faulk,1999-11-28,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Marvin Harrison,1999-10-31,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
 player game,Michael Westbrook,1999-12-19,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Mike Tomczak,2000-01-02,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Peyton Manning,1999-10-31,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Rich Gannon,1999-11-22,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Stephen Davis,1999-09-12,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),
+player game,Steve McNair,1999-12-05,two_pt,1,nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data),

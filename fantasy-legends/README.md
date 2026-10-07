@@ -42,13 +42,18 @@ Join game logs to `players.json` on `player_id`. `week` is the team's game numbe
 
 DST `fpts`: 1 per sack, 2 per INT, 2 per safety, 6 per INT-return or kick/punt-return TD, plus points allowed (0 → 10, 1–6 → 7, 7–13 → 4, 14–20 → 1, 21–27 → 0, 28–34 → −1, 35+ → −4).
 
-## Repaired scoring fields (WR and TE so far)
+## Repaired scoring fields (`data/sheets/`)
 
-WR and TE game logs in `data/sheets/` also carry `pass_yds`, `pass_td`, `pass_int`, `two_pt`, `fum_rec_td`, plus:
-- `complete` / `missing_fields`: which fields are unknown for that game (left blank, never zero-filled).
-- `source`: `PFR` (Kaggle scrape), `NFLV1999` (nflverse, 1999 two-point conversions and fumble-recovery TDs), `RULE2PT` (two_pt = 0 because the NFL had no two-point conversion before 1994; AFL games are left blank).
+Unknown values are left blank, never zero-filled. Every game row has `complete`, `missing_fields` (which fields are unknown) and `source`:
+`PFR` (Kaggle scrape of Pro-Football-Reference), `NFLV1999` (nflverse, 1999 only), `RULE2PT` (two_pt = 0 because the NFL had no two-point conversion before 1994).
 
-`fpts_std`/`fpts_ppr` add 2 per two-point conversion and 6 per fumble-recovery TD where known. Every correction and its source is listed in `data/sheets/corrections_log.csv`.
+- **QB, RB, WR, TE:** `two_pt` (0 for pre-1994 NFL games, filled for 1999, blank for AFL 1960–69 and 1994–98), `fum_rec_td` (1999 only), plus passing columns for non-QBs. Fantasy points add 2 per two-point conversion and 6 per fumble-recovery TD where known.
+- **K:** `fg_missed` (attempts − makes), `fgm_0_39` / `fgm_40_49` / `fgm_50p` (1999 only, used only where nflverse's counts agree with the main source). Kicking stats and fantasy points are blank before 1960.
+- **DEF:** `def_int` is the larger of the defenders' interceptions and the opposing passers' interceptions thrown (each log only ever misses picks); `int_check`, `def_int_defenders` and `opp_pass_int` show the originals. `fum_rec`, `blk_punt`/`blk_fg`/`blk_xp` and `def_fum_td` are 1999 only. Defensive TDs (`def_td` = `def_int_td` + `def_fum_td`) and special-teams return TDs (`ret_td`) are separate columns. `pts_allowed` is the opponent's final score.
+- **Duplicates:** the source lists a few kickers on two teams on the same date; one row is kept and the rest dropped (logged).
+- Regular season and playoffs: `playoff` flags postseason games; season totals are regular season only.
+
+Every correction and its source is listed in `data/sheets/corrections_log.csv`.
 
 ## Gaps in the source data
 
@@ -74,7 +79,8 @@ unzip stats.zip -d raw
 cd scripts && python build_data.py ../raw/games_*.json ../raw/profiles_*.json ../data
 curl -L -o ps1999.csv https://github.com/nflverse/nflverse-data/releases/download/player_stats/player_stats_1999.csv
 curl -L -o pbp1999.csv.gz https://github.com/nflverse/nflverse-data/releases/download/pbp/play_by_play_1999.csv.gz
-python nflverse_1999.py ps1999.csv pbp1999.csv.gz ../data/enrich/nflverse_1999.json
+curl -L -o players.csv https://github.com/nflverse/nflverse-data/releases/download/players/players.csv
+python nflverse_1999.py ps1999.csv pbp1999.csv.gz players.csv ../data/enrich/nflverse_1999.json
 python build_workbook.py ../data ../data/fantasy_legends.xlsx
 python build_workbook.py ../data ../data/running_backs.xlsx RB
 python build_workbook.py ../data ../data/wide_receivers.xlsx WR

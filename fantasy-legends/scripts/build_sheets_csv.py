@@ -19,13 +19,14 @@ from build_data import AFL_TEAMS
 
 COLUMNS = {
     "QB": ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "pass_rating", "sacked",
-           "rush_att", "rush_yds", "rush_td"],
-    "RB": ["rush_att", "rush_yds", "rush_td", "targets", "rec", "rec_yds", "rec_td", "ret_td"],
+           "rush_att", "rush_yds", "rush_td", "two_pt", "fum_rec_td"],
+    "RB": ["rush_att", "rush_yds", "rush_td", "targets", "rec", "rec_yds", "rec_td",
+           "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
     "WR": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td",
            "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
     "TE": ["targets", "rec", "rec_yds", "rec_td", "rush_att", "rush_yds", "rush_td",
            "pass_yds", "pass_td", "pass_int", "two_pt", "fum_rec_td", "ret_td"],
-    "K": ["fgm", "fga", "xpm", "xpa"],
+    "K": ["fgm", "fga", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "xpm", "xpa"],
 }
 
 # Pro-Football-Reference codes follow the city, so some codes cover two franchises.
@@ -56,7 +57,7 @@ TEAM_NAMES = [
 
 
 # Positions whose game logs carry the repaired scoring fields (two_pt, fum_rec_td, missing_fields, source).
-REPAIRED = {"WR", "TE"}
+REPAIRED = {"QB", "RB", "WR", "TE"}
 
 # Source codes used in the `source` column.
 #   PFR       Pro-Football-Reference, via the Kaggle scrape (zynicide/nfl-football-player-stats, Dec 2017)
@@ -80,8 +81,42 @@ def repair_scoring(g, enrich):
         if g[c]:
             g["fpts_std"] = round(g["fpts_std"] + g[c] * (2 if c == "two_pt" else 6), 2)
             g["fpts_ppr"] = round(g["fpts_ppr"] + g[c] * (2 if c == "two_pt" else 6), 2)
-    missing = [c for c in ("targets", "two_pt", "fum_rec_td") if g[c] is None or blank(c, season)]
+    check = ("targets", "two_pt", "fum_rec_td") if g["pos"] != "QB" else ("sacked", "two_pt", "fum_rec_td")
+    missing = [c for c in check if g[c] is None or blank(c, season)]
     g["missing_fields"] = ";".join(missing)
+    g["complete"] = not missing
+    g["source"] = "+".join(source)
+    return g
+
+
+KICK_FIRST_SEASON = 1960  # the source has almost no kicking stats before 1960
+
+
+def repair_kicking(g, enrich):
+    """Kicking stats are unknown (not zero) before 1960. FG distances only exist for 1999 (nflverse),
+    and are used only when nflverse's made/attempted counts agree with the main source."""
+    season = g["season"]
+    source = ["PFR"]
+    for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+        g[c] = None
+    if season < KICK_FIRST_SEASON:
+        for c in ("fgm", "fga", "xpm", "xpa", "fpts_std", "fpts_ppr"):
+            g[c] = None
+        g["fg_missed"] = None
+    else:
+        g["fg_missed"] = g["fga"] - g["fgm"]
+        k = enrich["kickers"].get(f"{g['name']}|{g['date']}") if season == 1999 else None
+        if k and (k.get("fgm", 0), k.get("fga", 0)) == (g["fgm"], g["fga"]):
+            for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+                g[c] = k.get(c, 0)
+            source.append("NFLV1999")
+        elif season == 1999 and g["fga"] == 0:
+            for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
+                g[c] = 0
+        elif season == 1999 and k:
+            source.append("NFLV1999-MISMATCH")
+    missing = [c for c in ("fgm", "xpm", "fgm_0_39") if g[c] is None]
+    g["missing_fields"] = ";".join("fg_distance" if c == "fgm_0_39" else c for c in missing)
     g["complete"] = not missing
     g["source"] = "+".join(source)
     return g
@@ -108,20 +143,58 @@ def team_name(code, season):
     return next((n for c, a, b, n in TEAM_NAMES if c == code and a <= season <= b), code)
 
 
-def write_defenses(data_dir, out_dir):
+def dst_points(g):
+    """Standard DST scoring, using only the components known for this game."""
+    pa = g["pts_allowed"]
+    pts = 10 if pa == 0 else 7 if pa <= 6 else 4 if pa <= 13 else 1 if pa <= 20 else 0 if pa <= 27 else -1 if pa <= 34 else -4
+    pts += (g["sacks"] or 0) + 2 * g["def_int"] + 2 * g["safeties"] + 6 * (g["def_int_td"] + g["ret_td"])
+    if g["fum_rec"] is not None:
+        pts += 2 * g["fum_rec"] + 2 * (g["blk_punt"] + g["blk_fg"] + g["blk_xp"]) + 6 * g["def_fum_td"]
+    return pts
+
+
+def repair_defense(g, enrich):
+    """Cross-check interceptions against the opponent's passers, add 1999 extras, flag unknowns."""
+    g = dict(g, team_name=team_name(g["team"], g["season"]), def_int_defenders=g["def_int"])
+    source = ["PFR"]
+    opp = g["opp_pass_int"]
+    if opp is None or opp == g["def_int"]:
+        g["int_check"] = "match" if opp is not None else "unverified"
+    elif opp > g["def_int"]:
+        # Each count can only miss interceptions (rows missing from one log), so the larger is more complete.
+        g["def_int"], g["int_check"] = opp, "raised_to_opp_qb_count"
+    else:
+        g["int_check"] = "kept_defender_count"
+    extra = enrich["defense"].get(f"{g['date']}|{g['team']}") if g["season"] == 1999 else None
+    for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "def_fum_td"):
+        g[c] = extra.get(c, 0) if extra is not None else None
+    if extra is not None:
+        source.append("NFLV1999")
+    g["def_td"] = g["def_int_td"] + g["def_fum_td"] if g["def_fum_td"] is not None else None
+    g["fpts"] = dst_points(g)
+    missing = [c for c in ("sacks", "fum_rec", "blk_punt", "def_fum_td") if g[c] is None]
+    g["missing_fields"] = ";".join("blocked_kicks" if c == "blk_punt" else c for c in missing)
+    g["complete"] = not missing
+    g["source"] = "+".join(source)
+    return g
+
+
+def write_defenses(data_dir, out_dir, enrich):
     d = json.load(open(os.path.join(data_dir, "dst_gamelogs.json")))
-    games = [dict(zip(d["columns"], r)) for r in d["rows"]]
+    games = [repair_defense(dict(zip(d["columns"], r)), enrich) for r in d["rows"]]
     nick = {(f["team"], f["season"]): f["nickname"] or "Featured"
             for f in json.load(open(os.path.join(data_dir, "featured_defenses.json")))}
-    cols = ["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
-            "team_score", "pts_allowed", "sacks", "def_int", "def_int_td", "safeties", "ret_td", "fpts"]
+    stats = ["sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
+             "def_int_td", "def_fum_td", "def_td", "ret_td"]
+    cols = (["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
+             "team_score", "pts_allowed"] + stats +
+            ["fpts", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source"])
     for decade in range(1950, 2000, 10):
         with open(os.path.join(out_dir, f"def_gamelogs_{decade}s.csv"), "w", newline="") as f:
             w = csv.writer(f)
             w.writerow(cols)
             for g in games:
                 if decade <= g["season"] < decade + 10:
-                    g = dict(g, team_name=team_name(g["team"], g["season"]))
                     w.writerow(["" if g[c] is None else g[c] for c in cols])
     totals = {}
     for g in games:
@@ -130,24 +203,27 @@ def write_defenses(data_dir, out_dir):
         t = totals.setdefault((g["team"], g["season"]), defaultdict(float))
         t["games"] += 1
         t[{"W": "wins", "L": "losses", "T": "ties"}[g["result"]]] += 1
-        for c in ("pts_allowed", "def_int", "def_int_td", "safeties", "ret_td", "fpts"):
-            t[c] += g[c]
-        t["sacks"] = None if g["sacks"] is None else (t.get("sacks") or 0) + g["sacks"]
-    tcols = ["team_name", "team", "season", "games", "wins", "losses", "ties", "pts_allowed",
-             "pts_allowed_per_game", "sacks", "def_int", "def_int_td", "safeties", "ret_td",
-             "fpts", "fpts_per_game", "featured"]
+        for c in stats + ["pts_allowed", "fpts"]:
+            if g[c] is None:
+                t["unknown_" + c] = 1
+            else:
+                t[c] += g[c]
+        t["ints_corrected"] += g["int_check"] == "raised_to_opp_qb_count"
+    tcols = (["team_name", "team", "season", "games", "wins", "losses", "ties", "pts_allowed",
+              "pts_allowed_per_game"] + stats + ["fpts", "fpts_per_game", "ints_corrected", "featured"])
     with open(os.path.join(out_dir, "def_season_totals.csv"), "w", newline="") as f:
         w = csv.writer(f)
         w.writerow(tcols)
         for (team, season), t in sorted(totals.items(), key=lambda kv: (kv[0][1], team_name(*kv[0]))):
-            row = {c: int(t.get(c, 0)) for c in ("games", "wins", "losses", "ties", "pts_allowed", "def_int",
-                                                 "def_int_td", "safeties", "ret_td")}
+            row = {c: "" if t.get("unknown_" + c) else int(t.get(c, 0))
+                   for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "ints_corrected"] + stats}
             row.update(team_name=team_name(team, season), team=team, season=season,
-                       sacks="" if t["sacks"] is None else int(t["sacks"]), fpts=int(t["fpts"]),
                        pts_allowed_per_game=round(t["pts_allowed"] / t["games"], 1),
                        fpts_per_game=round(t["fpts"] / t["games"], 2),
                        featured=nick.get((team, season), ""))
             w.writerow([row[c] for c in tcols])
+
+
 KAGGLE = "Kaggle zynicide/nfl-football-player-stats (Pro-Football-Reference scrape, Dec 2017)"
 NFLVERSE = "nflverse-data player_stats_1999 + play_by_play_1999 (github.com/nflverse/nflverse-data)"
 
@@ -161,12 +237,28 @@ def write_corrections_log(games, enrich, out_dir):
          KAGGLE, "Source has extra points made and attempted swapped on every row"),
         ("all positions", "", "", "targets", "blank before 1992", KAGGLE, "Not recorded before 1992 (source shows 0)"),
         ("all positions", "", "", "sacked / DST sacks", "blank before 1982", KAGGLE, "Not an official stat before 1982"),
-        ("WR, TE", "", "1950-1993 NFL games", "two_pt", "0",
+        ("QB, RB, WR, TE", "", "1950-1993 NFL games", "two_pt", "0",
          "NFL rulebook: two-point conversion adopted 1994", "AFL games (1960-69) left blank: the AFL allowed it"),
-        ("WR, TE", "", "1994-1998", "two_pt", "blank", "", "No accessible source; Pro-Football-Reference blocks automated access"),
-        ("WR, TE", "", "before 1999", "fum_rec_td", "blank", "", "No accessible source before 1999"),
-        ("WR, TE", "", "1999", "two_pt, fum_rec_td", "filled (0 unless listed below)", NFLVERSE, ""),
+        ("QB, RB, WR, TE", "", "1994-1998", "two_pt", "blank", "", "No accessible source; Pro-Football-Reference blocks automated access"),
+        ("QB, RB, WR, TE", "", "before 1999", "fum_rec_td", "blank", "", "No accessible source before 1999"),
+        ("QB, RB, WR, TE", "", "1999", "two_pt, fum_rec_td", "filled (0 unless listed below)", NFLVERSE, ""),
+        ("K", "", "before 1960", "fgm/fga/xpm/xpa, fpts", "blank", KAGGLE, "Source has almost no kicking stats before 1960"),
+        ("K", "", "all seasons", "fg_missed", "fga - fgm", KAGGLE, ""),
+        ("K", "", "1999", "fgm_0_39/fgm_40_49/fgm_50p", "filled", NFLVERSE,
+         "Only where nflverse FG made/attempted equal the main source; other years blank (no FG distances)"),
+        ("DEF", "", "all seasons", "def_int", "max(defenders' INTs, opposing passers' INTs thrown)", KAGGLE,
+         "Both logs can only miss interceptions, so the larger count is more complete. int_check and "
+         "def_int_defenders/opp_pass_int show the original numbers. Verified: 1985 CHI 34, 1975 PIT 27, "
+         "1969 MIN 30, 1961 SDG 49"),
+        ("DEF", "", "1999", "fum_rec, blk_punt/blk_fg/blk_xp, def_fum_td", "filled", NFLVERSE,
+         "Other seasons blank. 1999-09-12 BAL at STL is missing from nflverse, so those two rows stay blank"),
+        ("DEF", "", "all seasons", "def_int_td vs def_fum_td vs ret_td", "separate columns", "",
+         "Defensive TDs (def_td = def_int_td + def_fum_td) and special-teams return TDs (ret_td) never overlap"),
     ]
+    for d in json.load(open(os.path.join(os.path.dirname(out_dir), "enrich", "dedup_log.json"))):
+        log.append(("duplicate removed", d["player"], d["date"], "whole row",
+                    f"kept {d['kept_team']}, dropped {'/'.join(d['dropped_teams'])}", KAGGLE,
+                    f"Same player listed for two teams on one date; kept {d['reason']}"))
     names = {g["name"] for g in games if g["pos"] in REPAIRED and g["season"] == 1999}
     for key, v in sorted(enrich["players"].items()):
         name, date = key.split("|")
@@ -196,6 +288,9 @@ def main(data_dir, out_dir):
         cols = INFO + stats + POINTS + ["player_id"]
         if pos in REPAIRED:
             rows = [repair_scoring(dict(g), enrich) for g in rows]
+            cols += ["complete", "missing_fields", "source"]
+        elif pos == "K":
+            rows = [repair_kicking(dict(g), enrich) for g in rows]
             cols += ["complete", "missing_fields", "source"]
         def write_games(path, games_subset):
             with open(path, "w", newline="") as f:
@@ -232,7 +327,7 @@ def main(data_dir, out_dir):
                 p = players[pid]
                 row = {"name": p["name"], "season": season, "team": "/".join(teams[(pid, season)]),
                        "hof": p["hof"], "legend": p["legend"], "player_id": pid,
-                       "ppr_per_game": round(t["fpts_ppr"] / t["games"], 2)}
+                       "ppr_per_game": "" if t.get("unknown_fpts_ppr") else round(t["fpts_ppr"] / t["games"], 2)}
                 for c in ["games"] + stats + POINTS:
                     v = t.get(c, 0)
                     row[c] = ("" if blank(c, season) or t.get("unknown_" + c)
@@ -241,7 +336,7 @@ def main(data_dir, out_dir):
                     row["pass_rating"] = passer_rating(t["pass_cmp"], t["pass_att"], t["pass_yds"],
                                                       t["pass_td"], t["pass_int"])
                 w.writerow([row[c] for c in tcols])
-    write_defenses(data_dir, out_dir)
+    write_defenses(data_dir, out_dir, enrich)
     write_corrections_log(games, enrich, out_dir)
     for name in sorted(os.listdir(out_dir)):
         print(name, os.path.getsize(os.path.join(out_dir, name)))

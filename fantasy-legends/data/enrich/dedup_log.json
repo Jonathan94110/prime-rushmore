@@ -1,0 +1,56 @@
+[
+ {
+  "player": "Chip Lohmiller",
+  "date": "1996-10-27",
+  "kept_team": "STL",
+  "dropped_teams": [
+   "WAS"
+  ],
+  "reason": "only row with stats"
+ },
+ {
+  "player": "Bob Thomas",
+  "date": "1982-09-19",
+  "kept_team": "DET",
+  "dropped_teams": [
+   "CHI"
+  ],
+  "reason": "only row with stats"
+ },
+ {
+  "player": "Bob Thomas",
+  "date": "1982-12-12",
+  "kept_team": "CHI",
+  "dropped_teams": [
+   "DET"
+  ],
+  "reason": "team he played for most that season"
+ },
+ {
+  "player": "Bob Thomas",
+  "date": "1982-12-19",
+  "kept_team": "CHI",
+  "dropped_teams": [
+   "DET"
+  ],
+  "reason": "team he played for most that season"
+ },
+ {
+  "player": "Bob Thomas",
+  "date": "1982-12-26",
+  "kept_team": "CHI",
+  "dropped_teams": [
+   "DET"
+  ],
+  "reason": "only row with stats"
+ },
+ {
+  "player": "Bob Thomas",
+  "date": "1983-01-02",
+  "kept_team": "CHI",
+  "dropped_teams": [
+   "DET"
+  ],
+  "reason": "only row with stats"
+ }
+]

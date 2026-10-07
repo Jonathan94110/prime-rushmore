@@ -14,7 +14,7 @@ import csv
 import json
 import os
 import sys
-from collections import defaultdict
+from collections import Counter, defaultdict
 
 import ijson
 
@@ -101,8 +101,36 @@ PLAYER_COLUMNS = [
 
 DST_COLUMNS = [
     "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
-    "team_score", "pts_allowed", "sacks", "def_int", "def_int_td", "safeties", "ret_td", "fpts",
+    "team_score", "pts_allowed", "sacks", "def_int", "opp_pass_int", "def_int_td", "safeties", "ret_td", "fpts",
 ]
+
+
+STAT_FIELDS = ("passing_yards", "rushing_attempts", "receiving_receptions", "field_goal_attempts",
+               "point_after_makes", "kick_return_attempts", "punt_return_attempts", "defense_tackles")
+
+
+def dedupe(rows, name, log):
+    """Keep one row per player per date. The source sometimes lists a player for two teams on the same
+    day; keep the row with stats, or else the team he played for most that season, and log it."""
+    by_date = defaultdict(list)
+    for r in rows:
+        by_date[r[2]["date"]].append(r)
+    out = []
+    for date, same in by_date.items():
+        if len(same) == 1:
+            out.append(same[0])
+            continue
+        with_stats = [r for r in same if any(num(r[2][f]) for f in STAT_FIELDS)]
+        if len(with_stats) == 1:
+            keep, why = with_stats[0], "only row with stats"
+        else:
+            season_teams = Counter(r[2]["team"] for r in rows if r[0] == same[0][0])
+            keep = max(same, key=lambda r: season_teams[r[2]["team"]])
+            why = "team he played for most that season"
+        out.append(keep)
+        log.append({"player": name, "date": date, "kept_team": keep[2]["team"],
+                    "dropped_teams": [r[2]["team"] for r in same if r is not keep], "reason": why})
+    return sorted(out, key=lambda r: (r[0], r[1]))
 
 
 def main(games_path, profiles_path, out_dir):
@@ -137,13 +165,14 @@ def main(games_path, profiles_path, out_dir):
                     "playoff": playoff, "opp": row["opponent"], "home_away": row["game_location"],
                     "result": result(row), "team_score": num(row["player_team_score"]),
                     "pts_allowed": num(row["opponent_score"]),
-                    "sacks": 0, "def_int": 0, "def_int_td": 0, "safeties": 0, "ret_td": 0,
+                    "sacks": 0, "def_int": 0, "def_int_td": 0, "safeties": 0, "ret_td": 0, "int_thrown": 0,
                 }
             t["sacks"] += num(row["defense_sacks"])
             t["def_int"] += num(row["defense_interceptions"])
             t["def_int_td"] += num(row["defense_interception_touchdowns"])
             t["safeties"] += num(row["defense_safeties"])
             t["ret_td"] += num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
+            t["int_thrown"] += num(row["passing_interceptions"])
 
             player_rows[row["player_id"]].append((season, week, row, playoff))
 
@@ -175,9 +204,9 @@ def main(games_path, profiles_path, out_dir):
                 taken.add(pid)
         selected += [entry for _, entry in sorted(pool_players, key=lambda x: x[0])]
 
-    players, logs = [], []
+    players, logs, dedup_log = [], [], []
     for p, name, pos, hof, legend in selected:
-        rows = sorted(player_rows[p["player_id"]], key=lambda r: (r[0], r[1]))
+        rows = dedupe(sorted(player_rows[p["player_id"]], key=lambda r: (r[0], r[1])), name, dedup_log)
         seasons = [r[0] for r in rows]
         teams = []
         for _, _, row, _ in rows:
@@ -218,8 +247,12 @@ def main(games_path, profiles_path, out_dir):
     # --- team defenses ---
     featured = {(t, s): nick for t, s, nick in FEATURED_DEFENSES}
     dst = []
+    by_team_date = {(t["team"], t["date"]): t for t in team_games.values()}
     for key in sorted(team_games, key=lambda k: (k[1], k[0], k[2])):
         d = team_games[key]
+        # Interceptions thrown by the opponent's passers in this game, to cross-check def_int.
+        opp_game = by_team_date.get((d["opp"], d["date"]))
+        d["opp_pass_int"] = opp_game["int_thrown"] if opp_game else None
         if d["season"] < SACKS_FIRST_SEASON:
             d["sacks"] = None
         d["fpts"] = dst_fantasy_points(d)
@@ -253,6 +286,9 @@ def main(games_path, profiles_path, out_dir):
 
     with open(os.path.join(out_dir, "players.json"), "w") as f:
         json.dump(players, f, indent=1)
+    os.makedirs(os.path.join(out_dir, "enrich"), exist_ok=True)
+    with open(os.path.join(out_dir, "enrich", "dedup_log.json"), "w") as f:
+        json.dump(dedup_log, f, indent=1)
     with open(os.path.join(out_dir, "featured_defenses.json"), "w") as f:
         json.dump(defenses, f, indent=1)
     write_json(os.path.join(out_dir, "player_gamelogs.json"), PLAYER_COLUMNS, logs)
