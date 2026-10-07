@@ -30,7 +30,7 @@ NOTES = [
     ("ret_td", "Kick and punt return touchdowns"),
     ("xpm / xpa, fgm / fga", "Extra points and field goals made / attempted"),
     ("Team codes", "Pro-Football-Reference city codes, so a code follows the city, not the franchise. "
-                   "BAL = Colts 1953-83 and Ravens 1996-99; IND = Colts 1984+; STL = Cardinals 1960-87 and Rams 1995-99; "
+                   "BAL = Colts 1950 and 1953-83, Ravens 1996-99; IND = Colts 1984+; STL = Cardinals 1960-87 and Rams 1995-99; "
                    "CRD = Chicago Cardinals; RAM = LA Rams; RAI = LA Raiders 1982-94; OAK = Raiders; "
                    "PHO / ARI = Cardinals; HOU = Oilers; TEN = Titans; BOS / NWE = Patriots; "
                    "NYT = NY Titans (Jets); DTX = Dallas Texans; LAC / SDG = Chargers; GNB = Green Bay; "
