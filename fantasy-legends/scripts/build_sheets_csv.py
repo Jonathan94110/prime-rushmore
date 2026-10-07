@@ -89,6 +89,47 @@ def repair_scoring(g, enrich):
     return g
 
 
+def game_id(g):
+    """Stable game ID built from this dataset's own fields: YYYYMMDD-AWAY-HOME (team codes as in `team`/`opp`).
+    Neutral-site games list the two teams alphabetically with an N marker."""
+    day = g["date"].replace("-", "")
+    if g["home_away"] == "H":
+        return f"{day}-{g['opp']}-{g['team']}"
+    if g["home_away"] == "A":
+        return f"{day}-{g['team']}-{g['opp']}"
+    a, b = sorted((g["team"], g["opp"]))
+    return f"{day}-{a}-{b}-N"
+
+
+# Fields that carry points under the owner's scoring contract (deck v4). Targets and times sacked
+# don't score, so they don't block scoring completeness; fumbles lost score 0 in v4.
+SCORING_FIELDS = {
+    "QB": ("two_pt", "fum_rec_td"), "RB": ("two_pt", "fum_rec_td"),
+    "WR": ("two_pt", "fum_rec_td"), "TE": ("two_pt", "fum_rec_td"),
+    "K": ("fgm", "xpm", "fg_missed", "fgm_0_39"),
+    "DEF": ("sacks", "def_int", "fum_rec", "blk_punt", "def_fum_td"),
+}
+
+
+def scoring_status(g, pos):
+    missing = [c for c in SCORING_FIELDS[pos] if g.get(c) is None]
+    if pos == "DEF" and g["int_check"] != "match":
+        missing.append("def_int")  # max(defenders, opposing passers) is a heuristic, not verified
+    names = {"fgm_0_39": "fg_distance", "blk_punt": "blocked_kicks"}
+    g["scoring_missing"] = ";".join(dict.fromkeys(names.get(c, c) for c in missing))
+    g["scoring_complete"] = not missing
+    g["game_id"] = game_id(g)
+    return g
+
+
+def kicker_contract_points(g):
+    """Deck v4 kicker scoring: XP +1, FG <40 +3, 40-49 +4, 50+ +5, missed FG (blocks included) -1.
+    Blank unless every input is known."""
+    if any(g[c] is None for c in ("xpm", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed")):
+        return None
+    return g["xpm"] + 3 * g["fgm_0_39"] + 4 * g["fgm_40_49"] + 5 * g["fgm_50p"] - g["fg_missed"]
+
+
 KICK_FIRST_SEASON = 1960  # the source has almost no kicking stats before 1960
 
 
@@ -181,14 +222,15 @@ def repair_defense(g, enrich):
 
 def write_defenses(data_dir, out_dir, enrich):
     d = json.load(open(os.path.join(data_dir, "dst_gamelogs.json")))
-    games = [repair_defense(dict(zip(d["columns"], r)), enrich) for r in d["rows"]]
+    games = [scoring_status(repair_defense(dict(zip(d["columns"], r)), enrich), "DEF") for r in d["rows"]]
     nick = {(f["team"], f["season"]): f["nickname"] or "Featured"
             for f in json.load(open(os.path.join(data_dir, "featured_defenses.json")))}
     stats = ["sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
              "def_int_td", "def_fum_td", "def_td", "ret_td"]
     cols = (["team_name", "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
              "team_score", "pts_allowed"] + stats +
-            ["fpts", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source"])
+            ["fpts", "int_check", "def_int_defenders", "opp_pass_int", "complete", "missing_fields", "source",
+             "game_id", "scoring_complete", "scoring_missing"])
     for decade in range(1950, 2000, 10):
         with open(os.path.join(out_dir, f"def_gamelogs_{decade}s.csv"), "w", newline="") as f:
             w = csv.writer(f)
@@ -287,11 +329,14 @@ def main(data_dir, out_dir):
         rows = [g for g in games if g["pos"] == pos]
         cols = INFO + stats + POINTS + ["player_id"]
         if pos in REPAIRED:
-            rows = [repair_scoring(dict(g), enrich) for g in rows]
-            cols += ["complete", "missing_fields", "source"]
+            rows = [scoring_status(repair_scoring(dict(g), enrich), pos) for g in rows]
+            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing"]
         elif pos == "K":
-            rows = [repair_kicking(dict(g), enrich) for g in rows]
-            cols += ["complete", "missing_fields", "source"]
+            rows = [scoring_status(repair_kicking(dict(g), enrich), pos) for g in rows]
+            for g in rows:
+                g["fpts_k_contract"] = kicker_contract_points(g)
+            cols += ["complete", "missing_fields", "source", "game_id", "scoring_complete", "scoring_missing",
+                     "fpts_k_contract"]
         def write_games(path, games_subset):
             with open(path, "w", newline="") as f:
                 w = csv.writer(f)

@@ -55,6 +55,10 @@ Unknown values are left blank, never zero-filled. Every game row has `complete`,
 
 Every correction and its source is listed in `data/sheets/corrections_log.csv`.
 
+Also on every game row: `game_id` (`YYYYMMDD-AWAY-HOME`, shared by both teams' rows and every player in the game), and `scoring_complete` / `scoring_missing`, which only consider fields that score under the deck v4 contract (targets and times sacked don't). Kicker rows add `fpts_k_contract` (XP +1, FG <40 +3, 40–49 +4, 50+ +5, miss −1), blank unless distances are known.
+
+See `VALIDATION_REPORT.md` for the source manifest, completeness by era, eligible depth and unresolved fields.
+
 ## Gaps in the source data
 
 - **Missing everywhere:** fumbles, two-point conversions, and FG distances. So there's no fumble-lost deduction and no distance bonus for kickers.
@@ -85,4 +89,5 @@ python build_workbook.py ../data ../data/fantasy_legends.xlsx
 python build_workbook.py ../data ../data/running_backs.xlsx RB
 python build_workbook.py ../data ../data/wide_receivers.xlsx WR
 python build_sheets_csv.py ../data ../data/sheets
+python audit_report.py ../data/sheets ../VALIDATION_REPORT.md
 ```
