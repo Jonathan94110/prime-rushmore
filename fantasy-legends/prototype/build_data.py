@@ -37,9 +37,12 @@ COMMON = ["pid", "game_id", "season", "date", "team", "opp", "home_away", "resul
           "team_score", "opp_score", "team_game", "source"]
 OFFENSE = ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "rush_att", "rush_yds", "rush_td",
            "rec", "rec_yds", "rec_td", "ret_td", "two_pt", "fum_rec_td"]
-KICKER = ["fgm", "fga", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "xpm", "xpa"]
+# Kickers' own passing, rushing, receiving and return stats score too (a fake kick, a kicker returning kicks).
+KICKER = ["fgm", "fga", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "xpm", "xpa", "xp_missed",
+          "pass_yds", "pass_td", "pass_int", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td", "ret_td",
+          "two_pt", "fum_rec_td"]
 DEFENSE = ["team_name", "pts_allowed", "sacks", "def_int", "int_verified", "fum_rec", "safeties", "blk_punt",
-           "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "ret_td"]
+           "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "ret_td", "st_other_td"]
 
 COLUMNS = {
     "QB": COMMON + OFFENSE, "RB": COMMON + OFFENSE, "WR": COMMON + OFFENSE, "TE": COMMON + OFFENSE,

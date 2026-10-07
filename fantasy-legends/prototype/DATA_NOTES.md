@@ -98,10 +98,17 @@ Computed with `src/engine.js` (`eligibleGames`, `poolSummary`) on these files. P
 Both modes support 16 teams. Strict offense now reaches back to 1960 (about 83% of games). Strict DEF stays 1999-only
 because fumble recoveries and blocked kicks are known only for 1999.
 
-**Strict kickers.** 4,481 kicker games have every Strict field. Before 1999, though, distance bins are known only
+**Kicker scoring and new columns.** Strict kickers lose 1 point per missed extra point (`xp_missed`; the owner's
+current rules) and score their own passing, rushing, receiving and return stats with the offense coefficients, so
+games files for K carry `xp_missed` and those offense columns. Strict K eligibility now matches the sheet's
+`strict_eligible` flag. DEF files carry `st_other_td` (blocked punt/FG return TDs and the kicking team scoring on the
+returner's fumble; 5 games in 1999), which Strict scores at 6 like a return TD. Historical scoring is unchanged.
+
+**Strict kickers.** 3,739 kicker games have every Strict field. Before 1999, though, distance bins are known only
 for games with no field goal made (all three bins are a proven 0). Drawing from those would give Strict kickers only
-their worst games: those 4,012 games average 1.59 points, against 5.34 for a Historical kicker. The validation report flags this
-as an owner decision. The engine therefore leaves a season's kicker games out of Strict draws when that season is
+their worst games: those 3,338 games average 1.60 points, against 6.94 for the 401 Strict games from 1999 and 5.38 for
+a Historical kicker. The validation report flags this as an owner decision; the rule below is the prototype's
+stand-in until the owner decides. The engine therefore leaves a season's kicker games out of Strict draws when that season is
 skewed this way. That is the case for every season from 1960 to 1998, so Strict kickers draw 1999 games only.
 `db.fgDistanceSkewedSeasons` lists the seasons, and the rule is data-driven, so it lifts by itself if real distance
 data for earlier seasons is added. The 1960–98 kicker games still score in Strict (`isEligible`); they are just

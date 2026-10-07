@@ -74,7 +74,7 @@
       pass_yd: 0.04, pass_td: 4, pass_int: -2, rush_yd: 0.1, rush_td: 6, rec: 1, rec_yd: 0.1, rec_td: 6,
       ret_td: 6, two_pt: 2, fum_rec_td: 6, fumble_lost: 0
     },
-    kicker: { xp: 1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1 },
+    kicker: { xp: 1, xp_miss: -1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1 },
     defense: {
       sack: 1, int: 2, fum_rec: 2, safety: 2, block: 2, def_td: 6, ret_td: 6,
       pa_tiers: [[0, 10], [6, 7], [13, 4], [20, 1], [27, 0], [34, -1], [999, -4]]
@@ -167,10 +167,11 @@
 
   var OFF_HIST = ["pass_yds", "pass_td", "pass_int", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td", "ret_td"];
   var OFF_STRICT = OFF_HIST.concat(["two_pt", "fum_rec_td"]);
-  var K_STRICT = ["xpm", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed"];
+  // Strict kickers: the kicking contract (missed extra points cost 1) plus the kicker's own offense stats.
+  var K_STRICT = ["xpm", "xp_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed"].concat(OFF_STRICT);
   var K_HIST = ["fgm", "xpm", "fg_missed"];
   var DEF_STRICT = ["pts_allowed", "sacks", "def_int", "fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp",
-    "def_int_td", "def_fum_td", "ret_td"];
+    "def_int_td", "def_fum_td", "ret_td", "st_other_td"];
   var DEF_HIST = ["pts_allowed", "ret_td"];
 
   /** Fields that must be non-null for a game to be eligible. */
@@ -212,7 +213,7 @@
   // [stat field, label, coefficient] for the mode. DEF's points-allowed tier is handled separately.
   function scoringTerms(pos, mode, settings, rules) {
     var strict = mode === "strict";
-    if (isOffense(pos)) {
+    if (isOffense(pos) || (pos === "K" && strict)) {
       var o = rules.offense;
       var t = [
         ["pass_yds", "Passing yards", o.pass_yd],
@@ -229,19 +230,19 @@
         t.push(["two_pt", "Two-point conversions", o.two_pt]);
         t.push(["fum_rec_td", "Fumble recovery TDs", o.fum_rec_td]);
       }
-      return t;
+      if (isOffense(pos)) return t;
+      var ks = rules.kicker;
+      return [
+        ["xpm", "Extra points", ks.xp],
+        ["xp_missed", "Missed extra points", ks.xp_miss],
+        ["fgm_0_39", "Field goals 0–39 yd", ks.fg_0_39],
+        ["fgm_40_49", "Field goals 40–49 yd", ks.fg_40_49],
+        ["fgm_50p", "Field goals 50+ yd", ks.fg_50p],
+        ["fg_missed", "Missed field goals", ks.fg_miss]
+      ].concat(t);
     }
     if (pos === "K") {
       var k = rules.kicker;
-      if (strict) {
-        return [
-          ["xpm", "Extra points", k.xp],
-          ["fgm_0_39", "Field goals 0–39 yd", k.fg_0_39],
-          ["fgm_40_49", "Field goals 40–49 yd", k.fg_40_49],
-          ["fgm_50p", "Field goals 50+ yd", k.fg_50p],
-          ["fg_missed", "Missed field goals", k.fg_miss]
-        ];
-      }
       return [
         ["fgm", "Field goals", k.fg_flat],
         ["xpm", "Extra points", k.xp],
@@ -260,7 +261,8 @@
         ["blk_xp", "Blocked extra points", d.block],
         ["def_int_td", "Interception return TDs", d.def_td],
         ["def_fum_td", "Fumble return TDs", d.def_td],
-        ["ret_td", "Kick/punt return TDs", d.ret_td]
+        ["ret_td", "Kick/punt return TDs", d.ret_td],
+        ["st_other_td", "Other special-teams TDs", d.ret_td]
       ];
     }
     var h = [["ret_td", "Kick/punt return TDs", d.ret_td]];
@@ -1207,7 +1209,10 @@
     }
     var problem = leagueShapeProblem(obj.league);
     if (problem) throw new Error("This save is damaged or incomplete: " + problem);
-    return copy(obj.league);
+    var league = copy(obj.league);
+    // Saves from before a coefficient existed (the missed-XP penalty) get the default for it.
+    league.rules = normalizeRules(league.rules);
+    return league;
   }
 
   /*

@@ -61,8 +61,11 @@ Common: `pid, game_id, season, date, team, opp, home_away, result, team_score, o
 (`team_game` is the CSV `week` column: the team's game number that season, **not** the NFL week.)
 
 - QB/RB/WR/TE add: `pass_cmp, pass_att, pass_yds, pass_td, pass_int, rush_att, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td` (null where the position's CSV has no such column)
-- K adds: `fgm, fga, fg_missed, fgm_0_39, fgm_40_49, fgm_50p, xpm, xpa`
-- DEF adds: `team_name, pts_allowed, sacks, def_int, int_verified, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td` (`int_verified` = `int_check == "match"`, boolean)
+- K adds: `fgm, fga, fg_missed, fgm_0_39, fgm_40_49, fgm_50p, xpm, xpa, xp_missed`, plus the kicker's own
+  `pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td`
+- DEF adds: `team_name, pts_allowed, sacks, def_int, int_verified, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td, st_other_td` (`int_verified` = `int_check == "match"`, boolean; `st_other_td` =
+  special-teams TDs that aren't kick or punt returns: blocked punt/FG returns, the kicking team scoring on the
+  returner's fumble)
 
 ## 2. Engine API (`P/src/engine.js`)
 
@@ -78,7 +81,7 @@ and reported rounded to 2 decimals.
 ```js
 { offense: {pass_yd: 0.04, pass_td: 4, pass_int: -2, rush_yd: 0.1, rush_td: 6, rec: 1, rec_yd: 0.1, rec_td: 6,
             ret_td: 6, two_pt: 2, fum_rec_td: 6, fumble_lost: 0},
-  kicker: {xp: 1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1},
+  kicker: {xp: 1, xp_miss: -1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1},
   defense: {sack: 1, int: 2, fum_rec: 2, safety: 2, block: 2, def_td: 6, ret_td: 6,
             pa_tiers: [[0, 10], [6, 7], [13, 4], [20, 1], [27, 0], [34, -1], [999, -4]]} }
 ```
@@ -92,9 +95,9 @@ proposal; the toggle exists because adding interceptions is under discussion).
 `FFP.requiredFields(pos, mode, settings)` — fields that must be non-null for a game to be eligible:
 - strict QB/RB/WR/TE: `pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td, two_pt, fum_rec_td`
 - historical QB/RB/WR/TE: `pass_yds, pass_td, pass_int, rush_yds, rush_td, rec, rec_yds, rec_td, ret_td`
-- strict K: `xpm, fgm_0_39, fgm_40_49, fgm_50p, fg_missed`
+- strict K: `xpm, xp_missed, fgm_0_39, fgm_40_49, fgm_50p, fg_missed` plus the strict offense fields above
 - historical K: `fgm, xpm, fg_missed`
-- strict DEF: `pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td`, and `int_verified === true`
+- strict DEF: `pts_allowed, sacks, def_int, fum_rec, safeties, blk_punt, blk_fg, blk_xp, def_int_td, def_fum_td, ret_td, st_other_td`, and `int_verified === true`
 - historical DEF: `pts_allowed, ret_td`; plus `def_int` with `int_verified === true` when `includeInterceptions`
 
 `FFP.isEligible(game, pos, mode, settings)` — true when every required field is non-null (and the DEF interception
@@ -103,9 +106,10 @@ condition holds) and the season is 1960–1999.
 `FFP.scoreGame(game, pos, mode, settings, rules)` → `{total, parts: [{label, stat, value, points}]}`. Throws if the
 game isn't eligible. Uses only the mode's fields:
 - offense (both modes): yards × per-yard rates, TDs, interceptions, receptions; strict also two_pt and fum_rec_td.
-- strict K: `xp·xpm + fg_0_39·fgm_0_39 + fg_40_49·fgm_40_49 + fg_50p·fgm_50p + fg_miss·fg_missed`
+- strict K: `xp·xpm + xp_miss·xp_missed + fg_0_39·fgm_0_39 + fg_40_49·fgm_40_49 + fg_50p·fgm_50p + fg_miss·fg_missed`
+  plus the strict offense formula on the kicker's own offense fields (owner, Oct 2026: missed extra points cost 1)
 - historical K: `fg_flat·fgm + xp·xpm + fg_miss·fg_missed`
-- strict DEF: `sack·sacks + 2·(def_int + fum_rec + safeties + blk_punt + blk_fg + blk_xp) + 6·(def_int_td + def_fum_td + ret_td) + tier(pts_allowed)`
+- strict DEF: `sack·sacks + 2·(def_int + fum_rec + safeties + blk_punt + blk_fg + blk_xp) + 6·(def_int_td + def_fum_td + ret_td + st_other_td) + tier(pts_allowed)`
 - historical DEF: `tier(pts_allowed) + 6·ret_td` (+ `2·def_int` when `includeInterceptions`)
 - `tier(pa)`: points of the first `[max, pts]` with `pa <= max`.
 
@@ -122,8 +126,8 @@ game isn't eligible. Uses only the mode's fields:
   `{id, name, pos, hof, legend, first, last, eligibleCount, avgPoints}`, sorted by `avgPoints` descending. `avgPoints`
   ranks players for the draft and AI decisions only; it is never anyone's score.
 - `FFP.poolSummary(db, mode, settings, rules)` → `{counts: {QB, RB, WR, TE, K, DEF}, maxTeams}`. `maxTeams` is the
-  largest N ≤ 16 for which a full draft is possible: QB ≥ N, TE ≥ N, K ≥ N, DEF ≥ N, RB + WR + TE ≥ 3N (RB, WR, TE
-  and FLEX starters), and total ≥ 11N.
+  largest N ≤ 16 for which a full draft is possible: QB ≥ N, TE ≥ N, K ≥ N, DEF ≥ N, RB ≥ N, WR ≥ N,
+  RB + WR + TE ≥ 4N (the RB, WR, TE and FLEX starters), and total ≥ 11N.
 
 ### League
 `FFP.createLeague({name, teamName, numTeams, playoffTeams, mode, historical, draftOrder, userPick, seed, rules}, db)`
@@ -162,6 +166,7 @@ game isn't eligible. Uses only the mode's fields:
 - Lineups: `league.lineups[teamId] = {QB, RB, WR, TE, FLEX, DEF, K, bench: [4 pids]}`.
   `FFP.setLineup(league, db, teamId, lineup)` validates positions and that it uses exactly the roster.
   `FFP.autoLineup(league, db, teamId, week)` — best `avgPoints` starters, preferring players not on bye that week.
+  Sets `league.lineups[teamId]` and, unlike the other mutators, returns that lineup (not the league).
 - `FFP.playWeek(league, db)` — plays `league.week`. Every rostered player of every team with a matchup that week
   (starters and bench) who is not on bye draws **one** game uniformly at random from their eligible games not yet in
   `league.consumed[pid]`, and that game is consumed. Players on bye score 0 and consume nothing. A team's score is

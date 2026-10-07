@@ -22,9 +22,13 @@ const COMMON = ["pid", "game_id", "season", "date", "team", "opp", "home_away", 
   "team_game", "source"];
 const OFF = ["pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "rush_att", "rush_yds", "rush_td", "rec",
   "rec_yds", "rec_td", "ret_td", "two_pt", "fum_rec_td"];
-const KC = ["fgm", "fga", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "xpm", "xpa"];
+const KC = ["fgm", "fga", "fg_missed", "fgm_0_39", "fgm_40_49", "fgm_50p", "xpm", "xpa", "xp_missed", "pass_yds",
+  "pass_td", "pass_int", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td", "ret_td", "two_pt", "fum_rec_td"];
 const DC = ["team_name", "pts_allowed", "sacks", "def_int", "int_verified", "fum_rec", "safeties", "blk_punt", "blk_fg",
-  "blk_xp", "def_int_td", "def_fum_td", "ret_td"];
+  "blk_xp", "def_int_td", "def_fum_td", "ret_td", "st_other_td"];
+// A kicker's own offense stats, all zero.
+const ZERO_K_OFF = { pass_yds: 0, pass_td: 0, pass_int: 0, rush_yds: 0, rush_td: 0, rec: 0, rec_yds: 0, rec_td: 0,
+  ret_td: 0, two_pt: 0, fum_rec_td: 0 };
 const COLS = { QB: COMMON.concat(OFF), RB: COMMON.concat(OFF), WR: COMMON.concat(OFF), TE: COMMON.concat(OFF),
   K: COMMON.concat(KC), DEF: COMMON.concat(DC) };
 
@@ -42,18 +46,20 @@ const ZERO_OFF = { pass_cmp: 0, pass_att: 0, pass_yds: 0, pass_td: 0, pass_int: 
 // Deterministic stats; s = player strength, i = game number.
 function statsFor(pos, s, i, zero) {
   if (pos === "K") {
-    if (zero) return { fgm: 0, fga: 0, fg_missed: 0, fgm_0_39: 0, fgm_40_49: 0, fgm_50p: 0, xpm: 0, xpa: 0 };
+    if (zero) return Object.assign({ fgm: 0, fga: 0, fg_missed: 0, fgm_0_39: 0, fgm_40_49: 0, fgm_50p: 0, xpm: 0, xpa: 0,
+      xp_missed: 0 }, ZERO_K_OFF);
     const a = i % 2, b = (i + s) % 2, c = i % 5 === 0 ? 1 : 0, miss = i % 3 === 0 ? 1 : 0, xpm = 1 + ((i + s) % 4);
-    return { fgm: a + b + c, fga: a + b + c + miss, fg_missed: miss, fgm_0_39: a, fgm_40_49: b, fgm_50p: c, xpm, xpa: xpm };
+    return Object.assign({ fgm: a + b + c, fga: a + b + c + miss, fg_missed: miss, fgm_0_39: a, fgm_40_49: b, fgm_50p: c,
+      xpm, xpa: xpm, xp_missed: 0 }, ZERO_K_OFF);
   }
   if (pos === "DEF") {
     if (zero) {
       return { team_name: "Zeros", pts_allowed: 27, sacks: 0, def_int: 0, int_verified: true, fum_rec: 0, safeties: 0,
-        blk_punt: 0, blk_fg: 0, blk_xp: 0, def_int_td: 0, def_fum_td: 0, ret_td: 0 };
+        blk_punt: 0, blk_fg: 0, blk_xp: 0, def_int_td: 0, def_fum_td: 0, ret_td: 0, st_other_td: 0 };
     }
     return { team_name: "Team " + s, pts_allowed: (i * 7 + s * 3) % 35, sacks: (i + s) % 4, def_int: i % 3,
       int_verified: true, fum_rec: i % 2, safeties: 0, blk_punt: 0, blk_fg: 0, blk_xp: 0, def_int_td: 0, def_fum_td: 0,
-      ret_td: i % 7 === 0 ? 1 : 0 };
+      ret_td: i % 7 === 0 ? 1 : 0, st_other_td: 0 };
   }
   const o = Object.assign({}, ZERO_OFF);
   if (zero) return o;
@@ -158,7 +164,7 @@ test("constants match the spec", () => {
   assert.deepEqual(JSON.parse(JSON.stringify(FFP.DEFAULT_RULES)), {
     offense: { pass_yd: 0.04, pass_td: 4, pass_int: -2, rush_yd: 0.1, rush_td: 6, rec: 1, rec_yd: 0.1, rec_td: 6,
       ret_td: 6, two_pt: 2, fum_rec_td: 6, fumble_lost: 0 },
-    kicker: { xp: 1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1 },
+    kicker: { xp: 1, xp_miss: -1, fg_0_39: 3, fg_40_49: 4, fg_50p: 5, fg_flat: 3, fg_miss: -1 },
     defense: { sack: 1, int: 2, fum_rec: 2, safety: 2, block: 2, def_td: 6, ret_td: 6,
       pa_tiers: [[0, 10], [6, 7], [13, 4], [20, 1], [27, 0], [34, -1], [999, -4]] }
   });
@@ -211,10 +217,11 @@ test("requiredFields for both modes and every position", () => {
     assert.deepEqual(FFP.requiredFields(pos, "strict", HIST), offStrict);
     assert.deepEqual(FFP.requiredFields(pos, "historical", HIST), offHist);
   }
-  assert.deepEqual(FFP.requiredFields("K", "strict", HIST), ["xpm", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed"]);
+  assert.deepEqual(FFP.requiredFields("K", "strict", HIST), ["xpm", "xp_missed", "fgm_0_39", "fgm_40_49", "fgm_50p",
+    "fg_missed"].concat(offStrict));
   assert.deepEqual(FFP.requiredFields("K", "historical", HIST), ["fgm", "xpm", "fg_missed"]);
   assert.deepEqual(FFP.requiredFields("DEF", "strict", HIST), ["pts_allowed", "sacks", "def_int", "fum_rec", "safeties",
-    "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "ret_td"]);
+    "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "ret_td", "st_other_td"]);
   assert.deepEqual(FFP.requiredFields("DEF", "historical", HIST), ["pts_allowed", "ret_td"]);
   assert.deepEqual(FFP.requiredFields("DEF", "historical", HIST_INT), ["pts_allowed", "ret_td", "def_int"]);
   assert.throws(() => FFP.requiredFields("QB", "fantasy", HIST), /mode/);
@@ -243,27 +250,32 @@ test("offense eligibility: strict needs two_pt and fum_rec_td, historical does n
   assert.equal(FFP.isEligible(null, "QB", "historical", HIST), false);
 });
 
-test("kicker eligibility: strict needs distance splits, historical needs fgm", () => {
+test("kicker eligibility: strict needs distance splits, missed XPs and offense stats, historical needs fgm", () => {
   const k = Object.assign(gameBase("K-x", 0), { fgm: 2, fga: 3, fg_missed: 1, fgm_0_39: null, fgm_40_49: null,
-    fgm_50p: null, xpm: 3, xpa: 3 });
+    fgm_50p: null, xpm: 3, xpa: 3, xp_missed: 0 }, ZERO_K_OFF);
   assert.equal(FFP.isEligible(k, "K", "historical", HIST), true);
   assert.equal(FFP.isEligible(k, "K", "strict", HIST), false);
   const split = Object.assign({}, k, { fgm: null, fgm_0_39: 1, fgm_40_49: 1, fgm_50p: 0 });
   assert.equal(FFP.isEligible(split, "K", "strict", HIST), true);
   assert.equal(FFP.isEligible(split, "K", "historical", HIST), false, "historical needs fgm");
+  assert.equal(FFP.isEligible(Object.assign({}, split, { xp_missed: null }), "K", "strict", HIST), false, "strict needs xp_missed");
+  assert.equal(FFP.isEligible(Object.assign({}, split, { fum_rec_td: null }), "K", "strict", HIST), false, "strict needs offense");
+  assert.equal(FFP.isEligible(Object.assign({}, k, { xp_missed: null, fum_rec_td: null }), "K", "historical", HIST), true,
+    "historical rules unchanged");
   assert.equal(FFP.isEligible(Object.assign({}, k, { xpm: null }), "K", "historical", HIST), false);
 });
 
 test("defense eligibility: strict needs every field and a verified interception count", () => {
   const d = Object.assign(gameBase("DEF-x", 0), { team_name: "X", pts_allowed: 10, sacks: 3, def_int: 1,
     int_verified: true, fum_rec: 1, safeties: 0, blk_punt: 0, blk_fg: 0, blk_xp: 0, def_int_td: 0, def_fum_td: 0,
-    ret_td: 0 });
+    ret_td: 0, st_other_td: 0 });
   assert.equal(FFP.isEligible(d, "DEF", "strict", HIST), true);
+  assert.equal(FFP.isEligible(Object.assign({}, d, { st_other_td: null }), "DEF", "strict", HIST), false);
   assert.equal(FFP.isEligible(Object.assign({}, d, { int_verified: false }), "DEF", "strict", HIST), false);
   assert.equal(FFP.isEligible(Object.assign({}, d, { sacks: null }), "DEF", "strict", HIST), false);
   // Historical: only points allowed and return TDs (plus verified interceptions when the toggle is on).
   const sparse = Object.assign({}, d, { sacks: null, def_int: null, int_verified: false, fum_rec: null, safeties: null,
-    blk_punt: null, blk_fg: null, blk_xp: null, def_int_td: null, def_fum_td: null });
+    blk_punt: null, blk_fg: null, blk_xp: null, def_int_td: null, def_fum_td: null, st_other_td: null });
   assert.equal(FFP.isEligible(sparse, "DEF", "historical", HIST), true);
   assert.equal(FFP.isEligible(sparse, "DEF", "historical", HIST_INT), false);
   assert.equal(FFP.isEligible(Object.assign({}, sparse, { def_int: 2 }), "DEF", "historical", HIST_INT), false,
@@ -321,9 +333,15 @@ test("TE scoring (hand-computed)", () => {
 
 test("K scoring (hand-computed, both modes)", () => {
   const g = Object.assign(gameBase("K-x", 0), { fgm: 4, fga: 5, fg_missed: 1, fgm_0_39: 2, fgm_40_49: 1, fgm_50p: 1,
-    xpm: 3, xpa: 3 });
-  // strict: 3 XP × 1 + 2 × 3 + 1 × 4 + 1 × 5 − 1 miss = 17
-  assert.equal(FFP.scoreGame(g, "K", "strict", HIST).total, 17);
+    xpm: 3, xpa: 4, xp_missed: 1 }, ZERO_K_OFF, { rush_yds: 12, rush_td: 1 });
+  // strict: 3 XP × 1 − 1 missed XP + 2 × 3 + 1 × 4 + 1 × 5 − 1 missed FG + 12 × 0.1 + 6 rushing TD = 23.2
+  const s = FFP.scoreGame(g, "K", "strict", HIST);
+  assert.equal(s.total, 23.2);
+  assert.equal(partsSum(s), H(23.2));
+  // Rules saved before the missed-XP rule have no xp_miss; the default (−1) fills it in.
+  const oldRules = JSON.parse(JSON.stringify(FFP.DEFAULT_RULES));
+  delete oldRules.kicker.xp_miss;
+  assert.equal(FFP.scoreGame(g, "K", "strict", HIST, oldRules).total, 23.2);
   // historical: 4 FG × 3 (flat) + 3 XP − 1 miss = 14
   const h = FFP.scoreGame(g, "K", "historical", HIST);
   assert.equal(h.total, 14);
@@ -333,11 +351,11 @@ test("K scoring (hand-computed, both modes)", () => {
 test("DEF scoring (hand-computed, both modes and the interceptions toggle)", () => {
   const g = Object.assign(gameBase("DEF-x", 0), { team_name: "X", pts_allowed: 10, sacks: 4, def_int: 2,
     int_verified: true, fum_rec: 1, safeties: 1, blk_punt: 1, blk_fg: 0, blk_xp: 0, def_int_td: 1, def_fum_td: 0,
-    ret_td: 1 });
-  // strict: tier(10) = 4; sacks 4; 2 × (2 + 1 + 1 + 1 + 0 + 0) = 10; 6 × (1 + 0 + 1) = 12 → 30
+    ret_td: 1, st_other_td: 1 });
+  // strict: tier(10) = 4; sacks 4; 2 × (2 + 1 + 1 + 1 + 0 + 0) = 10; 6 × (1 + 0 + 1 + 1 other special-teams TD) = 18 → 36
   const s = FFP.scoreGame(g, "DEF", "strict", HIST);
-  assert.equal(s.total, 30);
-  assert.equal(partsSum(s), H(30));
+  assert.equal(s.total, 36);
+  assert.equal(partsSum(s), H(36));
   assert.equal(s.parts[0].stat, "pts_allowed");
   assert.equal(s.parts[0].points, 4);
   // historical: tier(10) = 4 + 6 × 1 return TD = 10; sacks etc. are ignored
@@ -1189,8 +1207,8 @@ function kickerPlayer(id, seasons, split) {
       games.push(Object.assign(gameBase(id, i), {
         season, date: `${season}-10-${String(1 + j).padStart(2, "0")}`, game_id: `${season}10${String(1 + j).padStart(2, "0")}-${id}`,
         fgm, fga: fgm + 1, fg_missed: 1, fgm_0_39: known ? fgm : null, fgm_40_49: known ? 0 : null,
-        fgm_50p: known ? 0 : null, xpm: 2, xpa: 2
-      }));
+        fgm_50p: known ? 0 : null, xpm: 2, xpa: 2, xp_missed: 0
+      }, ZERO_K_OFF));
     }
   }
   return { player: { id, name: "Kicker " + id, pos: "K", hof: false, legend: false, first: seasons[0], last: seasons[seasons.length - 1] }, games };

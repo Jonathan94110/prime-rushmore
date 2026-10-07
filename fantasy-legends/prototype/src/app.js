@@ -31,7 +31,8 @@
     fgm_0_39: "field goals 0–39 yd", fgm_40_49: "field goals 40–49 yd", fgm_50p: "field goals 50+ yd",
     pts_allowed: "points allowed", sacks: "sacks", def_int: "interceptions", fum_rec: "fumble recoveries",
     safeties: "safeties", blk_punt: "blocked punts", blk_fg: "blocked field goals", blk_xp: "blocked extra points",
-    def_int_td: "interception-return TDs", def_fum_td: "fumble-return TDs"
+    def_int_td: "interception-return TDs", def_fum_td: "fumble-return TDs", xp_missed: "missed extra points",
+    st_other_td: "other special-teams TDs"
   };
   var MONTHS = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
   var HIGHLIGHT_MS = 1700;
@@ -1146,10 +1147,12 @@
       li("Receiving yards", per(o.rec_yd, "yard")) + li("Receiving TD", fmtNum(o.rec_td)) + li("Return TD", fmtNum(o.ret_td)) +
       (strict ? li("Two-point conversion", fmtNum(o.two_pt)) + li("Fumble-recovery TD", fmtNum(o.fum_rec_td)) : "");
     var kick = strict ? li("Field goal 0–39 yd", fmtNum(k.fg_0_39)) + li("Field goal 40–49 yd", fmtNum(k.fg_40_49)) + li("Field goal 50+ yd", fmtNum(k.fg_50p)) +
-      li("Extra point", fmtNum(k.xp)) + li("Missed field goal", fmtNum(k.fg_miss)) :
+      li("Extra point", fmtNum(k.xp)) + li("Missed extra point", fmtNum(k.xp_miss)) + li("Missed field goal", fmtNum(k.fg_miss)) +
+      li("Kicker's own passing, rushing, receiving and return stats", "as offense") :
       li("Field goal, any distance", fmtNum(k.fg_flat)) + li("Extra point", fmtNum(k.xp)) + li("Missed field goal", fmtNum(k.fg_miss));
     var def = strict ? li("Sack", fmtNum(d.sack)) + li("Interception", fmtNum(d.int)) + li("Fumble recovery", fmtNum(d.fum_rec)) + li("Safety", fmtNum(d.safety)) +
-      li("Blocked punt, FG or extra point", fmtNum(d.block)) + li("Interception or fumble return TD", fmtNum(d.def_td)) + li("Kick or punt return TD", fmtNum(d.ret_td)) :
+      li("Blocked punt, FG or extra point", fmtNum(d.block)) + li("Interception or fumble return TD", fmtNum(d.def_td)) + li("Kick or punt return TD", fmtNum(d.ret_td)) +
+      li("Blocked-kick return TD, or recovering the returner's fumble for a TD", fmtNum(d.ret_td)) :
       li("Kick or punt return TD", fmtNum(d.ret_td)) + (ints ? li("Interception (proposal)", fmtNum(d.int)) : "");
     var tiers = "";
     var lo = 0;
@@ -1171,7 +1174,9 @@
     var html = '<div class="prose"><h3 class="label-rule">How scoring works in ' + modeName(lg.mode) + " mode</h3>" +
       "<p>" + (strict ?
         "Strict scores the full rule set. A game is eligible only when every stat it scores was recorded. In this data: " + esc(coverageText("strict", lg.settings)) :
-        "Historical scores the stats recorded for every game since 1960. Stats that weren't kept for older games (two-point conversions, fumble-recovery TDs, field-goal distances, sacks before 1982, takeaways) aren't scored in this mode.") + "</p>" +
+        "Historical scores the stats recorded for every game since 1960. Stats that weren't kept for older games (two-point conversions, fumble-recovery TDs, field-goal distances, sacks before 1982, " +
+        (ints ? "fumble recoveries) aren't scored in this mode. Interceptions are scored under the proposal now under discussion, so a defense's game counts only when its interception count was verified." :
+          "takeaways) aren't scored in this mode.")) + "</p>" +
       (strict ? kickerRule : "") +
       "<p>Each week, every rostered player on a team with a game that week draws one of his eligible games at random, unless he's on his bye. That game is used up for the rest of the league. " +
       "Teams without a game draw nothing, so their players use up no games: the idle team in a league with an odd number of teams, the top two seeds in the wild-card week, and teams out of the playoffs. " +
@@ -1437,6 +1442,13 @@
         unknown.push("field-goal distances");
       }
       bits.push("XP " + (gm.xpa !== null && gm.xpa !== undefined ? val(gm.xpm) + "/" + gm.xpa : val(gm.xpm) + " made"));
+      if (gm.xp_missed === null || gm.xp_missed === undefined) unknown.push(FIELD_NAMES.xp_missed);
+      if (nz(gm.rush_yds) || nz(gm.rush_td)) bits.push(val(gm.rush_yds) + " rush yds, " + val(gm.rush_td) + " TD");
+      if (nz(gm.pass_yds) || nz(gm.pass_td) || nz(gm.pass_int)) bits.push(val(gm.pass_yds) + " pass yds, " + val(gm.pass_td) + " TD, " + val(gm.pass_int) + " INT");
+      if (nz(gm.rec) || nz(gm.rec_yds) || nz(gm.rec_td)) bits.push(val(gm.rec) + " rec, " + val(gm.rec_yds) + " yds, " + val(gm.rec_td) + " TD");
+      if (nz(gm.ret_td)) bits.push(plural(gm.ret_td, "return TD"));
+      if (nz(gm.two_pt)) bits.push(plural(gm.two_pt, "two-point conversion"));
+      if (nz(gm.fum_rec_td)) bits.push(plural(gm.fum_rec_td, "fumble-recovery TD"));
       miss(["fga", "xpa"]);
     } else if (pos === "DEF") {
       bits.push("allowed " + val(gm.pts_allowed));
@@ -1453,6 +1465,8 @@
       if (gm.def_int_td !== null && gm.def_int_td !== undefined && gm.def_fum_td !== null && gm.def_fum_td !== undefined) bits.push((gm.def_int_td + gm.def_fum_td) + " defensive TD");
       else unknown.push("defensive TDs");
       bits.push(val(gm.ret_td) + " return TD");
+      if (gm.st_other_td !== null && gm.st_other_td !== undefined) { if (gm.st_other_td) bits.push(plural(gm.st_other_td, "other special-teams TD")); }
+      else unknown.push(FIELD_NAMES.st_other_td);
     }
     return { text: bits.join(" · "), unknown: unknown };
   }
