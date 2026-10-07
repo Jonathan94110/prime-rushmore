@@ -90,7 +90,7 @@ def dst_fantasy_points(d):
 
 
 PLAYER_COLUMNS = [
-    "player_id", "season", "week", "date", "playoff", "team", "opp", "home_away", "result",
+    "player_id", "name", "pos", "season", "week", "date", "playoff", "team", "opp", "home_away", "result",
     "team_score", "opp_score", "age",
     "pass_cmp", "pass_att", "pass_yds", "pass_td", "pass_int", "pass_rating", "sacked",
     "rush_att", "rush_yds", "rush_td",
@@ -166,7 +166,7 @@ def main(games_path, profiles_path, out_dir):
         })
         for season, week, row, playoff in rows:
             g = {
-                "player_id": p["player_id"], "season": season, "week": week, "date": row["date"],
+                "player_id": p["player_id"], "name": name, "pos": pos, "season": season, "week": week, "date": row["date"],
                 "playoff": playoff, "team": row["team"], "opp": row["opponent"],
                 "home_away": row["game_location"], "result": result(row),
                 "team_score": num(row["player_team_score"]), "opp_score": num(row["opponent_score"]),
