@@ -2,13 +2,18 @@
 
 Game-by-game stats for NFL stars from 1950 to 1999 (QB, RB, WR, TE and K), plus team-defense (DST) game logs for every team from 1950 to 1999.
 
+- **Legends:** 92 hand-picked stars, mostly Hall of Famers (`legend: true`).
+- **Running backs:** every RB with 2,000+ career rushing yards from 1950 to 1999, 320 in all, including the 27 legends.
+
 ## Files (`data/`)
 
 | File | What's in it |
 | --- | --- |
-| `players.json` | The 92 curated players: id, name, fantasy position, Hall of Fame flag, seasons, teams, college, draft info |
+| `players.json` | All 385 players: id, name, fantasy position, Hall of Fame and legend flags, seasons, teams, college, draft info |
 | `player_gamelogs.json` / `.csv` | One row per game played (regular season + playoffs) for those players |
 | `dst_gamelogs.json` / `.csv` | One row per team per game, 1950–1999 (18k games) |
+| `fantasy_legends.xlsx` | Everything above in one workbook, with a Notes sheet explaining the columns |
+| `running_backs.xlsx` | Just the 320 running backs and their game logs |
 | `featured_defenses.json` | Season totals for iconic defenses (Steel Curtain, '85 Bears, Purple People Eaters…) |
 
 The JSON game logs use a compact `{ "columns": [...], "rows": [[...], ...] }` format:
@@ -44,11 +49,13 @@ DST `fpts`: 1 per sack, 2 per INT, 2 per safety, 6 per INT-return or kick/punt-r
 
 The data comes from Pro-Football-Reference via the [zynicide/nfl-football-player-stats](https://www.kaggle.com/datasets/zynicide/nfl-football-player-stats) Kaggle dataset ([scraper](https://github.com/zackthoutt/nfl-player-stats), scraped Dec 2017). Spot checks match the record books: Campbell 1980 (1,934 rush yds), Dickerson 1984 (2,105), Montana 1989, the 1985 Bears (198 pts allowed, 64 sacks, 34 INT).
 
-To add players or defenses, edit `scripts/legends.py` and rebuild:
+To add players or defenses, or pools for other positions, edit `scripts/legends.py` and rebuild:
 
 ```sh
 pip install ijson
 curl -L -o stats.zip https://www.kaggle.com/api/v1/datasets/download/zynicide/nfl-football-player-stats
 unzip stats.zip -d raw
 cd scripts && python build_data.py ../raw/games_*.json ../raw/profiles_*.json ../data
+python build_workbook.py ../data ../data/fantasy_legends.xlsx
+python build_workbook.py ../data ../data/running_backs.xlsx RB
 ```

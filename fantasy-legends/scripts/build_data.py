@@ -18,7 +18,7 @@ from collections import defaultdict
 
 import ijson
 
-from legends import FEATURED_DEFENSES, LEGENDS
+from legends import FEATURED_DEFENSES, LEGENDS, POOL_HALL_OF_FAMERS, POOLS
 
 FIRST_SEASON, LAST_SEASON = 1950, 1999
 TARGETS_FIRST_SEASON = 1992  # targets are blank in the source before this
@@ -114,6 +114,12 @@ def main(games_path, profiles_path, out_dir):
     team_games = {}
     player_rows = defaultdict(list)
     candidate_ids = {p["player_id"] for n, *_ in LEGENDS for p in by_name.get(n, [])}
+    pool_of = {}  # player_id -> pool position
+    for p in profiles:
+        for pos, pool in POOLS.items():
+            if set((p["position"] or "").split("-")) & pool["source_positions"]:
+                pool_of[p["player_id"]] = pos
+    candidate_ids |= set(pool_of)
 
     with open(games_path, "rb") as f:
         for row in ijson.items(f, "item", use_float=True):
@@ -145,13 +151,28 @@ def main(games_path, profiles_path, out_dir):
     os.makedirs(out_dir, exist_ok=True)
 
     # --- players ---
-    players, logs = [], []
+    profile_by_id = {p["player_id"]: p for p in profiles}
+    selected = []  # (profile, name, pos, hof, legend)
     for name, pos, hof in LEGENDS:
         candidates = [p for p in by_name.get(name, []) if player_rows.get(p["player_id"])]
         if not candidates:
             print(f"WARNING: no game logs found for {name}", file=sys.stderr)
             continue
         p = max(candidates, key=lambda c: len(player_rows[c["player_id"]]))
+        selected.append((p, name, pos, hof, True))
+    taken = {p["player_id"] for p, *_ in selected}
+    pool_players = []
+    for pid, pos in pool_of.items():
+        pool = POOLS[pos]
+        career = sum(num(r[2][pool["stat"]]) for r in player_rows.get(pid, []))
+        if pid not in taken and career >= pool["min_career"]:
+            p = profile_by_id[pid]
+            name = p["name"].strip()
+            pool_players.append((-career, (p, name, pos, name in POOL_HALL_OF_FAMERS, False)))
+    selected += [entry for _, entry in sorted(pool_players, key=lambda x: x[0])]
+
+    players, logs = [], []
+    for p, name, pos, hof, legend in selected:
         rows = sorted(player_rows[p["player_id"]], key=lambda r: (r[0], r[1]))
         seasons = [r[0] for r in rows]
         teams = []
@@ -159,7 +180,7 @@ def main(games_path, profiles_path, out_dir):
             if row["team"] not in teams:
                 teams.append(row["team"])
         players.append({
-            "player_id": p["player_id"], "name": name, "pos": pos, "hof": hof,
+            "player_id": p["player_id"], "name": name, "pos": pos, "hof": hof, "legend": legend,
             "first_season": min(seasons), "last_season": max(seasons), "teams": teams,
             "college": p["college"], "birth_date": p["birth_date"],
             "draft_year": p["draft_year"], "draft_team": p["draft_team"],

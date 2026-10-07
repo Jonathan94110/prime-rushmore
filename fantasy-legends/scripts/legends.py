@@ -54,3 +54,15 @@ FEATURED_DEFENSES = [
     ("ATL", 1977, "Grits Blitz"), ("DAL", 1977, "Doomsday II"), ("CHI", 1985, "46 Defense"),
     ("NYG", 1986, "Big Blue Wrecking Crew"), ("PHI", 1991, "Gang Green"), ("GNB", 1996, None),
 ]
+
+# Position pools: every player at the position who clears a career (1950-1999) yardage bar,
+# on top of the hand-picked LEGENDS above. Source positions are hyphenated lists like "HB-FB".
+POOLS = {
+    "RB": {"source_positions": {"RB", "HB", "FB", "TB"}, "stat": "rushing_yards", "min_career": 2000},
+}
+
+# Hall of Famers who come in through a pool rather than LEGENDS.
+POOL_HALL_OF_FAMERS = {
+    "Steve Van Buren", "Marion Motley", "Ollie Matson", "John Henry Johnson", "Frank Gifford",
+    "Charley Trippi", "Doak Walker", "Jerome Bettis", "Edgerrin James", "Lenny Moore",
+}

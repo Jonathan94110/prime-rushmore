@@ -4,6 +4,7 @@
   "name": "Otto Graham",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1955,
   "teams": [
@@ -19,6 +20,7 @@
   "name": "Bobby Layne",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1962,
   "teams": [
@@ -35,6 +37,7 @@
   "name": "Norm Van Brocklin",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1960,
   "teams": [
@@ -51,6 +54,7 @@
   "name": "Y.A. Tittle",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1964,
   "teams": [
@@ -68,6 +72,7 @@
   "name": "Johnny Unitas",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1956,
   "last_season": 1973,
   "teams": [
@@ -84,6 +89,7 @@
   "name": "Bart Starr",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1956,
   "last_season": 1971,
   "teams": [
@@ -99,6 +105,7 @@
   "name": "Sonny Jurgensen",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1957,
   "last_season": 1974,
   "teams": [
@@ -115,6 +122,7 @@
   "name": "Len Dawson",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1957,
   "last_season": 1975,
   "teams": [
@@ -133,6 +141,7 @@
   "name": "Joe Namath",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1965,
   "last_season": 1977,
   "teams": [
@@ -149,6 +158,7 @@
   "name": "Fran Tarkenton",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1961,
   "last_season": 1978,
   "teams": [
@@ -165,6 +175,7 @@
   "name": "Bob Griese",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1967,
   "last_season": 1980,
   "teams": [
@@ -180,6 +191,7 @@
   "name": "Roger Staubach",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1969,
   "last_season": 1979,
   "teams": [
@@ -195,6 +207,7 @@
   "name": "Terry Bradshaw",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1970,
   "last_season": 1983,
   "teams": [
@@ -210,6 +223,7 @@
   "name": "Ken Stabler",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1970,
   "last_season": 1984,
   "teams": [
@@ -227,6 +241,7 @@
   "name": "Dan Fouts",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1973,
   "last_season": 1987,
   "teams": [
@@ -242,6 +257,7 @@
   "name": "Ken Anderson",
   "pos": "QB",
   "hof": false,
+  "legend": true,
   "first_season": 1971,
   "last_season": 1986,
   "teams": [
@@ -257,6 +273,7 @@
   "name": "Joe Montana",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1979,
   "last_season": 1994,
   "teams": [
@@ -273,6 +290,7 @@
   "name": "Dan Marino",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1983,
   "last_season": 1999,
   "teams": [
@@ -288,6 +306,7 @@
   "name": "John Elway",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1983,
   "last_season": 1998,
   "teams": [
@@ -303,6 +322,7 @@
   "name": "Jim Kelly",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1986,
   "last_season": 1996,
   "teams": [
@@ -318,6 +338,7 @@
   "name": "Warren Moon",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1984,
   "last_season": 1999,
   "teams": [
@@ -336,6 +357,7 @@
   "name": "Steve Young",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1985,
   "last_season": 1999,
   "teams": [
@@ -352,6 +374,7 @@
   "name": "Troy Aikman",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1989,
   "last_season": 1999,
   "teams": [
@@ -367,6 +390,7 @@
   "name": "Brett Favre",
   "pos": "QB",
   "hof": true,
+  "legend": true,
   "first_season": 1991,
   "last_season": 1999,
   "teams": [
@@ -383,6 +407,7 @@
   "name": "Randall Cunningham",
   "pos": "QB",
   "hof": false,
+  "legend": true,
   "first_season": 1985,
   "last_season": 1999,
   "teams": [
@@ -399,6 +424,7 @@
   "name": "Boomer Esiason",
   "pos": "QB",
   "hof": false,
+  "legend": true,
   "first_season": 1984,
   "last_season": 1997,
   "teams": [
@@ -416,6 +442,7 @@
   "name": "Joe Perry",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1963,
   "teams": [
@@ -432,6 +459,7 @@
   "name": "Hugh McElhenny",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1952,
   "last_season": 1964,
   "teams": [
@@ -450,6 +478,7 @@
   "name": "Jim Brown",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1957,
   "last_season": 1965,
   "teams": [
@@ -465,6 +494,7 @@
   "name": "Paul Hornung",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1957,
   "last_season": 1966,
   "teams": [
@@ -480,6 +510,7 @@
   "name": "Jim Taylor",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1958,
   "last_season": 1967,
   "teams": [
@@ -496,6 +527,7 @@
   "name": "Gale Sayers",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1965,
   "last_season": 1971,
   "teams": [
@@ -511,6 +543,7 @@
   "name": "Leroy Kelly",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1964,
   "last_season": 1973,
   "teams": [
@@ -526,6 +559,7 @@
   "name": "Floyd Little",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1967,
   "last_season": 1975,
   "teams": [
@@ -541,6 +575,7 @@
   "name": "Larry Csonka",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1968,
   "last_season": 1979,
   "teams": [
@@ -557,6 +592,7 @@
   "name": "O.J. Simpson",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1969,
   "last_season": 1979,
   "teams": [
@@ -573,6 +609,7 @@
   "name": "Franco Harris",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1972,
   "last_season": 1984,
   "teams": [
@@ -589,6 +626,7 @@
   "name": "Walter Payton",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1975,
   "last_season": 1987,
   "teams": [
@@ -604,6 +642,7 @@
   "name": "Chuck Foreman",
   "pos": "RB",
   "hof": false,
+  "legend": true,
   "first_season": 1973,
   "last_season": 1980,
   "teams": [
@@ -620,6 +659,7 @@
   "name": "Tony Dorsett",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1977,
   "last_season": 1988,
   "teams": [
@@ -636,6 +676,7 @@
   "name": "Earl Campbell",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1978,
   "last_season": 1985,
   "teams": [
@@ -652,6 +693,7 @@
   "name": "John Riggins",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1971,
   "last_season": 1985,
   "teams": [
@@ -668,6 +710,7 @@
   "name": "Ottis Anderson",
   "pos": "RB",
   "hof": false,
+  "legend": true,
   "first_season": 1979,
   "last_season": 1992,
   "teams": [
@@ -684,6 +727,7 @@
   "name": "Eric Dickerson",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1983,
   "last_season": 1993,
   "teams": [
@@ -702,6 +746,7 @@
   "name": "Marcus Allen",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1982,
   "last_season": 1997,
   "teams": [
@@ -718,6 +763,7 @@
   "name": "Roger Craig",
   "pos": "RB",
   "hof": false,
+  "legend": true,
   "first_season": 1983,
   "last_season": 1993,
   "teams": [
@@ -735,6 +781,7 @@
   "name": "Bo Jackson",
   "pos": "RB",
   "hof": false,
+  "legend": true,
   "first_season": 1987,
   "last_season": 1990,
   "teams": [
@@ -750,6 +797,7 @@
   "name": "Thurman Thomas",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1988,
   "last_season": 1999,
   "teams": [
@@ -765,6 +813,7 @@
   "name": "Barry Sanders",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1989,
   "last_season": 1998,
   "teams": [
@@ -780,6 +829,7 @@
   "name": "Emmitt Smith",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1990,
   "last_season": 1999,
   "teams": [
@@ -795,6 +845,7 @@
   "name": "Marshall Faulk",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1994,
   "last_season": 1999,
   "teams": [
@@ -811,6 +862,7 @@
   "name": "Terrell Davis",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1995,
   "last_season": 1999,
   "teams": [
@@ -826,6 +878,7 @@
   "name": "Curtis Martin",
   "pos": "RB",
   "hof": true,
+  "legend": true,
   "first_season": 1995,
   "last_season": 1999,
   "teams": [
@@ -842,6 +895,7 @@
   "name": "Elroy Hirsch",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1957,
   "teams": [
@@ -857,6 +911,7 @@
   "name": "Tom Fears",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1956,
   "teams": [
@@ -872,6 +927,7 @@
   "name": "Raymond Berry",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1955,
   "last_season": 1967,
   "teams": [
@@ -887,6 +943,7 @@
   "name": "Lenny Moore",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1956,
   "last_season": 1967,
   "teams": [
@@ -902,6 +959,7 @@
   "name": "Bobby Mitchell",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1958,
   "last_season": 1968,
   "teams": [
@@ -918,6 +976,7 @@
   "name": "Don Maynard",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1958,
   "last_season": 1973,
   "teams": [
@@ -936,6 +995,7 @@
   "name": "Lance Alworth",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1962,
   "last_season": 1972,
   "teams": [
@@ -952,6 +1012,7 @@
   "name": "Charley Taylor",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1964,
   "last_season": 1977,
   "teams": [
@@ -967,6 +1028,7 @@
   "name": "Paul Warfield",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1964,
   "last_season": 1977,
   "teams": [
@@ -983,6 +1045,7 @@
   "name": "Fred Biletnikoff",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1965,
   "last_season": 1978,
   "teams": [
@@ -998,6 +1061,7 @@
   "name": "Lynn Swann",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1974,
   "last_season": 1982,
   "teams": [
@@ -1013,6 +1077,7 @@
   "name": "John Stallworth",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1974,
   "last_season": 1987,
   "teams": [
@@ -1028,6 +1093,7 @@
   "name": "Steve Largent",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1976,
   "last_season": 1989,
   "teams": [
@@ -1043,6 +1109,7 @@
   "name": "James Lofton",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1978,
   "last_season": 1993,
   "teams": [
@@ -1062,6 +1129,7 @@
   "name": "Charlie Joiner",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1969,
   "last_season": 1986,
   "teams": [
@@ -1079,6 +1147,7 @@
   "name": "Art Monk",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1980,
   "last_season": 1995,
   "teams": [
@@ -1096,6 +1165,7 @@
   "name": "Jerry Rice",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1985,
   "last_season": 1999,
   "teams": [
@@ -1111,6 +1181,7 @@
   "name": "Michael Irvin",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1988,
   "last_season": 1999,
   "teams": [
@@ -1126,6 +1197,7 @@
   "name": "Andre Reed",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1985,
   "last_season": 1999,
   "teams": [
@@ -1141,6 +1213,7 @@
   "name": "Cris Carter",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1987,
   "last_season": 1999,
   "teams": [
@@ -1157,6 +1230,7 @@
   "name": "Tim Brown",
   "pos": "WR",
   "hof": true,
+  "legend": true,
   "first_season": 1988,
   "last_season": 1999,
   "teams": [
@@ -1173,6 +1247,7 @@
   "name": "Sterling Sharpe",
   "pos": "WR",
   "hof": false,
+  "legend": true,
   "first_season": 1988,
   "last_season": 1994,
   "teams": [
@@ -1188,6 +1263,7 @@
   "name": "Mike Ditka",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1961,
   "last_season": 1972,
   "teams": [
@@ -1205,6 +1281,7 @@
   "name": "John Mackey",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1963,
   "last_season": 1972,
   "teams": [
@@ -1221,6 +1298,7 @@
   "name": "Jackie Smith",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1963,
   "last_season": 1978,
   "teams": [
@@ -1237,6 +1315,7 @@
   "name": "Charlie Sanders",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1968,
   "last_season": 1977,
   "teams": [
@@ -1252,6 +1331,7 @@
   "name": "Dave Casper",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1974,
   "last_season": 1984,
   "teams": [
@@ -1270,6 +1350,7 @@
   "name": "Kellen Winslow",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1979,
   "last_season": 1987,
   "teams": [
@@ -1285,6 +1366,7 @@
   "name": "Ozzie Newsome",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1978,
   "last_season": 1990,
   "teams": [
@@ -1300,6 +1382,7 @@
   "name": "Mark Bavaro",
   "pos": "TE",
   "hof": false,
+  "legend": true,
   "first_season": 1985,
   "last_season": 1994,
   "teams": [
@@ -1317,6 +1400,7 @@
   "name": "Shannon Sharpe",
   "pos": "TE",
   "hof": true,
+  "legend": true,
   "first_season": 1990,
   "last_season": 1999,
   "teams": [
@@ -1332,6 +1416,7 @@
   "name": "Ben Coates",
   "pos": "TE",
   "hof": false,
+  "legend": true,
   "first_season": 1991,
   "last_season": 1999,
   "teams": [
@@ -1347,6 +1432,7 @@
   "name": "Lou Groza",
   "pos": "K",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1967,
   "teams": [
@@ -1362,6 +1448,7 @@
   "name": "George Blanda",
   "pos": "K",
   "hof": true,
+  "legend": true,
   "first_season": 1950,
   "last_season": 1975,
   "teams": [
@@ -1379,6 +1466,7 @@
   "name": "Jan Stenerud",
   "pos": "K",
   "hof": true,
+  "legend": true,
   "first_season": 1967,
   "last_season": 1985,
   "teams": [
@@ -1396,6 +1484,7 @@
   "name": "Garo Yepremian",
   "pos": "K",
   "hof": false,
+  "legend": true,
   "first_season": 1966,
   "last_season": 1981,
   "teams": [
@@ -1414,6 +1503,7 @@
   "name": "Nick Lowery",
   "pos": "K",
   "hof": false,
+  "legend": true,
   "first_season": 1978,
   "last_season": 1996,
   "teams": [
@@ -1431,6 +1521,7 @@
   "name": "Morten Andersen",
   "pos": "K",
   "hof": true,
+  "legend": true,
   "first_season": 1982,
   "last_season": 1999,
   "teams": [
@@ -1447,6 +1538,7 @@
   "name": "Gary Anderson",
   "pos": "K",
   "hof": false,
+  "legend": true,
   "first_season": 1982,
   "last_season": 1999,
   "teams": [
@@ -1459,5 +1551,5024 @@
   "birth_date": "1959-07-16",
   "draft_year": "1982",
   "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 23431,
+  "name": "Ricky Watters",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1992,
+  "last_season": 1999,
+  "teams": [
+   "SFO",
+   "PHI",
+   "SEA"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1969-04-07",
+  "draft_year": "1991",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 3197,
+  "name": "Earnest Byner",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1984,
+  "last_season": 1997,
+  "teams": [
+   "CLE",
+   "WAS",
+   "BAL"
+  ],
+  "college": "East Carolina",
+  "birth_date": "1962-09-15",
+  "draft_year": "1984",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 1679,
+  "name": "Jerome Bettis",
+  "pos": "RB",
+  "hof": true,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1999,
+  "teams": [
+   "RAM",
+   "STL",
+   "PIT"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1972-02-16",
+  "draft_year": "1993",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 14986,
+  "name": "Freeman McNeil",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1992,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "UCLA",
+  "birth_date": "1959-04-22",
+  "draft_year": "1981",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 23099,
+  "name": "Herschel Walker",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1997,
+  "teams": [
+   "DAL",
+   "MIN",
+   "PHI",
+   "NYG"
+  ],
+  "college": "Georgia",
+  "birth_date": "1962-03-03",
+  "draft_year": "1985",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 18679,
+  "name": "Gerald Riggs",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1991,
+  "teams": [
+   "ATL",
+   "WAS"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1960-11-06",
+  "draft_year": "1982",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 2497,
+  "name": "James Brooks",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1992,
+  "teams": [
+   "SDG",
+   "CIN",
+   "CLE",
+   "TAM"
+  ],
+  "college": "Auburn",
+  "birth_date": "1958-12-28",
+  "draft_year": "1981",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 335,
+  "name": "Terry Allen",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1999,
+  "teams": [
+   "MIN",
+   "WAS",
+   "NWE"
+  ],
+  "college": "Clemson",
+  "birth_date": "1968-02-21",
+  "draft_year": "1990",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 18995,
+  "name": "George Rogers",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1987,
+  "teams": [
+   "NOR",
+   "WAS"
+  ],
+  "college": "South Carolina",
+  "birth_date": "1958-12-08",
+  "draft_year": "1981",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 18010,
+  "name": "Mike Pruitt",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1986,
+  "teams": [
+   "CLE",
+   "BUF",
+   "KAN"
+  ],
+  "college": "Purdue",
+  "birth_date": "1954-04-03",
+  "draft_year": "1976",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 23284,
+  "name": "Chris Warren",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1999,
+  "teams": [
+   "SEA",
+   "DAL"
+  ],
+  "college": "Virginia",
+  "birth_date": "1968-01-24",
+  "draft_year": "1990",
+  "draft_team": "Seattle Seahawks"
+ },
+ {
+  "player_id": 15619,
+  "name": "Wilbert Montgomery",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1985,
+  "teams": [
+   "PHI",
+   "DET"
+  ],
+  "college": "Jackson St.",
+  "birth_date": "1954-09-16",
+  "draft_year": "1977",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 22814,
+  "name": "Mark van Eeghen",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1983,
+  "teams": [
+   "OAK",
+   "NWE"
+  ],
+  "college": "Colgate",
+  "birth_date": "1952-04-19",
+  "draft_year": "1974",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 14632,
+  "name": "Lawrence McCutcheon",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1972,
+  "last_season": 1981,
+  "teams": [
+   "RAM",
+   "DEN",
+   "SEA",
+   "BUF"
+  ],
+  "college": "Colorado St.",
+  "birth_date": "1950-06-02",
+  "draft_year": "1972",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 16024,
+  "name": "Chuck Muncie",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1984,
+  "teams": [
+   "NOR",
+   "SDG"
+  ],
+  "college": "California",
+  "birth_date": "1953-03-17",
+  "draft_year": "1976",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 23277,
+  "name": "Curt Warner",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1983,
+  "last_season": 1990,
+  "teams": [
+   "SEA",
+   "RAM"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1961-03-18",
+  "draft_year": "1983",
+  "draft_team": "Seattle Seahawks"
+ },
+ {
+  "player_id": 8926,
+  "name": "Rodney Hampton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1997,
+  "teams": [
+   "NYG"
+  ],
+  "college": "Georgia",
+  "birth_date": "1969-04-03",
+  "draft_year": "1990",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 22701,
+  "name": "Wendell Tyler",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1986,
+  "teams": [
+   "RAM",
+   "SFO"
+  ],
+  "college": "UCLA",
+  "birth_date": "1955-05-20",
+  "draft_year": "1977",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 11312,
+  "name": "John Henry Johnson",
+  "pos": "RB",
+  "hof": true,
+  "legend": false,
+  "first_season": 1954,
+  "last_season": 1966,
+  "teams": [
+   "SFO",
+   "DET",
+   "PIT",
+   "HOU"
+  ],
+  "college": "St. Mary's (CA)",
+  "birth_date": "1929-11-24",
+  "draft_year": "1953",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 15495,
+  "name": "Lydell Mitchell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1972,
+  "last_season": 1980,
+  "teams": [
+   "BAL",
+   "SDG",
+   "RAM"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1949-05-30",
+  "draft_year": "1972",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 17377,
+  "name": "Don Perkins",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1968,
+  "teams": [
+   "DAL"
+  ],
+  "college": "New Mexico",
+  "birth_date": "1938-03-04",
+  "draft_year": "1960",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 474,
+  "name": "Neal Anderson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1993,
+  "teams": [
+   "CHI"
+  ],
+  "college": "Florida",
+  "birth_date": "1964-08-14",
+  "draft_year": "1986",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 9827,
+  "name": "Calvin Hill",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1981,
+  "teams": [
+   "DAL",
+   "WAS",
+   "CLE"
+  ],
+  "college": "Yale",
+  "birth_date": "1947-01-02",
+  "draft_year": "1969",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 2667,
+  "name": "Larry Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1976,
+  "teams": [
+   "WAS"
+  ],
+  "college": "Kansas St.",
+  "birth_date": "1947-09-19",
+  "draft_year": "1969",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 23966,
+  "name": "Ken Willard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1974,
+  "teams": [
+   "SFO",
+   "STL"
+  ],
+  "college": "North Carolina",
+  "birth_date": "1943-07-14",
+  "draft_year": "1965",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 15836,
+  "name": "Joe Morris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1991,
+  "teams": [
+   "NYG",
+   "CLE"
+  ],
+  "college": "Syracuse",
+  "birth_date": "1960-09-15",
+  "draft_year": "1982",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 23923,
+  "name": "James Wilder",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1990,
+  "teams": [
+   "TAM",
+   "WAS",
+   "DET"
+  ],
+  "college": "Missouri",
+  "birth_date": "1958-05-12",
+  "draft_year": "1981",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 523,
+  "name": "William Andrews",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1986,
+  "teams": [
+   "ATL"
+  ],
+  "college": "Auburn",
+  "birth_date": "1955-12-25",
+  "draft_year": "1979",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 2550,
+  "name": "Bill Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1974,
+  "teams": [
+   "CHI",
+   "MIN"
+  ],
+  "college": "Illinois",
+  "birth_date": "1938-06-29",
+  "draft_year": "1961",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 24456,
+  "name": "Sammy Winder",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1990,
+  "teams": [
+   "DEN"
+  ],
+  "college": "Southern Miss",
+  "birth_date": "1959-07-15",
+  "draft_year": "1982",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 11385,
+  "name": "Pete Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1984,
+  "teams": [
+   "CIN",
+   "SDG",
+   "MIA"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1954-03-02",
+  "draft_year": "1977",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 15055,
+  "name": "Natrone Means",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1999,
+  "teams": [
+   "SDG",
+   "JAX"
+  ],
+  "college": "North Carolina",
+  "birth_date": "1972-04-26",
+  "draft_year": "1993",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 3620,
+  "name": "Rick Casares",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1955,
+  "last_season": 1966,
+  "teams": [
+   "CHI",
+   "WAS",
+   "MIA"
+  ],
+  "college": "Florida",
+  "birth_date": "1931-07-04",
+  "draft_year": "1954",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 7763,
+  "name": "Eddie George",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1996,
+  "last_season": 1999,
+  "teams": [
+   "HOU",
+   "TEN"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1973-09-24",
+  "draft_year": "1996",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 20757,
+  "name": "Robert Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1999,
+  "teams": [
+   "MIN"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1972-03-04",
+  "draft_year": "1993",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 18006,
+  "name": "Greg Pruitt",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1984,
+  "teams": [
+   "CLE",
+   "RAI"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1951-08-18",
+  "draft_year": "1973",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 7650,
+  "name": "Mike Garrett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1973,
+  "teams": [
+   "KAN",
+   "SDG"
+  ],
+  "college": "USC",
+  "birth_date": "1944-04-12",
+  "draft_year": "1966",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 24045,
+  "name": "Delvin Williams",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1981,
+  "teams": [
+   "SFO",
+   "MIA",
+   "GNB"
+  ],
+  "college": "Kansas",
+  "birth_date": "1951-04-17",
+  "draft_year": "1974",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 4768,
+  "name": "Joe Cribbs",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1988,
+  "teams": [
+   "BUF",
+   "SFO",
+   "IND",
+   "MIA"
+  ],
+  "college": "Auburn",
+  "birth_date": "1958-01-05",
+  "draft_year": "1980",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 4936,
+  "name": "Sam Cunningham",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1982,
+  "teams": [
+   "NWE"
+  ],
+  "college": "USC",
+  "birth_date": "1950-08-15",
+  "draft_year": "1973",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 13796,
+  "name": "Kevin Mack",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1985,
+  "last_season": 1993,
+  "teams": [
+   "CLE"
+  ],
+  "college": "Clemson",
+  "birth_date": "1962-08-09",
+  "draft_year": "1984",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 1227,
+  "name": "Dick Bass",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1969,
+  "teams": [
+   "RAM"
+  ],
+  "college": "Pacific",
+  "birth_date": "1937-03-15",
+  "draft_year": "1959",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 16335,
+  "name": "Robert Newhouse",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1972,
+  "last_season": 1983,
+  "teams": [
+   "DAL"
+  ],
+  "college": "Houston",
+  "birth_date": "1950-01-09",
+  "draft_year": "1972",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 16176,
+  "name": "Jim Nance",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1973,
+  "teams": [
+   "BOS",
+   "NWE",
+   "NYJ"
+  ],
+  "college": "Syracuse",
+  "birth_date": "1942-12-30",
+  "draft_year": "1965",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 13637,
+  "name": "Paul Lowe",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1969,
+  "teams": [
+   "LAC",
+   "SDG",
+   "KAN"
+  ],
+  "college": "Oregon St.",
+  "birth_date": "1936-09-27",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 3182,
+  "name": "Marion Butts",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1995,
+  "teams": [
+   "SDG",
+   "NWE",
+   "HOU"
+  ],
+  "college": "NE Oklahoma A&M;",
+  "birth_date": "1966-08-01",
+  "draft_year": "1989",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 1452,
+  "name": "Greg Bell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1984,
+  "last_season": 1990,
+  "teams": [
+   "BUF",
+   "RAM",
+   "RAI"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1962-08-01",
+  "draft_year": "1984",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 20337,
+  "name": "Billy Sims",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1984,
+  "teams": [
+   "DET"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1955-09-18",
+  "draft_year": "1980",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 2020,
+  "name": "Emerson Boozer",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1975,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "Md-Eastern Shore",
+  "birth_date": "1943-07-04",
+  "draft_year": "1966",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 16098,
+  "name": "Adrian Murrell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1999,
+  "teams": [
+   "NYJ",
+   "ARI"
+  ],
+  "college": "West Virginia",
+  "birth_date": "1970-10-16",
+  "draft_year": "1993",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 2456,
+  "name": "John Brockington",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1977,
+  "teams": [
+   "GNB",
+   "KAN"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1948-09-07",
+  "draft_year": "1971",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 14287,
+  "name": "Ollie Matson",
+  "pos": "RB",
+  "hof": true,
+  "legend": false,
+  "first_season": 1952,
+  "last_season": 1966,
+  "teams": [
+   "CRD",
+   "RAM",
+   "DET",
+   "PHI"
+  ],
+  "college": "San Francisco",
+  "birth_date": "1930-05-01",
+  "draft_year": "1952",
+  "draft_team": "Chicago Cardinals"
+ },
+ {
+  "player_id": 5060,
+  "name": "Clem Daniels",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1968,
+  "teams": [
+   "DTX",
+   "OAK",
+   "SFO"
+  ],
+  "college": "Prairie View",
+  "birth_date": "1937-07-09",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 3127,
+  "name": "Dexter Bussey",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1984,
+  "teams": [
+   "DET"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1952-03-11",
+  "draft_year": "1974",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 24131,
+  "name": "John Williams",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1995,
+  "teams": [
+   "SEA",
+   "PIT"
+  ],
+  "college": "Florida",
+  "birth_date": "1964-11-23",
+  "draft_year": "1986",
+  "draft_team": "Seattle Seahawks"
+ },
+ {
+  "player_id": 9506,
+  "name": "Garrison Hearst",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1998,
+  "teams": [
+   "PHO",
+   "ARI",
+   "CIN",
+   "SFO"
+  ],
+  "college": "Georgia",
+  "birth_date": "1971-01-04",
+  "draft_year": "1993",
+  "draft_team": "Phoenix Cardinals"
+ },
+ {
+  "player_id": 16769,
+  "name": "Christian Okoye",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1987,
+  "last_season": 1992,
+  "teams": [
+   "KAN"
+  ],
+  "college": "Azusa Pacific",
+  "birth_date": "1961-08-16",
+  "draft_year": "1987",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 14291,
+  "name": "Tom Matte",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1972,
+  "teams": [
+   "BAL"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1939-06-14",
+  "draft_year": "1961",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 4847,
+  "name": "John David Crow",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1958,
+  "last_season": 1968,
+  "teams": [
+   "CRD",
+   "STL",
+   "SFO"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1935-07-08",
+  "draft_year": "1958",
+  "draft_team": "Chicago Cardinals"
+ },
+ {
+  "player_id": 10354,
+  "name": "Marv Hubbard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1977,
+  "teams": [
+   "OAK",
+   "DET"
+  ],
+  "college": "Colgate",
+  "birth_date": "1946-05-07",
+  "draft_year": "1968",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 23340,
+  "name": "Joe Washington",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1985,
+  "teams": [
+   "SDG",
+   "BAL",
+   "WAS",
+   "ATL"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1953-09-24",
+  "draft_year": "1976",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 438,
+  "name": "Donny Anderson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1974,
+  "teams": [
+   "GNB",
+   "STL"
+  ],
+  "college": "Texas Tech",
+  "birth_date": "1943-05-16",
+  "draft_year": "1965",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 23506,
+  "name": "Alex Webster",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1955,
+  "last_season": 1964,
+  "teams": [
+   "NYG"
+  ],
+  "college": "North Carolina St.",
+  "birth_date": "1931-04-19",
+  "draft_year": "1953",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 4334,
+  "name": "Tony Collins",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1990,
+  "teams": [
+   "NWE",
+   "MIA"
+  ],
+  "college": "East Carolina",
+  "birth_date": "1959-05-27",
+  "draft_year": "1981",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 3473,
+  "name": "Rob Carpenter",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1986,
+  "teams": [
+   "HOU",
+   "NYG",
+   "RAM"
+  ],
+  "college": "Miami (OH)",
+  "birth_date": "1955-04-20",
+  "draft_year": "1977",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 16880,
+  "name": "Dave Osborn",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1976,
+  "teams": [
+   "MIN",
+   "GNB"
+  ],
+  "college": "North Dakota",
+  "birth_date": "1943-03-18",
+  "draft_year": "1965",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 12844,
+  "name": "MacArthur Lane",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1978,
+  "teams": [
+   "STL",
+   "GNB",
+   "KAN"
+  ],
+  "college": "Utah St.",
+  "birth_date": "1942-03-16",
+  "draft_year": "1968",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 2739,
+  "name": "Ted Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1986,
+  "teams": [
+   "MIN"
+  ],
+  "college": "North Carolina St.",
+  "birth_date": "1957-02-15",
+  "draft_year": "1979",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 20637,
+  "name": "J.D. Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1958,
+  "last_season": 1966,
+  "teams": [
+   "SFO",
+   "DAL"
+  ],
+  "college": "North Carolina A&T;",
+  "birth_date": "1932-07-19",
+  "draft_year": "1955",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 15515,
+  "name": "Stump Mitchell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1989,
+  "teams": [
+   "STL",
+   "PHO"
+  ],
+  "college": "The Citadel",
+  "birth_date": "1959-03-15",
+  "draft_year": "1981",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 9463,
+  "name": "Abner Haynes",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1967,
+  "teams": [
+   "DTX",
+   "KAN",
+   "DEN",
+   "MIA",
+   "NYJ"
+  ],
+  "college": "North Texas",
+  "birth_date": "1937-09-19",
+  "draft_year": "1960",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 19191,
+  "name": "Mike Rozier",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1985,
+  "last_season": 1991,
+  "teams": [
+   "HOU",
+   "ATL"
+  ],
+  "college": "Nebraska",
+  "birth_date": "1961-03-01",
+  "draft_year": "1984",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 16264,
+  "name": "Darrin Nelson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1992,
+  "teams": [
+   "MIN",
+   "SDG"
+  ],
+  "college": "Stanford",
+  "birth_date": "1959-01-02",
+  "draft_year": "1982",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 624,
+  "name": "Otis Armstrong",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1980,
+  "teams": [
+   "DEN"
+  ],
+  "college": "Purdue",
+  "birth_date": "1950-11-15",
+  "draft_year": "1973",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 15844,
+  "name": "Mercury Morris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1976,
+  "teams": [
+   "MIA",
+   "SDG"
+  ],
+  "college": "West Texas A&M;",
+  "birth_date": "1947-01-05",
+  "draft_year": "1969",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 1540,
+  "name": "Edgar Bennett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1992,
+  "last_season": 1999,
+  "teams": [
+   "GNB",
+   "CHI"
+  ],
+  "college": "Florida St.",
+  "birth_date": "1969-02-15",
+  "draft_year": "1992",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 20842,
+  "name": "Matt Snell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1964,
+  "last_season": 1972,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1941-08-18",
+  "draft_year": "1964",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 17715,
+  "name": "Ed Podolak",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1977,
+  "teams": [
+   "KAN"
+  ],
+  "college": "Iowa",
+  "birth_date": "1947-09-01",
+  "draft_year": "1969",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 8921,
+  "name": "Dave Hampton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1976,
+  "teams": [
+   "GNB",
+   "ATL",
+   "PHI"
+  ],
+  "college": "Wyoming",
+  "birth_date": "1947-05-07",
+  "draft_year": "1969",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 23789,
+  "name": "Lorenzo White",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1995,
+  "teams": [
+   "HOU",
+   "CLE"
+  ],
+  "college": "Michigan St.",
+  "birth_date": "1966-04-12",
+  "draft_year": "1988",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 16907,
+  "name": "Jim Otis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1978,
+  "teams": [
+   "NOR",
+   "KAN",
+   "STL"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1948-04-29",
+  "draft_year": "1970",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 7872,
+  "name": "Cookie Gilchrist",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1967,
+  "teams": [
+   "BUF",
+   "DEN",
+   "MIA"
+  ],
+  "college": "none",
+  "birth_date": "1935-05-25",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 8368,
+  "name": "Harold Green",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1998,
+  "teams": [
+   "CIN",
+   "STL",
+   "ATL"
+  ],
+  "college": "South Carolina",
+  "birth_date": "1968-01-29",
+  "draft_year": "1990",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 454,
+  "name": "Jamal Anderson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "ATL"
+  ],
+  "college": "Utah",
+  "birth_date": "1972-09-30",
+  "draft_year": "1994",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 7657,
+  "name": "Walt Garrison",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1974,
+  "teams": [
+   "DAL"
+  ],
+  "college": "Oklahoma St.",
+  "birth_date": "1944-07-23",
+  "draft_year": "1966",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 9750,
+  "name": "Craig Heyward",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1998,
+  "teams": [
+   "NOR",
+   "CHI",
+   "ATL",
+   "STL",
+   "IND"
+  ],
+  "college": "Pittsburgh",
+  "birth_date": "1966-09-26",
+  "draft_year": "1988",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 1873,
+  "name": "Rocky Bleier",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1980,
+  "teams": [
+   "PIT"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1946-03-05",
+  "draft_year": "1968",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 9530,
+  "name": "Johnny Hector",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1983,
+  "last_season": 1992,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1960-11-26",
+  "draft_year": "1983",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 21824,
+  "name": "Altie Taylor",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1976,
+  "teams": [
+   "DET",
+   "HOU"
+  ],
+  "college": "Utah St.",
+  "birth_date": "1947-09-29",
+  "draft_year": "1969",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 2622,
+  "name": "Gary Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1999,
+  "teams": [
+   "HOU",
+   "SDG",
+   "NYG"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1969-07-01",
+  "draft_year": "1991",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 22096,
+  "name": "Mike Thomas",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1975,
+  "last_season": 1980,
+  "teams": [
+   "WAS",
+   "SDG"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1953-07-17",
+  "draft_year": "1975",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 11405,
+  "name": "Ron Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1975,
+  "teams": [
+   "CLE",
+   "NYG"
+  ],
+  "college": "Michigan",
+  "birth_date": "1947-10-17",
+  "draft_year": "1969",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 11953,
+  "name": "Napoleon Kaufman",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1995,
+  "last_season": 1999,
+  "teams": [
+   "OAK"
+  ],
+  "college": "Washington",
+  "birth_date": "1973-06-07",
+  "draft_year": "1995",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 7641,
+  "name": "Carl Garrett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1977,
+  "teams": [
+   "BOS",
+   "NWE",
+   "CHI",
+   "NYJ",
+   "OAK"
+  ],
+  "college": "New Mex. Highlands",
+  "birth_date": "1947-08-31",
+  "draft_year": "1969",
+  "draft_team": "Boston Patriots"
+ },
+ {
+  "player_id": 9904,
+  "name": "Dalton Hilliard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1993,
+  "teams": [
+   "NOR"
+  ],
+  "college": "LSU",
+  "birth_date": "1964-01-21",
+  "draft_year": "1986",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 7174,
+  "name": "Barry Foster",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1994,
+  "teams": [
+   "PIT"
+  ],
+  "college": "Arkansas",
+  "birth_date": "1968-12-08",
+  "draft_year": "1990",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 17741,
+  "name": "Frank Pollard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1988,
+  "teams": [
+   "PIT"
+  ],
+  "college": "Baylor",
+  "birth_date": "1957-06-15",
+  "draft_year": "1980",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 14228,
+  "name": "Tommy Mason",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1971,
+  "teams": [
+   "MIN",
+   "RAM",
+   "WAS"
+  ],
+  "college": "Tulane",
+  "birth_date": "1939-07-08",
+  "draft_year": "1961",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 977,
+  "name": "Pete Banaszak",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1978,
+  "teams": [
+   "OAK"
+  ],
+  "college": "Miami (FL)",
+  "birth_date": "1944-05-21",
+  "draft_year": "1966",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 9964,
+  "name": "Leroy Hoard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1999,
+  "teams": [
+   "CLE",
+   "BAL",
+   "CAR",
+   "MIN"
+  ],
+  "college": "Michigan",
+  "birth_date": "1968-05-15",
+  "draft_year": "1990",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 13230,
+  "name": "Dorsey Levens",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "GNB"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1970-05-21",
+  "draft_year": "1994",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 10761,
+  "name": "Earnest Jackson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1983,
+  "last_season": 1988,
+  "teams": [
+   "SDG",
+   "PHI",
+   "PIT"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1959-12-18",
+  "draft_year": "1983",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 12204,
+  "name": "Jim Kiick",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1977,
+  "teams": [
+   "MIA",
+   "DEN",
+   "WAS"
+  ],
+  "college": "Wyoming",
+  "birth_date": "1946-08-09",
+  "draft_year": "1968",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 5191,
+  "name": "Clarence Davis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1978,
+  "teams": [
+   "OAK"
+  ],
+  "college": "USC",
+  "birth_date": "1949-06-28",
+  "draft_year": "1971",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 7526,
+  "name": "Tony Galbreath",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1987,
+  "teams": [
+   "NOR",
+   "MIN",
+   "NYG"
+  ],
+  "college": "Missouri",
+  "birth_date": "1954-01-29",
+  "draft_year": "1976",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 381,
+  "name": "Alan Ameche",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1955,
+  "last_season": 1960,
+  "teams": [
+   "BAL"
+  ],
+  "college": "Wisconsin",
+  "birth_date": "1933-06-01",
+  "draft_year": "1955",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 11314,
+  "name": "Johnny Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1994,
+  "teams": [
+   "PHO",
+   "NYJ"
+  ],
+  "college": "San Jose St.",
+  "birth_date": "1968-06-11",
+  "draft_year": "1990",
+  "draft_team": "Phoenix Cardinals"
+ },
+ {
+  "player_id": 5257,
+  "name": "Kenneth Davis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1994,
+  "teams": [
+   "GNB",
+   "BUF"
+  ],
+  "college": "TCU",
+  "birth_date": "1962-04-16",
+  "draft_year": "1986",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 15819,
+  "name": "Bam Morris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "PIT",
+   "BAL",
+   "CHI",
+   "KAN"
+  ],
+  "college": "Texas Tech",
+  "birth_date": "1972-01-13",
+  "draft_year": "1994",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 5609,
+  "name": "Curtis Dickey",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1986,
+  "teams": [
+   "BAL",
+   "IND",
+   "CLE"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1956-11-27",
+  "draft_year": "1980",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 17604,
+  "name": "Nick Pietrosante",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1959,
+  "last_season": 1967,
+  "teams": [
+   "DET",
+   "CLE"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1937-09-10",
+  "draft_year": "1959",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 24087,
+  "name": "Harvey Williams",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1998,
+  "teams": [
+   "KAN",
+   "RAI",
+   "OAK"
+  ],
+  "college": "LSU",
+  "birth_date": "1967-04-22",
+  "draft_year": "1991",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 16195,
+  "name": "Tony Nathan",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1987,
+  "teams": [
+   "MIA"
+  ],
+  "college": "Alabama",
+  "birth_date": "1956-12-14",
+  "draft_year": "1979",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 19284,
+  "name": "Leonard Russell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1996,
+  "teams": [
+   "NWE",
+   "DEN",
+   "STL",
+   "SDG"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1969-11-17",
+  "draft_year": "1991",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 9454,
+  "name": "Wendell Hayes",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1963,
+  "last_season": 1974,
+  "teams": [
+   "DAL",
+   "DEN",
+   "KAN"
+  ],
+  "college": "Humboldt St.",
+  "birth_date": "1940-08-05",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 9963,
+  "name": "Dick Hoak",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1970,
+  "teams": [
+   "PIT"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1939-12-08",
+  "draft_year": "1961",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 18535,
+  "name": "Errict Rhett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "TAM",
+   "BAL"
+  ],
+  "college": "Florida",
+  "birth_date": "1970-12-11",
+  "draft_year": "1994",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 2744,
+  "name": "Timmy Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1968,
+  "teams": [
+   "PHI",
+   "BAL"
+  ],
+  "college": "Ball St.",
+  "birth_date": "1937-05-24",
+  "draft_year": "1959",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 10855,
+  "name": "Wilbur Jackson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1982,
+  "teams": [
+   "SFO",
+   "WAS"
+  ],
+  "college": "Alabama",
+  "birth_date": "1951-11-19",
+  "draft_year": "1974",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 14953,
+  "name": "Randy McMillan",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1986,
+  "teams": [
+   "BAL",
+   "IND"
+  ],
+  "college": "Pittsburgh",
+  "birth_date": "1958-12-17",
+  "draft_year": "1981",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 6398,
+  "name": "Gerry Ellis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1986,
+  "teams": [
+   "GNB"
+  ],
+  "college": "Missouri",
+  "birth_date": "1957-11-12",
+  "draft_year": "1980",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 7856,
+  "name": "Frank Gifford",
+  "pos": "RB",
+  "hof": true,
+  "legend": false,
+  "first_season": 1952,
+  "last_season": 1964,
+  "teams": [
+   "NYG"
+  ],
+  "college": "USC",
+  "birth_date": "1930-08-16",
+  "draft_year": "1952",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 634,
+  "name": "Jon Arnett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1957,
+  "last_season": 1966,
+  "teams": [
+   "RAM",
+   "CHI"
+  ],
+  "college": "USC",
+  "birth_date": "1935-04-20",
+  "draft_year": "1957",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 4131,
+  "name": "Reggie Cobb",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1996,
+  "teams": [
+   "TAM",
+   "GNB",
+   "JAX",
+   "NYJ"
+  ],
+  "college": "Tennessee",
+  "birth_date": "1968-07-07",
+  "draft_year": "1990",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 17297,
+  "name": "Preston Pearson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1980,
+  "teams": [
+   "BAL",
+   "PIT",
+   "DAL"
+  ],
+  "college": "Illinois",
+  "birth_date": "1945-01-17",
+  "draft_year": "1967",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 19029,
+  "name": "Johnny Roland",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1973,
+  "teams": [
+   "STL",
+   "NYG"
+  ],
+  "college": "Missouri",
+  "birth_date": "1943-05-21",
+  "draft_year": "1965",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 2845,
+  "name": "Cullen Bryant",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1987,
+  "teams": [
+   "RAM",
+   "SEA"
+  ],
+  "college": "Colorado",
+  "birth_date": "1951-05-20",
+  "draft_year": "1973",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 20557,
+  "name": "Charlie Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1975,
+  "teams": [
+   "OAK",
+   "SDG"
+  ],
+  "college": "Utah",
+  "birth_date": "1946-01-18",
+  "draft_year": "1968",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 8248,
+  "name": "Hoyle Granger",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1972,
+  "teams": [
+   "HOU",
+   "NOR"
+  ],
+  "college": "Mississippi St.",
+  "birth_date": "1944-03-07",
+  "draft_year": "1966",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 24906,
+  "name": "Rickey Young",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1975,
+  "last_season": 1983,
+  "teams": [
+   "SDG",
+   "MIN"
+  ],
+  "college": "Jackson St.",
+  "birth_date": "1953-12-07",
+  "draft_year": "1975",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 17277,
+  "name": "Clarence Peaks",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1957,
+  "last_season": 1965,
+  "teams": [
+   "PHI",
+   "PIT"
+  ],
+  "college": "Michigan St.",
+  "birth_date": "1935-09-23",
+  "draft_year": "1957",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 13366,
+  "name": "Keith Lincoln",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1968,
+  "teams": [
+   "SDG",
+   "BUF"
+  ],
+  "college": "Washington St.",
+  "birth_date": "1939-05-08",
+  "draft_year": "1961",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 22451,
+  "name": "Dan Towler",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1950,
+  "last_season": 1955,
+  "teams": [
+   "RAM"
+  ],
+  "college": "Washington & Jefferson",
+  "birth_date": "1928-03-06",
+  "draft_year": "1950",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 11609,
+  "name": "James Jones",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1983,
+  "last_season": 1992,
+  "teams": [
+   "DET",
+   "SEA"
+  ],
+  "college": "Florida",
+  "birth_date": "1961-03-21",
+  "draft_year": "1983",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 14271,
+  "name": "Bill Mathis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1969,
+  "teams": [
+   "NYT",
+   "NYJ"
+  ],
+  "college": "Clemson",
+  "birth_date": "1938-12-10",
+  "draft_year": "1960",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 17539,
+  "name": "Jess Phillips",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1977,
+  "teams": [
+   "CIN",
+   "NOR",
+   "OAK",
+   "NWE"
+  ],
+  "college": "Michigan St.",
+  "birth_date": "1947-02-28",
+  "draft_year": "1968",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 7625,
+  "name": "Charlie Garner",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "PHI",
+   "SFO"
+  ],
+  "college": "Tennessee",
+  "birth_date": "1972-02-13",
+  "draft_year": "1994",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 15170,
+  "name": "Terry Metcalf",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1981,
+  "teams": [
+   "STL",
+   "WAS"
+  ],
+  "college": "Long Beach St.",
+  "birth_date": "1951-09-24",
+  "draft_year": "1973",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 2937,
+  "name": "Norm Bulaich",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1979,
+  "teams": [
+   "BAL",
+   "PHI",
+   "MIA"
+  ],
+  "college": "TCU",
+  "birth_date": "1946-12-25",
+  "draft_year": "1970",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 24614,
+  "name": "Tom Woodeshick",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1963,
+  "last_season": 1972,
+  "teams": [
+   "PHI",
+   "STL"
+  ],
+  "college": "West Virginia",
+  "birth_date": "1941-12-03",
+  "draft_year": "1963",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 3270,
+  "name": "Don Calhoun",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1982,
+  "teams": [
+   "BUF",
+   "NWE",
+   "PHI"
+  ],
+  "college": "Kansas St.",
+  "birth_date": "1952-04-29",
+  "draft_year": "1974",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 18,
+  "name": "Walter Abercrombie",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1988,
+  "teams": [
+   "PIT",
+   "PHI"
+  ],
+  "college": "Baylor",
+  "birth_date": "1959-09-26",
+  "draft_year": "1982",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 3444,
+  "name": "Wray Carlton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1967,
+  "teams": [
+   "BUF"
+  ],
+  "college": "Duke",
+  "birth_date": "1937-06-18",
+  "draft_year": "1959",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 8,
+  "name": "Karim Abdul-Jabbar",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1996,
+  "last_season": 1999,
+  "teams": [
+   "MIA",
+   "CLE"
+  ],
+  "college": "UCLA",
+  "birth_date": "1974-06-28",
+  "draft_year": "1996",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 20778,
+  "name": "Sherman Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1983,
+  "teams": [
+   "SEA",
+   "SDG"
+  ],
+  "college": "Miami (OH)",
+  "birth_date": "1954-11-01",
+  "draft_year": "1976",
+  "draft_team": "Seattle Seahawks"
+ },
+ {
+  "player_id": 17318,
+  "name": "Erric Pegram",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1997,
+  "teams": [
+   "ATL",
+   "PIT",
+   "SDG",
+   "NYG"
+  ],
+  "college": "North Texas",
+  "birth_date": "1969-01-07",
+  "draft_year": "1991",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 5709,
+  "name": "Hewritt Dixon",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1963,
+  "last_season": 1970,
+  "teams": [
+   "DEN",
+   "OAK"
+  ],
+  "college": "Florida A&M;",
+  "birth_date": "1940-01-08",
+  "draft_year": "1963",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 14385,
+  "name": "Rueben Mayes",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1993,
+  "teams": [
+   "NOR",
+   "SEA"
+  ],
+  "college": "Washington St.",
+  "birth_date": "1963-06-06",
+  "draft_year": "1986",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 24936,
+  "name": "Tank Younger",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1950,
+  "last_season": 1958,
+  "teams": [
+   "RAM",
+   "PIT"
+  ],
+  "college": "Grambling St.",
+  "birth_date": "1928-06-25",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 1086,
+  "name": "Billy Ray Barnes",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1957,
+  "last_season": 1966,
+  "teams": [
+   "PHI",
+   "WAS",
+   "MIN"
+  ],
+  "college": "Wake Forest",
+  "birth_date": "1935-05-14",
+  "draft_year": "1957",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 5655,
+  "name": "Corey Dillon",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1997,
+  "last_season": 1999,
+  "teams": [
+   "CIN"
+  ],
+  "college": "Washington",
+  "birth_date": "1974-10-24",
+  "draft_year": "1997",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 6422,
+  "name": "Willie Ellison",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1967,
+  "last_season": 1974,
+  "teams": [
+   "RAM",
+   "KAN"
+  ],
+  "college": "Texas Southern",
+  "birth_date": "1945-11-01",
+  "draft_year": "1967",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 21221,
+  "name": "John Stephens",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1993,
+  "teams": [
+   "NWE",
+   "GNB",
+   "KAN"
+  ],
+  "college": "NW State (LA)",
+  "birth_date": "1966-02-23",
+  "draft_year": "1988",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 11787,
+  "name": "Les Josephson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1964,
+  "last_season": 1974,
+  "teams": [
+   "RAM"
+  ],
+  "college": "Augustana (SD)",
+  "birth_date": "1942-07-29",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 449,
+  "name": "Gary Anderson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1985,
+  "last_season": 1993,
+  "teams": [
+   "SDG",
+   "TAM",
+   "DET"
+  ],
+  "college": "Arkansas",
+  "birth_date": "1961-04-18",
+  "draft_year": "1983",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 15855,
+  "name": "Wayne Morris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1984,
+  "teams": [
+   "STL",
+   "SDG"
+  ],
+  "college": "SMU",
+  "birth_date": "1954-05-03",
+  "draft_year": "1976",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 22372,
+  "name": "Charley Tolar",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1966,
+  "teams": [
+   "HOU"
+  ],
+  "college": "NW State (LA)",
+  "birth_date": "1937-09-05",
+  "draft_year": "1959",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 10024,
+  "name": "Merril Hoge",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1987,
+  "last_season": 1994,
+  "teams": [
+   "PIT",
+   "CHI"
+  ],
+  "college": "Idaho St.",
+  "birth_date": "1965-01-26",
+  "draft_year": "1987",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 12543,
+  "name": "Doug Kotar",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1981,
+  "teams": [
+   "NYG"
+  ],
+  "college": "Kentucky",
+  "birth_date": "1951-06-11",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 17934,
+  "name": "Eddie Price",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1950,
+  "last_season": 1955,
+  "teams": [
+   "NYG"
+  ],
+  "college": "Tulane",
+  "birth_date": "1925-09-02",
+  "draft_year": "1950",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 16834,
+  "name": "Johnny Olszewski",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1953,
+  "last_season": 1962,
+  "teams": [
+   "CRD",
+   "WAS",
+   "DET",
+   "DEN"
+  ],
+  "college": "California",
+  "birth_date": "1930-12-21",
+  "draft_year": "1953",
+  "draft_team": "Chicago Cardinals"
+ },
+ {
+  "player_id": 8365,
+  "name": "Ernie Green",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1968,
+  "teams": [
+   "CLE"
+  ],
+  "college": "Louisville",
+  "birth_date": "1938-10-15",
+  "draft_year": "1962",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 18981,
+  "name": "Fran Rogel",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1950,
+  "last_season": 1957,
+  "teams": [
+   "PIT"
+  ],
+  "college": "California (PA)",
+  "birth_date": "1927-12-12",
+  "draft_year": "1950",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 1477,
+  "name": "Ricky Bell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1982,
+  "teams": [
+   "TAM",
+   "SDG"
+  ],
+  "college": "USC",
+  "birth_date": "1955-04-08",
+  "draft_year": "1977",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 2941,
+  "name": "Ronnie Bull",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1971,
+  "teams": [
+   "CHI",
+   "PHI"
+  ],
+  "college": "Baylor",
+  "birth_date": "1940-02-02",
+  "draft_year": "1962",
+  "draft_team": "Dallas Texans"
+ },
+ {
+  "player_id": 11258,
+  "name": "Essex Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1976,
+  "teams": [
+   "CIN",
+   "TAM"
+  ],
+  "college": "Grambling St.",
+  "birth_date": "1946-10-15",
+  "draft_year": "1968",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 14536,
+  "name": "Curtis McClinton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1968,
+  "teams": [
+   "DTX",
+   "KAN"
+  ],
+  "college": "Kansas",
+  "birth_date": "1939-06-25",
+  "draft_year": "1961",
+  "draft_team": "Dallas Texans"
+ },
+ {
+  "player_id": 9845,
+  "name": "Greg Hill",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "KAN",
+   "STL",
+   "DET"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1972-02-23",
+  "draft_year": "1994",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 14084,
+  "name": "Amos Marsh",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1967,
+  "teams": [
+   "DAL",
+   "DET"
+  ],
+  "college": "Oregon St.",
+  "birth_date": "1939-05-07",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 9109,
+  "name": "Charlie Harraway",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1966,
+  "last_season": 1973,
+  "teams": [
+   "CLE",
+   "WAS"
+  ],
+  "college": "San Jose St.",
+  "birth_date": "1944-09-21",
+  "draft_year": "1966",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 13260,
+  "name": "Dan Lewis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1958,
+  "last_season": 1966,
+  "teams": [
+   "DET",
+   "WAS",
+   "NYG"
+  ],
+  "college": "Wisconsin",
+  "birth_date": "1936-02-14",
+  "draft_year": "1958",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 7463,
+  "name": "John Fuqua",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1976,
+  "teams": [
+   "NYG",
+   "PIT"
+  ],
+  "college": "Morgan St.",
+  "birth_date": "1946-09-12",
+  "draft_year": "1969",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 3188,
+  "name": "Keith Byars",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1998,
+  "teams": [
+   "PHI",
+   "MIA",
+   "NWE",
+   "NYJ"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1963-10-14",
+  "draft_year": "1986",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 3401,
+  "name": "John Cappelletti",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1983,
+  "teams": [
+   "RAM",
+   "SDG"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1952-08-09",
+  "draft_year": "1974",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 8579,
+  "name": "Earl Gros",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1970,
+  "teams": [
+   "GNB",
+   "PHI",
+   "PIT",
+   "NOR"
+  ],
+  "college": "LSU",
+  "birth_date": "1940-08-29",
+  "draft_year": "1962",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 12319,
+  "name": "Larry Kinnebrew",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1983,
+  "last_season": 1990,
+  "teams": [
+   "CIN",
+   "BUF"
+  ],
+  "college": "Tennessee St.",
+  "birth_date": "1959-06-11",
+  "draft_year": "1983",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 3943,
+  "name": "Boobie Clark",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1973,
+  "last_season": 1980,
+  "teams": [
+   "CIN",
+   "HOU"
+  ],
+  "college": "Bethune-Cookman",
+  "birth_date": "1950-11-08",
+  "draft_year": "1973",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 21566,
+  "name": "Tom Sullivan",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1972,
+  "last_season": 1978,
+  "teams": [
+   "PHI",
+   "CLE"
+  ],
+  "college": "Miami (FL)",
+  "birth_date": "1950-03-05",
+  "draft_year": "1972",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 10455,
+  "name": "Bobby Humphrey",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1992,
+  "teams": [
+   "DEN",
+   "MIA"
+  ],
+  "college": "Alabama",
+  "birth_date": "1966-10-11",
+  "draft_year": "1989",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 21286,
+  "name": "James Stewart",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1995,
+  "last_season": 1999,
+  "teams": [
+   "JAX"
+  ],
+  "college": "Tennessee",
+  "birth_date": "1971-12-27",
+  "draft_year": "1995",
+  "draft_team": "Jacksonville Jaguars"
+ },
+ {
+  "player_id": 2055,
+  "name": "Don Bosseler",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1957,
+  "last_season": 1964,
+  "teams": [
+   "WAS"
+  ],
+  "college": "Miami (FL)",
+  "birth_date": "1936-01-24",
+  "draft_year": "1957",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 23745,
+  "name": "Charles White",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1988,
+  "teams": [
+   "CLE",
+   "RAM"
+  ],
+  "college": "USC",
+  "birth_date": "1958-01-22",
+  "draft_year": "1980",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 6700,
+  "name": "Mel Farr",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1967,
+  "last_season": 1973,
+  "teams": [
+   "DET"
+  ],
+  "college": "UCLA",
+  "birth_date": "1944-11-03",
+  "draft_year": "1967",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 21535,
+  "name": "Matt Suhey",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1980,
+  "last_season": 1989,
+  "teams": [
+   "CHI"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1958-07-07",
+  "draft_year": "1980",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 24675,
+  "name": "Barry Word",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1987,
+  "last_season": 1994,
+  "teams": [
+   "NOR",
+   "KAN",
+   "MIN",
+   "ARI"
+  ],
+  "college": "Virginia",
+  "birth_date": "1963-01-17",
+  "draft_year": "1986",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 24632,
+  "name": "Don Woods",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1980,
+  "teams": [
+   "SDG",
+   "SFO"
+  ],
+  "college": "New Mex. Highlands",
+  "birth_date": "1951-02-17",
+  "draft_year": "1974",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 9104,
+  "name": "Roland Harper",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1975,
+  "last_season": 1982,
+  "teams": [
+   "CHI"
+  ],
+  "college": "Louisiana Tech",
+  "birth_date": "1953-02-28",
+  "draft_year": "1975",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 7659,
+  "name": "Larry Garron",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1968,
+  "teams": [
+   "BOS"
+  ],
+  "college": "West. Illinois",
+  "birth_date": "1937-05-23",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 10697,
+  "name": "Eddie Lee Ivery",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1986,
+  "teams": [
+   "GNB"
+  ],
+  "college": "Georgia Tech",
+  "birth_date": "1957-07-30",
+  "draft_year": "1979",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 6260,
+  "name": "Cid Edwards",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1975,
+  "teams": [
+   "STL",
+   "SDG",
+   "CHI"
+  ],
+  "college": "Tennessee St.",
+  "birth_date": "1943-10-10",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 22466,
+  "name": "Tom Tracy",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1956,
+  "last_season": 1964,
+  "teams": [
+   "DET",
+   "PIT",
+   "WAS"
+  ],
+  "college": "Tennessee",
+  "birth_date": "1934-09-07",
+  "draft_year": "1956",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 7531,
+  "name": "Willie Galimore",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1957,
+  "last_season": 1963,
+  "teams": [
+   "CHI"
+  ],
+  "college": "Florida A&M;",
+  "birth_date": "1935-03-30",
+  "draft_year": "1956",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 22511,
+  "name": "Mel Triplett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1955,
+  "last_season": 1962,
+  "teams": [
+   "NYG",
+   "MIN"
+  ],
+  "college": "Toledo",
+  "birth_date": "1931-12-24",
+  "draft_year": "1955",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 6812,
+  "name": "Derrick Fenner",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1997,
+  "teams": [
+   "SEA",
+   "CIN",
+   "OAK"
+  ],
+  "college": "Gardner-Webb",
+  "birth_date": "1967-04-06",
+  "draft_year": "1989",
+  "draft_team": "Seattle Seahawks"
+ },
+ {
+  "player_id": 1619,
+  "name": "Rod Bernstine",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1987,
+  "last_season": 1995,
+  "teams": [
+   "SDG",
+   "DEN"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1965-02-08",
+  "draft_year": "1987",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 362,
+  "name": "Mike Alstott",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1996,
+  "last_season": 1999,
+  "teams": [
+   "TAM"
+  ],
+  "college": "Purdue",
+  "birth_date": "1973-12-21",
+  "draft_year": "1996",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 11159,
+  "name": "Anthony Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1999,
+  "teams": [
+   "IND",
+   "NYJ",
+   "CHI",
+   "CAR"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1967-10-25",
+  "draft_year": "1990",
+  "draft_team": "Indianapolis Colts"
+ },
+ {
+  "player_id": 12331,
+  "name": "Terry Kirby",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1999,
+  "teams": [
+   "MIA",
+   "SFO",
+   "CLE"
+  ],
+  "college": "Virginia",
+  "birth_date": "1970-01-20",
+  "draft_year": "1993",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 18900,
+  "name": "Paul Robinson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1973,
+  "teams": [
+   "CIN",
+   "HOU"
+  ],
+  "college": "Arizona",
+  "birth_date": "1944-12-19",
+  "draft_year": "1968",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 9804,
+  "name": "Mark Higgs",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1995,
+  "teams": [
+   "DAL",
+   "PHI",
+   "MIA",
+   "ARI"
+  ],
+  "college": "Kentucky",
+  "birth_date": "1966-04-11",
+  "draft_year": "1988",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 1248,
+  "name": "Mario Bates",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1999,
+  "teams": [
+   "NOR",
+   "ARI"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1973-01-16",
+  "draft_year": "1994",
+  "draft_team": "New Orleans Saints"
+ },
+ {
+  "player_id": 6848,
+  "name": "Earl Ferrell",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1982,
+  "last_season": 1989,
+  "teams": [
+   "STL",
+   "PHO"
+  ],
+  "college": "East Tennessee St.",
+  "birth_date": "1958-03-27",
+  "draft_year": "1982",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 1301,
+  "name": "Brad Baxter",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1995,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "Alabama St.",
+  "birth_date": "1967-05-05",
+  "draft_year": "1989",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 2301,
+  "name": "Jim Braxton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1978,
+  "teams": [
+   "BUF",
+   "MIA"
+  ],
+  "college": "West Virginia",
+  "birth_date": "1949-05-23",
+  "draft_year": "1971",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 5633,
+  "name": "Scott Dierking",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1984,
+  "teams": [
+   "NYJ",
+   "TAM"
+  ],
+  "college": "Purdue",
+  "birth_date": "1955-05-24",
+  "draft_year": "1977",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 9857,
+  "name": "Jerry Hill",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1961,
+  "last_season": 1970,
+  "teams": [
+   "BAL"
+  ],
+  "college": "Wyoming",
+  "birth_date": "1939-10-12",
+  "draft_year": "1961",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 9076,
+  "name": "Ronnie Harmon",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1997,
+  "teams": [
+   "BUF",
+   "SDG",
+   "HOU",
+   "TEN",
+   "CHI"
+  ],
+  "college": "Iowa",
+  "birth_date": "1964-05-07",
+  "draft_year": "1986",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 8499,
+  "name": "Archie Griffin",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1982,
+  "teams": [
+   "CIN"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1954-08-21",
+  "draft_year": "1976",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 24310,
+  "name": "Fred Willis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1976,
+  "teams": [
+   "CIN",
+   "HOU"
+  ],
+  "college": "Boston Col.",
+  "birth_date": "1947-12-09",
+  "draft_year": "1971",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 6102,
+  "name": "Warrick Dunn",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1997,
+  "last_season": 1999,
+  "teams": [
+   "TAM"
+  ],
+  "college": "Florida St.",
+  "birth_date": "1975-01-05",
+  "draft_year": "1997",
+  "draft_team": "Tampa Bay Buccaneers"
+ },
+ {
+  "player_id": 4259,
+  "name": "Ronnie Coleman",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1981,
+  "teams": [
+   "HOU"
+  ],
+  "college": "Alabama A&M;",
+  "birth_date": "1951-07-09",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 21095,
+  "name": "Haskel Stanback",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1979,
+  "teams": [
+   "ATL"
+  ],
+  "college": "Tennessee",
+  "birth_date": "1952-03-19",
+  "draft_year": "1974",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 13926,
+  "name": "Benny Malone",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1979,
+  "teams": [
+   "MIA",
+   "WAS"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1952-02-03",
+  "draft_year": "1974",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 14033,
+  "name": "Joe Marconi",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1956,
+  "last_season": 1966,
+  "teams": [
+   "RAM",
+   "CHI"
+  ],
+  "college": "West Virginia",
+  "birth_date": "1934-02-06",
+  "draft_year": "1956",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 207,
+  "name": "Charles Alexander",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1985,
+  "teams": [
+   "CIN"
+  ],
+  "college": "LSU",
+  "birth_date": "1957-07-28",
+  "draft_year": "1979",
+  "draft_team": "Cincinnati Bengals"
+ },
+ {
+  "player_id": 3143,
+  "name": "Cannonball Butler",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1972,
+  "teams": [
+   "PIT",
+   "ATL",
+   "STL"
+  ],
+  "college": "Edward Waters",
+  "birth_date": "1943-05-04",
+  "draft_year": "1965",
+  "draft_team": "Pittsburgh Steelers"
+ },
+ {
+  "player_id": 10899,
+  "name": "Craig James",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1984,
+  "last_season": 1988,
+  "teams": [
+   "NWE"
+  ],
+  "college": "SMU",
+  "birth_date": "1961-01-02",
+  "draft_year": "1983",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 21028,
+  "name": "Ron Springs",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1986,
+  "teams": [
+   "DAL",
+   "TAM"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1956-11-04",
+  "draft_year": "1979",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 12186,
+  "name": "Jon Keyworth",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1980,
+  "teams": [
+   "DEN"
+  ],
+  "college": "Colorado",
+  "birth_date": "1950-12-15",
+  "draft_year": "1974",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 14504,
+  "name": "Don McCauley",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1981,
+  "teams": [
+   "BAL"
+  ],
+  "college": "North Carolina",
+  "birth_date": "1949-05-12",
+  "draft_year": "1971",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 9501,
+  "name": "Herman Heard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1984,
+  "last_season": 1989,
+  "teams": [
+   "KAN"
+  ],
+  "college": "Fort Lewis",
+  "birth_date": "1961-11-24",
+  "draft_year": "1984",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 12296,
+  "name": "Kenny King",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1985,
+  "teams": [
+   "HOU",
+   "OAK",
+   "RAI"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1957-03-07",
+  "draft_year": "1979",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 20521,
+  "name": "Antowain Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1997,
+  "last_season": 1999,
+  "teams": [
+   "BUF"
+  ],
+  "college": "Houston",
+  "birth_date": "1972-03-14",
+  "draft_year": "1997",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 5345,
+  "name": "Joe Dawkins",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1976,
+  "teams": [
+   "HOU",
+   "DEN",
+   "NYG"
+  ],
+  "college": "Wisconsin",
+  "birth_date": "1948-01-27",
+  "draft_year": "1970",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 7666,
+  "name": "Cleveland Gary",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1994,
+  "teams": [
+   "RAM",
+   "MIA"
+  ],
+  "college": "Georgia",
+  "birth_date": "1966-05-04",
+  "draft_year": "1989",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 16557,
+  "name": "Don Nottingham",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1977,
+  "teams": [
+   "BAL",
+   "MIA"
+  ],
+  "college": "Kent St.",
+  "birth_date": "1949-06-28",
+  "draft_year": "1971",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 2531,
+  "name": "Steve Broussard",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1998,
+  "teams": [
+   "ATL",
+   "CIN",
+   "SEA"
+  ],
+  "college": "Washington St.",
+  "birth_date": "1967-02-22",
+  "draft_year": "1990",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 17829,
+  "name": "Dickie Post",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1967,
+  "last_season": 1971,
+  "teams": [
+   "SDG",
+   "DEN",
+   "HOU"
+  ],
+  "college": "Houston",
+  "birth_date": "1945-09-27",
+  "draft_year": "1967",
+  "draft_team": "San Diego Chargers"
+ },
+ {
+  "player_id": 1650,
+  "name": "Jim Bertelsen",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1972,
+  "last_season": 1976,
+  "teams": [
+   "RAM"
+  ],
+  "college": "Texas",
+  "birth_date": "1950-02-26",
+  "draft_year": "1972",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 3382,
+  "name": "Billy Cannon",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1970,
+  "teams": [
+   "HOU",
+   "OAK",
+   "KAN"
+  ],
+  "college": "LSU",
+  "birth_date": "1937-08-02",
+  "draft_year": "1960",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 10136,
+  "name": "Robert Holmes",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1975,
+  "teams": [
+   "KAN",
+   "HOU",
+   "SDG"
+  ],
+  "college": "Southern",
+  "birth_date": "1945-10-05",
+  "draft_year": "1968",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 6824,
+  "name": "Howie Ferguson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1953,
+  "last_season": 1960,
+  "teams": [
+   "GNB",
+   "LAC"
+  ],
+  "college": "none",
+  "birth_date": "1930-08-05",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 7276,
+  "name": "Andra Franklin",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1981,
+  "last_season": 1984,
+  "teams": [
+   "MIA"
+  ],
+  "college": "Nebraska",
+  "birth_date": "1959-08-22",
+  "draft_year": "1981",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 9222,
+  "name": "Raymont Harris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1994,
+  "last_season": 1998,
+  "teams": [
+   "CHI",
+   "GNB"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1970-12-23",
+  "draft_year": "1994",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 22037,
+  "name": "Duane Thomas",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1974,
+  "teams": [
+   "DAL",
+   "WAS"
+  ],
+  "college": "West Texas A&M;",
+  "birth_date": "1947-06-21",
+  "draft_year": "1970",
+  "draft_team": "Dallas Cowboys"
+ },
+ {
+  "player_id": 24431,
+  "name": "Tommy Wilson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1956,
+  "last_season": 1963,
+  "teams": [
+   "RAM",
+   "CLE",
+   "MIN"
+  ],
+  "college": "none",
+  "birth_date": "1932-09-01",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 7505,
+  "name": "Clark Gaines",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1976,
+  "last_season": 1982,
+  "teams": [
+   "NYJ",
+   "KAN"
+  ],
+  "college": "Wake Forest",
+  "birth_date": "1954-02-01",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 17630,
+  "name": "Allen Pinkett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1991,
+  "teams": [
+   "HOU"
+  ],
+  "college": "Notre Dame",
+  "birth_date": "1964-01-25",
+  "draft_year": "1986",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 15862,
+  "name": "Joe Morrison",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1959,
+  "last_season": 1972,
+  "teams": [
+   "NYG"
+  ],
+  "college": "Cincinnati",
+  "birth_date": "1937-08-21",
+  "draft_year": "1959",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 24438,
+  "name": "Wayne Wilson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1987,
+  "teams": [
+   "NOR",
+   "MIN",
+   "WAS"
+  ],
+  "college": "Shepherd",
+  "birth_date": "1957-09-04",
+  "draft_year": "1979",
+  "draft_team": "Houston Oilers"
+ },
+ {
+  "player_id": 15739,
+  "name": "Tom Moore",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1967,
+  "teams": [
+   "GNB",
+   "RAM",
+   "ATL"
+  ],
+  "college": "Vanderbilt",
+  "birth_date": "1938-07-17",
+  "draft_year": "1960",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 15299,
+  "name": "Cleo Miller",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1982,
+  "teams": [
+   "KAN",
+   "CLE"
+  ],
+  "college": "Ark-Pine Bluff",
+  "birth_date": "1952-09-05",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 13037,
+  "name": "Roosevelt Leaks",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1975,
+  "last_season": 1983,
+  "teams": [
+   "BAL",
+   "BUF"
+  ],
+  "college": "Texas",
+  "birth_date": "1953-01-31",
+  "draft_year": "1975",
+  "draft_team": "Baltimore Colts"
+ },
+ {
+  "player_id": 403,
+  "name": "Alfred Anderson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1984,
+  "last_season": 1991,
+  "teams": [
+   "MIN"
+  ],
+  "college": "Baylor",
+  "birth_date": "1961-08-04",
+  "draft_year": "1984",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 22304,
+  "name": "Lewis Tillman",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1995,
+  "teams": [
+   "NYG",
+   "CHI"
+  ],
+  "college": "Jackson St.",
+  "birth_date": "1966-04-16",
+  "draft_year": "1989",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 7708,
+  "name": "Prentice Gautt",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1960,
+  "last_season": 1967,
+  "teams": [
+   "CLE",
+   "STL"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1938-02-08",
+  "draft_year": "1960",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 16959,
+  "name": "Steve Owens",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1974,
+  "teams": [
+   "DET"
+  ],
+  "college": "Oklahoma",
+  "birth_date": "1947-12-09",
+  "draft_year": "1970",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 13925,
+  "name": "Art Malone",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1970,
+  "last_season": 1976,
+  "teams": [
+   "ATL",
+   "PHI"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1948-03-20",
+  "draft_year": "1970",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 21850,
+  "name": "Fred Taylor",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1998,
+  "last_season": 1999,
+  "teams": [
+   "JAX"
+  ],
+  "college": "Florida",
+  "birth_date": "1976-01-27",
+  "draft_year": "1998",
+  "draft_team": "Jacksonville Jaguars"
+ },
+ {
+  "player_id": 22510,
+  "name": "Bill Triplett",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1962,
+  "last_season": 1972,
+  "teams": [
+   "STL",
+   "NYG",
+   "DET"
+  ],
+  "college": "Miami (OH)",
+  "birth_date": "1940-05-09",
+  "draft_year": "1962",
+  "draft_team": "Boston Patriots"
+ },
+ {
+  "player_id": 21810,
+  "name": "Mosi Tatupu",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1978,
+  "last_season": 1991,
+  "teams": [
+   "NWE",
+   "RAM"
+  ],
+  "college": "USC",
+  "birth_date": "1955-04-26",
+  "draft_year": "1978",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 4762,
+  "name": "Willis Crenshaw",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1964,
+  "last_season": 1970,
+  "teams": [
+   "STL",
+   "DEN"
+  ],
+  "college": "Kansas St.",
+  "birth_date": "1941-07-16",
+  "draft_year": "1963",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 15168,
+  "name": "Eric Metcalf",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1999,
+  "teams": [
+   "CLE",
+   "ATL",
+   "SDG",
+   "ARI",
+   "CAR"
+  ],
+  "college": "Texas",
+  "birth_date": "1968-01-23",
+  "draft_year": "1989",
+  "draft_team": "Cleveland Browns"
+ },
+ {
+  "player_id": 23367,
+  "name": "Vic Washington",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1971,
+  "last_season": 1976,
+  "teams": [
+   "SFO",
+   "HOU",
+   "BUF"
+  ],
+  "college": "Wyoming",
+  "birth_date": "1946-03-23",
+  "draft_year": "1970",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 5305,
+  "name": "Stephen Davis",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1996,
+  "last_season": 1999,
+  "teams": [
+   "WAS"
+  ],
+  "college": "Auburn",
+  "birth_date": "1974-03-01",
+  "draft_year": "1996",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 3247,
+  "name": "Lynn Cain",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1985,
+  "teams": [
+   "ATL",
+   "RAM"
+  ],
+  "college": "USC",
+  "birth_date": "1955-10-16",
+  "draft_year": "1979",
+  "draft_team": "Atlanta Falcons"
+ },
+ {
+  "player_id": 21077,
+  "name": "Duce Staley",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1997,
+  "last_season": 1999,
+  "teams": [
+   "PHI"
+  ],
+  "college": "South Carolina",
+  "birth_date": "1975-02-27",
+  "draft_year": "1997",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 1567,
+  "name": "Albert Bentley",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1985,
+  "last_season": 1992,
+  "teams": [
+   "IND",
+   "PIT"
+  ],
+  "college": "Miami (FL)",
+  "birth_date": "1960-08-15",
+  "draft_year": "1984",
+  "draft_team": "Indianapolis Colts"
+ },
+ {
+  "player_id": 16114,
+  "name": "Brad Muster",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1994,
+  "teams": [
+   "CHI",
+   "NOR"
+  ],
+  "college": "Stanford",
+  "birth_date": "1965-04-11",
+  "draft_year": "1988",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 20113,
+  "name": "Heath Sherman",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1993,
+  "teams": [
+   "PHI"
+  ],
+  "college": "Texas A&M-Kingsville;",
+  "birth_date": "1967-03-27",
+  "draft_year": "1989",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 14904,
+  "name": "Ted McKnight",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1982,
+  "teams": [
+   "KAN",
+   "BUF"
+  ],
+  "college": "Minnesota-Duluth",
+  "birth_date": "1954-02-26",
+  "draft_year": "1977",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 6523,
+  "name": "Ricky Ervins",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1995,
+  "teams": [
+   "WAS",
+   "SFO"
+  ],
+  "college": "USC",
+  "birth_date": "1968-12-07",
+  "draft_year": "1991",
+  "draft_team": "Washington Redskins"
+ },
+ {
+  "player_id": 18367,
+  "name": "Tony Reed",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1981,
+  "teams": [
+   "KAN",
+   "DEN"
+  ],
+  "college": "Colorado",
+  "birth_date": "1955-03-30",
+  "draft_year": "1977",
+  "draft_team": "Kansas City Chiefs"
+ },
+ {
+  "player_id": 15861,
+  "name": "Fred Morrison",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1950,
+  "last_season": 1956,
+  "teams": [
+   "CHI",
+   "CLE"
+  ],
+  "college": "Ohio St.",
+  "birth_date": "1926-10-07",
+  "draft_year": "1950",
+  "draft_team": "Chicago Bears"
+ },
+ {
+  "player_id": 22409,
+  "name": "Anthony Toney",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1990,
+  "teams": [
+   "PHI"
+  ],
+  "college": "Texas A&M;",
+  "birth_date": "1962-09-23",
+  "draft_year": "1986",
+  "draft_team": "Philadelphia Eagles"
+ },
+ {
+  "player_id": 18232,
+  "name": "Tom Rathman",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1986,
+  "last_season": 1994,
+  "teams": [
+   "SFO",
+   "RAI"
+  ],
+  "college": "Nebraska",
+  "birth_date": "1962-10-07",
+  "draft_year": "1986",
+  "draft_team": "San Francisco 49ers"
+ },
+ {
+  "player_id": 22004,
+  "name": "Blair Thomas",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1990,
+  "last_season": 1995,
+  "teams": [
+   "NYJ",
+   "NWE",
+   "DAL",
+   "CAR"
+  ],
+  "college": "Penn St.",
+  "birth_date": "1967-10-07",
+  "draft_year": "1990",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 11537,
+  "name": "Clint Jones",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1967,
+  "last_season": 1973,
+  "teams": [
+   "MIN",
+   "SDG"
+  ],
+  "college": "Michigan St.",
+  "birth_date": "1945-05-24",
+  "draft_year": "1967",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 12303,
+  "name": "Phil King",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1958,
+  "last_season": 1966,
+  "teams": [
+   "NYG",
+   "PIT",
+   "MIN"
+  ],
+  "college": "Vanderbilt",
+  "birth_date": "1936-06-22",
+  "draft_year": "1958",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 8367,
+  "name": "Gaston Green",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1988,
+  "last_season": 1992,
+  "teams": [
+   "RAM",
+   "DEN"
+  ],
+  "college": "UCLA",
+  "birth_date": "1966-08-01",
+  "draft_year": "1988",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 17132,
+  "name": "Bernie Parmalee",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1992,
+  "last_season": 1999,
+  "teams": [
+   "MIA",
+   "NYJ"
+  ],
+  "college": "Ball St.",
+  "birth_date": "1967-09-16",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 18360,
+  "name": "Oscar Reed",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1975,
+  "teams": [
+   "MIN",
+   "ATL"
+  ],
+  "college": "Colorado St.",
+  "birth_date": "1944-03-24",
+  "draft_year": "1968",
+  "draft_team": "Minnesota Vikings"
+ },
+ {
+  "player_id": 13546,
+  "name": "Kevin Long",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1981,
+  "teams": [
+   "NYJ"
+  ],
+  "college": "South Carolina",
+  "birth_date": "1955-01-20",
+  "draft_year": "1977",
+  "draft_team": "New York Jets"
+ },
+ {
+  "player_id": 23703,
+  "name": "Tyrone Wheatley",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1995,
+  "last_season": 1999,
+  "teams": [
+   "NYG",
+   "OAK"
+  ],
+  "college": "Michigan",
+  "birth_date": "1972-01-19",
+  "draft_year": "1995",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 3844,
+  "name": "Joe Childress",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1956,
+  "last_season": 1965,
+  "teams": [
+   "CRD",
+   "STL"
+  ],
+  "college": "Auburn",
+  "birth_date": "1933-10-26",
+  "draft_year": "1956",
+  "draft_team": "Chicago Cardinals"
+ },
+ {
+  "player_id": 15733,
+  "name": "Ronald Moore",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1993,
+  "last_season": 1998,
+  "teams": [
+   "PHO",
+   "ARI",
+   "NYJ",
+   "STL",
+   "DET",
+   "MIA"
+  ],
+  "college": "Pittsburg St.",
+  "birth_date": "1970-01-26",
+  "draft_year": "1993",
+  "draft_team": "Phoenix Cardinals"
+ },
+ {
+  "player_id": 7334,
+  "name": "Tucker Frederickson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1971,
+  "teams": [
+   "NYG"
+  ],
+  "college": "Auburn",
+  "birth_date": "1943-01-12",
+  "draft_year": "1965",
+  "draft_team": "New York Giants"
+ },
+ {
+  "player_id": 2585,
+  "name": "Curtis Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1983,
+  "teams": [
+   "BUF",
+   "HOU"
+  ],
+  "college": "Missouri",
+  "birth_date": "1954-12-07",
+  "draft_year": "1977",
+  "draft_team": "Buffalo Bills"
+ },
+ {
+  "player_id": 3471,
+  "name": "Lew Carpenter",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1953,
+  "last_season": 1963,
+  "teams": [
+   "DET",
+   "CLE",
+   "GNB"
+  ],
+  "college": "Arkansas",
+  "birth_date": "1932-01-12",
+  "draft_year": "1953",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 13584,
+  "name": "Tony Lorick",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1964,
+  "last_season": 1969,
+  "teams": [
+   "BAL",
+   "NOR"
+  ],
+  "college": "Arizona St.",
+  "birth_date": "1941-05-25",
+  "draft_year": "1964",
+  "draft_team": "Oakland Raiders"
+ },
+ {
+  "player_id": 20692,
+  "name": "Larry Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1969,
+  "last_season": 1974,
+  "teams": [
+   "RAM",
+   "WAS"
+  ],
+  "college": "Florida",
+  "birth_date": "1947-09-02",
+  "draft_year": "1969",
+  "draft_team": "Los Angeles Rams"
+ },
+ {
+  "player_id": 920,
+  "name": "Tony Baker",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1968,
+  "last_season": 1975,
+  "teams": [
+   "NOR",
+   "PHI",
+   "RAM",
+   "SDG"
+  ],
+  "college": "Iowa St.",
+  "birth_date": "1945-02-16",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 12290,
+  "name": "Horace King",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1975,
+  "last_season": 1983,
+  "teams": [
+   "DET"
+  ],
+  "college": "Georgia",
+  "birth_date": "1953-03-05",
+  "draft_year": "1975",
+  "draft_team": "Detroit Lions"
+ },
+ {
+  "player_id": 18391,
+  "name": "Dan Reeves",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1972,
+  "teams": [
+   "DAL"
+  ],
+  "college": "South Carolina",
+  "birth_date": "1944-01-19",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 11158,
+  "name": "Andy Johnson",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1974,
+  "last_season": 1981,
+  "teams": [
+   "NWE"
+  ],
+  "college": "Georgia",
+  "birth_date": "1952-10-18",
+  "draft_year": "1974",
+  "draft_team": "New England Patriots"
+ },
+ {
+  "player_id": 20771,
+  "name": "Sammie Smith",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1989,
+  "last_season": 1992,
+  "teams": [
+   "MIA",
+   "DEN"
+  ],
+  "college": "Florida St.",
+  "birth_date": "1967-05-16",
+  "draft_year": "1989",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 15228,
+  "name": "Terdell Middleton",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1983,
+  "teams": [
+   "GNB",
+   "TAM"
+  ],
+  "college": "Memphis",
+  "birth_date": "1955-04-08",
+  "draft_year": "1977",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 2741,
+  "name": "Theotis Brown",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1979,
+  "last_season": 1984,
+  "teams": [
+   "STL",
+   "SEA",
+   "KAN"
+  ],
+  "college": "UCLA",
+  "birth_date": "1957-04-20",
+  "draft_year": "1979",
+  "draft_team": "St. Louis Cardinals"
+ },
+ {
+  "player_id": 11136,
+  "name": "Billy Joe",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1963,
+  "last_season": 1968,
+  "teams": [
+   "DEN",
+   "BUF",
+   "MIA",
+   "NYJ"
+  ],
+  "college": "Villanova",
+  "birth_date": "1940-10-14",
+  "draft_year": "1963",
+  "draft_team": "Denver Broncos"
+ },
+ {
+  "player_id": 4171,
+  "name": "Junior Coffey",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1965,
+  "last_season": 1971,
+  "teams": [
+   "GNB",
+   "ATL",
+   "NYG"
+  ],
+  "college": "Washington",
+  "birth_date": "1942-03-21",
+  "draft_year": "1965",
+  "draft_team": "Green Bay Packers"
+ },
+ {
+  "player_id": 9198,
+  "name": "Leroy Harris",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1977,
+  "last_season": 1982,
+  "teams": [
+   "MIA",
+   "PHI"
+  ],
+  "college": "Arkansas St.",
+  "birth_date": "1954-07-03",
+  "draft_year": "1977",
+  "draft_team": "Miami Dolphins"
+ },
+ {
+  "player_id": 12837,
+  "name": "Fred Lane",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1997,
+  "last_season": 1999,
+  "teams": [
+   "CAR"
+  ],
+  "college": "Lane",
+  "birth_date": "1975-09-06",
+  "draft_year": null,
+  "draft_team": null
+ },
+ {
+  "player_id": 397,
+  "name": "Kimble Anders",
+  "pos": "RB",
+  "hof": false,
+  "legend": false,
+  "first_season": 1991,
+  "last_season": 1999,
+  "teams": [
+   "KAN"
+  ],
+  "college": "Houston",
+  "birth_date": "1966-09-10",
+  "draft_year": null,
+  "draft_team": null
  }
 ]

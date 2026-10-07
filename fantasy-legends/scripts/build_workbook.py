@@ -1,6 +1,8 @@
 """Combine the Fantasy Legends data files into one Excel workbook (for uploading to ChatGPT etc.).
 
-Usage: python build_workbook.py ../data ../data/fantasy_legends.xlsx
+Usage: python build_workbook.py ../data ../data/fantasy_legends.xlsx [POSITION]
+
+With POSITION (e.g. RB), the workbook holds only that position's players and game logs.
 """
 
 import json
@@ -15,7 +17,8 @@ NOTES = [
     ("Fantasy Legends: NFL game logs, 1950-1999", ""),
     ("", ""),
     ("Sheet", "What's in it"),
-    ("Players", "92 star QBs, RBs, WRs, TEs and kickers: position, Hall of Fame flag, seasons, teams, college, draft"),
+    ("Players", "Position, Hall of Fame flag, legend flag, seasons, teams, college, draft. legend = TRUE for the "
+                "hand-picked stars; the rest are every RB with 2,000+ career rushing yards in 1950-1999"),
     ("Player Game Logs", "One row per game per player (regular season + playoffs). Match to Players on player_id"),
     ("Team Defense Logs", "One row per team per game, every team 1950-1999"),
     ("Featured Defenses", "Regular-season totals for iconic defenses (Steel Curtain, '85 Bears, etc.)"),
@@ -61,7 +64,7 @@ def load_columnar(path):
     return pd.DataFrame(d["rows"], columns=d["columns"])
 
 
-def main(data_dir, out_path):
+def main(data_dir, out_path, position=None):
     players = pd.DataFrame(json.load(open(os.path.join(data_dir, "players.json"))))
     players["teams"] = players["teams"].str.join(", ")
     logs = load_columnar(os.path.join(data_dir, "player_gamelogs.json"))
@@ -70,8 +73,14 @@ def main(data_dir, out_path):
 
     sheets = {"Players": players, "Player Game Logs": logs,
               "Team Defense Logs": dst, "Featured Defenses": featured}
+    notes = NOTES
+    if position:
+        players = players[players["pos"] == position]
+        logs = logs[logs["pos"] == position]
+        sheets = {"Players": players, "Player Game Logs": logs}
+        notes = [n for n in NOTES if not n[0].startswith(("Team Defense", "Featured", "Team defense"))]
     with pd.ExcelWriter(out_path, engine="openpyxl") as xw:
-        pd.DataFrame(NOTES).to_excel(xw, sheet_name="Notes", index=False, header=False)
+        pd.DataFrame(notes).to_excel(xw, sheet_name="Notes", index=False, header=False)
         for name, df in sheets.items():
             df.to_excel(xw, sheet_name=name, index=False)
 
@@ -102,4 +111,4 @@ def main(data_dir, out_path):
 
 
 if __name__ == "__main__":
-    main(*sys.argv[1:3])
+    main(*sys.argv[1:4])
