@@ -56,13 +56,19 @@ FEATURED_DEFENSES = [
 ]
 
 # Position pools: every player at the position who clears a career (1950-1999) yardage bar,
-# on top of the hand-picked LEGENDS above. Source positions are hyphenated lists like "HB-FB".
+# on top of the hand-picked LEGENDS above. Source positions are hyphenated lists like "HB-FB";
+# a player listed at several positions goes to the first one listed ("RB-WR" -> RB, "WR-TE" -> WR,
+# "TE-WR" -> TE, which has no pool yet).
 POOLS = {
     "RB": {"source_positions": {"RB", "HB", "FB", "TB"}, "stat": "rushing_yards", "min_career": 2000},
+    "WR": {"source_positions": {"WR", "FL", "SE", "E"}, "stat": "receiving_yards", "min_career": 2000},
+    "TE": {"source_positions": {"TE"}, "stat": "receiving_yards", "min_career": None},  # no pool yet
 }
 
 # Hall of Famers who come in through a pool rather than LEGENDS.
 POOL_HALL_OF_FAMERS = {
     "Steve Van Buren", "Marion Motley", "Ollie Matson", "John Henry Johnson", "Frank Gifford",
     "Charley Trippi", "Doak Walker", "Jerome Bettis", "Edgerrin James", "Lenny Moore",
+    "Dante Lavelli", "Pete Pihos", "Bobby Mitchell", "Tommy McDonald", "Bob Hayes",
+    "Elroy Hirsch", "Tom Fears", "Raymond Berry", "Don Maynard", "Charlie Joiner",
 }

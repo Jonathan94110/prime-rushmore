@@ -116,9 +116,13 @@ def main(games_path, profiles_path, out_dir):
     candidate_ids = {p["player_id"] for n, *_ in LEGENDS for p in by_name.get(n, [])}
     pool_of = {}  # player_id -> pool position
     for p in profiles:
-        for pos, pool in POOLS.items():
-            if set((p["position"] or "").split("-")) & pool["source_positions"]:
-                pool_of[p["player_id"]] = pos
+        tokens = (p["position"] or "").split("-")
+        for tok in tokens:
+            pos = next((k for k, pool in POOLS.items() if tok in pool["source_positions"]), None)
+            if pos:
+                if POOLS[pos]["min_career"] is not None:
+                    pool_of[p["player_id"]] = pos
+                break
     candidate_ids |= set(pool_of)
 
     with open(games_path, "rb") as f:
