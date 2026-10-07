@@ -5,6 +5,10 @@ Reads the repaired decade CSVs in fantasy-legends/data/sheets and writes:
   data/players.json
   data/games_{qb,rb,wr,te,k,def}.json
 
+players.json also carries `dataVersion`: the first 12 hex digits of a SHA-256 over every games
+file and the players list, so a saved league can tell when the data has been rebuilt since it
+was played.
+
 Rules (from SPEC.md):
   * decade files only (*_gamelogs_1960s..1990s.csv); the full *_gamelogs.csv files repeat the same rows
   * regular season only (playoff == "False"), seasons 1960-1999
@@ -15,6 +19,7 @@ Rules (from SPEC.md):
 Usage: python3 build_data.py [SHEETS_DIR] [OUT_DIR]
 """
 import csv
+import hashlib
 import json
 import os
 import re
@@ -212,8 +217,12 @@ def build_position(src, pos):
     return columns, [row for row, _ in out_rows], players
 
 
+def to_json(obj):
+    return json.dumps(obj, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
+
+
 def dump(obj, path):
-    text = json.dumps(obj, separators=(",", ":"), ensure_ascii=False, allow_nan=False)
+    text = to_json(obj)
     with open(path, "w", encoding="utf-8", newline="") as fh:
         fh.write(text)
     return len(text.encode("utf-8"))
@@ -226,18 +235,25 @@ def main(argv):
 
     all_players = []
     summary = []
+    fingerprint = hashlib.sha256()
     for pos in POSITIONS:
         columns, rows, players = build_position(src, pos)
-        size = dump({"columns": columns, "rows": rows}, os.path.join(out, f"games_{pos.lower()}.json"))
+        name = f"games_{pos.lower()}.json"
+        games = {"columns": columns, "rows": rows}
+        size = dump(games, os.path.join(out, name))
+        fingerprint.update((name + "\n" + to_json(games) + "\n").encode("utf-8"))
         plist = sorted(players.values(), key=lambda p: (p["name"], p["id"]))
         all_players.extend(plist)
         summary.append((pos, len(rows), len(plist), size))
 
-    size = dump({"version": 1, "seasons": [FIRST_SEASON, LAST_SEASON], "players": all_players},
+    fingerprint.update(("players\n" + to_json(all_players) + "\n").encode("utf-8"))
+    data_version = fingerprint.hexdigest()[:12]
+    size = dump({"version": 1, "dataVersion": data_version, "seasons": [FIRST_SEASON, LAST_SEASON],
+                 "players": all_players},
                 os.path.join(out, "players.json"))
     for pos, n_rows, n_players, fsize in summary:
         print(f"games_{pos.lower()}.json: {n_rows} games, {n_players} players, {fsize} bytes")
-    print(f"players.json: {len(all_players)} players, {size} bytes")
+    print(f"players.json: {len(all_players)} players, {size} bytes, dataVersion {data_version}")
 
 
 if __name__ == "__main__":

@@ -979,7 +979,8 @@ test("free agents added late get a bye only if a regular week after the current 
 });
 
 test("dropping a starter for a player who can't fill that slot moves a bench player in", () => {
-  const db = stdDb();
+  // Spare kickers, so one is still a free agent after AI teams draft their backups.
+  const db = makeDb({ counts: Object.assign({}, STD_COUNTS, { K: 12 }), histOnly: STD_HIST_ONLY });
   const L = draftedLeague(db, { numTeams: 4, seed: "swap" });
   // Drop a team's FLEX starter for a kicker: a flex-capable bench player must move into FLEX.
   const team = L.teams.find((t) => L.lineups[t.id].bench.some((pid) => ["RB", "WR", "TE"].includes(posOf(db, pid))));
@@ -1115,4 +1116,247 @@ test("revealTimeline: highlights add up exactly to the final, one per starter wh
   assert.ok(checked > 30);
   assert.throws(() => FFP.revealTimeline(L, db, 18, 0), /hasn't been played/);
   assert.throws(() => FFP.revealTimeline(L, db, 1, 9), /No matchup/);
+});
+
+// ---------------------------------------------------------------------------
+// Regressions from the review
+// ---------------------------------------------------------------------------
+
+// A pool big enough for 16 teams in both modes.
+let BIG_DB = null;
+function bigDb() {
+  if (!BIG_DB) BIG_DB = makeDb({ counts: { QB: 34, RB: 40, WR: 40, TE: 34, K: 34, DEF: 34 }, games: 18 });
+  return BIG_DB;
+}
+
+function gamesPlayed(L) {
+  const n = {};
+  L.teams.forEach((t) => { n[t.id] = 0; });
+  for (let w = 1; w <= L.regularWeeks; w++) L.schedule[w].forEach((m) => { n[m.home]++; n[m.away]++; });
+  return n;
+}
+
+test("schedule (odd counts): the user is never idle in week 1 and never plays fewer games than anyone", () => {
+  const db = bigDb();
+  for (const n of [3, 5, 7, 9, 11, 13, 15]) {
+    for (const p of [2, 4, 6]) {
+      for (const seed of ["odd-a", "odd-b"]) {
+        const L = draftedLeague(db, { numTeams: n, playoffTeams: p, seed });
+        assert.equal(L.numTeams, n);
+        const ids = L.teams.map((t) => t.id);
+        const playing1 = L.schedule[1].flatMap((m) => [m.home, m.away]);
+        assert.ok(playing1.includes(L.userTeamId), `n=${n} p=${p} ${seed}: the user plays in week 1`);
+        const games = gamesPlayed(L);
+        const counts = Object.values(games);
+        const most = Math.max(...counts);
+        assert.equal(games[L.userTeamId], most, `n=${n} p=${p} ${seed}: user ${games[L.userTeamId]} games, most ${most}`);
+        assert.ok(most - Math.min(...counts) <= 1, `n=${n} p=${p}: game counts differ by at most one`);
+        // Still a circle-method round robin: every pair meets once in the first cycle, one idle team a week.
+        const pairs = new Set();
+        for (let w = 1; w <= Math.min(n, L.regularWeeks); w++) {
+          const pl = L.schedule[w].flatMap((m) => [m.home, m.away]);
+          assert.equal(new Set(pl).size, n - 1, "one idle team in week " + w);
+          L.schedule[w].forEach((m) => pairs.add([m.home, m.away].sort().join()));
+        }
+        if (L.regularWeeks >= n) assert.equal(pairs.size, n * (n - 1) / 2, "every pair meets once per cycle");
+        for (let w = n + 1; w <= L.regularWeeks; w++) {
+          const key = (ms) => ms.map((m) => [m.home, m.away].sort().join()).sort().join(";");
+          assert.equal(key(L.schedule[w]), key(L.schedule[w - n]), "pairings repeat in order");
+        }
+        assert.ok(ids.every((id) => games[id] > 0));
+      }
+    }
+  }
+  // Which computer team sits out week 1 depends on the seed.
+  const idleIn1 = new Set();
+  for (const seed of ["i1", "i2", "i3", "i4", "i5", "i6"]) {
+    const L = draftedLeague(db, { numTeams: 7, playoffTeams: 4, seed });
+    const pl = L.schedule[1].flatMap((m) => [m.home, m.away]);
+    idleIn1.add(L.teams.map((t) => t.id).find((id) => !pl.includes(id)));
+  }
+  assert.ok(idleIn1.size > 1, "the week-1 idle team varies with the seed");
+  assert.ok(!idleIn1.has("t0"));
+});
+
+// Kicker games for one player across two seasons. `split(season, fgm)` says whether the distance split is known.
+function kickerPlayer(id, seasons, split) {
+  const games = [];
+  let i = 0;
+  for (const season of seasons) {
+    for (let j = 0; j < 10; j++, i++) {
+      const fgm = j % 3 === 0 ? 0 : 1 + (j % 2);
+      const known = split(season, fgm);
+      games.push(Object.assign(gameBase(id, i), {
+        season, date: `${season}-10-${String(1 + j).padStart(2, "0")}`, game_id: `${season}10${String(1 + j).padStart(2, "0")}-${id}`,
+        fgm, fga: fgm + 1, fg_missed: 1, fgm_0_39: known ? fgm : null, fgm_40_49: known ? 0 : null,
+        fgm_50p: known ? 0 : null, xpm: 2, xpa: 2
+      }));
+    }
+  }
+  return { player: { id, name: "Kicker " + id, pos: "K", hof: false, legend: false, first: seasons[0], last: seasons[seasons.length - 1] }, games };
+}
+
+test("strict kickers: a season whose distance splits are known only for no-field-goal games isn't drawable", () => {
+  // 1990: splits known for every game. 1985: known only when no field goal was made (the pre-1999 pattern).
+  // K-c never has a split: no distance data at all doesn't make a season skewed.
+  const pattern = (season, fgm) => season === 1990 || fgm === 0;
+  const db = makeDb({ counts: {}, extraPlayers: [
+    kickerPlayer("K-a", [1985, 1990], pattern),
+    kickerPlayer("K-b", [1985, 1990], pattern),
+    kickerPlayer("K-c", [1990], () => false)
+  ] });
+  assert.deepEqual(db.fgDistanceSkewedSeasons, [1985]);
+  const strict = FFP.eligibleGames(db, "K-a", "strict", HIST);
+  assert.equal(strict.length, 10);
+  assert.ok(strict.every((g) => g.season === 1990), "only the unskewed season is drawable in Strict");
+  // The 1985 no-field-goal games are complete and still scoreable; they just aren't drawn.
+  const skewedGame = db.gamesByPid["K-a"].find((g) => g.season === 1985 && g.fgm === 0);
+  assert.equal(FFP.isEligible(skewedGame, "K", "strict", HIST), true);
+  assert.equal(FFP.scoreGame(skewedGame, "K", "strict", HIST).total, 1);
+  // Historical (flat field goals) uses every season.
+  assert.equal(FFP.eligibleGames(db, "K-a", "historical", HIST).length, 20);
+  assert.equal(FFP.eligibleGames(db, "K-c", "strict", HIST).length, 0);
+  // No kicker reaches 16 drawable Strict games, so the Strict pool has no kickers.
+  assert.equal(FFP.poolSummary(db, "strict", HIST).counts.K, 0);
+  assert.equal(FFP.poolSummary(db, "historical", HIST).counts.K, 2, "K-a and K-b have 20 games each; K-c has 10");
+  // Fully known seasons are never skewed.
+  const all = makeDb({ counts: {}, extraPlayers: [kickerPlayer("K-d", [1985, 1990], () => true)] });
+  assert.deepEqual(all.fgDistanceSkewedSeasons, []);
+  assert.equal(FFP.eligibleGames(all, "K-d", "strict", HIST).length, 20);
+});
+
+test("AI drafting keeps a backup at all but one position, and breaks the QB/TE/K/DEF cap only when forced", () => {
+  const db = bigDb();
+  for (const mode of ["historical", "strict"]) {
+    const L = draftedLeague(db, { numTeams: 8, playoffTeams: 4, mode, seed: "bench-" + mode });
+    for (const t of L.teams) {
+      const c = { QB: 0, RB: 0, WR: 0, TE: 0, K: 0, DEF: 0 };
+      L.rosters[t.id].forEach((pid) => { c[posOf(db, pid)]++; });
+      assert.ok(Object.values(c).every((x) => x >= 1 && x <= 2), t.id + " " + JSON.stringify(c));
+      assert.equal(Object.values(c).filter((x) => x === 1).length, 1, t.id + " has one position without a backup");
+    }
+    // A bye costs an AI team a starter at most once a season: autoLineup only starts a player on bye when
+    // nobody else on the roster can play that slot.
+    // (Before this fix every AI team had a lone TE, K and DEF: at least three bye starts a season.)
+    const forced = {};
+    // The user's lineup is used as saved, so set it the way an AI team's is set.
+    playChecked(FFP, L, db, { untilWeek: L.regularWeeks, beforeWeek: (lg, w) => FFP.autoLineup(lg, db, lg.userTeamId, w) });
+    for (let w = 1; w <= L.regularWeeks; w++) {
+      for (const m of L.results[w].matchups) {
+        for (const tid of [m.home, m.away]) forced[tid] = (forced[tid] || 0) + m.lines[tid].filter((l) => l.bye).length;
+      }
+    }
+    const total = Object.values(forced).reduce((a, b) => a + b, 0);
+    assert.ok(Object.values(forced).every((x) => x <= 2), mode + ": bye starts per team " + JSON.stringify(forced));
+    assert.ok(total < 2 * L.numTeams, mode + ": bye starts across the league " + total);
+  }
+
+  // Forced: two teams must take all 22 players, 10 of them defenses, so a third DEF is unavoidable.
+  const tight = makeDb({ counts: { QB: 2, RB: 3, WR: 3, TE: 2, K: 2, DEF: 10 } });
+  const T = newLeague(tight, { numTeams: 2, playoffTeams: 2, seed: "forced" });
+  let thirds = 0;
+  while (T.stage === "draft") {
+    const cp = FFP.currentPick(T);
+    const pid = FFP.aiPick(T, tight, cp.teamId);
+    const pos = posOf(tight, pid);
+    const have = T.rosters[cp.teamId].filter((x) => posOf(tight, x) === pos).length;
+    if (["QB", "TE", "K", "DEF"].includes(pos) && have >= 2) {
+      thirds++;
+      // Only when nothing within the cap was legal.
+      const own = (p) => T.rosters[cp.teamId].filter((x) => posOf(tight, x) === p).length;
+      const alternatives = FFP.freeAgents(T, tight).filter((p) => !(["QB", "TE", "K", "DEF"].includes(p.pos) && own(p.pos) >= 2))
+        .filter((p) => FFP.canPick(T, tight, cp.teamId, p.id).ok);
+      assert.deepEqual(alternatives.map((p) => p.id), [], "a capped-legal pick existed for " + cp.teamId);
+    }
+    FFP.makePick(T, tight, pid);
+  }
+  assert.ok(thirds > 0, "this pool forces at least one third DEF");
+});
+
+test("a save remembers its data build; replaying after the data was revised keeps the stored score", () => {
+  const db1 = stdDb();
+  assert.equal(db1.dataVersion, null, "fixtures carry no data version");
+  const tagged = (version, tweak) => {
+    const players = db1.players.map((p) => Object.assign({}, p));
+    const games = {};
+    for (const pos of POS) {
+      const list = Object.values(db1.gamesByPid).flat().filter((g) => db1.playersById[g.pid].pos === pos)
+        .map((g) => { const o = Object.assign({}, g); delete o.key; return o; });
+      games[pos] = list;
+    }
+    if (tweak) tweak(games);
+    return FFP.loadData({ players: { version: 1, dataVersion: version, seasons: [1960, 1999], players }, games });
+  };
+  const dbA = tagged("aaaaaaaaaaaa");
+  assert.equal(dbA.dataVersion, "aaaaaaaaaaaa");
+  const L = draftedLeague(dbA, { numTeams: 4, seed: "revise" });
+  assert.equal(L.dataVersion, "aaaaaaaaaaaa");
+  FFP.playWeek(L, dbA);
+  const saved = FFP.deserialize(FFP.serialize(L));
+  assert.equal(saved.dataVersion, "aaaaaaaaaaaa");
+
+  const m = saved.results[1].matchups[0];
+  const lines = m.lines[m.home].filter((l) => !l.bye);
+  const [changed, gone, unscoreable] = lines;
+  const kept = lines[3];
+  const posOfLine = (l) => dbA.playersById[l.pid].pos;
+  const dbB = tagged("bbbbbbbbbbbb", (games) => {
+    const find = (l) => games[posOfLine(l)].find((g) => g.pid + "|" + g.game_id === l.gameKey);
+    const g1 = find(changed);
+    if (posOfLine(changed) === "DEF") g1.pts_allowed = 0; else if (posOfLine(changed) === "K") g1.xpm += 3; else g1.rush_td += 1;
+    const g2 = find(gone);
+    games[posOfLine(gone)] = games[posOfLine(gone)].filter((g) => g !== g2);
+    const g3 = find(unscoreable);
+    g3.ret_td = null;
+    if (posOfLine(unscoreable) === "K") { g3.fgm = null; g3.fgm_0_39 = null; }
+  });
+  const r = FFP.revealTimeline(saved, dbB, 1, 0);
+  const byPid = {};
+  r.final.lines[m.home].forEach((l) => { byPid[l.pid] = l; });
+  for (const l of [changed, gone, unscoreable]) {
+    const shown = byPid[l.pid];
+    assert.equal(shown.points, l.points, "the stored score stands for " + l.pid);
+    assert.equal(shown.dataChanged, true, l.pid + " is flagged");
+    assert.deepEqual(shown.parts, [], "no breakdown that doesn't add up");
+  }
+  assert.notEqual(byPid[changed.pid].currentPoints, changed.points);
+  assert.equal(byPid[gone.pid].game, null);
+  assert.equal(byPid[gone.pid].currentPoints, null);
+  assert.equal(byPid[unscoreable.pid].currentPoints, null);
+  assert.equal(byPid[kept.pid].dataChanged, false);
+  assert.equal(byPid[kept.pid].parts.reduce((a, p) => a + H(p.points), 0), H(kept.points));
+  assert.equal(r.final.homeScore, m.homeScore);
+  const sum = r.highlights.filter((h) => h.teamId === m.home).reduce((a, h) => a + H(h.points), 0);
+  assert.equal(sum, H(m.homeScore), "highlights still add up to the stored final");
+  // Unchanged data: nothing is flagged.
+  const same = FFP.revealTimeline(saved, dbA, 1, 0);
+  for (const tid of [m.home, m.away]) assert.ok(same.final.lines[tid].every((l) => l.dataChanged === false));
+});
+
+test("deserialize rejects structurally broken saves with a clear error", () => {
+  const db = stdDb();
+  const L = draftedLeague(db, { numTeams: 4, seed: "shape" });
+  FFP.playWeek(L, db);
+  FFP.playWeek(L, db);
+  const good = JSON.parse(FFP.serialize(L));
+  const broken = (mutate) => { const o = JSON.parse(JSON.stringify(good)); mutate(o.league); return JSON.stringify(o); };
+  assert.throws(() => FFP.deserialize(broken((lg) => { delete lg.schedule; })), /damaged or incomplete: the schedule/);
+  assert.throws(() => FFP.deserialize(broken((lg) => { delete lg.lineups; })), /damaged or incomplete: the lineups/);
+  assert.throws(() => FFP.deserialize(broken((lg) => { delete lg.lineups.t1.QB; })), /lineup is missing its QB/);
+  assert.throws(() => FFP.deserialize(broken((lg) => { delete lg.results[1]; })), /results for week 1 are missing/);
+  assert.throws(() => FFP.deserialize(broken((lg) => { delete lg.stage; })), /stage/);
+  assert.throws(() => FFP.deserialize(broken((lg) => { lg.rosters.t2.pop(); })), /roster/);
+  assert.throws(() => FFP.deserialize(JSON.stringify({ saveVersion: 1, engineVersion: "proto-1", league: { teams: [], rosters: {} } })),
+    /damaged or incomplete: the team list/);
+  // Every stage of a real league still loads.
+  assert.deepEqual(FFP.deserialize(FFP.serialize(L)), L);
+  const D = newLeague(db, { numTeams: 4, seed: "shape-draft" });
+  assert.deepEqual(FFP.deserialize(FFP.serialize(D)), D);
+  const C = draftedLeague(db, { numTeams: 5, playoffTeams: 4, seed: "shape-done" });
+  while (C.stage === "season") FFP.playWeek(C, db);
+  assert.deepEqual(FFP.deserialize(FFP.serialize(C)), C);
+  // A save written before leagues carried a data version still loads.
+  const old = JSON.parse(FFP.serialize(L));
+  delete old.league.dataVersion;
+  assert.equal(FFP.deserialize(JSON.stringify(old)).dataVersion, undefined);
 });

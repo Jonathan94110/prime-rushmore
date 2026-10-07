@@ -109,6 +109,56 @@
     return S.pools[key];
   }
 
+  // Which games a mode can draw, per position, worked out from the loaded data (never hard-coded).
+  function coverage(mode, settings) {
+    var key = "cov|" + mode + "|" + JSON.stringify(settings || {});
+    if (S.pools[key]) return S.pools[key];
+    var out = {};
+    POSITIONS.forEach(function (p) { out[p] = { games: 0, eligible: 0, seasons: {} }; });
+    S.db.players.forEach(function (pl) {
+      var c = out[pl.pos];
+      if (!c) return;
+      c.games += (S.db.gamesByPid[pl.id] || []).length;
+      FFP.eligibleGames(S.db, pl.id, mode, settings).forEach(function (g) { c.eligible++; c.seasons[g.season] = true; });
+    });
+    POSITIONS.forEach(function (p) {
+      var ss = Object.keys(out[p].seasons).map(Number).sort(function (a, b) { return a - b; });
+      out[p].first = ss.length ? ss[0] : null;
+      out[p].last = ss.length ? ss[ss.length - 1] : null;
+      out[p].seasonCount = ss.length;
+      out[p].pct = out[p].games ? Math.round(100 * out[p].eligible / out[p].games) : 0;
+    });
+    S.pools[key] = out;
+    return out;
+  }
+
+  function joinAnd(list) {
+    return list.length <= 1 ? list.join("") : list.slice(0, -1).join(", ") + " and " + list[list.length - 1];
+  }
+
+  // "QB, RB, WR and TE: 83–84% of games, 1960–1999. K and DEF: 1999 games only."
+  function coverageText(mode, settings) {
+    var cov = coverage(mode, settings);
+    var groups = [];
+    var byKey = {};
+    POSITIONS.forEach(function (p) {
+      var c = cov[p];
+      var key = !c.eligible ? "none" : c.seasonCount === 1 ? "one|" + c.first : (c.pct === 100 ? "all|" : "some|") + c.first + "|" + c.last;
+      if (!byKey[key]) { byKey[key] = { key: key, pos: [], pcts: [], c: c }; groups.push(byKey[key]); }
+      byKey[key].pos.push(p);
+      byKey[key].pcts.push(c.pct);
+    });
+    return groups.map(function (g) {
+      var who = joinAnd(g.pos);
+      var c = g.c;
+      if (g.key === "none") return who + ": no games.";
+      if (g.key.indexOf("one|") === 0) return who + ": " + c.first + " games only.";
+      if (g.key.indexOf("all|") === 0) return who + ": every game, " + c.first + "–" + c.last + ".";
+      var lo = Math.min.apply(null, g.pcts), hi = Math.max.apply(null, g.pcts);
+      return who + ": " + (lo === hi ? lo : lo + "–" + hi) + "% of games, " + c.first + "–" + c.last + ".";
+    }).join(" ");
+  }
+
   function hofBadge(p) { return p && p.hof ? ' <span class="hof" title="Pro Football Hall of Fame">HOF</span>' : ""; }
   function posChip(pos) { return '<span class="pos">' + esc(pos || "?") + "</span>"; }
 
@@ -132,16 +182,28 @@
     el.textContent = text || "";
     el.classList.toggle("warn", !!warn);
   }
+  var NO_STORAGE = "This browser isn't keeping saves (storage is blocked or full). Open Saves and copy your league to keep it.";
+
+  // Returns true when the league reached localStorage.
   function save() {
-    if (!S.league) return;
+    if (!S.league) return true;
     var text = FFP.serialize(S.league);
+    var ok = true;
     try {
       window.localStorage.setItem(SAVE_KEY, text);
       setSaveStatus("Saved in this browser.");
     } catch (e) {
-      setSaveStatus("This browser isn't keeping saves (storage is blocked or full). Open Saves and copy your league to keep it.", true);
+      ok = false;
+      setSaveStatus(NO_STORAGE, true);
     }
-    if (!$("save-panel").hidden) $("save-export").value = text;
+    S.storageOk = ok;
+    if (!$("save-panel").hidden) { $("save-export").value = text; renderSaveHint(); }
+    return ok;
+  }
+  function renderSaveHint() {
+    $("save-hint").textContent = S.storageOk === false ?
+      "This browser isn't keeping saves (storage is blocked or full), so your league is gone when the page reloads. Copy this text to keep it, and paste it into Import to pick up where you left off." :
+      "Your league autosaves in this browser. To keep a copy or move it to another device, copy this text and paste it into Import later.";
   }
   function readSave() { try { return window.localStorage.getItem(SAVE_KEY); } catch (e) { return null; } }
   function clearSave() { try { window.localStorage.removeItem(SAVE_KEY); } catch (e) { /* storage unavailable */ } }
@@ -170,10 +232,25 @@
     $("confirm-text").textContent = text;
     $("confirm-yes").textContent = yesLabel;
     S.confirmAction = onYes;
+    S.confirmOpener = document.activeElement;
     $("confirm-bar").hidden = false;
     $("confirm-yes").focus();
   }
   function closeConfirm() { $("confirm-bar").hidden = true; S.confirmAction = null; }
+  function cancelConfirm() {
+    var back = S.confirmOpener;
+    closeConfirm();
+    S.confirmOpener = null;
+    if (back && back !== document.body && document.contains(back) && !back.disabled && back.offsetParent !== null) back.focus();
+  }
+  // Move keyboard focus to the first match that is on screen, so a re-render doesn't drop it on the page body.
+  function focusFirst(selector) {
+    var els = document.querySelectorAll(selector);
+    for (var i = 0; i < els.length; i++) {
+      if (!els[i].disabled && els[i].offsetParent !== null) { els[i].focus(); return true; }
+    }
+    return false;
+  }
 
   // ------------------------------------------------------------------ loading
 
@@ -293,7 +370,15 @@
       }
     }
     initSetupForm();
-    route();
+    try {
+      route();
+    } catch (e) {
+      stopDraftTimer();
+      S.league = null;
+      S.bootNotice = "Your saved league couldn't be opened: " + (e && e.message ? e.message : String(e)) + " Start a new league or import a save.";
+      setSaveStatus("");
+      showSetup();
+    }
   }
 
   function checkLeagueAgainstData(lg) {
@@ -374,6 +459,9 @@
         return '<td class="num">' + fmtInt(c[p]) + "</td>";
       }).join("") + '<td class="num">' + sum.maxTeams + "</td></tr></tbody>";
     $("pool-label").textContent = modeName(v.mode) + ": players with " + FFP.MIN_GAMES + " or more eligible games";
+    if (!$("setup-strict-coverage").textContent) {
+      $("setup-strict-coverage").textContent = "In this data: " + coverageText("strict", { historical: { includeInterceptions: false } });
+    }
 
     var sel = $("setup-teams");
     var want = Number(sel.dataset.want || sel.value || 8);
@@ -527,19 +615,26 @@
     var myTurn = !!cp && team(cp.teamId).isUser && !S.draft.busy;
     var list = draftList();
     var shown = list.slice(0, S.draft.limit);
+    var blocked = [];
     var rows = shown.map(function (p) {
       var chk = FFP.canPick(lg, S.db, uid(), p.id);
       var disabled = !myTurn || !chk.ok;
       var why = !chk.ok ? chk.reason : (!myTurn ? "Wait for your pick." : "Draft " + p.name);
+      if (!chk.ok && blocked.indexOf(chk.reason) < 0) blocked.push(chk.reason);
       var pl = player(p.id);
       return "<tr" + (chk.ok ? "" : ' class="taken"') + '><td class="player"><span class="player-name">' + esc(p.name) + "</span>" + hofBadge(p) +
-        '<span class="player-sub">' + esc([yearsOf(p)].concat(pl.teams || []).join(" · ")) + '<span class="show-sm"> · ' + p.eligibleCount + " games</span></span></td>" +
+        '<span class="player-sub">' + esc([yearsOf(p)].concat(pl.teams || []).join(" · ")) + '<span class="show-sm"> · ' + p.eligibleCount + " games</span></span>" +
+        (chk.ok ? "" : '<span class="sr">You can\'t draft him now. ' + esc(chk.reason) + "</span>") + "</td>" +
         "<td>" + posChip(p.pos) + '</td><td class="n hide-sm">' + p.eligibleCount +
         '</td><td class="n">' + p.avgPoints.toFixed(2) + '</td><td><button type="button" class="btn btn-small" id="pick-' + esc(p.id) +
         '" data-pick="' + esc(p.id) + '" title="' + esc(why) + '"' + (disabled ? " disabled" : "") + ">Draft</button></td></tr>";
     });
     if (!rows.length) rows.push('<tr class="empty-row"><td colspan="5">No available players match this search.</td></tr>');
     $("draft-tbody").innerHTML = rows.join("");
+    var note = $("draft-blocked");
+    note.hidden = !blocked.length;
+    note.innerHTML = blocked.length ? "<b>Greyed-out players can't be drafted by you right now.</b> " +
+      blocked.slice(0, 4).map(esc).join(" ") + (blocked.length > 4 ? " (and " + (blocked.length - 4) + " more reasons)" : "") : "";
     $("draft-more").hidden = list.length <= S.draft.limit;
     $("draft-count").textContent = "Showing " + shown.length + " of " + list.length + " available";
     $("draft-autopick").disabled = !myTurn;
@@ -670,6 +765,9 @@
       lg.week <= lg.regularWeeks ? "Regular season: weeks 1–" + lg.regularWeeks + ". Playoffs (" + lg.playoffTeams + " teams): weeks " + (lg.regularWeeks + 1) + "–" + FFP.TOTAL_WEEKS + "." :
       "Playoffs: " + lg.playoffTeams + " teams, weeks " + (lg.regularWeeks + 1) + "–" + FFP.TOTAL_WEEKS + ".";
     $("hub-sub").textContent = phase;
+    var revised = (lg.dataVersion || null) !== (S.db.dataVersion || null);
+    $("hub-notice").hidden = !revised;
+    $("hub-notice").textContent = revised ? "This league was saved with an earlier build of the game data. Weeks already played keep their stored scores, and a replay marks any game whose record has changed since. New weeks draw from the current data." : "";
     $("hub-record").innerHTML = "<dl><div><dt>" + esc(teamName(uid())) + "</dt><dd>" + recText(me) + "</dd></div><div><dt>Rank</dt><dd>" + me.rank + "/" + lg.numTeams +
       "</dd></div><div><dt>Points for</dt><dd>" + fmtPts(me.pf) + "</dd></div></dl>";
     ["week", "team", "schedule", "standings", "fa", "results", "rules"].forEach(function (t) {
@@ -750,7 +848,7 @@
       html += '<div class="matchup-card"><div class="side home"><span class="tmeta">Home · ' + esc(hs) + recText(st.byId[m.home]) + '</span><span class="tname">' + esc(teamName(m.home)) +
         '</span></div><span class="vs-mark" aria-hidden="true">vs</span><div class="side away"><span class="tmeta">Visitors · ' + esc(as) + recText(st.byId[m.away]) +
         '</span><span class="tname">' + esc(teamName(m.away)) + '</span></div><div class="matchup-actions"><button type="button" class="btn btn-primary btn-big" id="play-week" data-week="' + w + '">Play week ' + w +
-        '</button><span class="fine">Draws one real game for every player in the league, then opens the scoreboard.</span></div></div>';
+        '</button><span class="fine">Draws one real game for every player on a team with a game this week, then opens the scoreboard.</span></div></div>';
     } else {
       html += '<div class="matchup-card"><div class="side"><span class="tmeta">' + esc(weekLabel(w)) + '</span><span class="tname">No game for ' + esc(teamName(uid())) + "</span>" +
         '<span class="hub-sub">' + esc(noGameReason(w)) + '</span></div><div class="matchup-actions"><button type="button" class="btn btn-primary btn-big" id="play-week" data-week="' + w + '">Play week ' + w +
@@ -938,7 +1036,9 @@
         '</span></td><td class="n">' + r.w + '</td><td class="n">' + r.l + '</td><td class="n">' + r.t + '</td><td class="n">' + fmtPts(r.pf) + '</td><td class="n">' + fmtPts(r.pa) + "</td></tr>";
     }).join("");
     var html = '<div class="week-block"><h3 class="label-rule">Standings</h3><div class="table-wrap"><table class="stat-table"><thead><tr><th class="n">#</th><th>Team</th><th class="n">W</th><th class="n">L</th><th class="n">T</th><th class="n">PF</th><th class="n">PA</th></tr></thead><tbody>' +
-      rows + '</tbody></table></div><p class="fine">Ranked by wins (a tie counts half), then points for. The dashed line is the playoff cut: the top ' + lg.playoffTeams + " make it.</p></div>";
+      rows + '</tbody></table></div><p class="fine">Ranked by wins (a tie counts half), then points for. ' +
+      (lg.playoffTeams >= lg.numTeams ? "All " + lg.numTeams + " teams make the playoffs; this order sets the seeds." :
+        "The dashed line is the playoff cut: the top " + lg.playoffTeams + " make it.") + "</p></div>";
     html += bracketHtml(st);
     $("panel-standings").innerHTML = html;
   }
@@ -1062,11 +1162,20 @@
       return FFP.requiredFields(pos, lg.mode, lg.settings).map(function (f) { return FIELD_NAMES[f] || f; }).join(", ");
     }
     var sum = FFP.poolSummary(S.db, lg.mode, lg.settings, lg.rules);
+    var skewed = strict ? (S.db.fgDistanceSkewedSeasons || []) : [];
+    var kCov = skewed.length ? coverage("strict", lg.settings).K : null;
+    var kSeasons = !kCov || kCov.seasonCount === 0 ? "no seasons" : kCov.seasonCount === 1 ? String(kCov.first) : kCov.first + "–" + kCov.last;
+    var kickerRule = skewed.length ? "<p>Strict kickers: for " + (skewed.length === 1 ? skewed[0] : skewed[0] + "–" + skewed[skewed.length - 1]) +
+      " the data knows field-goal distances only for games with no field goal made. Drawing from those would hand every kicker his worst games, so Strict draws kickers' games only from seasons where distances were recorded (" +
+      esc(kSeasons) + ").</p>" : "";
     var html = '<div class="prose"><h3 class="label-rule">How scoring works in ' + modeName(lg.mode) + " mode</h3>" +
       "<p>" + (strict ?
-        "Strict scores the full rule set. A game is eligible only when every stat it scores was recorded, which in this data means 1999 games." :
+        "Strict scores the full rule set. A game is eligible only when every stat it scores was recorded. In this data: " + esc(coverageText("strict", lg.settings)) :
         "Historical scores the stats recorded for every game since 1960. Stats that weren't kept for older games (two-point conversions, fumble-recovery TDs, field-goal distances, sacks before 1982, takeaways) aren't scored in this mode.") + "</p>" +
-      "<p>Each week every rostered player who isn't on his bye draws one of his eligible games at random. That game is used up for the rest of the league. Starters' points make the team score; bench games are drawn too but don't count. Average points only rank players for the draft and the computer teams.</p></div>" +
+      (strict ? kickerRule : "") +
+      "<p>Each week, every rostered player on a team with a game that week draws one of his eligible games at random, unless he's on his bye. That game is used up for the rest of the league. " +
+      "Teams without a game draw nothing, so their players use up no games: the idle team in a league with an odd number of teams, the top two seeds in the wild-card week, and teams out of the playoffs. " +
+      "Starters' points make the team score; bench games are drawn too but don't count. Average points only rank players for the draft and the computer teams.</p></div>" +
       '<div class="rules-grid"><div class="panel"><h3>Offense (QB, RB, WR, TE)</h3><ul class="rule-list">' + off + "</ul>" +
       '<p class="fine">Offense values are placeholders until the live site\'s scoring code is in hand.</p></div>' +
       '<div class="panel"><h3>Kicker</h3><ul class="rule-list">' + kick + "</ul></div>" +
@@ -1079,6 +1188,8 @@
       ", RB " + sum.counts.RB + ", WR " + sum.counts.WR + ", TE " + sum.counts.TE + ", K " + sum.counts.K + ", DEF " + sum.counts.DEF + ".</li></ul>" +
       '<h3 class="label-rule">Data and caveats</h3><ul>' +
       "<li>Game logs come from Pro-Football-Reference, collected in a Kaggle scrape. Two-point conversions, fumble-recovery TDs, field-goal distances and defensive takeaways for 1999 come from nflverse.</li>" +
+      "<li>Some zeros are proven rather than recorded. When a team's recorded touchdowns, extra points and field goals add up to its final score, nothing else scored for it, so that game's safeties, two-point conversions and defensive and fumble-recovery TDs are 0. The NFL had no two-point conversion before 1994, so those are 0 as well. Field-goal distances are 0 when no field goal was made.</li>" +
+      "<li>Where a defense's interception count disagrees with the opposing passers' interceptions thrown, the count is left unknown.</li>" +
       "<li>Regular-season games only, 1960–1999: " + fmtInt(S.totalGames) + " player-games for " + fmtInt(S.db.players.length) + " players and franchises. A defense is a franchise across its cities.</li>" +
       "<li>Unknown stats are never filled in or counted as zero. A game missing a stat this mode needs is simply not eligible.</li>" +
       "<li>Quarters and highlights in the game center are made up to pace the reveal. The final stat lines are real.</li>" +
@@ -1182,7 +1293,7 @@
     setBoardScore("gc-away-score", as, !final);
     var q = final ? "F" : cur ? String(cur.quarter) : "";
     Array.prototype.forEach.call($("gc-lamps").children, function (li) { li.classList.toggle("on", li.dataset.q === q); });
-    $("gc-board-count").textContent = final ? "Final" : "Play " + pad2(Math.max(0, g.step + 1)) + "/" + pad2(n);
+    $("gc-board-count").textContent = final ? "Final" : "Highlight " + pad2(Math.max(0, g.step + 1)) + "/" + pad2(n);
     $("gc-board-count").className = final ? "lit" : "";
     $("gc-home").classList.toggle("winner", final && tl.final.winner === tl.vs.home.teamId);
     $("gc-away").classList.toggle("winner", final && tl.final.winner === tl.vs.away.teamId);
@@ -1214,7 +1325,7 @@
         (h.teamId === tl.vs.home.teamId ? "<b>" + fmtPts(h.homeScore) + "</b>–" + fmtPts(h.awayScore) : fmtPts(h.homeScore) + "–<b>" + fmtPts(h.awayScore) + "</b>") + "</span></li>");
     }
     $("gc-feed").innerHTML = items.join("");
-    $("gc-feed-title").textContent = final ? "Highlights (made up, in order shown)" : "Highlights";
+    $("gc-feed-title").textContent = final ? "Highlights (made up), latest first" : "Highlights, latest first";
 
     var playBtn = $("gc-play");
     playBtn.textContent = g.phase === "vs" ? "Kick off" : final ? "Watch again" : g.paused ? "Resume" : "Pause";
@@ -1331,7 +1442,9 @@
       bits.push("allowed " + val(gm.pts_allowed));
       var add = function (f, label) { if (gm[f] !== null && gm[f] !== undefined) bits.push(gm[f] + " " + label); else unknown.push(FIELD_NAMES[f]); };
       add("sacks", "sacks");
-      add("def_int", "INT");
+      // An interception count is shown only when it was verified against the opposing passers.
+      if (gm.int_verified === true && gm.def_int !== null && gm.def_int !== undefined) bits.push(gm.def_int + " INT");
+      else unknown.push("a verified interception count");
       add("fum_rec", "fumble rec");
       add("safeties", "safeties");
       var blk = ["blk_punt", "blk_fg", "blk_xp"];
@@ -1340,22 +1453,37 @@
       if (gm.def_int_td !== null && gm.def_int_td !== undefined && gm.def_fum_td !== null && gm.def_fum_td !== undefined) bits.push((gm.def_int_td + gm.def_fum_td) + " defensive TD");
       else unknown.push("defensive TDs");
       bits.push(val(gm.ret_td) + " return TD");
-      if (gm.def_int !== null && gm.int_verified === false) unknown.push("a verified interception count");
     }
     return { text: bits.join(" · "), unknown: unknown };
   }
 
   function partsText(parts) {
-    return parts.map(function (p) { return p.label + " " + p.value + " = " + fmtPts(p.points); }).join(" · ");
+    return parts.map(function (p) {
+      if (p.stat === "pts_allowed") return p.value + " points allowed = " + fmtPts(p.points);
+      return p.label + " " + p.value + " = " + fmtPts(p.points);
+    }).join(" · ");
+  }
+
+  // The data was revised after this week was played: the stored score stands (engine revealTimeline).
+  function revisedNote(l) {
+    if (!l.game) return "This game is no longer in the game data, so its stat line can't be shown. The score stored for this week stands.";
+    if (l.currentPoints === null || l.currentPoints === undefined) {
+      return "This game's record was revised after this week was played and no longer counts in this mode. The stat line above is the revised record; the score stored for this week stands.";
+    }
+    return "This game's record was revised after this week was played; the revised record above would score " + fmtPts(l.currentPoints) +
+      ". The score stored for this week stands.";
   }
 
   function lineHtml(l) {
     var top = '<div class="line-top"><span class="slot">' + esc(l.slot) + '</span><span class="nm">' + esc(l.name) + " " + posChip(l.pos) + '</span><span class="pts num">' + fmtPts(l.points) + "</span></div>";
-    if (l.bye || !l.game) return '<li class="line">' + top + '<p class="game">Bye week. No game drawn, 0 points.</p></li>';
+    if (l.bye) return '<li class="line">' + top + '<p class="game">Bye week. No game drawn, 0 points.</p></li>';
+    var attrs = ' data-pid="' + esc(l.pid) + '" data-points="' + l.points.toFixed(2) + '"';
+    if (!l.game) return '<li class="line"' + attrs + ">" + top + '<p class="revised">' + esc(revisedNote(l)) + "</p></li>";
     var st = statLine(l.game, l.pos);
-    return '<li class="line" data-pid="' + esc(l.pid) + '" data-points="' + l.points.toFixed(2) + '">' + top + '<p class="game">' + esc(gameLineText(l.game)) + "</p>" +
+    return '<li class="line"' + attrs + ">" + top + '<p class="game">' + esc(gameLineText(l.game)) + "</p>" +
       '<p class="stats">' + esc(st.text) + "</p>" +
-      '<p class="parts">' + (l.parts.length ? esc(partsText(l.parts)) : "No scoring plays") + "</p>" +
+      (l.dataChanged ? '<p class="revised">' + esc(revisedNote(l)) + "</p>" :
+        '<p class="parts">' + (l.parts.length ? esc(partsText(l.parts)) : "No scoring plays") + "</p>") +
       (st.unknown.length ? '<p class="unknown">Not recorded for this game: ' + esc(st.unknown.join(", ")) + ". Not scored in this mode.</p>" : "") + "</li>";
   }
 
@@ -1399,6 +1527,7 @@
       $("save-copy").disabled = !S.league;
       $("save-copy-status").textContent = "";
       $("import-error").textContent = "";
+      renderSaveHint();
     }
   }
 
@@ -1434,17 +1563,31 @@
       return;
     }
     function apply() {
+      var prev = S.league, prevTab = S.tab;
       stopGcTimer();
       stopDraftTimer();
       S.league = lg;
       S.tab = "week";
       S.fa.addPid = null;
       S.fa.msg = "";
-      save();
+      try {
+        route();
+      } catch (e) {
+        // Don't keep a league the page can't show: put the previous one back and say why.
+        stopGcTimer();
+        stopDraftTimer();
+        S.league = prev;
+        S.tab = prevTab;
+        route();
+        toggleSaves(true);
+        $("import-error").textContent = "This save couldn't be opened: " + (e && e.message ? e.message : String(e)) + " Your current league is unchanged.";
+        $("save-import").focus();
+        return;
+      }
+      var ok = save();
       $("save-import").value = "";
       toggleSaves(false);
-      route();
-      setSaveStatus("Loaded the imported save.");
+      setSaveStatus(ok ? "Loaded the imported save." : "Loaded the imported save. " + NO_STORAGE, !ok);
     }
     if (S.league) askConfirm("Load this save? It replaces the league in this browser.", "Load save", apply);
     else apply();
@@ -1473,7 +1616,7 @@
       closeConfirm();
       if (fn) fn();
     });
-    $("confirm-no").addEventListener("click", closeConfirm);
+    $("confirm-no").addEventListener("click", cancelConfirm);
     $("save-copy").addEventListener("click", copySave);
     $("import-form").addEventListener("submit", importSave);
 
@@ -1555,8 +1698,19 @@
         guard("hub-error", function () { openGame(Number(parts[0]), Number(parts[1])); })();
         return;
       }
-      if (b.dataset.add) { S.fa.addPid = b.dataset.add; S.fa.msg = ""; renderFaTab(); var c = document.querySelector(".drop-chooser"); if (c) c.scrollIntoView({ block: "nearest" }); return; }
-      if (b.id === "fa-cancel") { S.fa.addPid = null; renderFaTab(); return; }
+      if (b.dataset.add) {
+        S.fa.addPid = b.dataset.add; S.fa.msg = ""; renderFaTab();
+        var c = document.querySelector(".drop-chooser");
+        if (c) c.scrollIntoView({ block: "nearest" });
+        if (!focusFirst(".drop-chooser button[data-drop]")) focusFirst("#fa-cancel");
+        return;
+      }
+      if (b.id === "fa-cancel") {
+        var was = S.fa.addPid;
+        S.fa.addPid = null; renderFaTab();
+        if (!(was && focusFirst('#fa-body button[data-add="' + was + '"]'))) $("fa-search").focus();
+        return;
+      }
       if (b.id === "fa-more") { S.fa.limit += PAGE; renderFaTab(); return; }
       if (b.dataset.drop) {
         guard("fa-error", function () {
@@ -1568,6 +1722,8 @@
             (bye === null || bye === undefined ? "No regular-season weeks are left, so he has no bye." : player(add).name + "'s bye is week " + bye + ".");
           S.fa.addPid = null;
           renderHub();
+          var done = document.querySelector("#fa-body .notice.good");
+          if (done) { done.tabIndex = -1; done.focus(); }
         })();
       }
     });

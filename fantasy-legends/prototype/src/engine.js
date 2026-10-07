@@ -40,8 +40,19 @@
     FLEX: ["RB", "WR", "TE"], DEF: ["DEF"], K: ["K"]
   };
 
-  // Positions an AI team will not take a third of (unless nothing else is legal).
-  var AI_CAPPED = { QB: 2, TE: 2, K: 2, DEF: 2 };
+  /*
+   * AI roster caps, tried in order until one gives a legal pick:
+   *   1. at most 2 at every position. Twelve places for eleven picks, so each AI roster ends up with a
+   *      backup at all but one position, and a bye rarely leaves one of its starting slots empty.
+   *   2. at most 2 each of QB, TE, K, DEF (the spec's cap): a third RB or WR is allowed.
+   *   3. anything legal. Only reached when the pool forces it (for example a small Strict pool where
+   *      the remaining players can't fill every roster within the caps).
+   */
+  var AI_CAPS = [
+    { QB: 2, RB: 2, WR: 2, TE: 2, K: 2, DEF: 2 },
+    { QB: 2, TE: 2, K: 2, DEF: 2 },
+    {}
+  ];
 
   var AI_TEAM_NAMES = [
     "Leather Helmets", "Single Wing", "Flying Wedge", "Wishbone", "Run-and-Shoot",
@@ -304,6 +315,41 @@
     return db._ffpCache;
   }
 
+  /*
+   * Strict kickers and selection bias. Strict scores field goals by distance, so a kicker's game is
+   * strict-eligible only when the distance split is known. If a season's data knows the split mostly
+   * for games with no field goal made (before 1999 the sheets know it only for those: all three bins
+   * are a proven 0), drawing from that season would hand Strict kickers their worst games. Such a
+   * season is "skewed": its kicker games stay scoreable (isEligible) but are not drawable in Strict
+   * (eligibleGames, draftPool, playWeek). A season is skewed when, counting only kickers with a known
+   * split in at least one game that season, made-field-goal games have a known split at a rate more
+   * than FG_SKEW_TOLERANCE below games without a field goal made.
+   */
+  var FG_SKEW_TOLERANCE = 0.1;
+
+  function countFgDistance(stats, g) {
+    if (!isNum(g.fgm) || !isNum(g.season)) return;
+    var bySeason = stats[g.season] || (stats[g.season] = {});
+    var s = bySeason[g.pid] || (bySeason[g.pid] = { made: 0, madeKnown: 0, none: 0, noneKnown: 0 });
+    var known = isNum(g.fgm_0_39) && isNum(g.fgm_40_49) && isNum(g.fgm_50p);
+    if (g.fgm > 0) { s.made++; if (known) s.madeKnown++; } else { s.none++; if (known) s.noneKnown++; }
+  }
+
+  function skewedSeasons(stats) {
+    return Object.keys(stats).map(Number).filter(function (season) {
+      var t = { made: 0, madeKnown: 0, none: 0, noneKnown: 0 };
+      Object.keys(stats[season]).forEach(function (pid) {
+        var s = stats[season][pid];
+        if (s.madeKnown + s.noneKnown === 0) return; // no distance data for him this season: no selection
+        t.made += s.made; t.madeKnown += s.madeKnown; t.none += s.none; t.noneKnown += s.noneKnown;
+      });
+      if (!t.made) return false;
+      var madeRate = t.madeKnown / t.made;
+      var noneRate = t.none ? t.noneKnown / t.none : 0;
+      return madeRate < noneRate - FG_SKEW_TOLERANCE;
+    }).sort(function (a, b) { return a - b; });
+  }
+
   /**
    * loadData({players, games: {QB, RB, WR, TE, K, DEF}}) -> db.
    * `players` is players.json (or its players array); each games entry is {columns, rows}
@@ -315,11 +361,15 @@
       : (input.players && Array.isArray(input.players.players) ? input.players.players : []);
     var db = {
       version: input.players && input.players.version !== undefined ? input.players.version : null,
+      // Fingerprint of the data build (players.json `dataVersion`), stored in leagues so a save can tell
+      // when the data has been revised since it was played. null when the data doesn't carry one.
+      dataVersion: input.players && typeof input.players.dataVersion === "string" ? input.players.dataVersion : null,
       seasons: input.players && input.players.seasons ? input.players.seasons.slice() : [FIRST_SEASON, LAST_SEASON],
       players: [],
       playersById: {},
       gamesByPid: {},
-      duplicateGames: 0
+      duplicateGames: 0,
+      fgDistanceSkewedSeasons: []
     };
     plist.forEach(function (p) {
       db.players.push(p);
@@ -327,6 +377,7 @@
       if (!db.gamesByPid[p.id]) db.gamesByPid[p.id] = [];
     });
     var seen = {};
+    var fgStats = {};
     var games = input.games || {};
     POSITIONS.forEach(function (pos) {
       var g = games[pos];
@@ -348,8 +399,10 @@
         seen[o.key] = true;
         if (!db.gamesByPid[o.pid]) db.gamesByPid[o.pid] = [];
         db.gamesByPid[o.pid].push(o);
+        if (pos === "K") countFgDistance(fgStats, o);
       });
     });
+    db.fgDistanceSkewedSeasons = skewedSeasons(fgStats);
     Object.keys(db.gamesByPid).forEach(function (pid) {
       db.gamesByPid[pid].sort(function (a, b) {
         return cmpStr(String(a.date), String(b.date)) || cmpStr(String(a.game_id), String(b.game_id));
@@ -371,14 +424,23 @@
     var p = db.playersById[pid];
     var games = db.gamesByPid[pid] || [];
     var pos = p ? p.pos : null;
+    var skewed = null;
+    if (mode === "strict" && pos === "K" && db.fgDistanceSkewedSeasons && db.fgDistanceSkewedSeasons.length) {
+      skewed = {};
+      db.fgDistanceSkewedSeasons.forEach(function (s) { skewed[s] = true; });
+    }
     var out = (pos && POSITIONS.indexOf(pos) >= 0)
-      ? games.filter(function (g) { return isEligible(g, pos, mode, settings); })
+      ? games.filter(function (g) { return isEligible(g, pos, mode, settings) && !(skewed && skewed[g.season]); })
       : [];
     m[pid] = out;
     return out;
   }
 
-  /** Eligible games for a player in a mode (date order). */
+  /**
+   * Eligible games for a player in a mode (date order): the games a player can draw. In Strict a
+   * kicker's games from a skewed season (see FG_SKEW_TOLERANCE) are left out even though isEligible
+   * accepts them.
+   */
   function eligibleGames(db, pid, mode, settings) {
     checkMode(mode);
     return eligibleInternal(db, pid, mode, settings).slice();
@@ -514,6 +576,7 @@
 
     return {
       engineVersion: ENGINE_VERSION,
+      dataVersion: db.dataVersion || null,
       name: (opts.name && String(opts.name).trim()) || "Fantasy Football of the Past",
       mode: mode,
       settings: settings,
@@ -697,7 +760,10 @@
     return league;
   }
 
-  /** Best available avgPoints that keeps the team (and league) able to fill every starter. */
+  /**
+   * Best available avgPoints that keeps the team (and league) able to fill every starter, within the
+   * first AI_CAPS level that leaves a legal pick.
+   */
   function aiPick(league, db, teamId) {
     if (league.stage !== "draft") throw new Error("The draft is over.");
     var ctx = draftContext(league, db);
@@ -705,11 +771,12 @@
     if (!t) throw new Error("Unknown team " + teamId + ".");
     if (t.size >= ROSTER_SIZE) throw new Error("That roster is full.");
     var list = ctx.pool.list;
-    for (var pass = 0; pass < 2; pass++) {
+    for (var pass = 0; pass < AI_CAPS.length; pass++) {
+      var caps = AI_CAPS[pass];
       for (var i = 0; i < list.length; i++) {
         var e = list[i];
         if (hasOwn(ctx.owners, e.id)) continue;
-        if (pass === 0 && AI_CAPPED[e.pos] !== undefined && t.counts[e.pos] >= AI_CAPPED[e.pos]) continue;
+        if (caps[e.pos] !== undefined && t.counts[e.pos] >= caps[e.pos]) continue;
         if (checkPick(league, ctx, teamId, e.id).ok) return e.id;
       }
     }
@@ -731,10 +798,14 @@
   // Season
   // ---------------------------------------------------------------------------
 
-  // Circle-method round robin; a null "idle" slot when the count is odd.
+  /*
+   * Circle-method round robin. With an even count, ids[0] is the fixed point. With an odd count the
+   * dummy "idle" slot is the fixed point, so the team order sets who sits out when: ids[n-1] is idle
+   * in round 1, ids[n-2] in round 2, ..., ids[0] in the last round of the cycle.
+   */
   function roundRobin(ids) {
-    var arr = ids.slice();
-    if (arr.length % 2 === 1) arr.push(null);
+    var odd = ids.length % 2 === 1;
+    var arr = odd ? [null].concat(ids) : ids.slice();
     var n = arr.length;
     var rounds = [];
     var rot = arr.slice();
@@ -743,7 +814,8 @@
       for (var i = 0; i < n / 2; i++) {
         var a = rot[i], b = rot[n - 1 - i];
         if (a === null || b === null) continue;
-        var swap = i === 0 ? (r % 2 === 1) : (i % 2 === 1);
+        // Odd counts: home/away is set over the whole season in buildSchedule.
+        var swap = odd ? false : i === 0 ? (r % 2 === 1) : (i % 2 === 1);
         games.push(swap ? { home: b, away: a } : { home: a, away: b });
       }
       rounds.push(games);
@@ -752,12 +824,43 @@
     return rounds;
   }
 
-  function buildSchedule(league) {
+  /*
+   * Team order for the round robin. Odd counts: the user goes first, so his idle week is the last
+   * round of each cycle. He is never idle in week 1, and when the regular season isn't a whole number
+   * of cycles the extra idle weeks fall on computer teams (chosen by a seeded shuffle), so the user
+   * never plays fewer games than anyone else.
+   */
+  function scheduleOrder(league) {
     var ids = league.teams.map(function (t) { return t.id; });
-    var rounds = roundRobin(ids);
+    if (ids.length % 2 === 0) return ids;
+    var user = league.userTeamId || ids[0];
+    var others = ids.filter(function (id) { return id !== user; });
+    return [user].concat(seededShuffle(others, rngStream(league.seed, "schedule")));
+  }
+
+  function buildSchedule(league) {
+    var order = scheduleOrder(league);
+    var rounds = roundRobin(order);
+    var odd = order.length % 2 === 1;
+    // Odd counts: in week order, the team that has hosted less (net of road games) hosts; on a tie,
+    // the pair swaps from their last meeting.
+    var net = {}, lastHome = {};
     var schedule = {};
     for (var w = 1; w <= league.regularWeeks; w++) {
-      schedule[w] = copy(rounds[(w - 1) % rounds.length]);
+      var games = copy(rounds[(w - 1) % rounds.length]);
+      if (odd) {
+        games = games.map(function (g) {
+          var a = g.home, b = g.away, pair = [a, b].sort().join("|");
+          var na = net[a] || 0, nb = net[b] || 0;
+          var home = na !== nb ? (na < nb ? a : b) : lastHome[pair] === a ? b : a;
+          var away = home === a ? b : a;
+          net[home] = (net[home] || 0) + 1;
+          net[away] = (net[away] || 0) - 1;
+          lastHome[pair] = home;
+          return { home: home, away: away };
+        });
+      }
+      schedule[w] = games;
     }
     return schedule;
   }
@@ -1102,7 +1205,88 @@
     if (obj.engineVersion !== ENGINE_VERSION) {
       throw new Error("Unknown engine version " + JSON.stringify(obj.engineVersion) + "; this build is " + ENGINE_VERSION + ".");
     }
+    var problem = leagueShapeProblem(obj.league);
+    if (problem) throw new Error("This save is damaged or incomplete: " + problem);
     return copy(obj.league);
+  }
+
+  /*
+   * Structural check of a saved league: everything the engine and UI read without further checks.
+   * Returns a plain-language problem, or null. It doesn't check players against the data (the caller
+   * has the db for that).
+   */
+  function leagueShapeProblem(lg) {
+    var isObj = function (x) { return !!x && typeof x === "object" && !Array.isArray(x); };
+    var isStr = function (x) { return typeof x === "string" && x.length > 0; };
+    var isInt = function (x) { return typeof x === "number" && isFinite(x) && Math.floor(x) === x; };
+    if (!isObj(lg)) return "there is no league in it.";
+    if (!Array.isArray(lg.teams) || lg.teams.length < 2 || lg.teams.length > MAX_TEAMS) return "the team list is missing or the wrong size.";
+    var ids = {};
+    for (var i = 0; i < lg.teams.length; i++) {
+      var t = lg.teams[i];
+      if (!isObj(t) || !isStr(t.id) || typeof t.name !== "string" || ids[t.id]) return "a team is missing its id or name.";
+      ids[t.id] = true;
+    }
+    if (lg.numTeams !== lg.teams.length) return "the number of teams doesn't match the team list.";
+    if (!isStr(lg.userTeamId) || !ids[lg.userTeamId]) return "it doesn't say which team is yours.";
+    if (MODES.indexOf(lg.mode) < 0) return "the scoring mode is missing.";
+    if (!isObj(lg.settings) || !isObj(lg.settings.historical)) return "the league settings are missing.";
+    if (!isObj(lg.rules) || !isObj(lg.rules.offense) || !isObj(lg.rules.kicker) || !isObj(lg.rules.defense) ||
+        !Array.isArray(lg.rules.defense.pa_tiers)) return "the scoring rules are missing.";
+    if (lg.seed === undefined || lg.seed === null) return "the seed is missing.";
+    if ([2, 4, 6].indexOf(lg.playoffTeams) < 0 || lg.playoffRounds !== playoffRoundsFor(lg.playoffTeams) ||
+        lg.regularWeeks !== TOTAL_WEEKS - lg.playoffRounds) return "the playoff settings are missing or don't fit together.";
+    if (["draft", "season", "complete"].indexOf(lg.stage) < 0) return "the league stage is missing.";
+    if (!Array.isArray(lg.draftOrder) || lg.draftOrder.length !== lg.numTeams ||
+        !lg.draftOrder.every(function (id) { return ids[id]; })) return "the draft order is missing.";
+    if (!Array.isArray(lg.picks)) return "the pick list is missing.";
+    if (!isObj(lg.rosters)) return "the rosters are missing.";
+    var size = lg.stage === "draft" ? null : ROSTER_SIZE;
+    for (var tid in ids) {
+      var r = lg.rosters[tid];
+      if (!Array.isArray(r) || !r.every(isStr)) return "a roster is missing.";
+      if (size !== null && r.length !== size) return "a roster doesn't have " + ROSTER_SIZE + " players.";
+    }
+    var names = ["schedule", "byes", "lineups", "consumed", "results"];
+    for (var k = 0; k < names.length; k++) if (!isObj(lg[names[k]])) return "the " + names[k] + " section is missing.";
+    for (var pid in lg.consumed) if (!Array.isArray(lg.consumed[pid])) return "the list of used games is damaged.";
+    if (!Array.isArray(lg.transactions)) return "the list of moves is missing.";
+    if (!isInt(lg.week) || lg.week < 0 || lg.week > TOTAL_WEEKS) return "the current week is missing.";
+    var matchupOk = function (m) { return isObj(m) && ids[m.home] && ids[m.away]; };
+    for (var w in lg.schedule) {
+      if (!Array.isArray(lg.schedule[w]) || !lg.schedule[w].every(matchupOk)) return "the schedule for week " + w + " is damaged.";
+    }
+    for (var rw in lg.results) {
+      var res = lg.results[rw];
+      if (!isObj(res) || !Array.isArray(res.matchups)) return "the results for week " + rw + " are damaged.";
+      for (var j = 0; j < res.matchups.length; j++) {
+        var m = res.matchups[j];
+        if (!matchupOk(m) || typeof m.homeScore !== "number" || typeof m.awayScore !== "number" || !isObj(m.lines)) {
+          return "the results for week " + rw + " are damaged.";
+        }
+        var sides = [m.home, m.away];
+        for (var s = 0; s < 2; s++) {
+          var lines = m.lines[sides[s]];
+          if (!Array.isArray(lines) || !lines.every(function (l) { return isObj(l) && isStr(l.pid) && typeof l.points === "number"; })) {
+            return "the results for week " + rw + " are damaged.";
+          }
+        }
+      }
+    }
+    if (lg.stage === "draft") return null;
+    if (lg.week < 1) return "the current week is missing.";
+    for (var wk = 1; wk <= lg.regularWeeks; wk++) if (!lg.schedule[wk]) return "the schedule for week " + wk + " is missing.";
+    if (lg.stage === "season" && !lg.schedule[lg.week]) return "the schedule for week " + lg.week + " is missing.";
+    if (!isObj(lg.playoffs)) return "the playoff bracket is missing.";
+    for (var lt in ids) {
+      var lu = lg.lineups[lt];
+      if (!isObj(lu) || !Array.isArray(lu.bench)) return "a lineup is missing.";
+      for (var q = 0; q < SLOTS.length; q++) if (!isStr(lu[SLOTS[q]])) return "a lineup is missing its " + SLOTS[q] + ".";
+    }
+    for (var pw = 1; pw < (lg.stage === "complete" ? TOTAL_WEEKS + 1 : lg.week); pw++) {
+      if (!lg.results[pw]) return "the results for week " + pw + " are missing.";
+    }
+    return null;
   }
 
   function findGame(db, pid, key) {
@@ -1123,17 +1307,36 @@
     var m = res.matchups[matchupIndex];
     if (!m) throw new Error("No matchup " + matchupIndex + " in week " + week + ".");
 
+    /*
+     * A stored result is never rescored: `points` is always the stored value. The parts are recomputed
+     * from the loaded data, and if the data was revised after the week was played (the game is gone,
+     * no longer scoreable, or scores differently) the line gets `dataChanged: true`, `parts: []` and
+     * `currentPoints` (what the revised record scores, or null), so nothing shows a breakdown that
+     * doesn't add up to the stored score.
+     */
     var detail = function (line) {
       var p = db.playersById[line.pid] || {};
-      var game = line.gameKey ? findGame(db, line.pid, line.gameKey) : null;
-      if (line.gameKey && !game) throw new Error("Game " + line.gameKey + " isn't in the loaded data.");
-      var parts = game ? scoreGame(game, p.pos, league.mode, league.settings, league.rules).parts : [];
-      var g = null;
-      if (game) { g = copy(game); }
-      return {
+      var out = {
         slot: line.slot, pid: line.pid, name: p.name || line.pid, pos: p.pos || null, bye: line.bye,
-        points: line.points, parts: parts, game: g
+        points: line.points, parts: [], game: null, dataChanged: false
       };
+      if (!line.gameKey) return out;
+      var game = findGame(db, line.pid, line.gameKey);
+      if (!game) {
+        out.dataChanged = true;
+        out.currentPoints = null;
+        return out;
+      }
+      out.game = copy(game);
+      var scored = null;
+      try { scored = scoreGame(game, p.pos, league.mode, league.settings, league.rules); } catch (e) { scored = null; }
+      if (scored && ptsToH(scored.total) === ptsToH(line.points)) {
+        out.parts = scored.parts;
+      } else {
+        out.dataChanged = true;
+        out.currentPoints = scored ? scored.total : null;
+      }
+      return out;
     };
 
     var side = function (tid) {

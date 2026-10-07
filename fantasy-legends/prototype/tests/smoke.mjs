@@ -25,6 +25,23 @@ const SCREENS = path.join(HERE, "screens");
 const SAVE_KEY = "ffp-proto-save-v1";
 const ALLOWED_HOSTS = new Set(["fonts.googleapis.com", "fonts.gstatic.com"]);
 
+// Expected pool limits come from the engine and the shipped data, not from hard-coded numbers.
+function expectedPools() {
+  const req = createRequire(import.meta.url);
+  const FFP = req(path.join(P, "src", "engine.js"));
+  const read = (f) => JSON.parse(fs.readFileSync(path.join(DIST, "data", f), "utf8"));
+  const games = {};
+  for (const pos of ["QB", "RB", "WR", "TE", "K", "DEF"]) games[pos] = read(`games_${pos.toLowerCase()}.json`);
+  const db = FFP.loadData({ players: read("players.json"), games });
+  const H = { historical: { includeInterceptions: false } };
+  // Seasons a Strict quarterback can draw from, to check the mode card's coverage line against.
+  const qbSeasons = new Set();
+  for (const p of db.players) if (p.pos === "QB") for (const g of FFP.eligibleGames(db, p.id, "strict", H)) qbSeasons.add(g.season);
+  const ss = [...qbSeasons].sort((a, b) => a - b);
+  const qbSpan = ss.length === 1 ? `${ss[0]} games only` : `${ss[0]}–${ss[ss.length - 1]}`;
+  return { strict: FFP.poolSummary(db, "strict", H), historical: FFP.poolSummary(db, "historical", H), qbSpan };
+}
+
 if (!process.env.PLAYWRIGHT_BROWSERS_PATH && fs.existsSync("/opt/pw-browsers")) {
   process.env.PLAYWRIGHT_BROWSERS_PATH = "/opt/pw-browsers";
 }
@@ -145,7 +162,7 @@ async function playWeekAndCheck(page, opts = {}) {
   await page.click("#gc-next");
   await page.click("#gc-next");
   const count = await page.textContent("#gc-board-count");
-  check(/Play 03\//.test(count), `week ${week}: Next highlight steps the reveal`, count);
+  check(/^Highlight 03\//.test(count), `week ${week}: Next highlight steps the reveal (counted as highlights, not plays)`, count);
   const lamps = await page.$$eval("#gc-lamps li.on", (els) => els.map((e) => e.dataset.q));
   check(lamps.length === 1 && /^[1-4]$/.test(lamps[0]), `week ${week}: one quarter lamp lit during the reveal`, lamps.join(","));
   if (opts.shotPrefix) await shot(page, opts.shotPrefix + "-game-reveal", false);
@@ -249,14 +266,21 @@ async function main() {
     await page.waitForSelector("#screen-setup:not([hidden])", { timeout: 120000 });
     pass("data loads and the setup screen appears", `${((Date.now() - t0) / 1000).toFixed(1)} s`);
     check((await page.title()) === "Fantasy Football of the Past", "page title");
+    const pools = expectedPools();
     await page.check("#setup-mode-strict");
     const strictMax = await page.$$eval("#setup-teams option", (o) => Math.max(...o.map((x) => Number(x.value))));
     const strictWhy = await page.textContent("#setup-teams-why");
-    check(strictMax === 10 && /10 quarterbacks/.test(strictWhy), "Strict shows its max teams and why", `${strictMax}: ${strictWhy}`);
+    const whyOk = pools.strict.maxTeams >= 16 ? /up to 16 teams/.test(strictWhy) : new RegExp("at most " + pools.strict.maxTeams + " teams").test(strictWhy);
+    check(strictMax === pools.strict.maxTeams && whyOk, "Strict shows its max teams and why", `${strictMax} (data says ${pools.strict.maxTeams}): ${strictWhy}`);
+    const strictQb = await page.$$eval("#pool-counts td", (tds) => Number(tds[0].textContent.replace(/,/g, "")));
+    check(strictQb === pools.strict.counts.QB, "Strict pool counts come from the data", `${strictQb} QBs`);
+    const coverageText = await page.textContent("#setup-strict-coverage");
+    check(/^In this data: /.test(coverageText) && coverageText.split(".")[0].includes("QB") && coverageText.split(".")[0].includes(pools.qbSpan),
+      "Strict mode card describes the data's coverage", `${coverageText} (QB span from the data: ${pools.qbSpan})`);
     check(await page.isDisabled("#setup-int"), "interceptions proposal applies to Historical only");
     await page.check("#setup-mode-historical");
     const histMax = await page.$$eval("#setup-teams option", (o) => Math.max(...o.map((x) => Number(x.value))));
-    check(histMax === 16, "Historical allows 16 teams", String(histMax));
+    check(histMax === pools.historical.maxTeams, "Historical shows its max teams", `${histMax} (data says ${pools.historical.maxTeams})`);
     await page.evaluate(() => document.fonts.ready);
     await noHorizontalScroll(page, "desktop setup");
     await shot(page, "desktop-light-setup");
@@ -363,6 +387,16 @@ async function main() {
     const exported = await page.inputValue("#save-export");
     check(exported.length > 1000 && JSON.parse(exported).saveVersion === 1, "Saves panel shows the export text");
     await noHorizontalScroll(page, "400px saves panel");
+    // A save with the right version but a missing section is refused with a clear error, and nothing changes.
+    const savedBefore = (await readSave(page)).text;
+    const brokenSave = JSON.parse(exported);
+    delete brokenSave.league.schedule;
+    await page.fill("#save-import", JSON.stringify(brokenSave));
+    await page.click("#save-load");
+    const importErr = await page.textContent("#import-error");
+    check(/damaged or incomplete/.test(importErr) && (await page.isVisible("#screen-hub")) && (await readSave(page)).text === savedBefore,
+      "a structurally broken save is refused with a clear error and the league is kept", importErr);
+    await page.fill("#save-import", "");
     await page.click("#btn-saves");
     await page.click("#btn-new-league");
     await page.waitForSelector("#confirm-bar:not([hidden])");
@@ -408,6 +442,43 @@ async function main() {
 
     await page.waitForLoadState("networkidle");
     await context.close();
+
+    // ---- Storage blocked: the page still works, and says so even after importing a save
+    const blockedCtx = await browser.newContext({ viewport: { width: 1280, height: 900 }, colorScheme: "light" });
+    await blockedCtx.route((url) => url.host === baseUrl.host && (url.pathname === "/" || url.pathname === "/index.html"), async (route) => {
+      const resp = await route.fetch();
+      const body = await resp.text();
+      const headers = { ...resp.headers(), "content-type": "text/html; charset=utf-8" };
+      delete headers["content-length"];
+      await route.fulfill({ status: resp.status(), headers, body: SKELETON_HEAD + body + SKELETON_TAIL });
+    });
+    await blockedCtx.addInitScript(() => {
+      const no = () => { throw new DOMException("blocked", "SecurityError"); };
+      Storage.prototype.getItem = no; Storage.prototype.setItem = no; Storage.prototype.removeItem = no;
+    });
+    const bp = await blockedCtx.newPage();
+    bp.on("pageerror", (err) => problems.push("page error (storage blocked): " + err.message));
+    await bp.goto(base + "index.html");
+    await bp.waitForSelector("#screen-setup:not([hidden])", { timeout: 120000 });
+    await bp.click("#quick-start");
+    await bp.waitForSelector("#screen-hub:not([hidden])", { timeout: 30000 });
+    check(await bp.$eval("#save-status", (e) => e.classList.contains("warn") && /isn't keeping saves/.test(e.textContent)),
+      "storage blocked: the page warns that saves aren't kept");
+    await bp.click("#btn-saves");
+    check(/isn't keeping saves/.test(await bp.textContent("#save-hint")), "storage blocked: the Saves panel says the league won't survive a reload");
+    const blockedExport = await bp.inputValue("#save-export");
+    await bp.click("#btn-saves");
+    await bp.click("#btn-new-league");
+    await bp.click("#confirm-yes");
+    await bp.waitForSelector("#screen-setup:not([hidden])");
+    await bp.click("#btn-saves");
+    await bp.fill("#save-import", blockedExport);
+    await bp.click("#save-load");
+    await bp.waitForSelector("#screen-hub:not([hidden])");
+    const blockedStatus = await bp.$eval("#save-status", (e) => ({ warn: e.classList.contains("warn"), text: e.textContent }));
+    check(blockedStatus.warn && /Loaded the imported save/.test(blockedStatus.text) && /isn't keeping saves/.test(blockedStatus.text),
+      "storage blocked: importing keeps the warning", blockedStatus.text);
+    await blockedCtx.close();
   } finally {
     await browser.close();
     proc.kill();

@@ -9,7 +9,7 @@
   --paper-sunk: #d4dbe3;
   --ink: #14223e;
   --ink-soft: #435069;
-  --ink-faint: #5f6c84;
+  --ink-faint: #525e75;
   --rule: #b2bdca;
   --rule-strong: #14223e;
   --pennant: #a82329;
@@ -51,7 +51,7 @@
     --paper-sunk: #08101c;
     --ink: #e1e7f0;
     --ink-soft: #a9b4c6;
-    --ink-faint: #8693a8;
+    --ink-faint: #939fb4;
     --rule: #26324a;
     --rule-strong: #c9d2e0;
     --pennant: #f07a76;
@@ -80,7 +80,7 @@
   --paper-sunk: #08101c;
   --ink: #e1e7f0;
   --ink-soft: #a9b4c6;
-  --ink-faint: #8693a8;
+  --ink-faint: #939fb4;
   --rule: #26324a;
   --rule-strong: #c9d2e0;
   --pennant: #f07a76;
@@ -317,7 +317,7 @@ a { color: var(--ink); }
 .stat-table .n { text-align: right; font-family: var(--font-util); font-size: 0.875rem; white-space: nowrap; }
 .stat-table th.n { text-align: right; }
 .stat-table tr.me td { background: var(--highlight); }
-.stat-table tr.me td:first-child { box-shadow: inset 4px 0 0 var(--pennant); }
+.stat-table tr.me td:first-child { box-shadow: inset 4px 0 0 var(--pennant); padding-left: calc(4px + 0.4rem); }
 .stat-table tr.cut td { border-bottom: 2px dashed var(--ink-soft); }
 .stat-table tr.taken td { color: var(--ink-faint); }
 .stat-table .player { min-width: 10rem; }
@@ -492,6 +492,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
   white-space: nowrap;
 }
 .tab:hover { color: var(--ink); }
+.tab:focus-visible { outline-offset: -6px; }
 .tab[aria-selected="true"] { color: var(--ink); border-bottom-color: var(--pennant-fill); }
 .tabpanel { display: flex; flex-direction: column; gap: 1.5rem; min-width: 0; }
 
@@ -542,7 +543,12 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 .sr-team.won .tn { font-weight: 700; }
 .sr-team.won .sc { font-weight: 600; color: var(--ink); }
 .sr-act { justify-self: end; }
-.tag { font-family: var(--font-util); font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--ink-soft); }
+.tag { font-family: var(--font-util); font-size: 0.6875rem; letter-spacing: 0.04em; color: var(--ink-soft); white-space: nowrap; }
+/* The week tab's side column is narrow at every width: stack the two teams so names get the full width. */
+.two-col .score-row { grid-template-columns: minmax(0, 1fr) auto; }
+.two-col .sr-team { grid-column: 1; }
+.two-col .sr-team + .sr-team { border-left: 0; padding-left: 0; }
+.two-col .sr-act { grid-column: 2; grid-row: 1 / span 2; }
 
 .week-block { display: flex; flex-direction: column; gap: 0.25rem; }
 .week-block h3 { font-family: var(--font-util); font-size: 0.8125rem; font-weight: 600; letter-spacing: 0.1em; text-transform: uppercase; color: var(--ink-soft); padding-top: 0.75rem; }
@@ -789,7 +795,10 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
 .line .parts { color: var(--ink-soft); font-variant-numeric: tabular-nums; }
 .line .unknown { color: var(--ink-faint); font-style: italic; }
 .final-check { font-family: var(--font-util); font-size: 0.75rem; color: var(--ink-faint); }
-.bench-section .line { opacity: 0.85; }
+.bench-section .line { border-bottom-style: dashed; }
+.bench-section .line-top .pts { color: var(--ink-soft); }
+.line .revised { margin-left: 3.5rem; padding: 0.1rem 0 0.1rem 0.6rem; font-size: 0.8125rem; color: var(--ink); border-left: 3px solid var(--pennant); min-width: 0; overflow-wrap: anywhere; }
+.draft-blocked { border-left: 3px solid var(--pennant); padding-left: 0.6rem; }
 
 .other-games { display: flex; flex-direction: column; gap: 0.5rem; }
 
@@ -816,6 +825,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
   .sr-act { grid-column: 2; grid-row: 1 / span 2; }
   .gc-controls .speed { margin-left: 0; }
   .line .game, .line .stats, .line .parts, .line .unknown { padding-left: 0; }
+  .line .revised { margin-left: 0; }
   .lineup li { grid-template-columns: 2.5rem minmax(0, 1fr) 4rem; gap: 0.4rem; }
   .lineup .meta { font-size: 0.65rem; white-space: nowrap; }
   .kickoff-facts dd { font-size: var(--step-1); }
@@ -863,7 +873,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
     <div class="save-grid">
       <div>
         <h3 class="field-label">Export this league</h3>
-        <p class="hint">Your league autosaves in this browser. To keep a copy or move it to another device, copy this text and paste it into Import later.</p>
+        <p class="hint" id="save-hint">Your league autosaves in this browser. To keep a copy or move it to another device, copy this text and paste it into Import later.</p>
         <label class="sr" for="save-export">Save text</label>
         <textarea id="save-export" rows="5" readonly></textarea>
         <div class="btn-row">
@@ -935,7 +945,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
               </label>
               <label class="mode-card" for="setup-mode-strict">
                 <span class="mode-title"><input type="radio" name="setup-mode" id="setup-mode-strict" value="strict"> Strict</span>
-                <p>Scores the full modern rule set, so a game counts only when every stat is known: two-point conversions, fumble-recovery TDs, field-goal distances, sacks, takeaways and blocks. In this data that means 1999 games only.</p>
+                <p>Scores the full modern rule set, so a game counts only when every stat is known: two-point conversions, fumble-recovery TDs, field-goal distances, sacks, takeaways and blocks. <span id="setup-strict-coverage"></span></p>
               </label>
             </div>
           </fieldset>
@@ -1024,6 +1034,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
             </div>
             <label class="check" for="draft-hof"><input type="checkbox" id="draft-hof"><span>Hall of Fame only</span></label>
           </div>
+          <p class="hint draft-blocked" id="draft-blocked" hidden></p>
           <div class="table-wrap">
             <table class="stat-table" id="draft-table">
               <thead>
@@ -1073,6 +1084,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
           <button type="button" class="tab" role="tab" id="tab-rules" aria-controls="panel-rules" aria-selected="false">Rules &amp; data</button>
         </div>
       </div>
+      <p class="notice" id="hub-notice" hidden></p>
       <p class="error" id="hub-error" role="alert"></p>
       <div class="tabpanel" id="panel-week" role="tabpanel" aria-labelledby="tab-week"></div>
       <div class="tabpanel" id="panel-team" role="tabpanel" aria-labelledby="tab-team" hidden></div>
@@ -1156,7 +1168,7 @@ fieldset { margin: 0; padding: 0; border: 0; min-width: 0; }
   </main>
 
   <footer class="colophon">
-    Prototype. Game logs from Pro-Football-Reference via a Kaggle scrape, with nflverse detail for 1999. Unknown stats are never filled in. Data reuse rights are not settled.
+    Prototype. Game logs from Pro-Football-Reference via a Kaggle scrape, with nflverse detail for 1999 and zeros proven from final scores. Unknown stats are never filled in. Data reuse rights are not settled.
   </footer>
 </div>
 <script>/*__ENGINE__*/</script>

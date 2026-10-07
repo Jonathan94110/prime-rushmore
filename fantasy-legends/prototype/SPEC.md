@@ -27,7 +27,7 @@ an unknown into 0. Numbers stay numbers. `source` columns are copied as-is.
 
 ### `players.json`
 ```json
-{ "version": 1, "seasons": [1960, 1999],
+{ "version": 1, "dataVersion": "2622f67a7cea", "seasons": [1960, 1999],
   "players": [
     {"id": "QB-15597", "name": "Joe Montana", "pos": "QB", "hof": true, "legend": true, "first": 1979, "last": 1994, "teams": ["SFO", "KAN"]},
     {"id": "DEF-steelers", "name": "Pittsburgh Steelers", "pos": "DEF", "hof": false, "legend": false, "first": 1960, "last": 1999, "teams": ["PIT"]}
@@ -35,7 +35,8 @@ an unknown into 0. Numbers stay numbers. `source` columns are copied as-is.
 ```
 Player id = `{POS}-{player_id}`. `first`/`last`/`teams` describe the player's 1960–99 regular-season games in the file.
 `hof`/`legend` come from the `*_season_totals.csv` files (`True`/`False`). Every player in a games file appears in
-`players.json` and vice versa.
+`players.json` and vice versa. `dataVersion` is the first 12 hex digits of a SHA-256 over the six games files and the
+players list, so a save can tell when the data was rebuilt after it was played. Rebuild whenever the sheets change.
 
 DEF players are **franchises**. Franchise key from team code and season:
 
@@ -111,7 +112,12 @@ game isn't eligible. Uses only the mode's fields:
 ### Data and pools
 - `FFP.loadData({players, games: {QB, RB, WR, TE, K, DEF}})` → `db` with `db.players` (array), `db.playersById`,
   `db.gamesByPid[pid]` (array of game objects keyed by column name; each also gets `key = pid + "|" + game_id`).
-- `FFP.eligibleGames(db, pid, mode, settings)` → eligible games for that player.
+- `FFP.eligibleGames(db, pid, mode, settings)` → eligible games for that player: the games he can draw. One
+  exception to `isEligible`: in Strict, a kicker's games from a season whose distance splits are known mostly for
+  games with no field goal made are left out (they would hand Strict kickers their worst games). A season is skewed
+  when, among kickers with any known split that season, made-field-goal games have a known split at a rate more than
+  10 points below no-field-goal games. `loadData` lists them in `db.fgDistanceSkewedSeasons` (1960–1998 in the
+  current sheets). `loadData` also sets `db.dataVersion` from `players.json` (or `null`).
 - `FFP.draftPool(db, mode, settings, rules)` → players with at least `MIN_GAMES` eligible games, each
   `{id, name, pos, hof, legend, first, last, eligibleCount, avgPoints}`, sorted by `avgPoints` descending. `avgPoints`
   ranks players for the draft and AI decisions only; it is never anyone's score.
@@ -137,7 +143,9 @@ game isn't eligible. Uses only the mode's fields:
   pick that would leave the team unable to fill QB, RB, WR, TE, FLEX, DEF and K with its remaining picks.
 - `FFP.makePick(league, db, pid)` — the team on the clock takes `pid` (throws if `canPick` fails).
 - `FFP.aiPick(league, db, teamId)` → pid: best available `avgPoints`, filling required starters when remaining picks
-  equal remaining required slots, at most 2 each of QB, TE, K, DEF; deterministic tie-breaks.
+  equal remaining required slots; deterministic tie-breaks. Caps, tried in order until one leaves a legal pick: at
+  most 2 at every position (so the bench covers byes at all but one position); at most 2 each of QB, TE, K, DEF;
+  anything legal (only when the pool forces it, e.g. a small Strict pool).
 - `FFP.runAIPicks(league, db)` — AI teams pick until the user is on the clock or the draft ends.
 - After the last pick the engine calls `startSeason` automatically.
 
@@ -145,7 +153,9 @@ game isn't eligible. Uses only the mode's fields:
 - `FFP.startSeason(league, db)` — builds the schedule, assigns byes, sets every team's lineup with `autoLineup`,
   `stage = "season"`, `week = 1`.
 - Schedule: circle-method round robin (a dummy "idle" slot when the team count is odd), repeated in order to fill
-  the regular-season weeks. `league.schedule[week]` = array of `{home, away}` (team ids).
+  the regular-season weeks. `league.schedule[week]` = array of `{home, away}` (team ids). With an odd count the idle
+  slot is the fixed point and the user's team takes the last idle week of each cycle (the computer teams' order is
+  a seeded shuffle), so the user is never idle in week 1 and never plays fewer games than any other team.
 - Byes: every rostered player gets exactly one bye week, drawn uniformly from weeks 2..regularWeeks, stored in
   `league.byes[pid]` and never reassigned. A player picked up later gets a bye drawn from the remaining regular
   weeks after the current one if any remain; otherwise none.
@@ -171,7 +181,9 @@ game isn't eligible. Uses only the mode's fields:
 
 ### Save, load, reveal
 - `FFP.serialize(league)` → JSON string `{saveVersion, engineVersion, league}`; `FFP.deserialize(text)` → league,
-  throwing a clear error on an unknown version. A round trip preserves draws, consumed games and results exactly.
+  throwing a clear error on an unknown version or a structurally broken league (a missing schedule, lineup, roster,
+  results week and so on). A round trip preserves draws, consumed games and results exactly. `createLeague` stores
+  `league.dataVersion = db.dataVersion`; saves without it still load.
 - `FFP.revealTimeline(league, db, week, matchupIndex)` →
   `{vs: {home: {teamId, starters: [{slot, pid, name, pos, season}]}, away: {...}},`
   `highlights: [{quarter, teamId, slot, pid, points}],`
@@ -179,6 +191,9 @@ game isn't eligible. Uses only the mode's fields:
   Each starter who played gets one highlight in a fictional quarter chosen with a seeded draw; highlights within a
   quarter are ordered by a seeded draw. Per team, the highlights add up exactly to the final score. `game` is the full
   game object (date, team, opp, home_away, team_game, result, scores, stats). VS shows only the season year.
+  A stored result is never rescored. Each final/bench line also has `dataChanged`. When the loaded data no longer
+  reproduces the stored points (the game is gone, no longer scoreable, or scores differently), `dataChanged` is true,
+  `parts` is `[]` and `currentPoints` is the revised score (or `null`). `points` is always the stored value.
 
 ## 3. UI (`P/src/page.html`, `P/src/app.js`)
 
