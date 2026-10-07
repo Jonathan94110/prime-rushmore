@@ -17,6 +17,7 @@ Game-by-game stats for NFL stars from 1950 to 1999 (QB, RB, WR, TE and K), plus 
 | `fantasy_legends.xlsx` | Everything above in one workbook, with a Notes sheet explaining the columns |
 | `running_backs.xlsx` | Just the 319 running backs and their game logs |
 | `wide_receivers.xlsx` | Just the 351 wide receivers and their game logs |
+| `sheets/` | Per-position CSVs for Google Sheets: season totals, plus game logs split by decade. Google Sheets loads them with `=IMPORTDATA("https://raw.githubusercontent.com/...")` |
 | `featured_defenses.json` | Season totals for iconic defenses (Steel Curtain, '85 Bears, Purple People Eaters…) |
 
 The JSON game logs use a compact `{ "columns": [...], "rows": [[...], ...] }` format:
@@ -62,4 +63,5 @@ cd scripts && python build_data.py ../raw/games_*.json ../raw/profiles_*.json ..
 python build_workbook.py ../data ../data/fantasy_legends.xlsx
 python build_workbook.py ../data ../data/running_backs.xlsx RB
 python build_workbook.py ../data ../data/wide_receivers.xlsx WR
+python build_sheets_csv.py ../data ../data/sheets
 ```
