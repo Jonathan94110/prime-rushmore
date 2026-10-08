@@ -1,0 +1,18 @@
+{
+  "_comment": "Points per stat. Edit these to match your league; rerun the bot to rescore everything.",
+  "passing_yards": 0.04,
+  "passing_tds": 4,
+  "interceptions": -2,
+  "rushing_yards": 0.1,
+  "rushing_tds": 6,
+  "receiving_yards": 0.1,
+  "receiving_tds": 6,
+  "two_point_conversions": 2,
+  "fumbles_lost": -2,
+  "other_tds": 6,
+  "reception_formats": {
+    "standard": 0,
+    "half_ppr": 0.5,
+    "ppr": 1
+  }
+}
