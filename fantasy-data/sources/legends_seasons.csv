@@ -1,7 +1,0 @@
-player_id,nflverse_id,name,position,season,team,games,completions,attempts,passing_yards,passing_tds,interceptions,carries,rushing_yards,rushing_tds,receptions,receiving_yards,receiving_tds,fumbles_lost,source
-legend-jim-brown,,Jim Brown,RB,1963,CLE,14,,,,,,291,1863,12,24,268,3,,manual - verify vs pro-football-reference
-legend-oj-simpson,,O.J. Simpson,RB,1973,BUF,14,,,,,,332,2003,12,6,70,0,,manual - verify vs pro-football-reference
-legend-walter-payton,,Walter Payton,RB,1977,CHI,14,,,,,,339,1852,14,27,269,2,,manual - verify vs pro-football-reference
-legend-eric-dickerson,,Eric Dickerson,RB,1984,RAM,16,,,,,,379,2105,14,21,139,0,,manual - verify vs pro-football-reference
-legend-dan-marino,00-0010379,Dan Marino,QB,1984,MIA,16,362,564,5084,48,17,28,-7,0,,,,,manual - verify vs pro-football-reference
-legend-jerry-rice,00-0013639,Jerry Rice,WR,1987,SF,12,,,,,,8,51,1,65,1078,22,,manual - verify vs pro-football-reference
