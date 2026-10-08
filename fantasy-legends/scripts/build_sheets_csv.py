@@ -308,7 +308,7 @@ MIN_OPP_PASS_ATT = 10  # fewer recorded opposing pass attempts than this can't c
 def kicking_explained(g, r):
     """Is the team's kicking record complete for this game? Returns (makes known, PAT tries known, why not).
     Every way the leftover points R (final score minus recorded plays) could have been scored is tried:
-    R = 6u + xm + 3fm + 2sf + 2c, with u unrecorded TDs, xm and fm unrecorded XP and FG makes, sf safeties
+    R = 6u + xm + 3fm + 2sf + 2c, with u unrecorded TDs (as many as R allows), xm and fm unrecorded XP and FG makes, sf safeties
     (up to 2) and c successful two-point conversions (where they existed), and every TD, recorded or not,
     accounted for by a recorded PAT try, an unrecorded make, a two-point success, or no recorded try (n).
     Makes are known only when some reading fits and none needs a missing kick. PAT tries are known only
@@ -318,7 +318,7 @@ def kicking_explained(g, r):
     base = (f"{g['team']} scored {r['team_score']}; the source records {td} TD + {r['recorded_xpm']} XP of {xpa} tried + "
             f"{r['recorded_fgm']} FG" + (f" + {r['safeties']} safety" if r["safeties"] else "") + f", leaving {R} points")
     readings = []
-    for u in range(4):
+    for u in range(max(R, 0) // 6 + 1):  # as many unrecorded TDs as the gap allows (SEA 1984-11-04 had 4 INT-return TDs)
         for fm in range(5):
             for xm in range(5):
                 for sf in range(3):

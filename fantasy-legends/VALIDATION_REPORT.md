@@ -114,7 +114,7 @@ Regular-season games, strict / era-scored / total:
 | RB | 53 / 1709 / 1709 | 4974 / 6242 / 6242 | 7537 / 8881 / 8881 | 6944 / 8110 / 8110 | 6337 / 7793 / 7793 |
 | WR | 62 / 2404 / 2404 | 4755 / 5971 / 5971 | 6365 / 7498 / 7498 | 9081 / 10608 / 10608 | 9677 / 11954 / 11954 |
 | TE | 0 / 0 / 0 | 1435 / 1824 / 1824 | 3566 / 4164 / 4164 | 4143 / 4869 / 4869 | 3323 / 4079 / 4079 |
-| K | 0 / 0 / 86 | 632 / 2194 / 2314 | 1044 / 3487 / 3593 | 919 / 3714 / 3830 | 1142 / 3949 / 4413 |
+| K | 0 / 0 / 86 | 632 / 2194 / 2314 | 1044 / 3487 / 3593 | 919 / 3715 / 3830 | 1142 / 3949 / 4413 |
 | DEF | 0 / 245 / 1452 | 0 / 3033 / 3222 | 0 / 3802 / 3864 | 0 / 4234 / 4256 | 490 / 4633 / 4656 |
 
 What blocks each option (regular-season games):
@@ -125,7 +125,7 @@ What blocks each option (regular-season games):
 | RB | fum_rec_td (6890), ret_td (1656), two_pt (1431) | none |
 | WR | fum_rec_td (8495), ret_td (2342), two_pt (2065) | none |
 | TE | fum_rec_td (2469), two_pt (707) | none |
-| K | fgm_0_39 (9837), fgm_40_49 (9837), fgm_50p (9837), fum_rec_td (2490), xp_missed (889), two_pt (775), xpm (333), fg_missed (332), ret_td (85) | xp_missed (889), xpm (333), fg_missed (332), fgm_0_39 (89), fgm_40_49 (89), fgm_50p (89) |
+| K | fgm_0_39 (9837), fgm_40_49 (9837), fgm_50p (9837), fum_rec_td (2490), xp_missed (888), two_pt (775), xpm (332), fg_missed (331), ret_td (85) | xp_missed (888), xpm (332), fg_missed (331), fgm_0_39 (89), fgm_40_49 (89), fgm_50p (89) |
 | DEF | fum_rec (16957), blk_punt (16956), blk_fg (16956), blk_xp (16956), sacks (9434), safeties (4123), def_int_td (4123), def_fum_td (4123), st_other_td (4123), def_int (1500), ret_td (1396) | def_int (1500), fum_rec (3), blk_punt (2), blk_fg (2), blk_xp (2) |
 
 ## Eligible depth for a 17-week season
@@ -210,7 +210,7 @@ Offense is unbiased. **Kickers are not:** before 1999, distance tiers are known 
 | fum_rec_td (offensive fumble-recovery TD) | QB RB WR TE K | 1999; SCORE0/SCORE2 games | other games | Not in the scraped source |
 | two_pt | QB RB WR TE K | NFL 1950–1993 (rule: 0), 1999, SCORE0 games | other AFL and 1994–98 games | Not in the scraped source |
 | FG made by distance | K | 1999; games with no FG made | other 1960–1998 games | Not in the scraped source |
-| FG/XP made and tried | K | 1960–1999; 1950s where recorded or SCORE0 | other 1950s games; 248 1960–99 kicker-games whose team score shows a kick missing from the source; 5 disputed 1999 kicker-games | Source has almost none before 1960; an odd score gap, or a 6-point gap with no PAT try to match it, means a kick is missing; in 1999 two sources credit some kicks to a different kicker |
+| FG/XP made and tried | K | 1960–1999; 1950s where recorded or SCORE0 | other 1950s games; 247 1960–99 kicker-games whose team score shows a kick missing from the source; 5 disputed 1999 kicker-games | Source has almost none before 1960; an odd score gap, or a 6-point gap with no PAT try to match it, means a kick is missing; in 1999 two sources credit some kicks to a different kicker |
 | xp_missed | K | 1960–1999 where every TD has a recorded PAT try | 1950s; games with a TD but no recorded PAT try | A miss doesn't score, so the final score can't prove it |
 | fum_rec, blocked punts/FGs/PATs | DEF | 1999 | 1950–1998 | Not in the scraped source; not provable from the score |
 | def_int_td, def_fum_td, st_other_td, safeties | DEF | 1999; SCORE0/SCORE2 games | other games | Not in the scraped source |

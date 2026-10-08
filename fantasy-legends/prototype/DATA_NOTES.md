@@ -36,7 +36,7 @@ By position (hof / legend): QB 22 / 25, RB 27 / 27, WR 21 / 20, TE 8 / 10, K 4 /
 ## Decisions to know about
 
 - **`dataVersion`.** `players.json` carries `"dataVersion"`: the first 12 hex digits of a SHA-256 over the six
-  games files and the players list (currently `7929901a168f`). A league stores the version it was created with.
+  games files and the players list (currently `1bdfe108ad63`). A league stores the version it was created with.
   When a save from an earlier build is opened, the page says so. Results already played keep their stored scores,
   and a replay marks any game whose record has changed (see SPEC section 2, Save, load, reveal).
 - **Column mapping.** `team_game` is the CSV `week` column. `int_verified` is `int_check == "match"`. In these sheets
@@ -86,15 +86,15 @@ have no nulls.
 | TE | `pass_att` | 14,936 | no such column in this CSV |
 | TE | `two_pt` | 707 | AFL and 1994–98 games the final score doesn't settle |
 | TE | `fum_rec_td` | 2,469 | known for 1999 and reconciled games |
-| K | `fgm` | 246 | INCOMPLETE kicker lines, plus quarantined 1999 games |
-| K | `fga` | 246 | as fgm |
-| K | `fg_missed` | 246 | as fgm |
+| K | `fgm` | 245 | INCOMPLETE kicker lines, plus quarantined 1999 games |
+| K | `fga` | 245 | as fgm |
+| K | `fg_missed` | 245 | as fgm |
 | K | `fgm_0_39` | 9,752 | known for 1999, and for earlier games only when no field goal was made |
 | K | `fgm_40_49` | 9,752 | as fgm_0_39 |
 | K | `fgm_50p` | 9,752 | as fgm_0_39 |
-| K | `xpm` | 248 | as fgm |
-| K | `xpa` | 248 | as fgm |
-| K | `xp_missed` | 803 | as fgm, plus games where a TD may have had no recorded PAT try |
+| K | `xpm` | 247 | as fgm |
+| K | `xpa` | 247 | as fgm |
+| K | `xp_missed` | 802 | as fgm, plus games where a TD may have had no recorded PAT try |
 | K | `two_pt` | 775 | AFL and 1994–98 games the final score doesn't settle |
 | K | `fum_rec_td` | 2,405 | known for 1999 and reconciled games |
 | DEF | `sacks` | 7,982 | not an official stat before 1982 |
