@@ -11,11 +11,21 @@ Ranks the top 100 **QBs, RBs, WRs, kickers and team defenses (D/ST)** of every N
 - **Team defenses** are ranked as team-seasons (for example the 2000 Ravens). A decade has only about 30 franchises, so 100 franchise-decades isn't possible.
 - Lists are shorter than 100 when fewer players exist. A decade typically has only about 90 kickers who kicked at all.
 
-## Run it
+## Run it from the website
+
+Open `bot.html` (once merged: https://jonathan94110.github.io/prime-rushmore/fantasy-data/bot.html). There's also a "Run the bot" link on the rankings page.
+
+1. **Connect.** Make a [fine-grained GitHub token](https://github.com/settings/personal-access-tokens/new) with access to only this repository. Set **Actions** and **Contents** to **Read and write**. Paste it into the page. It stays in your browser (for this tab only, unless you tick "Remember on this device") and is sent only to GitHub.
+2. **Run now** starts the bot and shows each step live. Done means the data is committed and the site is redeploying.
+3. **Scoring & list size** edits `bot/scoring.json` in the repo. **Save & run** applies it right away. The weekly runs use the same settings.
+
+The bot workflow has to be on `main` before the page can start it, so merge this branch first.
+
+## Run it on your computer
 
 ```sh
 pip install -r fantasy-data/bot/requirements.txt
-python fantasy-data/bot/fetch_stats.py            # every decade, top 100
+python fantasy-data/bot/fetch_stats.py            # every decade, list_size from scoring.json
 python fantasy-data/bot/fetch_stats.py --top 50   # shorter lists
 python fantasy-data/bot/fetch_stats.py --force    # re-download everything
 ```
@@ -41,7 +51,7 @@ const games = rows.map(r => Object.fromEntries(columns.map((c, i) => [c, r[i]]))
 
 ## Scoring (`bot/scoring.json`)
 
-Edit the file and rerun the bot to rescore and re-rank everything. `rank_by` picks the offensive format used for ranking: `ppr`, `half_ppr` or `standard`.
+Edit it here or on `bot.html`, then rerun the bot to rescore and re-rank everything. `list_size` sets how many make each list. `rank_by` picks the offensive format used for ranking: `ppr`, `half_ppr` or `standard`.
 
 | Position | Default scoring |
 | --- | --- |

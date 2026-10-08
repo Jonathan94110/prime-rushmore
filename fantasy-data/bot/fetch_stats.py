@@ -17,8 +17,8 @@ spans two decades is ranked in both. Team defenses are ranked as team-seasons
 Sources: nflverse for 1999 onward, legacy.py for earlier seasons.
 
 Usage:
-  python bot/fetch_stats.py               # every decade
-  python bot/fetch_stats.py --top 50      # shorter lists
+  python bot/fetch_stats.py               # every decade, list_size from scoring.json
+  python bot/fetch_stats.py --top 50      # override the list size
   python bot/fetch_stats.py --force       # re-download everything
 """
 
@@ -311,7 +311,9 @@ def build(top, force):
 
 def main():
     parser = argparse.ArgumentParser(description=__doc__.split("\n")[0])
-    parser.add_argument("--top", type=int, default=100, help="players per position per decade")
+    parser.add_argument(
+        "--top", type=int, default=SCORING.get("list_size", 100), help="players per position per decade"
+    )
     parser.add_argument("--force", action="store_true", help="re-download every file")
     args = parser.parse_args()
     build(args.top, args.force)

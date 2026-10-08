@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bot Control</title>
+    <link rel="icon" href="data:,">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <style>
+      :root {
+        color-scheme: dark;
+        --bg: #060504;
+        --panel: rgba(18, 14, 11, 0.92);
+        --panel-strong: #1a1410;
+        --ink: #eef6fa;
+        --muted: #8f887e;
+        --line: rgba(255, 165, 0, 0.14);
+        --gold: #ffa500;
+        --cyan: #00f0ff;
+        --ok: #39d98a;
+        --bad: #ff5c6c;
+        --warn: #ffd23f;
+      }
+      * { box-sizing: border-box; }
+      body {
+        margin: 0;
+        min-height: 100vh;
+        color: var(--ink);
+        background:
+          radial-gradient(circle at 80% 0%, rgba(0, 240, 255, 0.07), transparent 40%),
+          radial-gradient(circle at 10% 100%, rgba(255, 165, 0, 0.07), transparent 40%),
+          var(--bg);
+        font-family: 'Outfit', ui-sans-serif, system-ui, sans-serif;
+        line-height: 1.45;
+      }
+      main { max-width: 880px; margin: 0 auto; padding: 28px 16px 64px; }
+      header { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; flex-wrap: wrap; }
+      h1 { margin: 0; font-size: clamp(1.8rem, 5vw, 2.4rem); font-weight: 800; letter-spacing: -0.02em; }
+      h1 span { color: var(--gold); }
+      h2 { margin: 0 0 12px; font-size: 1.1rem; font-weight: 600; }
+      a { color: var(--cyan); }
+      .muted { color: var(--muted); }
+      .card { background: var(--panel); border: 1px solid var(--line); border-radius: 16px; padding: 18px; margin-top: 16px; }
+      .row { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; }
+      label { display: grid; gap: 4px; font-size: 0.85rem; color: var(--muted); }
+      input, select {
+        background: #0d0a08;
+        border: 1px solid var(--line);
+        color: var(--ink);
+        font: inherit;
+        font-size: 0.95rem;
+        padding: 8px 10px;
+        border-radius: 10px;
+        min-width: 0;
+        width: 100%;
+      }
+      input[type="checkbox"] { width: auto; accent-color: var(--gold); }
+      .check { display: flex; gap: 8px; align-items: center; color: var(--ink); font-size: 0.92rem; }
+      button {
+        font: inherit;
+        font-weight: 600;
+        border-radius: 999px;
+        padding: 9px 18px;
+        border: 1px solid var(--line);
+        background: #120e0b;
+        color: var(--ink);
+        cursor: pointer;
+      }
+      button.primary { background: var(--gold); border-color: var(--gold); color: #140d02; }
+      button.go { background: var(--cyan); border-color: var(--cyan); color: #001417; font-size: 1.05rem; padding: 12px 26px; }
+      button:disabled { opacity: 0.5; cursor: not-allowed; }
+      .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 10px; }
+      .msg { margin-top: 10px; font-size: 0.9rem; min-height: 1.2em; }
+      .msg.ok { color: var(--ok); }
+      .msg.bad { color: var(--bad); }
+      .pill { display: inline-block; padding: 2px 10px; border-radius: 999px; font-size: 0.78rem; font-weight: 600; background: #2a2219; }
+      .pill.ok { background: rgba(57, 217, 138, 0.15); color: var(--ok); }
+      .pill.bad { background: rgba(255, 92, 108, 0.15); color: var(--bad); }
+      .pill.run { background: rgba(255, 210, 63, 0.15); color: var(--warn); }
+      .runs { list-style: none; margin: 0; padding: 0; }
+      .runs li { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; padding: 10px 0; border-top: 1px solid var(--line); }
+      .runs li:first-child { border-top: 0; }
+      .steps { width: 100%; margin: 6px 0 0; padding: 0; list-style: none; font-size: 0.85rem; }
+      .steps li { border: 0; padding: 2px 0; display: flex; gap: 8px; }
+      .dot { width: 1.2em; text-align: center; }
+      details summary { cursor: pointer; color: var(--cyan); }
+      ol.howto { padding-left: 1.2em; }
+      ol.howto li { margin-bottom: 6px; }
+      code { background: #0d0a08; padding: 1px 6px; border-radius: 6px; font-size: 0.88em; }
+      table.tiers { border-collapse: collapse; }
+      table.tiers td { padding: 3px 6px 3px 0; }
+      table.tiers input { width: 90px; }
+      .hidden { display: none !important; }
+      @keyframes spin { to { transform: rotate(360deg); } }
+      .spin { display: inline-block; animation: spin 1s linear infinite; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Bot <span>Control</span></h1>
+        <a href="./index.html">View the Top 100 →</a>
+      </header>
+      <p class="muted" id="lastBuild">Loading last build…</p>
+
+      <!-- Connect -->
+      <section class="card" id="connectCard">
+        <h2>Connect to GitHub</h2>
+        <p class="muted">The page runs the bot through GitHub. It needs a token that is scoped to this one repository. The token stays in your browser and is never sent anywhere except GitHub.</p>
+        <details>
+          <summary>How to make the token (2 minutes)</summary>
+          <ol class="howto">
+            <li>Open <a href="https://github.com/settings/personal-access-tokens/new" target="_blank" rel="noopener">GitHub → New fine-grained token</a>.</li>
+            <li>Name it anything (for example "fantasy bot") and pick an expiration date.</li>
+            <li>Under <b>Repository access</b>, choose <b>Only select repositories</b>, then pick <code id="repoName1">prime-rushmore</code>.</li>
+            <li>Under <b>Permissions → Repository permissions</b>, set <b>Actions</b> to <b>Read and write</b> and <b>Contents</b> to <b>Read and write</b>.</li>
+            <li>Click <b>Generate token</b>, copy it, and paste it below.</li>
+          </ol>
+        </details>
+        <div class="row" style="margin-top:12px">
+          <label style="flex:1 1 320px">Token
+            <input type="password" id="token" placeholder="github_pat_…" autocomplete="off" spellcheck="false" />
+          </label>
+          <label style="flex:0 1 240px">Repository
+            <input type="text" id="repo" placeholder="owner/repo" spellcheck="false" />
+          </label>
+        </div>
+        <div class="row" style="margin-top:10px">
+          <label class="check"><input type="checkbox" id="remember" /> Remember on this device</label>
+          <button class="primary" id="connect" type="button">Connect</button>
+        </div>
+        <div class="msg" id="connectMsg"></div>
+      </section>
+
+      <!-- Run -->
+      <section class="card hidden" id="runCard">
+        <div class="row" style="justify-content:space-between">
+          <h2 style="margin:0">Run the bot</h2>
+          <span class="muted" id="who"></span>
+        </div>
+        <p class="muted">Downloads the latest stats, re-ranks every decade, commits the new data and redeploys your site. A run usually takes 2–4 minutes.</p>
+        <div class="row">
+          <button class="go" id="run" type="button">▶ Run now</button>
+          <label class="check"><input type="checkbox" id="force" /> Re-download everything (slower)</label>
+          <label style="flex:0 1 160px">Branch <input type="text" id="branch" spellcheck="false" /></label>
+        </div>
+        <div class="msg" id="runMsg"></div>
+        <h2 style="margin-top:18px">Recent runs</h2>
+        <ul class="runs" id="runs"><li class="muted">Loading…</li></ul>
+      </section>
+
+      <!-- Settings -->
+      <section class="card hidden" id="settingsCard">
+        <h2>Scoring &amp; list size</h2>
+        <p class="muted">Saved to <code>fantasy-data/bot/scoring.json</code> in the repo. The weekly runs use the same settings.</p>
+        <div id="settingsForm"><p class="muted">Loading settings…</p></div>
+        <div class="row" style="margin-top:14px">
+          <button class="primary" id="save" type="button" disabled>Save</button>
+          <button id="saveRun" type="button" disabled>Save &amp; run</button>
+        </div>
+        <div class="msg" id="saveMsg"></div>
+      </section>
+
+      <section class="card hidden" id="signoutCard">
+        <div class="row" style="justify-content:space-between">
+          <span class="muted">Connected. The token is <span id="storedWhere"></span>.</span>
+          <button id="signout" type="button">Forget token</button>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      const WORKFLOW = "fantasy-stats.yml";
+      const SETTINGS_PATH = "fantasy-data/bot/scoring.json";
+      const STORE_KEY = "fantasy-bot-token";
+      const REPO_KEY = "fantasy-bot-repo";
+      const API = "https://api.github.com";
+
+      const el = id => document.getElementById(id);
+      const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+      const store = {
+        get(k) { try { return sessionStorage.getItem(k) || localStorage.getItem(k); } catch (e) { return null; } },
+        set(k, v, persist) { try { (persist ? localStorage : sessionStorage).setItem(k, v); (persist ? sessionStorage : localStorage).removeItem(k); } catch (e) {} },
+        clear(k) { try { sessionStorage.removeItem(k); localStorage.removeItem(k); } catch (e) {} },
+        where(k) { try { return localStorage.getItem(k) ? "remembered on this device" : "kept for this browser tab only"; } catch (e) { return "kept in memory"; } },
+      };
+
+      const state = { token: null, repo: null, defaultBranch: "main", settings: null, sha: null, poll: null, dispatchedAt: 0 };
+
+      function guessRepo() {
+        const m = location.hostname.match(/^([^.]+)\.github\.io$/i);
+        const first = location.pathname.split("/").filter(Boolean)[0];
+        if (m && first) return `${m[1]}/${first}`;
+        return "jonathan94110/prime-rushmore";
+      }
+
+      function msg(id, text, kind) {
+        const m = el(id);
+        m.textContent = text || "";
+        m.className = "msg" + (kind ? " " + kind : "");
+      }
+
+      async function gh(path, opts = {}) {
+        const res = await fetch(`${API}${path}`, {
+          ...opts,
+          headers: {
+            Accept: "application/vnd.github+json",
+            "X-GitHub-Api-Version": "2022-11-28",
+            Authorization: `Bearer ${state.token}`,
+            ...(opts.body ? { "Content-Type": "application/json" } : {}),
+          },
+        });
+        if (res.status === 204) return null;
+        const body = await res.json().catch(() => ({}));
+        if (!res.ok) {
+          const err = new Error(body.message || `GitHub returned ${res.status}`);
+          err.status = res.status;
+          throw err;
+        }
+        return body;
+      }
+
+      function explain(err, action) {
+        if (err.status === 401) return "GitHub rejected the token. It may be expired or mistyped.";
+        if (err.status === 403) return `The token can't ${action}. Check that it has Actions and Contents set to "Read and write" for this repository.`;
+        if (err.status === 404) return `Not found while trying to ${action}. Check the repository name, and that the token was given access to it.`;
+        if (err.status === 422) return `GitHub refused to ${action}: ${err.message}`;
+        return `Couldn't ${action}: ${err.message}`;
+      }
+
+      // --- last build (public, no token needed) ---
+      async function showLastBuild() {
+        try {
+          const idx = await (await fetch(`data/top100/index.json?t=${Date.now()}`)).json();
+          const when = new Date(idx.built_at);
+          const decades = idx.decades.map(d => d.decade);
+          el("lastBuild").textContent = `Last build: ${when.toLocaleString()} · ${decades[0]}–${decades[decades.length - 1]} · top ${idx.top} per position.`;
+        } catch (e) {
+          el("lastBuild").textContent = "No build found yet.";
+        }
+      }
+
+      // --- connect ---
+      async function connect(token, repo, persist, quiet) {
+        state.token = token.trim();
+        state.repo = repo.trim().replace(/^https?:\/\/github\.com\//, "").replace(/\/$/, "");
+        if (!state.token || !/^[\w.-]+\/[\w.-]+$/.test(state.repo)) {
+          msg("connectMsg", "Enter a token and a repository like owner/repo.", "bad");
+          return;
+        }
+        msg("connectMsg", "Checking…");
+        try {
+          const info = await gh(`/repos/${state.repo}`);
+          state.defaultBranch = info.default_branch || "main";
+          await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}`).catch(err => {
+            if (err.status === 404) {
+              throw Object.assign(new Error(`The bot workflow isn't on ${state.defaultBranch} yet. Merge the bot branch into ${state.defaultBranch} first, then come back.`), { friendly: true });
+            }
+            throw err;
+          });
+        } catch (err) {
+          msg("connectMsg", err.friendly ? err.message : explain(err, "read the repository"), "bad");
+          if (quiet) { store.clear(STORE_KEY); }
+          return;
+        }
+        store.set(STORE_KEY, state.token, persist);
+        store.set(REPO_KEY, state.repo, true);
+        el("token").value = "";
+        msg("connectMsg", "");
+        el("connectCard").classList.add("hidden");
+        for (const id of ["runCard", "settingsCard", "signoutCard"]) el(id).classList.remove("hidden");
+        el("storedWhere").textContent = store.where(STORE_KEY);
+        el("who").textContent = state.repo;
+        el("branch").value = state.defaultBranch;
+        refreshRuns();
+        loadSettings();
+      }
+
+      // --- runs ---
+      const STATUS = {
+        success: ["ok", "Succeeded"], failure: ["bad", "Failed"], cancelled: ["bad", "Cancelled"],
+        timed_out: ["bad", "Timed out"], skipped: ["", "Skipped"], neutral: ["", "Neutral"],
+      };
+      function pill(run) {
+        if (run.status !== "completed") return `<span class="pill run"><span class="spin">◌</span> ${run.status === "queued" ? "Queued" : "Running"}</span>`;
+        const [cls, label] = STATUS[run.conclusion] || ["", run.conclusion || "Done"];
+        return `<span class="pill ${cls}">${label}</span>`;
+      }
+      const stepDot = s => s.status !== "completed" ? (s.status === "in_progress" ? '<span class="spin">◌</span>' : "·") : (s.conclusion === "success" ? "✓" : s.conclusion === "skipped" ? "–" : "✗");
+      const ago = t => {
+        const s = Math.round((Date.now() - new Date(t)) / 1000);
+        if (s < 60) return `${s}s ago`;
+        if (s < 3600) return `${Math.round(s / 60)} min ago`;
+        if (s < 86400) return `${Math.round(s / 3600)} h ago`;
+        return new Date(t).toLocaleDateString();
+      };
+      const trigger = e => ({ workflow_dispatch: "manual", schedule: "weekly schedule" }[e] || e);
+
+      async function refreshRuns() {
+        clearTimeout(state.poll);
+        let data;
+        try {
+          data = await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/runs?per_page=6`);
+        } catch (err) {
+          el("runs").innerHTML = `<li class="msg bad">${esc(explain(err, "list runs"))}</li>`;
+          return;
+        }
+        const runs = data.workflow_runs || [];
+        const active = runs.find(r => r.status !== "completed");
+        let steps = "";
+        if (active) {
+          try {
+            const jobs = await gh(`/repos/${state.repo}/actions/runs/${active.id}/jobs`);
+            const job = (jobs.jobs || [])[0];
+            if (job) steps = `<ul class="steps">${job.steps.map(s => `<li><span class="dot">${stepDot(s)}</span>${esc(s.name)}</li>`).join("")}</ul>`;
+          } catch (e) {}
+        }
+        el("runs").innerHTML = runs.length
+          ? runs.map(r => `<li>${pill(r)}<span>${esc(trigger(r.event))} · ${esc(r.head_branch)}</span><span class="muted">${ago(r.created_at)}</span><a href="${esc(r.html_url)}" target="_blank" rel="noopener">details</a>${r === active ? steps : ""}</li>`).join("")
+          : `<li class="muted">No runs yet.</li>`;
+
+        const justDispatched = Date.now() - state.dispatchedAt < 90000;
+        const finished = !active && runs[0] && new Date(runs[0].created_at).getTime() >= state.dispatchedAt - 60000 && state.dispatchedAt;
+        if (finished && runs[0].status === "completed") {
+          if (runs[0].conclusion === "success") {
+            msg("runMsg", "Done. New data is committed, and the site redeploy has started (it takes about a minute to go live).", "ok");
+            showLastBuild();
+          } else {
+            msg("runMsg", "The run didn't succeed. Open details to see the error.", "bad");
+          }
+          state.dispatchedAt = 0;
+          el("run").disabled = false;
+        }
+        el("run").disabled = Boolean(active) || justDispatched && !finished;
+        if (active || justDispatched) state.poll = setTimeout(refreshRuns, 5000);
+      }
+
+      async function runBot() {
+        const branch = el("branch").value.trim() || state.defaultBranch;
+        el("run").disabled = true;
+        msg("runMsg", "Starting…");
+        try {
+          await gh(`/repos/${state.repo}/actions/workflows/${WORKFLOW}/dispatches`, {
+            method: "POST",
+            body: JSON.stringify({ ref: branch, inputs: { force: el("force").checked ? "true" : "false" } }),
+          });
+        } catch (err) {
+          msg("runMsg", explain(err, "start the bot"), "bad");
+          el("run").disabled = false;
+          return false;
+        }
+        state.dispatchedAt = Date.now();
+        msg("runMsg", "Started. Progress shows below; GitHub can take a few seconds to pick it up.");
+        setTimeout(refreshRuns, 3000);
+        return true;
+      }
+
+      // --- settings ---
+      const LABELS = {
+        passing_yards: "Per passing yard", passing_tds: "Passing TD", interceptions: "Interception",
+        rushing_yards: "Per rushing yard", rushing_tds: "Rushing TD", receiving_yards: "Per receiving yard",
+        receiving_tds: "Receiving TD", two_point_conversions: "2-pt conversion", fumbles_lost: "Fumble lost",
+        other_tds: "Return / fumble TD", standard: "Standard (per catch)", half_ppr: "Half PPR (per catch)", ppr: "PPR (per catch)",
+        fg_0_39: "FG 0–39 yds", fg_40_49: "FG 40–49 yds", fg_50_plus: "FG 50+ yds", fg_unknown_distance: "FG, distance unknown",
+        fg_missed: "Missed FG", xp_made: "Extra point", xp_missed: "Missed XP",
+        sacks: "Sack", fumble_recoveries: "Fumble recovery", touchdowns: "Defensive / return TD", safeties: "Safety", blocked_kicks: "Blocked kick",
+      };
+      const GROUPS = [["offense", "Offense"], ["reception_formats", "Reception formats"], ["kicking", "Kickers"], ["defense", "Team defense"]];
+
+      const decode = b64 => new TextDecoder().decode(Uint8Array.from(atob(b64.replace(/\n/g, "")), c => c.charCodeAt(0)));
+      const encode = text => { let bin = ""; new TextEncoder().encode(text).forEach(b => { bin += String.fromCharCode(b); }); return btoa(bin); };
+
+      function numField(path, label, value, step = "any") {
+        return `<label>${esc(label)}<input type="number" step="${step}" data-path="${esc(path)}" value="${esc(value)}" /></label>`;
+      }
+
+      function renderSettings() {
+        const s = state.settings;
+        let html = `<div class="grid">
+          ${numField("list_size", "Players per position per decade", s.list_size ?? 100, "1")}
+          <label>Rank QB/RB/WR by<select data-path="rank_by">${["ppr", "half_ppr", "standard"].map(f => `<option value="${f}" ${s.rank_by === f ? "selected" : ""}>${{ ppr: "PPR", half_ppr: "Half PPR", standard: "Standard" }[f]}</option>`).join("")}</select></label>
+        </div>`;
+        for (const [key, title] of GROUPS) {
+          const group = s[key] || {};
+          const fields = Object.entries(group).filter(([k, v]) => !k.startsWith("_") && typeof v === "number");
+          html += `<h2 style="margin-top:18px">${title}</h2><div class="grid">${fields.map(([k, v]) => numField(`${key}.${k}`, LABELS[k] || k, v)).join("")}</div>`;
+          if (key === "defense" && Array.isArray(group.points_allowed)) {
+            html += `<p class="muted" style="margin:12px 0 6px">Points allowed per game (up to → fantasy points)</p><table class="tiers">${group.points_allowed.map(([max, pts], i) =>
+              `<tr><td>${i === group.points_allowed.length - 1 ? "more" : `up to <input type="number" step="1" data-tier="${i}" data-part="0" value="${max}" />`}</td><td>→</td><td><input type="number" step="any" data-tier="${i}" data-part="1" value="${pts}" /></td></tr>`).join("")}</table>`;
+          }
+        }
+        el("settingsForm").innerHTML = html;
+        el("save").disabled = el("saveRun").disabled = false;
+      }
+
+      async function loadSettings() {
+        try {
+          const file = await gh(`/repos/${state.repo}/contents/${SETTINGS_PATH}?ref=${encodeURIComponent(el("branch").value || state.defaultBranch)}`);
+          state.sha = file.sha;
+          state.settings = JSON.parse(decode(file.content));
+          renderSettings();
+        } catch (err) {
+          el("settingsForm").innerHTML = `<p class="msg bad">${esc(explain(err, "read the settings file"))}</p>`;
+        }
+      }
+
+      function collectSettings() {
+        const s = structuredClone(state.settings);
+        for (const input of el("settingsForm").querySelectorAll("[data-path]")) {
+          const parts = input.dataset.path.split(".");
+          let target = s;
+          while (parts.length > 1) target = target[parts.shift()];
+          if (input.tagName === "SELECT") { target[parts[0]] = input.value; continue; }
+          const v = Number(input.value);
+          if (input.value.trim() === "" || !Number.isFinite(v)) throw new Error(`"${input.closest("label").firstChild.textContent.trim()}" needs a number.`);
+          target[parts[0]] = v;
+        }
+        if (!Number.isInteger(s.list_size) || s.list_size < 1 || s.list_size > 500) throw new Error("Players per decade must be a whole number from 1 to 500.");
+        const tiers = s.defense.points_allowed;
+        for (const input of el("settingsForm").querySelectorAll("[data-tier]")) {
+          const v = Number(input.value);
+          if (input.value.trim() === "" || !Number.isFinite(v)) throw new Error("Every points-allowed tier needs a number.");
+          tiers[Number(input.dataset.tier)][Number(input.dataset.part)] = v;
+        }
+        for (let i = 1; i < tiers.length - 1; i++) {
+          if (tiers[i][0] <= tiers[i - 1][0]) throw new Error("Points-allowed tiers must go up from top to bottom.");
+        }
+        return s;
+      }
+
+      async function saveSettings(thenRun) {
+        let next;
+        try { next = collectSettings(); } catch (e) { msg("saveMsg", e.message, "bad"); return; }
+        const branch = el("branch").value.trim() || state.defaultBranch;
+        el("save").disabled = el("saveRun").disabled = true;
+        msg("saveMsg", "Saving…");
+        try {
+          const res = await gh(`/repos/${state.repo}/contents/${SETTINGS_PATH}`, {
+            method: "PUT",
+            body: JSON.stringify({
+              message: "Update fantasy bot scoring settings",
+              content: encode(JSON.stringify(next, null, 2) + "\n"),
+              sha: state.sha,
+              branch,
+            }),
+          });
+          state.sha = res.content.sha;
+          state.settings = next;
+          msg("saveMsg", thenRun ? "Saved. Starting the bot…" : "Saved. Run the bot to apply the new settings.", "ok");
+          if (thenRun && await runBot()) msg("saveMsg", "Saved, and the bot is running with the new settings.", "ok");
+        } catch (err) {
+          const text = err.status === 409 ? "The settings changed on GitHub since this page loaded. Reload the page and try again." : explain(err, "save the settings");
+          msg("saveMsg", text, "bad");
+        } finally {
+          el("save").disabled = el("saveRun").disabled = false;
+        }
+      }
+
+      // --- wire up ---
+      el("connect").onclick = () => connect(el("token").value, el("repo").value, el("remember").checked);
+      el("token").addEventListener("keydown", e => { if (e.key === "Enter") el("connect").click(); });
+      el("run").onclick = runBot;
+      el("save").onclick = () => saveSettings(false);
+      el("saveRun").onclick = () => saveSettings(true);
+      el("branch").addEventListener("change", loadSettings);
+      el("signout").onclick = () => {
+        store.clear(STORE_KEY);
+        location.reload();
+      };
+      document.addEventListener("visibilitychange", () => { if (!document.hidden && state.token) refreshRuns(); });
+
+      const savedRepo = store.get(REPO_KEY) || guessRepo();
+      el("repo").value = savedRepo;
+      el("repoName1").textContent = savedRepo.split("/")[1] || savedRepo;
+      showLastBuild();
+      const savedToken = store.get(STORE_KEY);
+      if (savedToken) connect(savedToken, savedRepo, Boolean((() => { try { return localStorage.getItem(STORE_KEY); } catch (e) { return null; } })()), true);
+    </script>
+  </body>
+</html>

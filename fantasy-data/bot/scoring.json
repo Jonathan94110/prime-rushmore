@@ -1,5 +1,6 @@
 {
   "_comment": "Points per stat. Edit to match your league, then rerun the bot to rescore and re-rank everything.",
+  "list_size": 100,
   "rank_by": "ppr",
   "offense": {
     "passing_yards": 0.04,
