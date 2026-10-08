@@ -47,36 +47,36 @@ For each scoring field: **all** = known for every game in the decade, **all but 
 | rec_yds | all | all | all | all | all |
 | rec_td | all | all | all | all | all |
 | ret_td | 3% | all | all | all | all |
-| two_pt | all | 91% | all | all | 88% |
-| fum_rec_td | 3% | 80% | 85% | 86% | 81% |
+| two_pt | all | 90% | all | all | 87% |
+| fum_rec_td | 3% | 79% | 84% | 85% | 81% |
 
 **K**
 
 | Field | 1950s | 1960s | 1970s | 1980s | 1990s |
 |---|---|---|---|---|---|
-| fgm | 1% | 99% | 99% | 99% | 98% |
-| xpm | 1% | 99% | 99% | 99% | 98% |
-| fg_missed | none | 99% | 99% | 99% | 98% |
-| fgm_0_39 | 1% | 34% | 34% | 28% | 30% |
-| fgm_40_49 | 1% | 34% | 34% | 28% | 30% |
-| fgm_50p | 1% | 34% | 34% | 28% | 30% |
+| fgm | 1% | 98% | 98% | 99% | 97% |
+| xpm | 1% | 98% | 98% | 99% | 97% |
+| fg_missed | none | 98% | 98% | 99% | 97% |
+| fgm_0_39 | 1% | 33% | 34% | 27% | 30% |
+| fgm_40_49 | 1% | 33% | 34% | 27% | 30% |
+| fgm_50p | 1% | 33% | 34% | 27% | 30% |
 
 **DEF**
 
 | Field | 1950s | 1960s | 1970s | 1980s | 1990s |
 |---|---|---|---|---|---|
 | pts_allowed | all | all | all | all | all |
-| sacks | none | none | none | 79% | all |
-| def_int | 17% | 95% | 98% | 99% | 100% |
-| fum_rec | none | none | none | none | 11% |
-| safeties | 4% | 79% | 85% | 86% | 81% |
-| blk_punt | none | none | none | none | 11% |
-| blk_fg | none | none | none | none | 11% |
-| blk_xp | none | none | none | none | 11% |
-| def_int_td | 4% | 79% | 85% | 86% | 81% |
-| def_fum_td | 4% | 79% | 85% | 86% | 81% |
-| ret_td | 4% | all | all | all | all |
-| st_other_td | 4% | 79% | 85% | 86% | 81% |
+| sacks | none | none | none | 78% | all |
+| def_int | 16% | 94% | 98% | 99% | 99% |
+| fum_rec | none | none | none | none | 10% |
+| safeties | 3% | 79% | 85% | 85% | 81% |
+| blk_punt | none | none | none | none | 10% |
+| blk_fg | none | none | none | none | 10% |
+| blk_xp | none | none | none | none | 10% |
+| def_int_td | 3% | 79% | 85% | 85% | 81% |
+| def_fum_td | 3% | 79% | 85% | 85% | 81% |
+| ret_td | 3% | all | all | all | all |
+| st_other_td | 3% | 79% | 85% | 85% | 81% |
 
 For DEF, `def_int` counts as known only where defenders' and passers' counts agree.
 
@@ -104,7 +104,7 @@ A game counts as known only when every field that earns points for that position
 - **Strict** (`strict_eligible`, same as `scoring_complete`): every scoring field is known.
 - **Era-scored** (`era_scored_eligible`): unknown fields are allowed only when the source records that field for no game in that era; those fields are listed in `era_excluded_fields` and left out of scoring for everyone in the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`). Both options check every scoring field for the position, kickers' missed extra points and own offense stats included.
 
-Era-wide unrecorded fields: fum_rec_td before 1999; ret_td before 1960; two_pt in AFL games (1960–69) and 1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return, fumble-return and other special-teams TDs before 1999. Not excludable: all 1950s kicking (nothing to score), disputed interceptions, and the 1999 game missing from nflverse.
+Era-wide unrecorded fields: fum_rec_td before 1999; ret_td before 1960; two_pt in AFL games (1960–69) and 1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return, fumble-return and other special-teams TDs before 1999. Not excludable (they block both options): all 1950s kicking (nothing to score); kicking lines the final score shows are missing a kick; missed extra points where a TD has no recorded PAT try; the five 1999 kicker-games the two sources credit to different kickers; disputed or unverified interceptions; and the 1999 game missing from nflverse.
 
 Regular-season games, strict / era-scored / total:
 
@@ -114,8 +114,8 @@ Regular-season games, strict / era-scored / total:
 | RB | 53 / 1709 / 1709 | 4974 / 6242 / 6242 | 7537 / 8881 / 8881 | 6944 / 8110 / 8110 | 6337 / 7793 / 7793 |
 | WR | 62 / 2404 / 2404 | 4755 / 5971 / 5971 | 6365 / 7498 / 7498 | 9081 / 10608 / 10608 | 9677 / 11954 / 11954 |
 | TE | 0 / 0 / 0 | 1435 / 1824 / 1824 | 3566 / 4164 / 4164 | 4143 / 4869 / 4869 | 3323 / 4079 / 4079 |
-| K | 0 / 0 / 86 | 632 / 2236 / 2314 | 1044 / 3485 / 3593 | 919 / 3712 / 3830 | 1142 / 4118 / 4413 |
-| DEF | 0 / 246 / 1452 | 0 / 3055 / 3222 | 0 / 3805 / 3864 | 0 / 4234 / 4256 | 490 / 4634 / 4656 |
+| K | 0 / 0 / 86 | 632 / 2194 / 2314 | 1044 / 3487 / 3593 | 919 / 3714 / 3830 | 1142 / 3949 / 4413 |
+| DEF | 0 / 245 / 1452 | 0 / 3033 / 3222 | 0 / 3802 / 3864 | 0 / 4234 / 4256 | 490 / 4633 / 4656 |
 
 What blocks each option (regular-season games):
 
@@ -125,8 +125,8 @@ What blocks each option (regular-season games):
 | RB | fum_rec_td (6890), ret_td (1656), two_pt (1431) | none |
 | WR | fum_rec_td (8495), ret_td (2342), two_pt (2065) | none |
 | TE | fum_rec_td (2469), two_pt (707) | none |
-| K | fgm_0_39 (9830), fgm_40_49 (9830), fgm_50p (9830), fum_rec_td (2490), two_pt (775), xp_missed (682), xpm (290), fg_missed (289), ret_td (85) | xp_missed (682), xpm (290), fg_missed (289), fgm_0_39 (89), fgm_40_49 (89), fgm_50p (89) |
-| DEF | fum_rec (16957), blk_punt (16956), blk_fg (16956), blk_xp (16956), sacks (9434), safeties (4123), def_int_td (4123), def_fum_td (4123), st_other_td (4123), def_int (1473), ret_td (1396) | def_int (1473), fum_rec (3), blk_punt (2), blk_fg (2), blk_xp (2) |
+| K | fgm_0_39 (9837), fgm_40_49 (9837), fgm_50p (9837), fum_rec_td (2490), xp_missed (889), two_pt (775), xpm (333), fg_missed (332), ret_td (85) | xp_missed (889), xpm (333), fg_missed (332), fgm_0_39 (89), fgm_40_49 (89), fgm_50p (89) |
+| DEF | fum_rec (16957), blk_punt (16956), blk_fg (16956), blk_xp (16956), sacks (9434), safeties (4123), def_int_td (4123), def_fum_td (4123), st_other_td (4123), def_int (1500), ret_td (1396) | def_int (1500), fum_rec (3), blk_punt (2), blk_fg (2), blk_xp (2) |
 
 ## Eligible depth for a 17-week season
 
@@ -150,8 +150,8 @@ Stat line: 15/26, 233 pass yds, 1 TD, 0 INT; 4 rushes for 21 yds, 0 TD; 0 rec; 0
 
 | Option | Eligible | Why | Fields scored |
 |---|---|---|---|
-| Strict | True | scoring_missing =  | not drawn |
-| Era-scored | True | era_excluded_fields =  (unrecorded for all 1950–98 games) | all offense fields except fum_rec_td |
+| Strict | True | scoring_missing = none | all offense fields |
+| Era-scored | True | era_excluded_fields = none | all offense fields |
 
 Under this dataset's standard formula (0.04/pass yd, 4/pass TD, −2/INT, 0.1/rush yd) the line is 15.42 points; the site's v4 offense coefficients come from its own code.
 
@@ -190,15 +190,17 @@ For each team-game, the final score is compared with every scoring play the sour
 | RB | 9.60 | 9.59 | -0.1% | 25256 |
 | WR | 9.09 | 9.08 | -0.1% | 29009 |
 | TE | 5.81 | 5.81 | +0.1% | 12181 |
-| K | 6.12 | 2.28 | -62.7% | 3336 |
+| K | 6.11 | 2.28 | -62.7% | 3336 |
 
 Offense is unbiased. **Kickers are not:** before 1999, distance tiers are known only for games with no field goal made (all tiers 0), so a Strict kicker pool before 1999 would draw only those low-scoring games. Strict kickers need an owner decision (for example, Strict kickers from 1999 only).
+
+**Kicker lines are checked by team.** A kicking line counts as known when the team's recorded kicks add up to its final score in every possible reading. That proves the team's kicking, not which player the source credits: in 1999, where nflverse names the kicker on every play, the source credits kicks to the wrong kicker in 5 of 426 kicker-games (those five are quarantined). Before 1999 there is no second source to catch this.
 
 
 ## Defense interceptions
 
-- Defenders' INTs equal the opposing passers' INTs thrown: 16593 games.
-- Disputed (`int_check` = disputed): 1355 games. Unverified (`int_check` = unverified: the source has fewer than 10 pass attempts for the opponent in that game, usually because its passer is missing from the source, so even a 0 = 0 match proves nothing): 162 games. Together 1517 (1950s 1229, 1960s 178, 1970s 63, 1980s 26, 1990s 21). These are **quarantined**: `def_int` is blank, and the original counts are kept in `def_int_defenders`, `opp_pass_int` and `opp_pass_att`. The larger count is never chosen.
+- Defenders' INTs equal the opposing passers' INTs thrown: 16563 games.
+- Disputed (`int_check` = disputed): 1317 games. Unverified (`int_check` = unverified: the source has fewer than 10 pass attempts for the opponent in that game, usually because its passer is missing from the source, so even a 0 = 0 match proves nothing): 230 games. Together 1547 (1950s 1230, 1960s 200, 1970s 67, 1980s 26, 1990s 24). These are **quarantined**: `def_int` is blank, and the original counts are kept in `def_int_defenders`, `opp_pass_int` and `opp_pass_att`. The larger count is never chosen.
 - Season checks against published totals: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30 (all match).
 
 ## Unresolved fields
@@ -208,13 +210,13 @@ Offense is unbiased. **Kickers are not:** before 1999, distance tiers are known 
 | fum_rec_td (offensive fumble-recovery TD) | QB RB WR TE K | 1999; SCORE0/SCORE2 games | other games | Not in the scraped source |
 | two_pt | QB RB WR TE K | NFL 1950–1993 (rule: 0), 1999, SCORE0 games | other AFL and 1994–98 games | Not in the scraped source |
 | FG made by distance | K | 1999; games with no FG made | other 1960–1998 games | Not in the scraped source |
-| FG/XP made and tried | K | 1960–1999; 1950s where recorded or SCORE0 | other 1950s games; 203 1960–99 kicker-games whose team score shows a kick missing from the source; 5 disputed 1999 kicker-games | Source has almost none before 1960; an odd score gap, or a 6-point gap with no PAT try to match it, means a kick is missing; in 1999 two sources credit some kicks to a different kicker |
+| FG/XP made and tried | K | 1960–1999; 1950s where recorded or SCORE0 | other 1950s games; 248 1960–99 kicker-games whose team score shows a kick missing from the source; 5 disputed 1999 kicker-games | Source has almost none before 1960; an odd score gap, or a 6-point gap with no PAT try to match it, means a kick is missing; in 1999 two sources credit some kicks to a different kicker |
 | xp_missed | K | 1960–1999 where every TD has a recorded PAT try | 1950s; games with a TD but no recorded PAT try | A miss doesn't score, so the final score can't prove it |
 | fum_rec, blocked punts/FGs/PATs | DEF | 1999 | 1950–1998 | Not in the scraped source; not provable from the score |
 | def_int_td, def_fum_td, st_other_td, safeties | DEF | 1999; SCORE0/SCORE2 games | other games | Not in the scraped source |
 | sacks | DEF | 1982–1999 | 1950–1981 | Not an official stat before 1982 |
 | return TDs | all | 1960–1999; 1950s SCORE0 games | other 1950s games | Source has almost no return data before 1960 |
-| def_int | DEF | games where both logs agree | 1517 games | Defender and passer logs disagree, or the opponent's passing isn't recorded |
+| def_int | DEF | games where both logs agree | 1547 games | Defender and passer logs disagree, or the opponent's passing isn't recorded |
 | 1999-09-12 BAL at STL extras | all | via score reconciliation where it applies | the rest | Missing from nflverse play-by-play |
 
 Every remaining gap is listed per game in `data/sheets/unresolved_players.csv` and `data/sheets/unresolved_defense.csv` (regular season). Every change, with its old value, new value, source URL and evidence, is in `data/sheets/corrections_log_{qb,rb,wr,te,k,def}.csv`; the same fills in the research workbook's merge format are in `data/sheets/verified_replacements_{...}.csv`. Filling the rest needs box-score or play-by-play data for 1950–1998; Pro-Football-Reference blocks automated access from this environment, and its terms restrict reuse.

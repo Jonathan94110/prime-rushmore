@@ -111,8 +111,9 @@ def main(sheets, out_path):
                 known = sum(x[c] != "" for x in r)
                 if c == "def_int":
                     known = sum(x["int_check"] == "match" for x in r)
+                # Floor the share so nothing short of complete reads as 100%.
                 cells.append("all" if known == len(r) else "none" if known == 0 else
-                             f"all but {len(r) - known}" if len(r) - known <= 10 else f"{100 * known / len(r):.0f}%")
+                             f"all but {len(r) - known}" if len(r) - known <= 10 else f"{100 * known // len(r)}%")
             out.append([c] + cells)
             common[(group, c)] = cells
         w(f"\n**{group}**\n")
@@ -147,8 +148,10 @@ def main(sheets, out_path):
       "every scoring field for the position, kickers' missed extra points and own offense stats included.\n")
     w("Era-wide unrecorded fields: fum_rec_td before 1999; ret_td before 1960; two_pt in AFL games (1960–69) and "
       "1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return, "
-      "fumble-return and other special-teams TDs before 1999. Not excludable: "
-      "all 1950s kicking (nothing to score), disputed interceptions, and the 1999 game missing from nflverse.\n")
+      "fumble-return and other special-teams TDs before 1999. Not excludable (they block both options): "
+      "all 1950s kicking (nothing to score); kicking lines the final score shows are missing a kick; missed extra "
+      "points where a TD has no recorded PAT try; the five 1999 kicker-games the two sources credit to different "
+      "kickers; disputed or unverified interceptions; and the 1999 game missing from nflverse.\n")
     rows = []
     for p in POSITIONS:
         strict = Counter(int(x["season"]) // 10 * 10 for x in reg[p] if x["strict_eligible"] == "True")
@@ -188,10 +191,13 @@ def main(sheets, out_path):
     w(f"Stat line: {m['pass_cmp']}/{m['pass_att']}, {m['pass_yds']} pass yds, {m['pass_td']} TD, {m['pass_int']} INT; "
       f"{m['rush_att']} rushes for {m['rush_yds']} yds, {m['rush_td']} TD; {m['rec']} rec; {m['ret_td']} return TD; "
       f"two_pt {m['two_pt']} (source {m['source']}); fum_rec_td {m['fum_rec_td'] or 'unknown'}. Final {m['team_score']}-{m['opp_score']}.\n")
+    offense = ["pass_yds", "pass_td", "pass_int", "rush_yds", "rush_td", "rec", "rec_yds", "rec_td", "ret_td", "two_pt", "fum_rec_td"]
+    excluded = [f for f in m["era_excluded_fields"].split(";") if f]
     w(table(["Option", "Eligible", "Why", "Fields scored"], [
-        ["Strict", m["strict_eligible"], f"scoring_missing = {m['scoring_missing']}", "not drawn"],
-        ["Era-scored", m["era_scored_eligible"], f"era_excluded_fields = {m['era_excluded_fields']} (unrecorded for all 1950–98 games)",
-         "all offense fields except fum_rec_td"],
+        ["Strict", m["strict_eligible"], f"scoring_missing = {m['scoring_missing'] or 'none'}",
+         "all offense fields" if m["strict_eligible"] == "True" else "not drawn"],
+        ["Era-scored", m["era_scored_eligible"], f"era_excluded_fields = {m['era_excluded_fields'] or 'none'}",
+         "all offense fields" + (f" except {', '.join(excluded)}" if excluded else "")],
     ]))
     w(f"\nUnder this dataset's standard formula (0.04/pass yd, 4/pass TD, −2/INT, 0.1/rush yd) the line is "
       f"{m['fpts_std']} points; the site's v4 offense coefficients come from its own code.\n")
@@ -262,6 +268,10 @@ def main(sheets, out_path):
     w("\nOffense is unbiased. **Kickers are not:** before 1999, distance tiers are known only for games with no field "
       "goal made (all tiers 0), so a Strict kicker pool before 1999 would draw only those low-scoring games. Strict "
       "kickers need an owner decision (for example, Strict kickers from 1999 only).\n")
+    w("**Kicker lines are checked by team.** A kicking line counts as known when the team's recorded kicks add up to its "
+      "final score in every possible reading. That proves the team's kicking, not which player the source credits: in "
+      "1999, where nflverse names the kicker on every play, the source credits kicks to the wrong kicker in 5 of 426 "
+      "kicker-games (those five are quarantined). Before 1999 there is no second source to catch this.\n")
 
     w("\n## Defense interceptions\n")
     c = Counter(x["int_check"] for x in data["def"])

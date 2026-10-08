@@ -292,7 +292,7 @@ WAS,Washington Redskins,1951,19511007-NYG-WAS,1951-10-07,NYG,sacks;def_int;fum_r
 WAS,Washington Redskins,1951,19511014-WAS-CLE,1951-10-14,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 WAS,Washington Redskins,1951,19511021-CRD-WAS,1951-10-21,CRD,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;ret_td;st_other_td,disputed,1
 WAS,Washington Redskins,1951,19511028-WAS-PHI,1951-10-28,PHI,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;ret_td;st_other_td,disputed,9
-WAS,Washington Redskins,1951,19511104-CHI-WAS,1951-11-04,CHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+WAS,Washington Redskins,1951,19511104-CHI-WAS,1951-11-04,CHI,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 WAS,Washington Redskins,1951,19511111-WAS-NYG,1951-11-11,NYG,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;ret_td;st_other_td,disputed,2
 WAS,Washington Redskins,1951,19511118-WAS-PIT,1951-11-18,PIT,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;ret_td;st_other_td,match,10
 WAS,Washington Redskins,1951,19511125-RAM-WAS,1951-11-25,RAM,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;ret_td;st_other_td,disputed,7
@@ -1470,7 +1470,7 @@ BOS,Boston Patriots,1960,19601008-BOS-LAC,1960-10-08,LAC,sacks;fum_rec;safeties;
 BOS,Boston Patriots,1960,19601016-BOS-OAK,1960-10-16,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 BOS,Boston Patriots,1960,19601023-BOS-DEN,1960-10-23,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1960,19601028-LAC-BOS,1960-10-28,LAC,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
-BOS,Boston Patriots,1960,19601104-OAK-BOS,1960-11-04,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BOS,Boston Patriots,1960,19601104-OAK-BOS,1960-11-04,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BOS,Boston Patriots,1960,19601111-NYT-BOS,1960-11-11,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1960,19601118-DTX-BOS,1960-11-18,DTX,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 BOS,Boston Patriots,1960,19601125-HOU-BOS,1960-11-25,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1479,16 +1479,16 @@ BOS,Boston Patriots,1960,19601211-BOS-DTX,1960-12-11,DTX,sacks;fum_rec;blk_punt;
 BOS,Boston Patriots,1960,19601218-BOS-HOU,1960-12-18,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 BUF,Buffalo Bills,1960,19600911-BUF-NYT,1960-09-11,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1960,19600918-DEN-BUF,1960-09-18,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
-BUF,Buffalo Bills,1960,19600923-BUF-BOS,1960-09-23,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BUF,Buffalo Bills,1960,19600923-BUF-BOS,1960-09-23,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BUF,Buffalo Bills,1960,19601002-LAC-BUF,1960-10-02,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1960,19601016-NYT-BUF,1960-10-16,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BUF,Buffalo Bills,1960,19601023-OAK-BUF,1960-10-23,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BUF,Buffalo Bills,1960,19601023-OAK-BUF,1960-10-23,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BUF,Buffalo Bills,1960,19601030-HOU-BUF,1960-10-30,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1960,19601106-DTX-BUF,1960-11-06,DTX,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BUF,Buffalo Bills,1960,19601113-BUF-OAK,1960-11-13,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+BUF,Buffalo Bills,1960,19601113-BUF-OAK,1960-11-13,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BUF,Buffalo Bills,1960,19601120-BUF-LAC,1960-11-20,LAC,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 BUF,Buffalo Bills,1960,19601127-BUF-DEN,1960-11-27,DEN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,8
-BUF,Buffalo Bills,1960,19601204-BOS-BUF,1960-12-04,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
+BUF,Buffalo Bills,1960,19601204-BOS-BUF,1960-12-04,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 BUF,Buffalo Bills,1960,19601211-BUF-HOU,1960-12-11,HOU,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
 BUF,Buffalo Bills,1960,19601218-BUF-DTX,1960-12-18,DTX,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 CHI,Chicago Bears,1960,19600925-CHI-GNB,1960-09-25,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1527,10 +1527,10 @@ DAL,Dallas Cowboys,1960,19601120-SFO-DAL,1960-11-20,SFO,sacks;fum_rec;blk_punt;b
 DAL,Dallas Cowboys,1960,19601127-DAL-CHI,1960-11-27,CHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DAL,Dallas Cowboys,1960,19601204-DAL-NYG,1960-12-04,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DAL,Dallas Cowboys,1960,19601211-DAL-DET,1960-12-11,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1960,19600909-DEN-BOS,1960-09-09,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DEN,Denver Broncos,1960,19600909-DEN-BOS,1960-09-09,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DEN,Denver Broncos,1960,19600918-DEN-BUF,1960-09-18,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 DEN,Denver Broncos,1960,19600923-DEN-NYT,1960-09-23,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1960,19601002-OAK-DEN,1960-10-02,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+DEN,Denver Broncos,1960,19601002-OAK-DEN,1960-10-02,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 DEN,Denver Broncos,1960,19601016-LAC-DEN,1960-10-16,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1960,19601023-BOS-DEN,1960-10-23,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1960,19601030-DTX-DEN,1960-10-30,DTX,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1540,7 +1540,7 @@ DEN,Denver Broncos,1960,19601120-DEN-HOU,1960-11-20,HOU,sacks;fum_rec;blk_punt;b
 DEN,Denver Broncos,1960,19601127-BUF-DEN,1960-11-27,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1960,19601204-NYT-DEN,1960-12-04,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1960,19601210-DEN-LAC,1960-12-10,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1960,19601217-DEN-OAK,1960-12-17,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DEN,Denver Broncos,1960,19601217-DEN-OAK,1960-12-17,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DET,Detroit Lions,1960,19601002-DET-GNB,1960-10-02,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1960,19601009-SFO-DET,1960-10-09,SFO,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1960,19601016-DET-PHI,1960-10-16,PHI,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -1554,10 +1554,10 @@ DET,Detroit Lions,1960,19601204-DET-BAL,1960-12-04,BAL,sacks;fum_rec;blk_punt;bl
 DET,Detroit Lions,1960,19601211-DAL-DET,1960-12-11,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,2
 DET,Detroit Lions,1960,19601218-CHI-DET,1960-12-18,CHI,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 DTX,Dallas Texans,1960,19600910-DTX-LAC,1960-09-10,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DTX,Dallas Texans,1960,19600916-DTX-OAK,1960-09-16,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+DTX,Dallas Texans,1960,19600916-DTX-OAK,1960-09-16,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DTX,Dallas Texans,1960,19600925-LAC-DTX,1960-09-25,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1960,19601002-NYT-DTX,1960-10-02,NYT,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,5
-DTX,Dallas Texans,1960,19601009-OAK-DTX,1960-10-09,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+DTX,Dallas Texans,1960,19601009-OAK-DTX,1960-10-09,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 DTX,Dallas Texans,1960,19601016-DTX-HOU,1960-10-16,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1960,19601030-DTX-DEN,1960-10-30,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1960,19601106-DTX-BUF,1960-11-06,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,12
@@ -1565,7 +1565,7 @@ DTX,Dallas Texans,1960,19601113-DEN-DTX,1960-11-13,DEN,sacks;fum_rec;safeties;bl
 DTX,Dallas Texans,1960,19601118-DTX-BOS,1960-11-18,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1960,19601124-DTX-NYT,1960-11-24,NYT,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 DTX,Dallas Texans,1960,19601204-HOU-DTX,1960-12-04,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DTX,Dallas Texans,1960,19601211-BOS-DTX,1960-12-11,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+DTX,Dallas Texans,1960,19601211-BOS-DTX,1960-12-11,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 DTX,Dallas Texans,1960,19601218-BUF-DTX,1960-12-18,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1960,19600925-CHI-GNB,1960-09-25,CHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1960,19601002-DET-GNB,1960-10-02,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1581,7 +1581,7 @@ GNB,Green Bay Packers,1960,19601210-GNB-SFO,1960-12-10,SFO,sacks;fum_rec;blk_pun
 GNB,Green Bay Packers,1960,19601217-GNB-RAM,1960-12-17,RAM,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1960,19600911-HOU-OAK,1960-09-11,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 HOU,Houston Oilers,1960,19600918-LAC-HOU,1960-09-18,LAC,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-HOU,Houston Oilers,1960,19600925-OAK-HOU,1960-09-25,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+HOU,Houston Oilers,1960,19600925-OAK-HOU,1960-09-25,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 HOU,Houston Oilers,1960,19601009-NYT-HOU,1960-10-09,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1960,19601016-DTX-HOU,1960-10-16,DTX,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1960,19601023-HOU-NYT,1960-10-23,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1599,11 +1599,11 @@ LAC,Los Angeles Chargers,1960,19600925-LAC-DTX,1960-09-25,DTX,sacks;def_int;fum_
 LAC,Los Angeles Chargers,1960,19601002-LAC-BUF,1960-10-02,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 LAC,Los Angeles Chargers,1960,19601008-BOS-LAC,1960-10-08,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 LAC,Los Angeles Chargers,1960,19601016-LAC-DEN,1960-10-16,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-LAC,Los Angeles Chargers,1960,19601028-LAC-BOS,1960-10-28,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,12
+LAC,Los Angeles Chargers,1960,19601028-LAC-BOS,1960-10-28,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,12
 LAC,Los Angeles Chargers,1960,19601104-LAC-NYT,1960-11-04,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 LAC,Los Angeles Chargers,1960,19601113-HOU-LAC,1960-11-13,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 LAC,Los Angeles Chargers,1960,19601120-BUF-LAC,1960-11-20,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-LAC,Los Angeles Chargers,1960,19601127-OAK-LAC,1960-11-27,OAK,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
+LAC,Los Angeles Chargers,1960,19601127-OAK-LAC,1960-11-27,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 LAC,Los Angeles Chargers,1960,19601204-LAC-OAK,1960-12-04,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 LAC,Los Angeles Chargers,1960,19601210-DEN-LAC,1960-12-10,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 LAC,Los Angeles Chargers,1960,19601218-NYT-LAC,1960-12-18,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -1841,7 +1841,7 @@ DTX,Dallas Texans,1961,19611029-BOS-DTX,1961-10-29,BOS,sacks;fum_rec;blk_punt;bl
 DTX,Dallas Texans,1961,19611103-DTX-BOS,1961-11-03,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1961,19611112-BUF-DTX,1961-11-12,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1961,19611119-DTX-SDG,1961-11-19,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
-DTX,Dallas Texans,1961,19611126-OAK-DTX,1961-11-26,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,2
+DTX,Dallas Texans,1961,19611126-OAK-DTX,1961-11-26,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 DTX,Dallas Texans,1961,19611203-DTX-NYT,1961-12-03,NYT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DTX,Dallas Texans,1961,19611210-DEN-DTX,1961-12-10,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,13
 DTX,Dallas Texans,1961,19611217-NYT-DTX,1961-12-17,NYT,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,17
@@ -2351,7 +2351,7 @@ BAL,Baltimore Colts,1963,19631208-MIN-BAL,1963-12-08,MIN,sacks;fum_rec;safeties;
 BAL,Baltimore Colts,1963,19631215-RAM-BAL,1963-12-15,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1963,19630908-NYJ-BOS,1963-09-08,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1963,19630914-BOS-SDG,1963-09-14,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BOS,Boston Patriots,1963,19630922-BOS-OAK,1963-09-22,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BOS,Boston Patriots,1963,19630922-BOS-OAK,1963-09-22,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BOS,Boston Patriots,1963,19630929-BOS-DEN,1963-09-29,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1963,19631005-BOS-NYJ,1963-10-05,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1963,19631011-OAK-BOS,1963-10-11,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
@@ -2364,10 +2364,10 @@ BOS,Boston Patriots,1963,19631201-BUF-BOS,1963-12-01,BUF,sacks;fum_rec;blk_punt;
 BOS,Boston Patriots,1963,19631208-BOS-HOU,1963-12-08,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,14
 BOS,Boston Patriots,1963,19631214-BOS-KAN,1963-12-14,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1963,19630908-BUF-SDG,1963-09-08,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BUF,Buffalo Bills,1963,19630915-BUF-OAK,1963-09-15,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BUF,Buffalo Bills,1963,19630915-BUF-OAK,1963-09-15,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BUF,Buffalo Bills,1963,19630922-KAN-BUF,1963-09-22,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 BUF,Buffalo Bills,1963,19630928-HOU-BUF,1963-09-28,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-BUF,Buffalo Bills,1963,19631005-OAK-BUF,1963-10-05,OAK,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
+BUF,Buffalo Bills,1963,19631005-OAK-BUF,1963-10-05,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 BUF,Buffalo Bills,1963,19631013-BUF-KAN,1963-10-13,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1963,19631020-BUF-HOU,1963-10-20,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1963,19631026-BOS-BUF,1963-10-26,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2429,7 +2429,7 @@ DEN,Denver Broncos,1963,19631026-DEN-NYJ,1963-10-26,NYJ,sacks;fum_rec;blk_punt;b
 DEN,Denver Broncos,1963,19631103-BUF-DEN,1963-11-03,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1963,19631109-DEN-BUF,1963-11-09,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1963,19631117-NYJ-DEN,1963-11-17,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1963,19631128-OAK-DEN,1963-11-28,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DEN,Denver Broncos,1963,19631128-OAK-DEN,1963-11-28,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DEN,Denver Broncos,1963,19631208-DEN-KAN,1963-12-08,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 DEN,Denver Broncos,1963,19631215-DEN-OAK,1963-12-15,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DEN,Denver Broncos,1963,19631222-DEN-SDG,1963-12-22,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2461,7 +2461,7 @@ GNB,Green Bay Packers,1963,19631124-SFO-GNB,1963-11-24,SFO,sacks;fum_rec;blk_pun
 GNB,Green Bay Packers,1963,19631128-GNB-DET,1963-11-28,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1963,19631207-GNB-RAM,1963-12-07,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1963,19631214-GNB-SFO,1963-12-14,SFO,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-HOU,Houston Oilers,1963,19630907-OAK-HOU,1963-09-07,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+HOU,Houston Oilers,1963,19630907-OAK-HOU,1963-09-07,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 HOU,Houston Oilers,1963,19630914-DEN-HOU,1963-09-14,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1963,19630922-HOU-NYJ,1963-09-22,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1963,19630928-HOU-BUF,1963-09-28,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2482,7 +2482,7 @@ KAN,Kansas City Chiefs,1963,19631006-HOU-KAN,1963-10-06,HOU,sacks;fum_rec;blk_pu
 KAN,Kansas City Chiefs,1963,19631013-BUF-KAN,1963-10-13,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1963,19631020-SDG-KAN,1963-10-20,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1963,19631027-KAN-HOU,1963-10-27,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-KAN,Kansas City Chiefs,1963,19631103-KAN-OAK,1963-11-03,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+KAN,Kansas City Chiefs,1963,19631103-KAN-OAK,1963-11-03,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1963,19631108-OAK-KAN,1963-11-08,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1963,19631117-KAN-BOS,1963-11-17,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1963,19631201-KAN-NYJ,1963-12-01,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2519,10 +2519,10 @@ NYG,New York Giants,1963,19631208-WAS-NYG,1963-12-08,WAS,sacks;fum_rec;safeties;
 NYG,New York Giants,1963,19631215-PIT-NYG,1963-12-15,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1963,19630908-NYJ-BOS,1963-09-08,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 NYJ,New York Jets,1963,19630922-HOU-NYJ,1963-09-22,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-NYJ,New York Jets,1963,19630928-OAK-NYJ,1963-09-28,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+NYJ,New York Jets,1963,19630928-OAK-NYJ,1963-09-28,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 NYJ,New York Jets,1963,19631005-BOS-NYJ,1963-10-05,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1963,19631013-NYJ-SDG,1963-10-13,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-NYJ,New York Jets,1963,19631020-NYJ-OAK,1963-10-20,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+NYJ,New York Jets,1963,19631020-NYJ-OAK,1963-10-20,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 NYJ,New York Jets,1963,19631026-DEN-NYJ,1963-10-26,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1963,19631102-SDG-NYJ,1963-11-02,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1963,19631110-NYJ-HOU,1963-11-10,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2593,12 +2593,12 @@ SDG,San Diego Chargers,1963,19630929-KAN-SDG,1963-09-29,KAN,sacks;fum_rec;blk_pu
 SDG,San Diego Chargers,1963,19631006-SDG-DEN,1963-10-06,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1963,19631013-NYJ-SDG,1963-10-13,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1963,19631020-SDG-KAN,1963-10-20,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-SDG,San Diego Chargers,1963,19631027-OAK-SDG,1963-10-27,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+SDG,San Diego Chargers,1963,19631027-OAK-SDG,1963-10-27,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 SDG,San Diego Chargers,1963,19631102-SDG-NYJ,1963-11-02,NYJ,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 SDG,San Diego Chargers,1963,19631110-SDG-BOS,1963-11-10,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1963,19631117-SDG-BUF,1963-11-17,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1963,19631201-HOU-SDG,1963-12-01,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-SDG,San Diego Chargers,1963,19631208-SDG-OAK,1963-12-08,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+SDG,San Diego Chargers,1963,19631208-SDG-OAK,1963-12-08,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 SDG,San Diego Chargers,1963,19631215-SDG-HOU,1963-12-15,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1963,19631222-DEN-SDG,1963-12-22,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 SFO,San Francisco 49ers,1963,19630915-MIN-SFO,1963-09-15,MIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2674,7 +2674,7 @@ BOS,Boston Patriots,1964,19641220-BUF-BOS,1964-12-20,BUF,sacks;fum_rec;safeties;
 BUF,Buffalo Bills,1964,19640913-KAN-BUF,1964-09-13,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 BUF,Buffalo Bills,1964,19640920-DEN-BUF,1964-09-20,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1964,19640926-SDG-BUF,1964-09-26,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-BUF,Buffalo Bills,1964,19641003-OAK-BUF,1964-10-03,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,2
+BUF,Buffalo Bills,1964,19641003-OAK-BUF,1964-10-03,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 BUF,Buffalo Bills,1964,19641011-BUF-HOU,1964-10-11,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1964,19641018-BUF-KAN,1964-10-18,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1964,19641024-NYJ-BUF,1964-10-24,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2682,7 +2682,7 @@ BUF,Buffalo Bills,1964,19641101-HOU-BUF,1964-11-01,HOU,sacks;fum_rec;blk_punt;bl
 BUF,Buffalo Bills,1964,19641108-BUF-NYJ,1964-11-08,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1964,19641115-BOS-BUF,1964-11-15,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 BUF,Buffalo Bills,1964,19641126-BUF-SDG,1964-11-26,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,4
-BUF,Buffalo Bills,1964,19641206-BUF-OAK,1964-12-06,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BUF,Buffalo Bills,1964,19641206-BUF-OAK,1964-12-06,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BUF,Buffalo Bills,1964,19641213-BUF-DEN,1964-12-13,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 BUF,Buffalo Bills,1964,19641220-BUF-BOS,1964-12-20,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 CHI,Chicago Bears,1964,19640913-CHI-GNB,1964-09-13,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2733,7 +2733,7 @@ DEN,Denver Broncos,1964,19640927-HOU-DEN,1964-09-27,HOU,sacks;fum_rec;blk_punt;b
 DEN,Denver Broncos,1964,19641004-BOS-DEN,1964-10-04,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1964,19641011-KAN-DEN,1964-10-11,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1964,19641018-DEN-SDG,1964-10-18,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1964,19641025-DEN-OAK,1964-10-25,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DEN,Denver Broncos,1964,19641025-DEN-OAK,1964-10-25,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DEN,Denver Broncos,1964,19641101-DEN-KAN,1964-11-01,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,14
 DEN,Denver Broncos,1964,19641108-SDG-DEN,1964-11-08,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,10
 DEN,Denver Broncos,1964,19641115-NYJ-DEN,1964-11-15,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2770,7 +2770,7 @@ GNB,Green Bay Packers,1964,19641129-GNB-DAL,1964-11-29,DAL,sacks;fum_rec;safetie
 GNB,Green Bay Packers,1964,19641205-GNB-CHI,1964-12-05,CHI,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
 GNB,Green Bay Packers,1964,19641213-GNB-RAM,1964-12-13,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1964,19640912-HOU-SDG,1964-09-12,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-HOU,Houston Oilers,1964,19640919-OAK-HOU,1964-09-19,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,12
+HOU,Houston Oilers,1964,19640919-OAK-HOU,1964-09-19,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,12
 HOU,Houston Oilers,1964,19640927-HOU-DEN,1964-09-27,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1964,19641004-HOU-KAN,1964-10-04,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1964,19641011-BUF-HOU,1964-10-11,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2784,13 +2784,13 @@ HOU,Houston Oilers,1964,19641129-BOS-HOU,1964-11-29,BOS,sacks;fum_rec;blk_punt;b
 HOU,Houston Oilers,1964,19641213-NYJ-HOU,1964-12-13,NYJ,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1964,19641220-DEN-HOU,1964-12-20,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1964,19640913-KAN-BUF,1964-09-13,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-KAN,Kansas City Chiefs,1964,19640927-KAN-OAK,1964-09-27,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+KAN,Kansas City Chiefs,1964,19640927-KAN-OAK,1964-09-27,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1964,19641004-HOU-KAN,1964-10-04,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 KAN,Kansas City Chiefs,1964,19641011-KAN-DEN,1964-10-11,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1964,19641018-BUF-KAN,1964-10-18,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 KAN,Kansas City Chiefs,1964,19641023-KAN-BOS,1964-10-23,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1964,19641101-DEN-KAN,1964-11-01,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-KAN,Kansas City Chiefs,1964,19641108-OAK-KAN,1964-11-08,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+KAN,Kansas City Chiefs,1964,19641108-OAK-KAN,1964-11-08,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1964,19641115-SDG-KAN,1964-11-15,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 KAN,Kansas City Chiefs,1964,19641122-KAN-HOU,1964-11-22,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1964,19641129-KAN-NYJ,1964-11-29,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -2828,7 +2828,7 @@ NYG,New York Giants,1964,19641212-CLE-NYG,1964-12-12,CLE,sacks;fum_rec;blk_punt;
 NYJ,New York Jets,1964,19640912-DEN-NYJ,1964-09-12,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1964,19640927-NYJ-BOS,1964-09-27,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1964,19641003-SDG-NYJ,1964-10-03,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-NYJ,New York Jets,1964,19641010-OAK-NYJ,1964-10-10,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+NYJ,New York Jets,1964,19641010-OAK-NYJ,1964-10-10,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 NYJ,New York Jets,1964,19641017-HOU-NYJ,1964-10-17,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1964,19641024-NYJ-BUF,1964-10-24,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1964,19641031-BOS-NYJ,1964-10-31,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -2971,7 +2971,7 @@ BOS,Boston Patriots,1965,19650924-DEN-BOS,1965-09-24,DEN,sacks;fum_rec;blk_punt;
 BOS,Boston Patriots,1965,19651003-BOS-KAN,1965-10-03,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1965,19651008-OAK-BOS,1965-10-08,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BOS,Boston Patriots,1965,19651017-SDG-BOS,1965-10-17,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BOS,Boston Patriots,1965,19651024-BOS-OAK,1965-10-24,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+BOS,Boston Patriots,1965,19651024-BOS-OAK,1965-10-24,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BOS,Boston Patriots,1965,19651031-BOS-SDG,1965-10-31,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 BOS,Boston Patriots,1965,19651107-BUF-BOS,1965-11-07,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1965,19651114-NYJ-BOS,1965-11-14,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3091,7 +3091,7 @@ HOU,Houston Oilers,1965,19651128-HOU-KAN,1965-11-28,KAN,sacks;fum_rec;safeties;b
 HOU,Houston Oilers,1965,19651205-BUF-HOU,1965-12-05,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 HOU,Houston Oilers,1965,19651212-SDG-HOU,1965-12-12,SDG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
 HOU,Houston Oilers,1965,19651218-HOU-BOS,1965-12-18,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
-KAN,Kansas City Chiefs,1965,19650912-KAN-OAK,1965-09-12,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+KAN,Kansas City Chiefs,1965,19650912-KAN-OAK,1965-09-12,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1965,19650918-KAN-NYJ,1965-09-18,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1965,19650926-KAN-SDG,1965-09-26,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1965,19651003-BOS-KAN,1965-10-03,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,12
@@ -3204,7 +3204,7 @@ RAM,Los Angeles Rams,1965,19651205-RAM-STL,1965-12-05,STL,sacks;fum_rec;blk_punt
 RAM,Los Angeles Rams,1965,19651212-CLE-RAM,1965-12-12,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 RAM,Los Angeles Rams,1965,19651218-BAL-RAM,1965-12-18,BAL,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 SDG,San Diego Chargers,1965,19650911-DEN-SDG,1965-09-11,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-SDG,San Diego Chargers,1965,19650919-SDG-OAK,1965-09-19,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+SDG,San Diego Chargers,1965,19650919-SDG-OAK,1965-09-19,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 SDG,San Diego Chargers,1965,19650926-KAN-SDG,1965-09-26,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1965,19651003-HOU-SDG,1965-10-03,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 SDG,San Diego Chargers,1965,19651010-SDG-BUF,1965-10-10,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -3293,7 +3293,7 @@ BOS,Boston Patriots,1966,19660925-KAN-BOS,1966-09-25,KAN,sacks;fum_rec;blk_punt;
 BOS,Boston Patriots,1966,19661002-NYJ-BOS,1966-10-02,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1966,19661008-BOS-BUF,1966-10-08,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1966,19661023-SDG-BOS,1966-10-23,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BOS,Boston Patriots,1966,19661030-OAK-BOS,1966-10-30,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+BOS,Boston Patriots,1966,19661030-OAK-BOS,1966-10-30,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BOS,Boston Patriots,1966,19661106-DEN-BOS,1966-11-06,DEN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 BOS,Boston Patriots,1966,19661113-HOU-BOS,1966-11-13,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1966,19661120-BOS-KAN,1966-11-20,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3400,7 +3400,7 @@ GNB,Green Bay Packers,1966,19661204-SFO-GNB,1966-12-04,SFO,sacks;fum_rec;blk_pun
 GNB,Green Bay Packers,1966,19661210-GNB-BAL,1966-12-10,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1966,19661218-GNB-RAM,1966-12-18,RAM,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1966,19660903-DEN-HOU,1966-09-03,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-HOU,Houston Oilers,1966,19660910-OAK-HOU,1966-09-10,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+HOU,Houston Oilers,1966,19660910-OAK-HOU,1966-09-10,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 HOU,Houston Oilers,1966,19660918-HOU-NYJ,1966-09-18,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1966,19660925-HOU-BUF,1966-09-25,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1966,19661002-HOU-DEN,1966-10-02,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3414,7 +3414,7 @@ HOU,Houston Oilers,1966,19661204-SDG-HOU,1966-12-04,SDG,sacks;fum_rec;safeties;b
 HOU,Houston Oilers,1966,19661211-BOS-HOU,1966-12-11,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1966,19661218-HOU-MIA,1966-12-18,MIA,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1966,19660911-KAN-BUF,1966-09-11,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-KAN,Kansas City Chiefs,1966,19660918-KAN-OAK,1966-09-18,OAK,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,2
+KAN,Kansas City Chiefs,1966,19660918-KAN-OAK,1966-09-18,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 KAN,Kansas City Chiefs,1966,19660925-KAN-BOS,1966-09-25,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 KAN,Kansas City Chiefs,1966,19661002-BUF-KAN,1966-10-02,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1966,19661008-DEN-KAN,1966-10-08,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3427,7 +3427,7 @@ KAN,Kansas City Chiefs,1966,19661120-BOS-KAN,1966-11-20,BOS,sacks;fum_rec;safeti
 KAN,Kansas City Chiefs,1966,19661127-KAN-NYJ,1966-11-27,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1966,19661211-KAN-MIA,1966-12-11,MIA,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1966,19661218-KAN-SDG,1966-12-18,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-MIA,Miami Dolphins,1966,19660902-OAK-MIA,1966-09-02,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+MIA,Miami Dolphins,1966,19660902-OAK-MIA,1966-09-02,OAK,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 MIA,Miami Dolphins,1966,19660909-NYJ-MIA,1966-09-09,NYJ,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 MIA,Miami Dolphins,1966,19660918-MIA-BUF,1966-09-18,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1966,19661002-MIA-SDG,1966-10-02,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3541,7 +3541,7 @@ RAM,Los Angeles Rams,1966,19661204-DET-RAM,1966-12-04,DET,sacks;fum_rec;safeties
 RAM,Los Angeles Rams,1966,19661218-GNB-RAM,1966-12-18,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1966,19660904-BUF-SDG,1966-09-04,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1966,19660910-BOS-SDG,1966-09-10,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-SDG,San Diego Chargers,1966,19660925-SDG-OAK,1966-09-25,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,2
+SDG,San Diego Chargers,1966,19660925-SDG-OAK,1966-09-25,OAK,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 SDG,San Diego Chargers,1966,19661002-MIA-SDG,1966-10-02,MIA,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 SDG,San Diego Chargers,1966,19661008-SDG-NYJ,1966-10-08,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1966,19661016-SDG-BUF,1966-10-16,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3601,7 +3601,7 @@ ATL,Atlanta Falcons,1967,19671001-ATL-GNB,1967-10-01,GNB,sacks;fum_rec;blk_punt;
 ATL,Atlanta Falcons,1967,19671008-PHI-ATL,1967-10-08,PHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 ATL,Atlanta Falcons,1967,19671015-WAS-ATL,1967-10-15,WAS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 ATL,Atlanta Falcons,1967,19671022-ATL-DET,1967-10-22,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-ATL,Atlanta Falcons,1967,19671029-MIN-ATL,1967-10-29,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+ATL,Atlanta Falcons,1967,19671029-MIN-ATL,1967-10-29,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 ATL,Atlanta Falcons,1967,19671105-ATL-DAL,1967-11-05,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 ATL,Atlanta Falcons,1967,19671112-BAL-ATL,1967-11-12,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 ATL,Atlanta Falcons,1967,19671119-RAM-ATL,1967-11-19,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3635,7 +3635,7 @@ BOS,Boston Patriots,1967,19671105-HOU-BOS,1967-11-05,HOU,sacks;fum_rec;safeties;
 BOS,Boston Patriots,1967,19671112-KAN-BOS,1967-11-12,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1967,19671119-NYJ-BOS,1967-11-19,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BOS,Boston Patriots,1967,19671126-BOS-HOU,1967-11-26,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BOS,Boston Patriots,1967,19671209-BUF-BOS,1967-12-09,BUF,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,2
+BOS,Boston Patriots,1967,19671209-BUF-BOS,1967-12-09,BUF,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,2
 BOS,Boston Patriots,1967,19671217-BOS-MIA,1967-12-17,MIA,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 BUF,Buffalo Bills,1967,19670910-NYJ-BUF,1967-09-10,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1967,19670917-HOU-BUF,1967-09-17,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3653,7 +3653,7 @@ BUF,Buffalo Bills,1967,19671209-BUF-BOS,1967-12-09,BOS,sacks;fum_rec;safeties;bl
 BUF,Buffalo Bills,1967,19671224-BUF-OAK,1967-12-24,OAK,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,8
 CHI,Chicago Bears,1967,19670917-CHI-PIT,1967-09-17,PIT,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 CHI,Chicago Bears,1967,19670924-CHI-GNB,1967-09-24,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-CHI,Chicago Bears,1967,19671001-CHI-MIN,1967-10-01,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+CHI,Chicago Bears,1967,19671001-CHI-MIN,1967-10-01,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 CHI,Chicago Bears,1967,19671008-BAL-CHI,1967-10-08,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 CHI,Chicago Bears,1967,19671015-DET-CHI,1967-10-15,DET,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 CHI,Chicago Bears,1967,19671022-CHI-CLE,1967-10-22,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3674,7 +3674,7 @@ CLE,Cleveland Browns,1967,19671022-CHI-CLE,1967-10-22,CHI,sacks;fum_rec;blk_punt
 CLE,Cleveland Browns,1967,19671029-CLE-NYG,1967-10-29,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 CLE,Cleveland Browns,1967,19671105-CLE-PIT,1967-11-05,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 CLE,Cleveland Browns,1967,19671112-CLE-GNB,1967-11-12,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-CLE,Cleveland Browns,1967,19671119-MIN-CLE,1967-11-19,MIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+CLE,Cleveland Browns,1967,19671119-MIN-CLE,1967-11-19,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 CLE,Cleveland Browns,1967,19671126-WAS-CLE,1967-11-26,WAS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 CLE,Cleveland Browns,1967,19671203-NYG-CLE,1967-12-03,NYG,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 CLE,Cleveland Browns,1967,19671210-CLE-STL,1967-12-10,STL,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -3720,7 +3720,7 @@ DET,Detroit Lions,1967,19671119-DET-BAL,1967-11-19,BAL,sacks;fum_rec;blk_punt;bl
 DET,Detroit Lions,1967,19671123-RAM-DET,1967-11-23,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1967,19671203-PIT-DET,1967-12-03,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1967,19671210-DET-NYG,1967-12-10,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,2
-DET,Detroit Lions,1967,19671217-MIN-DET,1967-12-17,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+DET,Detroit Lions,1967,19671217-MIN-DET,1967-12-17,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 GNB,Green Bay Packers,1967,19670917-DET-GNB,1967-09-17,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1967,19670924-CHI-GNB,1967-09-24,CHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1967,19671001-ATL-GNB,1967-10-01,ATL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,2
@@ -3772,7 +3772,7 @@ MIA,Miami Dolphins,1967,19671022-NYJ-MIA,1967-10-22,NYJ,sacks;fum_rec;blk_punt;b
 MIA,Miami Dolphins,1967,19671105-MIA-BUF,1967-11-05,BUF,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
 MIA,Miami Dolphins,1967,19671112-MIA-SDG,1967-11-12,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1967,19671119-MIA-OAK,1967-11-19,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-MIA,Miami Dolphins,1967,19671126-BUF-MIA,1967-11-26,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+MIA,Miami Dolphins,1967,19671126-BUF-MIA,1967-11-26,BUF,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 MIA,Miami Dolphins,1967,19671203-MIA-HOU,1967-12-03,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1967,19671210-SDG-MIA,1967-12-10,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1967,19671217-BOS-MIA,1967-12-17,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,12
@@ -3819,7 +3819,7 @@ NYG,New York Giants,1967,19671126-PHI-NYG,1967-11-26,PHI,sacks;fum_rec;blk_punt;
 NYG,New York Giants,1967,19671203-NYG-CLE,1967-12-03,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYG,New York Giants,1967,19671210-DET-NYG,1967-12-10,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYG,New York Giants,1967,19671217-STL-NYG,1967-12-17,STL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-NYJ,New York Jets,1967,19670910-NYJ-BUF,1967-09-10,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+NYJ,New York Jets,1967,19670910-NYJ-BUF,1967-09-10,BUF,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 NYJ,New York Jets,1967,19670924-NYJ-DEN,1967-09-24,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1967,19671001-MIA-NYJ,1967-10-01,MIA,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1967,19671007-OAK-NYJ,1967-10-07,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3876,7 +3876,7 @@ PIT,Pittsburgh Steelers,1967,19671203-PIT-DET,1967-12-03,DET,sacks;fum_rec;blk_p
 PIT,Pittsburgh Steelers,1967,19671210-WAS-PIT,1967-12-10,WAS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 PIT,Pittsburgh Steelers,1967,19671217-PIT-GNB,1967-12-17,GNB,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,12
 RAM,Los Angeles Rams,1967,19670917-RAM-NOR,1967-09-17,NOR,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-RAM,Los Angeles Rams,1967,19670922-MIN-RAM,1967-09-22,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,8
+RAM,Los Angeles Rams,1967,19670922-MIN-RAM,1967-09-22,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,8
 RAM,Los Angeles Rams,1967,19671001-RAM-DAL,1967-10-01,DAL,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 RAM,Los Angeles Rams,1967,19671008-SFO-RAM,1967-10-08,SFO,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 RAM,Los Angeles Rams,1967,19671015-RAM-BAL,1967-10-15,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3891,7 +3891,7 @@ RAM,Los Angeles Rams,1967,19671209-GNB-RAM,1967-12-09,GNB,sacks;fum_rec;blk_punt
 RAM,Los Angeles Rams,1967,19671217-BAL-RAM,1967-12-17,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1967,19670909-BOS-SDG,1967-09-09,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 SDG,San Diego Chargers,1967,19670924-HOU-SDG,1967-09-24,HOU,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-SDG,San Diego Chargers,1967,19671001-SDG-BUF,1967-10-01,BUF,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+SDG,San Diego Chargers,1967,19671001-SDG-BUF,1967-10-01,BUF,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 SDG,San Diego Chargers,1967,19671008-BOS-SDG,1967-10-08,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1967,19671015-KAN-SDG,1967-10-15,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,12
 SDG,San Diego Chargers,1967,19671022-SDG-DEN,1967-10-22,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -3969,7 +3969,7 @@ BAL,Baltimore Colts,1968,19681027-RAM-BAL,1968-10-27,RAM,sacks;fum_rec;blk_punt;
 BAL,Baltimore Colts,1968,19681103-BAL-NYG,1968-11-03,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1968,19681110-BAL-DET,1968-11-10,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1968,19681117-STL-BAL,1968-11-17,STL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BAL,Baltimore Colts,1968,19681124-MIN-BAL,1968-11-24,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BAL,Baltimore Colts,1968,19681124-MIN-BAL,1968-11-24,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BAL,Baltimore Colts,1968,19681201-ATL-BAL,1968-12-01,ATL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1968,19681207-BAL-GNB,1968-12-07,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1968,19681215-BAL-RAM,1968-12-15,RAM,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -4131,7 +4131,7 @@ MIA,Miami Dolphins,1968,19680914-HOU-MIA,1968-09-14,HOU,sacks;fum_rec;blk_punt;b
 MIA,Miami Dolphins,1968,19680921-OAK-MIA,1968-09-21,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1968,19680928-KAN-MIA,1968-09-28,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1968,19681006-MIA-HOU,1968-10-06,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-MIA,Miami Dolphins,1968,19681012-BUF-MIA,1968-10-12,BUF,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+MIA,Miami Dolphins,1968,19681012-BUF-MIA,1968-10-12,BUF,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 MIA,Miami Dolphins,1968,19681020-MIA-CIN,1968-10-20,CIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1968,19681027-MIA-DEN,1968-10-27,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1968,19681103-MIA-SDG,1968-11-03,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4324,7 +4324,7 @@ ATL,Atlanta Falcons,1969,19691207-NOR-ATL,1969-12-07,NOR,sacks;fum_rec;safeties;
 ATL,Atlanta Falcons,1969,19691214-ATL-PHI,1969-12-14,PHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 ATL,Atlanta Falcons,1969,19691221-MIN-ATL,1969-12-21,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
 BAL,Baltimore Colts,1969,19690921-RAM-BAL,1969-09-21,RAM,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BAL,Baltimore Colts,1969,19690928-BAL-MIN,1969-09-28,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+BAL,Baltimore Colts,1969,19690928-BAL-MIN,1969-09-28,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 BAL,Baltimore Colts,1969,19691005-BAL-ATL,1969-10-05,ATL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1969,19691013-PHI-BAL,1969-10-13,PHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BAL,Baltimore Colts,1969,19691019-BAL-NOR,1969-10-19,NOR,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4457,7 +4457,7 @@ GNB,Green Bay Packers,1969,19691019-GNB-RAM,1969-10-19,RAM,sacks;fum_rec;blk_pun
 GNB,Green Bay Packers,1969,19691026-ATL-GNB,1969-10-26,ATL,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 GNB,Green Bay Packers,1969,19691102-GNB-PIT,1969-11-02,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1969,19691109-GNB-BAL,1969-11-09,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-GNB,Green Bay Packers,1969,19691116-MIN-GNB,1969-11-16,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+GNB,Green Bay Packers,1969,19691116-MIN-GNB,1969-11-16,MIN,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 GNB,Green Bay Packers,1969,19691123-DET-GNB,1969-11-23,DET,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1969,19691130-NYG-GNB,1969-11-30,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 GNB,Green Bay Packers,1969,19691207-GNB-CLE,1969-12-07,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4467,7 +4467,7 @@ HOU,Houston Oilers,1969,19690914-HOU-OAK,1969-09-14,OAK,sacks;fum_rec;blk_punt;b
 HOU,Houston Oilers,1969,19690921-HOU-BUF,1969-09-21,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1969,19690928-MIA-HOU,1969-09-28,MIA,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1969,19691005-BUF-HOU,1969-10-05,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-HOU,Houston Oilers,1969,19691012-HOU-KAN,1969-10-12,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+HOU,Houston Oilers,1969,19691012-HOU-KAN,1969-10-12,KAN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 HOU,Houston Oilers,1969,19691020-HOU-NYJ,1969-10-20,NYJ,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 HOU,Houston Oilers,1969,19691026-DEN-HOU,1969-10-26,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 HOU,Houston Oilers,1969,19691102-HOU-BOS,1969-11-02,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4547,7 +4547,7 @@ NYG,New York Giants,1969,19691130-NYG-GNB,1969-11-30,GNB,sacks;fum_rec;blk_punt;
 NYG,New York Giants,1969,19691207-STL-NYG,1969-12-07,STL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYG,New York Giants,1969,19691214-NYG-PIT,1969-12-14,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYG,New York Giants,1969,19691221-CLE-NYG,1969-12-21,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-NYJ,New York Jets,1969,19690914-NYJ-BUF,1969-09-14,BUF,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
+NYJ,New York Jets,1969,19690914-NYJ-BUF,1969-09-14,BUF,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 NYJ,New York Jets,1969,19690921-NYJ-DEN,1969-09-21,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1969,19690928-NYJ-SDG,1969-09-28,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 NYJ,New York Jets,1969,19691005-NYJ-BOS,1969-10-05,BOS,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4598,7 +4598,7 @@ PIT,Pittsburgh Steelers,1969,19691026-WAS-PIT,1969-10-26,WAS,sacks;fum_rec;blk_p
 PIT,Pittsburgh Steelers,1969,19691102-GNB-PIT,1969-11-02,GNB,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 PIT,Pittsburgh Steelers,1969,19691109-PIT-CHI,1969-11-09,CHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 PIT,Pittsburgh Steelers,1969,19691116-CLE-PIT,1969-11-16,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-PIT,Pittsburgh Steelers,1969,19691123-PIT-MIN,1969-11-23,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+PIT,Pittsburgh Steelers,1969,19691123-PIT-MIN,1969-11-23,MIN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 PIT,Pittsburgh Steelers,1969,19691130-PIT-STL,1969-11-30,STL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 PIT,Pittsburgh Steelers,1969,19691207-DAL-PIT,1969-12-07,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 PIT,Pittsburgh Steelers,1969,19691214-NYG-PIT,1969-12-14,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4721,7 +4721,7 @@ BUF,Buffalo Bills,1970,19701004-NYJ-BUF,1970-10-04,NYJ,sacks;fum_rec;blk_punt;bl
 BUF,Buffalo Bills,1970,19701011-BUF-PIT,1970-10-11,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1970,19701018-MIA-BUF,1970-10-18,MIA,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1970,19701025-BUF-NYJ,1970-10-25,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-BUF,Buffalo Bills,1970,19701101-BUF-BOS,1970-11-01,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,disputed,6
+BUF,Buffalo Bills,1970,19701101-BUF-BOS,1970-11-01,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 BUF,Buffalo Bills,1970,19701108-CIN-BUF,1970-11-08,CIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1970,19701115-BUF-BAL,1970-11-15,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 BUF,Buffalo Bills,1970,19701122-BUF-CHI,1970-11-22,CHI,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -4844,7 +4844,7 @@ HOU,Houston Oilers,1970,19701220-HOU-DAL,1970-12-20,DAL,sacks;fum_rec;safeties;b
 KAN,Kansas City Chiefs,1970,19700920-KAN-MIN,1970-09-20,MIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1970,19700928-KAN-BAL,1970-09-28,BAL,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 KAN,Kansas City Chiefs,1970,19701004-KAN-DEN,1970-10-04,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-KAN,Kansas City Chiefs,1970,19701011-BOS-KAN,1970-10-11,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+KAN,Kansas City Chiefs,1970,19701011-BOS-KAN,1970-10-11,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 KAN,Kansas City Chiefs,1970,19701018-KAN-CIN,1970-10-18,CIN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1970,19701025-DAL-KAN,1970-10-25,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 KAN,Kansas City Chiefs,1970,19701101-OAK-KAN,1970-11-01,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -4866,7 +4866,7 @@ MIA,Miami Dolphins,1970,19701108-MIA-PHI,1970-11-08,PHI,sacks;fum_rec;blk_punt;b
 MIA,Miami Dolphins,1970,19701115-NOR-MIA,1970-11-15,NOR,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 MIA,Miami Dolphins,1970,19701122-BAL-MIA,1970-11-22,BAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1970,19701130-MIA-ATL,1970-11-30,ATL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-MIA,Miami Dolphins,1970,19701206-BOS-MIA,1970-12-06,BOS,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
+MIA,Miami Dolphins,1970,19701206-BOS-MIA,1970-12-06,BOS,sacks;def_int;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,unverified,6
 MIA,Miami Dolphins,1970,19701213-NYJ-MIA,1970-12-13,NYJ,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIA,Miami Dolphins,1970,19701220-BUF-MIA,1970-12-20,BUF,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 MIN,Minnesota Vikings,1970,19700920-KAN-MIN,1970-09-20,KAN,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
@@ -5016,7 +5016,7 @@ STL,St. Louis Cardinals,1970,19701011-NOR-STL,1970-10-11,NOR,sacks;fum_rec;blk_p
 STL,St. Louis Cardinals,1970,19701018-STL-PHI,1970-10-18,PHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 STL,St. Louis Cardinals,1970,19701025-STL-NYG,1970-10-25,NYG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 STL,St. Louis Cardinals,1970,19701101-HOU-STL,1970-11-01,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
-STL,St. Louis Cardinals,1970,19701108-BOS-STL,1970-11-08,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,disputed,0
+STL,St. Louis Cardinals,1970,19701108-BOS-STL,1970-11-08,BOS,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 STL,St. Louis Cardinals,1970,19701116-STL-DAL,1970-11-16,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 STL,St. Louis Cardinals,1970,19701122-STL-KAN,1970-11-22,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 STL,St. Louis Cardinals,1970,19701129-PHI-STL,1970-11-29,PHI,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -5718,7 +5718,7 @@ SDG,San Diego Chargers,1972,19721022-SDG-DET,1972-10-22,DET,sacks;fum_rec;blk_pu
 SDG,San Diego Chargers,1972,19721029-KAN-SDG,1972-10-29,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1972,19721105-DAL-SDG,1972-11-05,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1972,19721113-CLE-SDG,1972-11-13,CLE,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-SDG,San Diego Chargers,1972,19721119-SDG-KAN,1972-11-19,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+SDG,San Diego Chargers,1972,19721119-SDG-KAN,1972-11-19,KAN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 SDG,San Diego Chargers,1972,19721126-HOU-SDG,1972-11-26,HOU,sacks;fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 SDG,San Diego Chargers,1972,19721203-OAK-SDG,1972-12-03,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 SDG,San Diego Chargers,1972,19721210-SDG-DEN,1972-12-10,DEN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -5873,7 +5873,7 @@ DEN,Denver Broncos,1973,19731028-DEN-NYJ,1973-10-28,NYJ,sacks;fum_rec;safeties;b
 DEN,Denver Broncos,1973,19731104-DEN-STL,1973-11-04,STL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1973,19731111-SDG-DEN,1973-11-11,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1973,19731118-DEN-PIT,1973-11-18,PIT,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DEN,Denver Broncos,1973,19731125-KAN-DEN,1973-11-25,KAN,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DEN,Denver Broncos,1973,19731125-KAN-DEN,1973-11-25,KAN,sacks;def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DEN,Denver Broncos,1973,19731202-DAL-DEN,1973-12-02,DAL,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DEN,Denver Broncos,1973,19731209-DEN-SDG,1973-12-09,SDG,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,2
 DEN,Denver Broncos,1973,19731216-DEN-OAK,1973-12-16,OAK,sacks;fum_rec;blk_punt;blk_fg;blk_xp,match,0
@@ -13365,7 +13365,7 @@ DET,Detroit Lions,1991,19911103-DET-CHI,1991-11-03,CHI,fum_rec;blk_punt;blk_fg;b
 DET,Detroit Lions,1991,19911110-DET-TAM,1991-11-10,TAM,fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1991,19911117-RAM-DET,1991-11-17,RAM,fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1991,19911124-DET-MIN,1991-11-24,MIN,fum_rec;blk_punt;blk_fg;blk_xp,match,0
-DET,Detroit Lions,1991,19911128-CHI-DET,1991-11-28,CHI,fum_rec;blk_punt;blk_fg;blk_xp,match,0
+DET,Detroit Lions,1991,19911128-CHI-DET,1991-11-28,CHI,def_int;fum_rec;blk_punt;blk_fg;blk_xp,unverified,0
 DET,Detroit Lions,1991,19911208-NYJ-DET,1991-12-08,NYJ,fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6
 DET,Detroit Lions,1991,19911215-DET-GNB,1991-12-15,GNB,fum_rec;blk_punt;blk_fg;blk_xp,match,0
 DET,Detroit Lions,1991,19911222-DET-BUF,1991-12-22,BUF,fum_rec;safeties;blk_punt;blk_fg;blk_xp;def_int_td;def_fum_td;st_other_td,match,6

@@ -18,8 +18,9 @@ NOTES = [
     ("", ""),
     ("Sheet", "What's in it"),
     ("Players", "Position, Hall of Fame flag, legend flag, seasons, teams, college, draft. legend = TRUE for the "
-                "hand-picked stars; the rest are every RB with 2,000+ career rushing yards and every WR with "
-                "2,000+ career receiving yards in 1950-1999. Ends (E) and flankers (FL) from the 1950s-60s count as WRs"),
+                "hand-picked stars; the rest are every QB with 5,000+ career passing yards, RB with 2,000+ rushing "
+                "yards, WR with 2,000+ and TE with 1,500+ receiving yards, and K with 50+ field goals, 1950-1999. "
+                "Ends (E) and flankers (FL) from the 1950s-60s count as WRs"),
     ("Player Game Logs", "One row per game per player (regular season + playoffs). Match to Players on player_id"),
     ("Team Defense Logs", "One row per team per game, every team 1950-1999"),
     ("Featured Defenses", "Regular-season totals for iconic defenses (Steel Curtain, '85 Bears, etc.)"),

@@ -23,11 +23,11 @@ Filter: `playoff == "False"` and seasons 1960–1999.
 | `data/games_rb.json` | 31,026 | 314 | 4.11 MB | 0.70 MB |
 | `data/games_wr.json` | 36,031 | 335 | 4.73 MB | 0.73 MB |
 | `data/games_te.json` | 14,936 | 123 | 1.96 MB | 0.29 MB |
-| `data/games_k.json` | 14,150 | 112 | 1.69 MB | 0.27 MB |
-| `data/games_def.json` | 15,998 | 31 franchises | 2.43 MB | 0.31 MB |
+| `data/games_k.json` | 14,150 | 112 | 2.05 MB | 0.29 MB |
+| `data/games_def.json` | 15,998 | 31 franchises | 2.48 MB | 0.32 MB |
 | `data/players.json` | — | 1,089 | 0.14 MB | 0.02 MB |
 
-Total: 17.4 MB raw, 2.8 MB gzipped. The largest file is 4.7 MB. Every file is compact JSON (no spaces).
+Total: 17.8 MB raw, 2.8 MB gzipped. The largest file is 4.7 MB. Every file is compact JSON (no spaces).
 
 Hall of Fame and legend flags in `players.json`: 82 players with `hof: true` and 89 with `legend: true`.
 By position (hof / legend): QB 22 / 25, RB 27 / 27, WR 21 / 20, TE 8 / 10, K 4 / 7. DEF franchises are
@@ -36,19 +36,22 @@ By position (hof / legend): QB 22 / 25, RB 27 / 27, WR 21 / 20, TE 8 / 10, K 4 /
 ## Decisions to know about
 
 - **`dataVersion`.** `players.json` carries `"dataVersion"`: the first 12 hex digits of a SHA-256 over the six
-  games files and the players list (currently `2622f67a7cea`). A league stores the version it was created with.
+  games files and the players list (currently `7929901a168f`). A league stores the version it was created with.
   When a save from an earlier build is opened, the page says so. Results already played keep their stored scores,
   and a replay marks any game whose record has changed (see SPEC section 2, Save, load, reveal).
 - **Column mapping.** `team_game` is the CSV `week` column. `int_verified` is `int_check == "match"`. In these sheets
-  `int_check` is either `match` or `disputed`. `source` is copied as-is, including the repair tags (`RULE2PT`,
-  `SCORE0`, `SCORE2`, `NOFGM`, `QUARANTINE`, `NFLV1999`, `SWAP`). Every other column has the same name as in the CSV.
+  `int_check` is `match`, `disputed` or `unverified`. `source` is copied as-is, including the repair tags (`RULE2PT`,
+  `SCORE0`, `SCORE2`, `NOFGM`, `QUARANTINE`, `INCOMPLETE`, `NFLV1999`, `SWAP`). Every other column has the same name as in the CSV.
 - **Proven zeros.** Many zeros in the sheets are evidence-based, not recorded. `SCORE0` means the team's recorded TDs,
   XPs and FGs add up to its final score, so nothing else scored. `SCORE2` means a 2-point residual in a 1960–93 NFL
   game, which can only be one safety. `RULE2PT` means an NFL game before 1994, which had no two-point conversion.
   `NOFGM` means distance bins of 0 because no field goal was made. These are copied as numbers. Blanks stay `null`.
 - **Quarantined interceptions.** Where the defense's interception count disagrees with the opposing passers'
-  interceptions thrown, the sheet leaves `def_int` blank (`int_check = disputed`, source tag `QUARANTINE`). Here that
-  is `def_int: null, int_verified: false` on 197 rows, and no row has an unverified count.
+  interceptions thrown (`int_check = disputed`), or the opposing passing record is too incomplete to check it
+  (`unverified`: fewer than 10 recorded attempts, or receivers out-catching the recorded passers), the sheet leaves
+  `def_int` blank (source tag `QUARANTINE`). Here that is `def_int: null, int_verified: false` on 293 rows.
+- **Incomplete kicker lines.** Where a team's final score shows a kick missing from the source, the sheet blanks the
+  whole kicking line (source tag `INCOMPLETE`), and `xp_missed` is blank where a TD may have had no recorded PAT try.
 - **Columns the CSV doesn't have are `null` on every row.** RB, WR and TE files have no `pass_cmp` or `pass_att`, so
   those are `null` throughout (no zeros).
 - **DEF `opp_score` comes from `pts_allowed`.** The DEF CSVs have no `opp_score` column. Their `pts_allowed` is the
@@ -69,19 +72,41 @@ have no nulls.
 
 | File | Column | Nulls | Why |
 |---|---|---|---|
-| QB | `two_pt` / `fum_rec_td` | 1,009 / 3,182 | AFL and 1994–98 games the final score doesn't settle; fumble-recovery TDs known for 1999 and reconciled games |
-| RB | `pass_cmp`, `pass_att` | 31,026 each | no such column in the RB CSV |
-| RB | `two_pt` / `fum_rec_td` | 1,431 / 5,234 | as QB |
-| WR | `pass_cmp`, `pass_att` | 36,031 each | no such column |
-| WR | `two_pt` / `fum_rec_td` | 2,065 / 6,153 | as QB |
-| TE | `pass_cmp`, `pass_att` | 14,936 each | no such column |
-| TE | `two_pt` / `fum_rec_td` | 707 / 2,469 | as QB |
-| K | `fgm_0_39`, `fgm_40_49`, `fgm_50p` | 9,668 each | known for 1999, and for earlier games only when no field goal was made |
-| K | `fgm`, `fga`, `fg_missed` / `xpm`, `xpa` | 2 / 4 | five 1999 games quarantined in the sheet (source tag `QUARANTINE`: the two sources disagree) |
+| QB | `two_pt` | 1,010 | AFL and 1994–98 games the final score doesn't settle |
+| QB | `fum_rec_td` | 3,183 | known for 1999 and reconciled games |
+| RB | `pass_cmp` | 31,026 | no such column in this CSV |
+| RB | `pass_att` | 31,026 | no such column in this CSV |
+| RB | `two_pt` | 1,431 | AFL and 1994–98 games the final score doesn't settle |
+| RB | `fum_rec_td` | 5,234 | known for 1999 and reconciled games |
+| WR | `pass_cmp` | 36,031 | no such column in this CSV |
+| WR | `pass_att` | 36,031 | no such column in this CSV |
+| WR | `two_pt` | 2,065 | AFL and 1994–98 games the final score doesn't settle |
+| WR | `fum_rec_td` | 6,153 | known for 1999 and reconciled games |
+| TE | `pass_cmp` | 14,936 | no such column in this CSV |
+| TE | `pass_att` | 14,936 | no such column in this CSV |
+| TE | `two_pt` | 707 | AFL and 1994–98 games the final score doesn't settle |
+| TE | `fum_rec_td` | 2,469 | known for 1999 and reconciled games |
+| K | `fgm` | 246 | INCOMPLETE kicker lines, plus quarantined 1999 games |
+| K | `fga` | 246 | as fgm |
+| K | `fg_missed` | 246 | as fgm |
+| K | `fgm_0_39` | 9,752 | known for 1999, and for earlier games only when no field goal was made |
+| K | `fgm_40_49` | 9,752 | as fgm_0_39 |
+| K | `fgm_50p` | 9,752 | as fgm_0_39 |
+| K | `xpm` | 248 | as fgm |
+| K | `xpa` | 248 | as fgm |
+| K | `xp_missed` | 803 | as fgm, plus games where a TD may have had no recorded PAT try |
+| K | `two_pt` | 775 | AFL and 1994–98 games the final score doesn't settle |
+| K | `fum_rec_td` | 2,405 | known for 1999 and reconciled games |
 | DEF | `sacks` | 7,982 | not an official stat before 1982 |
-| DEF | `def_int` | 197 | quarantined: defenders' and passers' counts disagree |
-| DEF | `safeties`, `def_int_td`, `def_fum_td` | 2,727 each | known for 1999 and reconciled games |
-| DEF | `fum_rec`, `blk_punt`, `blk_fg`, `blk_xp` | 15,504 each | 1999 only (1999-09-12 BAL at STL also blank) |
+| DEF | `def_int` | 293 | quarantined: disputed or unverified |
+| DEF | `fum_rec` | 15,505 | known for 1999 only |
+| DEF | `safeties` | 2,727 | known for 1999 and reconciled games |
+| DEF | `blk_punt` | 15,504 | 1999 only |
+| DEF | `blk_fg` | 15,504 | 1999 only |
+| DEF | `blk_xp` | 15,504 | 1999 only |
+| DEF | `def_int_td` | 2,727 | as safeties |
+| DEF | `def_fum_td` | 2,727 | as safeties |
+| DEF | `st_other_td` | 2,727 | as safeties |
 
 ## Eligible depth per mode
 
@@ -94,8 +119,8 @@ Computed with `src/engine.js` (`eligibleGames`, `poolSummary`) on these files. P
 | RB | 25,792 / 312 (1960–1999) | 31,026 / 312 |
 | WR | 29,878 / 328 (1960–1999) | 36,031 / 330 |
 | TE | 12,467 / 123 (1960–1999) | 14,936 / 123 |
-| K | 401 / 17 (1999 only; see below) | 13,944 / 112 |
-| DEF | 490 / 27 (1999 only) | 15,998 / 31 (15,731 / 31 with interceptions) |
+| K | 401 / 17 (1999 only; see below) | 13,901 / 112 |
+| DEF | 490 / 27 (1999 only) | 15,998 / 31 (15,705 / 31 with interceptions) |
 
 Both modes support 16 teams. Strict offense now reaches back to 1960 (about 83% of games). Strict DEF stays 1999-only
 because fumble recoveries and blocked kicks are known only for 1999.
@@ -108,7 +133,7 @@ returner's fumble; 5 games in 1999), which Strict scores at 6 like a return TD. 
 
 **Strict kickers.** 3,737 kicker games have every Strict field. Before 1999, though, distance bins are known only
 for games with no field goal made (all three bins are a proven 0). Drawing from those would give Strict kickers only
-their worst games: those 3,336 games average 1.60 points, against 6.94 for the 401 Strict games from 1999 and 5.39 for
+their worst games: those 3,336 games average 1.60 points, against 6.94 for the 401 Strict games from 1999 and 5.38 for
 a Historical kicker. The validation report flags this as an owner decision; the rule below is the prototype's
 stand-in until the owner decides. The engine therefore leaves a season's kicker games out of Strict draws when that season is
 skewed this way. That is the case for every season from 1960 to 1998, so Strict kickers draw 1999 games only.

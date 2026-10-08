@@ -307,29 +307,35 @@ MIN_OPP_PASS_ATT = 10  # fewer recorded opposing pass attempts than this can't c
 
 def kicking_explained(g, r):
     """Is the team's kicking record complete for this game? Returns (makes known, PAT tries known, why not).
-    With residual 0 every make is recorded, and every PAT try is when there's one for each recorded TD.
-    A positive residual is fine only as unrecorded TDs (6 each) plus at most one safety (or, where two-point
-    conversions exist, up to two successful ones, each a TD without a PAT try), with a recorded PAT try for every
-    other TD, recorded or not: then the missing points can't be kicks the source left out. Anything else
-    (an odd gap, or a 6-point gap with no PAT try to match it, which could be two field goals) means the
-    team's kicking line is incomplete."""
+    Every way the leftover points R (final score minus recorded plays) could have been scored is tried:
+    R = 6u + xm + 3fm + 2sf + 2c, with u unrecorded TDs, xm and fm unrecorded XP and FG makes, sf safeties
+    (up to 2) and c successful two-point conversions (where they existed), and every TD, recorded or not,
+    accounted for by a recorded PAT try, an unrecorded make, a two-point success, or no recorded try (n).
+    Makes are known only when some reading fits and none needs a missing kick. PAT tries are known only
+    when, in addition, no reading leaves a TD without a recorded try (it could be an unrecorded missed PAT)."""
     R, td, xpa = r["score_residual"], r["recorded_td"], r["recorded_xpa"]
     two_pt_era = g["season"] >= 1994 or (1960 <= g["season"] <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS))
     base = (f"{g['team']} scored {r['team_score']}; the source records {td} TD + {r['recorded_xpm']} XP of {xpa} tried + "
             f"{r['recorded_fgm']} FG" + (f" + {r['safeties']} safety" if r["safeties"] else "") + f", leaving {R} points")
-    if R == 0:
-        if xpa >= td:
-            return True, True, ""
-        return True, False, (base + f": every make is recorded, but {td} TDs had only {xpa} PAT tries recorded, so a "
-                             "missed PAT may be unrecorded" + (" (or the team went for two)" if two_pt_era else ""))
-    # Where two-point conversions exist, up to two successful ones (a TD with no PAT try each) may fill the gap.
-    for s in ((0, 1, 2) if two_pt_era else (0, 1)):
-        rest = R - 2 * s
-        if rest >= 0 and rest % 6 == 0 and xpa + (s if two_pt_era else 0) >= td + rest // 6:
-            return True, True, ""
-    return False, False, (base + " that unrecorded TDs (with their PAT tries), a safety" +
-                          (" or two-point conversions" if two_pt_era else "") +
-                          " can't account for, so a kick may be missing from the source and this kicking line isn't complete")
+    readings = []
+    for u in range(4):
+        for fm in range(5):
+            for xm in range(5):
+                for sf in range(3):
+                    for c in (range(3) if two_pt_era else (0,)):
+                        n = td + u - xpa - xm - c
+                        if 6 * u + xm + 3 * fm + 2 * sf + 2 * c == R and n >= 0:
+                            readings.append((u, xm, fm, sf, c, n))
+    if not readings:
+        return False, False, base + " that no combination of unrecorded TDs, kicks and safeties accounts for, so this kicking line isn't complete"
+    kick = next((x for x in readings if x[1] or x[2]), None)
+    if kick:
+        return False, False, (base + f"; they could include {kick[1]} unrecorded XP and {kick[2]} unrecorded FG, "
+                              "so a kick may be missing from the source and this kicking line isn't complete")
+    if any(x[5] for x in readings):
+        return True, False, (base + "; every make is accounted for, but a TD may have had no recorded PAT try, so a missed "
+                             "PAT may be unrecorded" + (" (or the team went for two)" if two_pt_era else ""))
+    return True, True, ""
 
 
 def repair_kicking(g, enrich):
@@ -387,7 +393,10 @@ def repair_kicking(g, enrich):
         line_ok, tries_ok, why = kicking_explained(g, r) if k is None and r else (True, True, "")
         if not line_ok:
             for c in ("xpm", "xpa", "fgm", "fga", "fg_missed", "xp_missed"):
-                setv(g, c, None, "INCOMPLETE", KAGGLE_URL, why)
+                swapped = g["_prov"].get(c, ("",))[0] == "SWAP"
+                setv(g, c, None, "INCOMPLETE", KAGGLE_URL,
+                     ("Old value is from the source's swapped XP column (made and attempted are swapped on every row). "
+                      if swapped else "") + why)
         else:
             if g["fgm"] is not None:
                 g["fg_missed"] = g["fga"] - g["fgm"]
@@ -463,6 +472,9 @@ def repair_defense(g, enrich):
         setv(g, "sacks", None, "UNRECORDED", KAGGLE_URL, "Sacks weren't an official stat before 1982" + (
             f"; the source has sacks for only some players, so its team total ({g['sacks']}) is a partial count"
             if g["sacks"] else ", so the source's 0 isn't a real value"))
+    if g["sacks"] is not None and (g["sacks"] * 2) != int(g["sacks"] * 2):
+        CONFLICTS.append(("DEF", g["team"], g["team_name"], game_id(g), "sacks",
+                          f"source total {g['sacks']} isn't a whole or half sack (kept as recorded)"))
     opp, att = g["opp_pass_int"], g["opp_pass_att"]
     if opp is None or (att or 0) < MIN_OPP_PASS_ATT:
         g["int_check"] = "unverified"
@@ -470,6 +482,12 @@ def repair_defense(g, enrich):
              f"Defenders' logs record {g['def_int_defenders']} interceptions; the source has only {att or 0} pass attempts "
              f"for {g['opp']} in this game (fewer than {MIN_OPP_PASS_ATT}; its passer is probably missing from the source), "
              "so the passers' log can't confirm the count")
+    elif g["opp_passer_gap"]:
+        g["int_check"] = "unverified"
+        setv(g, "def_int", None, "QUARANTINE", KAGGLE_URL,
+             f"Defenders' logs record {g['def_int_defenders']} interceptions; {g['opp']}'s receivers caught more passes for "
+             f"more yards than its recorded passers completed, so a passer is missing from the source and the passers' log "
+             f"({opp} thrown) can't confirm the count")
     elif opp == g["def_int"]:
         g["int_check"] = "match"
         setv(g, "def_int", g["def_int"], "PFR", KAGGLE_URL,
@@ -579,8 +597,13 @@ def write_defenses(data_dir, out_dir, enrich):
         w = csv.writer(f)
         w.writerow(tcols)
         for (team, season), t in sorted(totals.items(), key=lambda kv: (kv[0][1], team_name(*kv[0]))):
-            row = {c: "" if t.get("unknown_" + c) else int(t.get(c, 0))
+            # Half sacks are real; round rather than truncate.
+            row = {c: "" if t.get("unknown_" + c) else round(t.get(c, 0), 2) if c in ("sacks", "fpts", "fpts_known")
+                   else int(t.get(c, 0))
                    for c in ["games", "wins", "losses", "ties", "pts_allowed", "fpts", "fpts_known", "ints_quarantined"] + stats}
+            for c in ("sacks", "fpts", "fpts_known"):
+                if row[c] != "" and row[c] == int(row[c]):
+                    row[c] = int(row[c])
             row.update(team_name=team_name(team, season), team=team, season=season,
                        pts_allowed_per_game=round(t["pts_allowed"] / t["games"], 1),
                        fpts_per_game="" if t.get("unknown_fpts") else round(t["fpts"] / t["games"], 2),
@@ -627,6 +650,9 @@ def write_logs(out_dir, player_rows, def_rows, dedup_log):
              "Targets aren't recorded before 1992; a 0 is blanked, nonzero values (Super Bowl box scores) are kept; not a scoring field"),
             ("QB", "sacked", "0", "", "UNRECORDED",
              "Times sacked isn't recorded before 1982; a 0 is blanked, nonzero values are kept; not a scoring field"),
+            ("K", "xpm/xpa", "swapped", "swapped back", "SWAP",
+             "Source has extra points made and attempted swapped on every row (made > attempted in all 1,673 rows that "
+             "differ); rows where the values differ are also logged one by one"),
             ("K", "fg_missed/xp_missed", "not in source", "fga - fgm / xpa - xpm", "PFR",
              "Derived from the source's attempts and makes (blocked kicks count as misses); exceptions are logged per row"),
         ]

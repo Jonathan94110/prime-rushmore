@@ -103,7 +103,8 @@ PLAYER_COLUMNS = [
 DST_COLUMNS = [
     "team", "season", "week", "date", "playoff", "opp", "home_away", "result",
     "team_score", "pts_allowed", "sacks", "def_int", "opp_pass_int", "def_int_td", "safeties", "ret_td", "fpts",
-    "recorded_td", "recorded_xpm", "recorded_xpa", "recorded_fgm", "score_residual", "opp_pass_att", "sacks_recorded",
+    "recorded_td", "recorded_xpm", "recorded_xpa", "recorded_fgm", "score_residual", "opp_pass_att", "opp_passer_gap",
+    "sacks_recorded",
 ]
 
 
@@ -226,7 +227,7 @@ def main(games_path, profiles_path, out_dir):
                     "result": result(row), "team_score": num(row["player_team_score"]),
                     "pts_allowed": num(row["opponent_score"]),
                     "sacks": 0, "def_int": 0, "def_int_td": 0, "safeties": 0, "ret_td": 0, "int_thrown": 0,
-                    "pass_att": 0, "recorded_td": 0, "recorded_xpm": 0, "recorded_xpa": 0, "recorded_fgm": 0,
+                    "pass_att": 0, "pass_cmp": 0, "pass_yds": 0, "rec": 0, "rec_yds": 0, "recorded_td": 0, "recorded_xpm": 0, "recorded_xpa": 0, "recorded_fgm": 0,
                 }
             t["sacks"] += num(row["defense_sacks"])
             t["def_int"] += num(row["defense_interceptions"])
@@ -235,6 +236,10 @@ def main(games_path, profiles_path, out_dir):
             t["ret_td"] += num(row["kick_return_touchdowns"]) + num(row["punt_return_touchdowns"])
             t["int_thrown"] += num(row["passing_interceptions"])
             t["pass_att"] += num(row["passing_completions"])  # attempts (swapped in the source)
+            t["pass_cmp"] += num(row["passing_attempts"])  # completions (swapped in the source)
+            t["pass_yds"] += num(row["passing_yards"])
+            t["rec"] += num(row["receiving_receptions"])
+            t["rec_yds"] += num(row["receiving_yards"])
             # Every scoring play the source records for this team, summed over all its players, for
             # reconciling against the final score. XP made sits in point_after_attemps and XP attempted in
             # point_after_makes (swapped in the source). Safeties are in `safeties`.
@@ -327,6 +332,9 @@ def main(games_path, profiles_path, out_dir):
         opp_game = by_team_date.get((d["opp"], d["date"]))
         d["opp_pass_int"] = opp_game["int_thrown"] if opp_game else None
         d["opp_pass_att"] = opp_game["pass_att"] if opp_game else None
+        # The opponent's catches outrunning its passers' completions means a passer is missing from the source.
+        d["opp_passer_gap"] = (opp_game["rec"] > opp_game["pass_cmp"] and opp_game["rec_yds"] > opp_game["pass_yds"]
+                               if opp_game else None)
         # Final score minus every recorded scoring play. 0 means the recorded plays explain the whole score.
         d["score_residual"] = d["team_score"] - (6 * d["recorded_td"] + d["recorded_xpm"] + 3 * d["recorded_fgm"]
                                                  + 2 * d["safeties"])

@@ -22674,7 +22674,7 @@ K,1853,George Blanda,1961,19611217-HOU-OAK,1961-12-17,HOU,OAK,fgm_0_39;fgm_40_49
 K,1853,George Blanda,1962,19621007-BUF-HOU,1962-10-07,HOU,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1962,19621021-HOU-DEN,1962-10-21,HOU,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1962,19621111-HOU-OAK,1962-11-11,HOU,OAK,two_pt;fum_rec_td,6
-K,1853,George Blanda,1962,19621125-SDG-HOU,1962-11-25,HOU,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,1853,George Blanda,1962,19621125-SDG-HOU,1962-11-25,HOU,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,1853,George Blanda,1962,19621202-DEN-HOU,1962-12-02,HOU,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,1853,George Blanda,1962,19621209-OAK-HOU,1962-12-09,HOU,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
 K,1853,George Blanda,1962,19621215-HOU-NYT,1962-12-15,HOU,NYT,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -22703,7 +22703,7 @@ K,1853,George Blanda,1965,19650926-HOU-OAK,1965-09-26,HOU,OAK,fgm_0_39;fgm_40_49
 K,1853,George Blanda,1965,19651017-HOU-DEN,1965-10-17,HOU,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1965,19651031-HOU-BUF,1965-10-31,HOU,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1965,19651128-HOU-KAN,1965-11-28,HOU,KAN,two_pt;fum_rec_td,6
-K,1853,George Blanda,1965,19651205-BUF-HOU,1965-12-05,HOU,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1853,George Blanda,1965,19651205-BUF-HOU,1965-12-05,HOU,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1853,George Blanda,1965,19651212-SDG-HOU,1965-12-12,HOU,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1853,George Blanda,1965,19651218-HOU-BOS,1965-12-18,HOU,BOS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,1853,George Blanda,1966,19660903-DEN-HOU,1966-09-03,HOU,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -22722,7 +22722,7 @@ K,1853,George Blanda,1967,19671001-KAN-OAK,1967-10-01,OAK,KAN,fgm_0_39;fgm_40_49
 K,1853,George Blanda,1967,19671015-OAK-BUF,1967-10-15,OAK,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,1853,George Blanda,1967,19671022-OAK-BOS,1967-10-22,OAK,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1967,19671029-SDG-OAK,1967-10-29,OAK,SDG,two_pt;fum_rec_td,2
-K,1853,George Blanda,1967,19671105-OAK-DEN,1967-11-05,OAK,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1853,George Blanda,1967,19671105-OAK-DEN,1967-11-05,OAK,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1853,George Blanda,1967,19671119-MIA-OAK,1967-11-19,OAK,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1967,19671123-OAK-KAN,1967-11-23,OAK,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,1853,George Blanda,1967,19671203-OAK-SDG,1967-12-03,OAK,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -22737,7 +22737,7 @@ K,1853,George Blanda,1968,19681020-OAK-KAN,1968-10-20,OAK,KAN,fgm_0_39;fgm_40_49
 K,1853,George Blanda,1968,19681027-CIN-OAK,1968-10-27,OAK,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1968,19681103-KAN-OAK,1968-11-03,OAK,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1968,19681110-OAK-DEN,1968-11-10,OAK,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,1853,George Blanda,1968,19681117-NYJ-OAK,1968-11-17,OAK,NYJ,two_pt;fum_rec_td,8
+K,1853,George Blanda,1968,19681117-NYJ-OAK,1968-11-17,OAK,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,1853,George Blanda,1968,19681124-OAK-CIN,1968-11-24,OAK,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1968,19681128-BUF-OAK,1968-11-28,OAK,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,1853,George Blanda,1968,19681208-DEN-OAK,1968-12-08,OAK,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -22809,18 +22809,18 @@ K,1853,George Blanda,1975,19750928-OAK-BAL,1975-09-28,OAK,BAL,fgm_0_39;fgm_40_49
 K,1853,George Blanda,1975,19751005-OAK-SDG,1975-10-05,OAK,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1975,19751012-OAK-KAN,1975-10-12,OAK,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1975,19751019-OAK-CIN,1975-10-19,OAK,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1853,George Blanda,1975,19751026-SDG-OAK,1975-10-26,OAK,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,4
+K,1853,George Blanda,1975,19751026-SDG-OAK,1975-10-26,OAK,SDG,fum_rec_td,4
 K,1853,George Blanda,1975,19751116-CLE-OAK,1975-11-16,OAK,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1975,19751123-OAK-WAS,1975-11-23,OAK,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1975,19751130-ATL-OAK,1975-11-30,OAK,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1853,George Blanda,1975,19751208-DEN-OAK,1975-12-08,OAK,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21203,Jan Stenerud,1967,19670909-KAN-HOU,1967-09-09,KAN,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,21203,Jan Stenerud,1967,19670909-KAN-HOU,1967-09-09,KAN,HOU,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,21203,Jan Stenerud,1967,19670924-KAN-MIA,1967-09-24,KAN,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21203,Jan Stenerud,1967,19671008-MIA-KAN,1967-10-08,KAN,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21203,Jan Stenerud,1967,19671015-KAN-SDG,1967-10-15,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21203,Jan Stenerud,1967,19671022-HOU-KAN,1967-10-22,KAN,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,21203,Jan Stenerud,1967,19671029-DEN-KAN,1967-10-29,KAN,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21203,Jan Stenerud,1967,19671105-NYJ-KAN,1967-11-05,KAN,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,21203,Jan Stenerud,1967,19671105-NYJ-KAN,1967-11-05,KAN,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,21203,Jan Stenerud,1967,19671112-KAN-BOS,1967-11-12,KAN,BOS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,21203,Jan Stenerud,1967,19671119-SDG-KAN,1967-11-19,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21203,Jan Stenerud,1967,19671123-OAK-KAN,1967-11-23,KAN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -23337,10 +23337,10 @@ K,13645,Nick Lowery,1993,19931205-KAN-SEA,1993-12-05,KAN,SEA,fgm_0_39;fgm_40_49;
 K,13645,Nick Lowery,1993,19931226-KAN-MIN,1993-12-26,KAN,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1993,19940102-SEA-KAN,1994-01-02,KAN,SEA,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,13645,Nick Lowery,1994,19940904-NYJ-BUF,1994-09-04,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13645,Nick Lowery,1994,19940911-DEN-NYJ,1994-09-11,NYJ,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,13645,Nick Lowery,1994,19940911-DEN-NYJ,1994-09-11,NYJ,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,13645,Nick Lowery,1994,19941009-IND-NYJ,1994-10-09,NYJ,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1994,19941016-NWE-NYJ,1994-10-16,NYJ,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13645,Nick Lowery,1994,19941030-NYJ-IND,1994-10-30,NYJ,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,13645,Nick Lowery,1994,19941030-NYJ-IND,1994-10-30,NYJ,IND,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,13645,Nick Lowery,1994,19941106-BUF-NYJ,1994-11-06,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1994,19941113-NYJ-GNB,1994-11-13,NYJ,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1994,19941120-NYJ-MIN,1994-11-20,NYJ,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -23366,7 +23366,7 @@ K,13645,Nick Lowery,1996,19960922-NYG-NYJ,1996-09-22,NYJ,NYG,fgm_0_39;fgm_40_49;
 K,13645,Nick Lowery,1996,19960929-NYJ-WAS,1996-09-29,NYJ,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1996,19961006-OAK-NYJ,1996-10-06,NYJ,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1996,19961013-NYJ-JAX,1996-10-13,NYJ,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13645,Nick Lowery,1996,19961020-BUF-NYJ,1996-10-20,NYJ,BUF,two_pt;fum_rec_td,2
+K,13645,Nick Lowery,1996,19961020-BUF-NYJ,1996-10-20,NYJ,BUF,xp_missed;two_pt;fum_rec_td,2
 K,13645,Nick Lowery,1996,19961027-NYJ-ARI,1996-10-27,NYJ,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1996,19961110-NWE-NYJ,1996-11-10,NYJ,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13645,Nick Lowery,1996,19961117-NYJ-IND,1996-11-17,NYJ,IND,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
@@ -23430,7 +23430,7 @@ K,399,Morten Andersen,1986,19861123-NOR-RAM,1986-11-23,NOR,RAM,fgm_0_39;fgm_40_4
 K,399,Morten Andersen,1986,19861130-NWE-NOR,1986-11-30,NOR,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1986,19861207-MIA-NOR,1986-12-07,NOR,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1986,19861221-NOR-MIN,1986-12-21,NOR,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1987,19870913-CLE-NOR,1987-09-13,NOR,CLE,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,4
+K,399,Morten Andersen,1987,19870913-CLE-NOR,1987-09-13,NOR,CLE,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,4
 K,399,Morten Andersen,1987,19870920-NOR-PHI,1987-09-20,NOR,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1987,19871025-SFO-NOR,1987-10-25,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,399,Morten Andersen,1987,19871101-NOR-ATL,1987-11-01,NOR,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23471,7 +23471,7 @@ K,399,Morten Andersen,1989,19891224-IND-NOR,1989-12-24,NOR,IND,fgm_0_39;fgm_40_4
 K,399,Morten Andersen,1990,19900910-SFO-NOR,1990-09-10,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1990,19900916-NOR-MIN,1990-09-16,NOR,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1990,19901007-NOR-ATL,1990-10-07,NOR,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1990,19901014-CLE-NOR,1990-10-14,NOR,CLE,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,399,Morten Andersen,1990,19901014-CLE-NOR,1990-10-14,NOR,CLE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,399,Morten Andersen,1990,19901021-NOR-HOU,1990-10-21,NOR,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1990,19901028-DET-NOR,1990-10-28,NOR,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1990,19901118-NOR-WAS,1990-11-18,NOR,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23529,7 +23529,7 @@ K,399,Morten Andersen,1994,19940911-WAS-NOR,1994-09-11,NOR,WAS,xpm;xp_missed;fgm
 K,399,Morten Andersen,1994,19940918-NOR-TAM,1994-09-18,NOR,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1994,19940925-NOR-SFO,1994-09-25,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1994,19941002-NYG-NOR,1994-10-02,NOR,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,399,Morten Andersen,1994,19941016-SDG-NOR,1994-10-16,NOR,SDG,two_pt;fum_rec_td,2
+K,399,Morten Andersen,1994,19941016-SDG-NOR,1994-10-16,NOR,SDG,xp_missed;two_pt;fum_rec_td,2
 K,399,Morten Andersen,1994,19941023-RAM-NOR,1994-10-23,NOR,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1994,19941106-NOR-MIN,1994-11-06,NOR,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1994,19941113-ATL-NOR,1994-11-13,NOR,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23541,9 +23541,9 @@ K,399,Morten Andersen,1994,19941219-DAL-NOR,1994-12-19,NOR,DAL,fgm_0_39;fgm_40_4
 K,399,Morten Andersen,1994,19941224-NOR-DEN,1994-12-24,NOR,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1995,19950903-CAR-ATL,1995-09-03,ATL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1995,19950910-ATL-SFO,1995-09-10,ATL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1995,19950917-ATL-NOR,1995-09-17,ATL,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,399,Morten Andersen,1995,19950917-ATL-NOR,1995-09-17,ATL,NOR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,399,Morten Andersen,1995,19950924-NYJ-ATL,1995-09-24,ATL,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1995,19951001-NWE-ATL,1995-10-01,ATL,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,399,Morten Andersen,1995,19951001-NWE-ATL,1995-10-01,ATL,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,399,Morten Andersen,1995,19951012-ATL-STL,1995-10-12,ATL,STL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,399,Morten Andersen,1995,19951022-ATL-TAM,1995-10-22,ATL,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1995,19951029-DAL-ATL,1995-10-29,ATL,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23557,7 +23557,7 @@ K,399,Morten Andersen,1995,19951217-ATL-CAR,1995-12-17,ATL,CAR,fgm_0_39;fgm_40_4
 K,399,Morten Andersen,1995,19951224-SFO-ATL,1995-12-24,ATL,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1996,19960901-ATL-CAR,1996-09-01,ATL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1996,19960908-MIN-ATL,1996-09-08,ATL,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1996,19960922-PHI-ATL,1996-09-22,ATL,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,399,Morten Andersen,1996,19960922-PHI-ATL,1996-09-22,ATL,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,399,Morten Andersen,1996,19960929-ATL-SFO,1996-09-29,ATL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1996,19961006-ATL-DET,1996-10-06,ATL,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1996,19961013-HOU-ATL,1996-10-13,ATL,HOU,xp_missed,0
@@ -23593,7 +23593,7 @@ K,399,Morten Andersen,1998,19981101-STL-ATL,1998-11-01,ATL,STL,fgm_0_39;fgm_40_4
 K,399,Morten Andersen,1998,19981108-ATL-NWE,1998-11-08,ATL,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,399,Morten Andersen,1998,19981115-SFO-ATL,1998-11-15,ATL,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,399,Morten Andersen,1998,19981122-CHI-ATL,1998-11-22,ATL,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,399,Morten Andersen,1998,19981129-ATL-STL,1998-11-29,ATL,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,399,Morten Andersen,1998,19981129-ATL-STL,1998-11-29,ATL,STL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,399,Morten Andersen,1998,19981213-ATL-NOR,1998-12-13,ATL,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1998,19981220-ATL-DET,1998-12-20,ATL,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,399,Morten Andersen,1998,19981227-MIA-ATL,1998-12-27,ATL,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -23765,8 +23765,8 @@ K,448,Gary Anderson,1995,19951015-PHI-NYG,1995-10-15,PHI,NYG,fgm_0_39;fgm_40_49;
 K,448,Gary Anderson,1995,19951029-STL-PHI,1995-10-29,PHI,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,448,Gary Anderson,1995,19951106-PHI-DAL,1995-11-06,PHI,DAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1995,19951112-DEN-PHI,1995-11-12,PHI,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,448,Gary Anderson,1995,19951126-PHI-WAS,1995-11-26,PHI,WAS,two_pt;fum_rec_td,2
-K,448,Gary Anderson,1995,19951210-DAL-PHI,1995-12-10,PHI,DAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,448,Gary Anderson,1995,19951126-PHI-WAS,1995-11-26,PHI,WAS,xp_missed;two_pt;fum_rec_td,2
+K,448,Gary Anderson,1995,19951210-DAL-PHI,1995-12-10,PHI,DAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,448,Gary Anderson,1995,19951224-PHI-CHI,1995-12-24,PHI,CHI,two_pt;fum_rec_td,6
 K,448,Gary Anderson,1996,19960901-PHI-WAS,1996-09-01,PHI,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1996,19960909-PHI-GNB,1996-09-09,PHI,GNB,xp_missed,0
@@ -23782,7 +23782,7 @@ K,448,Gary Anderson,1996,19961201-NYG-PHI,1996-12-01,PHI,NYG,fgm_0_39;fgm_40_49;
 K,448,Gary Anderson,1996,19961205-PHI-IND,1996-12-05,PHI,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1996,19961222-ARI-PHI,1996-12-22,PHI,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,448,Gary Anderson,1997,19970831-SFO-TAM,1997-08-31,SFO,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,448,Gary Anderson,1997,19970907-SFO-STL,1997-09-07,SFO,STL,two_pt;fum_rec_td,2
+K,448,Gary Anderson,1997,19970907-SFO-STL,1997-09-07,SFO,STL,xp_missed;two_pt;fum_rec_td,2
 K,448,Gary Anderson,1997,19970914-NOR-SFO,1997-09-14,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1997,19970921-ATL-SFO,1997-09-21,SFO,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1997,19970929-SFO-CAR,1997-09-29,SFO,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23806,12 +23806,12 @@ K,448,Gary Anderson,1998,19981025-MIN-DET,1998-10-25,MIN,DET,fgm_0_39;fgm_40_49;
 K,448,Gary Anderson,1998,19981101-MIN-TAM,1998-11-01,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1998,19981108-NOR-MIN,1998-11-08,MIN,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1998,19981115-CIN-MIN,1998-11-15,MIN,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,448,Gary Anderson,1998,19981122-GNB-MIN,1998-11-22,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,448,Gary Anderson,1998,19981126-MIN-DAL,1998-11-26,MIN,DAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,448,Gary Anderson,1998,19981122-GNB-MIN,1998-11-22,MIN,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,448,Gary Anderson,1998,19981126-MIN-DAL,1998-11-26,MIN,DAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,448,Gary Anderson,1998,19981206-CHI-MIN,1998-12-06,MIN,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,448,Gary Anderson,1998,19981213-MIN-BAL,1998-12-13,MIN,BAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,448,Gary Anderson,1998,19981220-JAX-MIN,1998-12-20,MIN,JAX,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
-K,448,Gary Anderson,1998,19981226-MIN-TEN,1998-12-26,MIN,TEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,448,Gary Anderson,1998,19981226-MIN-TEN,1998-12-26,MIN,TEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,11378,Norm Johnson,1982,19821121-SEA-DEN,1982-11-21,SEA,DEN,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,11378,Norm Johnson,1982,19821128-PIT-SEA,1982-11-28,SEA,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1982,19821205-SEA-RAI,1982-12-05,SEA,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23838,7 +23838,7 @@ K,11378,Norm Johnson,1984,19840930-SEA-MIN,1984-09-30,SEA,MIN,fgm_0_39;fgm_40_49
 K,11378,Norm Johnson,1984,19841014-BUF-SEA,1984-10-14,SEA,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1984,19841021-SEA-GNB,1984-10-21,SEA,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1984,19841029-SEA-SDG,1984-10-29,SEA,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11378,Norm Johnson,1984,19841104-KAN-SEA,1984-11-04,SEA,KAN,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,24
+K,11378,Norm Johnson,1984,19841104-KAN-SEA,1984-11-04,SEA,KAN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,24
 K,11378,Norm Johnson,1984,19841112-RAI-SEA,1984-11-12,SEA,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1984,19841118-SEA-CIN,1984-11-18,SEA,CIN,fgm_0_39;fgm_40_49;fgm_50p,2
 K,11378,Norm Johnson,1984,19841125-SEA-DEN,1984-11-25,SEA,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23957,13 +23957,13 @@ K,11378,Norm Johnson,1993,19940102-PHO-ATL,1994-01-02,ATL,PHO,fgm_0_39;fgm_40_49
 K,11378,Norm Johnson,1994,19940911-RAM-ATL,1994-09-11,ATL,RAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1994,19940918-KAN-ATL,1994-09-18,ATL,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19940925-ATL-WAS,1994-09-25,ATL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11378,Norm Johnson,1994,19941002-ATL-RAM,1994-10-02,ATL,RAM,two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1994,19941002-ATL-RAM,1994-10-02,ATL,RAM,xp_missed;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1994,19941009-TAM-ATL,1994-10-09,ATL,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19941016-SFO-ATL,1994-10-16,ATL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19941023-ATL-RAI,1994-10-23,ATL,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19941106-SDG-ATL,1994-11-06,ATL,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19941113-ATL-NOR,1994-11-13,ATL,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,11378,Norm Johnson,1994,19941127-PHI-ATL,1994-11-27,ATL,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1994,19941127-PHI-ATL,1994-11-27,ATL,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1994,19941204-ATL-SFO,1994-12-04,ATL,SFO,two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1994,19941211-NOR-ATL,1994-12-11,ATL,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1994,19941218-ATL-GNB,1994-12-18,ATL,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
@@ -23978,7 +23978,7 @@ K,11378,Norm Johnson,1995,19951019-CIN-PIT,1995-10-19,PIT,CIN,fgm_0_39;fgm_40_49
 K,11378,Norm Johnson,1995,19951029-JAX-PIT,1995-10-29,PIT,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1995,19951105-PIT-CHI,1995-11-05,PIT,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1995,19951113-CLE-PIT,1995-11-13,PIT,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11378,Norm Johnson,1995,19951119-PIT-CIN,1995-11-19,PIT,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1995,19951119-PIT-CIN,1995-11-19,PIT,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1995,19951126-PIT-CLE,1995-11-26,PIT,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1995,19951210-PIT-OAK,1995-12-10,PIT,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1995,19951216-NWE-PIT,1995-12-16,PIT,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
@@ -23987,7 +23987,7 @@ K,11378,Norm Johnson,1996,19960901-PIT-JAX,1996-09-01,PIT,JAX,fgm_0_39;fgm_40_49
 K,11378,Norm Johnson,1996,19960908-BAL-PIT,1996-09-08,PIT,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1996,19960916-BUF-PIT,1996-09-16,PIT,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1996,19960929-HOU-PIT,1996-09-29,PIT,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,11378,Norm Johnson,1996,19961007-PIT-KAN,1996-10-07,PIT,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1996,19961007-PIT-KAN,1996-10-07,PIT,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1996,19961013-CIN-PIT,1996-10-13,PIT,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1996,19961020-PIT-HOU,1996-10-20,PIT,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1996,19961027-PIT-ATL,1996-10-27,PIT,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -23996,7 +23996,7 @@ K,11378,Norm Johnson,1996,19961117-JAX-PIT,1996-11-17,PIT,JAX,two_pt;fum_rec_td,
 K,11378,Norm Johnson,1996,19961125-PIT-MIA,1996-11-25,PIT,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1996,19961201-PIT-BAL,1996-12-01,PIT,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1996,19961208-SDG-PIT,1996-12-08,PIT,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11378,Norm Johnson,1996,19961215-SFO-PIT,1996-12-15,PIT,SFO,two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1996,19961215-SFO-PIT,1996-12-15,PIT,SFO,xp_missed;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1997,19970928-TEN-PIT,1997-09-28,PIT,TEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1997,19971012-IND-PIT,1997-10-12,PIT,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11378,Norm Johnson,1997,19971019-PIT-CIN,1997-10-19,PIT,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24006,7 +24006,7 @@ K,11378,Norm Johnson,1997,19971109-BAL-PIT,1997-11-09,PIT,BAL,fgm_0_39;fgm_40_49
 K,11378,Norm Johnson,1997,19971116-CIN-PIT,1997-11-16,PIT,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1997,19971123-PIT-PHI,1997-11-23,PIT,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1997,19971130-PIT-ARI,1997-11-30,PIT,ARI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,11378,Norm Johnson,1997,19971213-PIT-NWE,1997-12-13,PIT,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,11378,Norm Johnson,1997,19971213-PIT-NWE,1997-12-13,PIT,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11378,Norm Johnson,1997,19971221-PIT-TEN,1997-12-21,PIT,TEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1998,19980906-PIT-BAL,1998-09-06,PIT,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11378,Norm Johnson,1998,19980913-CHI-PIT,1998-09-13,PIT,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24212,10 +24212,10 @@ K,16087,Eddie Murray,1995,19951224-CAR-WAS,1995-12-24,WAS,CAR,fgm_0_39;fgm_40_49
 K,16087,Eddie Murray,1997,19971005-MIN-ARI,1997-10-05,MIN,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16087,Eddie Murray,1997,19971026-MIN-TAM,1997-10-26,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16087,Eddie Murray,1997,19971102-NWE-MIN,1997-11-02,MIN,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,16087,Eddie Murray,1997,19971109-CHI-MIN,1997-11-09,MIN,CHI,two_pt;fum_rec_td,2
-K,16087,Eddie Murray,1997,19971116-MIN-DET,1997-11-16,MIN,DET,two_pt;fum_rec_td,2
+K,16087,Eddie Murray,1997,19971109-CHI-MIN,1997-11-09,MIN,CHI,xp_missed;two_pt;fum_rec_td,2
+K,16087,Eddie Murray,1997,19971116-MIN-DET,1997-11-16,MIN,DET,xp_missed;two_pt;fum_rec_td,2
 K,16087,Eddie Murray,1997,19971123-MIN-NYJ,1997-11-23,MIN,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
-K,16087,Eddie Murray,1997,19971201-GNB-MIN,1997-12-01,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,16087,Eddie Murray,1997,19971201-GNB-MIN,1997-12-01,MIN,GNB,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,16087,Eddie Murray,1997,19971207-MIN-SFO,1997-12-07,MIN,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16087,Eddie Murray,1997,19971214-DET-MIN,1997-12-14,MIN,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16087,Eddie Murray,1997,19971221-IND-MIN,1997-12-21,MIN,IND,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24320,7 +24320,7 @@ K,5434,Al Del Greco,1993,19940102-NYJ-HOU,1994-01-02,HOU,NYJ,fgm_0_39;fgm_40_49;
 K,5434,Al Del Greco,1994,19940904-HOU-IND,1994-09-04,HOU,IND,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1994,19940911-HOU-DAL,1994-09-11,HOU,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1994,19940925-CIN-HOU,1994-09-25,HOU,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1994,19941013-CLE-HOU,1994-10-13,HOU,CLE,two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1994,19941013-CLE-HOU,1994-10-13,HOU,CLE,xp_missed;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1994,19941024-HOU-PHI,1994-10-24,HOU,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1994,19941106-PIT-HOU,1994-11-06,HOU,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1994,19941113-HOU-CIN,1994-11-13,HOU,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24329,20 +24329,20 @@ K,5434,Al Del Greco,1994,19941127-HOU-CLE,1994-11-27,HOU,CLE,fgm_0_39;fgm_40_49;
 K,5434,Al Del Greco,1994,19941204-ARI-HOU,1994-12-04,HOU,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
 K,5434,Al Del Greco,1994,19941211-SEA-HOU,1994-12-11,HOU,SEA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1994,19941218-HOU-KAN,1994-12-18,HOU,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1994,19941224-NYJ-HOU,1994-12-24,HOU,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1994,19941224-NYJ-HOU,1994-12-24,HOU,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1995,19950903-HOU-JAX,1995-09-03,HOU,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1995,19950910-PIT-HOU,1995-09-10,HOU,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1995,19950924-HOU-CIN,1995-09-24,HOU,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1995,19951001-JAX-HOU,1995-10-01,HOU,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1995,19951008-HOU-MIN,1995-10-08,HOU,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,5434,Al Del Greco,1995,19951022-HOU-CHI,1995-10-22,HOU,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,5434,Al Del Greco,1995,19951008-HOU-MIN,1995-10-08,HOU,MIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,5434,Al Del Greco,1995,19951022-HOU-CHI,1995-10-22,HOU,CHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,5434,Al Del Greco,1995,19951029-TAM-HOU,1995-10-29,HOU,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1995,19951105-HOU-CLE,1995-11-05,HOU,CLE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5434,Al Del Greco,1995,19951112-CIN-HOU,1995-11-12,HOU,CIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,5434,Al Del Greco,1995,19951119-HOU-KAN,1995-11-19,HOU,KAN,xp_missed,0
 K,5434,Al Del Greco,1995,19951210-DET-HOU,1995-12-10,HOU,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1995,19951217-NYJ-HOU,1995-12-17,HOU,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1995,19951224-HOU-BUF,1995-12-24,HOU,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1995,19951224-HOU-BUF,1995-12-24,HOU,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1996,19960901-KAN-HOU,1996-09-01,HOU,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1996,19960908-HOU-JAX,1996-09-08,HOU,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1996,19960915-BAL-HOU,1996-09-15,HOU,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -24358,10 +24358,10 @@ K,5434,Al Del Greco,1996,19961124-CAR-HOU,1996-11-24,HOU,CAR,fgm_0_39;fgm_40_49;
 K,5434,Al Del Greco,1996,19961208-JAX-HOU,1996-12-08,HOU,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1996,19961215-CIN-HOU,1996-12-15,HOU,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1996,19961222-HOU-BAL,1996-12-22,HOU,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1997,19970831-OAK-TEN,1997-08-31,TEN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1997,19970831-OAK-TEN,1997-08-31,TEN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1997,19970907-TEN-MIA,1997-09-07,TEN,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1997,19970921-BAL-TEN,1997-09-21,TEN,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1997,19970928-TEN-PIT,1997-09-28,TEN,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1997,19970928-TEN-PIT,1997-09-28,TEN,PIT,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1997,19971005-TEN-SEA,1997-10-05,TEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1997,19971012-CIN-TEN,1997-10-12,TEN,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1997,19971026-TEN-ARI,1997-10-26,TEN,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -24385,7 +24385,7 @@ K,5434,Al Del Greco,1998,19981122-NYJ-TEN,1998-11-22,TEN,NYJ,fgm_0_39;fgm_40_49;
 K,5434,Al Del Greco,1998,19981129-TEN-SEA,1998-11-29,TEN,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1998,19981206-BAL-TEN,1998-12-06,TEN,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5434,Al Del Greco,1998,19981213-TEN-JAX,1998-12-13,TEN,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5434,Al Del Greco,1998,19981220-TEN-GNB,1998-12-20,TEN,GNB,two_pt;fum_rec_td,2
+K,5434,Al Del Greco,1998,19981220-TEN-GNB,1998-12-20,TEN,GNB,xp_missed;two_pt;fum_rec_td,2
 K,5434,Al Del Greco,1998,19981226-MIN-TEN,1998-12-26,TEN,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1979,19790903-PIT-NWE,1979-09-03,PIT,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1979,19790909-HOU-PIT,1979-09-09,PIT,HOU,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
@@ -24559,7 +24559,7 @@ K,836,Matt Bahr,1994,19941127-NWE-IND,1994-11-27,NWE,IND,fgm_0_39;fgm_40_49;fgm_
 K,836,Matt Bahr,1994,19941204-NYJ-NWE,1994-12-04,NWE,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,836,Matt Bahr,1994,19941218-NWE-BUF,1994-12-18,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,836,Matt Bahr,1994,19941224-NWE-CHI,1994-12-24,NWE,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,836,Matt Bahr,1995,19950903-CLE-NWE,1995-09-03,NWE,CLE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,836,Matt Bahr,1995,19950903-CLE-NWE,1995-09-03,NWE,CLE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,836,Matt Bahr,1995,19950910-MIA-NWE,1995-09-10,NWE,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1995,19950917-NWE-SFO,1995-09-17,NWE,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1995,19951001-NWE-ATL,1995-10-01,NWE,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24570,7 +24570,7 @@ K,836,Matt Bahr,1995,19951029-CAR-NWE,1995-10-29,NWE,CAR,fgm_0_39;fgm_40_49;fgm_
 K,836,Matt Bahr,1995,19951105-NWE-NYJ,1995-11-05,NWE,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1995,19951112-NWE-MIA,1995-11-12,NWE,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1995,19951119-IND-NWE,1995-11-19,NWE,IND,fgm_0_39;fgm_40_49;fgm_50p,0
-K,836,Matt Bahr,1995,19951126-NWE-BUF,1995-11-26,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,836,Matt Bahr,1995,19951126-NWE-BUF,1995-11-26,NWE,BUF,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,836,Matt Bahr,1995,19951203-NOR-NWE,1995-12-03,NWE,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,836,Matt Bahr,1995,19951210-NYJ-NWE,1995-12-10,NWE,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,836,Matt Bahr,1995,19951216-NWE-PIT,1995-12-16,NWE,PIT,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
@@ -24763,7 +24763,7 @@ K,22645,Jim Turner,1964,19641129-KAN-NYJ,1964-11-29,NYJ,KAN,fgm_0_39;fgm_40_49;f
 K,22645,Jim Turner,1964,19641206-NYJ-SDG,1964-12-06,NYJ,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1964,19641213-NYJ-HOU,1964-12-13,NYJ,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1965,19650918-KAN-NYJ,1965-09-18,NYJ,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22645,Jim Turner,1965,19650926-NYJ-BUF,1965-09-26,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22645,Jim Turner,1965,19650926-NYJ-BUF,1965-09-26,NYJ,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22645,Jim Turner,1965,19651003-NYJ-DEN,1965-10-03,NYJ,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1965,19651016-OAK-NYJ,1965-10-16,NYJ,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1965,19651023-SDG-NYJ,1965-10-23,NYJ,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24781,26 +24781,26 @@ K,22645,Jim Turner,1966,19661030-BUF-NYJ,1966-10-30,NYJ,BUF,xpm;xp_missed;fgm_0_
 K,22645,Jim Turner,1966,19661113-NYJ-BUF,1966-11-13,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1966,19661120-MIA-NYJ,1966-11-20,NYJ,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1966,19661127-KAN-NYJ,1966-11-27,NYJ,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22645,Jim Turner,1966,19661203-NYJ-OAK,1966-12-03,NYJ,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,22645,Jim Turner,1966,19661211-NYJ-SDG,1966-12-11,NYJ,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22645,Jim Turner,1966,19661203-NYJ-OAK,1966-12-03,NYJ,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22645,Jim Turner,1966,19661211-NYJ-SDG,1966-12-11,NYJ,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22645,Jim Turner,1966,19661217-BOS-NYJ,1966-12-17,NYJ,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19670910-NYJ-BUF,1967-09-10,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19670924-NYJ-DEN,1967-09-24,NYJ,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19671001-MIA-NYJ,1967-10-01,NYJ,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19671007-OAK-NYJ,1967-10-07,NYJ,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22645,Jim Turner,1967,19671015-HOU-NYJ,1967-10-15,NYJ,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22645,Jim Turner,1967,19671015-HOU-NYJ,1967-10-15,NYJ,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22645,Jim Turner,1967,19671022-NYJ-MIA,1967-10-22,NYJ,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19671029-BOS-NYJ,1967-10-29,NYJ,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22645,Jim Turner,1967,19671105-NYJ-KAN,1967-11-05,NYJ,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22645,Jim Turner,1967,19671105-NYJ-KAN,1967-11-05,NYJ,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22645,Jim Turner,1967,19671112-BUF-NYJ,1967-11-12,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,22645,Jim Turner,1967,19671119-NYJ-BOS,1967-11-19,NYJ,BOS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1967,19671203-DEN-NYJ,1967-12-03,NYJ,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
-K,22645,Jim Turner,1967,19671217-NYJ-OAK,1967-12-17,NYJ,OAK,two_pt;fum_rec_td,8
+K,22645,Jim Turner,1967,19671217-NYJ-OAK,1967-12-17,NYJ,OAK,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,22645,Jim Turner,1968,19680915-NYJ-KAN,1968-09-15,NYJ,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1968,19680922-NYJ-BOS,1968-09-22,NYJ,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,22645,Jim Turner,1968,19681005-SDG-NYJ,1968-10-05,NYJ,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1968,19681013-DEN-NYJ,1968-10-13,NYJ,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22645,Jim Turner,1968,19681020-NYJ-HOU,1968-10-20,NYJ,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,22645,Jim Turner,1968,19681020-NYJ-HOU,1968-10-20,NYJ,HOU,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,22645,Jim Turner,1968,19681027-BOS-NYJ,1968-10-27,NYJ,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22645,Jim Turner,1968,19681103-BUF-NYJ,1968-11-03,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,22645,Jim Turner,1968,19681110-HOU-NYJ,1968-11-10,NYJ,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -24987,7 +24987,7 @@ K,13035,Pat Leahy,1979,19791007-NYJ-BAL,1979-10-07,NYJ,BAL,fgm_0_39;fgm_40_49;fg
 K,13035,Pat Leahy,1980,19800907-BAL-NYJ,1980-09-07,NYJ,BAL,fum_rec_td,6
 K,13035,Pat Leahy,1980,19800914-NYJ-BUF,1980-09-14,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13035,Pat Leahy,1980,19800921-SFO-NYJ,1980-09-21,NYJ,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13035,Pat Leahy,1980,19801005-NWE-NYJ,1980-10-05,NYJ,NWE,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,13035,Pat Leahy,1980,19801005-NWE-NYJ,1980-10-05,NYJ,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,13035,Pat Leahy,1980,19801019-SEA-NYJ,1980-10-19,NYJ,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13035,Pat Leahy,1980,19801027-MIA-NYJ,1980-10-27,NYJ,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13035,Pat Leahy,1980,19801109-BUF-NYJ,1980-11-09,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25573,7 +25573,7 @@ K,3165,Kevin Butler,1993,19931205-GNB-CHI,1993-12-05,CHI,GNB,fgm_0_39;fgm_40_49;
 K,3165,Kevin Butler,1993,19931212-CHI-TAM,1993-12-12,CHI,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3165,Kevin Butler,1993,19931218-DEN-CHI,1993-12-18,CHI,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3165,Kevin Butler,1993,19940102-CHI-RAM,1994-01-02,CHI,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3165,Kevin Butler,1994,19940912-CHI-PHI,1994-09-12,CHI,PHI,two_pt;fum_rec_td,2
+K,3165,Kevin Butler,1994,19940912-CHI-PHI,1994-09-12,CHI,PHI,xp_missed;two_pt;fum_rec_td,2
 K,3165,Kevin Butler,1994,19940918-MIN-CHI,1994-09-18,CHI,MIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,3165,Kevin Butler,1994,19940925-CHI-NYJ,1994-09-25,CHI,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,3165,Kevin Butler,1994,19941002-BUF-CHI,1994-10-02,CHI,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25606,9 +25606,9 @@ K,3165,Kevin Butler,1996,19961201-ARI-MIN,1996-12-01,ARI,MIN,fgm_0_39;fgm_40_49;
 K,3165,Kevin Butler,1996,19961208-DAL-ARI,1996-12-08,ARI,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3165,Kevin Butler,1996,19961215-WAS-ARI,1996-12-15,ARI,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3165,Kevin Butler,1996,19961222-ARI-PHI,1996-12-22,ARI,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,3165,Kevin Butler,1997,19970907-DAL-ARI,1997-09-07,ARI,DAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3165,Kevin Butler,1997,19970907-DAL-ARI,1997-09-07,ARI,DAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3165,Kevin Butler,1997,19970914-ARI-WAS,1997-09-14,ARI,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,3165,Kevin Butler,1997,19970928-ARI-TAM,1997-09-28,ARI,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,3165,Kevin Butler,1997,19970928-ARI-TAM,1997-09-28,ARI,TAM,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,3165,Kevin Butler,1997,19971005-MIN-ARI,1997-10-05,ARI,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3165,Kevin Butler,1997,19971012-NYG-ARI,1997-10-12,ARI,NYG,two_pt;fum_rec_td,6
 K,21404,Pete Stoyanovich,1989,19890910-BUF-MIA,1989-09-10,MIA,BUF,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
@@ -25678,15 +25678,15 @@ K,21404,Pete Stoyanovich,1993,19931213-PIT-MIA,1993-12-13,MIA,PIT,fgm_0_39;fgm_4
 K,21404,Pete Stoyanovich,1993,19931219-BUF-MIA,1993-12-19,MIA,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1993,19931227-MIA-SDG,1993-12-27,MIA,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1993,19940102-MIA-NWE,1994-01-02,MIA,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21404,Pete Stoyanovich,1994,19940904-NWE-MIA,1994-09-04,MIA,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21404,Pete Stoyanovich,1994,19940904-NWE-MIA,1994-09-04,MIA,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21404,Pete Stoyanovich,1994,19940911-MIA-GNB,1994-09-11,MIA,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1994,19940925-MIA-MIN,1994-09-25,MIA,MIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,21404,Pete Stoyanovich,1994,19941002-MIA-CIN,1994-10-02,MIA,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21404,Pete Stoyanovich,1994,19941009-MIA-BUF,1994-10-09,MIA,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21404,Pete Stoyanovich,1994,19941009-MIA-BUF,1994-10-09,MIA,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21404,Pete Stoyanovich,1994,19941016-RAI-MIA,1994-10-16,MIA,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1994,19941030-MIA-NWE,1994-10-30,MIA,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1994,19941106-IND-MIA,1994-11-06,MIA,IND,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,21404,Pete Stoyanovich,1994,19941113-CHI-MIA,1994-11-13,MIA,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21404,Pete Stoyanovich,1994,19941113-CHI-MIA,1994-11-13,MIA,CHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21404,Pete Stoyanovich,1994,19941120-MIA-PIT,1994-11-20,MIA,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1994,19941127-MIA-NYJ,1994-11-27,MIA,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,21404,Pete Stoyanovich,1994,19941204-BUF-MIA,1994-12-04,MIA,BUF,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
@@ -25723,7 +25723,7 @@ K,21404,Pete Stoyanovich,1997,19970914-BUF-KAN,1997-09-14,KAN,BUF,fgm_0_39;fgm_4
 K,21404,Pete Stoyanovich,1997,19970921-KAN-CAR,1997-09-21,KAN,CAR,two_pt;fum_rec_td,6
 K,21404,Pete Stoyanovich,1997,19970928-SEA-KAN,1997-09-28,KAN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1997,19971016-SDG-KAN,1997-10-16,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21404,Pete Stoyanovich,1997,19971026-KAN-STL,1997-10-26,KAN,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,21404,Pete Stoyanovich,1997,19971026-KAN-STL,1997-10-26,KAN,STL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,21404,Pete Stoyanovich,1997,19971103-PIT-KAN,1997-11-03,KAN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21404,Pete Stoyanovich,1997,19971109-KAN-JAX,1997-11-09,KAN,JAX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,21404,Pete Stoyanovich,1997,19971116-DEN-KAN,1997-11-16,KAN,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25811,7 +25811,7 @@ K,3883,Steve Christie,1995,19950917-IND-BUF,1995-09-17,BUF,IND,fgm_0_39;fgm_40_4
 K,3883,Steve Christie,1995,19951002-BUF-CLE,1995-10-02,BUF,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1995,19951008-NYJ-BUF,1995-10-08,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1995,19951015-SEA-BUF,1995-10-15,BUF,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3883,Steve Christie,1995,19951023-BUF-NWE,1995-10-23,BUF,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3883,Steve Christie,1995,19951023-BUF-NWE,1995-10-23,BUF,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1995,19951029-BUF-MIA,1995-10-29,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1995,19951105-BUF-IND,1995-11-05,BUF,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1995,19951112-ATL-BUF,1995-11-12,BUF,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25826,12 +25826,12 @@ K,3883,Steve Christie,1996,19960916-BUF-PIT,1996-09-16,BUF,PIT,fgm_0_39;fgm_40_4
 K,3883,Steve Christie,1996,19960922-DAL-BUF,1996-09-22,BUF,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1996,19961006-IND-BUF,1996-10-06,BUF,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1996,19961020-BUF-NYJ,1996-10-20,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3883,Steve Christie,1996,19961027-BUF-NWE,1996-10-27,BUF,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3883,Steve Christie,1996,19961027-BUF-NWE,1996-10-27,BUF,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1996,19961103-WAS-BUF,1996-11-03,BUF,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1996,19961110-BUF-PHI,1996-11-10,BUF,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3883,Steve Christie,1996,19961117-CIN-BUF,1996-11-17,BUF,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3883,Steve Christie,1996,19961201-BUF-IND,1996-12-01,BUF,IND,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3883,Steve Christie,1996,19961208-BUF-SEA,1996-12-08,BUF,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3883,Steve Christie,1996,19961208-BUF-SEA,1996-12-08,BUF,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1996,19961222-KAN-BUF,1996-12-22,BUF,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1997,19970831-MIN-BUF,1997-08-31,BUF,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1997,19970914-BUF-KAN,1997-09-14,BUF,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25845,7 +25845,7 @@ K,3883,Steve Christie,1997,19971109-NWE-BUF,1997-11-09,BUF,NWE,fgm_0_39;fgm_40_4
 K,3883,Steve Christie,1997,19971117-BUF-MIA,1997-11-17,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1997,19971130-NYJ-BUF,1997-11-30,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3883,Steve Christie,1997,19971207-BUF-CHI,1997-12-07,BUF,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3883,Steve Christie,1997,19971214-JAX-BUF,1997-12-14,BUF,JAX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3883,Steve Christie,1997,19971214-JAX-BUF,1997-12-14,BUF,JAX,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1997,19971220-BUF-GNB,1997-12-20,BUF,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1998,19980920-STL-BUF,1998-09-20,BUF,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3883,Steve Christie,1998,19981004-SFO-BUF,1998-10-04,BUF,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -25948,7 +25948,7 @@ K,835,Chris Bahr,1983,19831127-NYG-RAI,1983-11-27,RAI,NYG,fgm_0_39;fgm_40_49;fgm
 K,835,Chris Bahr,1983,19831201-RAI-SDG,1983-12-01,RAI,SDG,fum_rec_td,6
 K,835,Chris Bahr,1983,19831211-STL-RAI,1983-12-11,RAI,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,835,Chris Bahr,1983,19831218-SDG-RAI,1983-12-18,RAI,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,835,Chris Bahr,1984,19840902-RAI-HOU,1984-09-02,RAI,HOU,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,835,Chris Bahr,1984,19840902-RAI-HOU,1984-09-02,RAI,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,835,Chris Bahr,1984,19840916-RAI-KAN,1984-09-16,RAI,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,835,Chris Bahr,1984,19840924-SDG-RAI,1984-09-24,RAI,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,835,Chris Bahr,1984,19840930-RAI-DEN,1984-09-30,RAI,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26223,10 +26223,10 @@ K,3455,John Carney,1994,19940925-SDG-RAI,1994-09-25,SDG,RAI,fgm_0_39;fgm_40_49;f
 K,3455,John Carney,1994,19941009-KAN-SDG,1994-10-09,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1994,19941016-SDG-NOR,1994-10-16,SDG,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1994,19941023-DEN-SDG,1994-10-23,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3455,John Carney,1994,19941030-SEA-SDG,1994-10-30,SDG,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3455,John Carney,1994,19941030-SEA-SDG,1994-10-30,SDG,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3455,John Carney,1994,19941106-SDG-ATL,1994-11-06,SDG,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1994,19941120-SDG-NWE,1994-11-20,SDG,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3455,John Carney,1994,19941127-RAM-SDG,1994-11-27,SDG,RAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,3455,John Carney,1994,19941127-RAM-SDG,1994-11-27,SDG,RAM,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,3455,John Carney,1994,19941205-RAI-SDG,1994-12-05,SDG,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1994,19941211-SFO-SDG,1994-12-11,SDG,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1994,19941224-PIT-SDG,1994-12-24,SDG,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26236,7 +26236,7 @@ K,3455,John Carney,1995,19951001-SDG-PIT,1995-10-01,SDG,PIT,xp_missed;fgm_0_39;f
 K,3455,John Carney,1995,19951009-SDG-KAN,1995-10-09,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1995,19951015-DAL-SDG,1995-10-15,SDG,DAL,two_pt;fum_rec_td,2
 K,3455,John Carney,1995,19951022-SDG-SEA,1995-10-22,SDG,SEA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
-K,3455,John Carney,1995,19951105-MIA-SDG,1995-11-05,SDG,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3455,John Carney,1995,19951105-MIA-SDG,1995-11-05,SDG,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3455,John Carney,1995,19951119-SDG-DEN,1995-11-19,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1995,19951127-OAK-SDG,1995-11-27,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1995,19951203-CLE-SDG,1995-12-03,SDG,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26265,7 +26265,7 @@ K,3455,John Carney,1998,19981018-PHI-SDG,1998-10-18,SDG,PHI,fgm_0_39;fgm_40_49;f
 K,3455,John Carney,1998,19981025-SEA-SDG,1998-10-25,SDG,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1998,19981122-KAN-SDG,1998-11-22,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1998,19981129-DEN-SDG,1998-11-29,SDG,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,3455,John Carney,1998,19981206-SDG-WAS,1998-12-06,SDG,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3455,John Carney,1998,19981206-SDG-WAS,1998-12-06,SDG,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3455,John Carney,1998,19981213-SDG-SEA,1998-12-13,SDG,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3455,John Carney,1998,19981220-OAK-SDG,1998-12-20,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3455,John Carney,1998,19981227-SDG-ARI,1998-12-27,SDG,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26510,7 +26510,7 @@ K,10884,Jeff Jaeger,1994,19941113-RAI-RAM,1994-11-13,RAI,RAM,fgm_0_39;fgm_40_49;
 K,10884,Jeff Jaeger,1994,19941120-NOR-RAI,1994-11-20,RAI,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1994,19941127-PIT-RAI,1994-11-27,RAI,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1994,19941205-RAI-SDG,1994-12-05,RAI,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10884,Jeff Jaeger,1994,19941211-DEN-RAI,1994-12-11,RAI,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10884,Jeff Jaeger,1994,19941211-DEN-RAI,1994-12-11,RAI,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10884,Jeff Jaeger,1994,19941218-RAI-SEA,1994-12-18,RAI,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1994,19941224-KAN-RAI,1994-12-24,RAI,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1995,19951008-SEA-OAK,1995-10-08,OAK,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26540,15 +26540,15 @@ K,10884,Jeff Jaeger,1997,19970921-CHI-NWE,1997-09-21,CHI,NWE,fgm_0_39;fgm_40_49;
 K,10884,Jeff Jaeger,1997,19970928-CHI-DAL,1997-09-28,CHI,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1997,19971005-NOR-CHI,1997-10-05,CHI,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1997,19971012-GNB-CHI,1997-10-12,CHI,GNB,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,10884,Jeff Jaeger,1997,19971027-CHI-MIA,1997-10-27,CHI,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
-K,10884,Jeff Jaeger,1997,19971102-WAS-CHI,1997-11-02,CHI,WAS,two_pt;fum_rec_td,2
+K,10884,Jeff Jaeger,1997,19971027-CHI-MIA,1997-10-27,CHI,MIA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
+K,10884,Jeff Jaeger,1997,19971102-WAS-CHI,1997-11-02,CHI,WAS,xp_missed;two_pt;fum_rec_td,2
 K,10884,Jeff Jaeger,1997,19971109-CHI-MIN,1997-11-09,CHI,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,10884,Jeff Jaeger,1997,19971116-NYJ-CHI,1997-11-16,CHI,NYJ,two_pt;fum_rec_td,2
+K,10884,Jeff Jaeger,1997,19971116-NYJ-CHI,1997-11-16,CHI,NYJ,xp_missed;two_pt;fum_rec_td,2
 K,10884,Jeff Jaeger,1997,19971123-TAM-CHI,1997-11-23,CHI,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1997,19971127-CHI-DET,1997-11-27,CHI,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1997,19971207-BUF-CHI,1997-12-07,CHI,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1997,19971214-CHI-STL,1997-12-14,CHI,STL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10884,Jeff Jaeger,1997,19971221-CHI-TAM,1997-12-21,CHI,TAM,two_pt;fum_rec_td,2
+K,10884,Jeff Jaeger,1997,19971221-CHI-TAM,1997-12-21,CHI,TAM,xp_missed;two_pt;fum_rec_td,2
 K,10884,Jeff Jaeger,1998,19980906-JAX-CHI,1998-09-06,CHI,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1998,19980913-CHI-PIT,1998-09-13,CHI,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1998,19980920-CHI-TAM,1998-09-20,CHI,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -26559,7 +26559,7 @@ K,10884,Jeff Jaeger,1998,19981108-STL-CHI,1998-11-08,CHI,STL,fgm_0_39;fgm_40_49;
 K,10884,Jeff Jaeger,1998,19981115-CHI-DET,1998-11-15,CHI,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1998,19981122-CHI-ATL,1998-11-22,CHI,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10884,Jeff Jaeger,1998,19981129-TAM-CHI,1998-11-29,CHI,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10884,Jeff Jaeger,1998,19981206-CHI-MIN,1998-12-06,CHI,MIN,two_pt;fum_rec_td,2
+K,10884,Jeff Jaeger,1998,19981206-CHI-MIN,1998-12-06,CHI,MIN,xp_missed;two_pt;fum_rec_td,2
 K,10884,Jeff Jaeger,1998,19981213-CHI-GNB,1998-12-13,CHI,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,10884,Jeff Jaeger,1998,19981220-BAL-CHI,1998-12-20,CHI,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10884,Jeff Jaeger,1998,19981227-GNB-CHI,1998-12-27,CHI,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26778,35 +26778,35 @@ K,5223,Greg Davis,1994,19941030-PIT-ARI,1994-10-30,ARI,PIT,fgm_0_39;fgm_40_49;fg
 K,5223,Greg Davis,1994,19941113-ARI-NYG,1994-11-13,ARI,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1994,19941120-PHI-ARI,1994-11-20,ARI,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1994,19941127-CHI-ARI,1994-11-27,ARI,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,5223,Greg Davis,1994,19941204-ARI-HOU,1994-12-04,ARI,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,5223,Greg Davis,1994,19941204-ARI-HOU,1994-12-04,ARI,HOU,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,5223,Greg Davis,1994,19941211-WAS-ARI,1994-12-11,ARI,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1994,19941224-ARI-ATL,1994-12-24,ARI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1995,19950910-PHI-ARI,1995-09-10,ARI,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1995,19950917-ARI-DET,1995-09-17,ARI,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1995,19950917-ARI-DET,1995-09-17,ARI,DET,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1995,19950924-ARI-DAL,1995-09-24,ARI,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1995,19951001-KAN-ARI,1995-10-01,ARI,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1995,19951008-ARI-NYG,1995-10-08,ARI,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1995,19951008-ARI-NYG,1995-10-08,ARI,NYG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1995,19951015-WAS-ARI,1995-10-15,ARI,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5223,Greg Davis,1995,19951029-SEA-ARI,1995-10-29,ARI,SEA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,12
 K,5223,Greg Davis,1995,19951105-ARI-DEN,1995-11-05,ARI,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1995,19951112-MIN-ARI,1995-11-12,ARI,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1995,19951112-MIN-ARI,1995-11-12,ARI,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1995,19951119-ARI-CAR,1995-11-19,ARI,CAR,two_pt;fum_rec_td,6
 K,5223,Greg Davis,1995,19951126-ATL-ARI,1995-11-26,ARI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1995,19951130-NYG-ARI,1995-11-30,ARI,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1995,19951209-ARI-SDG,1995-12-09,ARI,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,5223,Greg Davis,1995,19951217-ARI-PHI,1995-12-17,ARI,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1995,19951209-ARI-SDG,1995-12-09,ARI,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,5223,Greg Davis,1995,19951217-ARI-PHI,1995-12-17,ARI,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1995,19951225-DAL-ARI,1995-12-25,ARI,DAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5223,Greg Davis,1996,19960901-ARI-IND,1996-09-01,ARI,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1996,19960908-MIA-ARI,1996-09-08,ARI,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1996,19960922-ARI-NOR,1996-09-22,ARI,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1996,19960922-ARI-NOR,1996-09-22,ARI,NOR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1996,19960929-STL-ARI,1996-09-29,ARI,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1996,19961013-ARI-DAL,1996-10-13,ARI,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1996,19961020-TAM-ARI,1996-10-20,ARI,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1996,19961103-ARI-NYG,1996-11-03,ARI,NYG,two_pt;fum_rec_td,2
+K,5223,Greg Davis,1996,19961103-ARI-NYG,1996-11-03,ARI,NYG,xp_missed;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1997,19970831-MIN-BUF,1997-08-31,MIN,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5223,Greg Davis,1997,19970907-MIN-CHI,1997-09-07,MIN,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,5223,Greg Davis,1997,19970914-TAM-MIN,1997-09-14,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,5223,Greg Davis,1997,19970921-MIN-GNB,1997-09-21,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1997,19970914-TAM-MIN,1997-09-14,MIN,TAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,5223,Greg Davis,1997,19970921-MIN-GNB,1997-09-21,MIN,GNB,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1997,19971005-SDG-OAK,1997-10-05,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1997,19971016-SDG-KAN,1997-10-16,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1997,19971026-IND-SDG,1997-10-26,SDG,IND,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -26816,7 +26816,7 @@ K,5223,Greg Davis,1997,19971116-OAK-SDG,1997-11-16,SDG,OAK,fgm_0_39;fgm_40_49;fg
 K,5223,Greg Davis,1997,19971123-SDG-SFO,1997-11-23,SDG,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5223,Greg Davis,1997,19971207-ATL-SDG,1997-12-07,SDG,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1997,19971221-SDG-DEN,1997-12-21,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5223,Greg Davis,1998,19980906-OAK-KAN,1998-09-06,OAK,KAN,two_pt;fum_rec_td,2
+K,5223,Greg Davis,1998,19980906-OAK-KAN,1998-09-06,OAK,KAN,xp_missed;two_pt;fum_rec_td,2
 K,5223,Greg Davis,1998,19980913-NYG-OAK,1998-09-13,OAK,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5223,Greg Davis,1998,19980920-DEN-OAK,1998-09-20,OAK,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5223,Greg Davis,1998,19980927-OAK-DAL,1998-09-27,OAK,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27053,7 +27053,7 @@ K,10715,Chris Jacke,1995,19951008-GNB-DAL,1995-10-08,GNB,DAL,fgm_0_39;fgm_40_49;
 K,10715,Chris Jacke,1995,19951015-DET-GNB,1995-10-15,GNB,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1995,19951022-MIN-GNB,1995-10-22,GNB,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10715,Chris Jacke,1995,19951029-GNB-DET,1995-10-29,GNB,DET,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10715,Chris Jacke,1995,19951105-GNB-MIN,1995-11-05,GNB,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10715,Chris Jacke,1995,19951105-GNB-MIN,1995-11-05,GNB,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10715,Chris Jacke,1995,19951119-GNB-CLE,1995-11-19,GNB,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1995,19951203-CIN-GNB,1995-12-03,GNB,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1995,19951210-GNB-TAM,1995-12-10,GNB,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27065,13 +27065,13 @@ K,10715,Chris Jacke,1996,19960915-SDG-GNB,1996-09-15,GNB,SDG,two_pt;fum_rec_td,6
 K,10715,Chris Jacke,1996,19960922-GNB-MIN,1996-09-22,GNB,MIN,two_pt;fum_rec_td,6
 K,10715,Chris Jacke,1996,19960929-GNB-SEA,1996-09-29,GNB,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1996,19961006-GNB-CHI,1996-10-06,GNB,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10715,Chris Jacke,1996,19961014-SFO-GNB,1996-10-14,GNB,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10715,Chris Jacke,1996,19961014-SFO-GNB,1996-10-14,GNB,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10715,Chris Jacke,1996,19961027-TAM-GNB,1996-10-27,GNB,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1996,19961110-GNB-KAN,1996-11-10,GNB,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1996,19961118-GNB-DAL,1996-11-18,GNB,DAL,xp_missed,0
 K,10715,Chris Jacke,1996,19961124-GNB-STL,1996-11-24,GNB,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10715,Chris Jacke,1996,19961208-DEN-GNB,1996-12-08,GNB,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,10715,Chris Jacke,1996,19961215-GNB-DET,1996-12-15,GNB,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10715,Chris Jacke,1996,19961215-GNB-DET,1996-12-15,GNB,DET,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10715,Chris Jacke,1996,19961222-MIN-GNB,1996-12-22,GNB,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10715,Chris Jacke,1997,19971221-PHI-WAS,1997-12-21,WAS,PHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,17
 K,10715,Chris Jacke,1998,19981206-NYG-ARI,1998-12-06,ARI,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -27163,11 +27163,11 @@ K,13509,Chip Lohmiller,1993,19931226-WAS-DAL,1993-12-26,WAS,DAL,fgm_0_39;fgm_40_
 K,13509,Chip Lohmiller,1993,19931231-MIN-WAS,1993-12-31,WAS,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13509,Chip Lohmiller,1994,19940911-WAS-NOR,1994-09-11,WAS,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13509,Chip Lohmiller,1994,19940918-WAS-NYG,1994-09-18,WAS,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13509,Chip Lohmiller,1994,19941009-WAS-PHI,1994-10-09,WAS,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,13509,Chip Lohmiller,1994,19941009-WAS-PHI,1994-10-09,WAS,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,13509,Chip Lohmiller,1994,19941016-ARI-WAS,1994-10-16,WAS,ARI,two_pt;fum_rec_td,8
 K,13509,Chip Lohmiller,1994,19941023-WAS-IND,1994-10-23,WAS,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,13509,Chip Lohmiller,1994,19941030-PHI-WAS,1994-10-30,WAS,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,13509,Chip Lohmiller,1994,19941106-SFO-WAS,1994-11-06,WAS,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,10
+K,13509,Chip Lohmiller,1994,19941106-SFO-WAS,1994-11-06,WAS,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,10
 K,13509,Chip Lohmiller,1994,19941127-NYG-WAS,1994-11-27,WAS,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,13509,Chip Lohmiller,1994,19941204-WAS-TAM,1994-12-04,WAS,TAM,two_pt;fum_rec_td,6
 K,13509,Chip Lohmiller,1994,19941211-WAS-ARI,1994-12-11,WAS,ARI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27179,16 +27179,16 @@ K,13509,Chip Lohmiller,1995,19950924-NOR-NYG,1995-09-24,NOR,NYG,xp_missed;fgm_0_
 K,13509,Chip Lohmiller,1995,19951001-PHI-NOR,1995-10-01,NOR,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13509,Chip Lohmiller,1995,19951015-MIA-NOR,1995-10-15,NOR,MIA,xp_missed,0
 K,13509,Chip Lohmiller,1995,19951022-NOR-CAR,1995-10-22,NOR,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13509,Chip Lohmiller,1995,19951029-NOR-SFO,1995-10-29,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,13509,Chip Lohmiller,1995,19951029-NOR-SFO,1995-10-29,NOR,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,13509,Chip Lohmiller,1995,19951119-NOR-MIN,1995-11-19,NOR,MIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,13509,Chip Lohmiller,1995,19951216-GNB-NOR,1995-12-16,NOR,GNB,xp_missed,0
 K,13509,Chip Lohmiller,1995,19951224-NOR-NYJ,1995-12-24,NOR,NYJ,xp_missed,0
 K,13509,Chip Lohmiller,1996,19960901-CIN-STL,1996-09-01,STL,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13509,Chip Lohmiller,1996,19960922-WAS-STL,1996-09-22,STL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13509,Chip Lohmiller,1996,19961006-SFO-STL,1996-10-06,STL,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,13509,Chip Lohmiller,1996,19961006-SFO-STL,1996-10-06,STL,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,13509,Chip Lohmiller,1996,19961013-STL-CAR,1996-10-13,STL,CAR,two_pt;fum_rec_td,6
 K,13509,Chip Lohmiller,1996,19961020-JAX-STL,1996-10-20,STL,JAX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,13509,Chip Lohmiller,1996,19961027-STL-BAL,1996-10-27,STL,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,13509,Chip Lohmiller,1996,19961027-STL-BAL,1996-10-27,STL,BAL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,13509,Chip Lohmiller,1996,19961103-STL-PIT,1996-11-03,STL,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13509,Chip Lohmiller,1996,19961110-ATL-STL,1996-11-10,STL,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,13509,Chip Lohmiller,1996,19961117-CAR-STL,1996-11-17,STL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27239,11 +27239,11 @@ K,11929,John Kasay,1994,19940918-SDG-SEA,1994-09-18,SEA,SDG,fgm_0_39;fgm_40_49;f
 K,11929,John Kasay,1994,19940925-PIT-SEA,1994-09-25,SEA,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11929,John Kasay,1994,19941002-SEA-IND,1994-10-02,SEA,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11929,John Kasay,1994,19941009-DEN-SEA,1994-10-09,SEA,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11929,John Kasay,1994,19941023-SEA-KAN,1994-10-23,SEA,KAN,two_pt;fum_rec_td,4
-K,11929,John Kasay,1994,19941030-SEA-SDG,1994-10-30,SEA,SDG,two_pt;fum_rec_td,2
+K,11929,John Kasay,1994,19941023-SEA-KAN,1994-10-23,SEA,KAN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
+K,11929,John Kasay,1994,19941030-SEA-SDG,1994-10-30,SEA,SDG,xp_missed;two_pt;fum_rec_td,2
 K,11929,John Kasay,1994,19941106-CIN-SEA,1994-11-06,SEA,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1994,19941113-SEA-DEN,1994-11-13,SEA,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11929,John Kasay,1994,19941120-TAM-SEA,1994-11-20,SEA,TAM,two_pt;fum_rec_td,2
+K,11929,John Kasay,1994,19941120-TAM-SEA,1994-11-20,SEA,TAM,xp_missed;two_pt;fum_rec_td,2
 K,11929,John Kasay,1994,19941127-KAN-SEA,1994-11-27,SEA,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1994,19941204-IND-SEA,1994-12-04,SEA,IND,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1994,19941211-SEA-HOU,1994-12-11,SEA,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27259,14 +27259,14 @@ K,11929,John Kasay,1995,19951029-CAR-NWE,1995-10-29,CAR,NWE,fgm_0_39;fgm_40_49;f
 K,11929,John Kasay,1995,19951105-CAR-SFO,1995-11-05,CAR,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11929,John Kasay,1995,19951112-CAR-STL,1995-11-12,CAR,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1995,19951119-ARI-CAR,1995-11-19,CAR,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11929,John Kasay,1995,19951126-CAR-NOR,1995-11-26,CAR,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,11929,John Kasay,1995,19951126-CAR-NOR,1995-11-26,CAR,NOR,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,11929,John Kasay,1995,19951203-IND-CAR,1995-12-03,CAR,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1995,19951210-SFO-CAR,1995-12-10,CAR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1995,19951224-CAR-WAS,1995-12-24,CAR,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1996,19960901-ATL-CAR,1996-09-01,CAR,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1996,19960908-CAR-NOR,1996-09-08,CAR,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1996,19960922-SFO-CAR,1996-09-22,CAR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11929,John Kasay,1996,19960929-CAR-JAX,1996-09-29,CAR,JAX,two_pt;fum_rec_td,2
+K,11929,John Kasay,1996,19960929-CAR-JAX,1996-09-29,CAR,JAX,xp_missed;two_pt;fum_rec_td,2
 K,11929,John Kasay,1996,19961006-CAR-MIN,1996-10-06,CAR,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,11929,John Kasay,1996,19961013-STL-CAR,1996-10-13,CAR,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,11929,John Kasay,1996,19961020-NOR-CAR,1996-10-20,CAR,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27297,7 +27297,7 @@ K,11929,John Kasay,1998,19981101-NOR-CAR,1998-11-01,CAR,NOR,fgm_0_39;fgm_40_49;f
 K,11929,John Kasay,1998,19981108-CAR-SFO,1998-11-08,CAR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1998,19981115-MIA-CAR,1998-11-15,CAR,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1998,19981122-CAR-STL,1998-11-22,CAR,STL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11929,John Kasay,1998,19981213-WAS-CAR,1998-12-13,CAR,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,11929,John Kasay,1998,19981213-WAS-CAR,1998-12-13,CAR,WAS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,11929,John Kasay,1998,19981220-STL-CAR,1998-12-20,CAR,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11929,John Kasay,1998,19981227-CAR-IND,1998-12-27,CAR,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1991,19910908-CLE-NWE,1991-09-08,CLE,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27334,13 +27334,13 @@ K,21399,Matt Stover,1993,19931205-NOR-CLE,1993-12-05,CLE,NOR,fgm_0_39;fgm_40_49;
 K,21399,Matt Stover,1993,19931212-CLE-HOU,1993-12-12,CLE,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1993,19931219-NWE-CLE,1993-12-19,CLE,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1993,19940102-CLE-PIT,1994-01-02,CLE,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1994,19940904-CLE-CIN,1994-09-04,CLE,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1994,19940904-CLE-CIN,1994-09-04,CLE,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1994,19940911-PIT-CLE,1994-09-11,CLE,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1994,19940918-ARI-CLE,1994-09-18,CLE,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,21399,Matt Stover,1994,19940918-ARI-CLE,1994-09-18,CLE,ARI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,21399,Matt Stover,1994,19941002-NYJ-CLE,1994-10-02,CLE,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1994,19941013-CLE-HOU,1994-10-13,CLE,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1994,19941013-CLE-HOU,1994-10-13,CLE,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1994,19941023-CIN-CLE,1994-10-23,CLE,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,21399,Matt Stover,1994,19941030-CLE-DEN,1994-10-30,CLE,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1994,19941030-CLE-DEN,1994-10-30,CLE,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1994,19941106-NWE-CLE,1994-11-06,CLE,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1994,19941113-CLE-PHI,1994-11-13,CLE,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1994,19941120-CLE-KAN,1994-11-20,CLE,KAN,xp_missed,0
@@ -27358,7 +27358,7 @@ K,21399,Matt Stover,1995,19951113-CLE-PIT,1995-11-13,CLE,PIT,fgm_0_39;fgm_40_49;
 K,21399,Matt Stover,1995,19951119-GNB-CLE,1995-11-19,CLE,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1995,19951126-PIT-CLE,1995-11-26,CLE,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1995,19951203-CLE-SDG,1995-12-03,CLE,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1995,19951209-CLE-MIN,1995-12-09,CLE,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1995,19951209-CLE-MIN,1995-12-09,CLE,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1995,19951217-CIN-CLE,1995-12-17,CLE,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1996,19960901-OAK-BAL,1996-09-01,BAL,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1996,19960908-BAL-PIT,1996-09-08,BAL,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27376,8 +27376,8 @@ K,21399,Matt Stover,1997,19970831-JAX-BAL,1997-08-31,BAL,JAX,fgm_0_39;fgm_40_49;
 K,21399,Matt Stover,1997,19970907-CIN-BAL,1997-09-07,BAL,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1997,19970914-BAL-NYG,1997-09-14,BAL,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1997,19970921-BAL-TEN,1997-09-21,BAL,TEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1997,19970928-BAL-SDG,1997-09-28,BAL,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,21399,Matt Stover,1997,19971005-PIT-BAL,1997-10-05,BAL,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,21399,Matt Stover,1997,19970928-BAL-SDG,1997-09-28,BAL,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1997,19971005-PIT-BAL,1997-10-05,BAL,PIT,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,21399,Matt Stover,1997,19971019-MIA-BAL,1997-10-19,BAL,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1997,19971026-BAL-WAS,1997-10-26,BAL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1997,19971102-BAL-NYJ,1997-11-02,BAL,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27396,7 +27396,7 @@ K,21399,Matt Stover,1998,19981101-JAX-BAL,1998-11-01,BAL,JAX,xp_missed,0
 K,21399,Matt Stover,1998,19981108-OAK-BAL,1998-11-08,BAL,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,21399,Matt Stover,1998,19981115-BAL-SDG,1998-11-15,BAL,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1998,19981122-BAL-CIN,1998-11-22,BAL,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,21399,Matt Stover,1998,19981129-IND-BAL,1998-11-29,BAL,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,21399,Matt Stover,1998,19981129-IND-BAL,1998-11-29,BAL,IND,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1998,19981213-MIN-BAL,1998-12-13,BAL,MIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,21399,Matt Stover,1998,19981220-BAL-CHI,1998-12-20,BAL,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21399,Matt Stover,1998,19981227-DET-BAL,1998-12-27,BAL,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -27411,7 +27411,7 @@ K,7780,Roy Gerela,1969,19691109-CIN-HOU,1969-11-09,HOU,CIN,fgm_0_39;fgm_40_49;fg
 K,7780,Roy Gerela,1969,19691116-HOU-DEN,1969-11-16,HOU,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,7780,Roy Gerela,1969,19691123-HOU-MIA,1969-11-23,HOU,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,7780,Roy Gerela,1969,19691127-SDG-HOU,1969-11-27,HOU,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,7780,Roy Gerela,1969,19691206-NYJ-HOU,1969-12-06,HOU,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,10
+K,7780,Roy Gerela,1969,19691206-NYJ-HOU,1969-12-06,HOU,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,10
 K,7780,Roy Gerela,1969,19691214-BOS-HOU,1969-12-14,HOU,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7780,Roy Gerela,1970,19700920-HOU-PIT,1970-09-20,HOU,PIT,fgm_0_39;fgm_40_49;fgm_50p,2
 K,7780,Roy Gerela,1970,19700927-MIA-HOU,1970-09-27,HOU,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27643,8 +27643,8 @@ K,8989,Jason Hanson,1994,19940911-DET-MIN,1994-09-11,DET,MIN,fgm_0_39;fgm_40_49;
 K,8989,Jason Hanson,1994,19940919-DET-DAL,1994-09-19,DET,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1994,19940925-NWE-DET,1994-09-25,DET,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1994,19941023-CHI-DET,1994-10-23,DET,CHI,two_pt;fum_rec_td,6
-K,8989,Jason Hanson,1994,19941030-DET-NYG,1994-10-30,DET,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,8989,Jason Hanson,1994,19941106-DET-GNB,1994-11-06,DET,GNB,two_pt;fum_rec_td,4
+K,8989,Jason Hanson,1994,19941030-DET-NYG,1994-10-30,DET,NYG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,8989,Jason Hanson,1994,19941106-DET-GNB,1994-11-06,DET,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,8989,Jason Hanson,1994,19941120-DET-CHI,1994-11-20,DET,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1994,19941124-BUF-DET,1994-11-24,DET,BUF,two_pt;fum_rec_td,6
 K,8989,Jason Hanson,1994,19941204-GNB-DET,1994-12-04,DET,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27654,11 +27654,11 @@ K,8989,Jason Hanson,1994,19941225-DET-MIA,1994-12-25,DET,MIA,fgm_0_39;fgm_40_49;
 K,8989,Jason Hanson,1995,19950903-DET-PIT,1995-09-03,DET,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19950910-DET-MIN,1995-09-10,DET,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19950917-ARI-DET,1995-09-17,DET,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,8989,Jason Hanson,1995,19950925-SFO-DET,1995-09-25,DET,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,8989,Jason Hanson,1995,19950925-SFO-DET,1995-09-25,DET,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,8989,Jason Hanson,1995,19951008-CLE-DET,1995-10-08,DET,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19951022-DET-WAS,1995-10-22,DET,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19951029-GNB-DET,1995-10-29,DET,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
-K,8989,Jason Hanson,1995,19951105-DET-ATL,1995-11-05,DET,ATL,two_pt;fum_rec_td,2
+K,8989,Jason Hanson,1995,19951105-DET-ATL,1995-11-05,DET,ATL,xp_missed;two_pt;fum_rec_td,2
 K,8989,Jason Hanson,1995,19951112-TAM-DET,1995-11-12,DET,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19951119-DET-CHI,1995-11-19,DET,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1995,19951123-MIN-DET,1995-11-23,DET,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27670,7 +27670,7 @@ K,8989,Jason Hanson,1996,19960901-DET-MIN,1996-09-01,DET,MIN,fgm_0_39;fgm_40_49;
 K,8989,Jason Hanson,1996,19960908-TAM-DET,1996-09-08,DET,TAM,two_pt;fum_rec_td,6
 K,8989,Jason Hanson,1996,19960915-DET-PHI,1996-09-15,DET,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1996,19960929-DET-TAM,1996-09-29,DET,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,8989,Jason Hanson,1996,19961103-DET-GNB,1996-11-03,DET,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,8989,Jason Hanson,1996,19961103-DET-GNB,1996-11-03,DET,GNB,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,8989,Jason Hanson,1996,19961117-SEA-DET,1996-11-17,DET,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8989,Jason Hanson,1996,19961128-KAN-DET,1996-11-28,DET,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,8989,Jason Hanson,1996,19961208-MIN-DET,1996-12-08,DET,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27741,7 +27741,7 @@ K,24989,Tony Zendejas,1988,19880911-RAI-HOU,1988-09-11,HOU,RAI,fgm_0_39;fgm_40_4
 K,24989,Tony Zendejas,1988,19880918-HOU-NYJ,1988-09-18,HOU,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1988,19880925-NWE-HOU,1988-09-25,HOU,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1988,19881002-HOU-PHI,1988-10-02,HOU,PHI,fum_rec_td,8
-K,24989,Tony Zendejas,1988,19881016-HOU-PIT,1988-10-16,HOU,PIT,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,24989,Tony Zendejas,1988,19881016-HOU-PIT,1988-10-16,HOU,PIT,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,24989,Tony Zendejas,1988,19881030-WAS-HOU,1988-10-30,HOU,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1988,19881107-CLE-HOU,1988-11-07,HOU,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1988,19881113-HOU-SEA,1988-11-13,HOU,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27810,7 +27810,7 @@ K,24989,Tony Zendejas,1994,19941106-DEN-RAM,1994-11-06,RAM,DEN,fgm_0_39;fgm_40_4
 K,24989,Tony Zendejas,1994,19941113-RAI-RAM,1994-11-13,RAM,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1994,19941120-RAM-SFO,1994-11-20,RAM,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,24989,Tony Zendejas,1994,19941127-RAM-SDG,1994-11-27,RAM,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,24989,Tony Zendejas,1994,19941204-NOR-RAM,1994-12-04,RAM,NOR,two_pt;fum_rec_td,2
+K,24989,Tony Zendejas,1994,19941204-NOR-RAM,1994-12-04,RAM,NOR,xp_missed;two_pt;fum_rec_td,2
 K,24989,Tony Zendejas,1994,19941218-RAM-CHI,1994-12-18,RAM,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,24989,Tony Zendejas,1994,19941224-WAS-RAM,1994-12-24,RAM,WAS,two_pt;fum_rec_td,6
 K,24989,Tony Zendejas,1995,19951012-ATL-STL,1995-10-12,ATL,STL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
@@ -27835,20 +27835,20 @@ K,6336,Jason Elam,1994,19940926-DEN-BUF,1994-09-26,DEN,BUF,fgm_0_39;fgm_40_49;fg
 K,6336,Jason Elam,1994,19941009-DEN-SEA,1994-10-09,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1994,19941023-DEN-SDG,1994-10-23,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1994,19941030-CLE-DEN,1994-10-30,DEN,CLE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1994,19941106-DEN-RAM,1994-11-06,DEN,RAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1994,19941106-DEN-RAM,1994-11-06,DEN,RAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1994,19941113-SEA-DEN,1994-11-13,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1994,19941120-ATL-DEN,1994-11-20,DEN,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1994,19941120-ATL-DEN,1994-11-20,DEN,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1994,19941127-CIN-DEN,1994-11-27,DEN,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1994,19941204-DEN-KAN,1994-12-04,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1994,19941211-DEN-RAI,1994-12-11,DEN,RAI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,6336,Jason Elam,1994,19941217-DEN-SFO,1994-12-17,DEN,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1994,19941224-NOR-DEN,1994-12-24,DEN,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1994,19941224-NOR-DEN,1994-12-24,DEN,NOR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1995,19950903-BUF-DEN,1995-09-03,DEN,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19950917-WAS-DEN,1995-09-17,DEN,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19950924-DEN-SDG,1995-09-24,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951001-DEN-SEA,1995-10-01,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951008-DEN-NWE,1995-10-08,DEN,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1995,19951016-OAK-DEN,1995-10-16,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1995,19951016-OAK-DEN,1995-10-16,DEN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1995,19951105-ARI-DEN,1995-11-05,DEN,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951112-DEN-PHI,1995-11-12,DEN,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951119-SDG-DEN,1995-11-19,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -27856,7 +27856,7 @@ K,6336,Jason Elam,1995,19951126-DEN-HOU,1995-11-26,DEN,HOU,xp_missed;fgm_0_39;fg
 K,6336,Jason Elam,1995,19951203-JAX-DEN,1995-12-03,DEN,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951210-SEA-DEN,1995-12-10,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1995,19951217-DEN-KAN,1995-12-17,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,6336,Jason Elam,1995,19951224-DEN-OAK,1995-12-24,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1995,19951224-DEN-OAK,1995-12-24,DEN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1996,19960901-NYJ-DEN,1996-09-01,DEN,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1996,19960908-DEN-SEA,1996-09-08,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1996,19960915-TAM-DEN,1996-09-15,DEN,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -27870,10 +27870,10 @@ K,6336,Jason Elam,1996,19961208-DEN-GNB,1996-12-08,DEN,GNB,fgm_0_39;fgm_40_49;fg
 K,6336,Jason Elam,1996,19961215-OAK-DEN,1996-12-15,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1996,19961222-DEN-SDG,1996-12-22,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1997,19970831-KAN-DEN,1997-08-31,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1997,19970907-DEN-SEA,1997-09-07,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,6336,Jason Elam,1997,19970907-DEN-SEA,1997-09-07,DEN,SEA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,6336,Jason Elam,1997,19970921-CIN-DEN,1997-09-21,DEN,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,6336,Jason Elam,1997,19970928-DEN-ATL,1997-09-28,DEN,ATL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
-K,6336,Jason Elam,1997,19971019-DEN-OAK,1997-10-19,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6336,Jason Elam,1997,19971019-DEN-OAK,1997-10-19,DEN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6336,Jason Elam,1997,19971026-DEN-BUF,1997-10-26,DEN,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,6336,Jason Elam,1997,19971102-SEA-DEN,1997-11-02,DEN,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,6336,Jason Elam,1997,19971109-CAR-DEN,1997-11-09,DEN,CAR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -27894,7 +27894,7 @@ K,6336,Jason Elam,1998,19981116-DEN-KAN,1998-11-16,DEN,KAN,fgm_0_39;fgm_40_49;fg
 K,6336,Jason Elam,1998,19981122-OAK-DEN,1998-11-22,DEN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1998,19981129-DEN-SDG,1998-11-29,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6336,Jason Elam,1998,19981213-DEN-NYG,1998-12-13,DEN,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6336,Jason Elam,1998,19981221-DEN-MIA,1998-12-21,DEN,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,6336,Jason Elam,1998,19981221-DEN-MIA,1998-12-21,DEN,MIA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,7298,Tony Franklin,1979,19790902-NYG-PHI,1979-09-02,PHI,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7298,Tony Franklin,1979,19790910-ATL-PHI,1979-09-10,PHI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7298,Tony Franklin,1979,19790916-PHI-NOR,1979-09-16,PHI,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28095,22 +28095,22 @@ K,18494,Fuad Reveiz,1993,19931212-DAL-MIN,1993-12-12,MIN,DAL,fgm_0_39;fgm_40_49;
 K,18494,Fuad Reveiz,1993,19931226-KAN-MIN,1993-12-26,MIN,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1994,19940904-MIN-GNB,1994-09-04,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,18494,Fuad Reveiz,1994,19940911-DET-MIN,1994-09-11,MIN,DET,fgm_0_39;fgm_40_49;fgm_50p,0
-K,18494,Fuad Reveiz,1994,19940918-MIN-CHI,1994-09-18,MIN,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,18494,Fuad Reveiz,1994,19940918-MIN-CHI,1994-09-18,MIN,CHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,18494,Fuad Reveiz,1994,19940925-MIA-MIN,1994-09-25,MIN,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1994,19941010-MIN-NYG,1994-10-10,MIN,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,18494,Fuad Reveiz,1994,19941020-GNB-MIN,1994-10-20,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,18494,Fuad Reveiz,1994,19941030-MIN-TAM,1994-10-30,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,18494,Fuad Reveiz,1994,19941113-MIN-NWE,1994-11-13,MIN,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
-K,18494,Fuad Reveiz,1994,19941127-TAM-MIN,1994-11-27,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,18494,Fuad Reveiz,1994,19941127-TAM-MIN,1994-11-27,MIN,TAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,18494,Fuad Reveiz,1994,19941201-CHI-MIN,1994-12-01,MIN,CHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,18494,Fuad Reveiz,1994,19941211-MIN-BUF,1994-12-11,MIN,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1994,19941217-MIN-DET,1994-12-17,MIN,DET,fgm_0_39;fgm_40_49;fgm_50p,0
-K,18494,Fuad Reveiz,1994,19941226-SFO-MIN,1994-12-26,MIN,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,18494,Fuad Reveiz,1994,19941226-SFO-MIN,1994-12-26,MIN,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,18494,Fuad Reveiz,1995,19950910-DET-MIN,1995-09-10,MIN,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1995,19950917-DAL-MIN,1995-09-17,MIN,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1995,19950924-MIN-PIT,1995-09-24,MIN,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,18494,Fuad Reveiz,1995,19951008-HOU-MIN,1995-10-08,MIN,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,18494,Fuad Reveiz,1995,19951015-MIN-TAM,1995-10-15,MIN,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,18494,Fuad Reveiz,1995,19951015-MIN-TAM,1995-10-15,MIN,TAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,18494,Fuad Reveiz,1995,19951030-CHI-MIN,1995-10-30,MIN,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1995,19951105-GNB-MIN,1995-11-05,MIN,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,18494,Fuad Reveiz,1995,19951112-MIN-ARI,1995-11-12,MIN,ARI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28128,7 +28128,7 @@ K,11910,Rich Karlis,1982,19821205-ATL-DEN,1982-12-05,DEN,ATL,fgm_0_39;fgm_40_49;
 K,11910,Rich Karlis,1982,19821212-DEN-RAM,1982-12-12,DEN,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11910,Rich Karlis,1982,19821219-KAN-DEN,1982-12-19,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11910,Rich Karlis,1982,19821226-DEN-RAI,1982-12-26,DEN,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,11910,Rich Karlis,1982,19830102-DEN-SEA,1983-01-02,DEN,SEA,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,4
+K,11910,Rich Karlis,1982,19830102-DEN-SEA,1983-01-02,DEN,SEA,fum_rec_td,4
 K,11910,Rich Karlis,1983,19830911-DEN-BAL,1983-09-11,DEN,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11910,Rich Karlis,1983,19830918-PHI-DEN,1983-09-18,DEN,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,11910,Rich Karlis,1983,19831009-DEN-HOU,1983-10-09,DEN,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28330,7 +28330,7 @@ K,1696,Dean Biasucci,1995,19951105-STL-NOR,1995-11-05,STL,NOR,fgm_0_39;fgm_40_49
 K,1696,Dean Biasucci,1995,19951112-CAR-STL,1995-11-12,STL,CAR,two_pt;fum_rec_td,6
 K,1696,Dean Biasucci,1995,19951119-STL-ATL,1995-11-19,STL,ATL,xp_missed,0
 K,1696,Dean Biasucci,1995,19951203-STL-NYJ,1995-12-03,STL,NYJ,two_pt;fum_rec_td,2
-K,1696,Dean Biasucci,1995,19951210-BUF-STL,1995-12-10,STL,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1696,Dean Biasucci,1995,19951210-BUF-STL,1995-12-10,STL,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1696,Dean Biasucci,1995,19951217-WAS-STL,1995-12-17,STL,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,1696,Dean Biasucci,1995,19951224-MIA-STL,1995-12-24,STL,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,15199,Lou Michaels,1960,19601002-RAM-SFO,1960-10-02,RAM,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28541,15 +28541,15 @@ K,13975,Errol Mann,1978,19781203-DEN-OAK,1978-12-03,OAK,DEN,fgm_0_39;fgm_40_49;f
 K,13975,Errol Mann,1978,19781217-MIN-OAK,1978-12-17,OAK,MIN,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,3400,Gino Cappelletti,1960,19600909-DEN-BOS,1960-09-09,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1960,19600917-BOS-NYT,1960-09-17,BOS,NYT,two_pt;fum_rec_td,6
-K,3400,Gino Cappelletti,1960,19601008-BOS-LAC,1960-10-08,BOS,LAC,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,3400,Gino Cappelletti,1960,19601016-BOS-OAK,1960-10-16,BOS,OAK,two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1960,19601008-BOS-LAC,1960-10-08,BOS,LAC,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1960,19601016-BOS-OAK,1960-10-16,BOS,OAK,xp_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1960,19601023-BOS-DEN,1960-10-23,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1960,19601028-LAC-BOS,1960-10-28,BOS,LAC,two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1960,19601104-OAK-BOS,1960-11-04,BOS,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1960,19601111-NYT-BOS,1960-11-11,BOS,NYT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1960,19601118-DTX-BOS,1960-11-18,BOS,DTX,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1960,19601125-HOU-BOS,1960-11-25,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3400,Gino Cappelletti,1960,19601218-BOS-HOU,1960-12-18,BOS,HOU,two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1960,19601218-BOS-HOU,1960-12-18,BOS,HOU,xp_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1961,19610909-NYT-BOS,1961-09-09,BOS,NYT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1961,19610916-DEN-BOS,1961-09-16,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1961,19610923-BOS-BUF,1961-09-23,BOS,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28557,7 +28557,7 @@ K,3400,Gino Cappelletti,1961,19611001-BOS-NYT,1961-10-01,BOS,NYT,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1961,19611007-SDG-BOS,1961-10-07,BOS,SDG,two_pt;fum_rec_td,6
 K,3400,Gino Cappelletti,1961,19611013-HOU-BOS,1961-10-13,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1961,19611022-BUF-BOS,1961-10-22,BOS,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,3400,Gino Cappelletti,1961,19611029-BOS-DTX,1961-10-29,BOS,DTX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,3400,Gino Cappelletti,1961,19611029-BOS-DTX,1961-10-29,BOS,DTX,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,3400,Gino Cappelletti,1961,19611103-DTX-BOS,1961-11-03,BOS,DTX,two_pt;fum_rec_td,6
 K,3400,Gino Cappelletti,1961,19611112-BOS-HOU,1961-11-12,BOS,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1961,19611117-OAK-BOS,1961-11-17,BOS,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -28565,7 +28565,7 @@ K,3400,Gino Cappelletti,1961,19611217-BOS-SDG,1961-12-17,BOS,SDG,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1962,19620916-HOU-BOS,1962-09-16,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1962,19620921-DEN-BOS,1962-09-21,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,3400,Gino Cappelletti,1962,19621006-BOS-NYT,1962-10-06,BOS,NYT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,3400,Gino Cappelletti,1962,19621019-SDG-BOS,1962-10-19,BOS,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1962,19621019-SDG-BOS,1962-10-19,BOS,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1962,19621026-OAK-BOS,1962-10-26,BOS,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1962,19621111-BOS-DEN,1962-11-11,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3400,Gino Cappelletti,1962,19621118-BOS-HOU,1962-11-18,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28580,7 +28580,7 @@ K,3400,Gino Cappelletti,1963,19631011-OAK-BOS,1963-10-11,BOS,OAK,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1963,19631018-DEN-BOS,1963-10-18,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1963,19631101-HOU-BOS,1963-11-01,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,3400,Gino Cappelletti,1963,19631110-SDG-BOS,1963-11-10,BOS,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3400,Gino Cappelletti,1963,19631117-KAN-BOS,1963-11-17,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1963,19631117-KAN-BOS,1963-11-17,BOS,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1963,19631201-BUF-BOS,1963-12-01,BOS,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1963,19631208-BOS-HOU,1963-12-08,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,14
 K,3400,Gino Cappelletti,1963,19631214-BOS-KAN,1963-12-14,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28589,10 +28589,10 @@ K,3400,Gino Cappelletti,1964,19640920-BOS-SDG,1964-09-20,BOS,SDG,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1964,19640927-NYJ-BOS,1964-09-27,BOS,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1964,19641004-BOS-DEN,1964-10-04,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1964,19641009-SDG-BOS,1964-10-09,BOS,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3400,Gino Cappelletti,1964,19641016-OAK-BOS,1964-10-16,BOS,OAK,two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1964,19641016-OAK-BOS,1964-10-16,BOS,OAK,xp_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1964,19641023-KAN-BOS,1964-10-23,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1964,19641106-HOU-BOS,1964-11-06,BOS,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,3400,Gino Cappelletti,1964,19641115-BOS-BUF,1964-11-15,BOS,BUF,two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1964,19641115-BOS-BUF,1964-11-15,BOS,BUF,xp_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1964,19641120-DEN-BOS,1964-11-20,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1964,19641129-BOS-HOU,1964-11-29,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3400,Gino Cappelletti,1964,19641206-BOS-KAN,1964-12-06,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28607,7 +28607,7 @@ K,3400,Gino Cappelletti,1965,19651114-NYJ-BOS,1965-11-14,BOS,NYJ,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1965,19651121-KAN-BOS,1965-11-21,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1965,19651128-BOS-NYJ,1965-11-28,BOS,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1965,19651218-HOU-BOS,1965-12-18,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,3400,Gino Cappelletti,1966,19660918-BOS-DEN,1966-09-18,BOS,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1966,19660918-BOS-DEN,1966-09-18,BOS,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1966,19660925-KAN-BOS,1966-09-25,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1966,19661002-NYJ-BOS,1966-10-02,BOS,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1966,19661008-BOS-BUF,1966-10-08,BOS,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28617,7 +28617,7 @@ K,3400,Gino Cappelletti,1966,19661113-HOU-BOS,1966-11-13,BOS,HOU,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1966,19661120-BOS-KAN,1966-11-20,BOS,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1966,19661127-BOS-MIA,1966-11-27,BOS,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1966,19661211-BOS-HOU,1966-12-11,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
-K,3400,Gino Cappelletti,1966,19661217-BOS-NYJ,1966-12-17,BOS,NYJ,two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1966,19661217-BOS-NYJ,1966-12-17,BOS,NYJ,xp_missed;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1967,19670924-BOS-BUF,1967-09-24,BOS,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1967,19671008-BOS-SDG,1967-10-08,BOS,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1967,19671015-MIA-BOS,1967-10-15,BOS,MIA,two_pt;fum_rec_td,6
@@ -28645,8 +28645,8 @@ K,3400,Gino Cappelletti,1969,19691026-BOS-NYJ,1969-10-26,BOS,NYJ,fgm_0_39;fgm_40
 K,3400,Gino Cappelletti,1969,19691102-HOU-BOS,1969-11-02,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,3400,Gino Cappelletti,1969,19691109-MIA-BOS,1969-11-09,BOS,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1969,19691116-BOS-CIN,1969-11-16,BOS,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,3400,Gino Cappelletti,1969,19691130-BOS-MIA,1969-11-30,BOS,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,3400,Gino Cappelletti,1969,19691207-BOS-SDG,1969-12-07,BOS,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1969,19691130-BOS-MIA,1969-11-30,BOS,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,3400,Gino Cappelletti,1969,19691207-BOS-SDG,1969-12-07,BOS,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,3400,Gino Cappelletti,1969,19691214-BOS-HOU,1969-12-14,BOS,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1970,19700920-MIA-BOS,1970-09-20,BOS,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,3400,Gino Cappelletti,1970,19701004-BAL-BOS,1970-10-04,BOS,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28660,8 +28660,8 @@ K,8024,Pete Gogolak,1964,19641011-BUF-HOU,1964-10-11,BUF,HOU,fgm_0_39;fgm_40_49;
 K,8024,Pete Gogolak,1964,19641024-NYJ-BUF,1964-10-24,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8024,Pete Gogolak,1964,19641101-HOU-BUF,1964-11-01,BUF,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8024,Pete Gogolak,1964,19641108-BUF-NYJ,1964-11-08,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,8024,Pete Gogolak,1964,19641115-BOS-BUF,1964-11-15,BUF,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,8024,Pete Gogolak,1964,19641126-BUF-SDG,1964-11-26,BUF,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,8024,Pete Gogolak,1964,19641115-BOS-BUF,1964-11-15,BUF,BOS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,8024,Pete Gogolak,1964,19641126-BUF-SDG,1964-11-26,BUF,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,8024,Pete Gogolak,1964,19641206-BUF-OAK,1964-12-06,BUF,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8024,Pete Gogolak,1964,19641213-BUF-DEN,1964-12-13,BUF,DEN,two_pt;fum_rec_td,2
 K,8024,Pete Gogolak,1964,19641220-BUF-BOS,1964-12-20,BUF,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -28766,7 +28766,7 @@ K,7390,Toni Fritsch,1972,19721008-PIT-DAL,1972-10-08,DAL,PIT,fgm_0_39;fgm_40_49;
 K,7390,Toni Fritsch,1972,19721022-DAL-WAS,1972-10-22,DAL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7390,Toni Fritsch,1972,19721105-DAL-SDG,1972-11-05,DAL,SDG,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,7390,Toni Fritsch,1972,19721112-STL-DAL,1972-11-12,DAL,STL,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
-K,7390,Toni Fritsch,1972,19721119-DAL-PHI,1972-11-19,DAL,PHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,10
+K,7390,Toni Fritsch,1972,19721119-DAL-PHI,1972-11-19,DAL,PHI,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,10
 K,7390,Toni Fritsch,1972,19721123-SFO-DAL,1972-11-23,DAL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7390,Toni Fritsch,1972,19721203-DAL-STL,1972-12-03,DAL,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,7390,Toni Fritsch,1972,19721209-WAS-DAL,1972-12-09,DAL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29172,7 +29172,7 @@ K,1847,Cary Blanchard,1995,19951119-IND-NWE,1995-11-19,IND,NWE,fgm_0_39;fgm_40_4
 K,1847,Cary Blanchard,1995,19951126-MIA-IND,1995-11-26,IND,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1847,Cary Blanchard,1995,19951203-IND-CAR,1995-12-03,IND,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1995,19951210-IND-JAX,1995-12-10,IND,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1847,Cary Blanchard,1995,19951217-SDG-IND,1995-12-17,IND,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1847,Cary Blanchard,1995,19951217-SDG-IND,1995-12-17,IND,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1847,Cary Blanchard,1995,19951223-NWE-IND,1995-12-23,IND,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19960901-ARI-IND,1996-09-01,IND,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19960915-IND-DAL,1996-09-15,IND,DAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29183,7 +29183,7 @@ K,1847,Cary Blanchard,1996,19961020-NWE-IND,1996-10-20,IND,NWE,fgm_0_39;fgm_40_4
 K,1847,Cary Blanchard,1996,19961027-IND-WAS,1996-10-27,IND,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19961103-SDG-IND,1996-11-03,IND,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19961110-IND-MIA,1996-11-10,IND,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1847,Cary Blanchard,1996,19961117-NYJ-IND,1996-11-17,IND,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,1847,Cary Blanchard,1996,19961117-NYJ-IND,1996-11-17,IND,NYJ,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,1847,Cary Blanchard,1996,19961124-IND-NWE,1996-11-24,IND,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19961201-BUF-IND,1996-12-01,IND,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1996,19961205-PHI-IND,1996-12-05,IND,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -29197,19 +29197,19 @@ K,1847,Cary Blanchard,1997,19971005-NYJ-IND,1997-10-05,IND,NYJ,fgm_0_39;fgm_40_4
 K,1847,Cary Blanchard,1997,19971012-IND-PIT,1997-10-12,IND,PIT,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971020-BUF-IND,1997-10-20,IND,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971026-IND-SDG,1997-10-26,IND,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
-K,1847,Cary Blanchard,1997,19971102-TAM-IND,1997-11-02,IND,TAM,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,1847,Cary Blanchard,1997,19971102-TAM-IND,1997-11-02,IND,TAM,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,1847,Cary Blanchard,1997,19971109-CIN-IND,1997-11-09,IND,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971116-GNB-IND,1997-11-16,IND,GNB,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,16
 K,1847,Cary Blanchard,1997,19971123-IND-DET,1997-11-23,IND,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971130-IND-NWE,1997-11-30,IND,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971207-IND-NYJ,1997-12-07,IND,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1997,19971214-MIA-IND,1997-12-14,IND,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1847,Cary Blanchard,1997,19971221-IND-MIN,1997-12-21,IND,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1847,Cary Blanchard,1997,19971221-IND-MIN,1997-12-21,IND,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1847,Cary Blanchard,1998,19980927-DEN-WAS,1998-09-27,WAS,DEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1998,19981004-DAL-WAS,1998-10-04,WAS,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1998,19981011-WAS-PHI,1998-10-11,WAS,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1998,19981108-WAS-ARI,1998-11-08,WAS,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1847,Cary Blanchard,1998,19981122-ARI-WAS,1998-11-22,WAS,ARI,two_pt;fum_rec_td,2
+K,1847,Cary Blanchard,1998,19981122-ARI-WAS,1998-11-22,WAS,ARI,xp_missed;two_pt;fum_rec_td,2
 K,1847,Cary Blanchard,1998,19981129-WAS-OAK,1998-11-29,WAS,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1847,Cary Blanchard,1998,19981206-SDG-WAS,1998-12-06,WAS,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1847,Cary Blanchard,1998,19981219-TAM-WAS,1998-12-19,WAS,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29227,7 +29227,7 @@ K,17324,Doug Pelfrey,1993,19931219-RAM-CIN,1993-12-19,CIN,RAM,fgm_0_39;fgm_40_49
 K,17324,Doug Pelfrey,1993,19940102-CIN-NOR,1994-01-02,CIN,NOR,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,17324,Doug Pelfrey,1994,19940904-CLE-CIN,1994-09-04,CIN,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19940911-CIN-SDG,1994-09-11,CIN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17324,Doug Pelfrey,1994,19940918-NWE-CIN,1994-09-18,CIN,NWE,two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1994,19940918-NWE-CIN,1994-09-18,CIN,NWE,xp_missed;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1994,19940925-CIN-HOU,1994-09-25,CIN,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19941016-CIN-PIT,1994-10-16,CIN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19941023-CIN-CLE,1994-10-23,CIN,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29236,7 +29236,7 @@ K,17324,Doug Pelfrey,1994,19941106-CIN-SEA,1994-11-06,CIN,SEA,fgm_0_39;fgm_40_49
 K,17324,Doug Pelfrey,1994,19941113-HOU-CIN,1994-11-13,CIN,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19941120-IND-CIN,1994-11-20,CIN,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19941127-CIN-DEN,1994-11-27,CIN,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17324,Doug Pelfrey,1994,19941204-PIT-CIN,1994-12-04,CIN,PIT,two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1994,19941204-PIT-CIN,1994-12-04,CIN,PIT,xp_missed;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1994,19941211-CIN-NYG,1994-12-11,CIN,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1994,19941224-PHI-CIN,1994-12-24,CIN,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1995,19950903-CIN-IND,1995-09-03,CIN,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -29246,7 +29246,7 @@ K,17324,Doug Pelfrey,1995,19951001-MIA-CIN,1995-10-01,CIN,MIA,xp_missed;fgm_0_39
 K,17324,Doug Pelfrey,1995,19951008-CIN-TAM,1995-10-08,CIN,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1995,19951019-CIN-PIT,1995-10-19,CIN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1995,19951029-CLE-CIN,1995-10-29,CIN,CLE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,17324,Doug Pelfrey,1995,19951105-OAK-CIN,1995-11-05,CIN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1995,19951105-OAK-CIN,1995-11-05,CIN,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1995,19951112-CIN-HOU,1995-11-12,CIN,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1995,19951119-PIT-CIN,1995-11-19,CIN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1995,19951126-CIN-JAX,1995-11-26,CIN,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29259,12 +29259,12 @@ K,17324,Doug Pelfrey,1996,19960915-NOR-CIN,1996-09-15,CIN,NOR,fgm_0_39;fgm_40_49
 K,17324,Doug Pelfrey,1996,19960929-DEN-CIN,1996-09-29,CIN,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1996,19961006-HOU-CIN,1996-10-06,CIN,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17324,Doug Pelfrey,1996,19961013-CIN-PIT,1996-10-13,CIN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17324,Doug Pelfrey,1996,19961103-CIN-BAL,1996-11-03,CIN,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1996,19961103-CIN-BAL,1996-11-03,CIN,BAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1996,19961110-PIT-CIN,1996-11-10,CIN,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1996,19961117-CIN-BUF,1996-11-17,CIN,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17324,Doug Pelfrey,1996,19961124-ATL-CIN,1996-11-24,CIN,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1996,19961201-CIN-JAX,1996-12-01,CIN,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17324,Doug Pelfrey,1996,19961208-BAL-CIN,1996-12-08,CIN,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1996,19961208-BAL-CIN,1996-12-08,CIN,BAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1996,19961215-CIN-HOU,1996-12-15,CIN,HOU,two_pt;fum_rec_td,6
 K,17324,Doug Pelfrey,1996,19961222-IND-CIN,1996-12-22,CIN,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1997,19970831-ARI-CIN,1997-08-31,CIN,ARI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
@@ -29284,7 +29284,7 @@ K,17324,Doug Pelfrey,1998,19980927-CIN-BAL,1998-09-27,CIN,BAL,fgm_0_39;fgm_40_49
 K,17324,Doug Pelfrey,1998,19981011-PIT-CIN,1998-10-11,CIN,PIT,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1998,19981025-CIN-OAK,1998-10-25,CIN,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1998,19981101-DEN-CIN,1998-11-01,CIN,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
-K,17324,Doug Pelfrey,1998,19981108-CIN-JAX,1998-11-08,CIN,JAX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17324,Doug Pelfrey,1998,19981108-CIN-JAX,1998-11-08,CIN,JAX,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17324,Doug Pelfrey,1998,19981115-CIN-MIN,1998-11-15,CIN,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1998,19981122-BAL-CIN,1998-11-22,CIN,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17324,Doug Pelfrey,1998,19981129-JAX-CIN,1998-11-29,CIN,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29494,18 +29494,18 @@ K,10088,Mike Hollis,1995,19951119-JAX-TAM,1995-11-19,JAX,TAM,xp_missed;fgm_0_39;
 K,10088,Mike Hollis,1995,19951126-CIN-JAX,1995-11-26,JAX,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1995,19951203-JAX-DEN,1995-12-03,JAX,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,10088,Mike Hollis,1995,19951210-IND-JAX,1995-12-10,JAX,IND,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1995,19951224-CLE-JAX,1995-12-24,JAX,CLE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1995,19951224-CLE-JAX,1995-12-24,JAX,CLE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1996,19960901-PIT-JAX,1996-09-01,JAX,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1996,19960908-HOU-JAX,1996-09-08,JAX,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1996,19960915-JAX-OAK,1996-09-15,JAX,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1996,19960922-JAX-NWE,1996-09-22,JAX,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1996,19960922-JAX-NWE,1996-09-22,JAX,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1996,19960929-CAR-JAX,1996-09-29,JAX,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1996,19961006-JAX-NOR,1996-10-06,JAX,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1996,19961013-NYJ-JAX,1996-10-13,JAX,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1996,19961013-NYJ-JAX,1996-10-13,JAX,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1996,19961110-BAL-JAX,1996-11-10,JAX,BAL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1996,19961117-JAX-PIT,1996-11-17,JAX,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1996,19961124-JAX-BAL,1996-11-24,JAX,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,10088,Mike Hollis,1996,19961201-CIN-JAX,1996-12-01,JAX,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,10088,Mike Hollis,1996,19961124-JAX-BAL,1996-11-24,JAX,BAL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1996,19961201-CIN-JAX,1996-12-01,JAX,CIN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,10088,Mike Hollis,1996,19961208-JAX-HOU,1996-12-08,JAX,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1996,19961215-SEA-JAX,1996-12-15,JAX,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1996,19961222-ATL-JAX,1996-12-22,JAX,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29513,7 +29513,7 @@ K,10088,Mike Hollis,1997,19970907-NYG-JAX,1997-09-07,JAX,NYG,fgm_0_39;fgm_40_49;
 K,10088,Mike Hollis,1997,19970922-PIT-JAX,1997-09-22,JAX,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10088,Mike Hollis,1997,19970928-JAX-WAS,1997-09-28,JAX,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1997,19971012-PHI-JAX,1997-10-12,JAX,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1997,19971019-JAX-DAL,1997-10-19,JAX,DAL,two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1997,19971019-JAX-DAL,1997-10-19,JAX,DAL,xp_missed;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1997,19971026-JAX-PIT,1997-10-26,JAX,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1997,19971102-JAX-TEN,1997-11-02,JAX,TEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10088,Mike Hollis,1997,19971109-KAN-JAX,1997-11-09,JAX,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29531,7 +29531,7 @@ K,10088,Mike Hollis,1998,19981025-JAX-DEN,1998-10-25,JAX,DEN,fgm_0_39;fgm_40_49;
 K,10088,Mike Hollis,1998,19981101-JAX-BAL,1998-11-01,JAX,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,10088,Mike Hollis,1998,19981108-CIN-JAX,1998-11-08,JAX,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,10088,Mike Hollis,1998,19981115-TAM-JAX,1998-11-15,JAX,TAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,10088,Mike Hollis,1998,19981122-JAX-PIT,1998-11-22,JAX,PIT,two_pt;fum_rec_td,2
+K,10088,Mike Hollis,1998,19981122-JAX-PIT,1998-11-22,JAX,PIT,xp_missed;two_pt;fum_rec_td,2
 K,10088,Mike Hollis,1998,19981129-JAX-CIN,1998-11-29,JAX,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1998,19981206-DET-JAX,1998-12-06,JAX,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10088,Mike Hollis,1998,19981213-TEN-JAX,1998-12-13,JAX,TEN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29559,7 +29559,7 @@ K,16552,Scott Norwood,1986,19861130-BUF-KAN,1986-11-30,BUF,KAN,fgm_0_39;fgm_40_4
 K,16552,Scott Norwood,1986,19861207-CLE-BUF,1986-12-07,BUF,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16552,Scott Norwood,1987,19870920-HOU-BUF,1987-09-20,BUF,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16552,Scott Norwood,1987,19871025-BUF-MIA,1987-10-25,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,16552,Scott Norwood,1987,19871108-DEN-BUF,1987-11-08,BUF,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,4
+K,16552,Scott Norwood,1987,19871108-DEN-BUF,1987-11-08,BUF,DEN,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,4
 K,16552,Scott Norwood,1987,19871115-BUF-CLE,1987-11-15,BUF,CLE,fum_rec_td,6
 K,16552,Scott Norwood,1987,19871122-BUF-NYJ,1987-11-22,BUF,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,16552,Scott Norwood,1987,19871129-MIA-BUF,1987-11-29,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29694,7 +29694,7 @@ K,4167,Mike Cofer,1993,19931122-NOR-SFO,1993-11-22,SFO,NOR,fum_rec_td,6
 K,4167,Mike Cofer,1993,19931211-SFO-ATL,1993-12-11,SFO,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,4167,Mike Cofer,1993,19931219-SFO-DET,1993-12-19,SFO,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,4167,Mike Cofer,1993,19940103-PHI-SFO,1994-01-03,SFO,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,4167,Mike Cofer,1995,19950903-CIN-IND,1995-09-03,IND,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,4167,Mike Cofer,1995,19950903-CIN-IND,1995-09-03,IND,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,4167,Mike Cofer,1995,19950910-IND-NYJ,1995-09-10,IND,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,22493,David Treadwell,1989,19890910-KAN-DEN,1989-09-10,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,12
 K,22493,David Treadwell,1989,19890918-DEN-BUF,1989-09-18,DEN,BUF,fgm_0_39;fgm_40_49;fgm_50p,2
@@ -29766,7 +29766,7 @@ K,22493,David Treadwell,1994,19941002-NYG-NOR,1994-10-02,NYG,NOR,xp_missed;fgm_0
 K,22493,David Treadwell,1994,19941010-MIN-NYG,1994-10-10,NYG,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22493,David Treadwell,1994,19941016-NYG-RAM,1994-10-16,NYG,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22493,David Treadwell,1994,19941023-PIT-NYG,1994-10-23,NYG,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22493,David Treadwell,1994,19941030-DET-NYG,1994-10-30,NYG,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22493,David Treadwell,1994,19941030-DET-NYG,1994-10-30,NYG,DET,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22493,David Treadwell,1994,19941107-NYG-DAL,1994-11-07,NYG,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22493,David Treadwell,1994,19941113-ARI-NYG,1994-11-13,NYG,ARI,two_pt;fum_rec_td,2
 K,22493,David Treadwell,1994,19941121-NYG-HOU,1994-11-21,NYG,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29968,9 +29968,9 @@ K,1992,Chris Boniol,1996,19960908-NYG-DAL,1996-09-08,DAL,NYG,fgm_0_39;fgm_40_49;
 K,1992,Chris Boniol,1996,19960915-IND-DAL,1996-09-15,DAL,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,1992,Chris Boniol,1996,19960930-DAL-PHI,1996-09-30,DAL,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1996,19961013-ARI-DAL,1996-10-13,DAL,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1992,Chris Boniol,1996,19961020-ATL-DAL,1996-10-20,DAL,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1992,Chris Boniol,1996,19961020-ATL-DAL,1996-10-20,DAL,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1992,Chris Boniol,1996,19961027-DAL-MIA,1996-10-27,DAL,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1992,Chris Boniol,1996,19961103-PHI-DAL,1996-11-03,DAL,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1992,Chris Boniol,1996,19961103-PHI-DAL,1996-11-03,DAL,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1992,Chris Boniol,1996,19961110-DAL-SFO,1996-11-10,DAL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1996,19961118-GNB-DAL,1996-11-18,DAL,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1996,19961124-DAL-NYG,1996-11-24,DAL,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -29990,7 +29990,7 @@ K,1992,Chris Boniol,1997,19971123-PIT-PHI,1997-11-23,PHI,PIT,fgm_0_39;fgm_40_49;
 K,1992,Chris Boniol,1997,19971130-CIN-PHI,1997-11-30,PHI,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1997,19971207-NYG-PHI,1997-12-07,PHI,NYG,two_pt;fum_rec_td,6
 K,1992,Chris Boniol,1997,19971214-PHI-ATL,1997-12-14,PHI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1992,Chris Boniol,1997,19971221-PHI-WAS,1997-12-21,PHI,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1992,Chris Boniol,1997,19971221-PHI-WAS,1997-12-21,PHI,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1992,Chris Boniol,1998,19980913-PHI-ATL,1998-09-13,PHI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1998,19980920-PHI-ARI,1998-09-20,PHI,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1992,Chris Boniol,1998,19981004-PHI-DEN,1998-10-04,PHI,DEN,two_pt;fum_rec_td,2
@@ -30019,11 +30019,11 @@ K,10560,Michael Husted,1994,19940911-IND-TAM,1994-09-11,TAM,IND,fgm_0_39;fgm_40_
 K,10560,Michael Husted,1994,19940925-TAM-GNB,1994-09-25,TAM,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1994,19941002-DET-TAM,1994-10-02,TAM,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1994,19941009-TAM-ATL,1994-10-09,TAM,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10560,Michael Husted,1994,19941023-TAM-SFO,1994-10-23,TAM,SFO,two_pt;fum_rec_td,4
+K,10560,Michael Husted,1994,19941023-TAM-SFO,1994-10-23,TAM,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,10560,Michael Husted,1994,19941030-MIN-TAM,1994-10-30,TAM,MIN,xp_missed,0
 K,10560,Michael Husted,1994,19941106-CHI-TAM,1994-11-06,TAM,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1994,19941113-TAM-DET,1994-11-13,TAM,DET,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10560,Michael Husted,1994,19941120-TAM-SEA,1994-11-20,TAM,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10560,Michael Husted,1994,19941120-TAM-SEA,1994-11-20,TAM,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10560,Michael Husted,1994,19941127-TAM-MIN,1994-11-27,TAM,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1994,19941204-WAS-TAM,1994-12-04,TAM,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1994,19941211-RAM-TAM,1994-12-11,TAM,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -30052,7 +30052,7 @@ K,10560,Michael Husted,1996,19961103-TAM-CHI,1996-11-03,TAM,CHI,fgm_0_39;fgm_40_
 K,10560,Michael Husted,1996,19961110-OAK-TAM,1996-11-10,TAM,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1996,19961117-TAM-SDG,1996-11-17,TAM,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1996,19961124-NOR-TAM,1996-11-24,TAM,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10560,Michael Husted,1996,19961208-WAS-TAM,1996-12-08,TAM,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10560,Michael Husted,1996,19961208-WAS-TAM,1996-12-08,TAM,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10560,Michael Husted,1996,19961215-TAM-MIN,1996-12-15,TAM,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1996,19961222-CHI-TAM,1996-12-22,TAM,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1997,19970831-SFO-TAM,1997-08-31,TAM,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -30067,7 +30067,7 @@ K,10560,Michael Husted,1997,19971116-NWE-TAM,1997-11-16,TAM,NWE,fgm_0_39;fgm_40_
 K,10560,Michael Husted,1997,19971130-TAM-NYG,1997-11-30,TAM,NYG,xp_missed,0
 K,10560,Michael Husted,1997,19971207-GNB-TAM,1997-12-07,TAM,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1997,19971221-CHI-TAM,1997-12-21,TAM,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10560,Michael Husted,1998,19980913-TAM-GNB,1998-09-13,TAM,GNB,two_pt;fum_rec_td,2
+K,10560,Michael Husted,1998,19980913-TAM-GNB,1998-09-13,TAM,GNB,xp_missed;two_pt;fum_rec_td,2
 K,10560,Michael Husted,1998,19980920-CHI-TAM,1998-09-20,TAM,CHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,2
 K,10560,Michael Husted,1998,19980928-TAM-DET,1998-09-28,TAM,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1998,19981004-NYG-TAM,1998-10-04,TAM,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -30076,7 +30076,7 @@ K,10560,Michael Husted,1998,19981025-TAM-NOR,1998-10-25,TAM,NOR,fgm_0_39;fgm_40_
 K,10560,Michael Husted,1998,19981101-MIN-TAM,1998-11-01,TAM,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1998,19981108-TEN-TAM,1998-11-08,TAM,TEN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1998,19981115-TAM-JAX,1998-11-15,TAM,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,10560,Michael Husted,1998,19981122-DET-TAM,1998-11-22,TAM,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,10560,Michael Husted,1998,19981122-DET-TAM,1998-11-22,TAM,DET,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,10560,Michael Husted,1998,19981129-TAM-CHI,1998-11-29,TAM,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1998,19981207-GNB-TAM,1998-12-07,TAM,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,10560,Michael Husted,1998,19981213-PIT-TAM,1998-12-13,TAM,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -30124,7 +30124,7 @@ K,5046,Joe Danelo,1979,19790902-NYG-PHI,1979-09-02,NYG,PHI,fgm_0_39;fgm_40_49;fg
 K,5046,Joe Danelo,1979,19790909-STL-NYG,1979-09-09,NYG,STL,fum_rec_td,6
 K,5046,Joe Danelo,1979,19790923-PHI-NYG,1979-09-23,NYG,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5046,Joe Danelo,1979,19791007-TAM-NYG,1979-10-07,NYG,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5046,Joe Danelo,1979,19791014-SFO-NYG,1979-10-14,NYG,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,5046,Joe Danelo,1979,19791014-SFO-NYG,1979-10-14,NYG,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,5046,Joe Danelo,1979,19791021-NYG-KAN,1979-10-21,NYG,KAN,fum_rec_td,6
 K,5046,Joe Danelo,1979,19791028-NYG-RAM,1979-10-28,NYG,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5046,Joe Danelo,1979,19791111-ATL-NYG,1979-11-11,NYG,ATL,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
@@ -30276,16 +30276,16 @@ K,17485,Todd Peterson,1996,19960908-DEN-SEA,1996-09-08,SEA,DEN,fgm_0_39;fgm_40_4
 K,17485,Todd Peterson,1996,19960915-KAN-SEA,1996-09-15,SEA,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1996,19960922-SEA-TAM,1996-09-22,SEA,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1996,19960929-GNB-SEA,1996-09-29,SEA,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1996,19961006-SEA-MIA,1996-10-06,SEA,MIA,two_pt;fum_rec_td,2
+K,17485,Todd Peterson,1996,19961006-SEA-MIA,1996-10-06,SEA,MIA,xp_missed;two_pt;fum_rec_td,2
 K,17485,Todd Peterson,1996,19961017-SEA-KAN,1996-10-17,SEA,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1996,19961027-SDG-SEA,1996-10-27,SEA,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1996,19961103-HOU-SEA,1996-11-03,SEA,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,17485,Todd Peterson,1996,19961110-MIN-SEA,1996-11-10,SEA,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17485,Todd Peterson,1996,19961110-MIN-SEA,1996-11-10,SEA,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17485,Todd Peterson,1996,19961117-SEA-DET,1996-11-17,SEA,DET,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1996,19961124-OAK-SEA,1996-11-24,SEA,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17485,Todd Peterson,1996,19961124-OAK-SEA,1996-11-24,SEA,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17485,Todd Peterson,1996,19961208-BUF-SEA,1996-12-08,SEA,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1996,19961215-SEA-JAX,1996-12-15,SEA,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1996,19961222-SEA-OAK,1996-12-22,SEA,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17485,Todd Peterson,1996,19961222-SEA-OAK,1996-12-22,SEA,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17485,Todd Peterson,1997,19970831-NYJ-SEA,1997-08-31,SEA,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1997,19970907-DEN-SEA,1997-09-07,SEA,DEN,two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1997,19970914-SEA-IND,1997-09-14,SEA,IND,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -30298,7 +30298,7 @@ K,17485,Todd Peterson,1997,19971102-SEA-DEN,1997-11-02,SEA,DEN,fgm_0_39;fgm_40_4
 K,17485,Todd Peterson,1997,19971109-SEA-SDG,1997-11-09,SEA,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1997,19971116-SEA-NOR,1997-11-16,SEA,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1997,19971130-ATL-SEA,1997-11-30,SEA,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1997,19971207-SEA-BAL,1997-12-07,SEA,BAL,two_pt;fum_rec_td,10
+K,17485,Todd Peterson,1997,19971207-SEA-BAL,1997-12-07,SEA,BAL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,10
 K,17485,Todd Peterson,1997,19971214-SEA-OAK,1997-12-14,SEA,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1997,19971221-SFO-SEA,1997-12-21,SEA,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1998,19980906-SEA-PHI,1998-09-06,SEA,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -30308,10 +30308,10 @@ K,17485,Todd Peterson,1998,19980927-SEA-PIT,1998-09-27,SEA,PIT,fgm_0_39;fgm_40_4
 K,17485,Todd Peterson,1998,19981004-SEA-KAN,1998-10-04,SEA,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1998,19981011-DEN-SEA,1998-10-11,SEA,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1998,19981025-SEA-SDG,1998-10-25,SEA,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1998,19981101-OAK-SEA,1998-11-01,SEA,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,17485,Todd Peterson,1998,19981101-OAK-SEA,1998-11-01,SEA,OAK,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17485,Todd Peterson,1998,19981108-KAN-SEA,1998-11-08,SEA,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1998,19981115-SEA-OAK,1998-11-15,SEA,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17485,Todd Peterson,1998,19981122-SEA-DAL,1998-11-22,SEA,DAL,two_pt;fum_rec_td,8
+K,17485,Todd Peterson,1998,19981122-SEA-DAL,1998-11-22,SEA,DAL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,17485,Todd Peterson,1998,19981129-TEN-SEA,1998-11-29,SEA,TEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17485,Todd Peterson,1998,19981206-SEA-NYJ,1998-12-06,SEA,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17485,Todd Peterson,1998,19981213-SDG-SEA,1998-12-13,SEA,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
@@ -30503,12 +30503,12 @@ K,2380,Doug Brien,1994,19940905-RAI-SFO,1994-09-05,SFO,RAI,fgm_0_39;fgm_40_49;fg
 K,2380,Doug Brien,1994,19940911-SFO-KAN,1994-09-11,SFO,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1994,19940918-SFO-RAM,1994-09-18,SFO,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1994,19940925-NOR-SFO,1994-09-25,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,2380,Doug Brien,1994,19941002-PHI-SFO,1994-10-02,SFO,PHI,two_pt;fum_rec_td,2
+K,2380,Doug Brien,1994,19941002-PHI-SFO,1994-10-02,SFO,PHI,xp_missed;two_pt;fum_rec_td,2
 K,2380,Doug Brien,1994,19941016-SFO-ATL,1994-10-16,SFO,ATL,two_pt;fum_rec_td,12
 K,2380,Doug Brien,1994,19941023-TAM-SFO,1994-10-23,SFO,TAM,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1994,19941106-SFO-WAS,1994-11-06,SFO,WAS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,2380,Doug Brien,1994,19941120-RAM-SFO,1994-11-20,SFO,RAM,fgm_0_39;fgm_40_49;fgm_50p,0
-K,2380,Doug Brien,1994,19941128-SFO-NOR,1994-11-28,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,2380,Doug Brien,1994,19941128-SFO-NOR,1994-11-28,SFO,NOR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,2380,Doug Brien,1994,19941204-ATL-SFO,1994-12-04,SFO,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1994,19941211-SFO-SDG,1994-12-11,SFO,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,2380,Doug Brien,1995,19950903-SFO-NOR,1995-09-03,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -30523,7 +30523,7 @@ K,2380,Doug Brien,1995,19951126-CAR-NOR,1995-11-26,NOR,CAR,fgm_0_39;fgm_40_49;fg
 K,2380,Doug Brien,1995,19951203-NOR-NWE,1995-12-03,NOR,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1995,19951216-GNB-NOR,1995-12-16,NOR,GNB,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1995,19951224-NOR-NYJ,1995-12-24,NOR,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
-K,2380,Doug Brien,1996,19960901-NOR-SFO,1996-09-01,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,2380,Doug Brien,1996,19960901-NOR-SFO,1996-09-01,NOR,SFO,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,2380,Doug Brien,1996,19960908-CAR-NOR,1996-09-08,NOR,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19960915-NOR-CIN,1996-09-15,NOR,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19960922-ARI-NOR,1996-09-22,NOR,ARI,two_pt;fum_rec_td,6
@@ -30531,13 +30531,13 @@ K,2380,Doug Brien,1996,19960929-NOR-BAL,1996-09-29,NOR,BAL,fgm_0_39;fgm_40_49;fg
 K,2380,Doug Brien,1996,19961006-JAX-NOR,1996-10-06,NOR,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961013-CHI-NOR,1996-10-13,NOR,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961103-SFO-NOR,1996-11-03,NOR,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,2380,Doug Brien,1996,19961110-HOU-NOR,1996-11-10,NOR,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,2380,Doug Brien,1996,19961110-HOU-NOR,1996-11-10,NOR,HOU,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,2380,Doug Brien,1996,19961117-NOR-ATL,1996-11-17,NOR,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961201-STL-NOR,1996-12-01,NOR,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961208-ATL-NOR,1996-12-08,NOR,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961215-NOR-NYG,1996-12-15,NOR,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1996,19961221-NOR-STL,1996-12-21,NOR,STL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,2380,Doug Brien,1997,19970831-NOR-STL,1997-08-31,NOR,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,2380,Doug Brien,1997,19970831-NOR-STL,1997-08-31,NOR,STL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,2380,Doug Brien,1997,19970907-SDG-NOR,1997-09-07,NOR,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1997,19970928-NOR-NYG,1997-09-28,NOR,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,2380,Doug Brien,1997,19971005-NOR-CHI,1997-10-05,NOR,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -30929,7 +30929,7 @@ K,15238,Nick Mike-Mayer,1981,19810927-BUF-CIN,1981-09-27,BUF,CIN,fgm_0_39;fgm_40
 K,15238,Nick Mike-Mayer,1981,19811004-BAL-BUF,1981-10-04,BUF,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15238,Nick Mike-Mayer,1981,19811012-MIA-BUF,1981-10-12,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15238,Nick Mike-Mayer,1981,19811025-DEN-BUF,1981-10-25,BUF,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15238,Nick Mike-Mayer,1981,19811101-CLE-BUF,1981-11-01,BUF,CLE,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,15238,Nick Mike-Mayer,1981,19811101-CLE-BUF,1981-11-01,BUF,CLE,xp_missed;fum_rec_td,2
 K,15238,Nick Mike-Mayer,1981,19811122-NWE-BUF,1981-11-22,BUF,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15238,Nick Mike-Mayer,1981,19811213-BUF-NWE,1981-12-13,BUF,NWE,fgm_0_39;fgm_40_49;fgm_50p,2
 K,15238,Nick Mike-Mayer,1981,19811219-BUF-MIA,1981-12-19,BUF,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31068,14 +31068,14 @@ K,13677,Mick Luckhurst,1987,19871206-ATL-DAL,1987-12-06,ATL,DAL,fum_rec_td,6
 K,13677,Mick Luckhurst,1987,19871227-DET-ATL,1987-12-27,ATL,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1996,19960901-NWE-MIA,1996-09-01,NWE,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1996,19960908-NWE-BUF,1996-09-08,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22951,Adam Vinatieri,1996,19960915-ARI-NWE,1996-09-15,NWE,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22951,Adam Vinatieri,1996,19960915-ARI-NWE,1996-09-15,NWE,ARI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22951,Adam Vinatieri,1996,19960922-JAX-NWE,1996-09-22,NWE,JAX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22951,Adam Vinatieri,1996,19961006-NWE-BAL,1996-10-06,NWE,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,10
+K,22951,Adam Vinatieri,1996,19961006-NWE-BAL,1996-10-06,NWE,BAL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,10
 K,22951,Adam Vinatieri,1996,19961013-WAS-NWE,1996-10-13,NWE,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1996,19961020-NWE-IND,1996-10-20,NWE,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1996,19961027-BUF-NWE,1996-10-27,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
 K,22951,Adam Vinatieri,1996,19961110-NWE-NYJ,1996-11-10,NWE,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22951,Adam Vinatieri,1996,19961117-DEN-NWE,1996-11-17,NWE,DEN,two_pt;fum_rec_td,2
+K,22951,Adam Vinatieri,1996,19961117-DEN-NWE,1996-11-17,NWE,DEN,xp_missed;two_pt;fum_rec_td,2
 K,22951,Adam Vinatieri,1996,19961124-IND-NWE,1996-11-24,NWE,IND,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1996,19961201-NWE-SDG,1996-12-01,NWE,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
 K,22951,Adam Vinatieri,1996,19961208-NYJ-NWE,1996-12-08,NWE,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -31102,7 +31102,7 @@ K,22951,Adam Vinatieri,1998,19981025-NWE-MIA,1998-10-25,NWE,MIA,fgm_0_39;fgm_40_
 K,22951,Adam Vinatieri,1998,19981108-ATL-NWE,1998-11-08,NWE,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1998,19981115-NWE-BUF,1998-11-15,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1998,19981123-MIA-NWE,1998-11-23,NWE,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22951,Adam Vinatieri,1998,19981129-BUF-NWE,1998-11-29,NWE,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22951,Adam Vinatieri,1998,19981129-BUF-NWE,1998-11-29,NWE,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22951,Adam Vinatieri,1998,19981206-NWE-PIT,1998-12-06,NWE,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1998,19981213-NWE-STL,1998-12-13,NWE,STL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22951,Adam Vinatieri,1998,19981220-SFO-NWE,1998-12-20,NWE,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31197,7 +31197,7 @@ K,5040,Brad Daluiso,1993,19931128-PHO-NYG,1993-11-28,NYG,PHO,fgm_0_39;fgm_40_49;
 K,5040,Brad Daluiso,1993,19931212-IND-NYG,1993-12-12,NYG,IND,xp_missed,0
 K,5040,Brad Daluiso,1994,19941002-NYG-NOR,1994-10-02,NYG,NOR,xp_missed,0
 K,5040,Brad Daluiso,1994,19941023-PIT-NYG,1994-10-23,NYG,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5040,Brad Daluiso,1994,19941030-DET-NYG,1994-10-30,NYG,DET,two_pt;fum_rec_td,2
+K,5040,Brad Daluiso,1994,19941030-DET-NYG,1994-10-30,NYG,DET,xp_missed;two_pt;fum_rec_td,2
 K,5040,Brad Daluiso,1994,19941113-ARI-NYG,1994-11-13,NYG,ARI,two_pt;fum_rec_td,2
 K,5040,Brad Daluiso,1994,19941204-NYG-CLE,1994-12-04,NYG,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1994,19941211-CIN-NYG,1994-12-11,NYG,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31208,7 +31208,7 @@ K,5040,Brad Daluiso,1995,19950917-NYG-GNB,1995-09-17,NYG,GNB,fgm_0_39;fgm_40_49;
 K,5040,Brad Daluiso,1995,19950924-NOR-NYG,1995-09-24,NYG,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1995,19951001-NYG-SFO,1995-10-01,NYG,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1995,19951008-ARI-NYG,1995-10-08,NYG,ARI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
-K,5040,Brad Daluiso,1995,19951015-PHI-NYG,1995-10-15,NYG,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,5040,Brad Daluiso,1995,19951015-PHI-NYG,1995-10-15,NYG,PHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,5040,Brad Daluiso,1995,19951029-NYG-WAS,1995-10-29,NYG,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,5040,Brad Daluiso,1995,19951105-NYG-SEA,1995-11-05,NYG,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1995,19951112-OAK-NYG,1995-11-12,NYG,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31223,7 +31223,7 @@ K,5040,Brad Daluiso,1996,19960915-WAS-NYG,1996-09-15,NYG,WAS,fgm_0_39;fgm_40_49;
 K,5040,Brad Daluiso,1996,19960922-NYG-NYJ,1996-09-22,NYG,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1996,19960929-MIN-NYG,1996-09-29,NYG,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1996,19961013-PHI-NYG,1996-10-13,NYG,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,5040,Brad Daluiso,1996,19961027-NYG-DET,1996-10-27,NYG,DET,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,14
+K,5040,Brad Daluiso,1996,19961027-NYG-DET,1996-10-27,NYG,DET,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,14
 K,5040,Brad Daluiso,1996,19961103-ARI-NYG,1996-11-03,NYG,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1996,19961110-NYG-CAR,1996-11-10,NYG,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,5040,Brad Daluiso,1996,19961117-NYG-ARI,1996-11-17,NYG,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31326,9 +31326,9 @@ K,15421,Gene Mingo,1960,19601120-DEN-HOU,1960-11-20,DEN,HOU,fgm_0_39;fgm_40_49;f
 K,15421,Gene Mingo,1960,19601127-BUF-DEN,1960-11-27,DEN,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1960,19601210-DEN-LAC,1960-12-10,DEN,LAC,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1960,19601217-DEN-OAK,1960-12-17,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15421,Gene Mingo,1961,19610910-DEN-BUF,1961-09-10,DEN,BUF,two_pt;fum_rec_td,2
+K,15421,Gene Mingo,1961,19610910-DEN-BUF,1961-09-10,DEN,BUF,xp_missed;two_pt;fum_rec_td,2
 K,15421,Gene Mingo,1961,19610916-DEN-BOS,1961-09-16,DEN,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15421,Gene Mingo,1961,19611001-DEN-OAK,1961-10-01,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
+K,15421,Gene Mingo,1961,19611001-DEN-OAK,1961-10-01,DEN,OAK,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,15421,Gene Mingo,1961,19611008-DTX-DEN,1961-10-08,DEN,DTX,xp_missed,0
 K,15421,Gene Mingo,1961,19611112-SDG-DEN,1961-11-12,DEN,SDG,two_pt;fum_rec_td,2
 K,15421,Gene Mingo,1961,19611203-BOS-DEN,1961-12-03,DEN,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31344,7 +31344,7 @@ K,15421,Gene Mingo,1962,19621028-BUF-DEN,1962-10-28,DEN,BUF,fgm_0_39;fgm_40_49;f
 K,15421,Gene Mingo,1962,19621104-DEN-SDG,1962-11-04,DEN,SDG,two_pt;fum_rec_td,2
 K,15421,Gene Mingo,1962,19621111-BOS-DEN,1962-11-11,DEN,BOS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1962,19621118-DTX-DEN,1962-11-18,DEN,DTX,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15421,Gene Mingo,1962,19621122-NYT-DEN,1962-11-22,DEN,NYT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,14
+K,15421,Gene Mingo,1962,19621122-NYT-DEN,1962-11-22,DEN,NYT,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,14
 K,15421,Gene Mingo,1962,19621202-DEN-HOU,1962-12-02,DEN,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1962,19621209-DEN-DTX,1962-12-09,DEN,DTX,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,15421,Gene Mingo,1963,19631006-SDG-DEN,1963-10-06,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
@@ -31352,7 +31352,7 @@ K,15421,Gene Mingo,1963,19631013-HOU-DEN,1963-10-13,DEN,HOU,fgm_0_39;fgm_40_49;f
 K,15421,Gene Mingo,1963,19631109-DEN-BUF,1963-11-09,DEN,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1963,19631117-NYJ-DEN,1963-11-17,DEN,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1963,19631128-OAK-DEN,1963-11-28,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15421,Gene Mingo,1963,19631208-DEN-KAN,1963-12-08,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,15421,Gene Mingo,1963,19631208-DEN-KAN,1963-12-08,DEN,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,15421,Gene Mingo,1963,19631215-DEN-OAK,1963-12-15,DEN,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1963,19631222-DEN-SDG,1963-12-22,DEN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1964,19640912-DEN-NYJ,1964-09-12,DEN,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31360,8 +31360,8 @@ K,15421,Gene Mingo,1964,19640920-DEN-BUF,1964-09-20,DEN,BUF,fgm_0_39;fgm_40_49;f
 K,15421,Gene Mingo,1964,19640927-HOU-DEN,1964-09-27,DEN,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1964,19641004-BOS-DEN,1964-10-04,DEN,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1964,19641011-KAN-DEN,1964-10-11,DEN,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15421,Gene Mingo,1964,19641101-DEN-KAN,1964-11-01,DEN,KAN,two_pt;fum_rec_td,14
-K,15421,Gene Mingo,1964,19641108-SDG-DEN,1964-11-08,DEN,SDG,two_pt;fum_rec_td,10
+K,15421,Gene Mingo,1964,19641101-DEN-KAN,1964-11-01,DEN,KAN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,14
+K,15421,Gene Mingo,1964,19641108-SDG-DEN,1964-11-08,DEN,SDG,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,10
 K,15421,Gene Mingo,1965,19650912-KAN-OAK,1965-09-12,OAK,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1965,19650919-SDG-OAK,1965-09-19,OAK,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1965,19651003-OAK-BUF,1965-10-03,OAK,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
@@ -31378,8 +31378,8 @@ K,15421,Gene Mingo,1966,19661023-MIA-HOU,1966-10-23,MIA,HOU,fgm_0_39;fgm_40_49;f
 K,15421,Gene Mingo,1966,19661113-MIA-KAN,1966-11-13,MIA,KAN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,15421,Gene Mingo,1966,19661120-MIA-NYJ,1966-11-20,MIA,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1966,19661204-MIA-DEN,1966-12-04,MIA,DEN,two_pt;fum_rec_td,6
-K,15421,Gene Mingo,1966,19661211-KAN-MIA,1966-12-11,MIA,KAN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,15421,Gene Mingo,1966,19661218-HOU-MIA,1966-12-18,MIA,HOU,two_pt;fum_rec_td,2
+K,15421,Gene Mingo,1966,19661211-KAN-MIA,1966-12-11,MIA,KAN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,15421,Gene Mingo,1966,19661218-HOU-MIA,1966-12-18,MIA,HOU,xp_missed;two_pt;fum_rec_td,2
 K,15421,Gene Mingo,1967,19671015-MIA-BOS,1967-10-15,MIA,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1967,19671029-BAL-WAS,1967-10-29,WAS,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15421,Gene Mingo,1967,19671105-STL-WAS,1967-11-05,WAS,STL,fum_rec_td,6
@@ -31405,20 +31405,20 @@ K,23954,Jeff Wilkins,1995,19951120-SFO-MIA,1995-11-20,SFO,MIA,fgm_0_39;fgm_40_49
 K,23954,Jeff Wilkins,1995,19951126-STL-SFO,1995-11-26,SFO,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,23954,Jeff Wilkins,1995,19951203-BUF-SFO,1995-12-03,SFO,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,23954,Jeff Wilkins,1995,19951210-SFO-CAR,1995-12-10,SFO,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1995,19951218-MIN-SFO,1995-12-18,SFO,MIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1995,19951218-MIN-SFO,1995-12-18,SFO,MIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,23954,Jeff Wilkins,1995,19951224-SFO-ATL,1995-12-24,SFO,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,23954,Jeff Wilkins,1996,19960901-NOR-SFO,1996-09-01,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1996,19960908-STL-SFO,1996-09-08,SFO,STL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,4
 K,23954,Jeff Wilkins,1996,19960929-ATL-SFO,1996-09-29,SFO,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,23954,Jeff Wilkins,1996,19961014-SFO-GNB,1996-10-14,SFO,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1996,19961027-SFO-HOU,1996-10-27,SFO,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1996,19961103-SFO-NOR,1996-11-03,SFO,NOR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1996,19961103-SFO-NOR,1996-11-03,SFO,NOR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,23954,Jeff Wilkins,1996,19961110-DAL-SFO,1996-11-10,SFO,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1996,19961117-BAL-SFO,1996-11-17,SFO,BAL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,23954,Jeff Wilkins,1996,19961124-SFO-WAS,1996-11-24,SFO,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1996,19961202-SFO-ATL,1996-12-02,SFO,ATL,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1996,19961202-SFO-ATL,1996-12-02,SFO,ATL,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,23954,Jeff Wilkins,1996,19961208-CAR-SFO,1996-12-08,SFO,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1996,19961215-SFO-PIT,1996-12-15,SFO,PIT,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1996,19961215-SFO-PIT,1996-12-15,SFO,PIT,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,23954,Jeff Wilkins,1996,19961223-DET-SFO,1996-12-23,SFO,DET,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1997,19970831-NOR-STL,1997-08-31,STL,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1997,19970907-SFO-STL,1997-09-07,STL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31439,13 +31439,13 @@ K,23954,Jeff Wilkins,1998,19980920-STL-BUF,1998-09-20,STL,BUF,xpm;xp_missed;fgm_
 K,23954,Jeff Wilkins,1998,19980927-ARI-STL,1998-09-27,STL,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981011-NYJ-STL,1998-10-11,STL,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981025-SFO-STL,1998-10-25,STL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1998,19981101-STL-ATL,1998-11-01,STL,ATL,two_pt;fum_rec_td,8
+K,23954,Jeff Wilkins,1998,19981101-STL-ATL,1998-11-01,STL,ATL,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,23954,Jeff Wilkins,1998,19981108-STL-CHI,1998-11-08,STL,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981115-STL-NOR,1998-11-15,STL,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981122-CAR-STL,1998-11-22,STL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981129-ATL-STL,1998-11-29,STL,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,23954,Jeff Wilkins,1998,19981203-STL-PHI,1998-12-03,STL,PHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
-K,23954,Jeff Wilkins,1998,19981213-NWE-STL,1998-12-13,STL,NWE,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1998,19981203-STL-PHI,1998-12-03,STL,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,23954,Jeff Wilkins,1998,19981213-NWE-STL,1998-12-13,STL,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,23954,Jeff Wilkins,1998,19981220-STL-CAR,1998-12-20,STL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,23954,Jeff Wilkins,1998,19981227-STL-SFO,1998-12-27,STL,SFO,xp_missed,0
 K,23954,Jeff Wilkins,1999,19990912-BAL-STL,1999-09-12,STL,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31611,7 +31611,7 @@ K,15123,Mike Mercer,1966,19661008-DEN-KAN,1966-10-08,KAN,DEN,fgm_0_39;fgm_40_49;
 K,15123,Mike Mercer,1966,19661016-OAK-KAN,1966-10-16,KAN,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,15123,Mike Mercer,1966,19661030-HOU-KAN,1966-10-30,KAN,HOU,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,15123,Mike Mercer,1966,19661106-SDG-KAN,1966-11-06,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,15123,Mike Mercer,1966,19661113-MIA-KAN,1966-11-13,KAN,MIA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,15123,Mike Mercer,1966,19661113-MIA-KAN,1966-11-13,KAN,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,15123,Mike Mercer,1966,19661120-BOS-KAN,1966-11-20,KAN,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,15123,Mike Mercer,1966,19661127-KAN-NYJ,1966-11-27,KAN,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15123,Mike Mercer,1966,19661211-KAN-MIA,1966-12-11,KAN,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
@@ -31627,7 +31627,7 @@ K,15123,Mike Mercer,1967,19671112-BUF-NYJ,1967-11-12,BUF,NYJ,fgm_0_39;fgm_40_49;
 K,15123,Mike Mercer,1967,19671119-DEN-BUF,1967-11-19,BUF,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15123,Mike Mercer,1967,19671203-BUF-KAN,1967-12-03,BUF,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15123,Mike Mercer,1967,19671209-BUF-BOS,1967-12-09,BUF,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,12
-K,15123,Mike Mercer,1967,19671224-BUF-OAK,1967-12-24,BUF,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,15123,Mike Mercer,1967,19671224-BUF-OAK,1967-12-24,BUF,OAK,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,15123,Mike Mercer,1968,19680922-BUF-CIN,1968-09-22,BUF,CIN,two_pt;fum_rec_td,2
 K,15123,Mike Mercer,1968,19681110-GNB-MIN,1968-11-10,GNB,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,15123,Mike Mercer,1968,19681117-NOR-GNB,1968-11-17,GNB,NOR,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
@@ -31662,7 +31662,7 @@ K,3746,Don Chandler,1960,19601218-CLE-NYG,1960-12-18,NYG,CLE,fum_rec_td,6
 K,3746,Don Chandler,1961,19610917-STL-NYG,1961-09-17,NYG,STL,fum_rec_td,6
 K,3746,Don Chandler,1961,19611008-NYG-STL,1961-10-08,NYG,STL,fum_rec_td,6
 K,3746,Don Chandler,1961,19611015-NYG-DAL,1961-10-15,NYG,DAL,fum_rec_td,6
-K,3746,Don Chandler,1961,19611105-WAS-NYG,1961-11-05,NYG,WAS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,10
+K,3746,Don Chandler,1961,19611105-WAS-NYG,1961-11-05,NYG,WAS,fum_rec_td,10
 K,3746,Don Chandler,1961,19611112-PHI-NYG,1961-11-12,NYG,PHI,fum_rec_td,6
 K,3746,Don Chandler,1961,19611126-NYG-CLE,1961-11-26,NYG,CLE,fum_rec_td,6
 K,3746,Don Chandler,1962,19620923-NYG-PHI,1962-09-23,NYG,PHI,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
@@ -31754,7 +31754,7 @@ K,17364,Mac Percival,1968,19681208-CHI-RAM,1968-12-08,CHI,RAM,fgm_0_39;fgm_40_49
 K,17364,Mac Percival,1968,19681215-GNB-CHI,1968-12-15,CHI,GNB,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17364,Mac Percival,1969,19690928-CHI-STL,1969-09-28,CHI,STL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17364,Mac Percival,1969,19691005-CHI-NYG,1969-10-05,CHI,NYG,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17364,Mac Percival,1969,19691109-PIT-CHI,1969-11-09,CHI,PIT,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,4
+K,17364,Mac Percival,1969,19691109-PIT-CHI,1969-11-09,CHI,PIT,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,4
 K,17364,Mac Percival,1969,19691116-CHI-ATL,1969-11-16,CHI,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17364,Mac Percival,1969,19691123-BAL-CHI,1969-11-23,CHI,BAL,fum_rec_td,6
 K,17364,Mac Percival,1969,19691130-CLE-CHI,1969-11-30,CHI,CLE,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32073,7 +32073,7 @@ K,22946,Danny Villanueva,1967,19671123-STL-DAL,1967-11-23,DAL,STL,fgm_0_39;fgm_4
 K,22946,Danny Villanueva,1967,19671203-DAL-BAL,1967-12-03,DAL,BAL,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,22946,Danny Villanueva,1967,19671210-PHI-DAL,1967-12-10,DAL,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22946,Danny Villanueva,1967,19671216-DAL-SFO,1967-12-16,DAL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13568,Ryan Longwell,1997,19970901-CHI-GNB,1997-09-01,GNB,CHI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,13568,Ryan Longwell,1997,19970901-CHI-GNB,1997-09-01,GNB,CHI,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,13568,Ryan Longwell,1997,19970907-GNB-PHI,1997-09-07,GNB,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13568,Ryan Longwell,1997,19970914-MIA-GNB,1997-09-14,GNB,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13568,Ryan Longwell,1997,19970921-MIN-GNB,1997-09-21,GNB,MIN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32128,7 +32128,7 @@ K,8815,John Hall,1998,19981101-NYJ-KAN,1998-11-01,NYJ,KAN,fgm_0_39;fgm_40_49;fgm
 K,8815,John Hall,1998,19981108-BUF-NYJ,1998-11-08,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,8815,John Hall,1998,19981115-NYJ-IND,1998-11-15,NYJ,IND,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,8815,John Hall,1998,19981122-NYJ-TEN,1998-11-22,NYJ,TEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,8815,John Hall,1998,19981129-CAR-NYJ,1998-11-29,NYJ,CAR,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,8815,John Hall,1998,19981129-CAR-NYJ,1998-11-29,NYJ,CAR,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,8815,John Hall,1998,19981206-SEA-NYJ,1998-12-06,NYJ,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,8815,John Hall,1998,19981213-NYJ-MIA,1998-12-13,NYJ,MIA,two_pt;fum_rec_td,6
 K,8815,John Hall,1998,19981219-NYJ-BUF,1998-12-19,NYJ,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32242,11 +32242,11 @@ K,6385,Lin Elliott,1992,19921227-CHI-DAL,1992-12-27,DAL,CHI,fgm_0_39;fgm_40_49;f
 K,6385,Lin Elliott,1993,19930906-DAL-WAS,1993-09-06,DAL,WAS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1993,19930912-BUF-DAL,1993-09-12,DAL,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1994,19940904-KAN-NOR,1994-09-04,KAN,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6385,Lin Elliott,1994,19940911-SFO-KAN,1994-09-11,KAN,SFO,two_pt;fum_rec_td,4
+K,6385,Lin Elliott,1994,19940911-SFO-KAN,1994-09-11,KAN,SFO,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,4
 K,6385,Lin Elliott,1994,19940918-KAN-ATL,1994-09-18,KAN,ATL,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1994,19941009-KAN-SDG,1994-10-09,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1994,19941017-KAN-DEN,1994-10-17,KAN,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,6385,Lin Elliott,1994,19941023-SEA-KAN,1994-10-23,KAN,SEA,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,6385,Lin Elliott,1994,19941023-SEA-KAN,1994-10-23,KAN,SEA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,6385,Lin Elliott,1994,19941030-KAN-BUF,1994-10-30,KAN,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1994,19941106-RAI-KAN,1994-11-06,KAN,RAI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,6385,Lin Elliott,1994,19941113-SDG-KAN,1994-11-13,KAN,SDG,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32273,13 +32273,13 @@ K,4934,Richie Cunningham,1997,19970831-DAL-PIT,1997-08-31,DAL,PIT,fgm_0_39;fgm_4
 K,4934,Richie Cunningham,1997,19970907-DAL-ARI,1997-09-07,DAL,ARI,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,4934,Richie Cunningham,1997,19970915-PHI-DAL,1997-09-15,DAL,PHI,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,4934,Richie Cunningham,1997,19970928-CHI-DAL,1997-09-28,DAL,CHI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,4934,Richie Cunningham,1997,19971005-DAL-NYG,1997-10-05,DAL,NYG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,4934,Richie Cunningham,1997,19971005-DAL-NYG,1997-10-05,DAL,NYG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,4934,Richie Cunningham,1997,19971013-DAL-WAS,1997-10-13,DAL,WAS,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,6
 K,4934,Richie Cunningham,1997,19971019-JAX-DAL,1997-10-19,DAL,JAX,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,4934,Richie Cunningham,1997,19971026-DAL-PHI,1997-10-26,DAL,PHI,fgm_0_39;fgm_40_49;fgm_50p,0
 K,4934,Richie Cunningham,1997,19971102-DAL-SFO,1997-11-02,DAL,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,4934,Richie Cunningham,1997,19971109-ARI-DAL,1997-11-09,DAL,ARI,fgm_0_39;fgm_40_49;fgm_50p,0
-K,4934,Richie Cunningham,1997,19971116-WAS-DAL,1997-11-16,DAL,WAS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,4934,Richie Cunningham,1997,19971116-WAS-DAL,1997-11-16,DAL,WAS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,4934,Richie Cunningham,1997,19971123-DAL-GNB,1997-11-23,DAL,GNB,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,4934,Richie Cunningham,1997,19971208-CAR-DAL,1997-12-08,DAL,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,4934,Richie Cunningham,1997,19971214-DAL-CIN,1997-12-14,DAL,CIN,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32321,7 +32321,7 @@ K,13393,Toni Linhart,1975,19751214-MIA-BAL,1975-12-14,BAL,MIA,fgm_0_39;fgm_40_49
 K,13393,Toni Linhart,1975,19751221-NWE-BAL,1975-12-21,BAL,NWE,fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,6
 K,13393,Toni Linhart,1976,19760912-BAL-NWE,1976-09-12,BAL,NWE,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13393,Toni Linhart,1976,19760926-BAL-DAL,1976-09-26,BAL,DAL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,13393,Toni Linhart,1976,19761003-TAM-BAL,1976-10-03,BAL,TAM,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;fum_rec_td,2
+K,13393,Toni Linhart,1976,19761003-TAM-BAL,1976-10-03,BAL,TAM,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fum_rec_td,2
 K,13393,Toni Linhart,1976,19761017-BAL-BUF,1976-10-17,BAL,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13393,Toni Linhart,1976,19761024-BAL-NYJ,1976-10-24,BAL,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,13393,Toni Linhart,1976,19761101-HOU-BAL,1976-11-01,BAL,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32512,10 +32512,10 @@ K,17159,Dennis Partee,1968,19681020-DEN-SDG,1968-10-20,SDG,DEN,fgm_0_39;fgm_40_4
 K,17159,Dennis Partee,1968,19681027-SDG-KAN,1968-10-27,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17159,Dennis Partee,1968,19681103-MIA-SDG,1968-11-03,SDG,MIA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,17159,Dennis Partee,1968,19681110-SDG-BOS,1968-11-10,SDG,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17159,Dennis Partee,1968,19681124-NYJ-SDG,1968-11-24,SDG,NYJ,two_pt;fum_rec_td,2
+K,17159,Dennis Partee,1968,19681124-NYJ-SDG,1968-11-24,SDG,NYJ,xp_missed;two_pt;fum_rec_td,2
 K,17159,Dennis Partee,1968,19681201-SDG-DEN,1968-12-01,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,17159,Dennis Partee,1968,19681208-KAN-SDG,1968-12-08,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
-K,17159,Dennis Partee,1968,19681215-OAK-SDG,1968-12-15,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
+K,17159,Dennis Partee,1968,19681215-OAK-SDG,1968-12-15,SDG,OAK,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
 K,17159,Dennis Partee,1969,19690914-KAN-SDG,1969-09-14,SDG,KAN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,17159,Dennis Partee,1969,19690921-SDG-CIN,1969-09-21,SDG,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
 K,17159,Dennis Partee,1969,19690928-NYJ-SDG,1969-09-28,SDG,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -32739,14 +32739,14 @@ K,14166,Jim Martin,1964,19641213-WAS-BAL,1964-12-13,WAS,BAL,fgm_0_39;fgm_40_49;f
 K,22843,Mike Vanderjagt,1998,19980906-MIA-IND,1998-09-06,IND,MIA,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19980920-IND-NYJ,1998-09-20,IND,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19980927-NOR-IND,1998-09-27,IND,NOR,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22843,Mike Vanderjagt,1998,19981004-SDG-IND,1998-10-04,IND,SDG,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22843,Mike Vanderjagt,1998,19981004-SDG-IND,1998-10-04,IND,SDG,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22843,Mike Vanderjagt,1998,19981011-BUF-IND,1998-10-11,IND,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19981018-IND-SFO,1998-10-18,IND,SFO,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19981101-NWE-IND,1998-11-01,IND,NWE,xp_missed;fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19981115-NYJ-IND,1998-11-15,IND,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22843,Mike Vanderjagt,1998,19981122-IND-BUF,1998-11-22,IND,BUF,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22843,Mike Vanderjagt,1998,19981122-IND-BUF,1998-11-22,IND,BUF,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22843,Mike Vanderjagt,1998,19981129-IND-BAL,1998-11-29,IND,BAL,fgm_0_39;fgm_40_49;fgm_50p,0
-K,22843,Mike Vanderjagt,1998,19981213-CIN-IND,1998-12-13,IND,CIN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,22843,Mike Vanderjagt,1998,19981213-CIN-IND,1998-12-13,IND,CIN,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,22843,Mike Vanderjagt,1998,19981220-IND-SEA,1998-12-20,IND,SEA,fgm_0_39;fgm_40_49;fgm_50p,0
 K,22843,Mike Vanderjagt,1998,19981227-CAR-IND,1998-12-27,IND,CAR,fgm_0_39;fgm_40_49;fgm_50p,0
 K,21195,Fred Steinfort,1976,19760912-PIT-OAK,1976-09-12,OAK,PIT,fgm_0_39;fgm_40_49;fgm_50p,0
@@ -33009,17 +33009,17 @@ K,1831,George Blair,1962,19621028-SDG-NYT,1962-10-28,SDG,NYT,fgm_0_39;fgm_40_49;
 K,1831,George Blair,1962,19621104-DEN-SDG,1962-11-04,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1962,19621125-SDG-HOU,1962-11-25,SDG,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1962,19621202-OAK-SDG,1962-12-02,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1831,George Blair,1962,19621209-BOS-SDG,1962-12-09,SDG,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1831,George Blair,1962,19621209-BOS-SDG,1962-12-09,SDG,BOS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1831,George Blair,1962,19621216-SDG-DTX,1962-12-16,SDG,DTX,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19630914-BOS-SDG,1963-09-14,SDG,BOS,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19630929-KAN-SDG,1963-09-29,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19631013-NYJ-SDG,1963-10-13,SDG,NYJ,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19631020-SDG-KAN,1963-10-20,SDG,KAN,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19631027-OAK-SDG,1963-10-27,SDG,OAK,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,6
-K,1831,George Blair,1963,19631102-SDG-NYJ,1963-11-02,SDG,NYJ,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1831,George Blair,1963,19631102-SDG-NYJ,1963-11-02,SDG,NYJ,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1831,George Blair,1963,19631117-SDG-BUF,1963-11-17,SDG,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19631201-HOU-SDG,1963-12-01,SDG,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
 K,1831,George Blair,1963,19631215-SDG-HOU,1963-12-15,SDG,HOU,fgm_0_39;fgm_40_49;fgm_50p,0
-K,1831,George Blair,1963,19631222-DEN-SDG,1963-12-22,SDG,DEN,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,8
-K,1831,George Blair,1964,19640920-BOS-SDG,1964-09-20,SDG,BOS,fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
+K,1831,George Blair,1963,19631222-DEN-SDG,1963-12-22,SDG,DEN,xpm;xp_missed;fgm_0_39;fgm_40_49;fgm_50p;fg_missed;two_pt;fum_rec_td,8
+K,1831,George Blair,1964,19640920-BOS-SDG,1964-09-20,SDG,BOS,xp_missed;fgm_0_39;fgm_40_49;fgm_50p;two_pt;fum_rec_td,2
 K,1831,George Blair,1964,19640926-SDG-BUF,1964-09-26,SDG,BUF,fgm_0_39;fgm_40_49;fgm_50p,0
