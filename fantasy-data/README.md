@@ -1,63 +1,50 @@
-# Fantasy stats bot
+# Decade Top 100 bot
 
-Pulls NFL player stats, scores them for fantasy, and writes static JSON your site can `fetch()`.
+Ranks the top 100 **QBs, RBs, WRs, kickers and team defenses (D/ST)** of every NFL decade by fantasy points, and writes static JSON your site can `fetch()`. `index.html` in this folder is a page for browsing the lists.
 
-- **1999 to now:** weekly game logs from [nflverse](https://github.com/nflverse/nflverse-data) (free, CC-BY 4.0).
-- **Before 1999:** season totals you enter by hand in `sources/legends_seasons.csv`. No free, open source has older game logs, so legends get season rows only.
+- **1999 to now:** weekly stats from [nflverse](https://github.com/nflverse/nflverse-data) (free, CC-BY 4.0), covering players, kickers, team defense and schedules.
+- **Before 1999:** loaded by `bot/legacy.py`. The sources for this are still being chosen and checked, and until then the lists start at 1999.
 
-Positions covered: QB, RB, FB, WR, TE.
+## How ranking works
+
+- **Players** are ranked on regular-season fantasy points scored *inside the decade*. A career that spans two decades is ranked in both. FBs count as RBs.
+- **Team defenses** are ranked as team-seasons (for example the 2000 Ravens). A decade has only about 30 franchises, so 100 franchise-decades isn't possible.
+- Lists are shorter than 100 when fewer players exist. A decade typically has only about 90 kickers who kicked at all.
 
 ## Run it
 
 ```sh
 pip install -r fantasy-data/bot/requirements.txt
-python fantasy-data/bot/fetch_stats.py              # 1999 through the current season
-python fantasy-data/bot/fetch_stats.py --start 2010 # narrower range
-python fantasy-data/bot/fetch_stats.py --force      # ignore the download cache
+python fantasy-data/bot/fetch_stats.py            # every decade, top 100
+python fantasy-data/bot/fetch_stats.py --top 50   # shorter lists
+python fantasy-data/bot/fetch_stats.py --force    # re-download everything
 ```
 
-Downloads are cached in `fantasy-data/.cache/` (gitignored). Past seasons are downloaded once. The current season is re-downloaded on every run.
+Downloads are cached in `fantasy-data/.cache/` (gitignored). The `Fantasy stats bot` GitHub Action (`.github/workflows/fantasy-stats.yml`) reruns this every Tuesday from September through February. It commits changes and redeploys Pages. You can also run it from the Actions tab.
 
-The `Fantasy stats bot` GitHub Action (`.github/workflows/fantasy-stats.yml`) runs every Tuesday from September through February. It commits any changed data and redeploys Pages. You can also run it by hand from the Actions tab.
-
-## Output (`fantasy-data/data/`)
+## Output (`fantasy-data/data/top100/`)
 
 | File | Contents |
 | --- | --- |
-| `players.json` | One object per player: career totals, first/last season, best PPR season, headshot. Sorted by career PPR points. |
-| `seasons.json` | One object per player per regular season. `era` is `"nflverse"` or `"legend"`. |
-| `weekly/<season>.json` | Every game (regular season and playoffs), stored column-wise to keep the files small. |
-| `meta.json` | Build time, seasons covered, and the scoring used. |
-
-Each row carries `fp_standard`, `fp_half_ppr` and `fp_ppr`.
+| `index.json` | Decades, list sizes, scoring, coverage notes |
+| `<decade>.json` (e.g. `1980s.json`) | `positions.QB / RB / WR / K / DEF`: ranked lists. Players include decade totals, all three scoring formats, best season and `season_lines` |
+| `games/<decade>.json` | Game logs (regular season and playoffs) for the ranked players and defenses, stored column-wise as `{columns, rows}` |
 
 ```js
-const players = await (await fetch("fantasy-data/data/players.json")).json();
+const { positions } = await (await fetch("fantasy-data/data/top100/2000s.json")).json();
+positions.RB[0].name; // "LaDainian Tomlinson"
 
-// Weekly files are {columns, rows}; turn them back into objects:
-const { columns, rows } = await (await fetch("fantasy-data/data/weekly/2007.json")).json();
+const logs = await (await fetch("fantasy-data/data/top100/games/2000s.json")).json();
+const { columns, rows } = logs.RB;
 const games = rows.map(r => Object.fromEntries(columns.map((c, i) => [c, r[i]])));
-const randyMoss = games.filter(g => g.name === "Randy Moss");
 ```
 
-## Scoring
+## Scoring (`bot/scoring.json`)
 
-Edit `bot/scoring.json` and rerun the bot. The defaults are standard ESPN/Yahoo scoring:
+Edit the file and rerun the bot to rescore and re-rank everything. `rank_by` picks the offensive format used for ranking: `ppr`, `half_ppr` or `standard`.
 
-- 25 passing yards = 1 point
-- passing TD = 4, interception = −2
-- 10 rushing/receiving yards = 1 point
-- rushing/receiving TD = 6
-- 2-point conversion = 2, fumble lost = −2
-
-Points are computed here instead of taken from nflverse, so legends and modern players are scored the same way. They match nflverse's own numbers, except that offensive fumble-recovery TDs count 6 here (nflverse leaves them out).
-
-## Adding legends
-
-Add a row to `sources/legends_seasons.csv` for each pre-1999 season. Leave a stat blank if it's unknown; blanks count as 0. Fumbles lost often weren't tracked in older seasons.
-
-- `player_id`: any unique slug, such as `legend-barry-sanders`.
-- `nflverse_id`: optional. Use it for a player whose career continued past 1998 (Jerry Rice, for example), so both eras merge into one player. Find the ID in `players.json`.
-- Rows from 1999 or later are ignored, because nflverse already covers those seasons.
-
-The six seed rows are well-known record seasons, entered from memory. **Check them against Pro Football Reference before relying on them.**
+| Position | Default scoring |
+| --- | --- |
+| Offense | 25 passing yards = 1 point. Passing TD = 4. Interception = −2. 10 rushing/receiving yards = 1 point. Rushing/receiving TD = 6. Fumble lost = −2. 2-point conversion = 2 |
+| Kickers | Field goal: 3 points under 40 yards, 4 for 40–49, 5 for 50+. Missed FG = −1. Extra point = 1. Missed extra point = −1 |
+| D/ST | Sack = 1. Interception = 2. Fumble recovery = 2. Defensive or return TD = 6. Safety = 2. Blocked kick = 2. Points allowed per game: 0 = +10, 1–6 = +7, 7–13 = +4, 14–20 = +1, 21–27 = 0, 28–34 = −1, 35+ = −4 |
