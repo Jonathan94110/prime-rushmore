@@ -4,8 +4,10 @@
 `python3 build_data.py` from this folder (no packages needed; about 3 s). The output is byte-for-byte
 reproducible: two runs give identical files.
 
-**Rebuild whenever the sheets change.** The files here were rebuilt on 7 Oct 2026 from the sheets as of commit
-dd8ae46 ("Fix verification findings: 1999 play-by-play classification, zero-only blanking, kicker and INT checks").
+**Rebuild whenever the sheets change.** The files here were rebuilt on 8 Oct 2026 from the sheets that also drop
+incomplete kicker lines, check interceptions only against a real opposing passing record and drop tied duplicate
+rows (same commit as these notes). Earlier builds used dd8ae46 ("Fix verification findings: 1999 play-by-play
+classification, zero-only blanking, kicker and INT checks").
 The previous build (21:03) predated both that commit and 24536ad ("Fill scoring gaps from final-score
 reconciliation; quarantine disputed INTs"). It still showed 187 quarantined interception counts, gave the
 1999-10-03 PHI at NYG safety to the Giants, and had about 85,000 strict-eligible games marked unknown.
@@ -21,7 +23,7 @@ Filter: `playoff == "False"` and seasons 1960–1999.
 | `data/games_rb.json` | 31,026 | 314 | 4.11 MB | 0.70 MB |
 | `data/games_wr.json` | 36,031 | 335 | 4.73 MB | 0.73 MB |
 | `data/games_te.json` | 14,936 | 123 | 1.96 MB | 0.29 MB |
-| `data/games_k.json` | 14,152 | 112 | 1.69 MB | 0.27 MB |
+| `data/games_k.json` | 14,150 | 112 | 1.69 MB | 0.27 MB |
 | `data/games_def.json` | 15,998 | 31 franchises | 2.43 MB | 0.31 MB |
 | `data/players.json` | — | 1,089 | 0.14 MB | 0.02 MB |
 
@@ -88,12 +90,12 @@ Computed with `src/engine.js` (`eligibleGames`, `poolSummary`) on these files. P
 
 | Position | Strict: drawable games / players with 16+ | Historical: eligible games / players with 16+ |
 |---|---|---|
-| QB | 15,401 / 172 (1960–1999) | 18,583 / 173 |
+| QB | 15,400 / 172 (1960–1999) | 18,583 / 173 |
 | RB | 25,792 / 312 (1960–1999) | 31,026 / 312 |
 | WR | 29,878 / 328 (1960–1999) | 36,031 / 330 |
 | TE | 12,467 / 123 (1960–1999) | 14,936 / 123 |
-| K | 401 / 17 (1999 only; see below) | 14,147 / 112 |
-| DEF | 491 / 28 (1999 only) | 15,998 / 31 (15,801 / 31 with interceptions) |
+| K | 401 / 17 (1999 only; see below) | 13,944 / 112 |
+| DEF | 490 / 27 (1999 only) | 15,998 / 31 (15,731 / 31 with interceptions) |
 
 Both modes support 16 teams. Strict offense now reaches back to 1960 (about 83% of games). Strict DEF stays 1999-only
 because fumble recoveries and blocked kicks are known only for 1999.
@@ -104,9 +106,9 @@ games files for K carry `xp_missed` and those offense columns. Strict K eligibil
 `strict_eligible` flag. DEF files carry `st_other_td` (blocked punt/FG return TDs and the kicking team scoring on the
 returner's fumble; 5 games in 1999), which Strict scores at 6 like a return TD. Historical scoring is unchanged.
 
-**Strict kickers.** 3,739 kicker games have every Strict field. Before 1999, though, distance bins are known only
+**Strict kickers.** 3,737 kicker games have every Strict field. Before 1999, though, distance bins are known only
 for games with no field goal made (all three bins are a proven 0). Drawing from those would give Strict kickers only
-their worst games: those 3,338 games average 1.60 points, against 6.94 for the 401 Strict games from 1999 and 5.38 for
+their worst games: those 3,336 games average 1.60 points, against 6.94 for the 401 Strict games from 1999 and 5.39 for
 a Historical kicker. The validation report flags this as an owner decision; the rule below is the prototype's
 stand-in until the owner decides. The engine therefore leaves a season's kicker games out of Strict draws when that season is
 skewed this way. That is the case for every season from 1960 to 1998, so Strict kickers draw 1999 games only.
@@ -120,11 +122,11 @@ An independent check script (`check_data.py`, kept in the session scratchpad and
 without importing `build_data.py`. All 28 checks passed on these files.
 
 1. **Row counts.** Each games file has exactly the number of regular-season 1960–99 rows in the decade CSVs: QB 18,583,
-   RB 31,026, WR 36,031, TE 14,936, K 14,152, DEF 15,998. `(pid, game_id)` is unique in every file.
+   RB 31,026, WR 36,031, TE 14,936, K 14,150, DEF 15,998. `(pid, game_id)` is unique in every file.
 2. **Every cell.** Each JSON row is matched to its CSV row by `(pid, game_id)`, with the DEF pid recomputed from an
    independently coded copy of the franchise table. Every value is compared: text exactly, numbers by value, blanks
    as `null`, a column the CSV lacks as `null`, `int_verified` as `int_check == "match"`, and DEF `opp_score` as
-   `pts_allowed`. There were 0 mismatches across all 130,726 rows, `source` included.
+   `pts_allowed`. There were 0 mismatches across all 130,724 rows, `source` included.
 3. **Players ↔ games.** The set of pids in the games files equals the set of ids in `players.json`.
 4. **Format.** Re-serializing each games file compactly reproduces it byte for byte. `dataVersion` recomputes from the
    files.

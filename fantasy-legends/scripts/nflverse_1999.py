@@ -21,6 +21,8 @@ Output:
               birth date and name rather than name alone (nflverse writes "Raghib Ismail" for "Rocket Ismail")
   defense:    {"<date>|<team>": counts for that team in that game}
       fum_rec      opponent fumbles recovered (scrimmage and kick plays)
+      fum_rec_disputed  lost fumbles nobody recovered (out of the end zone for a touchback): the play-by-play
+                   marks them lost but names no recovering team, and player stats don't count them lost
       safeties     safeties scored (the team whose score rose by 2)
       blk_punt/blk_fg/blk_xp   kicks blocked
       def_int_td   interception-return TDs
@@ -46,7 +48,7 @@ from collections import defaultdict
 NFLVERSE_TO_PFR = {"GB": "GNB", "KC": "KAN", "NE": "NWE", "NO": "NOR", "SD": "SDG", "LAC": "SDG",
                    "SF": "SFO", "TB": "TAM", "LA": "STL", "LV": "OAK"}
 
-DEFENSE_FIELDS = ("fum_rec", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "st_other_td",
+DEFENSE_FIELDS = ("fum_rec", "fum_rec_disputed", "safeties", "blk_punt", "blk_fg", "blk_xp", "def_int_td", "def_fum_td", "st_other_td",
                   "ret_td", "off_fum_rec_td", "two_pt", "td_total", "xpm", "xpa", "fgm")
 
 
@@ -185,6 +187,8 @@ def main(ps_path, pbp_path, players_path, out_path):
             f1, r1 = row["fumbled_1_team"], row["fumble_recovery_1_team"]
             if f1 and r1 and pfr(f1) != pfr(r1):
                 count(r1, "fum_rec")
+            elif f1 and not r1 and on(row, "fumble_lost"):
+                count(dfn if pfr(f1) == pfr(pos) else pos, "fum_rec_disputed")
 
         # --- safeties: credit the team whose score rose by 2 ---
         if on(row, "safety"):

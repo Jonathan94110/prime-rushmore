@@ -143,7 +143,8 @@ def main(sheets, out_path):
     w("- **Strict** (`strict_eligible`, same as `scoring_complete`): every scoring field is known.\n"
       "- **Era-scored** (`era_scored_eligible`): unknown fields are allowed only when the source records that field "
       "for no game in that era; those fields are listed in `era_excluded_fields` and left out of scoring for everyone in "
-      "the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`).\n")
+      "the era. Nothing is filled in. Any other unknown field blocks the game (`era_blocking_fields`). Both options check "
+      "every scoring field for the position, kickers' missed extra points and own offense stats included.\n")
     w("Era-wide unrecorded fields: fum_rec_td before 1999; ret_td before 1960; two_pt in AFL games (1960–69) and "
       "1994–98; FG distance 1960–98; DEF sacks before 1982; DEF fumble recoveries, safeties, blocks, INT-return, "
       "fumble-return and other special-teams TDs before 1999. Not excludable: "
@@ -266,21 +267,26 @@ def main(sheets, out_path):
     c = Counter(x["int_check"] for x in data["def"])
     by_decade = Counter(int(x["season"]) // 10 * 10 for x in data["def"] if x["int_check"] != "match")
     w(f"- Defenders' INTs equal the opposing passers' INTs thrown: {c['match']} games.\n"
-      f"- Disputed (`int_check` = disputed): {c['disputed']} games. Unverified (`int_check` = unverified, the source has "
-      f"no passing for the opponent in that game, so even a 0 = 0 match proves nothing): {c['unverified']} games. "
+      f"- Disputed (`int_check` = disputed): {c['disputed']} games. Unverified (`int_check` = unverified: the source has "
+      f"fewer than 10 pass attempts for the opponent in that game, usually because its passer is missing from the source, "
+      f"so even a 0 = 0 match proves nothing): {c['unverified']} games. "
       f"Together {c['disputed'] + c['unverified']} ({', '.join(f'{d}s {by_decade[d]}' for d in DECADES)}). "
       "These are **quarantined**: `def_int` is blank, and the original counts are kept in `def_int_defenders`, "
       "`opp_pass_int` and `opp_pass_att`. The larger count is never chosen.\n"
       "- Season checks against published totals: 1985 CHI 34, 1975 PIT 27, 1969 MIN 30 (all match).\n")
 
+    incomplete_k = sum(1 for x in data["k"] if int(x["season"]) >= 1960 and x["fgm"] == "" and "INCOMPLETE" in x["source"])
     w("## Unresolved fields\n")
     w(table(["Field", "Positions", "Known for", "Unknown for", "Why"], [
         ["fum_rec_td (offensive fumble-recovery TD)", "QB RB WR TE K", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],
         ["two_pt", "QB RB WR TE K", "NFL 1950–1993 (rule: 0), 1999, SCORE0 games", "other AFL and 1994–98 games", "Not in the scraped source"],
         ["FG made by distance", "K", "1999; games with no FG made", "other 1960–1998 games", "Not in the scraped source"],
-        ["FG/XP made", "K", "1960–1999; 1950s where recorded or SCORE0", "other 1950s games; 5 disputed 1999 kicker-games",
-         "Source has almost none before 1960; in 1999 two sources credit some kicks to a different kicker"],
-        ["fg_missed, xp_missed", "K", "1960–1999", "1950s; xp_missed where the team has more TDs than recorded PAT tries",
+        ["FG/XP made and tried", "K", "1960–1999; 1950s where recorded or SCORE0",
+         f"other 1950s games; {incomplete_k} 1960–99 kicker-games whose team score shows a kick missing from the source; "
+         "5 disputed 1999 kicker-games",
+         "Source has almost none before 1960; an odd score gap, or a 6-point gap with no PAT try to match it, means a kick "
+         "is missing; in 1999 two sources credit some kicks to a different kicker"],
+        ["xp_missed", "K", "1960–1999 where every TD has a recorded PAT try", "1950s; games with a TD but no recorded PAT try",
          "A miss doesn't score, so the final score can't prove it"],
         ["fum_rec, blocked punts/FGs/PATs", "DEF", "1999", "1950–1998", "Not in the scraped source; not provable from the score"],
         ["def_int_td, def_fum_td, st_other_td, safeties", "DEF", "1999; SCORE0/SCORE2 games", "other games", "Not in the scraped source"],

@@ -11,7 +11,8 @@
     "home_away": "H",
     "date": "1996-10-27",
     "season": 1996,
-    "game_number": 8
+    "game_number": 8,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 8 of 1996; kept the only row with stats"
@@ -28,7 +29,8 @@
     "home_away": "H",
     "date": "1982-09-19",
     "season": 1982,
-    "game_number": 2
+    "game_number": 2,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 2 of 1982; kept the only row with stats"
@@ -36,36 +38,56 @@
  {
   "player": "Bob Thomas",
   "date": "1982-12-12",
-  "kept_team": "CHI",
+  "kept_team": null,
   "player_id": 22006,
   "dropped": [
+   {
+    "team": "CHI",
+    "opp": "SEA",
+    "home_away": "A",
+    "date": "1982-12-12",
+    "season": 1982,
+    "game_number": 6,
+    "stats": {}
+   },
    {
     "team": "DET",
     "opp": "GNB",
     "home_away": "A",
     "date": "1982-12-12",
     "season": 1982,
-    "game_number": 6
+    "game_number": 6,
+    "stats": {}
    }
   ],
-  "reason": "listed for two teams in game 6 of 1982; kept the team he played for most that season"
+  "reason": "listed for 2 teams in game 6 of 1982 with no stats on any row, and neither the games either side nor his season (6 games for each) says which team he played for; all dropped"
  },
  {
   "player": "Bob Thomas",
   "date": "1982-12-19",
-  "kept_team": "CHI",
+  "kept_team": null,
   "player_id": 22006,
   "dropped": [
+   {
+    "team": "CHI",
+    "opp": "STL",
+    "home_away": "H",
+    "date": "1982-12-19",
+    "season": 1982,
+    "game_number": 7,
+    "stats": {}
+   },
    {
     "team": "DET",
     "opp": "MIN",
     "home_away": "H",
     "date": "1982-12-19",
     "season": 1982,
-    "game_number": 7
+    "game_number": 7,
+    "stats": {}
    }
   ],
-  "reason": "listed for two teams in game 7 of 1982; kept the team he played for most that season"
+  "reason": "listed for 2 teams in game 7 of 1982 with no stats on any row, and neither the games either side nor his season (6 games for each) says which team he played for; all dropped"
  },
  {
   "player": "Bob Thomas",
@@ -79,7 +101,8 @@
     "home_away": "A",
     "date": "1982-12-26",
     "season": 1982,
-    "game_number": 8
+    "game_number": 8,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 8 of 1982; kept the only row with stats"
@@ -96,7 +119,8 @@
     "home_away": "H",
     "date": "1983-01-02",
     "season": 1982,
-    "game_number": 9
+    "game_number": 9,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 9 of 1982; kept the only row with stats"
@@ -113,7 +137,8 @@
     "home_away": "A",
     "date": "1989-10-02",
     "season": 1989,
-    "game_number": 4
+    "game_number": 4,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 4 of 1989; kept the only row with stats"
@@ -130,7 +155,8 @@
     "home_away": "A",
     "date": "1989-12-16",
     "season": 1989,
-    "game_number": 15
+    "game_number": 15,
+    "stats": {}
    }
   ],
   "reason": "listed for two teams in game 15 of 1989; kept the only row with stats"
@@ -147,26 +173,28 @@
     "home_away": "H",
     "date": "1997-11-23",
     "season": 1997,
-    "game_number": 12
+    "game_number": 12,
+    "stats": {}
    }
   ],
   "reason": "row with no stats for DET, his only DET game in 1997, between games for ARI (1997-11-16, 1997-12-07)"
  },
  {
   "player": "Cotton Davidson",
-  "date": "1962-09-09",
-  "kept_team": "OAK",
+  "date": "1962-09-08",
+  "kept_team": "DTX",
   "player_id": 5141,
   "dropped": [
    {
-    "team": "DTX",
-    "opp": "BOS",
+    "team": "OAK",
+    "opp": "NYT",
     "home_away": "H",
-    "date": "1962-09-08",
+    "date": "1962-09-09",
     "season": 1962,
-    "game_number": 1
+    "game_number": 1,
+    "stats": {}
    }
   ],
-  "reason": "listed for two teams in game 1 of 1962; kept the team he played for in the games either side"
+  "reason": "listed for two teams in game 1 of 1962; kept the only row with stats"
  }
 ]

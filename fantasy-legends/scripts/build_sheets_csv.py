@@ -254,17 +254,17 @@ def era_unrecorded(g, pos):
     """Scoring fields the source records for no game in this era. The era-scored option leaves these out
     for everyone in the era; anything else that's unknown still blocks the game."""
     season = g["season"]
+    offense = {"fum_rec_td"} if season < 1999 else set()
+    if season < RETURNS_FIRST_SEASON:
+        offense.add("ret_td")
+    afl = 1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
+    if afl or 1994 <= season <= 1998:
+        offense.add("two_pt")
     if pos in ("QB", "RB", "WR", "TE"):
-        fields = {"fum_rec_td"} if season < 1999 else set()
-        if season < RETURNS_FIRST_SEASON:
-            fields.add("ret_td")
-        afl = 1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS)
-        if afl or 1994 <= season <= 1998:
-            fields.add("two_pt")
-        return fields
+        return offense
     if pos == "K":
         # Distance tiers only exist for 1999. Before 1960 all kicking is unknown, which isn't excludable.
-        return {"fgm_0_39", "fgm_40_49", "fgm_50p"} if KICK_FIRST_SEASON <= season < 1999 else set()
+        return offense | ({"fgm_0_39", "fgm_40_49", "fgm_50p"} if KICK_FIRST_SEASON <= season < 1999 else set())
     fields = {"sacks"} if season < SACKS_FIRST_SEASON else set()
     if season < RETURNS_FIRST_SEASON:
         fields.add("ret_td")
@@ -273,15 +273,11 @@ def era_unrecorded(g, pos):
     return fields
 
 
-# The era-scored option for kickers keeps its original kicking-only field set (Historical rules unchanged).
-ERA_FIELDS_K = ("xpm", "fgm_0_39", "fgm_40_49", "fgm_50p", "fg_missed")
-
-
 def scoring_status(g, pos):
     """strict: every scoring field known. era-scored: unknowns limited to fields the era never records."""
     missing = [c for c in SCORING_FIELDS[pos] if g.get(c) is None]
     excluded = era_unrecorded(g, pos)
-    era_missing = [c for c in ERA_FIELDS_K if g.get(c) is None] if pos == "K" else missing
+    era_missing = missing
     blocking = [c for c in era_missing if c not in excluded]
     g["scoring_missing"] = ";".join(dict.fromkeys(missing))
     g["scoring_complete"] = g["strict_eligible"] = not missing
@@ -304,6 +300,36 @@ def kicker_contract_points(g):
 
 KICK_FIRST_SEASON = 1960  # the source has almost no kicking stats before 1960
 RETURNS_FIRST_SEASON = 1960  # nor kick/punt return stats (45 kick-return rows in the whole decade)
+
+
+MIN_OPP_PASS_ATT = 10  # fewer recorded opposing pass attempts than this can't confirm an interception count
+
+
+def kicking_explained(g, r):
+    """Is the team's kicking record complete for this game? Returns (makes known, PAT tries known, why not).
+    With residual 0 every make is recorded, and every PAT try is when there's one for each recorded TD.
+    A positive residual is fine only as unrecorded TDs (6 each) plus at most one safety (or, where two-point
+    conversions exist, up to two successful ones, each a TD without a PAT try), with a recorded PAT try for every
+    other TD, recorded or not: then the missing points can't be kicks the source left out. Anything else
+    (an odd gap, or a 6-point gap with no PAT try to match it, which could be two field goals) means the
+    team's kicking line is incomplete."""
+    R, td, xpa = r["score_residual"], r["recorded_td"], r["recorded_xpa"]
+    two_pt_era = g["season"] >= 1994 or (1960 <= g["season"] <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS))
+    base = (f"{g['team']} scored {r['team_score']}; the source records {td} TD + {r['recorded_xpm']} XP of {xpa} tried + "
+            f"{r['recorded_fgm']} FG" + (f" + {r['safeties']} safety" if r["safeties"] else "") + f", leaving {R} points")
+    if R == 0:
+        if xpa >= td:
+            return True, True, ""
+        return True, False, (base + f": every make is recorded, but {td} TDs had only {xpa} PAT tries recorded, so a "
+                             "missed PAT may be unrecorded" + (" (or the team went for two)" if two_pt_era else ""))
+    # Where two-point conversions exist, up to two successful ones (a TD with no PAT try each) may fill the gap.
+    for s in ((0, 1, 2) if two_pt_era else (0, 1)):
+        rest = R - 2 * s
+        if rest >= 0 and rest % 6 == 0 and xpa + (s if two_pt_era else 0) >= td + rest // 6:
+            return True, True, ""
+    return False, False, (base + " that unrecorded TDs (with their PAT tries), a safety" +
+                          (" or two-point conversions" if two_pt_era else "") +
+                          " can't account for, so a kick may be missing from the source and this kicking line isn't complete")
 
 
 def repair_kicking(g, enrich):
@@ -353,19 +379,26 @@ def repair_kicking(g, enrich):
                     for c in (made, att):
                         setv(g, c, None, "QUARANTINE", NFLV_PBP_URL, "Sources disagree: " + detail)
                     CONFLICTS.append(("K", g["player_id"], g["name"], game_id(g), f"{made}/{att}", detail))
-        if g["fgm"] is not None:
-            g["fg_missed"] = g["fga"] - g["fgm"]
+                else:
+                    agree = f"Main source and nflverse play-by-play ({gid}) both credit him with {theirs[0]}/{theirs[1]} {label} made/attempted"
+                    for c in (made, att):
+                        src, url, ev = g["_prov"].get(c, ("PFR", NFLV_PBP_URL, ""))
+                        setv(g, c, g[c], src, url, f"{ev}; {agree}" if ev else agree)
+        line_ok, tries_ok, why = kicking_explained(g, r) if k is None and r else (True, True, "")
+        if not line_ok:
+            for c in ("xpm", "xpa", "fgm", "fga", "fg_missed", "xp_missed"):
+                setv(g, c, None, "INCOMPLETE", KAGGLE_URL, why)
         else:
-            setv(g, "fg_missed", None, "QUARANTINE", NFLV_PBP_URL, "FG made/attempted disputed (see conflicts.csv)")
-        if g["xpm"] is None:
-            setv(g, "xp_missed", None, "QUARANTINE", NFLV_PBP_URL, "XP made/attempted disputed (see conflicts.csv)")
-        elif k is None and r and r["recorded_xpa"] < r["recorded_td"]:
-            two_pt_era = season >= 1994 or (1960 <= season <= 1969 and (g["team"] in AFL_TEAMS or g["opp"] in AFL_TEAMS))
-            setv(g, "xp_missed", None, "INCOMPLETE", KAGGLE_URL,
-                 f"{g['team']} scored {r['recorded_td']} recorded TDs but the source records only {r['recorded_xpa']} "
-                 "PAT attempts, so a missed PAT may be unrecorded" + (" (or the team went for two)" if two_pt_era else ""))
-        else:
-            g["xp_missed"] = g["xpa"] - g["xpm"]
+            if g["fgm"] is not None:
+                g["fg_missed"] = g["fga"] - g["fgm"]
+            else:
+                setv(g, "fg_missed", None, "QUARANTINE", NFLV_PBP_URL, "FG made/attempted disputed (see conflicts.csv)")
+            if g["xpm"] is None:
+                setv(g, "xp_missed", None, "QUARANTINE", NFLV_PBP_URL, "XP made/attempted disputed (see conflicts.csv)")
+            elif not tries_ok:
+                setv(g, "xp_missed", None, "INCOMPLETE", KAGGLE_URL, why)
+            else:
+                g["xp_missed"] = g["xpa"] - g["xpm"]
     if g["fgm"] == 0:
         how = "Source records" if g["_prov"].get("fgm", ("",))[0] != "SCORE0" else "Score reconciliation shows"
         for c in ("fgm_0_39", "fgm_40_49", "fgm_50p"):
@@ -431,11 +464,12 @@ def repair_defense(g, enrich):
             f"; the source has sacks for only some players, so its team total ({g['sacks']}) is a partial count"
             if g["sacks"] else ", so the source's 0 isn't a real value"))
     opp, att = g["opp_pass_int"], g["opp_pass_att"]
-    if opp is None or not att:
+    if opp is None or (att or 0) < MIN_OPP_PASS_ATT:
         g["int_check"] = "unverified"
         setv(g, "def_int", None, "QUARANTINE", KAGGLE_URL,
-             f"Defenders' logs record {g['def_int_defenders']} interceptions; the source has no passing for {g['opp']} "
-             "in this game, so the count can't be checked")
+             f"Defenders' logs record {g['def_int_defenders']} interceptions; the source has only {att or 0} pass attempts "
+             f"for {g['opp']} in this game (fewer than {MIN_OPP_PASS_ATT}; its passer is probably missing from the source), "
+             "so the passers' log can't confirm the count")
     elif opp == g["def_int"]:
         g["int_check"] = "match"
         setv(g, "def_int", g["def_int"], "PFR", KAGGLE_URL,
@@ -463,6 +497,13 @@ def repair_defense(g, enrich):
         for c in ("fum_rec", "blk_punt", "blk_fg", "blk_xp", "safeties", "def_int_td", "def_fum_td", "st_other_td"):
             value = extra[c]
             ev = "; ".join(p for p in plays if p.startswith(c + ":")) or f"No qualifying play in nflverse play-by-play for {gid}"
+            if c == "fum_rec" and extra.get("fum_rec_disputed"):
+                lost = "; ".join(p for p in plays if p.startswith("fum_rec_disputed:"))
+                detail_f = (f"{value} recovered opponent fumble(s), plus {extra['fum_rec_disputed']} the play-by-play marks lost "
+                            f"with no recovering team (out of the end zone; nflverse player stats don't count it lost): {lost}")
+                setv(g, c, None, "QUARANTINE", NFLV_PBP_URL, "Sources disagree: " + detail_f)
+                CONFLICTS.append(("DEF", g["team"], g["team_name"], game_id(g), "fum_rec", detail_f))
+                continue
             if c in ("safeties", "def_int_td", "def_fum_td", "st_other_td"):
                 if value == 0 and status != "closes":
                     setv(g, c, None, "QUARANTINE", NFLV_PBP_URL, f"0 not confirmed: {detail}")

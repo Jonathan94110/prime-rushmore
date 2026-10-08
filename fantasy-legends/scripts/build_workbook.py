@@ -49,11 +49,15 @@ NOTES = [
     ("Gaps in the data", ""),
     ("Fumbles, 2-pt conversions, FG distance", "Not in the source data, so not counted in fantasy points"),
     ("Sacks", "Not an official stat before 1982: blank for team defenses before then, QB 'sacked' often 0"),
-    ("Targets", "Blank before 1992"),
+    ("Targets", "Blank before 1992, except nonzero values from Super Bowl box scores"),
     ("Team defense", "No fumble recoveries or fumble-return TDs"),
     ("Season length", "12 games through 1960 (14 for the 1960 AFL), 14 for 1961-1977, 16 from 1978. "
                       "Strike years: 9 games in 1982, 15 in 1987. Compare eras per game, not season totals"),
     ("Careers past 1999", "Only games through 1999 are included (Rice, Favre, etc.)"),
+    ("", ""),
+    ("Repaired values", "These sheets hold the source values, with duplicate rows removed. The repaired scoring fields "
+                        "(two-point conversions, fumble-recovery TDs, FG distances, quarantined interceptions, blanked "
+                        "unrecorded zeros) and every correction are in data/sheets/ and the Google Sheets"),
     ("", ""),
     ("Source", "Pro-Football-Reference via Kaggle dataset zynicide/nfl-football-player-stats (scraped Dec 2017). "
                "Pass completions/attempts were swapped in the source and are corrected here"),
@@ -97,7 +101,7 @@ def main(data_dir, out_path, position=None):
                 ws.column_dimensions["B"].width = 120
                 ws["A1"].font = Font(name="Arial", size=14, bold=True)
                 for row in ws.iter_rows(min_col=1, max_col=2):
-                    if row[0].value in ("Sheet", "Column", "Fantasy scoring", "Gaps in the data", "Source"):
+                    if row[0].value in ("Sheet", "Column", "Fantasy scoring", "Gaps in the data", "Repaired values", "Source"):
                         for c in row:
                             c.font = bold
                 continue

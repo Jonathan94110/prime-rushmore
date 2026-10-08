@@ -107,12 +107,22 @@ DST_COLUMNS = [
 ]
 
 
-STAT_FIELDS = ("passing_yards", "rushing_attempts", "receiving_receptions", "field_goal_attempts",
-               "point_after_makes", "kick_return_attempts", "punt_return_attempts", "defense_tackles")
+STAT_PREFIXES = ("passing_", "rushing_", "receiving_", "kick_return_", "punt_return_", "defense_", "point_after_",
+                 "field_goal_", "punting_")
+
+
+def stats_of(r):
+    """Every nonzero stat on a source row (punts and 0-for-N passing lines included)."""
+    return {k: v for k, v in r[2].items() if k.startswith(STAT_PREFIXES) and num(v)}
 
 
 def has_stats(r):
-    return any(num(r[2][f]) for f in STAT_FIELDS)
+    return bool(stats_of(r))
+
+
+def dropped_entry(r):
+    return {"team": r[2]["team"], "opp": r[2]["opponent"], "home_away": r[2]["game_location"],
+            "date": r[2]["date"], "season": r[0], "game_number": r[1], "stats": stats_of(r)}
 
 
 def days_apart(a, b):
@@ -145,19 +155,28 @@ def dedupe(rows, name, log):
                 neighbours.update(r[2]["team"] for r in groups[j])
         with_stats = [r for r in same if has_stats(r)]
         matching = [r for r in same if r[2]["team"] in neighbours]
+        season_teams = Counter(r[2]["team"] for r in rows if r[0] == same[0][0])
+        counts = sorted((season_teams[r[2]["team"]] for r in same), reverse=True)
         if len(with_stats) == 1:
             keep, why = with_stats[0], "only row with stats"
         elif len(matching) == 1:
             keep, why = matching[0], "team he played for in the games either side"
+        elif not with_stats and counts[0] == counts[1]:
+            # No row has stats and nothing picks a team: drop them all rather than choose by row order.
+            log.append({"player": name, "date": same[0][2]["date"], "kept_team": None, "player_id": same[0][2]["player_id"],
+                        "dropped": [dropped_entry(r) for r in same],
+                        "reason": f"listed for {len(same)} teams in game {same[0][1]} of {same[0][0]} with no stats on any row, "
+                                  f"and neither the games either side nor his season ({counts[0]} games for each) "
+                                  "says which team he played for; all dropped"})
+            continue
         else:
-            season_teams = Counter(r[2]["team"] for r in rows if r[0] == same[0][0])
             keep = max(same, key=lambda r: season_teams[r[2]["team"]])
-            why = "team he played for most that season"
+            why = ("team he played for most that season" if counts[0] > counts[1] else
+                   f"first-listed row (more than one row has stats and his season is tied, {counts[0]} games each)")
         out.append(keep)
         log.append({"player": name, "date": keep[2]["date"], "kept_team": keep[2]["team"],
                     "player_id": keep[2]["player_id"],
-                    "dropped": [{"team": r[2]["team"], "opp": r[2]["opponent"], "home_away": r[2]["game_location"],
-                                 "date": r[2]["date"], "season": r[0], "game_number": r[1]} for r in same if r is not keep],
+                    "dropped": [dropped_entry(r) for r in same if r is not keep],
                     "reason": f"listed for two teams in game {keep[1]} of {keep[0]}; kept the {why}"})
     kept = []
     for i, r in enumerate(out):
@@ -166,8 +185,7 @@ def dedupe(rows, name, log):
         if (before and after and before[0] == r[0] == after[0] and before[2]["team"] == after[2]["team"] != r[2]["team"]
                 and season_teams[r[2]["team"]] == 1 and not has_stats(r)):
             log.append({"player": name, "date": r[2]["date"], "kept_team": None, "player_id": r[2]["player_id"],
-                        "dropped": [{"team": r[2]["team"], "opp": r[2]["opponent"], "home_away": r[2]["game_location"],
-                                     "date": r[2]["date"], "season": r[0], "game_number": r[1]}],
+                        "dropped": [dropped_entry(r)],
                         "reason": f"row with no stats for {r[2]['team']}, his only {r[2]['team']} game in {r[0]}, "
                                   f"between games for {before[2]['team']} ({before[2]['date']}, {after[2]['date']})"})
             continue
